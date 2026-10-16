@@ -2,14 +2,17 @@
 
 [返回目录](../../README.zh-CN.md)
 
-18 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
+21 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
 
 | 项目 | 资源类型 | 用途 | 原始来源 |
 | --- | --- | --- | --- |
+| [ALFWorld](https://aicanwhat.com/zh/projects/alfworld/) | 环境与评测 | 训练, 评测 | [Source](https://alfworld.github.io/) |
 | [Arcade Learning Environment](https://aicanwhat.com/zh/projects/arcade-learning-environment/) | 环境框架 | 训练, 评测 | [Source](https://ale.farama.org/) |
 | [Asteroid Game](https://aicanwhat.com/zh/projects/gpt5-asteroid-game/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/asteroid-game) |
 | [BALROG](https://aicanwhat.com/zh/projects/balrog/) | 评测套件 | 评测 | [Source](https://github.com/balrog-ai/BALROG) |
+| [Cowboy Shooter](https://aicanwhat.com/zh/projects/cowboy-shooter/) | AI 软件作品 | 作品展示 | [Source](https://cowboy.raymelon.com/) |
 | [Crafter](https://aicanwhat.com/zh/projects/crafter/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/danijar/crafter) |
+| [DOOMscroll](https://aicanwhat.com/zh/projects/doomscroll/) | AI 软件作品 | 作品展示 | [Source](https://gisnep.com/doomscroll/) |
 | [Escape the Maze](https://aicanwhat.com/zh/projects/gpt5-escape-the-maze/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/escape-the-maze) |
 | [Jericho](https://aicanwhat.com/zh/projects/jericho/) | 环境框架 | 训练, 评测 | [Source](https://github.com/microsoft/jericho) |
 | [MineDojo](https://aicanwhat.com/zh/projects/minedojo/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/MineDojo/MineDojo) |

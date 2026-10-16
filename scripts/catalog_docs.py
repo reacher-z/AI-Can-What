@@ -23,7 +23,10 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
             filename = 'README.zh-CN.md' if zh else 'README.md'
             back = os.path.relpath(root / filename, directory)
             intro = ('来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。' if zh else 'Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.')
-            text = f'# {labels[int(zh)]}\n\n[{("返回目录" if zh else "Back to the collection")}]({back})\n\n{len(records)} {("个条目" if zh else "entries")}. {intro}\n\n' + table(records, language) + '\n'
+            navigation = ''
+            if category == 'app':
+                navigation = ('按平台浏览：' if zh else 'Browse by platform: ') + ' · '.join(f'[{label}]({platform}/{filename})' for platform, label in platforms.items() if any(platform in e['platforms'] for e in records)) + '\n\n'
+            text = f'# {labels[int(zh)]}\n\n[{("返回目录" if zh else "Back to the collection")}]({back})\n\n{len(records)} {("个条目" if zh else "entries")}. {intro}\n\n' + navigation + table(records, language) + '\n'
             (directory / filename).write_text(text, encoding='utf-8')
     app_records = [e for e in entries if e['content_type'] == 'app']
     for platform, label in platforms.items():
@@ -32,8 +35,14 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
             continue
         directory = root / 'catalog/apps' / platform
         directory.mkdir(parents=True, exist_ok=True)
-        text = f'# {label} apps and evaluation resources\n\n[All app resources](../README.md)\n\n{len(records)} entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.\n\n' + table(records) + '\n'
-        (directory / 'README.md').write_text(text, encoding='utf-8')
+        for language in ('en', 'zh'):
+            zh = language == 'zh'
+            filename = 'README.zh-CN.md' if zh else 'README.md'
+            title = label + (' 应用与评测资源' if zh else ' apps and evaluation resources')
+            intro = (f'{len(records)} 个条目。平台标签可能指可运行应用、环境目标或数据集中的截图来源；请同时查看资源类型和限制。' if zh else f'{len(records)} entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.')
+            url = origin + ('/zh' if zh else '') + '/apps/' + platform + '/'
+            text = f'# {title}\n\n[{("全部应用资源" if zh else "All app resources")}](../{filename}) · [{("网站索引" if zh else "Website index")}]({url})\n\n{intro}\n\n' + table(records, language) + '\n'
+            (directory / filename).write_text(text, encoding='utf-8')
     counts = Counter(e['content_type'] for e in entries)
     summary = f'**{len(entries)} catalog entries · {len(papers)} referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.\n\n## Browse\n\n| Category | Entries | Repository index |\n| --- | --- | --- |\n'
     for category, labels in types.items():

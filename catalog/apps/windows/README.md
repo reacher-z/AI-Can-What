@@ -1,6 +1,6 @@
 # Windows apps and evaluation resources
 
-[All app resources](../README.md)
+[All app resources](../README.md) · [Website index](https://aicanwhat.com/apps/windows/)
 
 4 entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.
 

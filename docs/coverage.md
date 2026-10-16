@@ -10,7 +10,8 @@ Record resource type, intended use, development provenance, and platform indepen
 
 ## Coverage still worth improving
 
-- AI-assisted native mobile and desktop applications with clear first-party development evidence, beyond browser demos and systems experiments.
+- Native Windows software with clear first-party AI-development evidence. Current Windows coverage is environments and evaluation datasets; it does not yet include an independently sourced AI software showcase.
+- A broader range of AI-assisted native mobile and desktop applications. The current collection includes creator accounts and release/store evidence for macOS, iOS, and Android examples.
 - Publicly runnable examples from a broader range of independent creators, with explicit licensing and setup information.
 - Recently released environments and benchmark versions, while preserving the version/date context of earlier papers.
 - Runtime verification of selected accessible examples, recorded as a separate receipt rather than inferred from documentation or an HTTP 200 response.
@@ -20,4 +21,8 @@ Record resource type, intended use, development provenance, and platform indepen
 
 Use the generated category and platform indexes to find gaps. Check the original project or paper before changing a claim, and preserve the source URL and review date. Avoid adding a large weakly relevant batch merely to increase the count. Publish meaningful updates with matching evidence, then notify search engines of the new or changed canonical URLs.
 
+The website and repository both expose platform indexes for app resources. A platform may describe a runnable application, an environment target, or screenshots in a dataset. Each index shows those resource types separately, and the website reports its software-showcase coverage explicitly.
+
 Primary-source corrections in the current collection include distinguishing WorkBench project-management tools from document editing, AgentBench's text-based ALFWorld tasks from visual embodiment, and VirtualHome's household simulation from desktop application use. Supporting sources are recorded with those entries.
+
+Development evidence is specific to the artifact: a marketing-site commit is not proof that AI wrote the native app, a maker's account is attributed rather than independently authenticated, and a public repository is not automatically licensed for reuse. Current research summaries also distinguish the τ² paper from later τ³ repository features and Terminal-Bench 2.0 from subsequent benchmark releases.

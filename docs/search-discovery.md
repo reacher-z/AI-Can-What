@@ -2,7 +2,7 @@
 
 The canonical website is [AI Can What?](https://aicanwhat.com/) and the public source is [reacher-z/AI-Can-What](https://github.com/reacher-z/AI-Can-What).
 
-The site provides complete static HTML for the directory, categories, and individual projects in English and Chinese. Every canonical page is in the sitemap; language alternatives are reciprocal. Structured metadata describes the visible content. The original author remains the source of project claims.
+The site provides complete static HTML for the directory, categories, app-platform indexes, individual projects, and research bibliography in English and Chinese. Every canonical page is in the sitemap; language alternatives are reciprocal. Platform indexes have ordinary internal links and stable URLs such as `/apps/macos/`; query-string filters are a browsing convenience. Structured metadata describes the visible content. The original author remains the source of project claims.
 
 Google's [AI search guidance](https://developers.google.com/search/docs/appearance/ai-features) uses ordinary search eligibility: crawlable pages that can be indexed and shown with a snippet. `llms.txt` is an optional navigation index, not a special eligibility requirement.
 

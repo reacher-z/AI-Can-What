@@ -23,7 +23,7 @@ SLUGS = {'game': 'games', 'website': 'websites', 'app': 'apps'}
 USES = {'showcase': ('Showcase', '作品展示'), 'training': ('Training', '训练'), 'evaluation': ('Evaluation', '评测')}
 PLATFORMS = {'web': 'Web', 'macos': 'macOS', 'windows': 'Windows', 'linux': 'Linux', 'ios': 'iOS', 'android': 'Android'}
 IMPLEMENTATIONS = {'ai-built': ('AI-built, author-reported', '作者报告为 AI 构建'), 'ai-assisted': ('AI-assisted, author-reported', '作者报告为 AI 辅助开发'), 'human-built': ('Human-built, author-reported', '作者报告为人工开发'), 'unknown': ('Development provenance not established', '开发方式未确认')}
-KINDS = {'ai-generated-output': ('AI-built software', 'AI 软件作品'), 'environment-and-benchmark': ('Environment + benchmark', '环境与评测'), 'environment-framework': ('Environment framework', '环境框架'), 'benchmark-suite': ('Benchmark suite', '评测套件'), 'dataset-and-benchmark': ('Dataset + benchmark', '数据集与评测')}
+KINDS = {'ai-generated-output': ('Software made with AI', 'AI 软件作品'), 'environment-and-benchmark': ('Environment + benchmark', '环境与评测'), 'environment-framework': ('Environment framework', '环境框架'), 'benchmark-suite': ('Benchmark suite', '评测套件'), 'dataset-and-benchmark': ('Dataset + benchmark', '数据集与评测')}
 
 
 def read_inputs():
@@ -48,7 +48,11 @@ def read_inputs():
             assert isinstance(e[key], str) and e[key].strip(), (e['id'], key)
         if e['implementation'] in {'ai-built', 'ai-assisted'}:
             assert e.get('provenance_source'), f"Missing development evidence: {e['id']}"
-        for key in ('primary_url', 'repo_url', 'demo_url', 'paper_url', 'provenance_source'):
+        for key in ('creator', 'provenance_note_en', 'provenance_note_zh'):
+            if key in e:
+                assert isinstance(e[key], str) and e[key].strip(), (e['id'], key)
+        assert bool(e.get('provenance_note_en')) == bool(e.get('provenance_note_zh')), e['id']
+        for key in ('primary_url', 'repo_url', 'demo_url', 'paper_url', 'provenance_source', 'download_url', 'source_file_url'):
             value = e.get(key)
             if value is None and key != 'primary_url':
                 continue
@@ -145,10 +149,10 @@ def page_shell(config, language, path, title, description, body, *, items=None, 
 '''
 
 
-def directory(config, entries, language, category=None):
+def directory(config, entries, language, category=None, platform=None):
     zh = language == 'zh'
     index = int(zh)
-    visible = [e for e in entries if not category or e['content_type'] == category]
+    visible = sorted((e for e in entries if (not category or e['content_type'] == category) and (not platform or platform in e['platforms'])), key=lambda e: e['name'].casefold())
     counts = Counter(e['content_type'] for e in entries)
     if category:
         title = TYPES[category][index]
@@ -166,17 +170,37 @@ def directory(config, entries, language, category=None):
     if category:
         description = ({'game': '游戏作品与交互式学习环境，附原始代码、论文或作者演示。', 'website': 'AI 网站作品、浏览器环境，以及网页生成和交互相关的数据集与基准。', 'app': '应用、模拟应用 API，以及计算机操作、工具使用和软件工程评测。'} if zh else
                        {'game': 'Game showcases and interactive learning environments, with original code, papers, or author demos.', 'website': 'AI-created websites, browser environments, and datasets and benchmarks for web generation and interaction.', 'app': 'Applications, simulated app APIs, and benchmarks for computer use, tool use and software engineering.'})[category]
+    scope_note = ''
+    if platform:
+        label = PLATFORMS[platform]
+        title = label + (' 应用与评测资源' if zh else ' apps and evaluation resources')
+        heading = label + (' 平台，<br><em>作品与评测资料。</em>' if zh else ' software<br><em>& agent resources.</em>')
+        description = (f'浏览 {len(visible)} 条与 {label} 相关的软件、环境及评测资料，核查原始代码、作者说明、论文与使用限制。' if zh else f'Explore {len(visible)} source-reviewed {label} software, environment, and evaluation resources, with original code, author evidence, papers, and practical limits.')
+        showcases = sum(e['resource_kind'] == 'ai-generated-output' for e in visible)
+        scope_note = ('当前收录 ' + str(showcases) + ' 条有作者 AI 开发声明的软件作品，以及 ' + str(len(visible) - showcases) + ' 条环境或评测资源。平台标签可能指应用、环境目标或数据集中的界面来源；具体用途请看资源类型。' if zh else f'This platform has {showcases} author-reported AI software showcases and {len(visible) - showcases} environment or evaluation resources. Platform tags can describe an application, environment target, or interface dataset; use the resource type to distinguish them.')
+    platform_nav = ''
+    if category == 'app':
+        app_entries = [e for e in entries if e['content_type'] == 'app']
+        platform_links = [f'<a href="{lang_path(language, "/apps/")}"' + (' aria-current="page"' if not platform else '') + f'>{("所有应用资源" if zh else "All app resources")}</a>']
+        for key, label in PLATFORMS.items():
+            count = sum(key in e['platforms'] for e in app_entries)
+            if count:
+                platform_links.append(f'<a href="{lang_path(language, "/apps/" + key + "/")}"' + (' aria-current="page"' if platform == key else '') + f'>{label}<span class="count">{count}</span></a>')
+        platform_nav = f'<nav class="category-tabs platform-tabs" aria-label="{("应用平台" if zh else "App platforms")}">{"".join(platform_links)}</nav>'
+        if scope_note:
+            platform_nav += '<p class="scope-note">' + scope_note + '</p>'
     tabs = [f'<a href="{lang_path(language)}"' + (' aria-current="page"' if not category else '') + f'>{("全部" if zh else "All projects")}<span class="count">{len(entries)}</span></a>']
     for key, labels in TYPES.items():
         tabs.append(f'<a href="{lang_path(language, "/" + SLUGS[key] + "/")}"' + (' aria-current="page"' if category == key else '') + f'>{labels[index]}<span class="count">{counts[key]}</span></a>')
     options_uses = ''.join(f'<option value="{key}">{labels[index]}</option>' for key, labels in USES.items())
     options_kinds = ''.join(f'<option value="{key}">{labels[index]}</option>' for key, labels in KINDS.items())
     options_platforms = ''.join(f'<option value="{key}">{label}</option>' for key, label in PLATFORMS.items())
+    platform_control = '' if platform else f'<label class="visually-hidden" for="platform-filter">{("平台" if zh else "Platform")}</label><select id="platform-filter"><option value="">{("所有平台" if zh else "All platforms")}</option>{options_platforms}</select>'
     rows = '\n'.join(render_row(e, language) for e in visible)
     body = f'''<section class="hero"><div><p class="eyebrow">{('AI 软件与 Agent 环境目录' if zh else 'THE SOFTWARE & AGENT ENVIRONMENT INDEX')}</p><h1>{heading}</h1><p class="hero-copy">{description}</p></div><aside class="hero-note"><div class="two-lanes"><span>{('看 AI 构建' if zh else 'See it build')}</span><span class="lane-arrow" aria-hidden="true">↔</span><span>{('看 AI 行动' if zh else 'See it act')}</span></div><p>{('同一个目录，两个视角。浏览有据可查的作品，找到可供 Agent 训练与评测的环境。' if zh else 'Two sides of the same question. Discover what people build with AI, and where agents learn to get things done.')}</p><p><span class="pill">{('原始来源已查阅' if zh else 'Primary sources reviewed')}</span></p></aside></section>
 <div class="stats"><span><strong>{len(entries)}</strong> {('个项目' if zh else 'projects')}</span><span><strong>{counts['game']}</strong> {('游戏与虚拟世界' if zh else 'games / worlds')}</span><span><strong>{counts['website']}</strong> {('网站' if zh else 'websites')}</span><span><strong>{counts['app']}</strong> {('应用' if zh else 'apps')}</span><span class="updated">{('来源核查' if zh else 'Sources reviewed')} · {max(e['reviewed_at'] for e in entries)}</span></div>
-<section class="directory" aria-labelledby="directory-title"><div class="directory-top"><div class="directory-heading"><h2 id="directory-title">{('浏览目录' if zh else 'Explore the directory')}</h2><a href="{config['repository']}/issues/new?template=resource.yml">{('建议一个项目' if zh else 'Suggest a project')} ↗</a></div><nav class="category-tabs" aria-label="{('项目类型' if zh else 'Project category')}">{''.join(tabs)}</nav>
-<div class="filters"><label class="search-box"><span aria-hidden="true">⌕</span><span class="visually-hidden">{('搜索项目' if zh else 'Search projects')}</span><input id="catalog-search" type="search" placeholder="{('搜索项目、任务、平台…' if zh else 'Search projects, tasks, platforms…')}" autocomplete="off"></label><label class="visually-hidden" for="kind-filter">{('资源类型' if zh else 'Resource type')}</label><select id="kind-filter"><option value="">{('所有资源类型' if zh else 'All resource types')}</option>{options_kinds}</select><label class="visually-hidden" for="use-filter">{('用途' if zh else 'Use')}</label><select id="use-filter"><option value="">{('所有用途' if zh else 'All uses')}</option>{options_uses}</select><label class="visually-hidden" for="platform-filter">{('平台' if zh else 'Platform')}</label><select id="platform-filter"><option value="">{('所有平台' if zh else 'All platforms')}</option>{options_platforms}</select><button id="reset-filters" class="reset" type="button" hidden>{('重置' if zh else 'Reset')}</button></div>
+<section class="directory" aria-labelledby="directory-title"><div class="directory-top"><div class="directory-heading"><h2 id="directory-title">{('浏览目录' if zh else 'Explore the directory')}</h2><a href="{config['repository']}/issues/new?template=resource.yml">{('建议一个项目' if zh else 'Suggest a project')} ↗</a></div><nav class="category-tabs" aria-label="{('项目类型' if zh else 'Project category')}">{''.join(tabs)}</nav>{platform_nav}
+<div class="filters"><label class="search-box"><span aria-hidden="true">⌕</span><span class="visually-hidden">{('搜索项目' if zh else 'Search projects')}</span><input id="catalog-search" type="search" placeholder="{('搜索项目、任务、平台…' if zh else 'Search projects, tasks, platforms…')}" autocomplete="off"></label><label class="visually-hidden" for="kind-filter">{('资源类型' if zh else 'Resource type')}</label><select id="kind-filter"><option value="">{('所有资源类型' if zh else 'All resource types')}</option>{options_kinds}</select><label class="visually-hidden" for="use-filter">{('用途' if zh else 'Use')}</label><select id="use-filter"><option value="">{('所有用途' if zh else 'All uses')}</option>{options_uses}</select>{platform_control}<button id="reset-filters" class="reset" type="button" hidden>{('重置' if zh else 'Reset')}</button></div>
 <div class="results-line"><span id="result-count" role="status" aria-live="polite">{len(visible)} {('个项目' if zh else 'projects')}</span><span>{('来源核查 ≠ 运行验证' if zh else 'Source review ≠ runtime verification')}</span></div></div>
 <div class="table-wrap"><table><thead><tr><th>{('项目' if zh else 'Project')}</th><th>{('类别' if zh else 'Type')}</th><th>{('用途' if zh else 'Use')}</th><th class="platform-head">{('平台' if zh else 'Platform')}</th><th>{('证据与日期' if zh else 'Evidence / reviewed')}</th></tr></thead><tbody>{rows}</tbody></table></div>
 <div class="empty" id="empty-state" hidden><h3>{('没有匹配的项目。' if zh else 'No projects match yet.')}</h3><p>{('换一个关键词，或重置筛选条件。' if zh else 'Try a different search or reset the filters.')}</p></div><noscript><p class="no-script">{('所有项目与链接均可直接浏览；搜索和筛选需要 JavaScript。' if zh else 'Every project and link is available here. Search and filtering use JavaScript.')}</p></noscript></section>
@@ -190,7 +214,7 @@ def detail_page(config, entry, entries, language):
     platforms = ', '.join(PLATFORMS[p] for p in entry['platforms']) or ('请查阅上游说明' if zh else 'Consult upstream documentation')
     category_path = lang_path(language, '/' + SLUGS[entry['content_type']] + '/')
     links = [(entry['primary_url'], '原始项目' if zh else 'Original project', True)]
-    for field, labels in [('repo_url', ('Source code', '源代码')), ('demo_url', ('Author demo', '作者演示')), ('paper_url', ('Original paper', '原始论文')), ('provenance_source', ('Development evidence', '开发方式证据'))]:
+    for field, labels in [('repo_url', ('Source code', '源代码')), ('source_file_url', ('Source file', '源文件')), ('demo_url', ('Author demo', '作者演示')), ('download_url', ('Release / download', '发布与下载')), ('paper_url', ('Original paper', '原始论文')), ('provenance_source', ('Development evidence', '开发方式证据'))]:
         if entry.get(field) and entry[field] != entry['primary_url']:
             links.append((entry[field], labels[index], False))
     source_links = ''.join(f'<a href="{escape(url, quote=True)}"' + (' class="primary-action"' if primary else '') + f'>{label} ↗</a>' for url, label, primary in links)
@@ -199,9 +223,14 @@ def detail_page(config, entry, entries, language):
     related = related[:3]
     related_html = ''.join(f'<a href="{project_path(language, e)}">{escape(e["name"])}<small>{" / ".join(USES[u][index] for u in e["uses"])}</small></a>' for e in related)
     provenance = IMPLEMENTATIONS[entry['implementation']][index]
+    author_note = ''
+    if entry.get('creator'):
+        author_note += '<p><strong>' + ('创作者：' if zh else 'Creator: ') + '</strong>' + escape(entry['creator']) + '</p>'
+    if entry.get('provenance_note_' + language):
+        author_note += '<p>' + escape(entry['provenance_note_' + language]) + '</p>'
     body = f'''<nav class="breadcrumb" aria-label="{('当前位置' if zh else 'Breadcrumb')}"><a href="{lang_path(language)}">{('目录' if zh else 'Directory')}</a><span>/</span><a href="{category_path}">{TYPES[entry['content_type']][index]}</a><span>/</span><span aria-current="page">{escape(entry['name'])}</span></nav>
 <header class="detail-header"><p class="eyebrow">{TYPES[entry['content_type']][index]} · {('项目档案' if zh else 'PROJECT NOTES')}</p><h1>{escape(entry['name'])}</h1><p class="lead">{escape(entry['description_' + language])}</p><div class="detail-tags">{use_pills(entry, language)}<span class="pill">{escape(platforms)}</span></div></header>
-<div class="detail-layout"><div class="detail-content"><section><h2>{('它可以用来做什么？' if zh else 'What can you do with it?')}</h2><p>{escape(entry['enables_' + language])}</p></section><section><h2>{('使用前需要知道什么？' if zh else 'What should you know before using it?')}</h2><p>{escape(entry['limits_' + language])}</p></section><section><h2>{('我们核查了什么？' if zh else 'What is verified here?')}</h2><p>{('本条目依据原始项目材料整理，未独立运行或复现结果。AI 参与开发的描述来自作者说明；上游版本、运行条件和许可应以原始来源为准。' if zh else 'This entry was reviewed against original project material. We have not independently run the software or reproduced its results. AI-development claims are author-reported; check upstream for current versions, setup requirements, and licenses.')}</p><dl class="facts"><dt>{('资源类型' if zh else 'Resource type')}</dt><dd>{KINDS[entry['resource_kind']][index]}</dd><dt>{('开发方式' if zh else 'Provenance')}</dt><dd>{provenance}</dd><dt>{('来源核查' if zh else 'Reviewed')}</dt><dd><time datetime="{entry['reviewed_at']}">{entry['reviewed_at']}</time></dd><dt>{('平台' if zh else 'Platforms')}</dt><dd>{escape(platforms)}</dd></dl></section></div><aside class="source-card"><h2>{('原始链接' if zh else 'Go to the source')}</h2>{source_links}<p class="updated-badge">{('外部链接 · 上游项目负责维护' if zh else 'External links · maintained upstream')}</p></aside></div>
+<div class="detail-layout"><div class="detail-content"><section><h2>{('它可以用来做什么？' if zh else 'What can you do with it?')}</h2><p>{escape(entry['enables_' + language])}</p></section><section><h2>{('使用前需要知道什么？' if zh else 'What should you know before using it?')}</h2><p>{escape(entry['limits_' + language])}</p></section><section><h2>{('我们核查了什么？' if zh else 'What is verified here?')}</h2>{author_note}<p>{('本条目依据原始项目材料整理，未独立运行或复现结果。AI 参与开发的描述来自作者说明；上游版本、运行条件和许可应以原始来源为准。' if zh else 'This entry was reviewed against original project material. We have not independently run the software or reproduced its results. AI-development claims are author-reported; check upstream for current versions, setup requirements, and licenses.')}</p><dl class="facts"><dt>{('资源类型' if zh else 'Resource type')}</dt><dd>{KINDS[entry['resource_kind']][index]}</dd><dt>{('开发方式' if zh else 'Provenance')}</dt><dd>{provenance}</dd><dt>{('来源核查' if zh else 'Reviewed')}</dt><dd><time datetime="{entry['reviewed_at']}">{entry['reviewed_at']}</time></dd><dt>{('平台' if zh else 'Platforms')}</dt><dd>{escape(platforms)}</dd></dl></section></div><aside class="source-card"><h2>{('原始链接' if zh else 'Go to the source')}</h2>{source_links}<p class="updated-badge">{('外部链接 · 上游项目负责维护' if zh else 'External links · maintained upstream')}</p></aside></div>
 <h2 class="bottom-heading">{('继续浏览同类项目' if zh else 'More in this category')}</h2><div class="related">{related_html}</div>'''
     return body
 
@@ -238,6 +267,11 @@ def build():
                 continue
             path = '/' if not category else '/' + SLUGS[category] + '/'
             pages[lang_path(language, path)] = page_shell(config, language, path, title, description, body, items=visible, asset_revision=revision)
+        for platform in PLATFORMS:
+            title, description, body, visible = directory(config, entries, language, 'app', platform)
+            if visible:
+                path = '/apps/' + platform + '/'
+                pages[lang_path(language, path)] = page_shell(config, language, path, title, description, body, items=visible, asset_revision=revision)
         for entry in entries:
             path = '/projects/' + entry['id'] + '/'
             pages[lang_path(language, path)] = page_shell(config, language, path, entry['name'], entry['description_' + language], detail_page(config, entry, entries, language), detail=entry, asset_revision=revision)

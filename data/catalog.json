@@ -2171,6 +2171,1107 @@
       "reviewed_at": "2026-10-16",
       "verification": "source-reviewed",
       "provenance_source": "https://github.com/openai/gpt-5-coding-examples#readme"
+    },
+    {
+      "id": "agentgym",
+      "name": "AgentGym",
+      "description_en": "A common client/server interface for interactive agent environments, accompanied by evaluation tasks, trajectories and agent-development workflows.",
+      "description_zh": "为交互式 Agent 环境提供统一客户端与服务端接口，并配有评测任务、轨迹数据和 Agent 开发流程。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://agentgym.github.io/",
+      "repo_url": "https://github.com/WooooDyy/AgentGym",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2406.04151",
+      "limits_en": "Installing agentenv alone does not install every environment: each server has its own dependencies and data. Integrated WebArena, games and other environments overlap existing projects. AgentGym-RL is a companion training stack. Framework code is MIT; upstream components retain their terms.",
+      "limits_zh": "仅安装 agentenv 不会自动部署全部环境，每个服务端都有独立依赖和数据。所集成的 WebArena、游戏等与已有项目存在重合；AgentGym-RL 是配套训练栈。框架代码采用 MIT，上游组件保留自身条款。",
+      "enables_en": "Use consistent reset, observation and action calls across environments and reuse trajectories for evaluation or behavioral training.",
+      "enables_zh": "跨环境使用一致的重置、观察和动作接口，并复用轨迹进行评测或行为训练。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python agentenv package with separately deployed HTTP environment servers; installation and evaluation/training tutorials are provided.",
+      "evidence": [
+        {
+          "url": "https://github.com/WooooDyy/AgentGym#readme",
+          "supports": "Describes HTTP environment APIs, per-environment setup, AgentTraj/AgentEval and the relationship to AgentGym-RL."
+        },
+        {
+          "url": "https://github.com/WooooDyy/AgentGym/blob/main/LICENSE",
+          "supports": "Framework code is MIT licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2406.04151",
+          "supports": "Original AgentGym paper explains cross-environment agent development and evaluation."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "A heterogeneous environment API layer, not a single web or desktop target."
+    },
+    {
+      "id": "agentgym-rl",
+      "name": "AgentGym-RL",
+      "description_en": "A multi-turn reinforcement-learning stack that connects AgentGym environment servers to rollout generation and policy optimization built on verl.",
+      "description_zh": "将 AgentGym 环境服务连接到轨迹生成与策略优化的多轮强化学习栈，训练部分基于 verl 构建。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://agentgym-rl.github.io/",
+      "repo_url": "https://github.com/WooooDyy/AgentGym-RL",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2509.08755",
+      "limits_en": "This adds training infrastructure to AgentGym rather than introducing an entirely separate set of environments. The documented recipe pins CUDA 12.4, PyTorch 2.4 and Python 3.10, with a Linux x86-64 attention wheel. Compute and environment servers are separate prerequisites. Code is MIT.",
+      "limits_zh": "它为 AgentGym 增加训练基础设施，并非重新提供一套完全独立的环境。文档方案固定 CUDA 12.4、PyTorch 2.4、Python 3.10，并使用 Linux x86-64 attention wheel。计算资源与环境服务需另外准备。代码采用 MIT。",
+      "enables_en": "Train and evaluate agents over multiple environment turns, including experiments that progressively lengthen the interaction horizon.",
+      "enables_zh": "在多轮环境交互中训练和评估 Agent，并研究逐步延长交互时长的训练方法。",
+      "resource_kind": "environment-framework",
+      "runtime": "GPU-oriented Python/verl/vLLM training stack; install the specified packages, AgentGym servers and training data before running experiments.",
+      "evidence": [
+        {
+          "url": "https://github.com/WooooDyy/AgentGym-RL#readme",
+          "supports": "Documents the verl/AgentGym relationship, multi-turn algorithms, pinned CUDA/PyTorch/Python setup and training/evaluation workflows."
+        },
+        {
+          "url": "https://github.com/WooooDyy/AgentGym-RL/blob/main/LICENSE",
+          "supports": "Repository code is MIT licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2509.08755",
+          "supports": "Paper introduces the multi-turn RL framework and progressive interaction-horizon method."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Linux appears in the documented training recipe, but no application target platform is inferred from the training host."
+    },
+    {
+      "id": "alfworld",
+      "name": "ALFWorld",
+      "description_en": "Aligned text and embodied household worlds where agents can learn task plans in language before attempting corresponding visual interactions.",
+      "description_zh": "相互对齐的文字与具身家庭环境，Agent 可先通过语言学习任务规划，再尝试对应的视觉交互。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://alfworld.github.io/",
+      "repo_url": "https://github.com/alfworld/alfworld",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2010.03768",
+      "limits_en": "Text-only installation differs from visual/full extras, and game files must be downloaded. Visual execution requires rendering support; the documented Docker recipe targets an older release. macOS ARM has a documented x86 environment workaround. ALFWorld is MIT, while Fast Downward is GPLv3.",
+      "limits_zh": "纯文字安装与 visual/full 扩展不同，还需下载游戏文件。视觉模式需要渲染支持；文档中的 Docker 方案针对旧版。macOS ARM 有明确的 x86 环境变通配置。ALFWorld 采用 MIT，Fast Downward 则采用 GPLv3。",
+      "enables_en": "Study transfer between symbolic task planning and embodied action, with separate training and evaluation workflows.",
+      "enables_zh": "通过独立训练与评测流程，研究符号任务规划向具身动作的迁移。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python 3.9+; alfworld package with optional visual/full extras, downloadable task files and TextWorld/AI2-THOR backends.",
+      "evidence": [
+        {
+          "url": "https://github.com/alfworld/alfworld#readme",
+          "supports": "Documents aligned TextWorld/ALFRED tasks, installation modes, tested Ubuntu setup, macOS workaround, rendering requirements and component licenses."
+        },
+        {
+          "url": "https://github.com/alfworld/alfworld/blob/master/LICENSE",
+          "supports": "ALFWorld repository code is MIT licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2010.03768",
+          "supports": "Original paper defines the alignment between text and embodied learning environments."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Linux and macOS are documented setup targets; visual and text-only modes have different requirements."
+    },
+    {
+      "id": "api-bank",
+      "name": "API-Bank",
+      "description_en": "A tool-use benchmark with runnable API implementations, evaluation dialogues and separate training data for planning, retrieving and calling tools.",
+      "description_zh": "提供可执行 API 实现、评测对话和独立训练数据的工具使用基准，覆盖规划、检索和调用工具。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/api-bank",
+      "repo_url": "https://github.com/AlibabaResearch/DAMO-ConvAI",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2304.08244",
+      "limits_en": "The runnable evaluation tools and the larger training API collection are different resources. Evaluation levels use different scripts. The authors report a googletrans/Gradio dependency conflict that can break the local demo. The enclosing repository is MIT licensed; external services retain their terms.",
+      "limits_zh": "可运行的评测工具与规模更大的训练 API 集合是不同资源，各难度等级使用不同评测脚本。作者指出 googletrans 与 Gradio 的依赖冲突可能导致本地演示失败。所属仓库采用 MIT，外部服务保留自身条款。",
+      "enables_en": "Test tool selection and argument construction against executable APIs, or study the released tool-use dialogue training set.",
+      "enables_zh": "利用可执行 API 检查工具选择与参数构造，或研究公开的工具对话训练集。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python requirements and local demo.py; evaluator.py/evaluator_by_json.py for lower levels and lv3_evaluator.py for planning tasks.",
+      "evidence": [
+        {
+          "url": "https://github.com/AlibabaResearch/DAMO-ConvAI/blob/main/api-bank/README.md",
+          "supports": "Separates the runnable evaluation APIs from training data, documents evaluators and warns of the demo dependency conflict."
+        },
+        {
+          "url": "https://github.com/AlibabaResearch/DAMO-ConvAI/blob/main/api-bank/requirements.txt",
+          "supports": "Lists the Python dependencies used by the published implementation."
+        },
+        {
+          "url": "https://github.com/AlibabaResearch/DAMO-ConvAI/blob/main/LICENSE",
+          "supports": "Enclosing repository publishes an MIT license."
+        },
+        {
+          "url": "https://arxiv.org/abs/2304.08244",
+          "supports": "Original API-Bank paper defines tool planning, retrieval and invocation evaluation."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "API-only benchmark; no device or desktop platform is inferred."
+    },
+    {
+      "id": "bird-interact",
+      "name": "BIRD-Interact",
+      "description_en": "An interactive text-to-SQL environment with database state, supporting knowledge, a user simulator and executable checks for query and update tasks.",
+      "description_zh": "包含数据库状态、辅助知识、用户模拟器和可执行检查的交互式 text-to-SQL 环境，覆盖查询及数据修改任务。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://bird-interact.github.io/",
+      "repo_url": "https://github.com/bird-bench/BIRD-Interact",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2510.05318",
+      "limits_en": "Full evaluation needs ground-truth/test files requested separately from the authors. Legacy and ADK runners, datasets and task counts differ; verify the chosen version and database initialization. ADK is an implementation of this benchmark, not a separate benchmark. Code is MIT; data is CC BY-SA 4.0.",
+      "limits_zh": "完整评测需要向作者单独申请真值与测试文件。旧版和 ADK 运行器、数据集及任务数量不同，应核对所选版本及数据库初始化。ADK 是该基准的一种实现，不另算一套基准。代码采用 MIT，数据采用 CC BY-SA 4.0。",
+      "enables_en": "Test whether agents clarify ambiguous requests, inspect database knowledge and recover from SQL errors during an interaction.",
+      "enables_zh": "测试 Agent 能否在交互中澄清歧义、查阅数据库知识，并从 SQL 错误中恢复。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Docker PostgreSQL databases and Python evaluation services; current ADK path uses Python 3.10+, separate agent/user/database services and provider configuration.",
+      "evidence": [
+        {
+          "url": "https://github.com/bird-bench/BIRD-Interact#readme",
+          "supports": "Documents interactive SQL modes, Docker setup, initialization checks, separately requested ground truth and dataset licensing."
+        },
+        {
+          "url": "https://github.com/bird-bench/BIRD-Interact/blob/main/BIRD-Interact-ADK/README.md",
+          "supports": "Describes the official ADK implementation, Python prerequisites, microservices and its relationship to the original benchmark."
+        },
+        {
+          "url": "https://github.com/bird-bench/BIRD-Interact/blob/main/LICENSE",
+          "supports": "Repository code is MIT licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2510.05318",
+          "supports": "Original paper defines conversational and agent-led database interaction evaluation."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Database/tool interaction benchmark; no graphical app or host OS platform is inferred."
+    },
+    {
+      "id": "context-mcp",
+      "name": "Context",
+      "creator": "Indragie Karunaratne",
+      "description_en": "A native macOS app for debugging MCP servers through tool calls, resource previews and live logs.",
+      "description_zh": "原生 macOS MCP 调试应用，可调用工具、预览资源并查看实时日志。",
+      "platforms": [
+        "macos"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://github.com/indragiek/Context",
+      "repo_url": "https://github.com/indragiek/Context",
+      "download_url": "https://github.com/indragiek/Context/releases/tag/v1.0.10",
+      "provenance_source": "https://www.indragie.com/blog/i-shipped-a-macos-app-built-entirely-by-claude-code",
+      "enables_en": "Explore several MCP servers in one visual client and inspect their tools, resources and responses.",
+      "enables_zh": "在同一可视化客户端中探索多个 MCP 服务器，检查工具、资源及响应。",
+      "limits_en": "Requires macOS 15+. The reviewed README lists protocol features still unsupported or in progress; prebuilt releases enable Sentry crash reporting. Source code is MIT-licensed.",
+      "limits_zh": "需要 macOS 15 及以上版本。已核查的 README 列有尚未支持或开发中的协议功能；预编译版本默认启用 Sentry 崩溃报告。 源代码采用 MIT 许可。",
+      "provenance_note_en": "The creator estimates that he wrote fewer than 1,000 of roughly 20,000 lines by hand, while Claude Code produced most of the app; human implementation and iteration remain explicit.",
+      "provenance_note_zh": "作者估计约两万行代码中，人工编写不足一千行，大部分由 Claude Code 生成；同时明确记录了人工实现和迭代工作。",
+      "evidence": [
+        {
+          "url": "https://www.indragie.com/blog/i-shipped-a-macos-app-built-entirely-by-claude-code",
+          "supports": "First-person development account states the substantial Claude-generated code share and the human-written portion."
+        },
+        {
+          "url": "https://github.com/indragiek/Context#readme",
+          "supports": "Documents native SwiftUI implementation, functions, macOS requirements and protocol limitations."
+        },
+        {
+          "url": "https://github.com/indragiek/Context/releases/tag/v1.0.10",
+          "supports": "Author release listing contains Context_v1.0.10.dmg; the binary was not downloaded or run."
+        },
+        {
+          "url": "https://github.com/indragiek/Context/blob/main/LICENSE.md",
+          "supports": "The repository license file licenses its source code under MIT."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "davit",
+      "name": "Davit",
+      "creator": "Wouter de Bie",
+      "description_en": "A native macOS interface for Apple's container platform, with container controls, image management, logs and resource monitoring.",
+      "description_zh": "面向 Apple 容器平台的原生 macOS 界面，提供容器控制、镜像管理、日志和资源监控。",
+      "platforms": [
+        "macos"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://davit.app/",
+      "repo_url": "https://github.com/wouterdebie/davit",
+      "download_url": "https://github.com/wouterdebie/davit/releases/tag/v0.1.38",
+      "provenance_source": "https://news.ycombinator.com/item?id=48821848",
+      "enables_en": "Manage Linux containers on an Apple Silicon Mac from a native desktop interface.",
+      "enables_zh": "在 Apple Silicon Mac 上通过原生桌面界面管理 Linux 容器。",
+      "limits_en": "Requires an Apple Silicon Mac and macOS 15+ plus Apple's container platform. The macOS tag describes the desktop application; the containers it manages run Linux. Source code is MIT-licensed.",
+      "limits_zh": "需要 Apple Silicon Mac、macOS 15 及以上版本和 Apple 容器平台。macOS 标签指桌面应用，受管理的容器运行 Linux。 源代码采用 MIT 许可。",
+      "provenance_note_en": "The Show HN launch under xinit describes Davit as mostly vibe-coded. Separately, maintainer-authored native Swift changes explicitly record Claude co-authorship.",
+      "provenance_note_zh": "署名 xinit 的 Show HN 发布帖称 Davit 主要通过 AI 编程构建；另有维护者提交的原生 Swift 代码变更明确记录 Claude 共同署名。",
+      "evidence": [
+        {
+          "url": "https://news.ycombinator.com/item?id=48821848",
+          "supports": "The first-person project launch describes Davit as mostly vibe-coded and points to its official site/source."
+        },
+        {
+          "url": "https://github.com/wouterdebie/davit#readme",
+          "supports": "Documents native SwiftUI implementation, container-management functions and Apple Silicon/macOS requirements."
+        },
+        {
+          "url": "https://github.com/wouterdebie/davit/releases/tag/v0.1.38",
+          "supports": "Maintainer release listing includes DMG and ZIP artifacts; no executable was downloaded or run."
+        },
+        {
+          "url": "https://github.com/wouterdebie/davit/commit/68c6984126b7903e94f9e33b11a39c948482cb68",
+          "supports": "Maintainer-authored changes to the native Swift application explicitly record Claude co-authorship."
+        },
+        {
+          "url": "https://github.com/wouterdebie/davit/blob/main/LICENSE",
+          "supports": "The repository license file licenses its source code under MIT."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "dog-e-dex",
+      "name": "Dog-e-dex",
+      "creator": "Cynthia Chen",
+      "description_en": "An iPhone app for identifying dogs from photos and saving them, names and notes in a personal collection.",
+      "description_zh": "通过照片识别犬种，并将照片、名字和笔记保存到个人收藏中的 iPhone 应用。",
+      "platforms": [
+        "ios"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://apps.apple.com/us/app/dog-e-dex/id6741032284",
+      "repo_url": null,
+      "download_url": "https://apps.apple.com/us/app/dog-e-dex/id6741032284",
+      "provenance_source": "https://www.producthunt.com/products/dog-e-dex?launch=957816",
+      "enables_en": "Build a personal photo collection of dogs encountered and revisit their saved information.",
+      "enables_zh": "整理遇见过的狗狗照片，并回看保存的信息。",
+      "limits_en": "Requires iOS 17.6+. The reviewed store listing describes cloud-backed photo storage; this review did not test recognition or synchronization, and no source repository was identified.",
+      "limits_zh": "需要 iOS 17.6 及以上版本。已核查的商店说明包含云端照片存储；本轮未测试识别或同步，也未找到公开源码仓库。",
+      "provenance_note_en": "Cynthia Chen's maker statement explicitly says she built Dog-e-dex purely by prompting Claude; the App Store identifies the same creator as seller.",
+      "provenance_note_zh": "Cynthia Chen 在创作者说明中明确表示，Dog-e-dex 完全通过向 Claude 提示构建；App Store 的销售者姓名与之相同。",
+      "evidence": [
+        {
+          "url": "https://www.producthunt.com/products/dog-e-dex?launch=957816",
+          "supports": "The maker's own pinned comment explicitly attributes construction of the app to prompting Anthropic's Claude."
+        },
+        {
+          "url": "https://apps.apple.com/us/app/dog-e-dex/id6741032284",
+          "supports": "Current publisher listing identifies Cynthia Chen, the iPhone app, features and iOS minimum; no installation was performed."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "harbor",
+      "name": "Harbor",
+      "description_en": "An execution framework for agent evaluations and training rollouts, with reusable task formats and local or remote sandbox backends.",
+      "description_zh": "用于 Agent 评测与训练轨迹生成的执行框架，提供可复用任务格式以及本地或远程沙盒后端。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://harborframework.com/docs",
+      "repo_url": "https://github.com/harbor-framework/harbor",
+      "demo_url": null,
+      "paper_url": null,
+      "limits_en": "Harbor is the runner used by Terminal-Bench, not a separate task benchmark. Current code requires Python 3.12+. Local runs need Docker; remote providers and model endpoints need their own configuration. Dataset licenses remain separate from Apache-2.0 framework code.",
+      "limits_zh": "Harbor 是 Terminal-Bench 使用的运行框架，本身不是另一套任务基准。当前代码要求 Python 3.12+；本地运行需要 Docker，远程服务和模型端点需各自配置。框架采用 Apache 2.0，数据集许可另行适用。",
+      "enables_en": "Run the same agent across selected task datasets, or collect trajectories for subsequent reinforcement learning.",
+      "enables_zh": "在选定的任务数据集上运行同一 Agent，或收集轨迹用于后续强化学习。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python package via uv tool install harbor or pip install harbor; Docker locally or configured cloud sandbox integrations.",
+      "evidence": [
+        {
+          "url": "https://github.com/harbor-framework/harbor#readme",
+          "supports": "Documents evaluation, benchmark authoring, local Docker, remote execution and RL rollout generation."
+        },
+        {
+          "url": "https://github.com/harbor-framework/harbor/blob/main/pyproject.toml",
+          "supports": "Current package requires Python 3.12+ and declares Apache-2.0 licensing."
+        },
+        {
+          "url": "https://github.com/harbor-framework/harbor/blob/main/LICENSE",
+          "supports": "Framework license is Apache 2.0."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Infrastructure framework; platforms depend on the selected task and backend."
+    },
+    {
+      "id": "headroom-ai",
+      "name": "Headroom AI",
+      "creator": "MariuszT",
+      "description_en": "A macOS menu-bar app that displays usage windows and reset times for multiple Claude Code and Codex accounts.",
+      "description_zh": "在 macOS 菜单栏中展示多个 Claude Code 和 Codex 账户用量窗口及重置时间的应用。",
+      "platforms": [
+        "macos"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://github.com/MariuszT/headroom-ai",
+      "repo_url": "https://github.com/MariuszT/headroom-ai",
+      "download_url": "https://github.com/MariuszT/headroom-ai/releases/tag/v1.3.2",
+      "provenance_source": "https://github.com/MariuszT/headroom-ai#how-this-was-built",
+      "enables_en": "Compare remaining account capacity in a single panel while keeping the app's sign-ins separate from CLI sessions.",
+      "enables_zh": "在一个面板中比较多个账户的剩余额度，应用登录与命令行会话分别管理。",
+      "limits_en": "Requires macOS 14+. The maintainer describes it as unofficial and dependent on provider endpoints that may change; usage display does not switch CLI accounts. Source code is MIT-licensed.",
+      "limits_zh": "需要 macOS 14 及以上版本。维护者说明这是依赖可能变动的提供商接口的非官方工具；展示用量不会切换命令行账户。 源代码采用 MIT 许可。",
+      "provenance_note_en": "The maintainer says development used Claude Code from start to finish and credits existing MIT-licensed projects for API/OAuth work, so the entry uses the mixed-scope AI-assisted label.",
+      "provenance_note_zh": "维护者明确表示全程使用 Claude Code 开发，同时注明 API/OAuth 工作参考了现有 MIT 项目，因此使用 AI 辅助开发标签。",
+      "evidence": [
+        {
+          "url": "https://github.com/MariuszT/headroom-ai#how-this-was-built",
+          "supports": "Maintainer explicitly describes start-to-finish Claude Code development; the adjacent credits identify reused knowledge/components."
+        },
+        {
+          "url": "https://github.com/MariuszT/headroom-ai#readme",
+          "supports": "Documents features, macOS requirements, separate OAuth sessions and unsupported-endpoint limitations."
+        },
+        {
+          "url": "https://github.com/MariuszT/headroom-ai/releases/tag/v1.3.2",
+          "supports": "Release listing includes Headroom-AI.dmg; the binary was not downloaded or run."
+        },
+        {
+          "url": "https://github.com/MariuszT/headroom-ai/blob/main/LICENSE",
+          "supports": "The repository license file licenses its source code under MIT."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "intercode",
+      "name": "InterCode",
+      "description_en": "An interactive coding environment framework that returns execution feedback during Bash, SQL, Python and capture-the-flag tasks.",
+      "description_zh": "在 Bash、SQL、Python 和夺旗任务执行过程中返回反馈的交互式编程环境框架。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://intercode-benchmark.github.io/",
+      "repo_url": "https://github.com/princeton-nlp/intercode",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2306.14898",
+      "limits_en": "Requires Python 3.8+ and a running Docker service with task images. Included task types and setup paths differ; model-driven experiment scripts require configured provider access. This is execution-based evaluation rather than a static code dataset. Repository code is MIT.",
+      "limits_zh": "需要 Python 3.8+、运行中的 Docker 服务及任务镜像。不同任务类型的配置流程不同；模型驱动的实验脚本需要相应服务访问。它基于实际执行反馈进行评测，并非静态代码数据集。仓库代码采用 MIT。",
+      "enables_en": "Build coding tasks and measure how agents use execution errors and state feedback to refine subsequent actions.",
+      "enables_zh": "构建编程任务，观察 Agent 如何利用执行错误与状态反馈修正后续动作。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python intercode-bench package or source installation; Docker-backed task environments and local interactive demos.",
+      "evidence": [
+        {
+          "url": "https://github.com/princeton-nlp/intercode#readme",
+          "supports": "Documents Docker/Python requirements, interactive APIs, Bash/SQL/Python/CTF environments and experiment setup."
+        },
+        {
+          "url": "https://github.com/princeton-nlp/intercode/blob/master/LICENSE.md",
+          "supports": "Repository license is MIT."
+        },
+        {
+          "url": "https://arxiv.org/abs/2306.14898",
+          "supports": "Original paper describes interactive code evaluation with execution feedback."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Code tasks run in configured containers; no host OS is inferred as the target platform."
+    },
+    {
+      "id": "mlgym",
+      "name": "MLGym",
+      "description_en": "A Gym-style research environment where agents modify machine-learning methods, run experiments and receive task-specific feedback.",
+      "description_zh": "采用 Gym 风格接口的研究环境，Agent 可修改机器学习方法、运行实验并获得任务反馈。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/facebookresearch/MLGym",
+      "repo_url": "https://github.com/facebookresearch/MLGym",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2502.14499",
+      "limits_en": "The author repository is archived as of this review, despite older README maintenance language. Experiments require Docker/Podman and task-dependent GPU/data resources. Most code is CC BY-NC 4.0, with MIT/Apache components; it is not uniformly licensed for commercial use.",
+      "limits_zh": "截至本次核查，作者仓库已归档，虽然旧 README 仍有维护说明。实验依赖 Docker/Podman，以及具体任务所需的 GPU 和数据。多数代码采用 CC BY-NC 4.0，部分组件采用 MIT/Apache，并非统一允许商业使用。",
+      "enables_en": "Evaluate iterative AI-research workflows or study reinforcement learning for agents that design and test ML experiments.",
+      "enables_zh": "评估迭代式 AI 研究流程，或研究面向机器学习实验设计与测试 Agent 的强化学习。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Source installation, Docker/Podman task containers and configured model access; README documents Linux/macOS host setup and GPU container requirements.",
+      "evidence": [
+        {
+          "url": "https://github.com/facebookresearch/MLGym#readme",
+          "supports": "Documents ML tasks, Gym-style agent training/evaluation, container/GPU setup and component-specific license terms."
+        },
+        {
+          "url": "https://api.github.com/repos/facebookresearch/MLGym",
+          "supports": "GitHub repository metadata reports archived=true during the 2026-10-16 source review."
+        },
+        {
+          "url": "https://github.com/facebookresearch/MLGym/blob/main/LICENSE",
+          "supports": "Root license is CC BY-NC 4.0."
+        },
+        {
+          "url": "https://arxiv.org/abs/2502.14499",
+          "supports": "Original paper describes the framework and AI research task benchmark."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Linux/macOS are host setup instructions; the target tasks are ML experiments, so application platform tags remain empty."
+    },
+    {
+      "id": "onebotan",
+      "name": "OneBotan",
+      "creator": "mirute02",
+      "description_en": "An Android home-screen widget for recording activity timestamps, counting presses and tracking on/off intervals, with history and CSV export.",
+      "description_zh": "用于记录活动时间、统计点击次数和跟踪开关持续时间的 Android 桌面小组件，提供历史记录和 CSV 导出。",
+      "platforms": [
+        "android"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://github.com/mirute02/onebotan",
+      "repo_url": "https://github.com/mirute02/onebotan",
+      "download_url": "https://github.com/mirute02/onebotan/releases/tag/v1.0.0",
+      "provenance_source": "https://zenn.dev/mirute02/articles/android-only-termux-claude-code",
+      "enables_en": "Log recurring activities from the home screen and inspect or export their timing history.",
+      "enables_zh": "从桌面记录重复活动，并查看或导出时间历史。",
+      "limits_en": "Requires Android 12+. Distribution is via a released APK rather than Google Play; records stay on the device and the README documents CSV export for backup. Source code is MIT-licensed.",
+      "limits_zh": "需要 Android 12 及以上版本，通过发布的 APK 分发。记录保存在本机，README 提供 CSV 导出备份说明。 源代码采用 MIT 许可。",
+      "provenance_note_en": "The creator says their work was giving requirements and trying APKs on-device, while Claude Code wrote code, built the app, wrote and ran tests, and committed changes.",
+      "provenance_note_zh": "作者说明自己负责提出需求和在实机上试用 APK，代码编写、构建、测试编写与执行、提交均交由 Claude Code 完成。",
+      "evidence": [
+        {
+          "url": "https://zenn.dev/mirute02/articles/android-only-termux-claude-code",
+          "supports": "The creator's development diary identifies this repository and explicitly separates human requests/testing from Claude's implementation work."
+        },
+        {
+          "url": "https://github.com/mirute02/onebotan/blob/main/README.en.md",
+          "supports": "Documents Android 12+, widget modes, history, CSV support and local record storage."
+        },
+        {
+          "url": "https://github.com/mirute02/onebotan/releases/tag/v1.0.0",
+          "supports": "Author release listing contains onebotan-1.0.0.apk; the APK was not downloaded or run."
+        },
+        {
+          "url": "https://github.com/mirute02/onebotan/blob/main/LICENSE",
+          "supports": "The repository license file licenses its source code under MIT."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "openenv",
+      "name": "OpenEnv",
+      "description_en": "A framework for packaging interactive environments behind a shared step/reset API, with Docker deployment, reward interfaces and training integrations.",
+      "description_zh": "将交互环境封装为统一 step/reset API 的框架，提供 Docker 部署、奖励接口和训练集成。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://huggingface.co/docs/openenv",
+      "repo_url": "https://github.com/huggingface/OpenEnv",
+      "demo_url": null,
+      "paper_url": null,
+      "limits_en": "OpenEnv standardizes environment execution; it is not one benchmark or an AI-built software showcase. Python 3.10+ is required, and clients, servers, containers and credentials vary by environment. Some integrations require newer Python. Framework code is BSD 3-Clause; environment terms are separate.",
+      "limits_zh": "OpenEnv 统一环境执行方式，本身不是单一基准，也不是 AI 构建作品。需要 Python 3.10+；具体客户端、服务端、容器和凭据依环境而定，部分集成要求更高版本 Python。框架采用 BSD 3-Clause，环境条款另行适用。",
+      "enables_en": "Build and share agent environments, connect them to RL trainers, or evaluate agents through a consistent interface.",
+      "enables_zh": "构建和共享 Agent 环境、连接强化学习训练器，或通过统一接口进行评测。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python openenv package; WebSocket client/server API with isolated Docker environments and optional hosted deployments.",
+      "evidence": [
+        {
+          "url": "https://github.com/huggingface/OpenEnv#readme",
+          "supports": "Documents environment creation, step/reset/state APIs, Docker deployment, training integrations and evaluation support."
+        },
+        {
+          "url": "https://github.com/huggingface/OpenEnv/blob/main/pyproject.toml",
+          "supports": "Package requires Python 3.10+; Harbor integration requires Python 3.12+."
+        },
+        {
+          "url": "https://github.com/huggingface/OpenEnv/blob/main/LICENSE",
+          "supports": "Current framework code is licensed BSD 3-Clause."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Transport and hosting are not target application platforms; individual environments determine their own targets."
+    },
+    {
+      "id": "stabletoolbench",
+      "name": "StableToolBench",
+      "description_en": "A ToolBench-derived environment that combines cached API responses with model-based simulation and revised tool-use evaluation procedures.",
+      "description_zh": "由 ToolBench 衍生的环境，结合缓存 API 响应、模型模拟和调整后的工具使用评测流程。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/THUNLP-MT/StableToolBench",
+      "repo_url": "https://github.com/THUNLP-MT/StableToolBench",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2403.07714",
+      "limits_en": "Simulated or cached API responses do not establish that live services perform the same actions. The repository now offers MirrorAPI and GPT-based paths with different models, caches and evaluators. Setup requires downloaded tool data and either model hosting or API access. Code is Apache 2.0.",
+      "limits_zh": "模拟或缓存的 API 响应不能证明真实服务会执行相同动作。仓库现提供 MirrorAPI 与 GPT 两类方案，模型、缓存和评审方式不同。运行需下载工具数据，并准备模型服务或 API 访问。代码采用 Apache 2.0。",
+      "enables_en": "Evaluate tool-use agents against a controlled virtual API server while recording the simulator, cache and judging configuration.",
+      "enables_zh": "通过可控的虚拟 API 服务评估工具型 Agent，同时记录模拟器、缓存与评分配置。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python/FastAPI-style virtual server; requirements file, optional Docker, downloadable caches, and MirrorAPI/vLLM or configured GPT service.",
+      "evidence": [
+        {
+          "url": "https://github.com/THUNLP-MT/StableToolBench#readme",
+          "supports": "Documents ToolBench lineage, MirrorAPI versus GPT-cache paths, downloads, server setup and evaluation variants."
+        },
+        {
+          "url": "https://github.com/THUNLP-MT/StableToolBench/blob/master/LICENSE",
+          "supports": "Repository code is Apache 2.0 licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2403.07714",
+          "supports": "Original paper introduces virtual API serving and a revised evaluation system."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "The API server transports tool calls; it is not a browser-task environment."
+    },
+    {
+      "id": "swe-gym",
+      "name": "SWE-Gym",
+      "description_en": "Executable Python-repository tasks and test verification for training software-engineering agents and solution verifiers.",
+      "description_zh": "面向 Python 仓库问题的可执行任务与测试验证环境，用于训练软件工程 Agent 和解法验证器。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/SWE-Gym/SWE-Gym",
+      "repo_url": "https://github.com/SWE-Gym/SWE-Gym",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2412.21139",
+      "limits_en": "SWE-Gym supplies training tasks and is distinct from SWE-bench evaluation sets. Reproduction instructions use a specific OpenHands fork; switching versions can change outcomes. Task containers, repository data and model compute are required. Framework code is Apache 2.0; bundled projects retain their licenses.",
+      "limits_zh": "SWE-Gym 提供训练任务，与 SWE-bench 评测集不同。复现说明使用特定 OpenHands 分支，切换版本会影响结果。需要任务容器、仓库数据和模型计算资源。框架代码采用 Apache 2.0，所含项目保留各自许可。",
+      "enables_en": "Collect verified software-repair trajectories, train coding agents and train verifiers that select candidate solutions.",
+      "enables_zh": "收集带测试验证的软件修复轨迹，训练编程 Agent，以及用于选择候选解法的验证器。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Released task data and per-instance x86-64 Docker images; documented OpenHands/MoatlessTools workflows and separate training compute.",
+      "evidence": [
+        {
+          "url": "https://github.com/SWE-Gym/SWE-Gym#readme",
+          "supports": "Documents executable task environments, tests, training purpose, container images and links to reproduction instructions."
+        },
+        {
+          "url": "https://github.com/SWE-Gym/SWE-Gym/blob/main/docs/OpenHands.md",
+          "supports": "Requires a specific OpenHands fork and distinguishes rollout/evaluation from model-training setup."
+        },
+        {
+          "url": "https://github.com/SWE-Gym/SWE-Gym/blob/main/LICENSE",
+          "supports": "Repository code is Apache 2.0 licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2412.21139",
+          "supports": "Original paper distinguishes SWE-Gym training environments from downstream SWE-bench evaluation."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Repository-repair tasks are not tagged by the operating system of the runner."
+    },
+    {
+      "id": "terminal-bench",
+      "name": "Terminal-Bench",
+      "description_en": "A versioned collection of executable terminal tasks with containerized starting environments, reference solutions and automated checks for agent outcomes.",
+      "description_zh": "按版本发布的可执行终端任务集合，配有容器化初始环境、参考解法和用于判断 Agent 结果的自动检查。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://www.tbench.ai/",
+      "repo_url": "https://github.com/harbor-framework/terminal-bench",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2601.11868",
+      "limits_en": "The current repository is a continuously updated benchmark, while the linked paper describes Terminal-Bench 2.0. Pin dataset and harness versions for comparisons. Harbor and a supported sandbox backend are required; provider costs and task dependencies vary. Repository license is Apache 2.0.",
+      "limits_zh": "当前仓库是持续更新的基准，所链接论文描述的是 Terminal-Bench 2.0。比较结果时需固定数据集与评测框架版本。运行需要 Harbor 和受支持的沙盒后端；服务费用与任务依赖各不相同。仓库采用 Apache 2.0。",
+      "enables_en": "Test whether an agent can complete multi-step command-line work against executable outcome checks.",
+      "enables_zh": "通过可执行的结果检查，测试 Agent 能否完成多步骤命令行工作。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Runs through Harbor using versioned datasets and container/cloud sandbox providers; current main recommends validating oracle solutions in the chosen backend.",
+      "evidence": [
+        {
+          "url": "https://github.com/harbor-framework/terminal-bench#readme",
+          "supports": "Current source describes continuous tagged releases, Harbor execution, sandbox validation and the dataset registry."
+        },
+        {
+          "url": "https://github.com/harbor-framework/terminal-bench-2#readme",
+          "supports": "Preserves the distinct Terminal-Bench 2.0 dataset and documents migration from the legacy harness to Harbor."
+        },
+        {
+          "url": "https://github.com/harbor-framework/terminal-bench/blob/main/LICENSE",
+          "supports": "Repository license is Apache 2.0."
+        },
+        {
+          "url": "https://arxiv.org/abs/2601.11868",
+          "supports": "Research paper describes the Terminal-Bench 2.0 task design and evaluation setting, not every subsequent release."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Terminal/code tasks use isolated backends; no host OS is inferred as a directory platform."
+    },
+    {
+      "id": "toolsandbox",
+      "name": "ToolSandbox",
+      "description_en": "A stateful tool-use evaluation environment with simulated conversations, dependent tool actions and checks on intermediate and final world states.",
+      "description_zh": "有状态的工具使用评测环境，结合模拟对话、相互依赖的工具动作，以及对中间和最终环境状态的检查。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://machinelearning.apple.com/research/toolsandbox-stateful-conversational-llm-benchmark",
+      "repo_url": "https://github.com/apple-aiml-research/ToolSandbox",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2408.04682",
+      "limits_en": "Despite its name, documented tool execution runs on the host rather than inside Docker. Model credentials are needed, and search scenarios also use RapidAPI. Apple publishes custom license terms plus separately licensed components. It simulates device state; it is not an iOS emulator.",
+      "limits_zh": "虽然名称含 Sandbox，文档中的工具执行发生在主机上，而非 Docker 内。需要模型凭据，搜索场景还使用 RapidAPI。Apple 发布了定制许可条款，部分组件另有许可。它模拟设备状态，并不是 iOS 模拟器。",
+      "enables_en": "Evaluate whether agents handle state dependencies, missing information and conversational tool use across a complete trajectory.",
+      "enables_zh": "评估 Agent 在完整交互轨迹中处理状态依赖、信息缺失和对话式工具调用的能力。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python package and tool_sandbox CLI; documented setup uses Python 3.9; provider configuration depends on selected user and agent roles.",
+      "evidence": [
+        {
+          "url": "https://github.com/apple-aiml-research/ToolSandbox#readme",
+          "supports": "Documents stateful tools, user simulation, host execution, provider/RapidAPI requirements and Python setup."
+        },
+        {
+          "url": "https://github.com/apple-aiml-research/ToolSandbox/blob/main/LICENSE",
+          "supports": "Apple-specific license notice points to separately licensed components."
+        },
+        {
+          "url": "https://arxiv.org/abs/2408.04682",
+          "supports": "Original paper defines stateful conversational tool-use evaluation."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Simulated settings/contacts/messages are accessed through tools, not a documented iOS or macOS application target."
+    },
+    {
+      "id": "vibetunnel",
+      "name": "VibeTunnel",
+      "creator": "VibeTunnel team",
+      "description_en": "A terminal-session manager with a native Mac app and browser interface for viewing output and interacting with running shells remotely.",
+      "description_zh": "提供原生 Mac 应用和浏览器界面的终端会话管理器，可远程查看输出并操作运行中的 Shell。",
+      "platforms": [
+        "macos",
+        "linux",
+        "web"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://vibetunnel.sh/",
+      "repo_url": "https://github.com/amantus-ai/vibetunnel",
+      "download_url": "https://github.com/amantus-ai/vibetunnel/releases/tag/v1.0.0-beta.18",
+      "provenance_source": "https://steipete.me/posts/2025/vibetunnel-turn-any-browser-into-your-mac-terminal",
+      "enables_en": "Follow terminal sessions from another device and send input without moving the underlying process to that device.",
+      "enables_zh": "从另一台设备查看终端会话并输入命令，底层进程仍在原主机运行。",
+      "limits_en": "The reviewed release is beta. The Mac bundle requires Apple Silicon and macOS 14+; Linux uses the documented npm/Node setup. The separate iOS client remains a work in progress. Source code is MIT-licensed.",
+      "limits_zh": "已核查版本为 Beta。Mac 安装包要求 Apple Silicon 和 macOS 14 及以上；Linux 使用文档中的 npm/Node 方案，独立 iOS 客户端仍在开发中。 源代码采用 MIT 许可。",
+      "provenance_note_en": "A creator's launch account describes Claude generating implementations, followed by developer testing, refactoring and reuse of existing components.",
+      "provenance_note_zh": "创作者的发布文章记录了 Claude 生成实现，以及开发者随后测试、重构和复用既有组件的过程。",
+      "evidence": [
+        {
+          "url": "https://steipete.me/posts/2025/vibetunnel-turn-any-browser-into-your-mac-terminal",
+          "supports": "First-party account explains substantial Claude Code generation alongside human debugging, refactoring and component reuse."
+        },
+        {
+          "url": "https://github.com/amantus-ai/vibetunnel#readme",
+          "supports": "Documents the Mac bundle, Linux npm installation, browser client and unfinished iOS client."
+        },
+        {
+          "url": "https://github.com/amantus-ai/vibetunnel/releases/tag/v1.0.0-beta.18",
+          "supports": "The prerelease listing contains Mac DMG and ZIP artifacts; no executable was run."
+        },
+        {
+          "url": "https://github.com/amantus-ai/vibetunnel/blob/main/LICENSE",
+          "supports": "The repository license file licenses its source code under MIT."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "video-lite-compress-resize",
+      "name": "Video Lite: Compress & Resize",
+      "creator": "Ivan Vdovitsa",
+      "description_en": "An iPhone and iPad app that automatically re-encodes videos into smaller files and supports background processing and sharing.",
+      "description_zh": "自动将视频重新编码为较小文件的 iPhone/iPad 应用，支持后台处理和分享。",
+      "platforms": [
+        "ios"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://apps.apple.com/us/app/video-lite-compress-resize/id6776254843",
+      "repo_url": null,
+      "download_url": "https://apps.apple.com/us/app/video-lite-compress-resize/id6776254843",
+      "provenance_source": "https://www.reddit.com/r/vibecoding/comments/1u1crsb/i_shipped_my_first_ios_app_video_compressor_with/",
+      "enables_en": "Reduce the size of large videos or screen recordings before sharing or storing them.",
+      "enables_zh": "在分享或保存前缩小大型视频及录屏文件的体积。",
+      "limits_en": "Requires iOS/iPadOS 26+. Compression is automatic; the reviewed sources provide an App Store app, without an identified public source repository or independent quality tests.",
+      "limits_zh": "需要 iOS/iPadOS 26 及以上版本，压缩由应用自动处理。已核查来源提供 App Store 应用，但未找到公开源码，也未独立测试画质。",
+      "provenance_note_en": "A first-person launch post by u/vdovitsa says this app was built with Claude and Claude Code in Xcode and links the exact App Store ID. Apple lists Ivan Vdovitsa as seller.",
+      "provenance_note_zh": "u/vdovitsa 的第一人称发布帖说明，应用在 Xcode 中借助 Claude 与 Claude Code 构建，并链接到确切的 App Store ID；Apple 将 Ivan Vdovitsa 列为销售者。",
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/vibecoding/comments/1u1crsb/i_shipped_my_first_ios_app_video_compressor_with/",
+          "supports": "Creator u/vdovitsa describes using Claude/Claude Code for the complete app and links App Store ID 6776254843."
+        },
+        {
+          "url": "https://apps.apple.com/us/app/video-lite-compress-resize/id6776254843",
+          "supports": "Publisher listing identifies Ivan Vdovitsa, documents the video workflow and iOS requirement; no app was run."
+        },
+        {
+          "url": "https://itunes.apple.com/lookup?id=6776254843&country=us",
+          "supports": "Apple's lookup metadata independently resolves the exact app ID, seller, current title and minimum OS."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "tau-bench",
+      "name": "τ-Bench",
+      "description_en": "A customer-service simulation framework with domain policies, executable tools and simulated users; the current repository extends τ²-Bench into τ³ text, voice and knowledge tasks.",
+      "description_zh": "结合领域政策、可执行工具和模拟用户的客服环境；当前仓库从 τ²-Bench 扩展为包含文字、语音和知识任务的 τ³ 框架。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/sierra-research/tau2-bench",
+      "repo_url": "https://github.com/sierra-research/tau2-bench",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2506.07982",
+      "limits_en": "The original tau-bench repository is explicitly outdated; tau2-bench now hosts τ³. Requires Python 3.12–3.13 and configured model access. Banking results before and after v1.0.1 are not comparable. Text, voice and knowledge modes have different dependencies; code is MIT.",
+      "limits_zh": "原 tau-bench 仓库已明确停止更新任务，tau2-bench 现承载 τ³。需要 Python 3.12–3.13 和模型访问配置。banking 领域在 v1.0.1 前后的结果不可直接比较。文字、语音和知识模式依赖不同；代码采用 MIT。",
+      "enables_en": "Evaluate policy-following and coordination with users who can also change the world, or connect training through the Gymnasium interface.",
+      "enables_zh": "评估政策遵循，以及与同样能改变环境状态的用户协作；也可通过 Gymnasium 接口接入训练。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python and uv; core text-mode installation plus optional voice, knowledge and Gym extras; provider credentials depend on selected models.",
+      "evidence": [
+        {
+          "url": "https://github.com/sierra-research/tau2-bench#readme",
+          "supports": "Documents current τ³ domains, Python constraints, optional dependencies and v1.0.1 banking grading incompatibility."
+        },
+        {
+          "url": "https://github.com/sierra-research/tau-bench#readme",
+          "supports": "Legacy repository warns its tasks are outdated and directs users to the current tau2-bench repository."
+        },
+        {
+          "url": "https://github.com/sierra-research/tau2-bench/blob/main/src/tau2/gym/README.md",
+          "supports": "Provides step/reset interfaces for agent and user simulation, including RL use."
+        },
+        {
+          "url": "https://github.com/sierra-research/tau2-bench/blob/main/LICENSE",
+          "supports": "Current framework code is MIT licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2506.07982",
+          "supports": "The τ² paper introduces dual-control evaluation; later τ³ additions are described separately by the repository."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "API/simulated-domain framework; host OS setup is not treated as a target application platform."
+    },
+    {
+      "id": "cowboy-shooter",
+      "name": "Cowboy Shooter",
+      "creator": "Raymelon (@pseudokid)",
+      "content_type": "game",
+      "implementation": "ai-built",
+      "description_en": "A browser-based 3D runner and shooting game in which players change lanes, jump obstacles and shoot targets as levels progress.",
+      "description_zh": "浏览器中的三维跑酷射击游戏，玩家随关卡推进切换跑道、跳过障碍并射击目标。",
+      "primary_url": "https://cowboy.raymelon.com/",
+      "repo_url": null,
+      "demo_url": "https://cowboy.raymelon.com/",
+      "provenance_source": "https://cowboy.raymelon.com/",
+      "enables_en": "Try a playable example of AI-generated game code and assets, with keyboard and touch controls.",
+      "enables_zh": "体验包含 AI 生成游戏代码及素材的可玩作品，支持键盘和触屏控制。",
+      "limits_en": "The author hosts the game; no public source repository was identified. The interface includes username and optional reward-service flows; gameplay was not independently tested.",
+      "limits_zh": "游戏由作者托管，未找到公开源码仓库。界面包含用户名和可选奖励服务流程，本轮未独立测试游戏操作。",
+      "provenance_note_en": "The official game page explicitly attributes its game assets and code to AI, names Cursor and Claude, and separately credits Three.js as the existing engine.",
+      "provenance_note_zh": "游戏官方页面明确说明游戏素材与代码由 AI 生成，列出 Cursor 和 Claude，并单独注明使用已有的 Three.js 引擎。",
+      "evidence": [
+        {
+          "url": "https://cowboy.raymelon.com/",
+          "supports": "First-party game page explicitly claims AI-generated assets and code, credits the maker and tools, and documents controls."
+        },
+        {
+          "url": "https://cowboy.raymelon.com/about.html",
+          "supports": "Maker's About page links back to the exact game and identifies it as the creator's game-jam project."
+        },
+        {
+          "url": "https://cowboy.raymelon.com/",
+          "supports": "The public artifact returned HTTP 200 on the review date; no account, payment or gameplay interaction was performed."
+        }
+      ],
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "doomscroll",
+      "name": "DOOMscroll",
+      "creator": "David Friedman",
+      "content_type": "game",
+      "implementation": "ai-assisted",
+      "description_en": "A Doom-inspired browser game controlled by scrolling or swiping, with automatic firing, monsters, weapon upgrades and news-headline plaques.",
+      "description_zh": "受 Doom 启发、通过滚动或滑动操作的浏览器游戏，包含自动射击、怪物、武器升级和新闻标题铭牌。",
+      "primary_url": "https://gisnep.com/doomscroll/",
+      "repo_url": null,
+      "demo_url": "https://gisnep.com/doomscroll/",
+      "provenance_source": "https://ironicsans.ghost.io/doomscrolling-the-game/",
+      "enables_en": "Explore how a single scrolling action can drive a complete game and read the creator's AI-assisted prototyping process.",
+      "enables_zh": "体验单一滚动动作如何驱动完整游戏，并了解作者借助 AI 进行原型开发的过程。",
+      "limits_en": "This entry covers the browser version. The game displays externally sourced headlines; neither gameplay performance nor headline freshness was independently verified.",
+      "limits_zh": "本条目仅核查浏览器版本。游戏展示来自外部的新闻标题，本轮未独立验证运行表现或标题时效性。",
+      "provenance_note_en": "Friedman's first-person account links the live game and details using GPT-5 to create its prototype, generate test pages and iteratively implement visual and gameplay changes.",
+      "provenance_note_zh": "Friedman 的第一人称文章链接到游戏，并详细记录了借助 GPT-5 创建原型、生成测试页面及迭代视觉和玩法功能的过程。",
+      "evidence": [
+        {
+          "url": "https://ironicsans.ghost.io/doomscrolling-the-game/",
+          "supports": "Creator describes substantial GPT-5 implementation work, prompts and iterative design changes, with direct links to the exact public game."
+        },
+        {
+          "url": "https://gisnep.com/doomscroll/",
+          "supports": "The live page links back to the creator's story and documents scrolling/swiping, automatic firing and upgrades."
+        },
+        {
+          "url": "https://gisnep.com/doomscroll/",
+          "supports": "The browser-game page returned HTTP 200 on the review date; no game session was started."
+        }
+      ],
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "aldi-prices",
+      "name": "Aldi Prices",
+      "creator": "Jim Lawruk",
+      "content_type": "website",
+      "implementation": "ai-built",
+      "description_en": "A personal grocery-price history website with product tables, per-product timelines and charts generated from a maintained CSV.",
+      "description_zh": "根据维护的 CSV 展示商品表格、单品历史和图表的个人杂货价格记录网站。",
+      "primary_url": "https://aldi-prices.lawruk.com/",
+      "repo_url": "https://github.com/jimlawruk/aldi-prices",
+      "demo_url": "https://aldi-prices.lawruk.com/",
+      "provenance_source": "https://news.ycombinator.com/item?id=45644813",
+      "enables_en": "Inspect a practical AI-generated data website and browse the public interface code behind its historical observations.",
+      "enables_zh": "查看实用的 AI 生成数据网站，并浏览其历史记录展示界面的公开代码。",
+      "limits_en": "The creator describes this as a personal price log. Its CSV is not a comprehensive or live retailer price feed; coverage and freshness depend on the recorded observations. A source-code reuse license was not identified in the reviewed repository.",
+      "limits_zh": "作者将其描述为个人价格记录。CSV 并非完整或实时的零售商价格源，覆盖范围和时效取决于记录的数据。 本轮查阅的仓库中未确认源代码复用许可。",
+      "provenance_note_en": "The maker's own comment states that all application code must be produced by Copilot Agent in VS Code and links both this website and its repository.",
+      "provenance_note_zh": "作者本人明确表示所有应用代码都交由 VS Code 中的 Copilot Agent 编写，并在同一条说明中链接网站和仓库。",
+      "evidence": [
+        {
+          "url": "https://news.ycombinator.com/item?id=45644813",
+          "supports": "Jim Lawruk explicitly states the all-code-by-Copilot rule and cross-links the exact live site and source repository."
+        },
+        {
+          "url": "https://hacker-news.firebaseio.com/v0/item/45644813.json",
+          "supports": "Hacker News' official API corroborates the author and text of the specific maker comment."
+        },
+        {
+          "url": "https://github.com/jimlawruk/aldi-prices#readme",
+          "supports": "Repository documents CSV input, Angular implementation, product views, historical charts and local build instructions."
+        },
+        {
+          "url": "https://aldi-prices.lawruk.com/",
+          "supports": "The hosted application shell returned HTTP 200 on the review date; data calculations and rendering were not independently tested."
+        }
+      ],
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "social-media-card-cropper",
+      "name": "Social Media Card Cropper",
+      "creator": "Simon Willison",
+      "content_type": "website",
+      "implementation": "ai-assisted",
+      "description_en": "A browser image tool for composing social-media cards with selectable aspect ratios, background colors, crop previews and downloadable image formats.",
+      "description_zh": "在浏览器中制作社交媒体图片卡片的工具，提供画面比例、背景色、裁剪预览和图片下载。",
+      "primary_url": "https://tools.simonwillison.net/social-media-cropper",
+      "repo_url": "https://github.com/simonw/tools",
+      "demo_url": "https://tools.simonwillison.net/social-media-cropper",
+      "source_file_url": "https://github.com/simonw/tools/blob/main/social-media-cropper.html",
+      "provenance_source": "https://gist.github.com/simonw/12b8f88932a71450071190e1289a17e9",
+      "enables_en": "Crop and frame an image for sharing while inspecting an openly documented sequence of AI-generated implementation changes.",
+      "enables_zh": "裁剪和排版用于分享的图片，同时查看公开记录的 AI 生成实现与迭代过程。",
+      "limits_en": "The tool uses third-party browser libraries and may load image-encoder code from a CDN. Export support and speed depend on the browser; no image was uploaded or processed in this review. Repository code is Apache-2.0 licensed; external libraries retain their own terms.",
+      "limits_zh": "工具使用第三方浏览器库，并可能从 CDN 加载图片编码器。导出支持及速度取决于浏览器；本轮未上传或处理图片。 仓库代码采用 Apache 2.0 许可，外部库保留各自条款。",
+      "provenance_note_en": "The creator publishes the initial request and generated HTML, links that transcript from the introducing commit, and publishes later Claude Code editing transcripts; the app also incorporates existing libraries.",
+      "provenance_note_zh": "作者公开了最初的需求和生成的 HTML，在引入该文件的提交中引用对话，并公开后续 Claude Code 修改记录；应用同时使用现有库。",
+      "evidence": [
+        {
+          "url": "https://gist.github.com/simonw/12b8f88932a71450071190e1289a17e9",
+          "supports": "Maker-owned transcript contains the request for the complete image-cropping app and the assistant's generated HTML implementation."
+        },
+        {
+          "url": "https://github.com/simonw/tools/commit/b4a2bc98753c3b6592a7cd86a9510bc6bf552efb",
+          "supports": "The commit adding social-media-cropper.html links directly to the initial generation transcript."
+        },
+        {
+          "url": "https://gist.github.com/simonw/a3e7f3ce34e26ab7c207fe641853e4a0",
+          "supports": "Maker-published Claude Code transcript shows the named tool being read and modified for zoom/background behavior."
+        },
+        {
+          "url": "https://tools.simonwillison.net/social-media-cropper",
+          "supports": "Live tool documents current crop/export controls and encoder fallbacks; the page returned HTTP 200."
+        },
+        {
+          "url": "https://github.com/simonw/tools/blob/main/LICENSE",
+          "supports": "Repository code is licensed under Apache 2.0."
+        }
+      ],
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
     }
   ]
 }

@@ -7,7 +7,7 @@ from urllib.parse import unquote, urlsplit
 from urllib.robotparser import RobotFileParser
 import xml.etree.ElementTree as ET
 
-from build import OUT, read_inputs, lang_path, project_path
+from build import OUT, PLATFORMS, read_inputs, lang_path, project_path
 from papers import read_papers
 
 
@@ -83,6 +83,10 @@ def main():
     expected = {e['id'] for e in entries}
     for language in ('en', 'zh'):
         assert set(pages[lang_path(language)].projects) == expected
+        for platform in PLATFORMS:
+            members = {e['id'] for e in entries if e['content_type'] == 'app' and platform in e['platforms']}
+            if members:
+                assert set(pages[lang_path(language, '/apps/' + platform + '/')].projects) == members, platform
         for entry in entries:
             page = pages[project_path(language, entry)]
             assert entry['primary_url'] in page.hrefs, entry['id']

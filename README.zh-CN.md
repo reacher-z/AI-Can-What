@@ -4,13 +4,13 @@
 
 **[访问网站](https://aicanwhat.com/zh/) · [English](README.md) · [收录方法](https://aicanwhat.com/zh/about/)**
 
-当前有 **54 条目录记录**，关联 **43 篇原始论文**。论文与项目记录有对应关系，数量不能相加。来源核查不代表已经运行或复现实验。
+当前有 **79 条目录记录**，关联 **55 篇原始论文**。论文与项目记录有对应关系，数量不能相加。来源核查不代表已经运行或复现实验。
 
 | 分类 | 条目 | 仓库索引 |
 | --- | --- | --- |
-| 游戏与虚拟世界 | 18 | [浏览](catalog/games/README.zh-CN.md) |
-| 网站 | 16 | [浏览](catalog/websites/README.zh-CN.md) |
-| 应用 | 20 | [浏览](catalog/apps/README.zh-CN.md) |
+| 游戏与虚拟世界 | 21 | [浏览](catalog/games/README.zh-CN.md) |
+| 网站 | 18 | [浏览](catalog/websites/README.zh-CN.md) |
+| 应用 | 40 | [浏览](catalog/apps/README.zh-CN.md) |
 
 [研究文献](https://aicanwhat.com/zh/papers/) · [完整数据](data/catalog.json) · [贡献说明](CONTRIBUTING.md)
 

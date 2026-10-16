@@ -23,15 +23,15 @@
       const matches = (!query || row.dataset.search.includes(query)) &&
         (!kind?.value || row.dataset.kind === kind.value) &&
         (!use.value || row.dataset.uses.split(' ').includes(use.value)) &&
-        (!platform.value || row.dataset.platforms.split(' ').includes(platform.value));
+        (!platform?.value || row.dataset.platforms.split(' ').includes(platform.value));
       row.hidden = !matches;
       if (matches) visible++;
     }
     count.textContent = zh ? `显示 ${visible} / ${rows.length} 个项目` : `${visible} of ${rows.length} projects`;
     empty.hidden = visible !== 0;
-    reset.hidden = !query && !use.value && !platform.value && !kind?.value;
+    reset.hidden = !query && !use.value && !platform?.value && !kind?.value;
     const next = new URL(location.href);
-    for (const [key, value] of [['q', search.value.trim()], ['use', use.value], ['platform', platform.value], ['kind', kind?.value || '']]) {
+    for (const [key, value] of [['q', search.value.trim()], ['use', use.value], ['platform', platform?.value || ''], ['kind', kind?.value || '']]) {
       if (value) next.searchParams.set(key, value); else next.searchParams.delete(key);
     }
     history.replaceState(null, '', next);
@@ -39,8 +39,8 @@
   search.addEventListener('input', update);
   use.addEventListener('change', update);
   kind?.addEventListener('change', update);
-  platform.addEventListener('change', update);
-  reset.addEventListener('click', () => { search.value = ''; use.value = ''; platform.value = ''; if (kind) kind.value = ''; update(); search.focus(); });
+  platform?.addEventListener('change', update);
+  reset.addEventListener('click', () => { search.value = ''; use.value = ''; if (platform) platform.value = ''; if (kind) kind.value = ''; update(); search.focus(); });
   document.addEventListener('keydown', event => {
     if (event.key === '/' && !event.metaKey && !event.ctrlKey && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) {
       event.preventDefault(); search.focus();
