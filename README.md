@@ -4,19 +4,21 @@
 
 **[Explore aicanwhat.com](https://aicanwhat.com/) · [中文目录](https://aicanwhat.com/zh/) · [Review method](https://aicanwhat.com/about/)**
 
-A source-backed directory of AI-built software and environments for training and evaluating agents, organized into **Games**, **Websites**, and **Apps**. Every entry has an original source, review date, practical limits, and its own static page.
+A source-backed directory of AI-built software and environments, benchmarks, and datasets for training and evaluating agents, organized into **Games & virtual worlds**, **Websites**, and **Apps**. Every entry has an original source, review date, practical limits, and its own static page.
 
-The first collection contains **16 projects**: 4 games, 4 websites, and 8 applications. It includes four author-reported AI-built showcases and twelve entries linked to original papers. Source review is distinct from runtime verification.
+<!-- BEGIN GENERATED INDEX -->
+**54 catalog entries · 43 referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.
 
 ## Browse
 
-| Category | Initial entries |
-| --- | --- |
-| Games | Asteroid Game, Crafter, TextWorld, MiniHack |
-| Websites | WebArena, VisualWebArena, WorkArena, BrowserGym |
-| Apps | Tiny Kanban, Claude's C Compiler, FastRender, OSWorld, AndroidWorld, Windows Agent Arena, iOSWorld, MacArena |
+| Category | Entries | Repository index |
+| --- | --- | --- |
+| [Games & virtual worlds](https://aicanwhat.com/games/) | 18 | [Browse](catalog/games/README.md) |
+| [Websites](https://aicanwhat.com/websites/) | 16 | [Browse](catalog/websites/README.md) |
+| [Apps](https://aicanwhat.com/apps/) | 20 | [Browse](catalog/apps/README.md) |
 
-[Catalog and evidence](data/catalog.json) · [Contributing](CONTRIBUTING.md)
+[Research bibliography](https://aicanwhat.com/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)
+<!-- END GENERATED INDEX -->
 
 ## How the directory works
 

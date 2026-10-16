@@ -593,6 +593,1584 @@
       ],
       "reviewed_at": "2026-10-16",
       "verification": "source-reviewed"
+    },
+    {
+      "id": "gpt5-brutalist-dev-platform",
+      "name": "Brutalist Dev Platform",
+      "description_en": "An AI-generated developer-platform landing page with a monochrome grid, animated terminal, code tabs, pricing table and signup dialog.",
+      "description_zh": "AI 生成的开发者平台落地页，包含黑白网格、终端动画、代码标签页、价格表和注册弹窗。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://github.com/openai/gpt-5-coding-examples/tree/main/apps/brutalist-dev-landing-page",
+      "repo_url": "https://github.com/openai/gpt-5-coding-examples",
+      "demo_url": "https://gpt5-coding-examples.vercel.app/brutalist-dev-landing-page/",
+      "paper_url": null,
+      "limits_en": "A fictional marketing-site demo, not an operating developer service or agent benchmark. The public page responded; its interactions were not independently tested.",
+      "limits_zh": "这是虚构产品的营销网站演示，并非实际开发者服务或 Agent 基准。公开页面可访问，未独立测试交互。",
+      "enables_en": "Inspect a prompt and its generated HTML to study a complete landing-page design.",
+      "enables_zh": "对照原始提示与生成的 HTML，研究完整落地页的设计和实现。",
+      "resource_kind": "ai-generated-output",
+      "provenance_source": "https://github.com/openai/gpt-5-coding-examples#readme",
+      "evidence": [
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples#readme",
+          "supports": "OpenAI attributes this collection to single GPT-5 or GPT-5.2 prompts without handwritten code."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/examples/brutalist-dev-landing-page.yaml",
+          "supports": "The example's original prompt identifies its landing-page design and requested interactions."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/apps/brutalist-dev-landing-page/index.html",
+          "supports": "Published source contains the terminal animation, code copying and signup dialog."
+        },
+        {
+          "url": "https://gpt5-coding-examples.vercel.app/brutalist-dev-landing-page/",
+          "supports": "Public demo returned HTTP 200; no interactive or service-functionality test was performed."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "gpt5-smartwatch-product-page",
+      "name": "Smartwatch Product Page",
+      "description_en": "An AI-generated product-launch website for a fictional smartwatch, with a specification section, product options and a simulated preorder form.",
+      "description_zh": "AI 生成的虚构智能手表发布网站，包含规格介绍、产品选项和模拟预订表单。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://github.com/openai/gpt-5-coding-examples/tree/main/apps/product-launch-page",
+      "repo_url": "https://github.com/openai/gpt-5-coding-examples",
+      "demo_url": "https://gpt5-coding-examples.vercel.app/product-launch-page/",
+      "paper_url": null,
+      "limits_en": "The source stores simulated preorders in browser localStorage; no real sale or payment service is documented. The page responded, but the form was not exercised.",
+      "limits_zh": "源码将模拟预订保存在浏览器 localStorage，未提供真实销售或支付服务。页面可访问，但未提交或操作表单。",
+      "enables_en": "Study how a single prompt becomes a product-marketing page with a client-side form.",
+      "enables_zh": "研究单次提示如何生成包含前端表单的产品营销页面。",
+      "resource_kind": "ai-generated-output",
+      "provenance_source": "https://github.com/openai/gpt-5-coding-examples#readme",
+      "evidence": [
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples#readme",
+          "supports": "The publisher explicitly attributes the collection to AI generation."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/examples/product-launch-page.yaml",
+          "supports": "Original example specifies the product-launch page and preorder form."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/apps/product-launch-page/index.html",
+          "supports": "Source labels the page a concept demo and implements preorder storage with localStorage."
+        },
+        {
+          "url": "https://gpt5-coding-examples.vercel.app/product-launch-page/",
+          "supports": "Public demo returned HTTP 200; no form submission or interaction test was performed."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/LICENSE",
+          "supports": "Collection publishes an MIT license."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "webshop",
+      "name": "WebShop",
+      "description_en": "A simulated shopping website where agents search, inspect and select products to satisfy natural-language requests, with HTML and simplified text interfaces.",
+      "description_zh": "模拟购物网站，Agent 根据自然语言要求搜索、查看并选择商品，提供 HTML 和简化文本两种接口。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/princeton-nlp/WebShop",
+      "repo_url": "https://github.com/princeton-nlp/WebShop",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2207.01206",
+      "limits_en": "Requires product data, Python/Java dependencies and a search index. The default preview loads a product subset; report the chosen dataset configuration when comparing results.",
+      "limits_zh": "需要商品数据、Python/Java 依赖和搜索索引。默认预览仅加载部分商品，比较结果时应说明数据配置。",
+      "enables_en": "Train shopping agents and evaluate whether their final product selection matches the requested attributes.",
+      "enables_zh": "训练购物 Agent，并评估最终商品选择是否符合用户要求的属性。",
+      "resource_kind": "environment-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/princeton-nlp/WebShop#readme",
+          "supports": "Documents shopping tasks, HTML/text interfaces, setup and the default 1,000-product configuration."
+        },
+        {
+          "url": "https://arxiv.org/abs/2207.01206",
+          "supports": "Original paper introduces grounded shopping interaction and product-selection rewards."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "miniwob-plusplus",
+      "name": "MiniWoB++",
+      "description_en": "A collection of compact browser tasks for clicking, typing, selecting and manipulating interface elements, exposed through Gymnasium and JavaScript interfaces.",
+      "description_zh": "由点击、输入、选择和操作界面元素等小型浏览器任务组成，提供 Gymnasium 与 JavaScript 接口。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://miniwob.farama.org/",
+      "repo_url": "https://github.com/Farama-Foundation/miniwob-plusplus",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1802.08802",
+      "limits_en": "Synthetic tasks isolate interaction skills rather than full production workflows. The project is in maintenance mode; its Python interface documents Linux/macOS and Chrome or Chromium setup.",
+      "limits_zh": "合成任务主要隔离测试交互技能，不能等同于完整生产流程。项目处于维护模式；Python 接口文档要求 Linux/macOS 及 Chrome 或 Chromium 配置。",
+      "enables_en": "Train and compare agents on repeatable, relatively small web-control problems.",
+      "enables_zh": "在可重复、规模较小的网页操作问题上训练和比较 Agent。",
+      "resource_kind": "environment-and-benchmark",
+      "platform_note": "Web is the task target; Linux and macOS are documented hosts for the Python runner.",
+      "evidence": [
+        {
+          "url": "https://github.com/Farama-Foundation/miniwob-plusplus#readme",
+          "supports": "Documents over 100 browser environments, Gymnasium/Selenium interfaces, host support and maintenance status."
+        },
+        {
+          "url": "https://miniwob.farama.org/content/action_space/",
+          "supports": "Official documentation defines the supported browser actions."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "mind2web",
+      "name": "Mind2Web",
+      "description_en": "An offline dataset and benchmark of human web-task demonstrations, pairing instructions and action sequences with captured webpage information.",
+      "description_zh": "离线网页任务演示数据集与基准，将任务指令、人工操作序列和抓取的页面信息配对。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://osu-nlp-group.github.io/Mind2Web/",
+      "repo_url": "https://github.com/OSU-NLP-Group/Mind2Web",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2306.06070",
+      "limits_en": "The original benchmark evaluates recorded actions rather than executing live websites. Dataset and code licenses differ; use the stated splits and macro-average metrics for paper comparisons.",
+      "limits_zh": "原始基准评估记录中的操作，并不实际执行在线网站。数据集和代码采用不同许可；对比论文时应使用指定划分与宏平均指标。",
+      "enables_en": "Train action-prediction models and test generalization to unseen tasks, websites and domains.",
+      "enables_zh": "训练动作预测模型，并评估对未见任务、网站和领域的泛化能力。",
+      "resource_kind": "dataset-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/OSU-NLP-Group/Mind2Web#readme",
+          "supports": "Documents demonstrations, snapshots, training/evaluation splits, corrected averaging guidance and separate data/code licenses."
+        },
+        {
+          "url": "https://arxiv.org/abs/2306.06070",
+          "supports": "Original paper defines generalization settings using real-website demonstrations."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "online-mind2web",
+      "name": "Online-Mind2Web",
+      "description_en": "A live-web benchmark with tasks across public websites, trajectory submissions and WebJudge evaluation, maintained separately from the offline Mind2Web dataset.",
+      "description_zh": "面向公开在线网站的任务基准，提供轨迹提交规范和 WebJudge 评估，与离线 Mind2Web 数据集分别维护。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/OSU-NLP-Group/Online-Mind2Web",
+      "repo_url": "https://github.com/OSU-NLP-Group/Online-Mind2Web",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2504.01382",
+      "limits_en": "Live sites and task definitions change; retain the task revision and run date. Automatic judging is model-based, and leaderboard human review has its own submission and pricing policies.",
+      "limits_zh": "在线网站和任务定义会变化，应记录任务版本与运行日期。自动评分采用模型评审；排行榜人工审核另有提交和收费规则。",
+      "enables_en": "Evaluate end-to-end web agents on current websites and inspect the supporting action and screenshot evidence.",
+      "enables_zh": "在在线网站上评估端到端网页 Agent，并检查其操作记录和截图证据。",
+      "resource_kind": "benchmark-suite",
+      "evidence": [
+        {
+          "url": "https://github.com/OSU-NLP-Group/Online-Mind2Web#readme",
+          "supports": "Documents 300 live-site tasks, ongoing replacements, WebJudge, v2 submission schema and human-review policy."
+        },
+        {
+          "url": "https://arxiv.org/abs/2504.01382",
+          "supports": "Original paper examines online web-agent evaluation and automatic judging."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "webvoyager",
+      "name": "WebVoyager",
+      "description_en": "A browser-agent implementation and benchmark that combine screenshots and textual information to carry out tasks on real websites using Selenium.",
+      "description_zh": "结合截图与文字信息、通过 Selenium 在真实网站上执行任务的浏览器 Agent 实现及基准。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/MinorJerry/WebVoyager",
+      "repo_url": "https://github.com/MinorJerry/WebVoyager",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2401.13919",
+      "limits_en": "Depends on changing external websites, Chrome/Selenium and model access. Its automated evaluation uses a vision-language judge; results are not deterministic state-check scores.",
+      "limits_zh": "依赖持续变化的外部网站、Chrome/Selenium 和模型访问。自动评估使用视觉语言模型评审，结果并非确定性的状态检查分数。",
+      "enables_en": "Study a runnable multimodal web agent and evaluate complete browsing trajectories.",
+      "enables_zh": "研究可运行的多模态网页 Agent，并评估完整浏览轨迹。",
+      "resource_kind": "environment-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/MinorJerry/WebVoyager#readme",
+          "supports": "Provides the Selenium browser environment, live task data, agent implementation and automated evaluation protocol."
+        },
+        {
+          "url": "https://arxiv.org/abs/2401.13919",
+          "supports": "Original paper describes end-to-end web interaction using multimodal observations."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "visualwebbench",
+      "name": "VisualWebBench",
+      "description_en": "A static multimodal web benchmark covering page understanding, OCR, element localization and action grounding from website screenshots.",
+      "description_zh": "基于网站截图的静态多模态网页基准，覆盖页面理解、OCR、元素定位和动作定位。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://visualwebbench.github.io/",
+      "repo_url": "https://github.com/VisualWebBench/VisualWebBench",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2404.05955",
+      "limits_en": "Question-answer and grounding evaluation does not execute multi-step browsing tasks. The seven task subsets should be reported separately when diagnosing a model.",
+      "limits_zh": "问答和定位评估不会执行多步骤浏览任务。分析模型时应分别报告七个任务子集的结果。",
+      "enables_en": "Identify whether a web agent's visual model struggles with reading, page semantics or locating controls.",
+      "enables_zh": "区分网页 Agent 的视觉模型在阅读、页面语义或控件定位方面的不足。",
+      "resource_kind": "dataset-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/VisualWebBench/VisualWebBench#readme",
+          "supports": "Defines seven QA-style visual web tasks and supplies evaluation adapters."
+        },
+        {
+          "url": "https://huggingface.co/datasets/visualwebbench/VisualWebBench",
+          "supports": "Official dataset exposes test subsets with screenshots, instructions and reference answers."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "agentbench",
+      "name": "AgentBench",
+      "description_en": "A multi-domain agent benchmark whose current function-calling edition provides containerized tasks for operating-system commands, databases, knowledge graphs, shopping and text-based household tasks.",
+      "description_zh": "跨领域 Agent 基准，当前函数调用版本为系统命令、数据库、知识图谱、购物和文本家庭任务等任务提供容器化运行。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/THUDM/AgentBench",
+      "repo_url": "https://github.com/THUDM/AgentBench",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2308.03688",
+      "limits_en": "The current function-calling edition differs from the original eight-environment benchmark. Docker services can be resource intensive; the README documents ALFWorld memory/disk leakage and WebShop memory needs.",
+      "limits_zh": "当前函数调用版本与原始八环境基准不同。Docker 服务可能消耗较多资源；README 提醒 ALFWorld 存在内存／磁盘增长问题，并列出 WebShop 内存需求。",
+      "enables_en": "Compare multi-turn reasoning and tool use across several controlled task domains.",
+      "enables_zh": "在多种受控任务领域比较多轮推理与工具使用能力。",
+      "resource_kind": "benchmark-suite",
+      "runtime": "Docker Compose; function-calling task workers",
+      "platform_note": "A mixed-domain tool benchmark, not a claim of native desktop application support.",
+      "evidence": [
+        {
+          "url": "https://github.com/THUDM/AgentBench#readme",
+          "supports": "Documents the 2025 function-calling update, AgentRL integration, five containerized task families, legacy versions and runtime caveats."
+        },
+        {
+          "url": "https://arxiv.org/abs/2308.03688",
+          "supports": "Original paper describes the earlier eight-environment AgentBench setting."
+        },
+        {
+          "url": "https://github.com/THUDM/AgentBench/blob/main/src/server/tasks/alfworld/environment.py",
+          "supports": "The ALFWorld environment instantiates AlfredTWEnv for text-based household tasks."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "swe-bench",
+      "name": "SWE-bench",
+      "description_en": "A source-code repair benchmark that asks an agent to resolve a real repository issue, then evaluates its patch with the project's tests.",
+      "description_zh": "源码修复基准，要求 Agent 解决真实仓库问题，再通过项目测试评估补丁。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://www.swebench.com/",
+      "repo_url": "https://github.com/SWE-bench/SWE-bench",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2310.06770",
+      "limits_en": "Measures repository-level code repair, not GUI operation or complete app generation. Docker evaluation needs substantial resources; identify the dataset variant and harness version in comparisons.",
+      "limits_zh": "衡量仓库级代码修复，并非图形界面操作或完整应用生成。Docker 评测需要较多资源，比较时应注明数据集变体和评测框架版本。",
+      "enables_en": "Evaluate coding agents against executable issue-resolution tests and reuse the supported training splits.",
+      "enables_zh": "通过可执行的问题修复测试评估编程 Agent，并使用上游支持的训练划分。",
+      "resource_kind": "benchmark-suite",
+      "runtime": "Python; Docker evaluation harness",
+      "platform_note": "The benchmark target is repository source code; host compatibility is not used as an application-platform tag.",
+      "evidence": [
+        {
+          "url": "https://github.com/SWE-bench/SWE-bench#readme",
+          "supports": "Describes issue-to-patch evaluation, available variants, training data, Docker requirements and harness changes."
+        },
+        {
+          "url": "https://github.com/SWE-bench/SWE-bench/blob/main/docs/guides/docker_setup.md",
+          "supports": "Official setup guide documents container-based evaluation and resource requirements."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "design2code",
+      "name": "Design2Code",
+      "description_en": "A screenshot-to-HTML benchmark with reference webpages, generated predictions and automated visual metrics for evaluating front-end code generation.",
+      "description_zh": "截图到 HTML 的生成基准，提供参考网页、模型生成结果和自动视觉指标，用于评估前端代码生成。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/NoviScl/Design2Code",
+      "repo_url": "https://github.com/NoviScl/Design2Code",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2403.03163",
+      "limits_en": "Evaluates visual reconstruction rather than working backend features or interactive task completion. The authors specify research-only use; Design2Code and Design2Code-Hard are distinct test sets.",
+      "limits_zh": "评估视觉还原，不验证后端功能或交互任务完成情况。作者限定研究用途；Design2Code 与 Design2Code-Hard 为不同测试集。",
+      "enables_en": "Compare how well generated webpage code reproduces a supplied visual design.",
+      "enables_zh": "比较生成的网页代码对给定视觉设计的还原程度。",
+      "resource_kind": "dataset-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/NoviScl/Design2Code#readme",
+          "supports": "Documents screenshot/HTML test pairs, the Hard set, Playwright rendering, evaluation and research-use restrictions."
+        },
+        {
+          "url": "https://arxiv.org/abs/2403.03163",
+          "supports": "Original paper evaluates multimodal code generation for front-end reconstruction."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "webcode2m",
+      "name": "WebCode2M",
+      "description_en": "A web-code dataset pairing rendered page screenshots with HTML/CSS and layout information, accompanied by a screenshot-to-code evaluation pipeline.",
+      "description_zh": "将网页渲染截图、HTML/CSS 和布局信息配对的数据集，附带截图到代码的评估流程。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://webcode2m.github.io/",
+      "repo_url": "https://github.com/CGCL-codes/naturalcc/tree/main/examples/webcode2m",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2404.06369",
+      "limits_en": "Static page-generation data, not an interactive agent environment. The dataset card lists CC BY 4.0, while the project page states research-only use; confirm applicable terms with the authors before reuse.",
+      "limits_zh": "这是静态页面生成数据，并非可交互的 Agent 环境。数据卡标注 CC BY 4.0，项目页另写研究用途限定；复用前应向作者确认适用条款。",
+      "enables_en": "Train and evaluate models that translate page images into code and structural layouts.",
+      "enables_zh": "训练和评估从页面图像生成代码与结构布局的模型。",
+      "resource_kind": "dataset-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://huggingface.co/datasets/xcodemind/webcode2m",
+          "supports": "Official data card defines screenshot, code and layout fields and lists CC BY 4.0."
+        },
+        {
+          "url": "https://github.com/CGCL-codes/naturalcc/blob/main/examples/webcode2m/README.MD",
+          "supports": "Official implementation documents test data, model inference and evaluation scripts."
+        },
+        {
+          "url": "https://webcode2m.github.io/",
+          "supports": "Author project page links the code/data and includes the separate research-use statement."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "screenspot",
+      "name": "ScreenSpot",
+      "description_en": "A screenshot-based GUI grounding benchmark that asks a model to locate the control named by an instruction across mobile, desktop and web interfaces.",
+      "description_zh": "基于截图的 GUI 定位基准，要求模型在移动端、桌面和网页界面中找到指令所指的控件。",
+      "content_type": "app",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/njucckevin/SeeClick",
+      "repo_url": "https://github.com/njucckevin/SeeClick",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2401.10935",
+      "limits_en": "Tests locating a target in a static screenshot, not executing the click or completing a workflow. Platform labels describe the screenshot sources, not installable app support.",
+      "limits_zh": "只测试在静态截图中定位目标，不执行点击，也不验证流程完成。平台标签表示截图来源，并非可安装应用的支持范围。",
+      "enables_en": "Measure the grounding component of a GUI agent independently of planning and execution.",
+      "enables_zh": "将 GUI Agent 的界面定位能力与规划、执行能力分开评估。",
+      "resource_kind": "dataset-and-benchmark",
+      "platform_note": "Screenshot-source platforms; not executable native environments.",
+      "evidence": [
+        {
+          "url": "https://github.com/njucckevin/SeeClick#readme",
+          "supports": "Defines ScreenSpot samples as screenshots, instructions and target boxes across five platform families."
+        },
+        {
+          "url": "https://arxiv.org/abs/2401.10935",
+          "supports": "SeeClick paper introduces the GUI grounding benchmark and its role in visual agents."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "screenspot-pro",
+      "name": "ScreenSpot-Pro",
+      "description_en": "A GUI grounding benchmark using high-resolution screenshots of professional software, including development tools, creative applications, CAD and office suites.",
+      "description_zh": "采用专业软件高分辨率截图的 GUI 定位基准，覆盖开发工具、创意应用、CAD 和办公套件。",
+      "content_type": "app",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding",
+      "repo_url": "https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2504.07981",
+      "limits_en": "A static target-localization test rather than a desktop VM or task environment. Keep screenshot resolution and language settings comparable; the listed software is not bundled for use.",
+      "limits_zh": "属于静态目标定位测试，并非桌面虚拟机或任务环境。比较时应保持截图分辨率与语言设置一致；不提供所列专业软件的使用副本。",
+      "enables_en": "Test whether a visual agent can identify small or unfamiliar controls in dense professional interfaces.",
+      "enables_zh": "评估视觉 Agent 能否在密集的专业界面中识别细小或陌生控件。",
+      "resource_kind": "dataset-and-benchmark",
+      "platform_note": "Platforms reflect the source screenshots, including Windows, macOS and Ubuntu interfaces.",
+      "evidence": [
+        {
+          "url": "https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding#readme",
+          "supports": "Official repository provides the grounding evaluation scripts and language-specific entry points."
+        },
+        {
+          "url": "https://huggingface.co/datasets/likaixin/ScreenSpot-Pro",
+          "supports": "Official dataset lists the software, versions and screenshot operating systems."
+        },
+        {
+          "url": "https://arxiv.org/abs/2504.07981",
+          "supports": "Original paper defines high-resolution professional GUI grounding."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "androidenv",
+      "name": "AndroidEnv",
+      "description_en": "A reinforcement-learning framework that exposes Android applications through touchscreen actions, pixel observations and configurable task rewards.",
+      "description_zh": "将 Android 应用封装为强化学习环境的框架，提供触屏动作、像素观察和可配置的任务奖励。",
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/google-deepmind/android_env",
+      "repo_url": "https://github.com/google-deepmind/android_env",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2105.13231",
+      "limits_en": "Requires an Android emulator and task-specific reward definitions. It is a framework, not one fixed benchmark; Windows host support is documented as less maintained.",
+      "limits_zh": "需要 Android 模拟器及任务专用奖励定义。它是框架，而非单一固定基准；文档注明 Windows 主机支持的维护程度较低。",
+      "enables_en": "Build repeatable Android learning tasks with a common touch interface.",
+      "enables_zh": "使用统一触屏接口构建可重复的 Android 学习任务。",
+      "resource_kind": "environment-framework",
+      "evidence": [
+        {
+          "url": "https://github.com/google-deepmind/android_env#readme",
+          "supports": "Documents the touch-action interface, pixel observations, custom task definitions, emulator requirement and Windows caveat."
+        },
+        {
+          "url": "https://arxiv.org/abs/2105.13231",
+          "supports": "Original technical report describes Android as an RL research platform."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "android-in-the-wild",
+      "name": "Android in the Wild",
+      "description_en": "A large offline collection of human Android demonstrations containing natural-language goals, UI screenshots and recorded touch, typing and navigation actions.",
+      "description_zh": "大规模离线人工 Android 操作演示数据，包含自然语言目标、界面截图以及触屏、输入和导航动作记录。",
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/google-research/google-research/tree/master/android_in_the_wild",
+      "repo_url": "https://github.com/google-research/google-research/tree/master/android_in_the_wild",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2307.10088",
+      "limits_en": "Recorded demonstrations and offline action-matching metrics do not provide a live Android environment. Use the published episode splits; data spans Android versions and collection-time app states.",
+      "limits_zh": "记录式演示及离线动作匹配指标不等同于可运行的 Android 环境。应遵循公开的 episode 划分；数据包含不同 Android 版本和采集时的应用状态。",
+      "enables_en": "Train mobile action-prediction models and test robustness across task, app and Android-version splits.",
+      "enables_zh": "训练移动端动作预测模型，并通过任务、应用和 Android 版本划分评估稳健性。",
+      "resource_kind": "dataset-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/google-research/google-research/blob/master/android_in_the_wild/README.md",
+          "supports": "Defines human demonstrations, Android versions, action formats, episode splits and offline action matching."
+        },
+        {
+          "url": "https://arxiv.org/abs/2307.10088",
+          "supports": "Original paper introduces the mobile-device-control dataset."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "androidlab",
+      "name": "AndroidLab",
+      "description_en": "An Android-agent framework with prepared virtual devices, reproducible app tasks, evaluation tooling and the Android Instruct training dataset.",
+      "description_zh": "Android Agent 框架，提供预设虚拟设备、可复现应用任务、评估工具和 Android Instruct 训练数据。",
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/THUDM/Android-Lab",
+      "repo_url": "https://github.com/THUDM/Android-Lab",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2410.24024",
+      "limits_en": "Requires the prescribed Android images. Documented execution uses macOS arm64 AVDs or Linux x86_64 Docker; result generation uses a model judge and needs model access.",
+      "limits_zh": "需要指定 Android 镜像。文档提供 macOS arm64 AVD 与 Linux x86_64 Docker 两种运行方式；结果生成使用模型评审，需要模型访问。",
+      "enables_en": "Compare Android agents on controlled mobile workflows and train with the accompanying instruction data.",
+      "enables_zh": "在受控移动端流程上比较 Android Agent，并使用配套指令数据进行训练。",
+      "resource_kind": "environment-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/THUDM/Android-Lab#readme",
+          "supports": "Documents prepared virtual devices, 138 tasks across nine apps, supported hosts, instruction data and judge-based result generation."
+        },
+        {
+          "url": "https://arxiv.org/abs/2410.24024",
+          "supports": "Original paper describes training and systematic benchmarking of Android agents."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "appworld",
+      "name": "AppWorld",
+      "description_en": "A simulated world of connected everyday apps with APIs, persistent task state and executable checks for function-calling and interactive coding agents.",
+      "description_zh": "由相互关联的日常应用组成的模拟世界，提供 API、持久任务状态和可执行检查，用于函数调用及交互式编程 Agent。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://appworld.dev/",
+      "repo_url": "https://github.com/StonyBrookNLP/appworld",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2407.18901",
+      "limits_en": "Apps are API simulations rather than native GUIs. Follow train/dev/test restrictions; protected app and task bundles have an additional encrypted-redistribution requirement.",
+      "limits_zh": "应用以 API 模拟运行，并非原生图形界面。应遵循训练／开发／测试划分；受保护的应用与任务 bundle 另有加密再分发要求。",
+      "enables_en": "Train and evaluate agents that coordinate several apps through code, API calls or the provided MCP integration.",
+      "enables_zh": "训练和评估通过代码、API 调用或配套 MCP 接口协同操作多个应用的 Agent。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python; simulated HTTP APIs; optional MCP interface",
+      "platform_note": "API simulation; no native desktop or mobile target platform is asserted.",
+      "evidence": [
+        {
+          "url": "https://github.com/StonyBrookNLP/appworld#readme",
+          "supports": "Documents the app/API engine, task-state evaluation, MCP integration, split restrictions and public/protected licensing."
+        },
+        {
+          "url": "https://arxiv.org/abs/2407.18901",
+          "supports": "Original paper defines controllable app worlds and interactive coding tasks."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "weblinx",
+      "name": "WebLINX",
+      "description_en": "A dataset and benchmark for conversational web navigation, with multi-turn human demonstrations, page observations and action-prediction evaluation tools.",
+      "description_zh": "面向对话式网页导航的数据集与基准，包含多轮人工演示、页面观察和动作预测评估工具。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://mcgill-nlp.github.io/weblinx/",
+      "repo_url": "https://github.com/McGill-NLP/weblinx",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2402.05930",
+      "limits_en": "Evaluation follows recorded demonstrations rather than freely executing live websites. Data uses CC BY-NC-SA 4.0; BrowserGym/WebLINX 1.1 changes evaluated steps and must be distinguished from 1.0.",
+      "limits_zh": "评估依据记录式演示，不是自由执行在线网站。数据采用 CC BY-NC-SA 4.0；BrowserGym/WebLINX 1.1 改变了评估步骤，应与 1.0 区分。",
+      "enables_en": "Study agents that follow changing user instructions over a multi-turn browsing conversation.",
+      "enables_zh": "研究在多轮浏览对话中跟随用户指令变化的 Agent。",
+      "resource_kind": "dataset-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/McGill-NLP/weblinx#readme",
+          "supports": "Official library documents demonstration/replay abstractions, training code and action-evaluation tools."
+        },
+        {
+          "url": "https://huggingface.co/datasets/McGill-NLP/WebLINX",
+          "supports": "Official dataset card specifies noncommercial/share-alike terms and explains the 1.1 BrowserGym evaluation changes."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "workbench",
+      "name": "WorkBench",
+      "description_en": "A workplace-agent benchmark with sandbox databases and read/write tools for tasks such as email, scheduling and project management, evaluated by the resulting state.",
+      "description_zh": "提供沙盒数据库和读写工具的办公 Agent 基准，包含邮件、日程与项目管理等任务，并依据最终状态评分。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/olly-styles/WorkBench",
+      "repo_url": "https://github.com/olly-styles/WorkBench",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2405.00823",
+      "limits_en": "Uses simulated workplace tools rather than real email accounts or desktop apps. The 2026 task corrections and evaluator differ from the original release; report the ground-truth and scoring versions.",
+      "limits_zh": "使用模拟办公工具，并非真实邮箱账户或桌面应用。2026 年的任务修订和评分器与原始版本不同，应报告标准答案及评分版本。",
+      "enables_en": "Measure task completion and unintended state changes in controlled office workflows.",
+      "enables_zh": "在受控办公流程中衡量任务完成情况和非预期状态变更。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python; local sandbox databases and tools",
+      "platform_note": "Tool/API simulation rather than an operating-system-specific GUI environment.",
+      "related_paper_urls": [
+        "https://arxiv.org/abs/2606.13715"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/olly-styles/WorkBench#readme",
+          "supports": "Documents five sandbox databases, 26 tools, outcome evaluation, 2026 revisions and versioned ground truth."
+        },
+        {
+          "url": "https://arxiv.org/abs/2405.00823",
+          "supports": "Original paper defines workplace tasks and outcome-centric evaluation."
+        },
+        {
+          "url": "https://github.com/olly-styles/WorkBench/tree/main/src/tools",
+          "supports": "Tool domains cover email, calendar, analytics, CRM and project management."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "browserart",
+      "name": "BrowserART",
+      "description_en": "A browser-agent safety evaluation toolkit with synthetic websites, behavior datasets and trajectory classifiers for studying whether agents follow harmful requests.",
+      "description_zh": "浏览器 Agent 安全评估工具包，提供合成网站、行为数据和轨迹分类器，用于研究 Agent 是否执行有害请求。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/scaleapi/browser-art",
+      "repo_url": "https://github.com/scaleapi/browser-art",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2410.13886",
+      "limits_en": "A specialized safety benchmark rather than a general task-success ranking. It mixes synthetic and live-site tasks; the code is MIT-licensed while the behavior dataset lists CC BY-NC 4.0.",
+      "limits_zh": "属于专门的安全基准，不是通用任务成功率排行榜。任务同时涉及合成和在线网站；代码采用 MIT，行为数据集标注 CC BY-NC 4.0。",
+      "enables_en": "Evaluate browser-agent refusal behavior in a controlled research setup and inspect recorded trajectories.",
+      "enables_zh": "在受控研究配置中评估浏览器 Agent 的拒绝行为，并检查操作轨迹。",
+      "resource_kind": "environment-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/scaleapi/browser-art#readme",
+          "supports": "Defines the safety evaluation toolkit, behavior classifiers, synthetic website source and MIT code license."
+        },
+        {
+          "url": "https://github.com/scaleapi/browser-art/blob/main/src/README.md",
+          "supports": "Documents local website hosting and BrowserGym/OpenDevin evaluation setup."
+        },
+        {
+          "url": "https://huggingface.co/datasets/ScaleAI/BrowserART",
+          "supports": "Official behavior dataset card specifies CC BY-NC 4.0."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "spider2-v",
+      "name": "Spider2-V",
+      "description_en": "An executable desktop benchmark for data-science and engineering workflows that combine code, GUI actions and enterprise tools such as dbt, Airbyte and BigQuery.",
+      "description_zh": "面向数据科学与工程流程的可执行桌面基准，结合代码、GUI 操作以及 dbt、Airbyte、BigQuery 等企业工具。",
+      "content_type": "app",
+      "platforms": [
+        "linux"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://spider2-v.github.io/",
+      "repo_url": "https://github.com/xlang-ai/Spider2-V",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2407.10956",
+      "limits_en": "Requires the prepared Ubuntu VM and setup dependencies. Some tasks need real cloud accounts and credentials; account/non-account and abstract/verbose instruction subsets are different evaluation settings.",
+      "limits_zh": "需要预设 Ubuntu 虚拟机和配套依赖。部分任务需要真实云账户及凭证；有账户／无账户、简要／详细指令属于不同评测设置。",
+      "enables_en": "Evaluate whether agents can carry a data workflow across graphical interfaces, code and task-specific state checks.",
+      "enables_zh": "通过图形界面、代码和任务专用状态检查，评估 Agent 完成数据工作流程的能力。",
+      "resource_kind": "environment-and-benchmark",
+      "platform_note": "The executable guest environment is Ubuntu; host support does not imply macOS or Windows task coverage.",
+      "evidence": [
+        {
+          "url": "https://spider2-v.github.io/",
+          "supports": "Project page describes 494 tasks, professional data tools and the executable Ubuntu desktop."
+        },
+        {
+          "url": "https://github.com/xlang-ai/Spider2-V#readme",
+          "supports": "Documents VM installation, account requirements and the separate instruction/account subsets."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "nethack-learning-environment",
+      "name": "NetHack Learning Environment",
+      "description_en": "A Gymnasium interface to NetHack with procedurally generated dungeons, inventory management and long sequences of consequential actions.",
+      "description_zh": "为 NetHack 提供 Gymnasium 接口，包含程序化生成的地牢、物品管理和需要连续决策的任务。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/NetHack-LE/nle",
+      "repo_url": "https://github.com/NetHack-LE/nle",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2006.13760",
+      "limits_en": "Requires Python 3.10+, CMake 3.28+ and native build dependencies. The current repository uses NetHack 3.6.7 and the NetHack General Public License; older NLE releases differ.",
+      "limits_zh": "需要 Python 3.10+、CMake 3.28+ 和原生构建依赖。当前仓库基于 NetHack 3.6.7，采用 NetHack General Public License；旧版 NLE 的依赖与行为可能不同。",
+      "enables_en": "Train agents on exploration, survival and inventory decisions, or compare policies on defined NetHack tasks.",
+      "enables_zh": "训练探索、生存和物品决策能力，或在明确的 NetHack 任务上比较策略。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python/Gymnasium with a native NetHack backend; pip install nle; local human-play and random-agent scripts.",
+      "evidence": [
+        {
+          "url": "https://github.com/NetHack-LE/nle#readme",
+          "supports": "Documents the current NetHack version, Gymnasium interface, installation, macOS/Ubuntu instructions and runnable scripts."
+        },
+        {
+          "url": "https://github.com/NetHack-LE/nle/blob/main/LICENSE",
+          "supports": "The repository publishes the NetHack General Public License."
+        },
+        {
+          "url": "https://arxiv.org/abs/2006.13760",
+          "supports": "Original NLE paper describes the game-based RL environment and evaluation tasks."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "minedojo",
+      "name": "MineDojo",
+      "description_en": "A Minecraft research suite that combines survival, resource-gathering, creative and playthrough tasks with a separate knowledge collection.",
+      "description_zh": "基于 Minecraft 的研究套件，提供生存、资源收集、创作和通关任务，并配有独立的知识资料库。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/MineDojo/MineDojo",
+      "repo_url": "https://github.com/MineDojo/MineDojo",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2206.08853",
+      "limits_en": "Requires Python 3.9+, JDK 8 and a Minecraft backend; headless runs need the documented display setup. Code is MIT, while the Wiki database is CC BY-NC-SA 3.0 and other databases have separate terms.",
+      "limits_zh": "需要 Python 3.9+、JDK 8 和 Minecraft 后端；无显示器运行需按文档配置。代码采用 MIT；Wiki 数据库采用 CC BY-NC-SA 3.0，其他数据库另有许可。",
+      "enables_en": "Build agents that follow varied Minecraft goals and study how external knowledge supports exploration and crafting.",
+      "enables_zh": "构建遵循不同 Minecraft 目标的 Agent，研究外部知识对探索和制作的帮助。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python Gym-style API; pip install minedojo; prerequisites and a Docker path are documented.",
+      "evidence": [
+        {
+          "url": "https://github.com/MineDojo/MineDojo#readme",
+          "supports": "Documents the task families, Python/JDK requirements, tested Ubuntu/macOS setups, API examples and component-specific licenses."
+        },
+        {
+          "url": "https://docs.minedojo.org/sections/getting_started/install.html",
+          "supports": "Author installation instructions cover prerequisites and headless/Docker operation."
+        },
+        {
+          "url": "https://arxiv.org/abs/2206.08853",
+          "supports": "Original paper describes the Minecraft simulation suite, knowledge bases and agent-learning setting."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "minerl",
+      "name": "MineRL",
+      "description_en": "A Python interface to Minecraft research tasks, with versioned environments and a separate collection of human demonstrations.",
+      "description_zh": "为 Minecraft 研究任务提供 Python 接口，包含分版本维护的环境，以及独立的人类操作示范数据。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/minerllabs/minerl",
+      "repo_url": "https://github.com/minerllabs/minerl",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1907.13440",
+      "limits_en": "JDK 8 is required; Windows needs bash/WSL and macOS may need extra setup. v1.0 differs from the original dataset environments. Licensing metadata conflicts: root LICENSE says CC BY-NC-SA 4.0, but setup.py says MIT; do not assume a single permissive license.",
+      "limits_zh": "必须使用 JDK 8；Windows 需要 bash/WSL，macOS 可能需额外配置。v1.0 与原始数据对应的环境不同。许可信息存在冲突：根 LICENSE 写为 CC BY-NC-SA 4.0，而 setup.py 标注 MIT，不能直接视为统一的宽松许可。",
+      "enables_en": "Train or evaluate Minecraft control policies while explicitly matching environment and demonstration-data versions.",
+      "enables_zh": "在明确匹配环境与示范数据版本的前提下，训练或评估 Minecraft 控制策略。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python/Gym and Java JDK 8; install from the author repository; v0 data mirrors were replaced by a linked Zenodo record.",
+      "evidence": [
+        {
+          "url": "https://github.com/minerllabs/minerl/blob/dev/README.md",
+          "supports": "Documents v1.0/v0.4/v0.3 differences, JDK 8, runnable tasks and the replacement data record."
+        },
+        {
+          "url": "https://minerl.readthedocs.io/en/latest/tutorials/index.html",
+          "supports": "Author setup page documents Windows bash/WSL, macOS and Debian/Ubuntu requirements."
+        },
+        {
+          "url": "https://github.com/minerllabs/minerl/blob/dev/LICENSE",
+          "supports": "Root license text is CC BY-NC-SA 4.0."
+        },
+        {
+          "url": "https://github.com/minerllabs/minerl/blob/dev/setup.py",
+          "supports": "Package metadata separately declares MIT, so this review does not resolve the conflict."
+        },
+        {
+          "url": "https://arxiv.org/abs/1907.13440",
+          "supports": "Original paper concerns MineRL human demonstrations paired with simulator tasks."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Windows is documented with bash/WSL requirements; this is not a claim of a dependency-free native Windows build."
+    },
+    {
+      "id": "balrog",
+      "name": "BALROG",
+      "description_en": "An evaluation harness for language and vision-language agents across existing interactive games, including text adventures and NetHack-based tasks.",
+      "description_zh": "在现有交互游戏上评估语言与视觉语言 Agent 的框架，覆盖文字冒险和基于 NetHack 的任务。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/balrog-ai/BALROG",
+      "repo_url": "https://github.com/balrog-ai/BALROG",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2411.13543",
+      "limits_en": "Requires the bundled environments and post-install setup, plus a local model server or paid API access where chosen. The harness is MIT; underlying games keep their own licenses. It is not a newly AI-built game.",
+      "limits_zh": "需要安装所依赖的环境并完成后置配置，还需自备本地模型服务或所选付费 API。评测框架采用 MIT，各底层游戏保留自身许可；它并非新生成的 AI 游戏作品。",
+      "enables_en": "Run a common evaluation workflow across games and compare long-horizon reasoning under explicit agent and observation settings.",
+      "enables_zh": "通过统一流程运行多款游戏评测，并在明确 Agent 与观察设置的前提下比较长期推理能力。",
+      "resource_kind": "benchmark-suite",
+      "runtime": "Python 3.10; editable install and balrog-post-install; author Dockerfile uses Ubuntu and README gives macOS notes.",
+      "evidence": [
+        {
+          "url": "https://github.com/balrog-ai/BALROG#readme",
+          "supports": "Documents the evaluation harness, installation, API/local model options, macOS notes and MIT license."
+        },
+        {
+          "url": "https://github.com/balrog-ai/BALROG/blob/main/docker/Dockerfile",
+          "supports": "Published Docker configuration uses Ubuntu 22.04 and Python 3.10."
+        },
+        {
+          "url": "https://arxiv.org/abs/2411.13543",
+          "supports": "Paper defines the multi-environment agent reasoning evaluation setting."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "open-spiel",
+      "name": "OpenSpiel",
+      "description_en": "A framework of game environments and algorithms for single-agent and multi-agent learning, search and planning with different information structures.",
+      "description_zh": "集成多种游戏环境与算法的研究框架，支持不同信息条件下的单 Agent、多 Agent 学习、搜索与规划。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/google-deepmind/open_spiel",
+      "repo_url": "https://github.com/google-deepmind/open_spiel",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1908.09453",
+      "limits_en": "This is a research framework rather than a hosted game. Optional games and algorithms add dependencies. Windows wheels and build instructions are documented, but the Windows page labels support experimental. Repository code is Apache 2.0.",
+      "limits_zh": "这是研究框架，并非在线游戏服务；可选游戏与算法会增加依赖。文档提供 Windows wheel 和构建说明，同时将 Windows 支持标为实验性。仓库代码采用 Apache 2.0。",
+      "enables_en": "Compare decision-making algorithms on games with cooperation, competition, simultaneous actions or hidden information.",
+      "enables_zh": "在合作、竞争、同时行动或隐藏信息等游戏条件下比较决策算法。",
+      "resource_kind": "environment-framework",
+      "runtime": "C++ core with Python bindings; pip installation or source/Docker builds; separate Windows instructions.",
+      "evidence": [
+        {
+          "url": "https://github.com/google-deepmind/open_spiel#readme",
+          "supports": "Defines supported game types, learning/planning use and C++/Python interfaces."
+        },
+        {
+          "url": "https://github.com/google-deepmind/open_spiel/blob/master/docs/install.md",
+          "supports": "Documents Linux/macOS pip and source installation."
+        },
+        {
+          "url": "https://github.com/google-deepmind/open_spiel/blob/master/docs/windows.md",
+          "supports": "Documents Windows wheels and builds and explicitly labels Windows support experimental."
+        },
+        {
+          "url": "https://github.com/google-deepmind/open_spiel/blob/master/LICENSE",
+          "supports": "Repository license is Apache 2.0."
+        },
+        {
+          "url": "https://arxiv.org/abs/1908.09453",
+          "supports": "Original OpenSpiel framework paper."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "procgen",
+      "name": "Procgen Benchmark",
+      "description_en": "A suite of sixteen procedurally generated visual games designed to separate learning on familiar levels from generalization to unseen levels.",
+      "description_zh": "由十六款程序化生成的视觉游戏组成的基准，用于区分熟悉关卡上的学习表现和未见关卡上的泛化表现。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/openai/procgen",
+      "repo_url": "https://github.com/openai/procgen",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1912.01588",
+      "limits_en": "The maintenance-mode README lists older Python 3.7–3.10 builds, 64-bit platforms and an AVX-capable CPU. Compatibility with other setups is unverified here. Code is MIT; bundled assets include distinct attribution licenses.",
+      "limits_zh": "项目处于维护模式，README 列出较旧的 Python 3.7–3.10 构建、64 位平台和 AVX CPU 要求；本次未验证其他配置的兼容性。代码采用 MIT，内置素材包含独立的署名许可。",
+      "enables_en": "Train on selected level seeds and evaluate on new seeds to study generalization in arcade-style control.",
+      "enables_zh": "在指定关卡种子上训练，并在新种子上评估街机操作策略的泛化能力。",
+      "resource_kind": "benchmark-suite",
+      "runtime": "Python Gym/gym3 with a C++/Qt backend; pip install procgen; local interactive player and Docker examples.",
+      "evidence": [
+        {
+          "url": "https://github.com/openai/procgen#readme",
+          "supports": "Documents sixteen games, level seeds, interfaces, installation, platforms, CPU constraints and maintenance status."
+        },
+        {
+          "url": "https://github.com/openai/procgen/blob/master/LICENSE",
+          "supports": "Repository code is MIT licensed."
+        },
+        {
+          "url": "https://github.com/openai/procgen/blob/master/ASSET_LICENSES.md",
+          "supports": "Lists asset-specific CC0, CC BY and OGA BY licenses."
+        },
+        {
+          "url": "https://arxiv.org/abs/1912.01588",
+          "supports": "Paper defines procedural generation as a means to evaluate RL generalization."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "arcade-learning-environment",
+      "name": "Arcade Learning Environment",
+      "description_en": "A Stella-based Atari 2600 interface that exposes observations, actions, game scores and episode endings to learning agents.",
+      "description_zh": "基于 Stella 模拟器的 Atari 2600 接口，为学习型 Agent 提供观察、动作、游戏得分和回合终止信号。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows",
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://ale.farama.org/",
+      "repo_url": "https://github.com/Farama-Foundation/Arcade-Learning-Environment",
+      "demo_url": null,
+      "paper_url": "https://jair.org/index.php/jair/article/view/10819",
+      "limits_en": "Current packages include ROMs, unlike older AutoROM-based instructions. Results depend on environment settings and versions. ALE code is GPL 2.0; this review does not establish separate rights for game ROM redistribution.",
+      "limits_zh": "当前安装包已包含 ROM，与旧版 AutoROM 安装流程不同。结果依赖环境设置和版本。ALE 代码采用 GPL 2.0；本次审查未确认游戏 ROM 的独立再分发权利。",
+      "enables_en": "Train and compare agents through standard Atari interfaces while recording the game and evaluation settings.",
+      "enables_zh": "通过标准 Atari 接口训练和比较 Agent，并记录游戏及评测配置。",
+      "resource_kind": "environment-framework",
+      "runtime": "C++/Python/Gymnasium interfaces; pip install ale-py; documented WebAssembly/browser support.",
+      "evidence": [
+        {
+          "url": "https://github.com/Farama-Foundation/Arcade-Learning-Environment#readme",
+          "supports": "Documents Atari interaction, score signals, native platforms, packaged ROMs and WebAssembly support."
+        },
+        {
+          "url": "https://ale.farama.org/release_notes/",
+          "supports": "Documents the move to packaged ROMs and changes to registration/setup."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Arcade-Learning-Environment/blob/main/LICENSE.md",
+          "supports": "Published ALE code license is GNU GPL version 2."
+        },
+        {
+          "url": "https://jair.org/index.php/jair/article/view/10819",
+          "supports": "Original paper introduces ALE as an evaluation platform for general agents."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "The web tag follows explicit WebAssembly support; it does not assert that every Python benchmark configuration runs in a browser."
+    },
+    {
+      "id": "scienceworld",
+      "name": "ScienceWorld",
+      "description_en": "A text-based simulated world where agents manipulate objects and perform elementary science tasks such as heating, classification and electrical experiments.",
+      "description_zh": "以文字交互的模拟世界，Agent 可操作物体，完成加热、分类和电学实验等基础科学任务。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/allenai/ScienceWorld",
+      "repo_url": "https://github.com/allenai/ScienceWorld",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2203.07540",
+      "limits_en": "Requires Python 3.8+ and Java 1.8+. It is a symbolic science simulation, not physical laboratory validation. Version 1.3 changes ordering and can alter trajectories relative to 1.2; pin versions for comparisons. Code is Apache 2.0.",
+      "limits_zh": "需要 Python 3.8+ 与 Java 1.8+。它是符号化科学模拟，不能代替真实实验验证。1.3 版改变对象排序，可能产生不同于 1.2 的轨迹；比较实验应固定版本。代码采用 Apache 2.0。",
+      "enables_en": "Evaluate action sequences that apply scientific knowledge, with controlled task variations and optional environment simplifications.",
+      "enables_zh": "在可控任务变体和可选环境简化条件下，评估 Agent 运用科学知识完成动作序列的能力。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Scala/Java simulator with a Python API; pip install scienceworld; local text console and optional browser console.",
+      "evidence": [
+        {
+          "url": "https://github.com/allenai/ScienceWorld#readme",
+          "supports": "Documents science tasks, Python/Java requirements, local consoles and the version 1.3 reproducibility change."
+        },
+        {
+          "url": "https://github.com/allenai/ScienceWorld/blob/main/LICENSE",
+          "supports": "Repository code is Apache 2.0 licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2203.07540",
+          "supports": "Paper describes interactive science tasks and agent evaluation."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "No OS tag is inferred from the Python/Java runtime. The game category denotes an interactive research world, not a commercial game."
+    },
+    {
+      "id": "virtualhome",
+      "name": "VirtualHome",
+      "description_en": "A household activity simulator that executes action programs, with a Unity visual environment and a separate evolving scene-graph backend.",
+      "description_zh": "可执行家庭活动动作程序的模拟器，提供 Unity 视觉环境和独立的动态场景图后端。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "uses": [
+        "training"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/xavierpuigf/virtualhome",
+      "repo_url": "https://github.com/xavierpuigf/virtualhome",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1806.07011",
+      "limits_en": "The rendered mode needs a separate Unity executable; headless operation needs additional setup. Graph and Unity backends do not support identical actions. API code is MIT; downloaded simulator/assets were not license-audited here.",
+      "limits_zh": "渲染模式需要另行下载 Unity 可执行文件，无显示器运行需额外配置。场景图和 Unity 后端支持的动作并不完全相同。API 代码采用 MIT；本次未审计下载版模拟器及素材的许可。",
+      "enables_en": "Generate household activity trajectories and build embodied-agent training tasks with object interactions and scene state.",
+      "enables_zh": "生成家庭活动轨迹，并利用物体交互与场景状态构建具身 Agent 训练任务。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python API via pip install virtualhome; author-provided Unity downloads for Linux, macOS and Windows.",
+      "evidence": [
+        {
+          "url": "https://github.com/xavierpuigf/virtualhome#readme",
+          "supports": "Documents household action programs, embodied training, two backends, platform-specific executables and headless requirements."
+        },
+        {
+          "url": "https://github.com/xavierpuigf/virtualhome/blob/master/LICENSE",
+          "supports": "API repository publishes the MIT license."
+        },
+        {
+          "url": "https://arxiv.org/abs/1806.07011",
+          "supports": "Original paper describes program-driven household activity simulation."
+        },
+        {
+          "url": "https://github.com/xavierpuigf/virtualhome#readme",
+          "supports": "A household-activity virtual environment with documented Linux, macOS and Windows executables."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "minigrid",
+      "name": "MiniGrid",
+      "description_en": "A configurable collection of small grid worlds for navigation, object manipulation and instruction following, including the BabyAI environments.",
+      "description_zh": "可配置的小型网格世界集合，覆盖导航、物体操作和指令执行，并包含 BabyAI 环境。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://minigrid.farama.org/",
+      "repo_url": "https://github.com/Farama-Foundation/Minigrid",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2306.13831",
+      "limits_en": "Current README requires Python 3.11+ and does not officially support Windows. Licensing is inconsistent in the reviewed branch: pyproject.toml says MIT, while LICENSE contains incomplete Apache 2.0 text. A definitive license was not established.",
+      "limits_zh": "当前 README 要求 Python 3.11+，并未正式支持 Windows。所审查分支的许可信息不一致：pyproject.toml 标注 MIT，但 LICENSE 含不完整的 Apache 2.0 文本；本次未确定最终适用许可。",
+      "enables_en": "Create controlled curricula and evaluate navigation, memory and language-conditioned action composition.",
+      "enables_zh": "构建可控课程，评估导航、记忆和语言条件下的动作组合。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python/Gymnasium; pip install minigrid; customizable mission strings, map sizes and task configurations.",
+      "evidence": [
+        {
+          "url": "https://github.com/Farama-Foundation/Minigrid#readme",
+          "supports": "Documents MiniGrid/BabyAI tasks, Gymnasium, installation and explicitly supported Linux/macOS platforms."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Minigrid/blob/main/pyproject.toml",
+          "supports": "Package metadata declares MIT."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Minigrid/blob/main/LICENSE",
+          "supports": "Reviewed root file instead contains incomplete Apache 2.0 text, so the license conflict is preserved."
+        },
+        {
+          "url": "https://arxiv.org/abs/2306.13831",
+          "supports": "Author paper describes MiniGrid and MiniWorld design, APIs and goal-oriented tasks."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "jericho",
+      "name": "Jericho",
+      "description_en": "A Python interface connecting agents to interactive-fiction games, with access to game state and controls for reproducible play.",
+      "description_zh": "将 Agent 连接到交互式文字冒险游戏的 Python 接口，提供游戏状态访问及可复现运行所需的控制。",
+      "content_type": "game",
+      "platforms": [
+        "linux"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/microsoft/jericho",
+      "repo_url": "https://github.com/microsoft/jericho",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1909.05398",
+      "limits_en": "Current requirements include Linux, Python 3.12+, spaCy and build tools; game files are separate. Version 4 changes default seeding, so record seeds and versions. Interface code is GPL 2.0; individual games retain separate rights.",
+      "limits_zh": "当前依赖包括 Linux、Python 3.12+、spaCy 和构建工具，游戏文件需单独准备。第 4 版改变默认种子行为，应记录种子与版本。接口代码采用 GPL 2.0，各游戏保留独立权利。",
+      "enables_en": "Study language-based exploration and planning across existing text adventures with explicit reproducibility settings.",
+      "enables_zh": "在现有文字冒险中研究基于语言的探索和规划，并明确记录复现设置。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python interface to Frotz; pip install jericho plus the documented spaCy model; load a supported game file.",
+      "evidence": [
+        {
+          "url": "https://github.com/microsoft/jericho#readme",
+          "supports": "Documents the interactive-fiction interface, current Linux/Python requirements and version 4 seed changes."
+        },
+        {
+          "url": "https://github.com/microsoft/jericho/blob/master/LICENSE",
+          "supports": "Repository license is GNU GPL version 2."
+        },
+        {
+          "url": "https://arxiv.org/abs/1909.05398",
+          "supports": "Original paper introduces Jericho and its text-game research setting."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "gpt5-escape-the-maze",
+      "name": "Escape the Maze",
+      "description_en": "A single-file browser maze game attributed by OpenAI to its AI-generated coding collection, with keyboard navigation, timing and shortest-path comparison.",
+      "description_zh": "OpenAI 署名的 AI 生成作品集中的单文件浏览器迷宫游戏，包含键盘移动、计时和最短路径比较。",
+      "content_type": "game",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://github.com/openai/gpt-5-coding-examples/tree/main/apps/escape-the-maze",
+      "repo_url": "https://github.com/openai/gpt-5-coding-examples",
+      "demo_url": "https://gpt5-coding-examples.vercel.app/escape-the-maze/",
+      "paper_url": null,
+      "limits_en": "The game is a coding showcase without a published agent evaluator. The hosted HTML returned 200; gameplay was not tested. Repository code is MIT licensed.",
+      "limits_zh": "属于编程作品展示，未提供公开 Agent 评分器。托管 HTML 返回 200，但未实际操作游戏。仓库代码采用 MIT。",
+      "enables_en": "Inspect a generated maze implementation and compare its code with the published creation prompt.",
+      "enables_zh": "查看生成的迷宫实现，并与公开创作提示对照。",
+      "resource_kind": "ai-generated-output",
+      "runtime": "Published single-file HTML/CSS/JavaScript; inspect the hosted page or run the collection with its documented front-end development server.",
+      "evidence": [
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples#readme",
+          "supports": "OpenAI explicitly attributes the collection to single GPT-5 or GPT-5.2 prompts without handwritten application code."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/examples/escape-the-maze.yaml",
+          "supports": "Publisher supplies the specific example name, prompt and category."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/apps/escape-the-maze/index.html",
+          "supports": "Published source contains maze generation, keyboard controls, a timer and shortest-path comparison."
+        },
+        {
+          "url": "https://gpt5-coding-examples.vercel.app/escape-the-maze/",
+          "supports": "Hosted HTML returned HTTP 200 and matched the published app file during this source review; no JavaScript or app interaction was executed."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/LICENSE",
+          "supports": "Collection publishes an MIT license."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "provenance_source": "https://github.com/openai/gpt-5-coding-examples#readme"
+    },
+    {
+      "id": "gpt5-typing-rain",
+      "name": "Typing Rain",
+      "description_en": "An AI-generated browser typing game where falling words, rising difficulty, a score and an accuracy counter form the interaction.",
+      "description_zh": "AI 生成的浏览器打字游戏，通过下落单词、逐渐增加的难度、得分和准确率形成交互。",
+      "content_type": "game",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://github.com/openai/gpt-5-coding-examples/tree/main/apps/typing-rain",
+      "repo_url": "https://github.com/openai/gpt-5-coding-examples",
+      "demo_url": "https://gpt5-coding-examples.vercel.app/typing-rain/",
+      "paper_url": null,
+      "limits_en": "Keyboard-oriented demo with browser-local best-score storage, not a language-learning or agent benchmark. Hosted HTML returned 200; play and accessibility were not tested. Repository code is MIT.",
+      "limits_zh": "以键盘操作为主的演示，最高分保存在当前浏览器；并非语言学习或 Agent 基准。托管 HTML 返回 200，未测试游玩与无障碍体验。仓库代码采用 MIT。",
+      "enables_en": "Inspect how a generated game connects keyboard input, animation and local scoring.",
+      "enables_zh": "观察生成游戏如何连接键盘输入、动画和本地计分。",
+      "resource_kind": "ai-generated-output",
+      "runtime": "Published single-file HTML/CSS/JavaScript; inspect the hosted page or run the collection with its documented front-end development server.",
+      "evidence": [
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples#readme",
+          "supports": "OpenAI explicitly attributes the collection to single GPT-5 or GPT-5.2 prompts without handwritten application code."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/examples/typing-rain.yaml",
+          "supports": "Publisher supplies the specific example name, prompt and category."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/apps/typing-rain/index.html",
+          "supports": "Published source implements falling-word generation, score/accuracy state and localStorage for the best score."
+        },
+        {
+          "url": "https://gpt5-coding-examples.vercel.app/typing-rain/",
+          "supports": "Hosted HTML returned HTTP 200 and matched the published app file during this source review; no JavaScript or app interaction was executed."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/LICENSE",
+          "supports": "Collection publishes an MIT license."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "provenance_source": "https://github.com/openai/gpt-5-coding-examples#readme"
+    },
+    {
+      "id": "gpt5-tic-tac-toe-game",
+      "name": "Tic Tac Toe — Imperium Edition",
+      "description_en": "A Roman-themed browser tic-tac-toe artifact from OpenAI’s generated examples, with local two-player and computer-opponent modes.",
+      "description_zh": "来自 OpenAI 生成案例集的罗马主题浏览器井字棋作品，提供本地双人和电脑对手模式。",
+      "content_type": "game",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://github.com/openai/gpt-5-coding-examples/tree/main/apps/tic-tac-toe-game",
+      "repo_url": "https://github.com/openai/gpt-5-coding-examples",
+      "demo_url": "https://gpt5-coding-examples.vercel.app/tic-tac-toe-game/",
+      "paper_url": null,
+      "limits_en": "The computer opponent is game logic including minimax, not an LLM service. It is a showcase without a benchmark protocol. Hosted HTML returned 200; strategy correctness was not tested. Repository code is MIT.",
+      "limits_zh": "电脑对手使用包含 minimax 的游戏逻辑，并非 LLM 服务。项目属于展示作品，没有基准协议。托管 HTML 返回 200，未验证策略正确性。仓库代码采用 MIT。",
+      "enables_en": "Examine generated game-state handling, a computer opponent and responsive board UI.",
+      "enables_zh": "研究生成的游戏状态管理、电脑对手和响应式棋盘界面。",
+      "resource_kind": "ai-generated-output",
+      "runtime": "Published single-file HTML/CSS/JavaScript; inspect the hosted page or run the collection with its documented front-end development server.",
+      "evidence": [
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples#readme",
+          "supports": "OpenAI explicitly attributes the collection to single GPT-5 or GPT-5.2 prompts without handwritten application code."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/examples/tic-tac-toe-game.yaml",
+          "supports": "Publisher supplies the specific example name, prompt and category."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/apps/tic-tac-toe-game/index.html",
+          "supports": "Published prompt and source describe local modes and contain minimax-based opponent functions."
+        },
+        {
+          "url": "https://gpt5-coding-examples.vercel.app/tic-tac-toe-game/",
+          "supports": "Hosted HTML returned HTTP 200 and matched the published app file during this source review; no JavaScript or app interaction was executed."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/LICENSE",
+          "supports": "Collection publishes an MIT license."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "provenance_source": "https://github.com/openai/gpt-5-coding-examples#readme"
+    },
+    {
+      "id": "gpt5-online-whiteboard",
+      "name": "Online Whiteboard",
+      "description_en": "A generated browser drawing app with pen and eraser tools, color choices and PNG image export.",
+      "description_zh": "AI 生成的浏览器绘图应用，提供画笔、橡皮擦、颜色选择和 PNG 图像导出。",
+      "content_type": "app",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://github.com/openai/gpt-5-coding-examples/tree/main/apps/online-whiteboard",
+      "repo_url": "https://github.com/openai/gpt-5-coding-examples",
+      "demo_url": "https://gpt5-coding-examples.vercel.app/online-whiteboard/",
+      "paper_url": null,
+      "limits_en": "The published prompt explicitly limits the app to local use; no shared realtime collaboration service is provided. Hosted HTML returned 200; drawing/export were not exercised. Repository code is MIT.",
+      "limits_zh": "公开提示明确限定为本地使用，未提供共享实时协作服务。托管 HTML 返回 200，未实际测试绘图和导出。仓库代码采用 MIT。",
+      "enables_en": "Inspect a generated canvas interface and adapt its local drawing and export workflow.",
+      "enables_zh": "查看生成的 canvas 界面，并参考其本地绘图与导出流程。",
+      "resource_kind": "ai-generated-output",
+      "runtime": "Published single-file HTML/CSS/JavaScript; inspect the hosted page or run the collection with its documented front-end development server.",
+      "evidence": [
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples#readme",
+          "supports": "OpenAI explicitly attributes the collection to single GPT-5 or GPT-5.2 prompts without handwritten application code."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/examples/online-whiteboard.yaml",
+          "supports": "Publisher supplies the specific example name, prompt and category."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/apps/online-whiteboard/index.html",
+          "supports": "Published prompt says local-only; source contains pen/eraser controls and canvas-to-PNG export."
+        },
+        {
+          "url": "https://gpt5-coding-examples.vercel.app/online-whiteboard/",
+          "supports": "Hosted HTML returned HTTP 200 and matched the published app file during this source review; no JavaScript or app interaction was executed."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/LICENSE",
+          "supports": "Collection publishes an MIT license."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "provenance_source": "https://github.com/openai/gpt-5-coding-examples#readme"
+    },
+    {
+      "id": "gpt5-audio-step-sequencer",
+      "name": "Audio Step Sequencer",
+      "description_en": "An AI-generated browser drum sequencer with a sixteen-step grid, tempo and swing controls, saved patterns and WAV export code.",
+      "description_zh": "AI 生成的浏览器鼓机音序器，包含十六步网格、速度与摇摆节奏控制、样式保存和 WAV 导出代码。",
+      "content_type": "app",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://github.com/openai/gpt-5-coding-examples/tree/main/apps/audio-step-sequencer",
+      "repo_url": "https://github.com/openai/gpt-5-coding-examples",
+      "demo_url": "https://gpt5-coding-examples.vercel.app/audio-step-sequencer/",
+      "paper_url": null,
+      "limits_en": "Requires browser WebAudio support and user interaction for audio playback. Pattern storage is local. Hosted HTML returned 200; audio timing and WAV output were not tested. Repository code is MIT.",
+      "limits_zh": "依赖浏览器 WebAudio，播放声音需要用户交互；节奏样式保存在本地。托管 HTML 返回 200，未测试音频时序和 WAV 输出。仓库代码采用 MIT。",
+      "enables_en": "Inspect generated WebAudio scheduling and offline audio-export logic in a standalone app.",
+      "enables_zh": "研究独立应用中生成的 WebAudio 调度与离线音频导出逻辑。",
+      "resource_kind": "ai-generated-output",
+      "runtime": "Published single-file HTML/CSS/JavaScript; inspect the hosted page or run the collection with its documented front-end development server.",
+      "evidence": [
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples#readme",
+          "supports": "OpenAI explicitly attributes the collection to single GPT-5 or GPT-5.2 prompts without handwritten application code."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/examples/audio-step-sequencer.yaml",
+          "supports": "Publisher supplies the specific example name, prompt and category."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/apps/audio-step-sequencer/index.html",
+          "supports": "Published source uses AudioContext, a sixteen-step loop, localStorage and OfflineAudioContext/WAV export."
+        },
+        {
+          "url": "https://gpt5-coding-examples.vercel.app/audio-step-sequencer/",
+          "supports": "Hosted HTML returned HTTP 200 and matched the published app file during this source review; no JavaScript or app interaction was executed."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/LICENSE",
+          "supports": "Collection publishes an MIT license."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "provenance_source": "https://github.com/openai/gpt-5-coding-examples#readme"
     }
   ]
 }
