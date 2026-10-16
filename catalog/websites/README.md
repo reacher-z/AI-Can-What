@@ -2,11 +2,12 @@
 
 [Back to the collection](../../README.md)
 
-22 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
+25 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
 
 | Project | Resource type | Use | Primary source |
 | --- | --- | --- | --- |
 | [Aldi Prices](https://aicanwhat.com/projects/aldi-prices/) | Software made with AI | Showcase | [Source](https://aldi-prices.lawruk.com/) |
+| [AssistantBench](https://aicanwhat.com/projects/assistantbench/) | Dataset + benchmark | Evaluation | [Source](https://assistantbench.github.io/) |
 | [BrowserART](https://aicanwhat.com/projects/browserart/) | Environment + benchmark | Evaluation | [Source](https://github.com/scaleapi/browser-art) |
 | [BrowserGym](https://aicanwhat.com/projects/browsergym/) | Environment framework | Training, Evaluation | [Source](https://github.com/ServiceNow/BrowserGym) |
 | [Brutalist Dev Platform](https://aicanwhat.com/projects/gpt5-brutalist-dev-platform/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/brutalist-dev-landing-page) |
@@ -22,8 +23,10 @@
 | [VisualWebArena](https://aicanwhat.com/projects/visualwebarena/) | Environment + benchmark | Evaluation | [Source](https://jykoh.com/vwa) |
 | [VisualWebBench](https://aicanwhat.com/projects/visualwebbench/) | Dataset + benchmark | Evaluation | [Source](https://visualwebbench.github.io/) |
 | [WebArena](https://aicanwhat.com/projects/webarena/) | Environment + benchmark | Training, Evaluation | [Source](https://webarena.dev/) |
+| [WebChoreArena](https://aicanwhat.com/projects/webchorearena/) | Benchmark suite | Evaluation | [Source](https://github.com/WebChoreArena/WebChoreArena) |
 | [WebCode2M](https://aicanwhat.com/projects/webcode2m/) | Dataset + benchmark | Training, Evaluation | [Source](https://webcode2m.github.io/) |
 | [WebLINX](https://aicanwhat.com/projects/weblinx/) | Dataset + benchmark | Training, Evaluation | [Source](https://mcgill-nlp.github.io/weblinx/) |
+| [WebMall](https://aicanwhat.com/projects/webmall/) | Environment + benchmark | Evaluation | [Source](https://wbsg-uni-mannheim.github.io/WebMall/) |
 | [WebShop](https://aicanwhat.com/projects/webshop/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/princeton-nlp/WebShop) |
 | [WebUIBench](https://aicanwhat.com/projects/webuibench/) | Dataset + benchmark | Evaluation | [Source](https://huggingface.co/datasets/Tele-AI-MAIL/WebUIBench) |
 | [WebVoyager](https://aicanwhat.com/projects/webvoyager/) | Environment + benchmark | Evaluation | [Source](https://github.com/MinorJerry/WebVoyager) |

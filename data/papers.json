@@ -1520,6 +1520,379 @@
       "description_zh": "将网页到代码评估划分为视觉感知、HTML 编程、图像与 HTML 对应理解及页面生成，用于诊断模型能力。",
       "source_url": "https://arxiv.org/abs/2506.07818",
       "date_note": "published_at is the first arXiv submission date. The official dataset card's 2404.05955 link is not this paper."
+    },
+    {
+      "id": "2311.12983",
+      "title": "GAIA: a benchmark for General AI Assistants",
+      "authors": [
+        "Grégoire Mialon",
+        "Clémentine Fourrier",
+        "Craig Swift",
+        "Thomas Wolf",
+        "Yann LeCun",
+        "Thomas Scialom"
+      ],
+      "published_at": "2023-11-21",
+      "arxiv_url": "https://arxiv.org/abs/2311.12983",
+      "project_ids": [
+        "gaia"
+      ],
+      "description_en": "Introduces assistant tasks that combine reasoning, multimodal inputs, browsing and tool use, with held-out answers for evaluating general-purpose assistants.",
+      "description_zh": "提出结合推理、多模态输入、浏览和工具使用的助手任务，并保留部分答案用于评估通用助手。",
+      "source_url": "https://arxiv.org/abs/2311.12983",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2602.11964",
+      "title": "Gaia2: Benchmarking LLM Agents on Dynamic and Asynchronous Environments",
+      "authors": [
+        "Romain Froger",
+        "Pierre Andrews",
+        "Matteo Bettini",
+        "Amar Budhiraja",
+        "Ricardo Silveira Cabral",
+        "Virginie Do",
+        "Emilien Garreau",
+        "Jean-Baptiste Gaya",
+        "Hugo Laurençon",
+        "Maxime Lecanu",
+        "Kunal Malkan",
+        "Dheeraj Mekala",
+        "Pierre Ménard",
+        "Gerard Moreno-Torres Bertran",
+        "Ulyana Piterbarg",
+        "Mikhail Plekhanov",
+        "Mathieu Rita",
+        "Andrey Rusakov",
+        "Vladislav Vorotilov",
+        "Mengjue Wang",
+        "Ian Yu",
+        "Amine Benhalloum",
+        "Grégoire Mialon",
+        "Thomas Scialom"
+      ],
+      "published_at": "2026-02-12",
+      "arxiv_url": "https://arxiv.org/abs/2602.11964",
+      "project_ids": [
+        "gaia2"
+      ],
+      "description_en": "Introduces asynchronous simulated-app scenarios with changing events and action-level verification, enabling evaluation and reward-based learning under temporal and coordination demands.",
+      "description_zh": "提出包含动态事件与动作级验证的异步模拟应用场景，支持在时间及协作要求下开展评测和基于奖励的学习。",
+      "source_url": "https://arxiv.org/abs/2602.11964",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2509.17158",
+      "title": "ARE: Scaling Up Agent Environments and Evaluations",
+      "authors": [
+        "Romain Froger",
+        "Pierre Andrews",
+        "Matteo Bettini",
+        "Amar Budhiraja",
+        "Ricardo Silveira Cabral",
+        "Virginie Do",
+        "Emilien Garreau",
+        "Jean-Baptiste Gaya",
+        "Hugo Laurençon",
+        "Maxime Lecanu",
+        "Kunal Malkan",
+        "Dheeraj Mekala",
+        "Pierre Ménard",
+        "Gerard Moreno-Torres Bertran",
+        "Ulyana Piterbarg",
+        "Mikhail Plekhanov",
+        "Mathieu Rita",
+        "Andrey Rusakov",
+        "Vladislav Vorotilov",
+        "Mengjue Wang",
+        "Ian Yu",
+        "Amine Benhalloum",
+        "Grégoire Mialon",
+        "Thomas Scialom"
+      ],
+      "published_at": "2025-09-21",
+      "arxiv_url": "https://arxiv.org/abs/2509.17158",
+      "project_ids": [
+        "gaia2"
+      ],
+      "description_en": "Presents ARE's abstractions for applications, events, scenarios and verifiers, and demonstrates their use in building the dynamic Gaia2 benchmark.",
+      "description_zh": "介绍 ARE 对应用、事件、场景和验证器的抽象，并展示如何用它构建动态 Gaia2 基准。",
+      "source_url": "https://arxiv.org/abs/2509.17158",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2407.15711",
+      "title": "AssistantBench: Can Web Agents Solve Realistic and Time-Consuming Tasks?",
+      "authors": [
+        "Ori Yoran",
+        "Samuel Joseph Amouyal",
+        "Chaitanya Malaviya",
+        "Ben Bogin",
+        "Ofir Press",
+        "Jonathan Berant"
+      ],
+      "published_at": "2024-07-22",
+      "arxiv_url": "https://arxiv.org/abs/2407.15711",
+      "project_ids": [
+        "assistantbench"
+      ],
+      "description_en": "Studies realistic web-research tasks and introduces AssistantBench and SeePlanAct to evaluate information gathering, planning and answer reliability on the open web.",
+      "description_zh": "研究真实网页调查任务，并提出 AssistantBench 与 SeePlanAct，评估开放网页中的信息收集、规划和答案可靠性。",
+      "source_url": "https://arxiv.org/abs/2407.15711",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2401.13178",
+      "title": "AgentBoard: An Analytical Evaluation Board of Multi-turn LLM Agents",
+      "authors": [
+        "Chang Ma",
+        "Junlei Zhang",
+        "Zhihao Zhu",
+        "Cheng Yang",
+        "Yujiu Yang",
+        "Yaohui Jin",
+        "Zhenzhong Lan",
+        "Lingpeng Kong",
+        "Junxian He"
+      ],
+      "published_at": "2024-01-24",
+      "arxiv_url": "https://arxiv.org/abs/2401.13178",
+      "project_ids": [
+        "agentboard"
+      ],
+      "description_en": "Introduces an analytical evaluation framework that measures intermediate progress across multi-turn environments rather than relying only on final task success.",
+      "description_zh": "提出跨多轮环境衡量中间进展的分析型评测框架，使评估不再仅依赖任务最终是否成功。",
+      "source_url": "https://arxiv.org/abs/2401.13178",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2406.13352",
+      "title": "AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents",
+      "authors": [
+        "Edoardo Debenedetti",
+        "Jie Zhang",
+        "Mislav Balunović",
+        "Luca Beurer-Kellner",
+        "Marc Fischer",
+        "Florian Tramèr"
+      ],
+      "published_at": "2024-06-19",
+      "arxiv_url": "https://arxiv.org/abs/2406.13352",
+      "project_ids": [
+        "agentdojo"
+      ],
+      "description_en": "Introduces extensible tool-use environments for testing prompt-injection attacks and defenses while measuring the success of legitimate user tasks.",
+      "description_zh": "提出可扩展的工具使用环境，在测试提示注入攻击与防御的同时衡量正常用户任务的成功情况。",
+      "source_url": "https://arxiv.org/abs/2406.13352",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2402.17553",
+      "title": "OmniACT: A Dataset and Benchmark for Enabling Multimodal Generalist Autonomous Agents for Desktop and Web",
+      "authors": [
+        "Raghav Kapoor",
+        "Yash Parag Butala",
+        "Melisa Russak",
+        "Jing Yu Koh",
+        "Kiran Kamble",
+        "Waseem Alshikh",
+        "Ruslan Salakhutdinov"
+      ],
+      "published_at": "2024-02-27",
+      "arxiv_url": "https://arxiv.org/abs/2402.17553",
+      "project_ids": [
+        "omniact"
+      ],
+      "description_en": "Introduces paired screen images, instructions and action programs for desktop and web tasks, with sequence and action metrics for evaluating generated GUI-control code.",
+      "description_zh": "提出桌面与网页任务的屏幕图像、指令和动作程序配对数据，并以序列及动作指标评估生成的 GUI 控制代码。",
+      "source_url": "https://arxiv.org/abs/2402.17553",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2412.14161",
+      "title": "TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks",
+      "authors": [
+        "Frank F. Xu",
+        "Yufan Song",
+        "Boxuan Li",
+        "Yuxuan Tang",
+        "Kritanjali Jain",
+        "Mengxue Bao",
+        "Zora Z. Wang",
+        "Xuhui Zhou",
+        "Zhitong Guo",
+        "Murong Cao",
+        "Mingyang Yang",
+        "Hao Yang Lu",
+        "Amaad Martin",
+        "Zhe Su",
+        "Leander Maben",
+        "Raj Mehta",
+        "Wayne Chi",
+        "Lawrence Jang",
+        "Yiqing Xie",
+        "Shuyan Zhou",
+        "Graham Neubig"
+      ],
+      "published_at": "2024-12-18",
+      "arxiv_url": "https://arxiv.org/abs/2412.14161",
+      "project_ids": [
+        "the-agent-company"
+      ],
+      "description_en": "Introduces a simulated software company with internal services and task checks for agents that browse websites, run programs and collaborate with simulated coworkers.",
+      "description_zh": "提出具有内部服务和任务检查的模拟软件公司，用于评估浏览网站、运行程序并与模拟同事协作的 Agent。",
+      "source_url": "https://arxiv.org/abs/2412.14161",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2410.15164",
+      "title": "SPA-Bench: A Comprehensive Benchmark for SmartPhone Agent Evaluation",
+      "authors": [
+        "Jingxuan Chen",
+        "Derek Yuen",
+        "Bin Xie",
+        "Yuhao Yang",
+        "Gongwei Chen",
+        "Zhihao Wu",
+        "Li Yixing",
+        "Xurui Zhou",
+        "Weiwen Liu",
+        "Shuai Wang",
+        "Kaiwen Zhou",
+        "Rui Shao",
+        "Liqiang Nie",
+        "Yasheng Wang",
+        "Jianye Hao",
+        "Jun Wang",
+        "Kun Shao"
+      ],
+      "published_at": "2024-10-19",
+      "arxiv_url": "https://arxiv.org/abs/2410.15164",
+      "project_ids": [
+        "spa-bench"
+      ],
+      "description_en": "Introduces Android tasks across single-app and cross-app workflows, agent integrations and automated evaluation of task completion and resource consumption.",
+      "description_zh": "提出覆盖单应用与跨应用流程的 Android 任务、Agent 集成，以及对任务完成和资源消耗的自动评估。",
+      "source_url": "https://arxiv.org/abs/2410.15164",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2406.08184",
+      "title": "MobileAgentBench: An Efficient and User-Friendly Benchmark for Mobile LLM Agents",
+      "authors": [
+        "Luyuan Wang",
+        "Yongyu Deng",
+        "Yiwei Zha",
+        "Guodong Mao",
+        "Qinmin Wang",
+        "Tianchen Min",
+        "Wei Chen",
+        "Shoufa Chen"
+      ],
+      "published_at": "2024-06-12",
+      "arxiv_url": "https://arxiv.org/abs/2406.08184",
+      "project_ids": [
+        "mobileagentbench"
+      ],
+      "description_en": "Introduces a mobile-app task collection and programmatic evaluation framework intended to reduce manual testing of Android agents.",
+      "description_zh": "提出移动应用任务集合与程序化评测框架，旨在减少 Android Agent 测试所需的人工工作。",
+      "source_url": "https://arxiv.org/abs/2406.08184",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2508.13024",
+      "title": "WebMall -- A Multi-Shop Benchmark for Evaluating Web Agents",
+      "authors": [
+        "Ralph Peeters",
+        "Aaron Steiner",
+        "Luca Schwarz",
+        "Julian Yuya Caspary",
+        "Christian Bizer"
+      ],
+      "published_at": "2025-08-18",
+      "arxiv_url": "https://arxiv.org/abs/2508.13024",
+      "project_ids": [
+        "webmall"
+      ],
+      "description_en": "Introduces a reproducible multi-store shopping environment for evaluating product comparison, vague requirements, alternatives and checkout workflows.",
+      "description_zh": "提出可复现的多商店购物环境，用于评估商品比较、模糊需求、替代品选择及结账流程。",
+      "source_url": "https://arxiv.org/abs/2508.13024",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2411.02305",
+      "title": "CRMArena: Understanding the Capacity of LLM Agents to Perform Professional CRM Tasks in Realistic Environments",
+      "authors": [
+        "Kung-Hsiang Huang",
+        "Akshara Prabhakar",
+        "Sidharth Dhawan",
+        "Yixin Mao",
+        "Huan Wang",
+        "Silvio Savarese",
+        "Caiming Xiong",
+        "Philippe Laban",
+        "Chien-Sheng Wu"
+      ],
+      "published_at": "2024-11-04",
+      "arxiv_url": "https://arxiv.org/abs/2411.02305",
+      "project_ids": [
+        "crmarena"
+      ],
+      "description_en": "Introduces professional CRM tasks over interconnected business records to evaluate customer-service agents' reasoning, function calling and rule following.",
+      "description_zh": "提出基于相互关联业务记录的专业 CRM 任务，用于评估客服 Agent 的推理、函数调用和规则遵循能力。",
+      "source_url": "https://arxiv.org/abs/2411.02305",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2505.18878",
+      "title": "CRMArena-Pro: Holistic Assessment of LLM Agents Across Diverse Business Scenarios and Interactions",
+      "authors": [
+        "Kung-Hsiang Huang",
+        "Akshara Prabhakar",
+        "Onkar Thorat",
+        "Divyansh Agarwal",
+        "Prafulla Kumar Choubey",
+        "Yixin Mao",
+        "Silvio Savarese",
+        "Caiming Xiong",
+        "Chien-Sheng Wu"
+      ],
+      "published_at": "2025-05-24",
+      "arxiv_url": "https://arxiv.org/abs/2505.18878",
+      "project_ids": [
+        "crmarena"
+      ],
+      "description_en": "Extends CRMArena to broader sales and service workflows, B2B/B2C settings and persona-guided multi-turn interactions, including confidentiality evaluation.",
+      "description_zh": "将 CRMArena 扩展至更广泛的销售与服务流程、B2B/B2C 场景及角色引导的多轮交互，并加入保密性评估。",
+      "source_url": "https://arxiv.org/abs/2505.18878",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2506.01952",
+      "title": "WebChoreArena: Evaluating Web Browsing Agents on Realistic Tedious Web Tasks",
+      "authors": [
+        "Atsuyuki Miyai",
+        "Zaiying Zhao",
+        "Kazuki Egashira",
+        "Atsuki Sato",
+        "Tatsumi Sunada",
+        "Shota Onohara",
+        "Hiromasa Yamanishi",
+        "Mashiro Toyooka",
+        "Kunato Nishina",
+        "Ryoma Maeda",
+        "Kiyoharu Aizawa",
+        "Toshihiko Yamasaki"
+      ],
+      "published_at": "2025-06-02",
+      "arxiv_url": "https://arxiv.org/abs/2506.01952",
+      "project_ids": [
+        "webchorearena"
+      ],
+      "description_en": "Introduces more demanding WebArena tasks centered on retaining observations, numerical reasoning and tracking information across extended browsing workflows.",
+      "description_zh": "提出更具挑战性的 WebArena 任务，聚焦观察信息保持、数值推理和长流程浏览中的信息跟踪。",
+      "source_url": "https://arxiv.org/abs/2506.01952",
+      "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
     }
   ]
 }

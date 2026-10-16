@@ -4,7 +4,7 @@ from html import escape
 import os
 
 
-def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, uses):
+def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, uses, registry_sources, registry_document):
     origin = config['origin'].rstrip('/')
     def table(records, language='en'):
         zh = language == 'zh'
@@ -49,6 +49,8 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
         slug = {'game': 'games', 'website': 'websites', 'app': 'apps'}[category]
         summary += f'| [{labels[0]}]({origin}/{slug}/) | {counts[category]} | [Browse](catalog/{slug}/README.md) |\n'
     summary += '\n[Research bibliography](' + origin + '/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)\n'
+    registry_count = len(registry_document['records'])
+    summary += f'\n[Upstream registry index]({origin}/discover/): **{registry_count} metadata records from {len(registry_sources)} sources**. These include versions, forks, manifests, and configurations; they are not individually reviewed projects and must not be added to the catalog count. [Source coverage](catalog/registries/README.md).\n'
     readme = root / 'README.md'
     text = readme.read_text()
     begin, end = '<!-- BEGIN GENERATED INDEX -->', '<!-- END GENERATED INDEX -->'
@@ -76,6 +78,8 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
 
 [研究文献]({origin}/zh/papers/) · [完整数据](data/catalog.json) · [贡献说明](CONTRIBUTING.md)
 
+[上游注册表索引]({origin}/zh/discover/)另提供 **{registry_count} 条来自 {len(registry_sources)} 个来源的元数据记录**。它们包含版本、分支、清单与配置，尚未逐项核查，不能与精选项目数相加。[查看来源覆盖](catalog/registries/README.zh-CN.md)。
+
 相关目录：[AwesomeREA](https://awesomerea.org/zh/resources/) 整理逆向工程工具、集成与软件重建研究。
 
 软件作品、可运行环境、评测套件和静态数据集分别标注。AI 开发方式需要作者证据；平台、许可和运行限制以原始来源为准，未知信息保持未知。
@@ -86,8 +90,25 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
 python3 scripts/build.py
 python3 scripts/validate.py
 node --check static/app.js
+node --check static/registry.js
+python3 -m unittest discover -s tests
 ```
 
 数据来源是 `data/catalog.json` 与 `data/papers.json`。页面、引用和分类 README 由同一组数据生成；请修改源数据后重新构建。托管配置和搜索提交步骤见 [search-discovery.md](docs/search-discovery.md)。
 '''
     (root / 'README.zh-CN.md').write_text(chinese, encoding='utf-8')
+    directory = root / 'catalog/registries'
+    directory.mkdir(parents=True, exist_ok=True)
+    snapshots = {snapshot['source_id']: snapshot for snapshot in registry_document['snapshots']}
+    for language in ('en', 'zh'):
+        zh = language == 'zh'
+        filename = 'README.zh-CN.md' if zh else 'README.md'
+        lines = ['# ' + ('上游注册表索引' if zh else 'Upstream registry index'), '',
+                 f'[{("网站索引" if zh else "Browse the index")}]({origin}{("/zh" if zh else "")}/discover/) · [{("元数据快照" if zh else "Metadata snapshot")}](../../data/registry-index.json)', '',
+                 ('以下是上游元数据记录，不是逐项复核或运行验证的项目。版本、分支与配置可能重叠，数量不能与精选目录相加。' if zh else 'These are upstream metadata records, not individually reviewed or execution-verified projects. Versions, forks and configurations can overlap; counts are not additive with the curated catalog.'), '',
+                 '| 来源 | 记录数 | 采集日期 |' if zh else '| Source | Records | Captured |', '| --- | --- | --- |']
+        for source in registry_sources:
+            snapshot = snapshots[source['id']]
+            lines.append(f'| [{source["name"]}]({source["browse_url"]}) | {snapshot["record_count"]} | {snapshot["captured_at"][:10]} |')
+        lines += ['', '[Method, limitations, and refresh workflow](../../docs/registry-discovery.md)', '']
+        (directory / filename).write_text('\n'.join(lines), encoding='utf-8')

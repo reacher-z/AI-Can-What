@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "harbor-hub",
+      "name": "Harbor Hub",
+      "adapter": "harbor-hub",
+      "kind": "dataset-package",
+      "browse_url": "https://hub.harborframework.com/datasets",
+      "constants_url": "https://raw.githubusercontent.com/harbor-framework/harbor/2de4605b9404eada7d341388291e6e469c90330b/src/harbor/auth/constants.py",
+      "api_origin": "https://ofhuhcpkvzjlejydnvyd.supabase.co",
+      "revision": "2de4605b9404eada7d341388291e6e469c90330b",
+      "note_en": "Public dataset packages, including community forks, experiments and non-software tasks. A latest tag is mutable; recorded revisions and hashes identify the observed version. Missing version metadata is retained. Package counts are not distinct benchmark counts.",
+      "note_zh": "公开数据集包，包含社区分支、实验及非软件任务。latest 标签会变化，所记录的修订号与哈希对应本次观察的版本；缺失版本资料的包也会保留。包数不等于独立基准数。",
+      "rights_en": "The framework license does not grant rights to every registered dataset or task. Follow the package's own source and terms.",
+      "rights_zh": "框架许可不代表所有注册数据集或任务的许可，使用时需查阅各包自身的来源与条款。",
+      "revision_date": "2026-10-16"
+    },
+    {
+      "id": "openenv",
+      "name": "OpenEnv",
+      "adapter": "github-manifests",
+      "kind": "environment-manifest",
+      "repository": "huggingface/OpenEnv",
+      "revision": "55347f62e22f83a618b49ee984e2f684b69d8fbd",
+      "browse_url": "https://github.com/huggingface/OpenEnv/tree/55347f62e22f83a618b49ee984e2f684b69d8fbd/envs",
+      "manifest_pattern": "envs/[^/]+/openenv\\.yaml",
+      "note_en": "Tracked environment manifests at the pinned repository revision. These include wrappers and examples; the inventory excludes external community repositories and hosted deployments. A manifest does not establish runtime availability.",
+      "note_zh": "固定仓库版本中的环境清单，包含封装与示例，不覆盖外部社区仓库及托管部署。存在清单文件不等于环境已经启动或运行可用。",
+      "rights_en": "OpenEnv's BSD license does not replace wrapped environments' and dependencies' individual terms.",
+      "rights_zh": "OpenEnv 的 BSD 许可不能代替其封装环境和依赖各自的条款。",
+      "revision_date": "2026-10-15"
+    },
+    {
+      "id": "browsergym",
+      "name": "BrowserGym",
+      "adapter": "python-dictionary",
+      "kind": "benchmark-configuration",
+      "repository": "ServiceNow/BrowserGym",
+      "revision": "e71419aef5759a11cb7896a26c36e5f7e92d82b2",
+      "path": "browsergym/experiments/src/browsergym/experiments/benchmark/configs.py",
+      "dictionary": "DEFAULT_BENCHMARKS",
+      "browse_url": "https://github.com/ServiceNow/BrowserGym/blob/e71419aef5759a11cb7896a26c36e5f7e92d82b2/browsergym/experiments/src/browsergym/experiments/benchmark/configs.py",
+      "note_en": "Named configurations extracted from source without importing it. Tiny, lite and curriculum variants remain configurations, not additional independent projects. A wrapper can also target a static dataset.",
+      "note_zh": "静态读取源码中的命名配置，不导入执行源码。tiny、lite 和课程变体仍属于配置，不能当作新增独立项目；封装对象也可能是静态数据集。",
+      "rights_en": "BrowserGym code is Apache 2.0; underlying benchmarks have separate access, setup and licensing requirements.",
+      "rights_zh": "BrowserGym 代码采用 Apache 2.0；底层基准另有访问、运行和许可要求。",
+      "revision_date": "2026-10-05"
+    },
+    {
+      "id": "farama",
+      "name": "Farama Foundation",
+      "adapter": "farama-projects",
+      "kind": "foundation-project",
+      "url": "https://farama.org/api/projects.json",
+      "browse_url": "https://farama.org/projects",
+      "note_en": "The foundation's project catalog, including environments, libraries and offline-data infrastructure. Core, mature and incubating are upstream governance labels. This is not a census of all reinforcement-learning environments.",
+      "note_zh": "基金会项目目录，包含环境、库与离线数据基础设施。core、mature、incubating 是上游治理分类，不是本站评分；该来源并非所有强化学习环境的全集。",
+      "rights_en": "Only factual names, URLs and upstream category labels are retained. Project code, data and assets retain their own licenses.",
+      "rights_zh": "仅保留名称、网址与上游分类等事实元数据；项目代码、数据和素材保留各自许可。"
+    },
+    {
+      "id": "openai-examples",
+      "name": "OpenAI coding examples",
+      "adapter": "github-manifests",
+      "kind": "coding-example-manifest",
+      "repository": "openai/gpt-5-coding-examples",
+      "revision": "77f6322723703941f0b884d1a1cb77c60aad5187",
+      "browse_url": "https://github.com/openai/gpt-5-coding-examples/tree/77f6322723703941f0b884d1a1cb77c60aad5187/examples",
+      "manifest_pattern": "examples/[^/]+\\.ya?ml",
+      "note_en": "Published example manifests at a dated repository revision. Model variants may repeat a project idea. Matching application source is recorded when present; manifest discovery is not application testing or independent verification of generation history.",
+      "note_zh": "固定仓库版本中的公开示例清单；不同模型变体可能重复同一个项目创意。存在匹配应用源码时会记录，发现清单不等于测试应用或独立核实生成过程。",
+      "rights_en": "The repository's MIT code license does not establish the rights of every linked external asset or dependency. Prompt bodies and screenshots are not republished here.",
+      "rights_zh": "仓库代码的 MIT 许可不能代表所有外链素材和依赖的权利；本索引不转载提示词正文或截图。",
+      "revision_date": "2025-12-11"
+    }
+  ]
+}

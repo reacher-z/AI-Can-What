@@ -15,6 +15,7 @@ from xml.sax.saxutils import escape as xml_escape
 
 from catalog_docs import build_catalog_docs
 from papers import CORPORATE_AUTHORS, bibliography, bibtex, read_papers
+from registries import read_registries, registry_page
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
@@ -93,7 +94,7 @@ def render_row(entry, language):
 </tr>'''
 
 
-def page_shell(config, language, path, title, description, body, *, items=None, detail=None, papers=None, asset_revision=''):
+def page_shell(config, language, path, title, description, body, *, items=None, detail=None, papers=None, registry_items=None, asset_revision=''):
     zh = language == 'zh'
     origin = config['origin'].rstrip('/')
     canonical = origin + lang_path(language, path)
@@ -118,6 +119,11 @@ def page_shell(config, language, path, title, description, body, *, items=None, 
             {'@type': 'ListItem', 'position': i + 1, 'item': {'@type': 'ScholarlyArticle', 'name': p['title'], 'url': p['arxiv_url'],
              'author': [{'@type': 'Organization' if author in CORPORATE_AUTHORS else 'Person', 'name': author} for author in p['authors']], 'datePublished': p['published_at']}}
             for i, p in enumerate(papers)]})
+    if registry_items is not None:
+        graph[1]['@type'] = 'CollectionPage'
+        graph[1]['mainEntity'] = {'@id': canonical + '#list'}
+        graph.append({'@type': 'ItemList', '@id': canonical + '#list', 'numberOfItems': len(registry_items),
+                      'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'name': item['name'], 'url': origin + item['url']} for i, item in enumerate(registry_items)]})
     if path != '/':
         graph[1]['breadcrumb'] = {'@id': canonical + '#breadcrumbs'}
         graph.append({'@type': 'BreadcrumbList', '@id': canonical + '#breadcrumbs', 'itemListElement': [
@@ -139,11 +145,11 @@ def page_shell(config, language, path, title, description, body, *, items=None, 
 <meta property="og:image" content="{origin}/social-card.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AI Can What? Software it builds. Worlds it learns in.">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{origin}/social-card.png"><meta name="twitter:image:alt" content="AI Can What? Software it builds. Worlds it learns in."><meta name="twitter:title" content="{escape(full_title, quote=True)}"><meta name="twitter:description" content="{escape(description, quote=True)}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css?v={asset_revision}">
-<script src="/app.js?v={asset_revision}" defer></script>{structured(graph)}
+<script src="/app.js?v={asset_revision}" defer></script><script src="/registry.js?v={asset_revision}" defer></script>{structured(graph)}
 </head>
 <body>
 <a class="skip" href="#main">{('跳到正文' if zh else 'Skip to content')}</a>
-<header class="masthead"><div class="shell header-inner"><a class="brand" href="{home}" aria-label="AI Can What? home"><span class="brand-mark" aria-hidden="true">?</span>AI can <span>what?</span></a><nav class="header-nav" aria-label="{('主导航' if zh else 'Main navigation')}"><a class="explore-link" href="{home}">{('浏览目录' if zh else 'Explore')}</a><a href="{lang_path(language, '/papers/')}">{('论文' if zh else 'Research')}</a><a href="{lang_path(language, '/about/')}">{('收录方法' if zh else 'Our method')}</a><a href="{counterpart}" hreflang="{('en' if zh else 'zh-CN')}" lang="{('en' if zh else 'zh-CN')}">{('EN' if zh else '中文')}</a><a class="repo-link" href="{config['repository']}">GitHub ↗</a></nav></div></header>
+<header class="masthead"><div class="shell header-inner"><a class="brand" href="{home}" aria-label="AI Can What? home"><span class="brand-mark" aria-hidden="true">?</span>AI can <span>what?</span></a><nav class="header-nav" aria-label="{('主导航' if zh else 'Main navigation')}"><a class="explore-link" href="{home}">{('浏览目录' if zh else 'Explore')}</a><a href="{lang_path(language, '/discover/')}">{('上游索引' if zh else 'Registries')}</a><a href="{lang_path(language, '/papers/')}">{('论文' if zh else 'Research')}</a><a href="{lang_path(language, '/about/')}">{('收录方法' if zh else 'Our method')}</a><a href="{counterpart}" hreflang="{('en' if zh else 'zh-CN')}" lang="{('en' if zh else 'zh-CN')}">{('EN' if zh else '中文')}</a><a class="repo-link" href="{config['repository']}">GitHub ↗</a></nav></div></header>
 <main id="main" class="shell">{body}</main>
 <footer class="site-footer"><div class="shell footer-inner"><span>AI Can What? · {('用来源说话的目录。' if zh else 'A directory with receipts.')}</span><nav class="footer-links" aria-label="{('更多信息' if zh else 'More information')}"><a href="{lang_path(language, '/about/')}">{('关于与收录方法' if zh else 'About & method')}</a><a href="/catalog.json">{('下载数据' if zh else 'Download catalog')}</a><a href="{config['repository']}">GitHub ↗</a><a href="{config['repository']}/issues/new?template=resource.yml">{('建议条目' if zh else 'Suggest an entry')} ↗</a></nav></div></footer>
 </body></html>
@@ -241,17 +247,18 @@ def about_page(config, language):
     if zh:
         title = '关于目录与收录方法'
         description = '了解 AI Can What 的收录范围、证据标准和作品与环境的区别。'
-        content = f'''<h1>好奇心，<br><em>需要证据。</em></h1><p class="lead">AI Can What? 收录 AI 参与开发的软件作品，以及用于 Agent 训练和评测的环境、基准与数据集。</p><h2>两类内容，一个目录</h2><p>Showcase 是有作者说明支持的 AI 构建或 AI 辅助开发作品。Training 与 Evaluation 描述环境的用途，不表示该环境一定由 AI 开发。开发方式与用途分别记录，未知就保持未知。</p><h2>数据集是否等于可运行环境？</h2><p>不是。静态数据集可以提供截图、轨迹或任务样本，通常没有可交互的系统。目录明确标注资源类型；平台标签可能描述应用目标，也可能描述数据集中的截图来源。运行条件应查看条目的具体说明。</p><h2>我们怎样收录？</h2><ol><li>优先查阅作者的项目页、仓库和原始论文。</li><li>说明项目能做什么、支持的平台以及有实际意义的限制。</li><li>只有原始来源明确支持时，才标注 AI-built、AI-assisted 或具体平台。</li><li>记录来源核查日期，并保留代码、论文和演示入口。</li></ol><h2>“来源核查”意味着什么？</h2><p>我们阅读了项目材料，但没有独立安装全部软件、运行所有环境或复现论文结果。目录不提供质量排名。运行条件、许可和安全使用要求以各项目的上游说明为准。</p><h2>这些演示由谁提供？</h2><p>代码、环境与外部演示属于原作者。本目录提供介绍和导航；我们不声称托管所有项目，也不代表项目获得任何机构背书。</p><h2>如何复用、核查和修正？</h2><p>每个项目有独立网址、核查日期和原始来源。完整目录可下载为 <a href="/catalog.json">JSON</a>，网站源码与条目变更在 <a href="{config['repository']}">GitHub</a> 维护。发现错误或想推荐项目，可<a href="{config['repository']}/issues/new?template=resource.yml">提交带来源的建议</a>。</p><h2>相关目录</h2><p><a href="https://awesomerea.org/zh/resources/">AwesomeREA</a> 整理逆向工程工具、集成与软件重建研究，可用于继续查找分析和重建软件的资料。</p>'''
+        content = f'''<h1>好奇心，<br><em>需要证据。</em></h1><p class="lead">AI Can What? 收录 AI 参与开发的软件作品，以及用于 Agent 训练和评测的环境、基准与数据集。</p><h2>两类内容，一个目录</h2><p>Showcase 是有作者说明支持的 AI 构建或 AI 辅助开发作品。Training 与 Evaluation 描述环境的用途，不表示该环境一定由 AI 开发。开发方式与用途分别记录，未知就保持未知。</p><h2>数据集是否等于可运行环境？</h2><p>不是。静态数据集可以提供截图、轨迹或任务样本，通常没有可交互的系统。目录明确标注资源类型；平台标签可能描述应用目标，也可能描述数据集中的截图来源。运行条件应查看条目的具体说明。</p><h2>我们怎样收录？</h2><ol><li>优先查阅作者的项目页、仓库和原始论文。</li><li>说明项目能做什么、支持的平台以及有实际意义的限制。</li><li>只有原始来源明确支持时，才标注 AI-built、AI-assisted 或具体平台。</li><li>记录来源核查日期，并保留代码、论文和演示入口。</li></ol><h2>“来源核查”意味着什么？</h2><p>我们阅读了项目材料，但没有独立安装全部软件、运行所有环境或复现论文结果。目录不提供质量排名。运行条件、许可和安全使用要求以各项目的上游说明为准。</p><h2>这些演示由谁提供？</h2><p>代码、环境与外部演示属于原作者。本目录提供介绍和导航；我们不声称托管所有项目，也不代表项目获得任何机构背书。</p><h2>如何复用、核查和修正？</h2><p>每个项目有独立网址、核查日期和原始来源。完整目录可下载为 <a href="/catalog.json">JSON</a>，网站源码与条目变更在 <a href="{config['repository']}">GitHub</a> 维护。发现错误或想推荐项目，可<a href="{config['repository']}/issues/new?template=resource.yml">提交带来源的建议</a>。</p><h2>上游索引是否经过逐项核查？</h2><p><a href="/zh/discover/">上游注册表索引</a> 自动采集包、环境清单和配置等元数据，并显示来源与版本状态。它用于发现候选资料，尚未逐项进行项目资料核查或运行验证；其中的版本和分支可能重叠，记录数不能与精选项目数相加。</p><h2>相关目录</h2><p><a href="https://awesomerea.org/zh/resources/">AwesomeREA</a> 整理逆向工程工具、集成与软件重建研究，可用于继续查找分析和重建软件的资料。</p>'''
     else:
         title = 'About & method'
         description = 'How AI Can What reviews evidence and separates AI-built showcases from agent training and evaluation environments.'
-        content = f'''<h1>Curiosity,<br><em>with receipts.</em></h1><p class="lead">AI Can What? collects software made with AI, agent environments, benchmarks, and datasets.</p><h2>Two kinds of entries. One directory.</h2><p>A Showcase documents AI-built or AI-assisted software with an author source. Training and Evaluation describe what an environment is for; they do not imply that AI wrote it. Development provenance and intended use are recorded separately, with unknown facts left unknown.</p><h2>Is a dataset a runnable environment?</h2><p>No. Static datasets can provide screenshots, trajectories, or task examples without an interactive system. Every entry labels its resource type. Platform tags can describe an application target or the source of dataset screenshots; consult the entry for its actual setup.</p><h2>How are entries selected?</h2><ol><li>Start with the author’s project page, repository, or original paper.</li><li>Describe what people can do with the project, its supported platforms, and practical limits.</li><li>Use AI-built, AI-assisted, or platform labels only when the original material supports them.</li><li>Record the source-review date and preserve links to code, papers, and author demos.</li></ol><h2>What does source-reviewed mean?</h2><p>We read the project material. We have not independently installed every application, run every environment, or reproduced paper results. This is a directory, not a quality ranking. Consult upstream documentation for current setup requirements, licenses, and appropriate use.</p><h2>Who provides the demos?</h2><p>Code, environments, and external demos belong to their original creators. This directory provides descriptions and navigation. It does not claim to host every project or imply endorsement by another institution.</p><h2>How can I inspect, reuse, or correct an entry?</h2><p>Every project has its own URL, source-review date, and original evidence. Download the <a href="/catalog.json">JSON catalog</a> or inspect the website source and changes on <a href="{config['repository']}">GitHub</a>. To report an error or suggest a project, <a href="{config['repository']}/issues/new?template=resource.yml">send a source-backed suggestion</a>.</p><h2>Related directory</h2><p><a href="https://awesomerea.org/resources/">AwesomeREA</a> collects reverse-engineering tools, integrations, and software-reconstruction research for people studying how software works and how to rebuild it.</p>'''
+        content = f'''<h1>Curiosity,<br><em>with receipts.</em></h1><p class="lead">AI Can What? collects software made with AI, agent environments, benchmarks, and datasets.</p><h2>Two kinds of entries. One directory.</h2><p>A Showcase documents AI-built or AI-assisted software with an author source. Training and Evaluation describe what an environment is for; they do not imply that AI wrote it. Development provenance and intended use are recorded separately, with unknown facts left unknown.</p><h2>Is a dataset a runnable environment?</h2><p>No. Static datasets can provide screenshots, trajectories, or task examples without an interactive system. Every entry labels its resource type. Platform tags can describe an application target or the source of dataset screenshots; consult the entry for its actual setup.</p><h2>How are entries selected?</h2><ol><li>Start with the author’s project page, repository, or original paper.</li><li>Describe what people can do with the project, its supported platforms, and practical limits.</li><li>Use AI-built, AI-assisted, or platform labels only when the original material supports them.</li><li>Record the source-review date and preserve links to code, papers, and author demos.</li></ol><h2>What does source-reviewed mean?</h2><p>We read the project material. We have not independently installed every application, run every environment, or reproduced paper results. This is a directory, not a quality ranking. Consult upstream documentation for current setup requirements, licenses, and appropriate use.</p><h2>Who provides the demos?</h2><p>Code, environments, and external demos belong to their original creators. This directory provides descriptions and navigation. It does not claim to host every project or imply endorsement by another institution.</p><h2>How can I inspect, reuse, or correct an entry?</h2><p>Every project has its own URL, source-review date, and original evidence. Download the <a href="/catalog.json">JSON catalog</a> or inspect the website source and changes on <a href="{config['repository']}">GitHub</a>. To report an error or suggest a project, <a href="{config['repository']}/issues/new?template=resource.yml">send a source-backed suggestion</a>.</p><h2>Are upstream registry records individually reviewed?</h2><p>The <a href="/discover/">upstream registry index</a> automatically captures packages, environment manifests and configurations with source and version metadata. It supports discovery; individual records have not undergone project-level review or execution verification. Versions and forks can overlap, so its count is not additive with the reviewed project count.</p><h2>Related directory</h2><p><a href="https://awesomerea.org/resources/">AwesomeREA</a> collects reverse-engineering tools, integrations, and software-reconstruction research for people studying how software works and how to rebuild it.</p>'''
     return title, description, '<article class="prose">' + content + '</article>'
 
 
 def build():
     config, document, entries = read_inputs()
     paper_document, papers = read_papers(ROOT, entries)
+    registry_sources, registry_document, sources, registry_records = read_registries(ROOT)
     OUT.mkdir(exist_ok=True)
     # This directory is a generated build artifact, owned entirely by this builder.
     for child in OUT.iterdir():
@@ -259,7 +266,7 @@ def build():
         else: child.unlink()
     for child in (ROOT / 'static').iterdir():
         if child.is_file(): shutil.copy2(child, OUT / child.name)
-    revision = hashlib.sha256((OUT / 'styles.css').read_bytes() + (OUT / 'app.js').read_bytes()).hexdigest()[:12]
+    revision = hashlib.sha256((OUT / 'styles.css').read_bytes() + (OUT / 'app.js').read_bytes() + (OUT / 'registry.js').read_bytes()).hexdigest()[:12]
     pages = {}
     for language in ('en', 'zh'):
         for category in (None, *TYPES):
@@ -280,6 +287,8 @@ def build():
         pages[lang_path(language, '/about/')] = page_shell(config, language, '/about/', title, description, body, asset_revision=revision)
         title, description, body = bibliography(papers, entries, language)
         pages[lang_path(language, '/papers/')] = page_shell(config, language, '/papers/', title, description, body, papers=papers, asset_revision=revision)
+        title, description, body, registry_items = registry_page(sources, registry_document, registry_records, entries, language)
+        pages[lang_path(language, '/discover/')] = page_shell(config, language, '/discover/', title, description, body, registry_items=registry_items, asset_revision=revision)
     for path, html in pages.items():
         destination = OUT / path.lstrip('/') / 'index.html'
         destination.parent.mkdir(parents=True, exist_ok=True)
@@ -291,6 +300,8 @@ def build():
     (OUT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {origin}/sitemap.xml\n')
     (OUT / 'catalog.json').write_text(json.dumps(document, ensure_ascii=False, indent=2) + '\n')
     (OUT / 'papers.json').write_text(json.dumps(paper_document, ensure_ascii=False, indent=2) + '\n')
+    (OUT / 'registry-index.json').write_text(json.dumps(registry_document, ensure_ascii=False, indent=2) + '\n')
+    (OUT / 'registry-sources.json').write_text(json.dumps(registry_sources, ensure_ascii=False, indent=2) + '\n')
     citations = bibtex(papers)
     (OUT / 'references.bib').write_text(citations, encoding='utf-8')
     (ROOT / 'references.bib').write_text(citations, encoding='utf-8')
@@ -307,14 +318,16 @@ Showcase entries describe author-reported AI development. Training and Evaluatio
 - [Apps]({origin}/apps/)
 - [Review method]({origin}/about/)
 - [Original research papers]({origin}/papers/)
+- [Upstream registry index — metadata, not individual project review]({origin}/discover/)
+- [Registry snapshot JSON]({origin}/registry-index.json)
 - [BibTeX citations]({origin}/references.bib)
 - [中文目录]({origin}/zh/)
 - [Machine-readable catalog]({origin}/catalog.json)
 - [Source repository]({config['repository']})
 ''')
     (OUT / '404.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Page not found · AI Can What?</title><body><h1>That page is not in the directory.</h1><p><a href="/">Browse AI Can What?</a></p></body></html>')
-    build_catalog_docs(ROOT, config, entries, papers, TYPES, KINDS, PLATFORMS, USES)
-    print(json.dumps({'entries': len(entries), 'papers': len(papers), 'pages': len(pages), 'origin': origin, 'output': str(OUT)}))
+    build_catalog_docs(ROOT, config, entries, papers, TYPES, KINDS, PLATFORMS, USES, sources, registry_document)
+    print(json.dumps({'entries': len(entries), 'papers': len(papers), 'registry_records': len(registry_records), 'pages': len(pages), 'origin': origin, 'output': str(OUT)}))
 
 
 if __name__ == '__main__':

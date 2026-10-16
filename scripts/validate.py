@@ -10,12 +10,13 @@ import xml.etree.ElementTree as ET
 
 from build import OUT, PLATFORMS, read_inputs, lang_path, project_path
 from papers import read_papers
+from registries import read_registries
 
 
 class Page(HTMLParser):
     def __init__(self, html):
         super().__init__(convert_charrefs=True)
-        self.hrefs, self.links, self.ids, self.projects, self.papers, self.graphs = [], [], set(), [], [], []
+        self.hrefs, self.links, self.ids, self.projects, self.papers, self.registries, self.graphs = [], [], set(), [], [], [], []
         self.meta, self.language, self.h1 = {}, '', 0
         self.json_parts, self.json_open = [], False
         self.feed(html)
@@ -30,6 +31,7 @@ class Page(HTMLParser):
         if a.get('id'): self.ids.add(a['id'])
         if a.get('data-project'): self.projects.append(a['data-project'])
         if a.get('data-paper'): self.papers.append(a['data-paper'])
+        if a.get('data-registry'): self.registries.append(a['data-registry'])
         if tag == 'script' and a.get('type') == 'application/ld+json': self.json_open, self.json_parts = True, []
 
     def handle_data(self, text):
@@ -44,6 +46,7 @@ class Page(HTMLParser):
 def main():
     config, _, entries = read_inputs()
     _, papers = read_papers(OUT.parent, entries)
+    _, _, _, registry_records = read_registries(OUT.parent)
     origin = config['origin'].rstrip('/')
     urls = [node.text for node in ET.parse(OUT / 'sitemap.xml').findall('{*}url/{*}loc')]
     assert len(urls) == len(set(urls))
@@ -63,7 +66,7 @@ def main():
             assert graph['@context'] == 'https://schema.org'
             for item in graph['@graph']:
                 if item['@type'] == 'ItemList':
-                    assert item['numberOfItems'] == len(item['itemListElement']) == len(page.projects or page.papers), url
+                    assert item['numberOfItems'] == len(item['itemListElement']) == len(page.projects or page.papers or page.registries), url
                     visible_links = {href if urlsplit(href).scheme else origin + href for href in page.hrefs}
                     for element in item['itemListElement']:
                         destination = element.get('url') or element['item']['url']
@@ -93,6 +96,7 @@ def main():
             page = pages[project_path(language, entry)]
             assert entry['primary_url'] in page.hrefs, entry['id']
         assert set(pages[lang_path(language, '/papers/')].papers) == {paper['id'] for paper in papers}
+        assert set(pages[lang_path(language, '/discover/')].registries) == {record['id'] for record in registry_records}
     robots = RobotFileParser()
     robots.parse((OUT / 'robots.txt').read_text().splitlines())
     for crawler in ('Googlebot', 'bingbot', 'OAI-SearchBot', 'PerplexityBot'):
@@ -102,7 +106,7 @@ def main():
     assert image[:8] == b'\x89PNG\r\n\x1a\n' and struct.unpack('>II', image[16:24]) == (1200, 630), 'Invalid sharing image'
     assert 'noindex' in (OUT / '404.html').read_text()
     assert (OUT / 'references.bib').read_text().count('@misc{') == len(papers)
-    print(f'Validated {len(entries)} source-backed records, {len(papers)} papers, {len(urls)} static pages, internal links, bilingual alternates, JSON-LD, citations, and crawler access.')
+    print(f'Validated {len(entries)} source-reviewed projects, {len(papers)} papers, {len(registry_records)} separately labeled registry records, {len(urls)} static pages, internal links, bilingual alternates, JSON-LD, citations, and crawler access.')
 
 
 if __name__ == '__main__':

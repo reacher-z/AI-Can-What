@@ -3456,6 +3456,866 @@
           "supports": "Publisher record confirms the WebUIBench title and authors."
         }
       ]
+    },
+    {
+      "id": "rhounpacker",
+      "name": "RhoUnpacker",
+      "creator": "w1426421352",
+      "description_en": "A Windows command-line utility for extracting KartRider .rho and .rho5 asset archives, with a published standalone executable.",
+      "description_zh": "用于提取 KartRider .rho 和 .rho5 素材归档的 Windows 命令行工具，提供独立可执行文件。",
+      "platforms": [
+        "windows"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://github.com/w1426421352/RhoUnpacker",
+      "repo_url": "https://github.com/w1426421352/RhoUnpacker",
+      "download_url": "https://github.com/w1426421352/RhoUnpacker/releases/tag/V1.0.0",
+      "provenance_source": "https://github.com/w1426421352/RhoUnpacker#readme",
+      "enables_en": "Extract supported game-asset archives through a scriptable Windows command-line interface.",
+      "enables_zh": "通过便于脚本调用的 Windows 命令行界面提取受支持的游戏素材归档。",
+      "limits_en": "The AI-generated part is the command-line layer; the core KartLibrary unpacking library is human-authored. The documented Native AOT target is Windows x64, and the project is GPLv3.",
+      "limits_zh": "AI 生成的是命令行层，核心解包库 KartLibrary 由人工编写。文档中的 Native AOT 目标为 Windows x64，项目采用 GPLv3。",
+      "provenance_note_en": "The maintainer explicitly attributes the CLI, README and release notes to Google Gemini and explicitly excludes the reused human-authored KartLibrary from that claim.",
+      "provenance_note_zh": "维护者明确将 CLI、README 和发布说明归于 Google Gemini，并明确说明复用的人工编写 KartLibrary 不属于 AI 生成部分。",
+      "license_en": "GPL-3.0, including the obligations inherited from the reused unpacking-library code.",
+      "license_zh": "GPL-3.0，包含复用解包库代码带来的许可要求。",
+      "license_url": "https://github.com/w1426421352/RhoUnpacker/blob/main/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/w1426421352/RhoUnpacker#readme",
+          "supports": "Maintainer disclosure identifies the Gemini-generated CLI and distinguishes the human-authored KartLibrary; README documents win-x64 and GPLv3."
+        },
+        {
+          "url": "https://github.com/w1426421352/RhoUnpacker/releases/tag/V1.0.0",
+          "supports": "Published assets include Windows x64 Native AOT and x86 self-contained ZIP packages; none was downloaded or run."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "kunkel321-sticky-notes",
+      "name": "Sticky Notes (kunkel321)",
+      "creator": "kunkel321",
+      "description_en": "A portable Windows sticky-note application with checkboxes, reminders and notes that can follow a selected application window.",
+      "description_zh": "便携式 Windows 桌面便签应用，支持复选框、提醒，以及跟随指定应用窗口显示的便签。",
+      "platforms": [
+        "windows"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://github.com/kunkel321/Stickies",
+      "repo_url": "https://github.com/kunkel321/Stickies",
+      "download_url": null,
+      "provenance_source": "https://github.com/kunkel321/Stickies#development-note",
+      "enables_en": "Keep desktop notes and alarms, including notes associated with a particular window.",
+      "enables_zh": "在桌面保存便签和提醒，并将特定便签关联到应用窗口。",
+      "limits_en": "This is an AutoHotkey v2 script, paired with a renamed AutoHotkey executable; both files must remain together. No repository license file was identified, so source visibility is not labeled an open-source license.",
+      "limits_zh": "这是 AutoHotkey v2 脚本，配套 EXE 是重命名的 AutoHotkey 运行程序，二者需放在一起。未找到仓库许可文件，因此不将源码可见等同于开源许可。",
+      "provenance_note_en": "The maintainer says Claude generated most of the initial structure and functionality, and that later versions added human-written enhancements and fixes.",
+      "provenance_note_zh": "维护者说明 Claude 生成了大部分初始结构和功能，后续版本加入了人工编写的增强功能和修复。",
+      "license_en": "Not specified in the reviewed repository; bundled runtime and application-script licensing should be checked separately.",
+      "license_zh": "已核查仓库未明确指定许可；配套运行程序与应用脚本的许可应分别确认。",
+      "license_url": null,
+      "runtime_note_en": "Runs as a native Windows AutoHotkey script; the repository's EXE is the interpreter, not a compilation of StickyNotes.ahk.",
+      "runtime_note_zh": "作为原生 Windows AutoHotkey 脚本运行；仓库 EXE 是解释器，并非 StickyNotes.ahk 的编译产物。",
+      "evidence": [
+        {
+          "url": "https://github.com/kunkel321/Stickies#development-note",
+          "supports": "Maintainer describes substantial Claude-generated base code and later manual code contributions."
+        },
+        {
+          "url": "https://github.com/kunkel321/Stickies#readme",
+          "supports": "Documents Windows operation, note features, portable packaging, and the exact relationship between the AHK script and renamed interpreter."
+        },
+        {
+          "url": "https://github.com/kunkel321/Stickies/blob/main/StickyNotes.ahk",
+          "supports": "Public runnable application script is present in the repository."
+        },
+        {
+          "url": "https://github.com/kunkel321/Stickies/blob/main/StickyNotes.exe",
+          "supports": "Public runtime artifact is present; no binary was downloaded or executed."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "lazywords",
+      "name": "LazyWords",
+      "creator": "DemonazGH",
+      "description_en": "A Windows vocabulary tool that displays word-and-definition cards as a floating overlay while other applications remain in use.",
+      "description_zh": "在使用其他应用时，通过悬浮卡片展示单词及释义的 Windows 词汇工具。",
+      "platforms": [
+        "windows"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://github.com/DemonazGH/LazyWords-Tauri",
+      "repo_url": "https://github.com/DemonazGH/LazyWords-Tauri",
+      "download_url": "https://github.com/DemonazGH/LazyWords-Tauri/releases/tag/v1.0.1",
+      "provenance_source": "https://www.reddit.com/r/OnlyAICoding/comments/1tnouuj/i_built_a_desktop_app_almost_entirely_with_claude/",
+      "enables_en": "Review vocabulary or imported flashcards through periodic desktop overlays and keyboard shortcuts.",
+      "enables_zh": "通过定时桌面浮层和快捷键复习词汇或导入的卡片内容。",
+      "limits_en": "Windows is the documented supported platform; macOS/Linux are planned. The README declares MIT for code and CC BY 4.0 for dictionary data, but its linked LICENSE file returned 404 during review.",
+      "limits_zh": "文档目前支持 Windows，macOS/Linux 尚属计划。README 声明代码为 MIT、词库数据为 CC BY 4.0，但其 LICENSE 文件链接在核查时返回 404。",
+      "provenance_note_en": "The creator's post links this exact repository and describes Claude drafting feature specifications, Claude Code implementing them, and the creator testing and iterating.",
+      "provenance_note_zh": "创作者帖子链接到这一仓库，并说明由 Claude 起草功能规格、Claude Code 实现，再由作者测试和迭代。",
+      "license_en": "MIT claimed in README; standalone LICENSE file unresolved. NGSL-derived dictionary data is declared CC BY 4.0.",
+      "license_zh": "README 声明 MIT，但独立 LICENSE 文件尚未核实；NGSL 衍生词库数据声明为 CC BY 4.0。",
+      "license_url": "https://github.com/DemonazGH/LazyWords-Tauri#license",
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/OnlyAICoding/comments/1tnouuj/i_built_a_desktop_app_almost_entirely_with_claude/",
+          "supports": "Creator explicitly describes a specification-to-implementation Claude workflow and links DemonazGH/LazyWords-Tauri."
+        },
+        {
+          "url": "https://github.com/DemonazGH/LazyWords-Tauri#readme",
+          "supports": "Documents Windows-only support, overlay behavior, custom dictionary import and source build instructions."
+        },
+        {
+          "url": "https://github.com/DemonazGH/LazyWords-Tauri/releases/tag/v1.0.1",
+          "supports": "Release listing contains x64 Windows EXE and MSI installers; no installer was run."
+        },
+        {
+          "url": "https://github.com/DemonazGH/LazyWords-Tauri#license",
+          "supports": "README states MIT for application code and CC BY 4.0 for dictionary data; the separately linked LICENSE path could not be retrieved."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "creator": "Anthropic",
+      "description_en": "A coding-agent application that works in a terminal to inspect repositories, edit files and run development tasks, with documented native Windows support.",
+      "description_zh": "在终端中检查仓库、编辑文件和执行开发任务的编程 Agent 应用，官方文档明确支持原生 Windows。",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://github.com/anthropics/claude-code",
+      "repo_url": null,
+      "project_repository_url": "https://github.com/anthropics/claude-code",
+      "download_url": "https://code.claude.com/docs/en/setup",
+      "provenance_source": "https://x.com/bcherny/status/2004897269674639461",
+      "enables_en": "Delegate repository changes and development workflows from a supported terminal environment.",
+      "enables_zh": "在受支持的终端环境中委派仓库修改和开发流程。",
+      "limits_en": "Requires supported account or API access and an internet connection. Official documentation distinguishes native Windows from WSL; command sandboxing is not supported on native Windows. The public repository is not the full CLI source.",
+      "limits_zh": "需要受支持的账户或 API 访问及联网。官方文档区分原生 Windows 与 WSL；原生 Windows 不支持命令沙盒。公开仓库并非完整 CLI 源码。",
+      "provenance_note_en": "On 2025-12-27, maintainer Boris Cherny said all of his own Claude Code contributions in the preceding 30 days were written by Claude Code. This documents one maintainer's scoped contributions; it does not establish a product-wide authorship percentage.",
+      "provenance_note_zh": "2025 年 12 月 27 日，维护者 Boris Cherny 表示自己此前 30 天对 Claude Code 的贡献全部由 Claude Code 编写。这仅证明该维护者在特定时期内的贡献范围，不代表整个产品的代码比例。",
+      "license_en": "Proprietary; the repository notice reserves rights to Anthropic and subjects use to its Commercial Terms of Service.",
+      "license_zh": "专有软件；仓库许可说明保留 Anthropic 权利，并规定使用受其商业服务条款约束。",
+      "license_url": "https://github.com/anthropics/claude-code/blob/main/LICENSE.md",
+      "runtime_note_en": "Official setup documents PowerShell/CMD installation on Windows 10 1809+ or Windows Server 2019+ separately from installation inside WSL.",
+      "runtime_note_zh": "官方安装文档单独列出 Windows 10 1809+/Windows Server 2019+ 的 PowerShell/CMD 安装方式，与 WSL 内安装分别说明。",
+      "evidence": [
+        {
+          "url": "https://x.com/bcherny/status/2004897269674639461",
+          "supports": "Maintainer's dated first-party statement is explicitly limited to his preceding 30 days of contributions."
+        },
+        {
+          "url": "https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%2Fbcherny%2Fstatus%2F2004897269674639461",
+          "supports": "X's public official oEmbed response returned the original author, dated post and scoped contribution statement when direct page retrieval was blocked."
+        },
+        {
+          "url": "https://code.claude.com/docs/en/setup",
+          "supports": "Official documentation provides native Windows PowerShell/CMD installation, distinguishes WSL, and lists platform/account requirements and sandbox limitations."
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/blob/main/LICENSE.md",
+          "supports": "First-party license notice states all rights reserved and references Anthropic's Commercial Terms."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "shelly-android",
+      "name": "Shelly",
+      "creator": "RYO ITABASHI",
+      "description_en": "An Android terminal and development workspace combining an on-device shell with editor, browser and AI interaction panes.",
+      "description_zh": "将本机 Shell、编辑器、浏览器和 AI 交互面板结合的 Android 终端开发工作区。",
+      "platforms": [
+        "android"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://github.com/RYOITABASHI/Shelly",
+      "repo_url": "https://github.com/RYOITABASHI/Shelly",
+      "download_url": "https://github.com/RYOITABASHI/Shelly/releases/tag/android-latest",
+      "provenance_source": "https://github.com/RYOITABASHI/Shelly#the-story",
+      "enables_en": "Use a terminal and development tools on an Android device, alongside local or configured remote AI providers.",
+      "enables_zh": "在 Android 设备上使用终端与开发工具，并连接本地或自行配置的远程 AI 提供方。",
+      "limits_en": "The maintainer calls it prerelease software and limits unattended-cycle verification to one Galaxy Z Fold6 observation. The rolling android-latest release is the documented APK source; its reviewed manifest identifies version 8.1.1. Repository code is GPLv3.",
+      "limits_zh": "维护者将其列为预发布软件，后台自主执行循环仅记录过一次 Galaxy Z Fold6 验证。文档指定 android-latest 滚动发布为 APK 来源；本次核查的清单版本为 8.1.1。仓库代码采用 GPLv3。",
+      "provenance_note_en": "The maintainer explicitly says every repository line was AI-generated under his direction, with human architectural decisions, review and on-device testing.",
+      "provenance_note_zh": "维护者明确表示仓库代码由 AI 在其指导下生成，架构决策、审查及实机测试由本人负责。",
+      "license_en": "GPL-3.0 as declared by the repository; bundled runtimes and optional components retain their respective licenses.",
+      "license_zh": "仓库声明采用 GPL-3.0；配套运行时及可选组件保留各自许可。",
+      "license_url": "https://github.com/RYOITABASHI/Shelly/blob/main/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/RYOITABASHI/Shelly#the-story",
+          "supports": "Maintainer explicitly states AI-generated repository code and identifies his architectural and testing role."
+        },
+        {
+          "url": "https://github.com/RYOITABASHI/Shelly#readme",
+          "supports": "Documents the native Android terminal, panes, APK distribution, provider configuration and validation limits."
+        },
+        {
+          "url": "https://github.com/RYOITABASHI/Shelly/releases/tag/android-latest",
+          "supports": "The documented rolling release contains APK assets; its latest.json manifest identifies versionName 8.1.1 and versionCode 2612 at review."
+        },
+        {
+          "url": "https://github.com/RYOITABASHI/Shelly/blob/main/LICENSE",
+          "supports": "Repository contains the GNU GPL version 3 license."
+        },
+        {
+          "url": "https://github.com/RYOITABASHI/Shelly/releases/download/android-latest/latest.json",
+          "supports": "The rolling release manifest identifies the current APK version and asset location."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "pourcraft-coffee",
+      "name": "PourCraft Coffee",
+      "creator": "Vinny Carpenter",
+      "description_en": "A native iPhone and iPad app that calculates coffee-to-water amounts and presents a step-by-step pour-over brewing guide.",
+      "description_zh": "计算咖啡与水用量、提供分步手冲流程的原生 iPhone/iPad 应用。",
+      "platforms": [
+        "ios"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://apps.apple.com/us/app/pourcraft-coffee/id6759871953",
+      "repo_url": "https://github.com/vscarpenter/PourCraft",
+      "download_url": "https://apps.apple.com/us/app/pourcraft-coffee/id6759871953",
+      "provenance_source": "https://vinny.dev/blog/2026-03-01-vibe-coding-with-coffee/",
+      "enables_en": "Calculate water amounts from a coffee dose and follow the app's selected brewing steps.",
+      "enables_zh": "根据咖啡粉量计算用水量，并跟随应用选定的冲煮步骤。",
+      "limits_en": "Requires iOS/iPadOS 17+. Calculations follow the recipe rules built into the app; the catalog has not independently tested brewing outcomes or the application.",
+      "limits_zh": "需要 iOS/iPadOS 17 及以上版本。计算遵循应用内置配方规则；目录未独立测试冲煮结果或应用功能。",
+      "provenance_note_en": "The creator describes supplying architecture, design and a detailed specification, then having Claude Code turn it into the working SwiftUI application.",
+      "provenance_note_zh": "作者说明自己提供架构、设计及详细需求规格，再由 Claude Code 将其实现为可运行的 SwiftUI 应用。",
+      "license_en": "MIT for the published source repository.",
+      "license_zh": "公开源码仓库采用 MIT 许可。",
+      "license_url": "https://github.com/vscarpenter/PourCraft/blob/main/LICENSE",
+      "evidence": [
+        {
+          "url": "https://vinny.dev/blog/2026-03-01-vibe-coding-with-coffee/",
+          "supports": "First-person build account identifies substantial Claude Code implementation while retaining human architecture and product decisions."
+        },
+        {
+          "url": "https://github.com/vscarpenter/PourCraft#readme",
+          "supports": "Documents native iOS implementation, features, iOS 17 requirement and source build steps."
+        },
+        {
+          "url": "https://apps.apple.com/us/app/pourcraft-coffee/id6759871953",
+          "supports": "Public App Store listing identifies Vinny Carpenter and an installable iPhone/iPad app."
+        },
+        {
+          "url": "https://github.com/vscarpenter/PourCraft/blob/main/LICENSE",
+          "supports": "Repository provides an MIT license file."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "anchor-bet-blocker",
+      "name": "Anchor - Bet Blocker",
+      "creator": "Anchor / Branko Popovic",
+      "description_en": "An iPhone and iPad app using Apple's Screen Time controls to restrict selected gambling apps and websites, with check-ins and progress tracking.",
+      "description_zh": "使用 Apple 屏幕使用时间功能限制选定博彩应用和网站，并提供签到与进度记录的 iPhone 与 iPad 应用。",
+      "platforms": [
+        "ios"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://heyanchor.app/",
+      "repo_url": null,
+      "download_url": "https://apps.apple.com/us/app/anchor-bet-blocker/id6760262304",
+      "provenance_source": "https://heyanchor.app/blog/built-ios-app-7-days-claude-code.html",
+      "enables_en": "Configure device-level access restrictions and keep a personal record of check-ins.",
+      "enables_zh": "配置设备层面的访问限制，并保存个人签到记录。",
+      "limits_en": "Requires iOS/iPadOS 18+ and the necessary Screen Time authorization. The store lists app/website blocking and contact features under a paid Premium subscription; no public source repository was identified.",
+      "limits_zh": "需要 iOS/iPadOS 18 及以上版本及相应屏幕使用时间授权。商店将应用/网站限制和联系人功能列入付费 Premium 订阅；未找到公开源码仓库。",
+      "provenance_note_en": "The developer's own build account describes Claude Code generating the SwiftUI structure and implementing the blocking integrations, then refactoring storage and authentication under human guidance.",
+      "provenance_note_zh": "开发者在自己的开发记录中说明，Claude Code 生成 SwiftUI 结构、实现应用限制接口，并在人类指导下重构存储和认证。",
+      "license_en": "Commercial App Store application with subscription features; no open-source license was identified.",
+      "license_zh": "带订阅功能的商业 App Store 应用，未找到开源许可。",
+      "license_url": null,
+      "evidence": [
+        {
+          "url": "https://heyanchor.app/blog/built-ios-app-7-days-claude-code.html",
+          "supports": "First-party account gives concrete AI-generated architecture/integration work and human decisions, and links the exact App Store app."
+        },
+        {
+          "url": "https://apps.apple.com/us/app/anchor-bet-blocker/id6760262304",
+          "supports": "Public store listing identifies seller Branko Popovic, iOS 18 minimum and Premium subscription feature gates."
+        },
+        {
+          "url": "https://itunes.apple.com/lookup?id=6760262304&country=us",
+          "supports": "Apple's public lookup confirms the exact app ID, title, seller and minimum OS."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "gaia",
+      "name": "GAIA",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "description_en": "A multimodal assistant benchmark whose tasks combine reasoning, web research, file handling and tool use, released as questions with supporting attachments.",
+      "description_zh": "多模态助手基准，任务结合推理、网页检索、文件处理和工具使用，以问题及配套附件的形式发布。",
+      "primary_url": "https://huggingface.co/datasets/gaia-benchmark/GAIA",
+      "repo_url": null,
+      "paper_url": "https://arxiv.org/abs/2311.12983",
+      "enables_en": "Evaluate a tool-equipped assistant on tasks that require finding and combining information across software tools and media.",
+      "enables_zh": "评估配备工具的助手能否跨软件工具和媒体查找、整合信息。",
+      "limits_en": "Provides task data, not an execution environment. Access requires contact sharing and agreement to restricted redistribution; test answers are hidden. No general dataset license is stated in the public card. Gated files were not accessed.",
+      "limits_zh": "提供任务数据，并非执行环境。访问要求共享联系信息并同意限制再分发；测试集答案不公开。公开数据卡未注明通用数据许可，本次未访问受限文件。",
+      "resource_kind": "dataset-and-benchmark",
+      "runtime": "Parquet task metadata and attachments; bring a browser, file tools and an agent. Dataset download is gated.",
+      "platform_note": "Tool and media tasks do not establish support for a particular operating-system target.",
+      "evidence": [
+        {
+          "url": "https://huggingface.co/datasets/gaia-benchmark/GAIA",
+          "supports": "Official card documents tool-oriented tasks, file attachments, hidden test answers, contact-sharing gate and redistribution restrictions."
+        },
+        {
+          "url": "https://arxiv.org/abs/2311.12983",
+          "supports": "Original paper explicitly includes multimodal understanding, web browsing and tool use rather than only closed-book questions."
+        }
+      ]
+    },
+    {
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "gaia2",
+      "name": "Gaia2 (ARE)",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "description_en": "An asynchronous benchmark on Meta's Agents Research Environments, where agents use simulated apps while events, user requests and time constraints change the shared state.",
+      "description_zh": "基于 Meta Agents Research Environments 的异步基准，Agent 操作模拟应用，同时应对事件、用户请求和时间约束带来的状态变化。",
+      "primary_url": "https://github.com/facebookresearch/meta-agents-research-environments",
+      "repo_url": "https://github.com/facebookresearch/meta-agents-research-environments",
+      "paper_url": "https://arxiv.org/abs/2602.11964",
+      "related_paper_urls": [
+        "https://arxiv.org/abs/2509.17158"
+      ],
+      "enables_en": "Evaluate adaptation and coordination in changing app workflows, or use verifiable write-action outcomes for reinforcement learning.",
+      "enables_zh": "在不断变化的应用流程中评估适应与协作能力，或利用可验证的写操作结果进行强化学习。",
+      "limits_en": "A simulated app/API world, not native phone software. Core ARE requires Python 3.10+ and model configuration. Pin scenario and runner versions, including CLI or multilingual variants. Code is MIT; the public Gaia2 dataset is CC BY 4.0.",
+      "limits_zh": "这是模拟应用/API 世界，并非原生手机软件。ARE 核心要求 Python 3.10+ 和模型配置。应固定场景与运行器版本，包括 CLI 或多语言变体。代码采用 MIT，公开 Gaia2 数据采用 CC BY 4.0。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python ARE package and scenario CLI; optional GUI and container-based Gaia2-CLI have separate setup.",
+      "platform_note": "Optional web exploration UI is not treated as a native app target platform.",
+      "evidence": [
+        {
+          "url": "https://github.com/facebookresearch/meta-agents-research-environments#readme",
+          "supports": "Documents simulated apps, events, scenarios, the Gaia2 benchmark, current CLI/multilingual extensions and MIT licensing."
+        },
+        {
+          "url": "https://github.com/facebookresearch/meta-agents-research-environments/blob/main/pyproject.toml",
+          "supports": "Current package requires Python 3.10 or later."
+        },
+        {
+          "url": "https://huggingface.co/datasets/meta-agents-research-environments/gaia2",
+          "supports": "Official ungated scenario dataset declares CC BY 4.0."
+        },
+        {
+          "url": "https://arxiv.org/abs/2602.11964",
+          "supports": "Gaia2 paper describes asynchronous scenarios and write-action verifiers suitable for evaluation and RL."
+        }
+      ]
+    },
+    {
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "assistantbench",
+      "name": "AssistantBench",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "description_en": "A live-web research benchmark with realistic information-gathering tasks, public development answers and a SeePlanAct browser-agent implementation.",
+      "description_zh": "面向在线网页研究的基准，包含实际信息收集任务、公开开发集答案和 SeePlanAct 浏览器 Agent 实现。",
+      "primary_url": "https://assistantbench.github.io/",
+      "repo_url": "https://github.com/oriyor/assistantbench",
+      "paper_url": "https://arxiv.org/abs/2407.15711",
+      "enables_en": "Test whether an agent can plan a web investigation, gather evidence across sites and return a supported answer.",
+      "enables_zh": "测试 Agent 能否规划网页调查、跨站点收集证据并返回有依据的答案。",
+      "limits_en": "Live websites can change, and test answers are withheld for submission-based evaluation. It is not a resettable website replica. Dataset licensing is Apache 2.0; SeePlanAct code uses OpenRAIL-S with use restrictions. Browser and model access are required.",
+      "limits_zh": "在线网站可能变化，测试答案保留用于提交式评测；它不是可重置的网站副本。数据采用 Apache 2.0，SeePlanAct 代码采用带使用限制的 OpenRAIL-S。运行需要浏览器与模型访问。",
+      "resource_kind": "dataset-and-benchmark",
+      "runtime": "Public task JSONL and Python 3.10/Playwright SeePlanAct implementation; provider configuration required.",
+      "evidence": [
+        {
+          "url": "https://assistantbench.github.io/",
+          "supports": "Author project defines realistic web tasks and distinguishes public development answers from withheld test answers."
+        },
+        {
+          "url": "https://github.com/oriyor/assistantbench/tree/main/SeePlanAct",
+          "supports": "Public code and setup instructions are present despite the older root README release wording."
+        },
+        {
+          "url": "https://github.com/oriyor/assistantbench/blob/main/SeePlanAct/src/seeplanact.py",
+          "supports": "Implementation uses Playwright and model-backed planning, memory and action grounding."
+        },
+        {
+          "url": "https://huggingface.co/datasets/AssistantBench/AssistantBench",
+          "supports": "Official task dataset is public and declares Apache 2.0."
+        },
+        {
+          "url": "https://github.com/oriyor/assistantbench/blob/main/LICENSE",
+          "supports": "Repository publishes the AI PUBS OpenRAIL-S license."
+        }
+      ]
+    },
+    {
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "agentboard",
+      "name": "AgentBoard",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "description_en": "A multi-environment evaluation suite that tracks intermediate progress as well as final success across web browsing, tool operation, games and simulated-world tasks.",
+      "description_zh": "跨环境评测套件，在网页浏览、工具操作、游戏和模拟世界任务中，同时跟踪中间进展与最终成功情况。",
+      "primary_url": "https://github.com/hkust-nlp/AgentBoard",
+      "repo_url": "https://github.com/hkust-nlp/AgentBoard",
+      "paper_url": "https://arxiv.org/abs/2401.13178",
+      "enables_en": "Inspect where an agent makes or loses progress using shared evaluation and analysis across task families.",
+      "enables_zh": "通过跨任务类型的统一评测和分析，检查 Agent 在哪些环节取得或失去进展。",
+      "limits_en": "Reuses environments such as WebArena and WebShop rather than supplying entirely new worlds. Setup is task-specific and some tools need live service credentials. The documented runner pins Python 3.8.13. Code is Apache 2.0; the dataset is GPL 2.0.",
+      "limits_zh": "复用 WebArena、WebShop 等环境，并非全部新建的任务世界。各任务有独立配置，部分工具需要在线服务凭据；文档固定 Python 3.8.13。代码采用 Apache 2.0，数据采用 GPL 2.0。",
+      "resource_kind": "benchmark-suite",
+      "runtime": "Python evaluation toolkit with per-environment services and optional analysis dashboards.",
+      "platform_note": "A mixed-domain evaluation layer; host operating systems are not application-platform tags.",
+      "evidence": [
+        {
+          "url": "https://github.com/hkust-nlp/AgentBoard#readme",
+          "supports": "Documents analytical progress metrics, heterogeneous environments, per-task setup and separate code/data licenses."
+        },
+        {
+          "url": "https://huggingface.co/datasets/hkust-nlp/agentboard",
+          "supports": "Official data lists nine task families and GPL-2.0 licensing; the full archive contains more than the preview."
+        },
+        {
+          "url": "https://arxiv.org/abs/2401.13178",
+          "supports": "Paper introduces fine-grained progress-rate analysis for multi-turn agents."
+        }
+      ]
+    },
+    {
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "agentdojo",
+      "name": "AgentDojo",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "description_en": "A tool-use evaluation environment with simulated applications and untrusted tool data, designed to measure task utility and resistance to prompt injection.",
+      "description_zh": "包含模拟应用和不可信工具数据的工具使用评测环境，用于衡量任务完成能力及对提示注入的抵抗能力。",
+      "primary_url": "https://github.com/ethz-spylab/agentdojo",
+      "repo_url": "https://github.com/ethz-spylab/agentdojo",
+      "paper_url": "https://arxiv.org/abs/2406.13352",
+      "enables_en": "Compare agent defenses while checking whether legitimate tool-based tasks still succeed.",
+      "enables_zh": "比较 Agent 防御方法，同时检查正常的工具任务是否仍能成功完成。",
+      "limits_en": "A specialized security and utility benchmark using simulated app tools, not native banking or workplace software. Requires Python 3.10+ and model-provider configuration. Package APIs are still evolving. Code is MIT-licensed.",
+      "limits_zh": "这是采用模拟应用工具的专门安全与实用性基准，并非原生银行或办公软件。需要 Python 3.10+ 和模型服务配置，包接口仍在演进。代码采用 MIT。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python agentdojo package with configurable task suites, agents and defenses.",
+      "platform_note": "Tool APIs represent application workflows; no native desktop or phone platform is asserted.",
+      "evidence": [
+        {
+          "url": "https://github.com/ethz-spylab/agentdojo#readme",
+          "supports": "Official code documents task suites, benchmarking and the evolving package API."
+        },
+        {
+          "url": "https://github.com/ethz-spylab/agentdojo/blob/main/pyproject.toml",
+          "supports": "Package requires Python 3.10+ and declares MIT licensing."
+        },
+        {
+          "url": "https://arxiv.org/abs/2406.13352",
+          "supports": "Original paper distinguishes legitimate task utility from robustness to injected tool data."
+        }
+      ]
+    },
+    {
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "omniact",
+      "name": "OmniACT",
+      "content_type": "app",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "description_en": "A screenshot-to-action-program dataset pairing desktop and web task instructions with UI images, target annotations and reference PyAutoGUI scripts.",
+      "description_zh": "截图到动作程序的数据集，将桌面与网页任务指令、界面图像、目标标注和参考 PyAutoGUI 脚本配对。",
+      "primary_url": "https://huggingface.co/datasets/Writer/omniact",
+      "repo_url": "https://huggingface.co/datasets/Writer/omniact/tree/main",
+      "paper_url": "https://arxiv.org/abs/2402.17553",
+      "enables_en": "Train and evaluate visual models that translate a screen and instruction into a mouse-and-keyboard action program.",
+      "enables_zh": "训练和评估将屏幕图像及指令转换为鼠标键盘动作程序的视觉模型。",
+      "limits_en": "Static examples and reference-based action metrics, not a packaged desktop execution environment. Evaluation target boxes must not be used as test-time inputs. The dataset card declares MIT; platform tags identify screenshot sources.",
+      "limits_zh": "提供静态样本和基于参考的动作指标，并非打包好的桌面执行环境。测试时不能将评估用目标框作为输入。数据卡标注 MIT；平台标签表示截图来源。",
+      "resource_kind": "dataset-and-benchmark",
+      "runtime": "Public train/validation/test JSON, screenshot archives and Python evaluation scripts.",
+      "platform_note": "The paper explicitly covers screenshots from macOS, Windows, Linux and web applications.",
+      "evidence": [
+        {
+          "url": "https://huggingface.co/datasets/Writer/omniact",
+          "supports": "Author dataset defines screenshot/task/script pairs, train/validation/test splits, test-metadata restrictions and MIT licensing."
+        },
+        {
+          "url": "https://huggingface.co/datasets/Writer/omniact/blob/main/eval.py",
+          "supports": "Public evaluation script computes action/sequence comparison scores."
+        },
+        {
+          "url": "https://arxiv.org/html/2402.17553",
+          "supports": "Paper specifies screenshot platforms and reference-based action metrics rather than a supplied desktop VM."
+        }
+      ]
+    },
+    {
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "the-agent-company",
+      "name": "TheAgentCompany",
+      "content_type": "app",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "description_en": "A self-hosted simulated software company where agents use internal web services, files, code and conversations with simulated coworkers to complete workplace tasks.",
+      "description_zh": "可自行部署的模拟软件公司，Agent 通过内部网页服务、文件、代码及与模拟同事的对话完成工作任务。",
+      "primary_url": "https://github.com/TheAgentCompany/TheAgentCompany",
+      "repo_url": "https://github.com/TheAgentCompany/TheAgentCompany",
+      "paper_url": "https://arxiv.org/abs/2412.14161",
+      "enables_en": "Evaluate multi-tool workplace workflows with task initialization, intermediate checkpoints and outcome grading.",
+      "enables_zh": "通过任务初始化、中间检查点和结果评分，评估涉及多种工具的办公流程。",
+      "limits_en": "Requires Docker/Compose, service data and at least 30 GB free disk space according to setup documentation. Agent and simulated-coworker models need configuration. Initial states and benchmark versions matter. Repository code is MIT; bundled services retain their own terms.",
+      "limits_zh": "按配置文档需要 Docker/Compose、服务数据及至少 30 GB 空闲磁盘；Agent 和模拟同事模型需单独配置。初始状态及基准版本会影响比较。仓库代码采用 MIT，配套服务仍适用各自条款。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Docker-hosted company services plus task-specific workspaces and evaluators.",
+      "platform_note": "Web covers the internal browser applications; code and file tasks also occur, with no host OS inferred.",
+      "evidence": [
+        {
+          "url": "https://github.com/TheAgentCompany/TheAgentCompany#readme",
+          "supports": "Documents self-contained workplace services, Docker requirements, task initialization, agent/environment model configuration and grading."
+        },
+        {
+          "url": "https://github.com/TheAgentCompany/TheAgentCompany/blob/main/LICENSE",
+          "supports": "Repository code is MIT-licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2412.14161",
+          "supports": "Original paper defines simulated digital-worker tasks across websites, programs and coworker communication."
+        }
+      ]
+    },
+    {
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "spa-bench",
+      "name": "SPA-Bench",
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "description_en": "An Android-agent evaluation framework with single-app and cross-app tasks in English and Chinese, trajectory annotations and an automated scoring pipeline.",
+      "description_zh": "Android Agent 评测框架，提供中英文单应用及跨应用任务、轨迹标注和自动评分流程。",
+      "primary_url": "https://github.com/ai-agents-2030/SPA-Bench",
+      "repo_url": "https://github.com/ai-agents-2030/SPA-Bench",
+      "paper_url": "https://arxiv.org/abs/2410.15164",
+      "enables_en": "Compare mobile agents across varied apps and measure task completion together with execution and resource-use metrics.",
+      "enables_zh": "跨不同应用比较移动端 Agent，并结合执行过程与资源消耗衡量任务完成情况。",
+      "limits_en": "Requires an Android device/emulator, ADB, app setup and configured model backends. The preconfigured emulator snapshot is still marked coming soon. Evaluation uses model-based judgments and annotated components. Framework code is MIT; individual apps have separate terms.",
+      "limits_zh": "需要 Android 设备或模拟器、ADB、应用安装及模型后端配置；预配置模拟器快照仍标注待发布。评估结合模型评审与标注组件。框架代码采用 MIT，各应用有独立条款。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python/Conda runner communicating with Android through ADB; selected model integrations may require GPU hosting.",
+      "evidence": [
+        {
+          "url": "https://github.com/ai-agents-2030/SPA-Bench#readme",
+          "supports": "Official repository exposes task collections, agent integrations and evaluation code while the emulator-snapshot checklist remains incomplete."
+        },
+        {
+          "url": "https://github.com/ai-agents-2030/SPA-Bench/blob/main/Documentation.md",
+          "supports": "Documents device/emulator setup, ADB, model configuration and model-based evaluation modes."
+        },
+        {
+          "url": "https://github.com/ai-agents-2030/SPA-Bench/blob/main/LICENSE",
+          "supports": "Framework is MIT-licensed."
+        }
+      ]
+    },
+    {
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "mobileagentbench",
+      "name": "MobileAgentBench",
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "description_en": "A mobile-agent benchmark library with task-specific setup, completion checks and resets for everyday Android apps such as calendar, contacts and file management.",
+      "description_zh": "移动端 Agent 基准库，为日历、联系人和文件管理等日常 Android 应用提供任务专用初始化、完成检查及重置逻辑。",
+      "primary_url": "https://github.com/MobileAgentBench/mobile-agent-bench",
+      "repo_url": "https://github.com/MobileAgentBench/mobile-agent-bench",
+      "paper_url": "https://arxiv.org/abs/2406.08184",
+      "enables_en": "Integrate a mobile agent with programmatic checks instead of manually reviewing every task attempt.",
+      "enables_zh": "将移动端 Agent 接入程序化完成检查，减少逐次人工审阅任务尝试的工作。",
+      "limits_en": "Requires ADB and separately installed SimpleMobileTools apps; task checks depend on the expected app UI/state. The package requires Python 3.8+ and pins AndroidViewClient. No explicit repository license was found in the reviewed source.",
+      "limits_zh": "需要 ADB 及另行安装的 SimpleMobileTools 应用；检查逻辑依赖预期的应用界面和状态。包要求 Python 3.8+，并固定 AndroidViewClient 版本。已核查源码未注明仓库许可。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python library with AndroidViewClient/ADB and per-app task modules; emulator preferred in upstream guidance.",
+      "evidence": [
+        {
+          "url": "https://github.com/MobileAgentBench/mobile-agent-bench#readme",
+          "supports": "Documents Android Studio/ADB setup, separately installed benchmark apps and the benchmark library."
+        },
+        {
+          "url": "https://github.com/MobileAgentBench/mobile-agent-bench/blob/main/src/mobile_agent_benchmark/bench_task.py",
+          "supports": "Public task interface includes setup, teardown and completion checking."
+        },
+        {
+          "url": "https://github.com/MobileAgentBench/mobile-agent-bench/blob/main/pyproject.toml",
+          "supports": "Package requires Python 3.8+, pins AndroidViewClient and does not declare a license."
+        },
+        {
+          "url": "https://arxiv.org/abs/2406.08184",
+          "supports": "Paper defines the mobile-app task benchmark."
+        }
+      ]
+    },
+    {
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "webmall",
+      "name": "WebMall",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "description_en": "A self-hostable shopping benchmark with four different stores, designed for cross-shop product comparison, vague requirements, compatible alternatives and simulated checkout.",
+      "description_zh": "可自行部署的购物基准，包含四个不同商店，覆盖跨店商品比较、模糊需求、兼容替代品和模拟结账。",
+      "primary_url": "https://wbsg-uni-mannheim.github.io/WebMall/",
+      "repo_url": "https://github.com/wbsg-uni-mannheim/WebMall",
+      "paper_url": "https://arxiv.org/abs/2508.13024",
+      "enables_en": "Test whether a web agent can compare heterogeneous offers and carry a shopping request through several stores.",
+      "enables_zh": "测试网页 Agent 能否比较异构商品信息，并跨多个商店完成购物请求。",
+      "limits_en": "Requires Docker/Compose and the project's modified BrowserGym/AgentLab submodules, with Python 3.11 or 3.12. The setup documents at least 4 GB container RAM. No project-level license was found in the reviewed repository; component and product-data terms remain separate.",
+      "limits_zh": "需要 Docker/Compose、项目修改版 BrowserGym/AgentLab 子模块，以及 Python 3.11 或 3.12。配置文档要求容器至少使用 4 GB 内存。已核查仓库未注明项目级许可，组件和商品数据条款应分别确认。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Four WooCommerce/WordPress stores with databases and Elasticsearch, plus BrowserGym/AgentLab evaluation.",
+      "evidence": [
+        {
+          "url": "https://wbsg-uni-mannheim.github.io/WebMall/",
+          "supports": "Official project defines multi-shop tasks, heterogeneous product data and simulated store workflows."
+        },
+        {
+          "url": "https://github.com/wbsg-uni-mannheim/WebMall#readme",
+          "supports": "Documents Python requirements, modified submodules and local benchmark scripts."
+        },
+        {
+          "url": "https://github.com/wbsg-uni-mannheim/WebMall/blob/main/docker_all/README.md",
+          "supports": "Documents Docker hosting for four stores and the container memory requirement."
+        }
+      ]
+    },
+    {
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "webchorearena",
+      "name": "WebChoreArena",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "description_en": "A distinct task suite built on WebArena's websites, emphasizing tedious workflows that require retaining many details, performing calculations and tracking information across pages.",
+      "description_zh": "基于 WebArena 网站构建的独立任务套件，聚焦需要记忆大量细节、进行计算及跨页面跟踪信息的繁琐流程。",
+      "primary_url": "https://github.com/WebChoreArena/WebChoreArena",
+      "repo_url": "https://github.com/WebChoreArena/WebChoreArena",
+      "paper_url": "https://arxiv.org/abs/2506.01952",
+      "enables_en": "Measure web-agent performance on demanding information-heavy chores using the released task configurations and evaluators.",
+      "enables_zh": "利用公开任务配置和评分器，评估网页 Agent 对高信息量、复杂日常流程的处理能力。",
+      "limits_en": "Adds tasks rather than a new set of websites. Requires separately deployed WebArena services and controlled resets, including before cross-site evaluation. Model/API configuration affects comparisons. Repository code is Apache 2.0; upstream components retain their own terms.",
+      "limits_zh": "新增的是任务，而非另一套网站。需要另外部署 WebArena 服务并控制重置，包括跨站点评测前的重置；模型和 API 配置会影响比较。仓库代码采用 Apache 2.0，上游组件保留各自条款。",
+      "resource_kind": "benchmark-suite",
+      "runtime": "WebArena service environment with the supplied BrowserGym or AgentOccam task integration.",
+      "evidence": [
+        {
+          "url": "https://github.com/WebChoreArena/WebChoreArena#readme",
+          "supports": "Documents the new task collection, information/memory/calculation demands, WebArena dependency and reset protocol."
+        },
+        {
+          "url": "https://github.com/WebChoreArena/WebChoreArena/blob/main/LICENSE",
+          "supports": "Repository declares Apache-2.0 licensing."
+        },
+        {
+          "url": "https://arxiv.org/abs/2506.01952",
+          "supports": "Paper establishes the task suite as a substantial extension on the existing WebArena environments."
+        }
+      ]
+    },
+    {
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "crmarena",
+      "name": "CRMArena",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "description_en": "A Salesforce-based professional CRM task benchmark with public evaluation code and datasets; its Pro extension adds sales, service, quotation workflows and multi-turn user interactions.",
+      "description_zh": "基于 Salesforce 的专业 CRM 任务基准，公开评测代码和数据；Pro 扩展覆盖销售、服务、报价流程及多轮用户交互。",
+      "primary_url": "https://github.com/SalesforceAIResearch/CRMArena",
+      "repo_url": "https://github.com/SalesforceAIResearch/CRMArena",
+      "paper_url": "https://arxiv.org/abs/2411.02305",
+      "related_paper_urls": [
+        "https://arxiv.org/abs/2505.18878"
+      ],
+      "enables_en": "Evaluate agents on linked customer and business records, workflow reasoning and interactive professional scenarios.",
+      "enables_zh": "在相互关联的客户及业务记录、流程推理和交互式专业场景中评估 Agent。",
+      "limits_en": "Execution depends on access to Salesforce research orgs and model providers; live access was not tested. GUI access now requires author approval. Original, Pro, B2B/B2C and interactive settings differ. Code and datasets use CC BY-NC 4.0 and are described as research-only.",
+      "limits_zh": "执行依赖 Salesforce 研究组织及模型服务访问，本次未测试在线权限；GUI 访问目前需作者批准。原始、Pro、B2B/B2C 及交互模式有所不同。代码和数据采用 CC BY-NC 4.0，并声明限研究用途。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python Simple Salesforce integration and evaluation runners; hosted research-org access and provider configuration required.",
+      "platform_note": "The reviewed public execution path is API-based; no native desktop or mobile platform is inferred.",
+      "evidence": [
+        {
+          "url": "https://github.com/SalesforceAIResearch/CRMArena#readme",
+          "supports": "Documents original and Pro evaluation, hosted research-org dependencies and the change to approval-only GUI access."
+        },
+        {
+          "url": "https://github.com/SalesforceAIResearch/CRMArena/blob/main/LICENSE.txt",
+          "supports": "Repository license is CC BY-NC 4.0."
+        },
+        {
+          "url": "https://huggingface.co/datasets/Salesforce/CRMArena",
+          "supports": "Official original dataset publishes tasks/schema under CC BY-NC 4.0."
+        },
+        {
+          "url": "https://huggingface.co/datasets/Salesforce/CRMArenaPro",
+          "supports": "Official Pro dataset separates B2B/B2C and interactive modes under CC BY-NC 4.0."
+        }
+      ]
     }
   ]
 }

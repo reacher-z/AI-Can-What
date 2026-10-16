@@ -18,4 +18,6 @@ jobs:
       - run: python3 scripts/build.py
       - run: python3 scripts/validate.py
       - run: node --check static/app.js
+      - run: node --check static/registry.js
+      - run: python3 -m unittest discover -s tests
       - run: git diff --exit-code -- README.md README.zh-CN.md catalog references.bib

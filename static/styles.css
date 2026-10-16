@@ -993,3 +993,68 @@ tbody tr:hover {
   max-width:850px;
   margin:14px 0 0;
 }
+
+.registry-hero {
+  padding:46px 0 28px;
+  max-width:940px;
+}
+.registry-hero > p:not(.eyebrow) {
+  color:var(--muted);
+  line-height:1.7;
+}
+.registry-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 22px;
+  font-size:13px;
+  margin-top:24px;
+  color:var(--green);
+}
+.registry-sources-grid {
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+}
+.registry-source {
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
+}
+.registry-source a {display:flex;flex-direction:column;gap:6px}
+.registry-source strong {font-size:27px;letter-spacing:-1px}
+.registry-source span {font-size:13px;font-weight:600}
+.registry-source p {font-size:11px;color:var(--muted);margin:7px 0 0}
+.registry-note-count {font-size:12px;color:var(--muted)}
+.registry-table {table-layout:fixed}
+.registry-table .project-cell {width:55%;min-width:0}
+.registry-table .project-name {font-size:14px;overflow-wrap:anywhere;max-width:96%}
+.registry-table .registry-metadata {width:24%;font-size:11px;color:var(--muted);overflow-wrap:anywhere;line-height:1.7}
+.registry-table .evidence-cell {min-width:0}
+.registry-related {font-size:11px;color:var(--muted);margin:6px 0 0;line-height:1.6}
+.registry-related a {color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.registry-permalink {font-size:12px;color:var(--muted);margin-left:7px}
+.registry-table tr:target {background:#f4f2db}
+.registry-boundaries {max-width:930px;margin:38px 0 60px;font-size:14px;line-height:1.7;color:var(--muted)}
+.registry-boundaries h2,.registry-boundaries h3 {color:var(--ink)}
+.registry-boundaries article {border-top:1px solid var(--line);padding:16px 0}
+.registry-boundaries article p {margin:8px 0}
+.registry-revision {font-family:var(--mono);font-size:11px;overflow-wrap:anywhere}
+@media(max-width:1000px) {
+  .registry-sources-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:700px) {
+  .header-inner {flex-wrap:wrap;padding-top:14px;padding-bottom:14px;row-gap:12px}
+  .header-nav {flex-wrap:wrap;gap:14px}
+  .registry-hero {padding:30px 0 20px}
+  .registry-hero h1 {font-size:36px}
+  .registry-sources-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .registry-source {padding:13px}
+  .registry-source strong {font-size:23px}
+  .registry-source span {font-size:12px}
+  .registry-directory .directory-heading {align-items:start;gap:12px}
+  .registry-note-count {max-width:120px;font-size:10px;line-height:1.5;text-align:right}
+  .registry-table .project-cell,.registry-table .registry-metadata {width:auto}
+  .registry-table .registry-metadata {font-size:10px}
+  .registry-table .project-name {max-width:92%;font-size:14px}
+}

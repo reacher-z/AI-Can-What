@@ -7,17 +7,19 @@
 A source-backed directory of AI-built software and environments, benchmarks, and datasets for training and evaluating agents, organized into **Games & virtual worlds**, **Websites**, and **Apps**. Every entry has an original source, review date, practical limits, and its own static page.
 
 <!-- BEGIN GENERATED INDEX -->
-**83 catalog entries · 59 referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.
+**102 catalog entries · 73 referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.
 
 ## Browse
 
 | Category | Entries | Repository index |
 | --- | --- | --- |
 | [Games & virtual worlds](https://aicanwhat.com/games/) | 21 | [Browse](catalog/games/README.md) |
-| [Websites](https://aicanwhat.com/websites/) | 22 | [Browse](catalog/websites/README.md) |
-| [Apps](https://aicanwhat.com/apps/) | 40 | [Browse](catalog/apps/README.md) |
+| [Websites](https://aicanwhat.com/websites/) | 25 | [Browse](catalog/websites/README.md) |
+| [Apps](https://aicanwhat.com/apps/) | 56 | [Browse](catalog/apps/README.md) |
 
 [Research bibliography](https://aicanwhat.com/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)
+
+[Upstream registry index](https://aicanwhat.com/discover/): **490 metadata records from 5 sources**. These include versions, forks, manifests, and configurations; they are not individually reviewed projects and must not be added to the catalog count. [Source coverage](catalog/registries/README.md).
 <!-- END GENERATED INDEX -->
 
 ## How the directory works
@@ -34,6 +36,8 @@ Python 3.10+ and Node.js, with no installed dependencies:
 python3 scripts/build.py
 python3 scripts/validate.py
 node --check static/app.js
+node --check static/registry.js
+python3 -m unittest discover -s tests
 python3 -m http.server 8768 --bind 127.0.0.1 --directory dist
 ```
 
@@ -44,6 +48,8 @@ The website is bilingual. Static HTML contains the complete directory and projec
 ```text
 data/catalog.json          Reviewed entries and supporting sources
 data/papers.json           Original research metadata and summaries
+data/registry-index.json   Separately labeled upstream registry metadata
+data/registry-sources.json Source definitions and inventory boundaries
 catalog/                   Generated category and platform README indexes
 references.bib             Generated bibliography
 static/                    Browser assets

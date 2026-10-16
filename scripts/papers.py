@@ -29,6 +29,17 @@ def read_papers(root, entries):
             date.fromisoformat(paper['journal_published_at'])
     paper_projects = {identifier for paper in papers for identifier in paper['project_ids']}
     assert {e['id'] for e in entries if e.get('paper_url')} <= paper_projects, 'A catalog paper lacks bibliography metadata'
+    by_id = {paper['id']: paper for paper in papers}
+    for entry in entries:
+        if not entry.get('paper_url'):
+            continue
+        source = urlsplit(entry['paper_url'])
+        if source.hostname == 'arxiv.org':
+            match = re.fullmatch(r'/(?:abs|pdf)/(\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?', source.path)
+            assert match and match.group(1) in by_id, (entry['id'], 'Original paper is missing')
+            assert entry['id'] in by_id[match.group(1)]['project_ids'], (entry['id'], 'Original paper maps to a different project')
+        else:
+            assert any(entry['id'] in paper['project_ids'] and entry['paper_url'] in {paper.get('source_url'), paper.get('publisher_url')} for paper in papers), (entry['id'], 'Publisher paper is missing')
     return document, sorted(papers, key=lambda p: (p['published_at'], p['id']), reverse=True)
 
 

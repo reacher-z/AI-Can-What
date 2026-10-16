@@ -21,8 +21,12 @@ Run before proposing a change:
 python3 scripts/build.py
 python3 scripts/validate.py
 node --check static/app.js
+node --check static/registry.js
+python3 -m unittest discover -s tests
 ```
 
 The static site is generated into `dist/`. Edit source files, not generated pages. Keep public catalog data and source separate from private account records or credentials.
 
 The build also updates the root READMEs, category/platform indexes under `catalog/`, and `references.bib`. Include those generated changes in the same pull request; CI checks that they are current.
+
+Registry metadata belongs in the separate upstream discovery index. Finding a manifest or package in a registry is not sufficient to promote it into the reviewed catalog or label it AI-built. Follow [registry-discovery.md](docs/registry-discovery.md) for source snapshots, immutable version evidence, refreshes, and the distinction between packages and independent projects.
