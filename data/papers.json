@@ -969,7 +969,8 @@
       "published_at": "2023-06-24",
       "arxiv_url": "https://arxiv.org/abs/2306.13831",
       "project_ids": [
-        "minigrid"
+        "minigrid",
+        "miniworld"
       ],
       "description_en": "Presents the design and shared interfaces of Minigrid and Miniworld for creating configurable two- and three-dimensional goal-directed learning tasks.",
       "description_zh": "介绍 Minigrid 与 Miniworld 的设计和统一接口，用于构建可配置的二维、三维目标导向学习任务。",
@@ -1893,6 +1894,313 @@
       "description_zh": "提出更具挑战性的 WebArena 任务，聚焦观察信息保持、数值推理和长流程浏览中的信息跟踪。",
       "source_url": "https://arxiv.org/abs/2506.01952",
       "date_note": "published_at is the first arXiv submission date; authors and title follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2602.11103",
+      "title": "GameDevBench: Evaluating Agentic Capabilities Through Game Development",
+      "authors": [
+        "Wayne Chi",
+        "Yixiong Fang",
+        "Arnav Yayavaram",
+        "Siddharth Yayavaram",
+        "Seth Karten",
+        "Qiuhong Anna Wei",
+        "Runkun Chen",
+        "Alexander Wang",
+        "Valerie Chen",
+        "Ameet Talwalkar",
+        "Chris Donahue"
+      ],
+      "published_at": "2026-02-11",
+      "arxiv_url": "https://arxiv.org/abs/2602.11103",
+      "project_ids": [
+        "gamedevbench"
+      ],
+      "description_en": "Introduces Godot project-editing tasks that combine code changes with visual assets, and studies image/video feedback for evaluating multimodal coding agents.",
+      "description_zh": "提出将代码修改与视觉素材结合的 Godot 项目编辑任务，并研究图像和视频反馈对多模态编程 Agent 评估的作用。",
+      "source_url": "https://arxiv.org/abs/2602.11103",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred venue date."
+    },
+    {
+      "id": "2606.17861",
+      "title": "GameCraft-Bench: Can Agents Build Playable Games End-to-End in a Real Game Engine?",
+      "authors": [
+        "Tongxu Luo",
+        "Rongsheng Wang",
+        "Jiaxi Bi",
+        "Chenming Xu",
+        "Zhengyang Tang",
+        "Jianlong Chen",
+        "Juhao Liang",
+        "Ke Ji",
+        "Shuqi Guo",
+        "Yuhao Du",
+        "Fan Bu",
+        "Wenyu Du",
+        "Xiaotong Zhang",
+        "Kyle Li",
+        "Shaobo Wang",
+        "Linfeng Zhang",
+        "Yuxuan Liu",
+        "Xin Lai",
+        "Chenxin Li",
+        "Yiduo Guo",
+        "Zhexin Zhang",
+        "Xinyuan Wang",
+        "Tianyi Bai",
+        "Ziniu Li",
+        "Benyou Wang"
+      ],
+      "published_at": "2026-06-16",
+      "arxiv_url": "https://arxiv.org/abs/2606.17861",
+      "project_ids": [
+        "gamecraft-bench"
+      ],
+      "description_en": "Introduces end-to-end Godot game generation evaluated through complete executable artifacts, replayed demonstrations and rubric-guided multimodal judgments.",
+      "description_zh": "提出端到端 Godot 游戏生成评测，结合完整可执行产物、演示重放和基于评分标准的多模态评审。",
+      "source_url": "https://arxiv.org/abs/2606.17861",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred venue date."
+    },
+    {
+      "id": "2509.20136",
+      "title": "V-GameGym: Visual Game Generation for Code Large Language Models",
+      "authors": [
+        "Wei Zhang",
+        "Jack Yang",
+        "Renshuai Tao",
+        "Lingzheng Chai",
+        "Shawn Guo",
+        "Jiajun Wu",
+        "Xiaoming Chen",
+        "Ganqu Cui",
+        "Ning Ding",
+        "Xander Xu",
+        "Hu Wei",
+        "Bowen Zhou"
+      ],
+      "published_at": "2025-09-24",
+      "arxiv_url": "https://arxiv.org/abs/2509.20136",
+      "project_ids": [
+        "v-gamegym"
+      ],
+      "description_en": "Introduces a Pygame-generation dataset and multimodal evaluation pipeline that examines generated code together with visual and dynamic game output.",
+      "description_zh": "提出 Pygame 生成数据集和多模态评估流程，将生成代码与游戏的视觉、动态输出结合检查。",
+      "source_url": "https://arxiv.org/abs/2509.20136",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred venue date."
+    },
+    {
+      "id": "2609.07712",
+      "title": "APPSim-Bench: Bridging Real-world Apps and Reproducible Evaluation for Mobile GUI Agents",
+      "authors": [
+        "Jintian Feng",
+        "Long Chen",
+        "Xiao Yu",
+        "Jiayi Dai",
+        "Chenglong Liu",
+        "Haoru Wang",
+        "Zizhen Xue",
+        "Yuxuan Shi",
+        "Ziyang Wang",
+        "Yichen Gong"
+      ],
+      "published_at": "2026-09-07",
+      "arxiv_url": "https://arxiv.org/abs/2609.07712",
+      "project_ids": [
+        "appsim-bench"
+      ],
+      "description_en": "Introduces controllable simulated Android apps with human-verified tasks and outcome checks to reduce variation in mobile GUI-agent evaluation.",
+      "description_zh": "提出具有人工验证任务和结果检查的可控模拟 Android 应用，以降低移动 GUI Agent 评测中的环境变化。",
+      "source_url": "https://arxiv.org/abs/2609.07712",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred venue date."
+    },
+    {
+      "id": "2610.05033",
+      "title": "Code2Games: Enabling Coding Agents for Gaming World Generation",
+      "authors": [
+        "Wei Wu",
+        "Ziyang Xu",
+        "Zeyu Zhang",
+        "Yang Zhao",
+        "Hao Tang"
+      ],
+      "published_at": "2026-10-04",
+      "arxiv_url": "https://arxiv.org/abs/2610.05033",
+      "project_ids": [
+        "gamecode4d"
+      ],
+      "description_en": "Introduces Code2Games for linking scene structure with gameplay generation, plus GameCode4D for studying game-world quality and subsequent engine adaptation.",
+      "description_zh": "提出将场景结构与玩法生成连接的 Code2Games，以及用于研究游戏世界质量和后续引擎适配的 GameCode4D。",
+      "source_url": "https://arxiv.org/abs/2610.05033",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred venue date."
+    },
+    {
+      "id": "2407.17032",
+      "title": "Gymnasium: A Standard Interface for Reinforcement Learning Environments",
+      "authors": [
+        "Mark Towers",
+        "Ariel Kwiatkowski",
+        "Jordan Terry",
+        "John U. Balis",
+        "Gianluca De Cola",
+        "Tristan Deleu",
+        "Manuel Goulão",
+        "Andreas Kallinteris",
+        "Markus Krimmel",
+        "Arjun KG",
+        "Rodrigo Perez-Vicente",
+        "Andrea Pierré",
+        "Sander Schulhoff",
+        "Jun Jet Tai",
+        "Hannah Tan",
+        "Omar G. Younis"
+      ],
+      "published_at": "2024-07-24",
+      "arxiv_url": "https://arxiv.org/abs/2407.17032",
+      "project_ids": [
+        "gymnasium"
+      ],
+      "description_en": "Describes Gymnasium’s shared environment API, reference tasks and tools for reproducible reinforcement-learning experiments.",
+      "description_zh": "介绍 Gymnasium 的统一环境接口、参考任务和支持强化学习实验复现的工具。",
+      "source_url": "https://arxiv.org/abs/2407.17032"
+    },
+    {
+      "id": "2009.14471",
+      "title": "PettingZoo: Gym for Multi-Agent Reinforcement Learning",
+      "authors": [
+        "J. K. Terry",
+        "Benjamin Black",
+        "Nathaniel Grammel",
+        "Mario Jayakumar",
+        "Ananth Hari",
+        "Ryan Sullivan",
+        "Luis Santos",
+        "Rodrigo Perez",
+        "Caroline Horsch",
+        "Clemens Dieffendahl",
+        "Niall L. Williams",
+        "Yashas Lokesh",
+        "Praveen Ravi"
+      ],
+      "published_at": "2020-09-30",
+      "arxiv_url": "https://arxiv.org/abs/2009.14471",
+      "project_ids": [
+        "pettingzoo"
+      ],
+      "description_en": "Introduces PettingZoo and the Agent Environment Cycle model for consistent interaction with diverse multi-agent environments.",
+      "description_zh": "提出 PettingZoo 和 Agent Environment Cycle 模型，以一致方式与不同多 Agent 环境交互。",
+      "source_url": "https://arxiv.org/abs/2009.14471"
+    },
+    {
+      "id": "1605.02097",
+      "title": "ViZDoom: A Doom-based AI Research Platform for Visual Reinforcement Learning",
+      "authors": [
+        "Michał Kempka",
+        "Marek Wydmuch",
+        "Grzegorz Runc",
+        "Jakub Toczek",
+        "Wojciech Jaśkowski"
+      ],
+      "published_at": "2016-05-06",
+      "arxiv_url": "https://arxiv.org/abs/1605.02097",
+      "project_ids": [
+        "vizdoom"
+      ],
+      "description_en": "Introduces a customizable Doom-based platform for learning from first-person observations, with navigation and control experiments.",
+      "description_zh": "提出可定制的 Doom 研究平台，用于从第一人称观察中学习，并开展导航与控制实验。",
+      "source_url": "https://arxiv.org/abs/1605.02097"
+    },
+    {
+      "id": "1809.03470",
+      "title": "ViZDoom Competitions: Playing Doom from Pixels",
+      "authors": [
+        "Marek Wydmuch",
+        "Michał Kempka",
+        "Wojciech Jaśkowski"
+      ],
+      "published_at": "2018-09-10",
+      "arxiv_url": "https://arxiv.org/abs/1809.03470",
+      "project_ids": [
+        "vizdoom"
+      ],
+      "description_en": "Describes the 2016 and 2017 visual Doom competitions, multiplayer evaluation rules and observations about agent behavior.",
+      "description_zh": "介绍 2016、2017 年视觉 Doom 比赛、多人评测规则，以及有关 Agent 行为的观察。",
+      "source_url": "https://arxiv.org/abs/1809.03470"
+    },
+    {
+      "id": "1712.00600",
+      "title": "MAgent: A Many-Agent Reinforcement Learning Platform for Artificial Collective Intelligence",
+      "authors": [
+        "Lianmin Zheng",
+        "Jiacheng Yang",
+        "Han Cai",
+        "Weinan Zhang",
+        "Jun Wang",
+        "Yong Yu"
+      ],
+      "published_at": "2017-12-02",
+      "arxiv_url": "https://arxiv.org/abs/1712.00600",
+      "project_ids": [
+        "magent2"
+      ],
+      "description_en": "Introduces the original MAgent engine for configurable many-agent worlds and collective-behavior research; MAgent2 continues that implementation lineage.",
+      "description_zh": "介绍原始 MAgent 引擎及其可配置的多 Agent 世界与集体行为研究用途；MAgent2 延续该实现体系。",
+      "source_url": "https://arxiv.org/abs/1712.00600"
+    },
+    {
+      "id": "1703.04908",
+      "title": "Emergence of Grounded Compositional Language in Multi-Agent Populations",
+      "authors": [
+        "Igor Mordatch",
+        "Pieter Abbeel"
+      ],
+      "published_at": "2017-03-15",
+      "arxiv_url": "https://arxiv.org/abs/1703.04908",
+      "project_ids": [
+        "mpe2"
+      ],
+      "description_en": "Studies communication emerging from goal-driven particle-agent interaction, providing the original environment lineage cited by MPE2.",
+      "description_zh": "研究粒子 Agent 在目标导向交互中形成的交流方式，是 MPE2 引用的原始环境研究。",
+      "source_url": "https://arxiv.org/abs/1703.04908"
+    },
+    {
+      "id": "1706.02275",
+      "title": "Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments",
+      "authors": [
+        "Ryan Lowe",
+        "Yi Wu",
+        "Aviv Tamar",
+        "Jean Harb",
+        "Pieter Abbeel",
+        "Igor Mordatch"
+      ],
+      "published_at": "2017-06-07",
+      "arxiv_url": "https://arxiv.org/abs/1706.02275",
+      "project_ids": [
+        "mpe2"
+      ],
+      "description_en": "Introduces multi-agent actor-critic learning and cooperative/competitive experiments associated with the original public MPE release.",
+      "description_zh": "提出多 Agent actor-critic 学习方法及合作、竞争实验，并对应原 MPE 环境的公开发布。",
+      "source_url": "https://arxiv.org/abs/1706.02275"
+    },
+    {
+      "id": "1802.10363",
+      "title": "General Video Game AI: a Multi-Track Framework for Evaluating Agents, Games and Content Generation Algorithms",
+      "authors": [
+        "Diego Perez-Liebana",
+        "Jialin Liu",
+        "Ahmed Khalifa",
+        "Raluca D. Gaina",
+        "Julian Togelius",
+        "Simon M. Lucas"
+      ],
+      "published_at": "2018-02-28",
+      "arxiv_url": "https://arxiv.org/abs/1802.10363",
+      "project_ids": [
+        "gvgai"
+      ],
+      "description_en": "Surveys VGDL and GVGAI’s planning, learning and procedural-content tracks, clarifying their different access assumptions and evaluation goals.",
+      "description_zh": "综述 VGDL 及 GVGAI 的规划、学习和程序化内容赛道，说明不同的信息访问假设与评测目标。",
+      "source_url": "https://arxiv.org/abs/1802.10363"
     }
   ]
 }

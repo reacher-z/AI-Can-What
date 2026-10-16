@@ -7,17 +7,19 @@
 A source-backed directory of AI-built software and environments, benchmarks, and datasets for training and evaluating agents, organized into **Games & virtual worlds**, **Websites**, and **Apps**. Every entry has an original source, review date, practical limits, and its own static page.
 
 <!-- BEGIN GENERATED INDEX -->
-**102 catalog entries · 73 referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.
+**124 catalog entries · 86 referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.
 
 ## Browse
 
 | Category | Entries | Repository index |
 | --- | --- | --- |
-| [Games & virtual worlds](https://aicanwhat.com/games/) | 21 | [Browse](catalog/games/README.md) |
+| [Games & virtual worlds](https://aicanwhat.com/games/) | 42 | [Browse](catalog/games/README.md) |
 | [Websites](https://aicanwhat.com/websites/) | 25 | [Browse](catalog/websites/README.md) |
-| [Apps](https://aicanwhat.com/apps/) | 56 | [Browse](catalog/apps/README.md) |
+| [Apps](https://aicanwhat.com/apps/) | 57 | [Browse](catalog/apps/README.md) |
 
 [Research bibliography](https://aicanwhat.com/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)
+
+**2 scoped browser observations across 2 projects** record interaction steps, visible outcomes, screenshots and untested scope. These are not whole-application verification. [Observation data](data/observations.json) · [Method](docs/browser-observations.md).
 
 [Upstream registry index](https://aicanwhat.com/discover/): **490 metadata records from 5 sources**. These include versions, forks, manifests, and configurations; they are not individually reviewed projects and must not be added to the catalog count. [Source coverage](catalog/registries/README.md).
 <!-- END GENERATED INDEX -->
@@ -48,6 +50,7 @@ The website is bilingual. Static HTML contains the complete directory and projec
 ```text
 data/catalog.json          Reviewed entries and supporting sources
 data/papers.json           Original research metadata and summaries
+data/observations.json     Scoped browser actions, results and screenshot evidence
 data/registry-index.json   Separately labeled upstream registry metadata
 data/registry-sources.json Source definitions and inventory boundaries
 catalog/                   Generated category and platform README indexes

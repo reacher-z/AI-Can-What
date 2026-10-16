@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "observations": [
+    {
+      "id": "tictactoe-two-player-2026-10-16",
+      "project_id": "gpt5-tic-tac-toe-game",
+      "observed_on": "2026-10-16",
+      "target_url": "https://gpt5-coding-examples.vercel.app/tic-tac-toe-game",
+      "deployment_commit": null,
+      "environment_en": "Chrome on macOS · desktop · no account",
+      "environment_zh": "macOS Chrome · 桌面 · 无账户",
+      "summary_en": "One local two-player round reached an X win.",
+      "summary_zh": "一局本地双人游戏完成，X 获胜。",
+      "steps": [
+        {
+          "action_en": "Open a fresh board in the default two-player mode.",
+          "result_en": "The board was empty; X had the first turn and all score counters were zero.",
+          "action_zh": "打开默认双人模式的新棋盘。",
+          "result_zh": "棋盘为空，轮到 X，所有比分为零。"
+        },
+        {
+          "action_en": "Click cell 1, then click the occupied cell 1 again.",
+          "result_en": "The first click placed X and changed the turn to O. The second click did not replace X or change the turn.",
+          "action_zh": "点击格子 1，再次点击已占用的格子 1。",
+          "result_zh": "第一次点击放置 X 并切换到 O；第二次点击没有覆盖棋子或改变回合。"
+        },
+        {
+          "action_en": "Click cells 4, 2, 5 and 3, in that order.",
+          "result_en": "O and X alternated. X filled the top row; the page announced an X win and increased the X score to 1.",
+          "action_zh": "依次点击格子 4、2、5、3。",
+          "result_zh": "O 与 X 交替落子。X 占据首行，页面宣布 X 获胜，X 比分增加到 1。"
+        },
+        {
+          "action_en": "After the win, click the empty cell 9.",
+          "result_en": "Cell 9 stayed empty and the winner and score remained unchanged.",
+          "action_zh": "获胜后点击空格子 9。",
+          "result_zh": "格子 9 保持为空，胜方和比分没有变化。"
+        }
+      ],
+      "scope_en": "Cells are numbered left to right, top to bottom. This covers one win, occupied-cell handling and terminal-state handling. Draws, computer-opponent strategy, saved scores, customization and mobile behavior were not tested; AI authorship remains the publisher’s claim.",
+      "scope_zh": "格子按从左到右、从上到下编号。本记录覆盖一次获胜、已占用格子及终局处理；未测试平局、电脑对手策略、比分保存、自定义或手机表现。AI 开发方式仍依据发布者声明。",
+      "screenshot": {
+        "url": "/observation-tictactoe-2026-10-16.jpg",
+        "sha256": "1f0be13a984f9031d01b9d22583fb50dc0f0a2725ecad202d860c9f8085f43e4",
+        "caption_en": "Observed final board: X across the top row and X score 1. Demo by OpenAI’s coding-example collection.",
+        "caption_zh": "实际终局：X 占据首行，X 比分为 1。演示来自 OpenAI 编程案例集。"
+      }
+    },
+    {
+      "id": "aldi-product-search-2026-10-16",
+      "project_id": "aldi-prices",
+      "observed_on": "2026-10-16",
+      "target_url": "https://aldi-prices.lawruk.com/products/large-eggs",
+      "deployment_commit": null,
+      "environment_en": "Chrome on macOS · desktop · no account",
+      "environment_zh": "macOS Chrome · 桌面 · 无账户",
+      "summary_en": "Product filtering opened the matching history page.",
+      "summary_zh": "商品筛选可进入匹配的历史页面。",
+      "steps": [
+        {
+          "action_en": "Open the home page and choose Product Prices.",
+          "result_en": "The product table loaded with a search field and a note about products with at least six collected prices.",
+          "action_zh": "打开首页并选择 Product Prices。",
+          "result_zh": "商品表格加载，显示搜索框，以及至少收集六次价格的商品说明。"
+        },
+        {
+          "action_en": "Enter “eggs” in the search field.",
+          "result_en": "The page displayed the matching-products message and a Large Eggs row.",
+          "action_zh": "在搜索框输入 eggs。",
+          "result_zh": "页面显示匹配商品说明及 Large Eggs 记录。"
+        },
+        {
+          "action_en": "Follow the Large Eggs link.",
+          "result_en": "The URL changed to /products/large-eggs. The Large Eggs heading, price chart and dated history table rendered. Some rows were explicitly labeled Estimate.",
+          "action_zh": "打开 Large Eggs 链接。",
+          "result_zh": "网址变为 /products/large-eggs；商品标题、价格图表和带日期的历史表格显示，部分行明确标注为 Estimate。"
+        }
+      ],
+      "scope_en": "This checks navigation, filtering and visible history rendering only. It does not validate recorded prices, chart calculations, completeness, retailer coverage, freshness or mobile behavior. The chart’s right-edge price label was clipped in the captured desktop view.",
+      "scope_zh": "仅检查导航、筛选及历史内容的可见呈现；未验证价格记录、图表计算、完整性、零售商覆盖、时效或手机表现。截图中的图表右侧价格标签有裁切。",
+      "screenshot": {
+        "url": "/observation-aldi-2026-10-16.jpg",
+        "sha256": "bfd8ee892f5e8ba6b579a505586fdaeb543cff95bf2adc4e9d524f920ba49fbd",
+        "caption_en": "Large Eggs history view after keyword filtering and navigation. Website by Jim Lawruk; displayed prices are not independently validated.",
+        "caption_zh": "关键词筛选及跳转后的 Large Eggs 历史页面。网站由 Jim Lawruk 制作，图中价格未独立验证。"
+      }
+    }
+  ]
+}

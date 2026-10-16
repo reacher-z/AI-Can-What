@@ -573,6 +573,61 @@ tbody tr:hover {
 .facts dd {
   margin:0
 }
+.observation-link {
+  display:block;
+  margin-top:9px;
+  font-size:11px;
+  line-height:1.6;
+  color:var(--green)
+}
+.observation {
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
+  padding:22px;
+  margin-top:20px;
+  scroll-margin-top:24px
+}
+.observation h3 {
+  font-size:19px;
+  line-height:1.5;
+  margin:12px 0
+}
+.observation a {
+  text-decoration:underline;
+  text-underline-offset:3px
+}
+.observation .observation-meta,.observation figcaption {
+  font-size:12px;
+  color:var(--muted)
+}
+.observation-steps {
+  padding-left:22px
+}
+.observation-steps li {
+  padding-left:4px;
+  margin:16px 0
+}
+.observation-steps p {
+  margin:4px 0
+}
+.observation figure {
+  margin:20px 0 0
+}
+.observation img {
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px solid var(--line);
+  border-radius:4px
+}
+.observation figcaption {
+  margin-top:8px;
+  line-height:1.7
+}
+#browser-observations {
+  scroll-margin-top:24px
+}
 .related {
   display:grid;
   grid-template-columns:repeat(3,1fr);

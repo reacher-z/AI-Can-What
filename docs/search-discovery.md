@@ -6,6 +6,8 @@ The site provides complete static HTML for the directory, categories, app-platfo
 
 Google's [AI search guidance](https://developers.google.com/search/docs/appearance/ai-features) uses ordinary search eligibility: crawlable pages that can be indexed and shown with a snippet. `llms.txt` is an optional navigation index, not a special eligibility requirement.
 
+Homepage titles describe the catalog in each page's language, with the brand kept concise, following Google's [title-link guidance](https://developers.google.com/search/docs/appearance/title-link). `WebSite.sameAs` points to the corresponding public repository. Scoped browser observations add original steps and screenshots to selected project pages; they do not create ratings or imply that untested features work. These changes improve the information available to readers and crawlers; their ranking or citation effect is unmeasured.
+
 ## After deploying
 
 1. Confirm public HTTPS, the canonical URL, the correct sitemap origin, and a genuine HTTP 404 for an unknown page.

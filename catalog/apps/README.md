@@ -2,7 +2,7 @@
 
 [Back to the collection](../../README.md)
 
-56 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
+57 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
 
 Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows](windows/README.md) · [Linux](linux/README.md) · [iOS](ios/README.md) · [Android](android/README.md)
 
@@ -19,6 +19,7 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | [AndroidLab](https://aicanwhat.com/projects/androidlab/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/THUDM/Android-Lab) |
 | [AndroidWorld](https://aicanwhat.com/projects/androidworld/) | Environment + benchmark | Training, Evaluation | [Source](https://google-research.github.io/android_world/) |
 | [API-Bank](https://aicanwhat.com/projects/api-bank/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/api-bank) |
+| [AppSim-Bench](https://aicanwhat.com/projects/appsim-bench/) | Environment + benchmark | Evaluation | [Source](https://github.com/Acrab-Agentic-Labs/AppSim) |
 | [AppWorld](https://aicanwhat.com/projects/appworld/) | Environment + benchmark | Training, Evaluation | [Source](https://appworld.dev/) |
 | [Audio Step Sequencer](https://aicanwhat.com/projects/gpt5-audio-step-sequencer/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/audio-step-sequencer) |
 | [BIRD-Interact](https://aicanwhat.com/projects/bird-interact/) | Environment + benchmark | Evaluation | [Source](https://bird-interact.github.io/) |

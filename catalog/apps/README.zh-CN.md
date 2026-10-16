@@ -2,7 +2,7 @@
 
 [返回目录](../../README.zh-CN.md)
 
-56 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
+57 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
 
 按平台浏览：[Web](web/README.zh-CN.md) · [macOS](macos/README.zh-CN.md) · [Windows](windows/README.zh-CN.md) · [Linux](linux/README.zh-CN.md) · [iOS](ios/README.zh-CN.md) · [Android](android/README.zh-CN.md)
 
@@ -19,6 +19,7 @@
 | [AndroidLab](https://aicanwhat.com/zh/projects/androidlab/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/THUDM/Android-Lab) |
 | [AndroidWorld](https://aicanwhat.com/zh/projects/androidworld/) | 环境与评测 | 训练, 评测 | [Source](https://google-research.github.io/android_world/) |
 | [API-Bank](https://aicanwhat.com/zh/projects/api-bank/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/api-bank) |
+| [AppSim-Bench](https://aicanwhat.com/zh/projects/appsim-bench/) | 环境与评测 | 评测 | [Source](https://github.com/Acrab-Agentic-Labs/AppSim) |
 | [AppWorld](https://aicanwhat.com/zh/projects/appworld/) | 环境与评测 | 训练, 评测 | [Source](https://appworld.dev/) |
 | [Audio Step Sequencer](https://aicanwhat.com/zh/projects/gpt5-audio-step-sequencer/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/audio-step-sequencer) |
 | [BIRD-Interact](https://aicanwhat.com/zh/projects/bird-interact/) | 环境与评测 | 评测 | [Source](https://bird-interact.github.io/) |

@@ -14,7 +14,7 @@ Record resource type, intended use, development provenance, and platform indepen
 - A broader range of AI-assisted native mobile and desktop applications. The current collection includes creator accounts and release/store evidence for macOS, iOS, and Android examples.
 - Publicly runnable examples from a broader range of independent creators, with explicit licensing and setup information.
 - Recently released environments and benchmark versions, while preserving the version/date context of earlier papers.
-- Runtime verification of selected accessible examples, recorded as a separate receipt rather than inferred from documentation or an HTTP 200 response.
+- Additional scoped browser observations of accessible examples, recorded as separate receipts rather than inferred from documentation or an HTTP 200 response. The initial two observations cover one game round and one product-search/history flow; see [the method and limits](browser-observations.md).
 - Search indexing and actual AI citations, measured separately from sitemap discovery and submission receipts.
 
 ## Maintenance

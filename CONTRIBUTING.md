@@ -9,6 +9,8 @@ Keep the two catalog dimensions separate:
 
 `source-reviewed` means original material was read. It does not mean the software was run, benchmark results were reproduced, or the project was independently audited. Unknown operating-system support stays untagged; host requirements and target operating systems are different.
 
+Actual browser interactions belong in `data/observations.json`, with concrete steps, visible outcomes, date, environment, original screenshot and untested scope. Preserve `source-reviewed` on the catalog entry. Follow the [browser-observation method](docs/browser-observations.md); do not promote a short interaction into full runtime verification.
+
 Use `resource_kind` to distinguish AI-generated outputs, environments with tasks, environment frameworks, benchmark suites, and static datasets. Games includes virtual worlds; Apps includes software, API simulations, and software-engineering tasks. Dataset platform tags describe the source of its examples, not an executable operating system.
 
 Paper metadata lives in `data/papers.json` and maps back to stable catalog IDs. Preserve the original title and author order; dates are first arXiv submission dates. Journal dates and identifiers are separate fields. Keep summaries concise and original, and do not describe old model scores as current performance.

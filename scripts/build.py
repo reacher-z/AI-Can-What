@@ -16,6 +16,7 @@ from xml.sax.saxutils import escape as xml_escape
 from catalog_docs import build_catalog_docs
 from papers import CORPORATE_AUTHORS, bibliography, bibtex, read_papers
 from registries import read_registries, registry_page
+from observations import read_observations, render_observations
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
@@ -49,11 +50,12 @@ def read_inputs():
             assert isinstance(e[key], str) and e[key].strip(), (e['id'], key)
         if e['implementation'] in {'ai-built', 'ai-assisted'}:
             assert e.get('provenance_source'), f"Missing development evidence: {e['id']}"
-        for key in ('creator', 'provenance_note_en', 'provenance_note_zh'):
+        for key in ('creator', 'provenance_note_en', 'provenance_note_zh', 'license_en', 'license_zh'):
             if key in e:
                 assert isinstance(e[key], str) and e[key].strip(), (e['id'], key)
         assert bool(e.get('provenance_note_en')) == bool(e.get('provenance_note_zh')), e['id']
-        for key in ('primary_url', 'repo_url', 'demo_url', 'paper_url', 'provenance_source', 'download_url', 'source_file_url'):
+        assert bool(e.get('license_en')) == bool(e.get('license_zh')), e['id']
+        for key in ('primary_url', 'repo_url', 'demo_url', 'paper_url', 'provenance_source', 'download_url', 'source_file_url', 'license_url'):
             value = e.get(key)
             if value is None and key != 'primary_url':
                 continue
@@ -81,16 +83,17 @@ def use_pills(entry, language):
     return ''.join(f'<span class="pill {value}">{USES[value][index]}</span>' for value in entry['uses'])
 
 
-def render_row(entry, language):
+def render_row(entry, language, observed=False):
     zh = language == 'zh'
     search = ' '.join([entry['name'], entry['description_en'], entry['description_zh'], entry['content_type'], *KINDS[entry['resource_kind']], *entry['uses'], *entry['platforms']]).lower()
     platforms = ', '.join(PLATFORMS[p] for p in entry['platforms']) or ('见上游说明' if zh else 'See upstream')
+    observation_link = (f'<a class="observation-link" href="{project_path(language, entry)}#browser-observations">' + ('有浏览器操作记录' if zh else 'Browser observation recorded') + '</a>') if observed else ''
     return f'''<tr data-project="{entry['id']}" data-kind="{entry['resource_kind']}" data-search="{escape(search, quote=True)}" data-uses="{' '.join(entry['uses'])}" data-platforms="{' '.join(entry['platforms'])}">
 <td class="project-cell"><a class="project-name" href="{project_path(language, entry)}">{escape(entry['name'])}<span class="arrow" aria-hidden="true">↗</span></a><span class="project-kind">{KINDS[entry['resource_kind']][int(zh)]}</span><p class="project-description">{escape(entry['description_' + language])}</p></td>
 <td class="type-cell"><span class="type-label">{TYPES[entry['content_type']][int(zh)]}</span></td>
 <td class="use-cell">{use_pills(entry, language)}</td>
 <td class="platform-cell">{escape(platforms)}</td>
-<td class="evidence-cell"><a class="evidence-link" href="{escape(entry['primary_url'], quote=True)}">{('查看原始来源 ↗' if zh else 'Original source ↗')}</a><time class="review-date" datetime="{entry['reviewed_at']}">{entry['reviewed_at']}</time></td>
+<td class="evidence-cell"><a class="evidence-link" href="{escape(entry['primary_url'], quote=True)}">{('查看原始来源 ↗' if zh else 'Original source ↗')}</a><time class="review-date" datetime="{entry['reviewed_at']}">{entry['reviewed_at']}</time>{observation_link}</td>
 </tr>'''
 
 
@@ -101,7 +104,7 @@ def page_shell(config, language, path, title, description, body, *, items=None, 
     locale = 'zh-CN' if zh else 'en'
     homepage = origin + '/'
     graph = [
-        {'@type': 'WebSite', '@id': homepage + '#website', 'url': homepage, 'name': config['name'], 'inLanguage': ['en', 'zh-CN']},
+        {'@type': 'WebSite', '@id': homepage + '#website', 'url': homepage, 'name': config['name'], 'inLanguage': ['en', 'zh-CN'], 'sameAs': [config['repository']]},
         {'@type': 'CollectionPage' if items is not None else 'WebPage', '@id': canonical + '#page', 'url': canonical,
          'name': title, 'description': description, 'inLanguage': locale, 'isPartOf': {'@id': homepage + '#website'}},
     ]
@@ -156,7 +159,7 @@ def page_shell(config, language, path, title, description, body, *, items=None, 
 '''
 
 
-def directory(config, entries, language, category=None, platform=None):
+def directory(config, entries, language, category=None, platform=None, observed_ids=()):
     zh = language == 'zh'
     index = int(zh)
     visible = sorted((e for e in entries if (not category or e['content_type'] == category) and (not platform or platform in e['platforms'])), key=lambda e: e['name'].casefold())
@@ -170,7 +173,7 @@ def directory(config, entries, language, category=None, platform=None):
         }
         heading = headings[category][index]
     else:
-        title = config['name']
+        title = 'AI 软件作品与 Agent 环境目录' if zh else 'AI-built software & agent environments'
         heading = 'AI 做出的软件，<br><em>AI 学习的环境。</em>' if zh else 'Software it builds.<br><em>Worlds it learns in.</em>'
     description = ('探索 AI 参与开发的软件，以及 Agent 训练与评测所用的环境、基准和数据集。每条记录都有原始来源。' if zh else
                    'Explore AI-built software, agent environments, benchmarks, and datasets. Every entry links back to its source.')
@@ -203,7 +206,7 @@ def directory(config, entries, language, category=None, platform=None):
     options_kinds = ''.join(f'<option value="{key}">{labels[index]}</option>' for key, labels in KINDS.items())
     options_platforms = ''.join(f'<option value="{key}">{label}</option>' for key, label in PLATFORMS.items())
     platform_control = '' if platform else f'<label class="visually-hidden" for="platform-filter">{("平台" if zh else "Platform")}</label><select id="platform-filter"><option value="">{("所有平台" if zh else "All platforms")}</option>{options_platforms}</select>'
-    rows = '\n'.join(render_row(e, language) for e in visible)
+    rows = '\n'.join(render_row(e, language, e['id'] in observed_ids) for e in visible)
     body = f'''<section class="hero"><div><p class="eyebrow">{('AI 软件与 Agent 环境目录' if zh else 'THE SOFTWARE & AGENT ENVIRONMENT INDEX')}</p><h1>{heading}</h1><p class="hero-copy">{description}</p></div><aside class="hero-note"><div class="two-lanes"><span>{('看 AI 构建' if zh else 'See it build')}</span><span class="lane-arrow" aria-hidden="true">↔</span><span>{('看 AI 行动' if zh else 'See it act')}</span></div><p>{('同一个目录，两个视角。浏览有据可查的作品，找到可供 Agent 训练与评测的环境。' if zh else 'Two sides of the same question. Discover what people build with AI, and where agents learn to get things done.')}</p><p><span class="pill">{('原始来源已查阅' if zh else 'Primary sources reviewed')}</span></p></aside></section>
 <div class="stats"><span><strong>{len(entries)}</strong> {('个项目' if zh else 'projects')}</span><span><strong>{counts['game']}</strong> {('游戏与虚拟世界' if zh else 'games / worlds')}</span><span><strong>{counts['website']}</strong> {('网站' if zh else 'websites')}</span><span><strong>{counts['app']}</strong> {('应用' if zh else 'apps')}</span><span class="updated">{('来源核查' if zh else 'Sources reviewed')} · {max(e['reviewed_at'] for e in entries)}</span></div>
 <section class="directory" aria-labelledby="directory-title"><div class="directory-top"><div class="directory-heading"><h2 id="directory-title">{('浏览目录' if zh else 'Explore the directory')}</h2><a href="{config['repository']}/issues/new?template=resource.yml">{('建议一个项目' if zh else 'Suggest a project')} ↗</a></div><nav class="category-tabs" aria-label="{('项目类型' if zh else 'Project category')}">{''.join(tabs)}</nav>{platform_nav}
@@ -215,7 +218,7 @@ def directory(config, entries, language, category=None, platform=None):
     return title, description, body, visible
 
 
-def detail_page(config, entry, entries, language):
+def detail_page(config, entry, entries, language, observations=()):
     zh = language == 'zh'
     index = int(zh)
     platforms = ', '.join(PLATFORMS[p] for p in entry['platforms']) or ('请查阅上游说明' if zh else 'Consult upstream documentation')
@@ -235,14 +238,23 @@ def detail_page(config, entry, entries, language):
         author_note += '<p><strong>' + ('创作者：' if zh else 'Creator: ') + '</strong>' + escape(entry['creator']) + '</p>'
     if entry.get('provenance_note_' + language):
         author_note += '<p>' + escape(entry['provenance_note_' + language]) + '</p>'
+    if entry.get('license_' + language):
+        author_note += '<p><strong>' + ('许可说明：' if zh else 'License note: ') + '</strong>' + escape(entry['license_' + language])
+        if entry.get('license_url'):
+            author_note += ' <a href="' + escape(entry['license_url'], quote=True) + '">' + ('上游许可' if zh else 'Upstream license') + ' ↗</a>'
+        author_note += '</p>'
+    review_note = ('本条目依据原始项目材料整理，未独立运行或复现结果。AI 参与开发的描述来自作者说明；上游版本、运行条件和许可应以原始来源为准。' if zh else 'This entry was reviewed against original project material. We have not independently run the software or reproduced its results. AI-development claims are author-reported; check upstream for current versions, setup requirements, and licenses.')
+    if observations:
+        review_note = ('本条目依据原始项目材料整理，并附下方限定范围的浏览器操作记录。其他功能及论文结果未独立验证。AI 参与开发的描述来自作者说明；版本、配置和许可以上游为准。' if zh else 'This entry combines original-source review with the limited browser observations below. Other features and research results have not been independently verified. AI-development claims remain author-reported; consult upstream for versions, setup and licenses.')
+    observation_html = render_observations(observations, language)
     body = f'''<nav class="breadcrumb" aria-label="{('当前位置' if zh else 'Breadcrumb')}"><a href="{lang_path(language)}">{('目录' if zh else 'Directory')}</a><span>/</span><a href="{category_path}">{TYPES[entry['content_type']][index]}</a><span>/</span><span aria-current="page">{escape(entry['name'])}</span></nav>
 <header class="detail-header"><p class="eyebrow">{TYPES[entry['content_type']][index]} · {('项目档案' if zh else 'PROJECT NOTES')}</p><h1>{escape(entry['name'])}</h1><p class="lead">{escape(entry['description_' + language])}</p><div class="detail-tags">{use_pills(entry, language)}<span class="pill">{escape(platforms)}</span></div></header>
-<div class="detail-layout"><div class="detail-content"><section><h2>{('它可以用来做什么？' if zh else 'What can you do with it?')}</h2><p>{escape(entry['enables_' + language])}</p></section><section><h2>{('使用前需要知道什么？' if zh else 'What should you know before using it?')}</h2><p>{escape(entry['limits_' + language])}</p></section><section><h2>{('我们核查了什么？' if zh else 'What is verified here?')}</h2>{author_note}<p>{('本条目依据原始项目材料整理，未独立运行或复现结果。AI 参与开发的描述来自作者说明；上游版本、运行条件和许可应以原始来源为准。' if zh else 'This entry was reviewed against original project material. We have not independently run the software or reproduced its results. AI-development claims are author-reported; check upstream for current versions, setup requirements, and licenses.')}</p><dl class="facts"><dt>{('资源类型' if zh else 'Resource type')}</dt><dd>{KINDS[entry['resource_kind']][index]}</dd><dt>{('开发方式' if zh else 'Provenance')}</dt><dd>{provenance}</dd><dt>{('来源核查' if zh else 'Reviewed')}</dt><dd><time datetime="{entry['reviewed_at']}">{entry['reviewed_at']}</time></dd><dt>{('平台' if zh else 'Platforms')}</dt><dd>{escape(platforms)}</dd></dl></section></div><aside class="source-card"><h2>{('原始链接' if zh else 'Go to the source')}</h2>{source_links}<p class="updated-badge">{('外部链接 · 上游项目负责维护' if zh else 'External links · maintained upstream')}</p></aside></div>
+<div class="detail-layout"><div class="detail-content"><section><h2>{('它可以用来做什么？' if zh else 'What can you do with it?')}</h2><p>{escape(entry['enables_' + language])}</p></section><section><h2>{('使用前需要知道什么？' if zh else 'What should you know before using it?')}</h2><p>{escape(entry['limits_' + language])}</p></section><section><h2>{('我们核查了什么？' if zh else 'What is verified here?')}</h2>{author_note}<p>{review_note}</p><dl class="facts"><dt>{('资源类型' if zh else 'Resource type')}</dt><dd>{KINDS[entry['resource_kind']][index]}</dd><dt>{('开发方式' if zh else 'Provenance')}</dt><dd>{provenance}</dd><dt>{('来源核查' if zh else 'Reviewed')}</dt><dd><time datetime="{entry['reviewed_at']}">{entry['reviewed_at']}</time></dd><dt>{('平台' if zh else 'Platforms')}</dt><dd>{escape(platforms)}</dd></dl></section>{observation_html}</div><aside class="source-card"><h2>{('原始链接' if zh else 'Go to the source')}</h2>{source_links}<p class="updated-badge">{('外部链接 · 上游项目负责维护' if zh else 'External links · maintained upstream')}</p></aside></div>
 <h2 class="bottom-heading">{('继续浏览同类项目' if zh else 'More in this category')}</h2><div class="related">{related_html}</div>'''
     return body
 
 
-def about_page(config, language):
+def about_page(config, language, observations=(), entries=()):
     zh = language == 'zh'
     if zh:
         title = '关于目录与收录方法'
@@ -252,12 +264,19 @@ def about_page(config, language):
         title = 'About & method'
         description = 'How AI Can What reviews evidence and separates AI-built showcases from agent training and evaluation environments.'
         content = f'''<h1>Curiosity,<br><em>with receipts.</em></h1><p class="lead">AI Can What? collects software made with AI, agent environments, benchmarks, and datasets.</p><h2>Two kinds of entries. One directory.</h2><p>A Showcase documents AI-built or AI-assisted software with an author source. Training and Evaluation describe what an environment is for; they do not imply that AI wrote it. Development provenance and intended use are recorded separately, with unknown facts left unknown.</p><h2>Is a dataset a runnable environment?</h2><p>No. Static datasets can provide screenshots, trajectories, or task examples without an interactive system. Every entry labels its resource type. Platform tags can describe an application target or the source of dataset screenshots; consult the entry for its actual setup.</p><h2>How are entries selected?</h2><ol><li>Start with the author’s project page, repository, or original paper.</li><li>Describe what people can do with the project, its supported platforms, and practical limits.</li><li>Use AI-built, AI-assisted, or platform labels only when the original material supports them.</li><li>Record the source-review date and preserve links to code, papers, and author demos.</li></ol><h2>What does source-reviewed mean?</h2><p>We read the project material. We have not independently installed every application, run every environment, or reproduced paper results. This is a directory, not a quality ranking. Consult upstream documentation for current setup requirements, licenses, and appropriate use.</p><h2>Who provides the demos?</h2><p>Code, environments, and external demos belong to their original creators. This directory provides descriptions and navigation. It does not claim to host every project or imply endorsement by another institution.</p><h2>How can I inspect, reuse, or correct an entry?</h2><p>Every project has its own URL, source-review date, and original evidence. Download the <a href="/catalog.json">JSON catalog</a> or inspect the website source and changes on <a href="{config['repository']}">GitHub</a>. To report an error or suggest a project, <a href="{config['repository']}/issues/new?template=resource.yml">send a source-backed suggestion</a>.</p><h2>Are upstream registry records individually reviewed?</h2><p>The <a href="/discover/">upstream registry index</a> automatically captures packages, environment manifests and configurations with source and version metadata. It supports discovery; individual records have not undergone project-level review or execution verification. Versions and forks can overlap, so its count is not additive with the reviewed project count.</p><h2>Related directory</h2><p><a href="https://awesomerea.org/resources/">AwesomeREA</a> collects reverse-engineering tools, integrations, and software-reconstruction research for people studying how software works and how to rebuild it.</p>'''
+    if observations:
+        names = {entry['id']: entry['name'] for entry in entries}
+        links = ''.join('<li><a href="' + lang_path(language, '/projects/' + record['project_id'] + '/') + '#' + record['id'] + '">' + escape(names[record['project_id']]) + '</a> · ' + record['observed_on'] + '</li>' for record in observations)
+        content += ('<h2>浏览器操作记录覆盖什么？</h2><p>部分条目附有实际操作步骤、可见结果、日期和截图。它们针对当时的公开演示，不是整个应用的质量认证，也不证明 AI 开发方式、源码版本或未测试功能。</p>' if zh else '<h2>What do browser observations cover?</h2><p>Selected entries include actual interaction steps, visible results, dates and screenshots. These describe the public demo at that time, not whole-application certification, proof of AI authorship, a deployed source version, or untested features.</p>')
+        content += '<ul>' + links + '</ul><p><a href="/observations.json">' + ('下载操作记录 JSON' if zh else 'Download observation JSON') + '</a></p>'
     return title, description, '<article class="prose">' + content + '</article>'
 
 
 def build():
     config, document, entries = read_inputs()
     paper_document, papers = read_papers(ROOT, entries)
+    observation_document, observations = read_observations(ROOT, entries)
+    observed_ids = {record['project_id'] for record in observations}
     registry_sources, registry_document, sources, registry_records = read_registries(ROOT)
     OUT.mkdir(exist_ok=True)
     # This directory is a generated build artifact, owned entirely by this builder.
@@ -270,20 +289,20 @@ def build():
     pages = {}
     for language in ('en', 'zh'):
         for category in (None, *TYPES):
-            title, description, body, visible = directory(config, entries, language, category)
+            title, description, body, visible = directory(config, entries, language, category, observed_ids=observed_ids)
             if category and not visible:
                 continue
             path = '/' if not category else '/' + SLUGS[category] + '/'
             pages[lang_path(language, path)] = page_shell(config, language, path, title, description, body, items=visible, asset_revision=revision)
         for platform in PLATFORMS:
-            title, description, body, visible = directory(config, entries, language, 'app', platform)
+            title, description, body, visible = directory(config, entries, language, 'app', platform, observed_ids=observed_ids)
             if visible:
                 path = '/apps/' + platform + '/'
                 pages[lang_path(language, path)] = page_shell(config, language, path, title, description, body, items=visible, asset_revision=revision)
         for entry in entries:
             path = '/projects/' + entry['id'] + '/'
-            pages[lang_path(language, path)] = page_shell(config, language, path, entry['name'], entry['description_' + language], detail_page(config, entry, entries, language), detail=entry, asset_revision=revision)
-        title, description, body = about_page(config, language)
+            pages[lang_path(language, path)] = page_shell(config, language, path, entry['name'], entry['description_' + language], detail_page(config, entry, entries, language, [record for record in observations if record['project_id'] == entry['id']]), detail=entry, asset_revision=revision)
+        title, description, body = about_page(config, language, observations, entries)
         pages[lang_path(language, '/about/')] = page_shell(config, language, '/about/', title, description, body, asset_revision=revision)
         title, description, body = bibliography(papers, entries, language)
         pages[lang_path(language, '/papers/')] = page_shell(config, language, '/papers/', title, description, body, papers=papers, asset_revision=revision)
@@ -299,6 +318,7 @@ def build():
     (OUT / 'sitemap.xml').write_text(sitemap)
     (OUT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {origin}/sitemap.xml\n')
     (OUT / 'catalog.json').write_text(json.dumps(document, ensure_ascii=False, indent=2) + '\n')
+    (OUT / 'observations.json').write_text(json.dumps(observation_document, ensure_ascii=False, indent=2) + '\n')
     (OUT / 'papers.json').write_text(json.dumps(paper_document, ensure_ascii=False, indent=2) + '\n')
     (OUT / 'registry-index.json').write_text(json.dumps(registry_document, ensure_ascii=False, indent=2) + '\n')
     (OUT / 'registry-sources.json').write_text(json.dumps(registry_sources, ensure_ascii=False, indent=2) + '\n')
@@ -309,7 +329,7 @@ def build():
 
 > A source-backed directory of AI-built software and agent training/evaluation environments.
 
-Showcase entries describe author-reported AI development. Training and Evaluation describe intended uses. Resource kinds distinguish interactive environments, frameworks, benchmark suites, and static datasets. Source-reviewed means original material was read, not independently executed. Unknown development provenance stays unknown.
+Showcase entries describe author-reported AI development. Training and Evaluation describe intended uses. Resource kinds distinguish interactive environments, frameworks, benchmark suites, and static datasets. Source-reviewed means original material was read, not independently executed. Selected entries separately record limited browser interactions, dates, screenshots and untested scope; these are not full application verification. Unknown development provenance stays unknown.
 
 ## Browse
 - [Directory]({origin}/)
@@ -323,11 +343,12 @@ Showcase entries describe author-reported AI development. Training and Evaluatio
 - [BibTeX citations]({origin}/references.bib)
 - [中文目录]({origin}/zh/)
 - [Machine-readable catalog]({origin}/catalog.json)
+- [Scoped browser observations]({origin}/observations.json)
 - [Source repository]({config['repository']})
 ''')
     (OUT / '404.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Page not found · AI Can What?</title><body><h1>That page is not in the directory.</h1><p><a href="/">Browse AI Can What?</a></p></body></html>')
-    build_catalog_docs(ROOT, config, entries, papers, TYPES, KINDS, PLATFORMS, USES, sources, registry_document)
-    print(json.dumps({'entries': len(entries), 'papers': len(papers), 'registry_records': len(registry_records), 'pages': len(pages), 'origin': origin, 'output': str(OUT)}))
+    build_catalog_docs(ROOT, config, entries, papers, TYPES, KINDS, PLATFORMS, USES, sources, registry_document, observations)
+    print(json.dumps({'entries': len(entries), 'papers': len(papers), 'browser_observations': len(observations), 'registry_records': len(registry_records), 'pages': len(pages), 'origin': origin, 'output': str(OUT)}))
 
 
 if __name__ == '__main__':

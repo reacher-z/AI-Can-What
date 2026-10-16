@@ -11,6 +11,7 @@ import xml.etree.ElementTree as ET
 from build import OUT, PLATFORMS, read_inputs, lang_path, project_path
 from papers import read_papers
 from registries import read_registries
+from observations import read_observations
 
 
 class Page(HTMLParser):
@@ -18,6 +19,7 @@ class Page(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.hrefs, self.links, self.ids, self.projects, self.papers, self.registries, self.graphs = [], [], set(), [], [], [], []
         self.meta, self.language, self.h1 = {}, '', 0
+        self.observations, self.images = [], []
         self.json_parts, self.json_open = [], False
         self.feed(html)
 
@@ -32,6 +34,8 @@ class Page(HTMLParser):
         if a.get('data-project'): self.projects.append(a['data-project'])
         if a.get('data-paper'): self.papers.append(a['data-paper'])
         if a.get('data-registry'): self.registries.append(a['data-registry'])
+        if a.get('data-observation'): self.observations.append(a['data-observation'])
+        if tag == 'img': self.images.append(a)
         if tag == 'script' and a.get('type') == 'application/ld+json': self.json_open, self.json_parts = True, []
 
     def handle_data(self, text):
@@ -47,6 +51,8 @@ def main():
     config, _, entries = read_inputs()
     _, papers = read_papers(OUT.parent, entries)
     _, _, _, registry_records = read_registries(OUT.parent)
+    observation_document, observations = read_observations(OUT.parent, entries)
+    assert json.loads((OUT / 'observations.json').read_text()) == observation_document
     origin = config['origin'].rstrip('/')
     urls = [node.text for node in ET.parse(OUT / 'sitemap.xml').findall('{*}url/{*}loc')]
     assert len(urls) == len(set(urls))
@@ -95,6 +101,13 @@ def main():
         for entry in entries:
             page = pages[project_path(language, entry)]
             assert entry['primary_url'] in page.hrefs, entry['id']
+            project_observations = [record for record in observations if record['project_id'] == entry['id']]
+            assert page.observations == [record['id'] for record in project_observations], entry['id']
+            for record in project_observations:
+                shot = record['screenshot']
+                assert any(img.get('src') == shot['url'] and img.get('alt') == shot['caption_' + language] for img in page.images), record['id']
+                assert (OUT / shot['url'][1:]).read_bytes() == (OUT.parent / 'static' / shot['url'][1:]).read_bytes()
+                assert record['target_url'] in page.hrefs and record['id'] in page.ids, record['id']
         assert set(pages[lang_path(language, '/papers/')].papers) == {paper['id'] for paper in papers}
         assert set(pages[lang_path(language, '/discover/')].registries) == {record['id'] for record in registry_records}
     robots = RobotFileParser()
@@ -106,7 +119,7 @@ def main():
     assert image[:8] == b'\x89PNG\r\n\x1a\n' and struct.unpack('>II', image[16:24]) == (1200, 630), 'Invalid sharing image'
     assert 'noindex' in (OUT / '404.html').read_text()
     assert (OUT / 'references.bib').read_text().count('@misc{') == len(papers)
-    print(f'Validated {len(entries)} source-reviewed projects, {len(papers)} papers, {len(registry_records)} separately labeled registry records, {len(urls)} static pages, internal links, bilingual alternates, JSON-LD, citations, and crawler access.')
+    print(f'Validated {len(entries)} source-reviewed projects, {len(papers)} papers, {len(observations)} scoped browser observations, {len(registry_records)} separately labeled registry records, {len(urls)} static pages, internal links, bilingual alternates, JSON-LD, citations, and crawler access.')
 
 
 if __name__ == '__main__':

@@ -1678,8 +1678,8 @@
       "repo_url": "https://github.com/openai/procgen",
       "demo_url": null,
       "paper_url": "https://arxiv.org/abs/1912.01588",
-      "limits_en": "The maintenance-mode README lists older Python 3.7–3.10 builds, 64-bit platforms and an AVX-capable CPU. Compatibility with other setups is unverified here. Code is MIT; bundled assets include distinct attribution licenses.",
-      "limits_zh": "项目处于维护模式，README 列出较旧的 Python 3.7–3.10 构建、64 位平台和 AVX CPU 要求；本次未验证其他配置的兼容性。代码采用 MIT，内置素材包含独立的署名许可。",
+      "limits_en": "The maintenance-mode README lists older Python 3.7–3.10 builds, 64-bit platforms and an AVX-capable CPU. Compatibility with other setups is unverified here. Code is MIT; bundled assets include distinct attribution licenses. Procgen2 is a separate community rewrite; benchmark equivalence has not been established.",
+      "limits_zh": "项目处于维护模式，README 列出较旧的 Python 3.7–3.10 构建、64 位平台和 AVX CPU 要求；本次未验证其他配置的兼容性。代码采用 MIT，内置素材包含独立的署名许可。 Procgen2 是独立的社区重写版本，尚未确认基准等价性。",
       "enables_en": "Train on selected level seeds and evaluate on new seeds to study generalization in arcade-style control.",
       "enables_zh": "在指定关卡种子上训练，并在新种子上评估街机操作策略的泛化能力。",
       "resource_kind": "benchmark-suite",
@@ -1700,6 +1700,10 @@
         {
           "url": "https://arxiv.org/abs/1912.01588",
           "supports": "Paper defines procedural generation as a means to evaluate RL generalization."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Procgen2#readme",
+          "supports": "Identifies Procgen2 as a separate rewrite; original Procgen results are not automatically applicable."
         }
       ],
       "reviewed_at": "2026-10-16",
@@ -2042,8 +2046,8 @@
       "repo_url": "https://github.com/openai/gpt-5-coding-examples",
       "demo_url": "https://gpt5-coding-examples.vercel.app/tic-tac-toe-game/",
       "paper_url": null,
-      "limits_en": "The computer opponent is game logic including minimax, not an LLM service. It is a showcase without a benchmark protocol. Hosted HTML returned 200; strategy correctness was not tested. Repository code is MIT.",
-      "limits_zh": "电脑对手使用包含 minimax 的游戏逻辑，并非 LLM 服务。项目属于展示作品，没有基准协议。托管 HTML 返回 200，未验证策略正确性。仓库代码采用 MIT。",
+      "limits_en": "The computer opponent uses game logic including minimax, not an LLM service. This showcase has no benchmark protocol. A separate browser observation covers one local two-player win; opponent strategy and other modes were not tested. Repository code is MIT.",
+      "limits_zh": "电脑对手使用包含 minimax 的游戏逻辑，并非 LLM 服务。该展示作品没有基准协议。独立浏览器记录覆盖一局本地双人获胜过程；未测试电脑策略及其他模式。仓库代码采用 MIT。",
       "enables_en": "Examine generated game-state handling, a computer opponent and responsive board UI.",
       "enables_zh": "研究生成的游戏状态管理、电脑对手和响应式棋盘界面。",
       "resource_kind": "ai-generated-output",
@@ -2063,7 +2067,7 @@
         },
         {
           "url": "https://gpt5-coding-examples.vercel.app/tic-tac-toe-game/",
-          "supports": "Hosted HTML returned HTTP 200 and matched the published app file during this source review; no JavaScript or app interaction was executed."
+          "supports": "Hosted HTML was inspected during source review. Later browser interactions are documented separately in data/observations.json; no deployed source commit was established."
         },
         {
           "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/LICENSE",
@@ -3207,7 +3211,7 @@
         },
         {
           "url": "https://aldi-prices.lawruk.com/",
-          "supports": "The hosted application shell returned HTTP 200 on the review date; data calculations and rendering were not independently tested."
+          "supports": "The public application shell was inspected. Later search and history-page interactions are recorded separately in data/observations.json; prices and calculations were not validated."
         }
       ],
       "platforms": [
@@ -4316,6 +4320,1027 @@
           "supports": "Official Pro dataset separates B2B/B2C and interactive modes under CC BY-NC 4.0."
         }
       ]
+    },
+    {
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "gamedevbench",
+      "name": "GameDevBench",
+      "description_en": "An executable benchmark of scoped Godot development tasks involving gameplay logic, interfaces, graphics and animation, with starting projects and engine-level validation.",
+      "description_zh": "由限定范围的 Godot 开发任务组成的可执行基准，覆盖玩法逻辑、界面、图形和动画，并提供初始项目及引擎级验证。",
+      "primary_url": "https://github.com/waynchi/gamedevbench",
+      "repo_url": "https://github.com/waynchi/gamedevbench",
+      "paper_url": "https://arxiv.org/abs/2602.11103",
+      "enables_en": "Evaluate whether a coding agent can modify an existing game project correctly, including tasks that benefit from screenshot or runtime-video feedback.",
+      "enables_zh": "评估编程 Agent 能否正确修改现有游戏项目，包括需要截图或运行视频反馈的任务。",
+      "limits_en": "Tests game development, not an agent's ability to play a game. Official comparisons require exactly Godot 4.4.1 and a pinned task set. Python 3.10+ is required; strict runs document Linux Bubblewrap/Xvfb dependencies. Repository license is Apache 2.0.",
+      "limits_zh": "测试游戏开发，而非 Agent 玩游戏的能力。正式比较要求严格使用 Godot 4.4.1 并固定任务集；需要 Python 3.10+，严格运行模式注明 Linux Bubblewrap/Xvfb 依赖。仓库采用 Apache 2.0。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Godot 4.4.1 plus a Python runner and configured coding agent; optional screenshot/video feedback.",
+      "platform_note": "Godot is the task runtime. Host support and engine export possibilities are not asserted as deployment-platform tags.",
+      "evidence": [
+        {
+          "url": "https://github.com/waynchi/gamedevbench#readme",
+          "supports": "Documents Godot project-editing tasks, starting/reference artifacts, exact engine version, Python requirement and confinement/display dependencies."
+        },
+        {
+          "url": "https://github.com/waynchi/gamedevbench/blob/main/LICENSE",
+          "supports": "Repository declares Apache 2.0."
+        },
+        {
+          "url": "https://arxiv.org/abs/2602.11103",
+          "supports": "Paper distinguishes multimodal game development tasks and visual feedback from game-playing evaluation."
+        }
+      ]
+    },
+    {
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "gamecraft-bench",
+      "name": "GameCraft-Bench",
+      "description_en": "A benchmark for generating complete playable 2D Godot projects from specifications, evaluated through launch checks, replayed player inputs and multimodal rubric scoring.",
+      "description_zh": "根据规格生成完整可玩二维 Godot 项目的基准，通过启动检查、玩家输入重放和多模态评分标准进行评估。",
+      "primary_url": "https://github.com/FreedomIntelligence/gamecraft-bench",
+      "repo_url": "https://github.com/FreedomIntelligence/gamecraft-bench",
+      "paper_url": "https://arxiv.org/abs/2606.17861",
+      "enables_en": "Measure whether a coding agent delivers a coherent game artifact whose mechanics and presentation work during observed interaction.",
+      "enables_zh": "衡量编程 Agent 能否交付完整一致的游戏，并在实际观察的交互中实现玩法与表现要求。",
+      "limits_en": "Covers 2D Godot generation, not general 3D/Unity/Unreal development or subjective fun. The documented setup pins Godot 4.6.2, Python 3.12+, Harbor and Linux display/recording tools. Scoring uses a model judge. Code is Apache 2.0; asset licenses are recorded separately.",
+      "limits_zh": "覆盖二维 Godot 游戏生成，并不代表通用三维、Unity/Unreal 开发或主观乐趣评测。文档固定 Godot 4.6.2，要求 Python 3.12+、Harbor 及 Linux 显示和录制工具；评分使用模型评审。代码采用 Apache 2.0，素材许可分别记录。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Harbor with a local-subprocess environment, Godot, Xvfb/xdotool/ffmpeg and configured solver/judge providers.",
+      "platform_note": "The browser dashboard is an inspection interface, not the generated game's platform classification.",
+      "evidence": [
+        {
+          "url": "https://github.com/FreedomIntelligence/gamecraft-bench#readme",
+          "supports": "Documents complete game submission, replayable traces, judge-based evaluation, pinned Godot setup and explicit 2D scope."
+        },
+        {
+          "url": "https://github.com/FreedomIntelligence/gamecraft-bench/blob/main/pyproject.toml",
+          "supports": "Package requires Python 3.12+ and declares Apache 2.0."
+        },
+        {
+          "url": "https://github.com/FreedomIntelligence/gamecraft-bench/blob/main/LICENSE",
+          "supports": "Repository code uses Apache 2.0."
+        },
+        {
+          "url": "https://arxiv.org/abs/2606.17861",
+          "supports": "Paper defines end-to-end artifact completeness and interaction-grounded evaluation."
+        }
+      ]
+    },
+    {
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "v-gamegym",
+      "name": "V-GameGym (SKYLENAGE-GameCodeGym)",
+      "description_en": "A Pygame-generation dataset and evaluation toolkit with natural-language requirements, reference code and model-based scoring of generated code, screenshots and short gameplay recordings.",
+      "description_zh": "Pygame 生成数据集与评估工具，包含自然语言要求、参考代码，并通过模型评估生成代码、截图及短时游戏录像。",
+      "primary_url": "https://github.com/alibaba/SKYLENAGE-GameCodeGym",
+      "repo_url": "https://github.com/alibaba/SKYLENAGE-GameCodeGym",
+      "paper_url": "https://arxiv.org/abs/2509.20136",
+      "enables_en": "Compare code models on generating visual game programs and inspect how code-level and recorded visual quality differ.",
+      "enables_zh": "比较代码模型生成可视化游戏程序的能力，并分析代码质量与录制画面质量的差异。",
+      "limits_en": "Measures generated artifacts with model judges, not long-horizon game-playing policies. README command examples differ from the shipped script arguments, so paths and judge endpoints need configuration. Requires Python 3.10+, Pygame and model access. Code and dataset declare Apache 2.0.",
+      "limits_zh": "使用模型评审生成产物，并非评测长时游戏策略。README 命令示例与已发布脚本参数不同，需要配置路径和评审端点。要求 Python 3.10+、Pygame 和模型访问。代码及数据均声明 Apache 2.0。",
+      "resource_kind": "dataset-and-benchmark",
+      "runtime": "Public JSONL requirements/code dataset plus Python generation, recording and evaluation scripts; text and visual judge endpoints required.",
+      "platform_note": "No operating system is inferred from Pygame; this is not a browser-game benchmark.",
+      "evidence": [
+        {
+          "url": "https://github.com/alibaba/SKYLENAGE-GameCodeGym#readme",
+          "supports": "Official repository identifies V-GameGym, documents Pygame generation/recording/evaluation and declares Apache 2.0."
+        },
+        {
+          "url": "https://github.com/alibaba/SKYLENAGE-GameCodeGym/blob/main/game_evaluator.py",
+          "supports": "Public source implements code/screenshot/video model scoring and requires model-name, visual/text endpoints rather than the README's illustrative input/output flags."
+        },
+        {
+          "url": "https://huggingface.co/datasets/alibabagroup/SKYLENAGE-GameCodeGym",
+          "supports": "Author-linked ungated dataset exposes requirements, reference code and metadata under Apache 2.0."
+        },
+        {
+          "url": "https://arxiv.org/abs/2509.20136",
+          "supports": "Original paper defines the visual game-generation evaluation setting."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "ai-assisted",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "appsim-bench",
+      "name": "AppSim-Bench",
+      "description_en": "A mobile GUI benchmark built from controllable simulated Android apps, with task-relevant interaction flows, seeded backend data and outcome checks.",
+      "description_zh": "基于可控模拟 Android 应用的移动 GUI 基准，提供与任务相关的交互流程、预置后端数据和结果检查。",
+      "primary_url": "https://github.com/Acrab-Agentic-Labs/AppSim",
+      "repo_url": "https://github.com/Acrab-Agentic-Labs/AppSim",
+      "paper_url": "https://arxiv.org/abs/2609.07712",
+      "provenance_source": "https://arxiv.org/html/2609.07712v1",
+      "provenance_note_en": "The authors explicitly describe simulated-app implementation as coding-agent-assisted, with human requirements, inspection and verification. This is not a product-wide autonomous-authorship claim.",
+      "provenance_note_zh": "作者明确说明模拟应用由编程 Agent 辅助实现，人类负责需求、检查和验证；这不代表整个项目由 AI 自主开发。",
+      "enables_en": "Evaluate phone agents on repeatable app workflows without relying on changing commercial-app content and accounts.",
+      "enables_zh": "在可重复的应用流程上评估手机 Agent，减少对不断变化的商业应用内容和账户状态的依赖。",
+      "limits_en": "These are research simulations, not the named commercial services. Build/install the separate app APKs and configure an Android device/emulator; the documented benchmark uses Android 13/API 33 and Python 3.11. Windows/macOS emulator guidance remains a TODO. No project-level framework license was found; app terms must be checked separately.",
+      "limits_zh": "这些是研究模拟应用，不是对应名称的商业服务。需单独构建或安装应用 APK 并配置 Android 设备或模拟器；文档基准使用 Android 13/API 33 和 Python 3.11。Windows/macOS 模拟器说明仍为 TODO。未找到框架项目级许可，各应用条款需分别检查。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python runner using ADB with separately published Android app projects and controlled task state.",
+      "platform_note": "Android is the task target; Windows/macOS/Linux host setup does not imply tasks for those operating systems.",
+      "evidence": [
+        {
+          "url": "https://github.com/Acrab-Agentic-Labs/AppSim#readme",
+          "supports": "Public framework documents evaluation, Android 13 emulator setup, Python 3.11 and separately linked app repositories; Windows/macOS emulator instructions are incomplete."
+        },
+        {
+          "url": "https://github.com/Acrab-Agentic-Labs/AppSim-JD",
+          "supports": "Author-linked app repository exposes an Android Gradle project and evaluation assets."
+        },
+        {
+          "url": "https://github.com/Acrab-Agentic-Labs/AppSim-Amazon",
+          "supports": "Author-linked simulated app repository exposes Android source and release materials."
+        },
+        {
+          "url": "https://arxiv.org/html/2609.07712v1",
+          "supports": "Authors describe human-led coding-agent assistance, controlled simulated apps, Android runtime and outcome verification."
+        }
+      ]
+    },
+    {
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "gamecode4d",
+      "name": "GameCode4D (Code2Games)",
+      "description_en": "A game-world generation benchmark with public prompts and Blender scene artifacts, accompanied by Code2Games code for scene analysis, asset placement and gameplay-world construction.",
+      "description_zh": "公开提示与 Blender 场景产物的游戏世界生成基准，配有 Code2Games 的场景分析、素材放置和玩法世界构建代码。",
+      "primary_url": "https://huggingface.co/datasets/AIGeeksGroup/GameCode4D",
+      "repo_url": "https://github.com/AIGeeksGroup/Code2Games",
+      "paper_url": "https://arxiv.org/abs/2610.05033",
+      "enables_en": "Inspect generated game-world assets and study how a shared scene representation connects spatial layout with gameplay intentions.",
+      "enables_zh": "查看生成的游戏世界素材，并研究共享场景表示如何连接空间布局与玩法意图。",
+      "limits_en": "The current data card lists 20 prompt variants but exposes 16 .blend files; the paper evaluated 10 prompts. Public code documents Blender outputs, not a complete released UE5 evaluation pipeline. Requires external scenes, animated characters and asset/model services. No code or dataset license was stated in the reviewed sources.",
+      "limits_zh": "当前数据卡列出 20 个提示变体，但公开 16 个 .blend 文件；论文评估的是 10 个提示。公开代码说明 Blender 输出，不能视为完整发布的 UE5 评测流程。需要外部场景、动画角色及素材或模型服务。已核查来源未注明代码或数据许可。",
+      "resource_kind": "dataset-and-benchmark",
+      "runtime": "Python 3.11, Blender 4.2, Code2Worlds scene input, animated FBX character and Hunyuan3D/DashScope components for the documented generation pipeline.",
+      "platform_note": "Blender/Unreal are research tooling; no desktop deployment platform is inferred from them.",
+      "evidence": [
+        {
+          "url": "https://huggingface.co/datasets/AIGeeksGroup/GameCode4D",
+          "supports": "Public data card lists 20 prompt variants and matching target filenames; inspected repository lists 16 Blender artifacts and no license declaration."
+        },
+        {
+          "url": "https://github.com/AIGeeksGroup/Code2Games#readme",
+          "supports": "Official code documents external dependencies and generation of gaming_world.blend/gameplay.mp4, not a complete public Unreal evaluation runner."
+        },
+        {
+          "url": "https://arxiv.org/abs/2610.05033",
+          "supports": "Paper introduces the original ten-prompt GameCode4D evaluation and Unreal adaptation research."
+        }
+      ]
+    },
+    {
+      "id": "bash-fighter",
+      "name": "Bash Fighter",
+      "creator": "Bash Entertainment",
+      "content_type": "game",
+      "implementation": "ai-assisted",
+      "description_en": "A browser platform fighter with shared arenas, online matches and bots that fill empty player slots.",
+      "description_zh": "提供共享竞技场、在线对战和机器人补位的浏览器平台格斗游戏。",
+      "primary_url": "https://bashfighter.itch.io/bash-fighter",
+      "repo_url": "https://github.com/Bash-Entertainment/bash-fighter",
+      "demo_url": "https://bashfighter.itch.io/bash-fighter",
+      "provenance_source": "https://github.com/Bash-Entertainment/bash-fighter#readme",
+      "enables_en": "Join arena matches or inspect and self-host the published client, simulation and match-server code.",
+      "enables_zh": "参与竞技场对战，或查看并自行部署公开的客户端、模拟核心和对战服务器代码。",
+      "limits_en": "The creator describes an early build with rough edges, and online play depends on a match server. The itch.io page was accessible; the separate bashfighter.com host returned 403 to this research client.",
+      "limits_zh": "作者将其描述为仍有不足的早期版本，在线对战依赖服务器。itch.io 页面可访问，独立站点 bashfighter.com 对本轮研究客户端返回 403。",
+      "provenance_note_en": "The maintainer explicitly says an AI agent performs day-to-day development and wrote most repository code on behalf of a human owner; this is an attributed project statement.",
+      "provenance_note_zh": "维护者明确说明，AI Agent 代表人类所有者承担日常开发并编写了仓库大部分代码；此处保留为项目方声明。",
+      "license_en": "AGPL-3.0; the repository also requires a contributor agreement that permits additional commercial licensing.",
+      "license_zh": "AGPL-3.0；仓库另要求贡献者签署允许额外商业授权的协议。",
+      "license_url": "https://github.com/Bash-Entertainment/bash-fighter/blob/main/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/Bash-Entertainment/bash-fighter#readme",
+          "supports": "Project's explicit disclosure attributes most code and ongoing development to an AI agent; it provides source layout and local runtime instructions."
+        },
+        {
+          "url": "https://bashfighter.itch.io/bash-fighter",
+          "supports": "Creator-controlled HTML5 listing repeats the development disclosure, links the repository and provides the browser artifact."
+        },
+        {
+          "url": "https://github.com/Bash-Entertainment/bash-fighter#license",
+          "supports": "Maintainer documents AGPL-3.0 and contributor-agreement terms."
+        }
+      ],
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "download_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "threejs-quake",
+      "name": "Three.js Quake",
+      "creator": "mrdoob",
+      "content_type": "game",
+      "implementation": "ai-assisted",
+      "description_en": "A Three.js browser port of Quake, with the original game's shareware episode and a public source repository.",
+      "description_zh": "将 Quake 移植到 Three.js 浏览器环境的项目，包含原作共享版章节及公开源码仓库。",
+      "primary_url": "https://github.com/mrdoob/three-quake",
+      "repo_url": "https://github.com/mrdoob/three-quake",
+      "demo_url": "https://mrdoob.github.io/three-quake/",
+      "provenance_source": "https://x.com/mrdoob/status/2015076521531355583",
+      "enables_en": "Try the browser port or study how a classic game engine was adapted to a JavaScript rendering stack.",
+      "enables_zh": "体验浏览器移植版，或研究经典游戏引擎如何适配 JavaScript 渲染环境。",
+      "limits_en": "The AI-development claim concerns the port; id Software created the original game. The repository includes Episode 1 shareware data and requires a registered game's data for full-game content.",
+      "limits_zh": "AI 开发声明针对移植工作，原作由 id Software 创作。仓库包含第一章共享版数据，完整游戏内容需使用正版注册版数据。",
+      "provenance_note_en": "The maintainer's linked development post asks Claude to port Quake to Three.js and shows the resulting implementation; the README credits the port to mrdoob with Claude.",
+      "provenance_note_zh": "维护者链接的开发帖记录了请 Claude 将 Quake 移植到 Three.js 的过程和实现结果，README 也将移植署名为 mrdoob 与 Claude。",
+      "license_en": "GPL-2.0 for code; the original game's shareware/registered asset terms remain separate.",
+      "license_zh": "代码采用 GPL-2.0，原游戏共享版及注册版素材的条款另行适用。",
+      "license_url": "https://github.com/mrdoob/three-quake/blob/main/LICENSE",
+      "evidence": [
+        {
+          "url": "https://x.com/mrdoob/status/2015076521531355583",
+          "supports": "First-party development post documents asking Claude to implement the Three.js port."
+        },
+        {
+          "url": "https://publish.twitter.com/oembed?url=https%3A%2F%2Fx.com%2Fmrdoob%2Fstatus%2F2015076521531355583",
+          "supports": "X's official public oEmbed response returned the maintainer's original post and date."
+        },
+        {
+          "url": "https://github.com/mrdoob/three-quake#readme",
+          "supports": "README cross-links the exact dev log and live artifact, credits id Software, and distinguishes code licensing from game data."
+        },
+        {
+          "url": "https://mrdoob.github.io/three-quake/",
+          "supports": "Public browser artifact returned HTTP 200; no game session was started."
+        }
+      ],
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "download_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "space-defenders",
+      "name": "Space Defenders",
+      "creator": "Jason Leow",
+      "content_type": "game",
+      "implementation": "ai-assisted",
+      "description_en": "A single-player browser arcade game in which a ship moves horizontally and shoots descending aliens.",
+      "description_zh": "玩家控制飞船左右移动、射击下落外星敌人的单人浏览器街机游戏。",
+      "primary_url": "https://jasonleow.com/space-defenders/",
+      "repo_url": null,
+      "demo_url": "https://jasonleow.com/space-defenders/",
+      "provenance_source": "https://www.linkedin.com/posts/jasonleowsg_did-claude-sonnet-37-just-one-shot-a-space-activity-7300882292527222785-xYub",
+      "enables_en": "Play a compact arcade game and inspect the creator's published prompt for the initial browser implementation.",
+      "enables_zh": "体验小型街机游戏，并查看作者公开的初始浏览器实现提示词。",
+      "limits_en": "Keyboard controls are documented. The creator's generation claim covers the initial single-file client; later score-service code was not traced, and no reuse license was identified.",
+      "limits_zh": "页面提供键盘操作说明。作者的生成声明针对初始单文件客户端，后续计分服务代码来源未追溯，也未找到复用许可。",
+      "provenance_note_en": "Leow reports that Claude Sonnet 3.7 generated the initial HTML/CSS/JavaScript game from one prompt, publishes that prompt and links the exact playable page; the broader current project is labeled AI-assisted conservatively.",
+      "provenance_note_zh": "Leow 表示 Claude Sonnet 3.7 通过一个提示生成了初始 HTML/CSS/JavaScript 游戏，并公开提示及准确演示链接；对当前整体项目采用较保守的 AI 辅助开发标签。",
+      "license_en": "No open-source code license identified in the reviewed maker and project pages.",
+      "license_zh": "已核查的作者及项目页面中未找到开源代码许可。",
+      "license_url": null,
+      "evidence": [
+        {
+          "url": "https://www.linkedin.com/posts/jasonleowsg_did-claude-sonnet-37-just-one-shot-a-space-activity-7300882292527222785-xYub",
+          "supports": "Maker explicitly reports model generation of the initial single-file game, provides the prompt and links jasonleow.com/space-defenders."
+        },
+        {
+          "url": "https://jasonleow.com/space-defenders/",
+          "supports": "Creator-hosted game page identifies Jason Leow and documents movement, shooting and pause controls; no gameplay was performed."
+        }
+      ],
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "download_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "firewood-splitting-simulator",
+      "name": "Firewood Splitting Simulator",
+      "creator": "shapiro500",
+      "content_type": "game",
+      "implementation": "ai-assisted",
+      "description_en": "A browser-based 3D wood-splitting toy built around scanned wood, an axe and a stump, with interactive splitting and a rotating view.",
+      "description_zh": "围绕木材、斧头及树桩扫描素材构建的三维浏览器劈柴互动作品，支持劈切和视角旋转。",
+      "primary_url": "https://screen.toys/firewood/",
+      "repo_url": null,
+      "demo_url": "https://screen.toys/firewood/",
+      "provenance_source": "https://www.reddit.com/r/vibecoding/comments/1uckug1/heres_how_i_made_the_firewood_splitting_simulator/",
+      "enables_en": "Explore a tactile browser interaction assembled from real-world scans and AI-assisted implementation.",
+      "enables_zh": "体验将真实扫描素材与 AI 辅助实现结合的浏览器交互作品。",
+      "limits_en": "This entry covers the browser version. The creator supplied and edited physical scans, animation and sound; no public source repository or code-reuse license was identified.",
+      "limits_zh": "本条目仅覆盖浏览器版本。实体扫描、动画及声音由作者采集和编辑，未找到公开源码仓库或代码复用许可。",
+      "provenance_note_en": "The creator details using Claude in Antigravity to implement the game from a long specification and repeated refinements, while personally producing scans, edited assets and recorded sound.",
+      "provenance_note_zh": "作者详细说明，在 Antigravity 中使用 Claude 根据长篇需求和多轮修改实现游戏，同时亲自制作扫描素材、编辑资产并录制声音。",
+      "license_en": "No open-source code or asset-reuse license identified in the reviewed creator material.",
+      "license_zh": "已核查的作者资料中未找到开源代码或素材复用许可。",
+      "license_url": null,
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/vibecoding/comments/1uckug1/heres_how_i_made_the_firewood_splitting_simulator/",
+          "supports": "First-person behind-the-scenes post describes the Claude implementation process, human asset pipeline and exact browser URL."
+        },
+        {
+          "url": "https://www.reddit.com/r/vibecoding/comments/1u2yuus/vibecoded_a_firewood_splitting_simulator_using_my/",
+          "supports": "Earlier maker post describes specifying game rules and iterating on generated versions alongside original scans and animation."
+        },
+        {
+          "url": "https://screen.toys/firewood/",
+          "supports": "Public creator-hosted artifact documents drag-to-rotate and click-to-split interaction; no gameplay occurred."
+        }
+      ],
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "download_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "legends-of-future-past",
+      "name": "Legends of Future Past — 2026 reconstruction",
+      "creator": "Jon Radoff",
+      "content_type": "game",
+      "implementation": "ai-assisted",
+      "description_en": "A browser-accessible reconstruction of a 1990s multiplayer text adventure, running preserved world scripts on a newly implemented engine.",
+      "description_zh": "通过浏览器访问的 1990 年代多人文字冒险重建版，使用新实现的引擎运行保留下来的世界脚本。",
+      "primary_url": "https://github.com/jonradoff/lofp",
+      "repo_url": "https://github.com/jonradoff/lofp",
+      "demo_url": "https://lofp.metavert.io/",
+      "provenance_source": "https://github.com/jonradoff/lofp#how-we-brought-it-back",
+      "enables_en": "Explore the restored text world or inspect how legacy scripts, documentation and session logs informed a new server implementation.",
+      "enables_zh": "探索重建的文字世界，或查看旧脚本、文档及会话记录如何用于实现新的服务器。",
+      "limits_en": "The original world content is human-authored. Self-hosting requires the documented Go/Node/MongoDB stack and login configuration; this review did not authenticate or verify fidelity to the original.",
+      "limits_zh": "原始世界内容由人工创作。自行部署需要文档中的 Go/Node/MongoDB 环境和登录配置；本轮未登录，也未验证与原作的一致程度。",
+      "provenance_note_en": "Original creator Jon Radoff explains how he used Claude Code to reconstruct the script parser, mechanics and server from preserved materials; this claim concerns the 2026 reconstruction.",
+      "provenance_note_zh": "原作者 Jon Radoff 说明如何借助 Claude Code，根据保留的资料重建脚本解析器、机制及服务器；该声明仅针对 2026 年的重建工作。",
+      "license_en": "MIT for the released 2026 repository; the README preserves credits and copyright attribution for the original game and world.",
+      "license_zh": "发布的 2026 年仓库采用 MIT；README 保留原游戏及世界内容的署名与版权信息。",
+      "license_url": "https://github.com/jonradoff/lofp/blob/main/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/jonradoff/lofp#how-we-brought-it-back",
+          "supports": "Original creator provides a detailed, component-specific account of Claude-assisted reconstruction and distinguishes preserved human game scripts from the new engine."
+        },
+        {
+          "url": "https://github.com/jonradoff/lofp#running-your-own-server",
+          "supports": "Repository documents the executable server/client stack and authentication setup."
+        },
+        {
+          "url": "https://github.com/jonradoff/lofp/blob/main/LICENSE",
+          "supports": "Published repository provides an MIT license."
+        },
+        {
+          "url": "https://lofp.metavert.io/",
+          "supports": "The creator-linked browser entry point returned HTTP 200; no login or game session was attempted."
+        }
+      ],
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "download_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "neon-zenith",
+      "name": "Neon Zenith",
+      "creator": "Bill Chan",
+      "content_type": "game",
+      "implementation": "ai-assisted",
+      "description_en": "A browser hover-car exploration game set in a dense neon city, with street-level driving, flight and time trials.",
+      "description_zh": "在密集霓虹城市中探索的浏览器悬浮车游戏，包含街道驾驶、飞行及计时挑战。",
+      "primary_url": "https://github.com/billpwchan/neon-zenith",
+      "repo_url": "https://github.com/billpwchan/neon-zenith",
+      "demo_url": "https://zenith.billpwchan.art/",
+      "provenance_source": "https://github.com/billpwchan/neon-zenith#how-it-was-made",
+      "enables_en": "Explore the published game source, shaders and asset pipeline, or run the documented browser build.",
+      "enables_zh": "查看游戏源码、着色器和素材处理流程，或运行文档中的浏览器构建版本。",
+      "limits_en": "The project uses a substantial asset bundle and WebGPU/WebGL2 rendering. Its live host returned 403 to this research client; source and local build instructions are public. Third-party assets have separate licenses.",
+      "limits_zh": "项目包含较大的素材包，使用 WebGPU/WebGL2 渲染。演示站点对本轮研究客户端返回 403，但源码及本地构建说明公开；第三方素材采用独立许可。",
+      "provenance_note_en": "The maintainer states that Claude Code wrote the application code, TSL shaders and Blender pipelines under his direction and review; reused models, textures and fonts are separately credited.",
+      "provenance_note_zh": "维护者明确说明 Claude Code 在其指导与审查下编写应用代码、TSL 着色器和 Blender 流程；复用的模型、纹理和字体另有署名。",
+      "license_en": "MIT covers source code; credited models use CC BY 4.0, specified textures use CC0, and fonts retain SIL OFL licenses.",
+      "license_zh": "源码采用 MIT；已署名模型使用 CC BY 4.0，指定纹理使用 CC0，字体保留 SIL OFL 许可。",
+      "license_url": "https://github.com/billpwchan/neon-zenith/blob/main/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/billpwchan/neon-zenith#how-it-was-made",
+          "supports": "Maintainer explicitly identifies AI-authored code, shaders and Blender pipelines and his own direction/review role."
+        },
+        {
+          "url": "https://github.com/billpwchan/neon-zenith#run-it-locally",
+          "supports": "Repository contains the application, processed assets and documented Node/Vite build path."
+        },
+        {
+          "url": "https://github.com/billpwchan/neon-zenith/blob/main/LICENSE",
+          "supports": "License expressly limits MIT coverage to source code."
+        },
+        {
+          "url": "https://github.com/billpwchan/neon-zenith/blob/main/CREDITS.md",
+          "supports": "Credits list separate third-party model, texture and font licenses."
+        },
+        {
+          "url": "https://zenith.billpwchan.art/",
+          "supports": "Author-linked demo URL returned HTTP 403 in this research environment; browser usability remains for separate observation."
+        }
+      ],
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "download_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "pyramid-wars-demo",
+      "name": "Pyramid Wars — browser demo",
+      "creator": "Durian Arcade",
+      "content_type": "game",
+      "implementation": "ai-assisted",
+      "description_en": "A browser real-time strategy demo combining base construction, unit control, abilities and collectible army upgrades.",
+      "description_zh": "结合基地建设、单位控制、技能及军队升级收集的浏览器即时战略演示版。",
+      "primary_url": "https://durian-arcade.itch.io/pyramid-wars",
+      "repo_url": null,
+      "demo_url": "https://durian-arcade.itch.io/pyramid-wars",
+      "provenance_source": "https://durian-arcade.itch.io/pyramid-wars",
+      "enables_en": "Try the creator's browser strategy prototype and inspect the published disclosure of AI involvement in code and media.",
+      "enables_zh": "体验作者的浏览器策略原型，并查看其对代码和媒体中 AI 参与情况的公开说明。",
+      "limits_en": "The itch.io artifact is a demo/prototype. The separate full Steam game was still listed as upcoming during review; no public source repository or open-source reuse license was identified.",
+      "limits_zh": "itch.io 作品为演示/原型版本。核查时，独立的 Steam 完整版仍列为即将推出；未找到公开源码仓库或开源复用许可。",
+      "provenance_note_en": "The solo developer identifies Claude as the tool used to implement the HTML/JavaScript game and create its coded sounds and graphics; the publisher's Steam disclosure also explicitly lists code among AI-assisted components.",
+      "provenance_note_zh": "独立开发者说明使用 Claude 实现 HTML/JavaScript 游戏及代码中的声音、图形；发行方的 Steam 声明也明确将代码列入 AI 辅助组件。",
+      "license_en": "Creator-hosted demo; no open-source code license identified.",
+      "license_zh": "作者托管的演示版，未找到开源代码许可。",
+      "license_url": null,
+      "evidence": [
+        {
+          "url": "https://durian-arcade.itch.io/pyramid-wars",
+          "supports": "Creator describes the Claude-based implementation, names the HTML/JavaScript codebase and provides the playable HTML5 demo."
+        },
+        {
+          "url": "https://store.steampowered.com/app/4996430/Pyramid_Wars/",
+          "supports": "Publisher's AI disclosure explicitly covers code and media; listing distinguishes the upcoming full release from available demos."
+        }
+      ],
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "download_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "formula-minus-one",
+      "name": "Formula Minus One — browser beta",
+      "creator": "Moisés Cabello",
+      "content_type": "game",
+      "implementation": "ai-assisted",
+      "description_en": "A futuristic browser racing game with hovercraft, boost and air-brake controls, time trials and selectable race modes.",
+      "description_zh": "提供悬浮赛车、加速和空气刹车控制、计时挑战及多种比赛模式的未来风格浏览器竞速游戏。",
+      "primary_url": "https://fm1.app/",
+      "repo_url": null,
+      "demo_url": "https://fm1.app/",
+      "provenance_source": "https://www.reddit.com/r/ClaudeCode/comments/1x4ajpq/formula_minus_one_open_beta_6_months_of_work_huge/",
+      "enables_en": "Try the open browser beta and examine an independent creator's workflow combining AI-generated code with human-led game and asset design.",
+      "enables_zh": "体验公开浏览器 Beta，并了解独立作者如何结合 AI 生成代码和人工主导的游戏及素材设计。",
+      "limits_en": "This is the browser beta, with landscape orientation requested on phones. The creator lists a WebGPU-based stack; compatibility and performance were not tested. No open-source code license was identified.",
+      "limits_zh": "本条目为浏览器 Beta，手机页面要求横屏。作者注明使用 WebGPU 技术栈；本轮未测试兼容性或性能，也未找到开源代码许可。",
+      "provenance_note_en": "The maker's build account attributes code and tooling to OpenAI/Anthropic and open-source models, while describing human design work, sketches, Blender cleanup and music sketches.",
+      "provenance_note_zh": "作者开发记录将代码及工具实现归于 OpenAI、Anthropic 和开源模型，并说明了人工设计、草图、Blender 修整及音乐草稿等工作。",
+      "license_en": "Creator-hosted browser beta; no open-source code license identified. The in-game credits retain separate third-party asset attributions.",
+      "license_zh": "作者托管的浏览器 Beta，未找到开源代码许可；游戏署名保留第三方素材的独立归属。",
+      "license_url": null,
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x4ajpq/formula_minus_one_open_beta_6_months_of_work_huge/",
+          "supports": "First-person build account specifically attributes code/tooling to LLMs and distinguishes human and AI contributions to assets; it links the exact beta URL."
+        },
+        {
+          "url": "https://fm1.app/",
+          "supports": "Public beta identifies Moisés Cabello, documents controls and modes, and includes asset credits; the page returned HTTP 200 without gameplay."
+        },
+        {
+          "url": "https://fm1.moises.cloud/",
+          "supports": "The former creator URL explicitly redirects visitors to fm1.app, supporting continuity of the project."
+        }
+      ],
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "download_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "gymnasium",
+      "name": "Gymnasium",
+      "description_en": "A common interface and reference environments for single-agent reinforcement learning, continuing the maintenance lineage of OpenAI Gym.",
+      "description_zh": "用于单 Agent 强化学习的统一接口与参考环境集合，延续 OpenAI Gym 的维护体系。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://gymnasium.farama.org/",
+      "repo_url": "https://github.com/Farama-Foundation/Gymnasium",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2407.17032",
+      "limits_en": "The base package does not install every environment family. Current main requires Python 3.11+; extras, simulators and game assets have separate requirements. Pin environment version suffixes for comparisons. Framework code is MIT; external environments and ROMs may have different terms.",
+      "limits_zh": "基础包不会安装所有环境系列。当前主分支要求 Python 3.11+，扩展、模拟器与游戏素材另有依赖。比较实验应固定环境版本后缀。框架代码采用 MIT，外部环境和 ROM 可能适用不同条款。",
+      "enables_en": "Train and compare policies through consistent reset/step, observation, reward and termination interfaces, or build custom environments.",
+      "enables_zh": "通过统一的重置、动作、观察、奖励和终止接口训练及比较策略，也可创建自定义环境。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python gymnasium package with selected environment extras; this is an API/framework rather than one standalone game.",
+      "evidence": [
+        {
+          "url": "https://github.com/Farama-Foundation/Gymnasium#readme",
+          "supports": "Defines the maintained Gym fork, reference environment families, installation extras and versioning policy."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Gymnasium/blob/main/pyproject.toml",
+          "supports": "Current main package metadata requires Python 3.11+."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Gymnasium/blob/main/LICENSE",
+          "supports": "Framework code is MIT licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2407.17032",
+          "supports": "Primary paper describes the environment API, reference tasks and reproducibility tools."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "No OS tag is inferred for this general environment API; selected environments have their own runtime requirements."
+    },
+    {
+      "id": "pettingzoo",
+      "name": "PettingZoo",
+      "description_en": "A multi-agent environment library with turn-by-turn Agent Environment Cycle and parallel-action APIs, covering cooperative and competitive games.",
+      "description_zh": "提供逐 Agent 轮转的 Agent Environment Cycle 接口和并行动作接口的多 Agent 环境库，覆盖合作与竞争游戏。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://pettingzoo.farama.org/",
+      "repo_url": "https://github.com/Farama-Foundation/PettingZoo",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2009.14471",
+      "limits_en": "Each environment family needs its own extras. Current main requires Python 3.11–3.14; Windows is not officially supported in the README. MAgent and MPE now live in separate MAgent2/MPE2 projects. Core code is MIT; emulator/game dependencies may carry additional terms.",
+      "limits_zh": "各环境系列需要单独的扩展依赖。当前主分支要求 Python 3.11–3.14，README 未正式支持 Windows。MAgent 和 MPE 已迁至独立的 MAgent2/MPE2 项目。核心代码采用 MIT，模拟器与游戏依赖可能另有条款。",
+      "enables_en": "Train agents that cooperate or compete using sequential or simultaneous action semantics appropriate to the game.",
+      "enables_zh": "根据游戏选择顺序或同时行动语义，训练合作或竞争的 Agent。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python pettingzoo package with per-family extras; AEC API and a Parallel API for compatible environments.",
+      "evidence": [
+        {
+          "url": "https://github.com/Farama-Foundation/PettingZoo#readme",
+          "supports": "Documents APIs, environment families, installation and Linux/macOS support."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/PettingZoo/blob/main/pyproject.toml",
+          "supports": "Current main declares Python >=3.11,<3.15."
+        },
+        {
+          "url": "https://pettingzoo.farama.org/environments/mpe/",
+          "supports": "Official migration guide explains the separate MPE2 package."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/PettingZoo/blob/main/LICENSE",
+          "supports": "Core repository is MIT licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2009.14471",
+          "supports": "Original paper introduces PettingZoo and the AEC model."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "vizdoom",
+      "name": "ViZDoom",
+      "description_en": "A configurable first-person game environment exposing Doom-engine observations and controls for visual reinforcement learning and agent evaluation.",
+      "description_zh": "可配置的第一人称游戏环境，为视觉强化学习和 Agent 评测提供 Doom 引擎的观察与控制接口。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://vizdoom.farama.org/",
+      "repo_url": "https://github.com/Farama-Foundation/ViZDoom",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1605.02097",
+      "limits_en": "Freedoom assets are supplied; original Doom/Doom II WADs are not bundled. ViZDoom-original code is MIT, while engine components have separate terms. Current wheels require Python 3.10+; macOS 1.3+ wheels target Apple Silicon, and Windows is documented as less tested.",
+      "limits_zh": "项目提供 Freedoom 素材，不附带原版 Doom/Doom II WAD。ViZDoom 自身代码采用 MIT，引擎组件另有条款。当前 wheel 要求 Python 3.10+；1.3+ 的 macOS wheel 面向 Apple Silicon，文档说明 Windows 的测试程度较低。",
+      "enables_en": "Create navigation, control or multiplayer scenarios and train agents from screen observations with configurable rewards and game state.",
+      "enables_zh": "创建导航、控制或多人场景，利用屏幕观察及可配置奖励、游戏状态训练 Agent。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python/C++ API with Gymnasium wrappers; pip installation where compatible wheels exist, otherwise a native source build.",
+      "evidence": [
+        {
+          "url": "https://github.com/Farama-Foundation/ViZDoom#readme",
+          "supports": "Documents scenarios, APIs, platform/wheel constraints, Freedoom defaults and mixed engine licensing."
+        },
+        {
+          "url": "https://arxiv.org/abs/1605.02097",
+          "supports": "Original platform paper describes first-person visual RL and custom scenarios."
+        },
+        {
+          "url": "https://arxiv.org/abs/1809.03470",
+          "supports": "Competition paper describes visual multiplayer evaluation and the platform."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "miniworld",
+      "name": "MiniWorld",
+      "description_en": "A minimal 3D indoor world simulator for navigation and goal-directed learning, with configurable rooms, objects and visual observations.",
+      "description_zh": "用于导航与目标导向学习的简化三维室内模拟器，支持配置房间、物体和视觉观察。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://miniworld.farama.org/",
+      "repo_url": "https://github.com/Farama-Foundation/Miniworld",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2306.13831",
+      "limits_en": "Deprecated on 2025-08-11 with no further updates/support planned. Source remains inspectable, but setup is historical: setup.py requires Python 3.8+ and pyglet<2. The license file is Apache 2.0 while README still says MIT. Graphics and physics are intentionally simple.",
+      "limits_zh": "项目于 2025-08-11 宣布弃用，不再计划更新或提供支持。源码仍可查阅，但配置属于历史方案：setup.py 要求 Python 3.8+、pyglet<2。许可文件为 Apache 2.0，README 仍称 MIT。图形和物理模型刻意简化。",
+      "enables_en": "Inspect or reproduce historical 3D navigation experiments and modify compact indoor layouts for controlled research tasks.",
+      "enables_zh": "研究或复现历史三维导航实验，并修改小型室内布局以构建可控研究任务。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python/Gymnasium with pyglet/OpenGL; published source/pip recipe, manual-control script and optional EGL/Xvfb offscreen rendering.",
+      "evidence": [
+        {
+          "url": "https://github.com/Farama-Foundation/Miniworld/blob/master/README.md",
+          "supports": "Describes 3D worlds and rendering; dates deprecation to 2025-08-11 and retains an MIT statement."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Miniworld/blob/master/setup.py",
+          "supports": "Declares Python >=3.8, pyglet>=1.5.27,<2.0 and an Apache package license."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Miniworld/blob/master/license",
+          "supports": "The actual lowercase license file contains Apache License 2.0."
+        },
+        {
+          "url": "https://arxiv.org/abs/2306.13831",
+          "supports": "Shared MiniGrid/MiniWorld paper describes configurable 2D/3D tasks."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "No current supported OS matrix is established; no OS tag is inferred from Python/OpenGL."
+    },
+    {
+      "id": "procgen2",
+      "name": "Procgen2",
+      "description_en": "A community rewrite of Procgen with C++ game implementations and a CEnv interface for using compiled worlds from Python.",
+      "description_zh": "Procgen 的社区重写项目，包含 C++ 游戏实现，以及从 Python 调用编译后世界的 CEnv 接口。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/Farama-Foundation/Procgen2",
+      "repo_url": "https://github.com/Farama-Foundation/Procgen2",
+      "demo_url": null,
+      "paper_url": null,
+      "limits_en": "A separate development implementation, not proven benchmark-equivalent to original Procgen. Source builds require CMake and SDL3/SDL3_image; examples use locally built libraries. A supported release/platform matrix and parity across the original game suite were not established. Code is MIT; asset terms need separate review.",
+      "limits_zh": "这是独立的开发实现，尚不能认定与原版 Procgen 的基准行为等价。源码构建需要 CMake、SDL3/SDL3_image，示例使用本地编译库。本次未确认正式版本的平台矩阵或对原游戏集的完整等价性。代码采用 MIT，素材条款需单独核查。",
+      "enables_en": "Inspect and extend the rewritten games, or connect compiled environments to Python through reset, step and rendering interfaces.",
+      "enables_zh": "研究和扩展重写的游戏，或通过重置、动作和渲染接口将编译环境连接到 Python。",
+      "resource_kind": "environment-framework",
+      "runtime": "C++/CMake source build, SDL3/SDL3_image, CEnv shared-library interface and Python/Gymnasium example viewers.",
+      "evidence": [
+        {
+          "url": "https://github.com/Farama-Foundation/Procgen2#readme",
+          "supports": "Explicitly describes a rewrite and distinguishes its earlier maintained-fork plan."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Procgen2/blob/main/DEV_GUIDE.md",
+          "supports": "Documents compiling CoinRun with CMake/SDL3 and extending game implementation."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Procgen2/blob/main/CMakeLists.txt",
+          "supports": "Build targets include CoinRun, Jumper, Chaser, CaveFlyer, Bossfight, Maze and Climber."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Procgen2/blob/main/cenv/USAGE_GUIDE.md",
+          "supports": "Documents compiled shared-library APIs and Python interaction."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Procgen2/blob/main/interactive_viewer.py",
+          "supports": "Viewer source loads locally compiled CaveFlyer; it was not executed."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Procgen2/blob/main/LICENSE",
+          "supports": "Repository code is MIT licensed."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "The ABI guide discusses Linux/macOS/Windows library formats; that alone is not a verified supported-platform matrix."
+    },
+    {
+      "id": "stable-retro",
+      "name": "Stable-Retro",
+      "description_en": "A maintained Gym Retro fork connecting classic-game emulators to Gymnasium, with integrations defining rewards, state variables and episode endings.",
+      "description_zh": "持续维护的 Gym Retro 分支，将经典游戏模拟器接入 Gymnasium，并通过集成配置定义奖励、状态变量和回合终止条件。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://stable-retro.farama.org/",
+      "repo_url": "https://github.com/Farama-Foundation/Stable-Retro",
+      "demo_url": null,
+      "paper_url": null,
+      "limits_en": "Most integrations need separately supplied matching ROMs or BIOS files; only limited homebrew/test examples are included. Python 3.11–3.14 is documented; Windows uses WSL2 and core support varies. Wrapper code is MIT, but emulator cores include GPL and non-commercial terms. This is not a blanket game redistribution license.",
+      "limits_zh": "多数集成需要另行提供匹配的 ROM 或 BIOS，仅附带有限的自制或测试示例。文档列出 Python 3.11–3.14；Windows 使用 WSL2，不同核心支持范围不同。封装代码采用 MIT，但核心包含 GPL 和非商业条款，不构成统一的游戏再分发许可。",
+      "enables_en": "Train agents on emulator-backed games and create integrations translating game memory into rewards and success conditions.",
+      "enables_zh": "在模拟器游戏上训练 Agent，并创建将游戏内存状态转为奖励及成功条件的集成。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python stable-retro package, emulator cores and per-game integration files; native dependencies vary by core.",
+      "evidence": [
+        {
+          "url": "https://github.com/Farama-Foundation/Stable-Retro#readme",
+          "supports": "Documents Gym Retro lineage, Python/platform requirements, Gymnasium integration and external ROM requirements."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Stable-Retro/blob/main/docs/included_roms.md",
+          "supports": "Lists limited included homebrew/test ROMs; no game files were downloaded."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Stable-Retro/blob/main/LICENSE",
+          "supports": "Wrapper repository publishes MIT terms."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/Stable-Retro/blob/main/LICENSES.md",
+          "supports": "Lists separate emulator-core licenses, including GPLv2 and non-commercial terms."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Windows is documented through WSL2; Linux/macOS tags do not imply a verified native Windows build."
+    },
+    {
+      "id": "magent2",
+      "name": "MAgent2",
+      "description_en": "A grid-world engine and reference scenarios for many interacting agents, including battle and pursuit settings exposed through PettingZoo APIs.",
+      "description_zh": "面向大量交互 Agent 的网格世界引擎与参考场景，包含战斗、追逐等任务，并提供 PettingZoo 接口。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://magent2.farama.org/",
+      "repo_url": "https://github.com/Farama-Foundation/MAgent2",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1712.00600",
+      "limits_en": "A maintained fork of MAgent whose environments were split out of PettingZoo. Current main requires Python 3.11+, despite the older 3.8+ README statement. Pin versions and scenarios; the original paper does not validate current-fork results. Repository code is MIT.",
+      "limits_zh": "这是 MAgent 的维护分支，相关环境已从 PettingZoo 拆出。当前主分支要求 Python 3.11+，与 README 较旧的 3.8+ 说明不同。应固定版本与场景；原论文不能证明当前分支的实验结果。仓库代码采用 MIT。",
+      "enables_en": "Study collective behavior, coordination and competition among many agents in configurable grid-world scenarios.",
+      "enables_zh": "在可配置的网格世界场景中研究大量 Agent 的集体行为、协调和竞争。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python magent2 package with native engine, NumPy, pygame-ce and PettingZoo; package metadata specifies the current Python floor.",
+      "evidence": [
+        {
+          "url": "https://github.com/Farama-Foundation/MAgent2#readme",
+          "supports": "Describes grid-world scenarios, MAgent lineage, PettingZoo split and Linux/macOS support."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/MAgent2/blob/main/pyproject.toml",
+          "supports": "Current main requires Python >=3.11, differing from the older README."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/MAgent2/blob/main/LICENSE",
+          "supports": "Repository code is MIT licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/1712.00600",
+          "supports": "Original MAgent paper supplies research lineage, not a new paper for MAgent2."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "mpe2",
+      "name": "MPE2",
+      "description_en": "Particle-world environments for communication, cooperation and competition, continuing the MPE environments formerly distributed with PettingZoo.",
+      "description_zh": "研究交流、合作和竞争的粒子世界环境，延续此前随 PettingZoo 分发的 MPE 环境。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://mpe2.farama.org/",
+      "repo_url": "https://github.com/Farama-Foundation/MPE2",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1703.04908",
+      "limits_en": "Use the separate mpe2 package; pettingzoo.mpe now raises an import error. Current main requires Python 3.11+. Discrete actions are the default, unlike original OpenAI MPE, and newer scenarios extend the old collection. Code is MIT; historical papers describe the original environments.",
+      "limits_zh": "应使用独立的 mpe2 包，pettingzoo.mpe 现会触发导入错误。当前主分支要求 Python 3.11+。默认采用离散动作，与原 OpenAI MPE 不同，并新增了场景。代码采用 MIT；历史论文描述的是原始环境。",
+      "enables_en": "Evaluate agents that move and exchange messages while sharing goals or competing over landmarks and objects.",
+      "enables_zh": "评估在共享目标或争夺地标、物体时进行移动和消息交流的 Agent。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python mpe2 with PettingZoo AEC/Parallel APIs, pygame-ce and SciPy; installed separately from PettingZoo.",
+      "evidence": [
+        {
+          "url": "https://github.com/Farama-Foundation/MPE2#readme",
+          "supports": "Defines particle-world behavior, OpenAI lineage, discrete default and added scenarios."
+        },
+        {
+          "url": "https://pettingzoo.farama.org/environments/mpe/",
+          "supports": "Official migration guide confirms the standalone package and preserved AEC/Parallel APIs."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/MPE2/blob/main/pyproject.toml",
+          "supports": "Current main requires Python >=3.11 and lists dependencies."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/MPE2/blob/main/LICENSE",
+          "supports": "Repository code is MIT licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/1703.04908",
+          "supports": "Original environment study cited by MPE2."
+        },
+        {
+          "url": "https://arxiv.org/abs/1706.02275",
+          "supports": "Study accompanying the original public MPE release."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "No current OS support matrix is stated in the reviewed sources; Python/pygame alone does not establish platform support."
+    },
+    {
+      "id": "gvgai",
+      "name": "GVGAI",
+      "description_en": "A Video Game Description Language framework for evaluating planners and generating game levels or rules across multiple games.",
+      "description_zh": "基于 Video Game Description Language 的框架，可跨多款游戏评估规划器，并生成关卡或游戏规则。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/GAIGResearch/GVGAI",
+      "repo_url": "https://github.com/GAIGResearch/GVGAI",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1802.10363",
+      "limits_en": "The main repository covers planning and procedural-content tracks; the learning-track implementation is linked separately. Setup follows older Java/IDE instructions and modern compatibility was not tested. Code is GPL-3.0-or-later. Report track settings and forward-model access when comparing results.",
+      "limits_zh": "主仓库覆盖规划与程序化内容生成赛道，学习赛道实现另有链接。配置沿用较旧的 Java/IDE 说明，未测试现代环境兼容性。代码采用 GPL-3.0-or-later。比较结果时需说明赛道设置及前向模型访问条件。",
+      "enables_en": "Compare planners across VGDL games, replay action traces, and evaluate generated levels or rules.",
+      "enables_zh": "跨 VGDL 游戏比较规划器、回放动作轨迹，并评估生成的关卡或规则。",
+      "resource_kind": "environment-framework",
+      "runtime": "Java framework with track-specific main classes, sample controllers and game/level descriptions; no modern Python/Gymnasium compatibility is implied.",
+      "evidence": [
+        {
+          "url": "https://github.com/GAIGResearch/GVGAI#readme",
+          "supports": "Identifies planning/PCG scope and links the learning track to a separate repository."
+        },
+        {
+          "url": "https://github.com/GAIGResearch/GVGAI/blob/master/README_CODE_STRUCTURE.txt",
+          "supports": "Lists Java entry points for human/controller play, replay, multiplayer, level and rule generation."
+        },
+        {
+          "url": "https://github.com/GAIGResearch/GVGAI/blob/master/src/tracks/singlePlayer/Test.java",
+          "supports": "Inspectable example loads game/level descriptions and starts human/controller play; not executed."
+        },
+        {
+          "url": "https://github.com/GAIGResearch/GVGAI/blob/master/LICENSE.txt",
+          "supports": "Framework license states GPL version 3 or later."
+        },
+        {
+          "url": "https://arxiv.org/abs/1802.10363",
+          "supports": "Primary survey explains GVGAI, VGDL and the different evaluation tracks."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "No operating-system tags are inferred from Java."
     }
   ]
 }

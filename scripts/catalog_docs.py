@@ -4,7 +4,7 @@ from html import escape
 import os
 
 
-def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, uses, registry_sources, registry_document):
+def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, uses, registry_sources, registry_document, observations):
     origin = config['origin'].rstrip('/')
     def table(records, language='en'):
         zh = language == 'zh'
@@ -49,6 +49,8 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
         slug = {'game': 'games', 'website': 'websites', 'app': 'apps'}[category]
         summary += f'| [{labels[0]}]({origin}/{slug}/) | {counts[category]} | [Browse](catalog/{slug}/README.md) |\n'
     summary += '\n[Research bibliography](' + origin + '/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)\n'
+    observed_ids = {record['project_id'] for record in observations}
+    summary += f'\n**{len(observations)} scoped browser observations across {len(observed_ids)} projects** record interaction steps, visible outcomes, screenshots and untested scope. These are not whole-application verification. [Observation data](data/observations.json) · [Method](docs/browser-observations.md).\n'
     registry_count = len(registry_document['records'])
     summary += f'\n[Upstream registry index]({origin}/discover/): **{registry_count} metadata records from {len(registry_sources)} sources**. These include versions, forks, manifests, and configurations; they are not individually reviewed projects and must not be added to the catalog count. [Source coverage](catalog/registries/README.md).\n'
     readme = root / 'README.md'
@@ -78,6 +80,8 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
 
 [研究文献]({origin}/zh/papers/) · [完整数据](data/catalog.json) · [贡献说明](CONTRIBUTING.md)
 
+另有 **{len(observations)} 条浏览器操作记录，覆盖 {len(observed_ids)} 个项目**，包含步骤、可见结果、截图及未测试范围；不代表整个应用已完成验证。[操作记录](data/observations.json) · [记录方法](docs/browser-observations.md)。
+
 [上游注册表索引]({origin}/zh/discover/)另提供 **{registry_count} 条来自 {len(registry_sources)} 个来源的元数据记录**。它们包含版本、分支、清单与配置，尚未逐项核查，不能与精选项目数相加。[查看来源覆盖](catalog/registries/README.zh-CN.md)。
 
 相关目录：[AwesomeREA](https://awesomerea.org/zh/resources/) 整理逆向工程工具、集成与软件重建研究。
@@ -94,7 +98,7 @@ node --check static/registry.js
 python3 -m unittest discover -s tests
 ```
 
-数据来源是 `data/catalog.json` 与 `data/papers.json`。页面、引用和分类 README 由同一组数据生成；请修改源数据后重新构建。托管配置和搜索提交步骤见 [search-discovery.md](docs/search-discovery.md)。
+数据来源是 `data/catalog.json`、`data/papers.json` 和单独保存操作证据的 `data/observations.json`。页面、引用和分类 README 由同一组数据生成；请修改源数据后重新构建。托管配置和搜索提交步骤见 [search-discovery.md](docs/search-discovery.md)。
 '''
     (root / 'README.zh-CN.md').write_text(chinese, encoding='utf-8')
     directory = root / 'catalog/registries'
