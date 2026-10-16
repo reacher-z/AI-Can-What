@@ -1,0 +1,598 @@
+{
+  "reviewed_at": "2026-10-16",
+  "entries": [
+    {
+      "id": "gpt5-asteroid-game",
+      "name": "Asteroid Game",
+      "description_en": "A browser space-shooter demo from OpenAI's single-prompt GPT-5 coding collection, with the generating prompt and published app files.",
+      "description_zh": "OpenAI 单次提示生成作品集中的浏览器太空射击游戏，公开生成提示和应用文件。",
+      "content_type": "game",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://github.com/openai/gpt-5-coding-examples/tree/main/apps/asteroid-game",
+      "repo_url": "https://github.com/openai/gpt-5-coding-examples",
+      "demo_url": "https://gpt5-coding-examples.vercel.app/asteroid-game/",
+      "paper_url": null,
+      "limits_en": "An illustrative coding demo, with no published agent task evaluator. The public demo URL responded; gameplay was not tested.",
+      "limits_zh": "属于编程演示，未提供 Agent 任务评分器。已检查公开演示链接，未进行游戏操作测试。",
+      "enables_en": "Inspect and remix an AI-generated arcade game, using its original prompt as a starting point.",
+      "enables_zh": "查看和改造 AI 生成的街机游戏，并参考原始提示进行再创作。",
+      "resource_kind": "ai-generated-output",
+      "provenance_source": "https://github.com/openai/gpt-5-coding-examples#readme",
+      "evidence": [
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples#readme",
+          "supports": "OpenAI states that the collection was generated from single GPT-5 or GPT-5.2 prompts without handwritten code."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/examples/asteroid-game.yaml",
+          "supports": "Identifies this example and its space-shooter prompt."
+        },
+        {
+          "url": "https://gpt5-coding-examples.vercel.app/asteroid-game/",
+          "supports": "Public app endpoint returned HTTP 200; no interaction test was performed."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "gpt5-tiny-kanban",
+      "name": "Tiny Kanban",
+      "description_en": "A generated browser app for moving task cards between Todo, Doing and Done, with local persistence, search and work-in-progress limits.",
+      "description_zh": "AI 生成的浏览器看板应用，支持卡片流转、本地保存、搜索和进行中任务数量限制。",
+      "content_type": "app",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://github.com/openai/gpt-5-coding-examples/tree/main/apps/tiny-kanban",
+      "repo_url": "https://github.com/openai/gpt-5-coding-examples",
+      "demo_url": "https://gpt5-coding-examples.vercel.app/tiny-kanban/",
+      "paper_url": null,
+      "limits_en": "The published implementation stores data in browser localStorage. It is a demo, not a documented multi-user service or benchmark.",
+      "limits_zh": "公开实现使用浏览器 localStorage 保存数据；属于演示项目，未声明多人协作服务或评测能力。",
+      "enables_en": "Inspect how an AI-generated single-file app implements a useful task-management workflow.",
+      "enables_zh": "观察 AI 生成的单文件应用如何实现实际的任务管理流程。",
+      "resource_kind": "ai-generated-output",
+      "provenance_source": "https://github.com/openai/gpt-5-coding-examples#readme",
+      "evidence": [
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples#readme",
+          "supports": "The publisher explicitly attributes the collection to single-prompt AI code generation."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/main/apps/tiny-kanban/index.html",
+          "supports": "Source contains card dragging, search, WIP checks and localStorage."
+        },
+        {
+          "url": "https://gpt5-coding-examples.vercel.app/tiny-kanban/",
+          "supports": "Public app endpoint returned HTTP 200; no interaction test was performed."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "claudes-c-compiler",
+      "name": "Claude's C Compiler",
+      "description_en": "An experimental C compiler written in Rust by Claude Opus 4.6, released by Anthropic as an artifact of its agent-team research.",
+      "description_zh": "Anthropic 发布的 Agent 团队研究产物：由 Claude Opus 4.6 编写、以 Rust 实现的实验性 C 编译器。",
+      "content_type": "app",
+      "platforms": [
+        "linux"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://www.anthropic.com/engineering/building-c-compiler",
+      "repo_url": "https://github.com/anthropics/claudes-c-compiler",
+      "demo_url": null,
+      "paper_url": null,
+      "limits_en": "The human-authored repository notice warns that correctness is unvalidated and discourages use. Linux is the documented host; this is a research artifact.",
+      "limits_zh": "仓库中的人工说明明确表示正确性未经验证，并不建议实际使用。文档要求 Linux 主机，应视作研究产物。",
+      "enables_en": "Study the source and development history of a substantial AI-authored systems program.",
+      "enables_zh": "研究较大规模 AI 编写系统软件的源码和开发历史。",
+      "resource_kind": "ai-generated-output",
+      "provenance_source": "https://github.com/anthropics/claudes-c-compiler#readme",
+      "evidence": [
+        {
+          "url": "https://github.com/anthropics/claudes-c-compiler#readme",
+          "supports": "The human-authored notice attributes code and documentation to Claude, with human-written tests and Linux-only development."
+        },
+        {
+          "url": "https://www.anthropic.com/engineering/building-c-compiler",
+          "supports": "The author describes the agent-team process and its limitations."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "fastrender",
+      "name": "FastRender",
+      "description_en": "An experimental Rust browser engine and desktop shell produced during Cursor's research on long-running, collaborating coding agents.",
+      "description_zh": "Cursor 长时间多 Agent 编程研究产生的实验性 Rust 浏览器引擎及桌面外壳。",
+      "content_type": "app",
+      "platforms": [
+        "macos",
+        "linux"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://github.com/wilsonzlin/fastrender",
+      "repo_url": "https://github.com/wilsonzlin/fastrender",
+      "demo_url": null,
+      "paper_url": null,
+      "limits_en": "The authors describe unstable APIs and incomplete web APIs, and advise against production use. Platform tags follow the documented macOS/Linux build instructions.",
+      "limits_zh": "作者说明 API 不稳定、部分 Web API 尚不完整，不建议用于生产。平台标签依据 macOS/Linux 构建文档。",
+      "enables_en": "Inspect an AI-authored browser implementation and its rendering pipeline as a research example.",
+      "enables_zh": "以研究案例形式查看 AI 编写的浏览器实现及其渲染流程。",
+      "resource_kind": "ai-generated-output",
+      "provenance_source": "https://cursor.com/blog/scaling-agents",
+      "evidence": [
+        {
+          "url": "https://cursor.com/blog/scaling-agents",
+          "supports": "Cursor identifies the linked repository as a browser built by its long-running coding agents."
+        },
+        {
+          "url": "https://github.com/wilsonzlin/fastrender#readme",
+          "supports": "The repository links the agent research, documents macOS/Linux builds, and states incomplete support and production limitations."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "crafter",
+      "name": "Crafter",
+      "description_en": "A procedurally generated survival game for studying exploration, resource collection and crafting, with achievement-based agent evaluation.",
+      "description_zh": "程序化生成的生存游戏，通过资源收集、制作和生存成就研究探索与长期决策能力。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/danijar/crafter",
+      "repo_url": "https://github.com/danijar/crafter",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2109.06780",
+      "limits_en": "A simplified 2D research world. Python and a Pygame human interface are documented; the reviewed sources do not enumerate tested operating systems.",
+      "limits_zh": "属于简化的二维研究环境。文档提供 Python 和 Pygame 人类界面，但未列出已测试的操作系统。",
+      "enables_en": "Train agents and measure which survival and crafting achievements they can unlock.",
+      "enables_zh": "训练 Agent，并观察其能解锁哪些生存和制作成就。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Python; optional Pygame GUI",
+      "platform_note": "No OS tag was inferred from the Python implementation.",
+      "evidence": [
+        {
+          "url": "https://github.com/danijar/crafter#readme",
+          "supports": "Documents the playable environment, Python API, achievements and GUI installation."
+        },
+        {
+          "url": "https://arxiv.org/abs/2109.06780",
+          "supports": "Original paper defines the training and achievement-based evaluation setting."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "textworld",
+      "name": "TextWorld",
+      "description_en": "A toolkit for generating and playing text adventures with controlled task difficulty, state tracking and rewards for learning agents.",
+      "description_zh": "可生成和运行文字冒险的工具包，支持控制任务难度、跟踪状态并为学习型 Agent 提供奖励。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/microsoft/TextWorld",
+      "repo_url": "https://github.com/microsoft/TextWorld",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1806.11532",
+      "limits_en": "Text interaction rather than a visual desktop. Native support is documented for Linux/macOS; Windows requires a Docker workaround.",
+      "limits_zh": "交互以文字为主。文档声明原生支持 Linux/macOS；Windows 需采用 Docker 方案。",
+      "enables_en": "Create controlled text-game curricula and test generalization across related adventures.",
+      "enables_zh": "构建难度可控的文字游戏课程，评估 Agent 在相关游戏间的泛化能力。",
+      "resource_kind": "environment-framework",
+      "evidence": [
+        {
+          "url": "https://github.com/microsoft/TextWorld#readme",
+          "supports": "Documents game generation, RL use, Python support and operating-system constraints."
+        },
+        {
+          "url": "https://arxiv.org/abs/1806.11532",
+          "supports": "Original paper explains controllable generated games and learning/evaluation use."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "minihack",
+      "name": "MiniHack",
+      "description_en": "A NetHack-based sandbox for building compact game tasks, from navigation and object use to procedurally generated challenges.",
+      "description_zh": "基于 NetHack 的任务沙盒，可构建导航、物品使用以及程序化生成的游戏挑战。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/NetHack-LE/minihack",
+      "repo_url": "https://github.com/NetHack-LE/minihack",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2109.13202",
+      "limits_en": "Requires NetHack Learning Environment dependencies. Windows uses Docker. The public level editor is an authoring tool, not a hosted benchmark run.",
+      "limits_zh": "依赖 NetHack Learning Environment；Windows 使用 Docker。公开关卡编辑器是任务制作工具，并非在线评测服务。",
+      "enables_en": "Design controlled game tasks to test exploration, planning and skill composition.",
+      "enables_zh": "设计可控游戏任务，研究探索、规划和技能组合。",
+      "resource_kind": "environment-framework",
+      "authoring_demo_url": "https://minihack-editor.github.io/",
+      "evidence": [
+        {
+          "url": "https://github.com/NetHack-LE/minihack#readme",
+          "supports": "Current author-maintained repository documents NetHack-based tasks and the Gymnasium API."
+        },
+        {
+          "url": "https://github.com/NetHack-LE/minihack/blob/main/docs/getting-started/installation.md",
+          "supports": "Documents macOS/Ubuntu dependency guidance and the Windows Docker path."
+        },
+        {
+          "url": "https://arxiv.org/abs/2109.13202",
+          "supports": "Original paper defines MiniHack as a configurable RL sandbox."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "webarena",
+      "name": "WebArena",
+      "description_en": "Self-hostable websites and task evaluators for agents working across shopping, forums, content management and software collaboration.",
+      "description_zh": "可自行部署的网站及任务评分器，覆盖购物、论坛、内容管理和软件协作等网页操作。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://webarena.dev/",
+      "repo_url": "https://github.com/web-arena-x/webarena",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2307.13854",
+      "limits_en": "Reproducible evaluation requires self-hosted services and controlled state resets. Shared demonstration sites are not a substitute for that setup.",
+      "limits_zh": "可复现评测需要自行部署服务并控制状态重置，不能直接以共享演示站点替代。",
+      "enables_en": "Measure completion of multi-step web tasks using executable checks of the resulting state.",
+      "enables_zh": "通过可执行的结果检查，评估 Agent 是否完成多步骤网页任务。",
+      "resource_kind": "environment-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/web-arena-x/webarena#readme",
+          "supports": "Canonical implementation documents self-hosting, task execution and the distinction between demos and reproducible experiments."
+        },
+        {
+          "url": "https://arxiv.org/abs/2307.13854",
+          "supports": "Original paper describes functional websites and task-success evaluation."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "visualwebarena",
+      "name": "VisualWebArena",
+      "description_en": "A web-agent benchmark whose shopping, classifieds and forum tasks require visual information alongside text.",
+      "description_zh": "结合图像和文字信息的网页 Agent 基准，涵盖购物、分类信息和论坛任务。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://jykoh.com/vwa",
+      "repo_url": "https://github.com/web-arena-x/visualwebarena",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2401.13649",
+      "limits_en": "Requires hosting the provided sites and matching the task configuration. The repository documents Python-version constraints; no hosted evaluation service is claimed.",
+      "limits_zh": "需要部署配套站点并匹配任务配置；仓库还列有 Python 版本限制。此处不提供托管评测服务。",
+      "enables_en": "Test whether an agent can use images and page content to finish realistic web tasks.",
+      "enables_zh": "评估 Agent 能否结合图像与页面内容完成实际网页任务。",
+      "resource_kind": "environment-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/web-arena-x/visualwebarena#readme",
+          "supports": "Documents the website setup, visual tasks, task configurations and execution-based evaluation."
+        },
+        {
+          "url": "https://arxiv.org/abs/2401.13649",
+          "supports": "Original paper explains why the tasks require multimodal web interaction."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "workarena",
+      "name": "WorkArena",
+      "description_en": "A ServiceNow-based task suite for evaluating agents on workplace workflows such as searching knowledge bases, filling forms and filtering records.",
+      "description_zh": "基于 ServiceNow 的办公任务套件，用于评估知识库搜索、表单填写和记录筛选等能力。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/ServiceNow/WorkArena",
+      "repo_url": "https://github.com/ServiceNow/WorkArena",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2403.07718",
+      "limits_en": "ServiceNow instances currently require approved access through the authors' gated dataset. WorkArena++ extends the original suite; task versions must be reported.",
+      "limits_zh": "当前需通过作者的受限数据集申请 ServiceNow 实例访问。WorkArena++ 扩展了原始套件，报告结果时应注明版本。",
+      "enables_en": "Evaluate structured enterprise workflows with task-specific validation.",
+      "enables_zh": "使用任务专用验证器评估企业软件中的结构化操作流程。",
+      "resource_kind": "benchmark-suite",
+      "related_paper_urls": [
+        "https://arxiv.org/abs/2407.05291"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/ServiceNow/WorkArena#readme",
+          "supports": "Documents task families, gated instance access and the WorkArena/WorkArena++ relationship."
+        },
+        {
+          "url": "https://arxiv.org/abs/2403.07718",
+          "supports": "Original paper introduces the ServiceNow knowledge-work benchmark."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "browsergym",
+      "name": "BrowserGym",
+      "description_en": "A shared browser environment interface that connects agents to multiple web benchmarks and exposes consistent observations and actions.",
+      "description_zh": "连接多种网页基准的统一浏览器环境接口，为 Agent 提供一致的观察和动作表示。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/ServiceNow/BrowserGym",
+      "repo_url": "https://github.com/ServiceNow/BrowserGym",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2412.05467",
+      "limits_en": "A research framework rather than a new website task collection. Each integrated benchmark keeps its own setup, access and evaluation requirements.",
+      "limits_zh": "这是研究框架，并非另一套独立网页任务；接入的各个基准仍有各自的部署、访问和评测要求。",
+      "enables_en": "Reuse agent integrations and compare behavior across supported web environments.",
+      "enables_zh": "复用 Agent 接口，并比较它在不同网页环境中的行为。",
+      "resource_kind": "environment-framework",
+      "evidence": [
+        {
+          "url": "https://github.com/ServiceNow/BrowserGym#readme",
+          "supports": "Documents the common interface, benchmark integrations and per-benchmark setup."
+        },
+        {
+          "url": "https://arxiv.org/abs/2412.05467",
+          "supports": "The ecosystem paper explains standardized browser observations, actions and evaluation."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "osworld",
+      "name": "OSWorld",
+      "description_en": "A desktop-agent environment with application workflows, file operations and executable task checks; the original paper introduced 369 tasks.",
+      "description_zh": "包含应用操作、文件处理和可执行任务检查的桌面 Agent 环境，原始论文发布了 369 项任务。",
+      "content_type": "app",
+      "platforms": [
+        "linux",
+        "windows"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/xlang-ai/OSWorld",
+      "repo_url": "https://github.com/xlang-ai/OSWorld",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2404.07972",
+      "limits_en": "Requires VM images and supported providers. The repository includes OSWorld-Verified updates; comparisons must identify the version. Running on a macOS host does not imply macOS task coverage.",
+      "limits_zh": "需要虚拟机镜像及受支持的运行方式。仓库包含 OSWorld-Verified 更新，比较结果时应注明版本；Mac 主机支持不等于 macOS 任务覆盖。",
+      "enables_en": "Evaluate multi-application computer use against final application and file states.",
+      "enables_zh": "通过应用和文件的最终状态，评估跨应用电脑操作能力。",
+      "resource_kind": "environment-and-benchmark",
+      "platform_note": "Tags follow the Ubuntu/Windows guest choices in the reviewed repository, rather than the broader OS list in the original abstract.",
+      "evidence": [
+        {
+          "url": "https://github.com/xlang-ai/OSWorld#readme",
+          "supports": "Documents VM setup, Ubuntu/Windows guest choices and OSWorld-Verified version changes."
+        },
+        {
+          "url": "https://arxiv.org/abs/2404.07972",
+          "supports": "Original paper describes application tasks and execution-based checks."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "androidworld",
+      "name": "AndroidWorld",
+      "description_en": "An Android emulator environment with parameterized tasks and state-based rewards across everyday mobile applications.",
+      "description_zh": "运行于 Android 模拟器的环境，为日常移动应用提供参数化任务和基于系统状态的奖励。",
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://google-research.github.io/android_world/",
+      "repo_url": "https://github.com/google-research/android_world",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2405.14573",
+      "limits_en": "Requires a configured Android emulator and the prescribed apps. Host compatibility differs from the Android target; Apple Silicon Docker setup has documented caveats.",
+      "limits_zh": "需要配置 Android 模拟器及指定应用。主机兼容性与 Android 目标平台应分开理解，Apple Silicon 的 Docker 方案有已知限制。",
+      "enables_en": "Train or evaluate agents on repeatable mobile workflows with varied task parameters.",
+      "enables_zh": "通过不同任务参数，训练或评估可重复的移动端操作流程。",
+      "resource_kind": "environment-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/google-research/android_world#readme",
+          "supports": "Documents the live emulator, dynamic tasks, reward signals and setup constraints."
+        },
+        {
+          "url": "https://arxiv.org/abs/2405.14573",
+          "supports": "Original paper describes parameterized workflows and system-state evaluation."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "windows-agent-arena",
+      "name": "Windows Agent Arena",
+      "description_en": "A Windows desktop-agent benchmark and environment for application, browser and operating-system tasks, with local and Azure execution paths.",
+      "description_zh": "面向 Windows 应用、浏览器和操作系统任务的桌面 Agent 基准与环境，提供本地及 Azure 运行方式。",
+      "content_type": "app",
+      "platforms": [
+        "windows"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://microsoft.github.io/WindowsAgentArena/",
+      "repo_url": "https://github.com/microsoft/WindowsAgentArena",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2409.08264",
+      "limits_en": "Setup requires a Windows VM image, Docker and dependencies. The documented evaluation ISO is a time-limited trial; Azure execution can incur costs.",
+      "limits_zh": "需要 Windows 虚拟机镜像、Docker 和配套依赖。文档使用有期限的评估版 ISO；Azure 运行可能产生费用。",
+      "enables_en": "Assess Windows GUI task completion with repeatable initial states and evaluators.",
+      "enables_zh": "使用可重复的初始状态和评分器，评估 Windows 图形界面任务完成情况。",
+      "resource_kind": "environment-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/microsoft/WindowsAgentArena#readme",
+          "supports": "Documents the Windows environment, Docker/VM setup and local/cloud execution."
+        },
+        {
+          "url": "https://arxiv.org/abs/2409.08264",
+          "supports": "Original paper defines the Windows task suite and scalable evaluation approach."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "iosworld",
+      "name": "iOSWorld",
+      "description_en": "An iPhone Simulator benchmark with 26 purpose-built apps, a shared fictional user profile and tasks that span apps and personal context.",
+      "description_zh": "基于 iPhone 模拟器的基准，包含 26 个专门构建的应用、统一虚构用户数据，以及跨应用和个人背景相关任务。",
+      "content_type": "app",
+      "platforms": [
+        "ios"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://github.com/ljang0/iOSWorld",
+      "repo_url": "https://github.com/ljang0/iOSWorld",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2606.09764",
+      "limits_en": "Requires macOS, Xcode and an iOS simulator. These are seeded research apps, not App Store products; the default scoring path uses a model judge.",
+      "limits_zh": "需要 macOS、Xcode 和 iOS 模拟器。应用使用预置研究数据，并非 App Store 产品；默认评分流程采用模型评审。",
+      "enables_en": "Evaluate cross-app phone tasks and reasoning over a consistent synthetic personal history.",
+      "enables_zh": "评估跨应用手机任务，以及对一致的合成个人历史进行推理的能力。",
+      "resource_kind": "environment-and-benchmark",
+      "provenance_source": "https://arxiv.org/html/2606.09764",
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2606.09764",
+          "supports": "The authors state that apps were developed or adapted with Claude Code assistance and manually verified by human developers."
+        },
+        {
+          "url": "https://github.com/ljang0/iOSWorld#readme",
+          "supports": "Documents runnable SwiftUI apps, benchmark runners, simulator requirements and default judge behavior."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "macarena",
+      "name": "MacArena",
+      "description_en": "A macOS computer-use benchmark combining ported desktop tasks with macOS-specific workflows in an Apple Silicon virtual-machine environment.",
+      "description_zh": "面向 macOS 的电脑操作基准，在 Apple Silicon 虚拟机环境中组合移植桌面任务与 macOS 特有流程。",
+      "content_type": "app",
+      "platforms": [
+        "macos"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/MacPaw/MacArena",
+      "repo_url": "https://github.com/MacPaw/MacArena",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2606.06560",
+      "limits_en": "Requires Apple hardware and macOS VM setup. Tasks inherited from macOSWorld carry CC BY-NC 4.0 restrictions; application and OS licenses also apply.",
+      "limits_zh": "需要 Apple 硬件和 macOS 虚拟机配置。继承自 macOSWorld 的任务采用 CC BY-NC 4.0，另需遵守系统和应用许可。",
+      "enables_en": "Test whether desktop-agent skills transfer to native macOS interfaces and workflows.",
+      "enables_zh": "检验桌面 Agent 能力能否迁移到原生 macOS 界面及操作流程。",
+      "resource_kind": "environment-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/MacPaw/MacArena#readme",
+          "supports": "Documents UTM/VM setup, task sources and source-specific license restrictions."
+        },
+        {
+          "url": "https://arxiv.org/abs/2606.06560",
+          "supports": "Original paper describes the Apple Silicon environment and macOS-specific evaluation."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    }
+  ]
+}

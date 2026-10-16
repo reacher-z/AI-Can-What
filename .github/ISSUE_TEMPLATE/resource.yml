@@ -1,0 +1,31 @@
+name: Suggest a project
+description: Propose a source-backed showcase or agent environment.
+title: "[Resource] "
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Original source URL
+      description: Link to the author's project, repository, or original paper.
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: What can people do with it?
+      description: Include supported platforms, a public demo or setup guide, and relevant limits.
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Evidence for AI-built or training/evaluation claims
+      description: Link to the author statement. Leave unknown facts explicitly unknown.
+    validations:
+      required: true
