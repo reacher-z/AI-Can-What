@@ -3,6 +3,7 @@
 from html.parser import HTMLParser
 import json
 from pathlib import Path
+import struct
 from urllib.parse import unquote, urlsplit
 from urllib.robotparser import RobotFileParser
 import xml.etree.ElementTree as ET
@@ -57,6 +58,7 @@ def main():
         assert page.language == ('zh-CN' if parsed.path.startswith('/zh/') else 'en'), url
         assert [l.get('href') for l in page.links if l.get('rel') == 'canonical'] == [url], url
         assert 'noindex' not in page.meta.get('robots', ''), url
+        assert page.meta.get('og:image') == page.meta.get('twitter:image') == origin + '/social-card.png', url
         for graph in page.graphs:
             assert graph['@context'] == 'https://schema.org'
             for item in graph['@graph']:
@@ -96,6 +98,8 @@ def main():
     for crawler in ('Googlebot', 'bingbot', 'OAI-SearchBot', 'PerplexityBot'):
         assert all(robots.can_fetch(crawler, url) for url in urls)
     assert (OUT / 'llms.txt').is_file()
+    image = (OUT / 'social-card.png').read_bytes()
+    assert image[:8] == b'\x89PNG\r\n\x1a\n' and struct.unpack('>II', image[16:24]) == (1200, 630), 'Invalid sharing image'
     assert 'noindex' in (OUT / '404.html').read_text()
     assert (OUT / 'references.bib').read_text().count('@misc{') == len(papers)
     print(f'Validated {len(entries)} source-backed records, {len(papers)} papers, {len(urls)} static pages, internal links, bilingual alternates, JSON-LD, citations, and crawler access.')

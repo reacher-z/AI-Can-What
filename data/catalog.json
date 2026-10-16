@@ -3272,6 +3272,190 @@
       "paper_url": null,
       "reviewed_at": "2026-10-16",
       "verification": "source-reviewed"
+    },
+    {
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "interaction2code",
+      "name": "Interaction2Code",
+      "description_en": "A benchmark of webpage interaction transitions, pairing before-and-after screenshots with action annotations and public generation and evaluation code.",
+      "description_zh": "面向网页交互状态变化的基准，将交互前后截图与动作标注配对，并公开代码生成和评估实现。",
+      "primary_url": "https://github.com/WebPAI/Interaction2Code",
+      "repo_url": "https://github.com/WebPAI/Interaction2Code",
+      "paper_url": "https://arxiv.org/abs/2411.03292",
+      "enables_en": "Compare generated pages on visual similarity and specified interactions, using the released screenshot pairs, metadata and browser-based metrics.",
+      "enables_zh": "利用公开截图对、元数据和浏览器评估代码，比较生成页面的视觉相似度与指定交互表现。",
+      "limits_en": "Evaluates specified interaction transitions rather than complete site workflows or backend equivalence. Code and data are public, but no project-level code license or dataset license was found in the reviewed repository and data card.",
+      "limits_zh": "评估指定交互的状态变化，不能证明完整网站流程或后端等价。代码与数据可公开查看，但已核查的仓库及数据卡未注明项目级代码许可或数据许可。",
+      "resource_kind": "dataset-and-benchmark",
+      "runtime": "Python generation and metric scripts; browser automation, vision metrics and configured model access. No upstream code was executed.",
+      "platform_note": "Web describes the reconstruction target, not the host operating system.",
+      "evidence": [
+        {
+          "url": "https://github.com/WebPAI/Interaction2Code#readme",
+          "supports": "Documents paired interaction screenshots, action metadata, generation scripts and automatic/human evaluation; the public tree exposes these artifacts without a project-level license file."
+        },
+        {
+          "url": "https://github.com/WebPAI/Interaction2Code/blob/main/code/metric/calculate_metric.py",
+          "supports": "Public evaluation source uses Selenium to exercise generated interaction elements and computes visual/text metrics."
+        },
+        {
+          "url": "https://huggingface.co/datasets/whale99/Interaction2Code",
+          "supports": "Author-linked dataset publicly exposes page-state images and action.json annotations; its card does not specify a dataset license."
+        },
+        {
+          "url": "https://arxiv.org/abs/2411.03292",
+          "supports": "Current arXiv version describes the interaction-prototyping benchmark and its scope."
+        }
+      ]
+    },
+    {
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "iwr-bench",
+      "name": "IWR-Bench",
+      "description_en": "A video-to-webpage reconstruction benchmark with user-interaction recordings, static assets, action sequences and public code that evaluates generated pages.",
+      "description_zh": "从交互视频重建网页的基准，提供用户操作录像、静态资源、动作序列，以及评估生成页面的公开代码。",
+      "primary_url": "https://github.com/SIGMME/IWR-Bench",
+      "repo_url": "https://github.com/SIGMME/IWR-Bench",
+      "paper_url": "https://arxiv.org/abs/2509.24709",
+      "enables_en": "Evaluate whether generated HTML reproduces the visible states and interactions demonstrated in a supplied video.",
+      "enables_zh": "评估生成的 HTML 能否复现给定视频展示的可见状态与交互。",
+      "limits_en": "Uses predefined trajectories and model-assisted judging, not proof of complete site or backend equivalence. The public dataset is marked Apache 2.0; no project-level license was found for the benchmark code. Requires browser and model setup.",
+      "limits_zh": "采用预设轨迹和模型辅助评审，不能证明完整网站或后端等价。公开数据集标注 Apache 2.0；未找到基准代码的项目级许可。运行需配置浏览器与模型。",
+      "resource_kind": "dataset-and-benchmark",
+      "runtime": "Python generation/evaluation scripts with Playwright and the bundled browser-use integration; models and data require configuration.",
+      "platform_note": "Web is the generated artifact target; the benchmark is not a hosted browser-task service.",
+      "evidence": [
+        {
+          "url": "https://github.com/SIGMME/IWR-Bench#readme",
+          "supports": "Documents video/assets inputs, public generation and evaluation scripts, browser setup and the agent-as-judge procedure."
+        },
+        {
+          "url": "https://github.com/SIGMME/IWR-Bench/blob/main/evaluate.py",
+          "supports": "Evaluation source loads generated index.html, executes recorded actions and invokes visual/assertion scoring."
+        },
+        {
+          "url": "https://huggingface.co/datasets/IWR-Bench/IWR-Bench",
+          "supports": "Public ungated dataset provides data.jsonl, videos, assets and checkpoint images, with Apache-2.0 metadata."
+        },
+        {
+          "url": "https://arxiv.org/abs/2509.24709",
+          "supports": "Current arXiv record defines video-based reconstruction and supplies the bibliography used here."
+        }
+      ]
+    },
+    {
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "dashboard2code",
+      "name": "Dashboard2Code (DashboardMimic)",
+      "description_en": "A reconstruction benchmark with public code for agents to explore Plotly+Dash dashboards and reproduce their visual design and interactive behavior; its DashboardMimic data is gated.",
+      "description_zh": "公开代码的仪表盘重建基准，要求 Agent 探索 Plotly+Dash 仪表盘并复现外观和交互；配套 DashboardMimic 数据需要申请访问。",
+      "primary_url": "https://github.com/nth2000/Dashboard2Code",
+      "repo_url": "https://github.com/nth2000/Dashboard2Code",
+      "paper_url": "https://arxiv.org/abs/2607.04727",
+      "enables_en": "Inspect the exploration, generation and evaluation implementation, then reproduce experiments when the required dataset and model integrations are available.",
+      "enables_zh": "查看探索、代码生成与评估实现，并在获得所需数据和模型集成后复现实验。",
+      "limits_en": "Dataset access requires shared contact details and manual approval; gated contents were not accessed. Model adapters and evaluation scripts need configuration, including an empty batch-run list. No project-level code or publicly visible dataset license was found.",
+      "limits_zh": "数据访问要求共享联系信息并经人工批准，本次未访问受限内容。需配置模型适配器与评估脚本，包括默认空的批处理运行列表。未找到项目级代码许可或公开可见的数据许可。",
+      "resource_kind": "benchmark-suite",
+      "runtime": "Python dashboard server and agent/evaluation scripts; Plotly+Dash tasks; gated dataset and configured model adapters required.",
+      "platform_note": "Web dashboards are the evaluation target; no host OS support is inferred.",
+      "evidence": [
+        {
+          "url": "https://github.com/nth2000/Dashboard2Code#readme",
+          "supports": "Public repository contains exploration, generation and evaluation code and documents custom model-call adapters and data setup."
+        },
+        {
+          "url": "https://github.com/nth2000/Dashboard2Code/blob/main/evaluation/run_evals.py",
+          "supports": "The shipped batch driver has an empty configuration list and requires editing to select runs and evaluation stages."
+        },
+        {
+          "url": "https://huggingface.co/datasets/nth2000/Dashboard2Code",
+          "supports": "Public access notice requires agreement to share contact information; no public dataset card or license is displayed."
+        },
+        {
+          "url": "https://huggingface.co/api/datasets/nth2000/Dashboard2Code",
+          "supports": "Public Hub metadata marks dataset access as manually gated."
+        },
+        {
+          "url": "https://arxiv.org/abs/2607.04727",
+          "supports": "Paper identifies DashboardMimic as the Plotly+Dash benchmark and describes code-semantic and dynamic interaction evaluation."
+        }
+      ]
+    },
+    {
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "webuibench",
+      "name": "WebUIBench",
+      "description_en": "A public diagnostic dataset for webpage perception, HTML code tasks and image–HTML understanding, with eight released evaluation subsets.",
+      "description_zh": "公开的网页能力诊断数据集，覆盖页面感知、HTML 代码任务和图像与 HTML 对应理解，目前发布八个评测子集。",
+      "primary_url": "https://huggingface.co/datasets/Tele-AI-MAIL/WebUIBench",
+      "repo_url": null,
+      "paper_url": "https://arxiv.org/abs/2506.07818",
+      "enables_en": "Measure component skills behind screenshot-to-code systems, such as OCR, visual grounding, code editing and matching page images to HTML.",
+      "enables_zh": "评估截图到代码系统所需的基础能力，包括 OCR、视觉定位、代码编辑和页面图像与 HTML 匹配。",
+      "limits_en": "The public repository has README/images but lacks its advertised evaluator scripts. The Hub currently exposes eight diagnostic subsets, not a complete runnable nine-task release. Data is CC BY 4.0; the data card's arXiv link is incorrect, so use the verified paper link here.",
+      "limits_zh": "公开仓库仅有 README 和图片，缺少说明中列出的评估脚本。Hub 当前提供八个诊断子集，并非可直接运行的完整九任务版本。数据采用 CC BY 4.0；数据卡中的 arXiv 链接有误，应使用此处已核实的论文链接。",
+      "resource_kind": "dataset-and-benchmark",
+      "runtime": "Public Parquet test datasets; an evaluation implementation must be supplied separately.",
+      "platform_note": "Web is the dataset's source/target domain, not a live agent environment.",
+      "evidence": [
+        {
+          "url": "https://huggingface.co/datasets/Tele-AI-MAIL/WebUIBench",
+          "supports": "Official public dataset provides eight test subsets and declares CC BY 4.0; its paper link incorrectly points to VisualWebBench."
+        },
+        {
+          "url": "https://github.com/MAIL-Tele-AI/WebUIBench",
+          "supports": "Author repository links the correct paper and dataset, but its current file tree contains only README and images."
+        },
+        {
+          "url": "https://arxiv.org/abs/2506.07818",
+          "supports": "Verified WebUIBench arXiv record, distinct from VisualWebBench at 2404.05955."
+        },
+        {
+          "url": "https://aclanthology.org/2025.findings-acl.815/",
+          "supports": "Publisher record confirms the WebUIBench title and authors."
+        }
+      ]
     }
   ]
 }

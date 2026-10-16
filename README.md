@@ -7,14 +7,14 @@
 A source-backed directory of AI-built software and environments, benchmarks, and datasets for training and evaluating agents, organized into **Games & virtual worlds**, **Websites**, and **Apps**. Every entry has an original source, review date, practical limits, and its own static page.
 
 <!-- BEGIN GENERATED INDEX -->
-**79 catalog entries · 55 referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.
+**83 catalog entries · 59 referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.
 
 ## Browse
 
 | Category | Entries | Repository index |
 | --- | --- | --- |
 | [Games & virtual worlds](https://aicanwhat.com/games/) | 21 | [Browse](catalog/games/README.md) |
-| [Websites](https://aicanwhat.com/websites/) | 18 | [Browse](catalog/websites/README.md) |
+| [Websites](https://aicanwhat.com/websites/) | 22 | [Browse](catalog/websites/README.md) |
 | [Apps](https://aicanwhat.com/apps/) | 40 | [Browse](catalog/apps/README.md) |
 
 [Research bibliography](https://aicanwhat.com/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)
@@ -59,3 +59,5 @@ Read [scope and coverage](docs/coverage.md) for inclusion rules and known gaps. 
 
 
 [Search discovery and submission workflow](docs/search-discovery.md)
+
+For reverse-engineering tools, integrations, and software-reconstruction research, browse the companion [AwesomeREA directory](https://awesomerea.org/).

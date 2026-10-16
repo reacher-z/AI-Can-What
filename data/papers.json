@@ -1415,6 +1415,111 @@
       "description_zh": "将文字家庭任务与视觉具身环境对齐，使 Agent 能先在 TextWorld 学习抽象动作策略，再迁移到 ALFRED 任务执行。",
       "source_url": "https://arxiv.org/abs/2010.03768",
       "date_note": "published_at is the first arXiv submission date, not a conference or journal publication date."
+    },
+    {
+      "id": "2411.03292",
+      "title": "Interaction2Code: Benchmarking MLLM-based Interactive Webpage Code Generation from Interactive Prototyping",
+      "authors": [
+        "Jingyu Xiao",
+        "Yuxuan Wan",
+        "Yintong Huo",
+        "Zixin Wang",
+        "Xinyi Xu",
+        "Wenxuan Wang",
+        "Zhiyao Xu",
+        "Yuhang Wang",
+        "Michael R. Lyu"
+      ],
+      "published_at": "2024-11-05",
+      "arxiv_url": "https://arxiv.org/abs/2411.03292",
+      "project_ids": [
+        "interaction2code"
+      ],
+      "description_en": "Studies webpage code generation from screenshots of interaction states and evaluates both rendered appearance and specified interactive behavior.",
+      "description_zh": "研究根据交互状态截图生成网页代码，并同时评估渲染外观和指定交互行为。",
+      "source_url": "https://arxiv.org/abs/2411.03292",
+      "date_note": "published_at is the first arXiv submission date. Title and authors follow arXiv v3, revised 2026-03-01, rather than the original smaller preprint."
+    },
+    {
+      "id": "2509.24709",
+      "title": "IWR-Bench: Can LVLMs reconstruct interactive webpage from a user interaction video?",
+      "authors": [
+        "Yang Chen",
+        "Minghao Liu",
+        "Yufan Shen",
+        "Yunwen Li",
+        "Tianyuan Huang",
+        "Xinyu Fang",
+        "Tianyu Zheng",
+        "Wenxuan Huang",
+        "Cheng Yang",
+        "Daocheng Fu",
+        "Jianbiao Mei",
+        "Rong Wu",
+        "Yunfei Zhao",
+        "Licheng Wen",
+        "Xuemeng Yang",
+        "Song Mao",
+        "Qunshu Lin",
+        "Zhi Yu",
+        "Yongliang Shen",
+        "Yu Qiao",
+        "Botian Shi"
+      ],
+      "published_at": "2025-09-29",
+      "arxiv_url": "https://arxiv.org/abs/2509.24709",
+      "project_ids": [
+        "iwr-bench"
+      ],
+      "description_en": "Introduces interactive webpage reconstruction from user videos and supplied assets, with action-sequence evaluation of visual fidelity and functional behavior.",
+      "description_zh": "提出根据用户操作视频及配套资源重建交互网页，并通过动作序列评估视觉保真度与功能行为。",
+      "source_url": "https://arxiv.org/abs/2509.24709",
+      "date_note": "published_at is the first arXiv submission date. The author list follows the current arXiv record, which has 21 authors; it is not the differing proceedings-PDF author list."
+    },
+    {
+      "id": "2607.04727",
+      "title": "Dashboard2Code: Evaluating Multimodal Models on Reconstructing Interactive Dashboards",
+      "authors": [
+        "Tianhao Niu",
+        "Ziyu Han",
+        "Qiguang Chen",
+        "Shiqi Zhou",
+        "Baocai Shan",
+        "Hengjie Fang",
+        "Qingfu Zhu",
+        "Wanxiang Che"
+      ],
+      "published_at": "2026-07-06",
+      "arxiv_url": "https://arxiv.org/abs/2607.04727",
+      "project_ids": [
+        "dashboard2code"
+      ],
+      "description_en": "Introduces dashboard reconstruction through active exploration, the Plotly+Dash DashboardMimic benchmark, and combined code-semantic and interaction-based evaluation.",
+      "description_zh": "提出通过主动探索重建仪表盘的任务、基于 Plotly+Dash 的 DashboardMimic 基准，以及结合代码语义和交互测试的评估方法。",
+      "source_url": "https://arxiv.org/abs/2607.04727",
+      "date_note": "published_at is the first arXiv submission date, not the ACL proceedings publication date."
+    },
+    {
+      "id": "2506.07818",
+      "title": "WebUIBench: A Comprehensive Benchmark for Evaluating Multimodal Large Language Models in WebUI-to-Code",
+      "authors": [
+        "Zhiyu Lin",
+        "Zhengda Zhou",
+        "Zhiyuan Zhao",
+        "Tianrui Wan",
+        "Yilun Ma",
+        "Junyu Gao",
+        "Xuelong Li"
+      ],
+      "published_at": "2025-06-09",
+      "arxiv_url": "https://arxiv.org/abs/2506.07818",
+      "project_ids": [
+        "webuibench"
+      ],
+      "description_en": "Breaks webpage-to-code evaluation into visual perception, HTML programming, image–HTML understanding and page generation to diagnose model capabilities.",
+      "description_zh": "将网页到代码评估划分为视觉感知、HTML 编程、图像与 HTML 对应理解及页面生成，用于诊断模型能力。",
+      "source_url": "https://arxiv.org/abs/2506.07818",
+      "date_note": "published_at is the first arXiv submission date. The official dataset card's 2404.05955 link is not this paper."
     }
   ]
 }

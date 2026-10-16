@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8f9f4"/>
+  <rect x="64" y="50" width="58" height="58" rx="14" fill="#1b2822"/>
+  <text x="93" y="93" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="46" fill="#d8ee9d">?</text>
+  <text x="138" y="92" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="36" fill="#1b2822">AI can <tspan font-family="Georgia,serif" font-style="italic" font-weight="400">what?</tspan></text>
+  <text x="65" y="175" font-family="Arial,Helvetica,sans-serif" font-size="15" letter-spacing="3" fill="#4c6557">THE SOFTWARE &amp; AGENT ENVIRONMENT INDEX</text>
+  <text x="60" y="286" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="83" letter-spacing="-3" fill="#1b2822">Software it builds.</text>
+  <text x="60" y="388" font-family="Georgia,serif" font-style="italic" font-size="84" letter-spacing="-3" fill="#3f644d">Worlds it learns in.</text>
+  <line x1="64" y1="453" x2="1136" y2="453" stroke="#d4ddd1"/>
+  <text x="64" y="503" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#4c6557">AI-made software · Agent environments · Original research</text>
+  <text x="64" y="567" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#1b2822">Games / Websites / Apps</text>
+  <text x="1136" y="567" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#3f644d">aicanwhat.com</text>
+</svg>

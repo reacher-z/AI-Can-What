@@ -76,6 +76,8 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
 
 [研究文献]({origin}/zh/papers/) · [完整数据](data/catalog.json) · [贡献说明](CONTRIBUTING.md)
 
+相关目录：[AwesomeREA](https://awesomerea.org/zh/resources/) 整理逆向工程工具、集成与软件重建研究。
+
 软件作品、可运行环境、评测套件和静态数据集分别标注。AI 开发方式需要作者证据；平台、许可和运行限制以原始来源为准，未知信息保持未知。
 
 ## 本地构建
