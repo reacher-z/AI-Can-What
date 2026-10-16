@@ -2,6 +2,8 @@
 
 **See what AI builds. Explore where agents learn.**
 
+**[Explore aicanwhat.com](https://aicanwhat.com/) · [中文目录](https://aicanwhat.com/zh/) · [Review method](https://aicanwhat.com/about/)**
+
 A source-backed directory of AI-built software and environments for training and evaluating agents, organized into **Games**, **Websites**, and **Apps**. Every entry has an original source, review date, practical limits, and its own static page.
 
 The first collection contains **16 projects**: 4 games, 4 websites, and 8 applications. It includes four author-reported AI-built showcases and twelve entries linked to original papers. Source review is distinct from runtime verification.
@@ -47,3 +49,6 @@ site.json                  Canonical origin and public repository
 ```
 
 Keep the canonical origin in `site.json` aligned with the actual published domain. Run validation after changing data or templates. Search-engine submissions happen after a successful deployment and are recorded separately from crawl, index, or citation outcomes.
+
+
+[Search discovery and submission workflow](docs/search-discovery.md)
