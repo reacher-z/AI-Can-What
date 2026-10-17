@@ -168,6 +168,51 @@
         "caption_en": "Observed second slide and two-slide counter beside the synthetic Markdown input. Demo published by OpenAI.",
         "caption_zh": "合成 Markdown 输入旁实际显示的第二页及两页计数。演示由 OpenAI 发布。"
       }
+    },
+    {
+      "id": "tiny-kanban-create-search-reload-2026-10-16",
+      "project_id": "gpt5-tiny-kanban",
+      "observed_on": "2026-10-16",
+      "target_url": "https://gpt5-coding-examples.vercel.app/tiny-kanban",
+      "deployment_commit": null,
+      "environment_en": "Chrome on macOS · desktop · synthetic local task · no account",
+      "environment_zh": "macOS Chrome · 桌面 · 合成本地任务 · 无账户",
+      "summary_en": "A synthetic task card was created, found by title search and retained after one page reload.",
+      "summary_zh": "创建的合成任务卡片可以通过标题搜索找到，并在一次页面重载后保留。",
+      "steps": [
+        {
+          "action_en": "Add AI Can What observation sample with the default Medium priority and Sample assignee.",
+          "action_zh": "以默认 Medium 优先级和 Sample 负责人，添加 AI Can What observation sample 卡片。",
+          "result_en": "The card appeared in Todo with Medium and Sample labels. The Todo count changed from 1/99 to 2/99, and the top count from 3 to 4.",
+          "result_zh": "卡片出现在 Todo 列，并显示 Medium 与 Sample 标签；Todo 计数由1/99变为2/99，顶部计数由3变为4。"
+        },
+        {
+          "action_en": "Type observation sample into the search field.",
+          "action_zh": "在搜索框输入 observation sample。",
+          "result_en": "Only the synthetic card remained visible and the search count showed 1. Column headers retained their unfiltered totals.",
+          "result_zh": "仅合成卡片保持可见，搜索计数显示1；各列标题仍显示未筛选的总数。"
+        },
+        {
+          "action_en": "Reload the page in the same browser.",
+          "action_zh": "在同一浏览器中重新加载页面。",
+          "result_en": "The synthetic card and its labels remained alongside the three publisher-seeded cards. The search field was empty and the top count showed 4.",
+          "result_zh": "合成卡片及其标签仍与发布者预置的三张卡片一起显示；搜索框为空，顶部计数显示4。"
+        },
+        {
+          "action_en": "Repeat the same title search after reloading.",
+          "action_zh": "重载后再次执行相同标题搜索。",
+          "result_en": "The synthetic card was again the sole visible result with count 1, as captured in the screenshot.",
+          "result_zh": "合成卡片再次成为唯一可见结果，计数为1；截图记录了这一状态。"
+        }
+      ],
+      "scope_en": "This covers one card creation, a title-substring search and retention after one same-browser reload. It does not test drag-and-drop, column transitions, WIP enforcement, editing/deletion, assignee or priority search, cross-browser persistence, collaboration or mobile behavior. The search query itself reset on reload. Source review documents localStorage; the deployed source commit remains unidentified.",
+      "scope_zh": "仅覆盖一次卡片创建、标题子串搜索及同一浏览器重载一次后的保留情况。未测试拖放、跨列移动、WIP 限制、编辑／删除、负责人或优先级搜索、跨浏览器持久化、协作或手机表现。搜索词本身会在重载后清空。源码说明使用 localStorage，实际部署对应的源码提交仍未确认。",
+      "screenshot": {
+        "url": "/observation-tiny-kanban-2026-10-16.jpg",
+        "sha256": "f60bc39aca62cd1951f27baaab919872cbd0c18aca3d7347acb752b225060438",
+        "caption_en": "Synthetic card visible after reloading and repeating its title search; the search count is 1 while column totals remain unfiltered. Demo published by OpenAI.",
+        "caption_zh": "重载后再次按标题搜索显示的合成卡片；搜索计数为1，各列计数仍为未筛选总数。演示由 OpenAI 发布。"
+      }
     }
   ]
 }

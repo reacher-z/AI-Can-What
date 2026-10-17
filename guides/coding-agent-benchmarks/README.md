@@ -13,6 +13,7 @@ Use a defined issue and test contract. Passing tests establishes only the behavi
 | Project and evidence | Use it to study | Setup and limits |
 | --- | --- | --- |
 | [SWE-bench](https://aicanwhat.com/projects/swe-bench/) · [Source](https://www.swebench.com/) | Evaluate real repository issue resolution against project tests. | Measures repository-level code repair, not GUI operation or complete app generation. Docker evaluation needs substantial resources; identify the dataset variant and harness version in comparisons. |
+| [SWE-bench Pro](https://aicanwhat.com/projects/swe-bench-pro/) · [Source](https://github.com/scaleapi/SWE-bench_Pro-os) | Evaluate the distinct long-horizon repair corpus with pinned V2 tasks and re-grading; older Harbor packages are not proven equivalent. | Current public V2 has 642 tasks; HARD-51 is a subset, and legacy v1 has 731. The paper's broader collection includes nonpublic tracks. Frozen Harbor packages still advertise 731 and are not proven equivalent to V2. V2's reported protocol keeps the agent phase offline and re-grades captured patches in fresh containers. Do not combine versions, subsets or namespaces into an additive task count. |
 
 ## Application development and proposal decisions
 
@@ -31,6 +32,14 @@ These environments return execution feedback over multiple steps. Pin task image
 | --- | --- | --- |
 | [Terminal-Bench](https://aicanwhat.com/projects/terminal-bench/) · [Source](https://www.tbench.ai/) | Evaluate multi-step command-line outcomes in versioned task environments. | The current repository is a continuously updated benchmark, while the linked paper describes Terminal-Bench 2.0. Pin dataset and harness versions for comparisons. Harbor and a supported sandbox backend are required; provider costs and task dependencies vary. Repository license is Apache 2.0. |
 | [InterCode](https://aicanwhat.com/projects/intercode/) · [Source](https://intercode-benchmark.github.io/) | Study how an agent reacts to errors and execution feedback in coding tasks. | Requires Python 3.8+ and a running Docker service with task images. Included task types and setup paths differ; model-driven experiment scripts require configured provider access. This is execution-based evaluation rather than a static code dataset. Repository code is MIT. |
+
+## Correctness-preserving optimization
+
+Runtime improvement is meaningful only alongside correctness evidence and controlled hardware, dependencies and timing conditions.
+
+| Project and evidence | Use it to study | Setup and limits |
+| --- | --- | --- |
+| [AlgoTune](https://aicanwhat.com/projects/algotune/) · [Source](https://algotune.io/) | Measure solver speedups with generated held-out inputs; an adapter reward of 1.0 alone does not establish a correct solution. | Timing depends on hardware, library versions, calibration and parallel contention. The 154 task families each generate many inputs; input counts are not additional tasks. Original aggregate speedup, AlgoTune-Pass resolve rate and Harbor rewards are different measures. Harbor documents a 1.0 floor for invalid or slower solutions, so that reward alone does not prove correctness. |
 
 ## Training environments and task synthesis
 

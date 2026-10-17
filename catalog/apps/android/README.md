@@ -2,7 +2,7 @@
 
 [All app resources](../README.md) · [Website index](https://aicanwhat.com/apps/android/)
 
-20 entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.
+23 entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.
 
 | Project | Resource type | Use | Primary source |
 | --- | --- | --- | --- |
@@ -14,7 +14,9 @@
 | [AndroidEnv](https://aicanwhat.com/projects/androidenv/) | Environment framework | Training, Evaluation | [Source](https://github.com/google-deepmind/android_env) |
 | [AndroidLab](https://aicanwhat.com/projects/androidlab/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/THUDM/Android-Lab) |
 | [AndroidWorld](https://aicanwhat.com/projects/androidworld/) | Environment + benchmark | Training, Evaluation | [Source](https://google-research.github.io/android_world/) |
+| [Angle-Calculator](https://aicanwhat.com/projects/angle-calculator-tanaka/) | Software made with AI | Showcase | [Source](https://play.google.com/store/apps/details?id=com.anglecalc.app) |
 | [AppSim-Bench](https://aicanwhat.com/projects/appsim-bench/) | Environment + benchmark | Evaluation | [Source](https://github.com/Acrab-Agentic-Labs/AppSim) |
+| [Curate: Rank Your Media](https://aicanwhat.com/projects/curate-rank-your-media/) | Software made with AI | Showcase | [Source](https://play.google.com/store/apps/details?id=com.meberko.curate) |
 | [GUI Odyssey](https://aicanwhat.com/projects/gui-odyssey/) | Dataset + benchmark | Training, Evaluation | [Source](https://github.com/OpenGVLab/GUI-Odyssey) |
 | [GUI-World](https://aicanwhat.com/projects/gui-world/) | Dataset + benchmark | Training, Evaluation | [Source](https://github.com/Dongping-Chen/GUI-World) |
 | [GUIAct (GUICourse)](https://aicanwhat.com/projects/guiact/) | Dataset + benchmark | Training, Evaluation | [Source](https://github.com/RUCBM/GUICourse) |
@@ -22,6 +24,7 @@
 | [MobileAgentBench](https://aicanwhat.com/projects/mobileagentbench/) | Environment + benchmark | Evaluation | [Source](https://github.com/MobileAgentBench/mobile-agent-bench) |
 | [Nacre](https://aicanwhat.com/projects/nacre/) | Software made with AI | Showcase | [Source](https://github.com/RYOITABASHI/Nacre) |
 | [OneBotan](https://aicanwhat.com/projects/onebotan/) | Software made with AI | Showcase | [Source](https://github.com/mirute02/onebotan) |
+| [OS-Atlas Data](https://aicanwhat.com/projects/os-atlas-data/) | Dataset | Training | [Source](https://huggingface.co/datasets/OS-Copilot/OS-Atlas-data) |
 | [OS-Sentinel / MobileRisk-Live](https://aicanwhat.com/projects/os-sentinel/) | Environment + benchmark | Evaluation | [Source](https://github.com/OS-Copilot/OS-Sentinel) |
 | [ScreenSpot](https://aicanwhat.com/projects/screenspot/) | Dataset + benchmark | Evaluation | [Source](https://github.com/njucckevin/SeeClick) |
 | [Shelly](https://aicanwhat.com/projects/shelly-android/) | Software made with AI | Showcase | [Source](https://github.com/RYOITABASHI/Shelly) |

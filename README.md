@@ -7,7 +7,7 @@
 A source-backed directory of AI-built software and environments, benchmarks, and datasets for training and evaluating agents, organized into **Games & virtual worlds**, **Websites**, and **Apps**. Every entry has an original source, review date, practical limits, and its own static page.
 
 <!-- BEGIN GENERATED INDEX -->
-**185 catalog entries · 132 research papers.** These counts are not additive. 3 papers have no corresponding reviewed artifact entry; their release-status notes stay in the bibliography. Every catalog entry links evidence and records known limits.
+**202 catalog entries · 142 research papers.** These counts are not additive. 3 papers have no corresponding reviewed artifact entry; their release-status notes stay in the bibliography. Every catalog entry links evidence and records known limits.
 
 ## Browse
 
@@ -15,13 +15,13 @@ A source-backed directory of AI-built software and environments, benchmarks, and
 | --- | --- | --- |
 | [Games & virtual worlds](https://aicanwhat.com/games/) | 56 | [Browse](catalog/games/README.md) |
 | [Websites](https://aicanwhat.com/websites/) | 35 | [Browse](catalog/websites/README.md) |
-| [Apps](https://aicanwhat.com/apps/) | 94 | [Browse](catalog/apps/README.md) |
+| [Apps](https://aicanwhat.com/apps/) | 111 | [Browse](catalog/apps/README.md) |
 
-[Research bibliography](https://aicanwhat.com/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)
+[Research bibliography](papers/README.md) · [Search papers on the website](https://aicanwhat.com/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)
 
 [Selection guides](guides/README.md) compare AI software examples, browser and computer/mobile tasks, software generation, coding agents and data workflows by purpose and evidence.
 
-**4 scoped browser observations across 4 projects** record interaction steps, visible outcomes, screenshots and untested scope. These are not whole-application verification. [Observation data](data/observations.json) · [Method](docs/browser-observations.md).
+**5 scoped browser observations across 5 projects** record interaction steps, visible outcomes, screenshots and untested scope. These are not whole-application verification. [Observation data](data/observations.json) · [Method](docs/browser-observations.md).
 
 [Upstream registry index](https://aicanwhat.com/discover/): **490 metadata records from 5 sources**. These include versions, forks, manifests, and configurations; they are not individually reviewed projects and must not be added to the catalog count. [Source coverage](catalog/registries/README.md).
 <!-- END GENERATED INDEX -->
@@ -44,6 +44,7 @@ python3 scripts/validate.py
 node --check static/app.js
 node --check static/search.js
 node --check static/registry.js
+node --check static/papers.js
 python3 -m unittest discover -s tests
 python3 -m http.server 8768 --bind 127.0.0.1 --directory dist
 ```
@@ -61,6 +62,7 @@ data/registry-index.json   Separately labeled upstream registry metadata
 data/registry-sources.json Source definitions and inventory boundaries
 catalog/                   Generated category and platform README indexes
 guides/                    Generated bilingual resource-selection guides
+papers/                    Generated bilingual bibliography and artifact-status notes
 references.bib             Generated bibliography
 static/                    Browser assets
 scripts/build.py           Static page generator

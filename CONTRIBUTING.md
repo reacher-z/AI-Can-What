@@ -11,7 +11,7 @@ Keep the two catalog dimensions separate:
 
 Actual browser interactions belong in `data/observations.json`, with concrete steps, visible outcomes, date, environment, original screenshot and untested scope. Preserve `source-reviewed` on the catalog entry. Follow the [browser-observation method](docs/browser-observations.md); do not promote a short interaction into full runtime verification.
 
-Use `resource_kind` to distinguish AI-generated outputs, environments with tasks, environment frameworks, benchmark suites, and static datasets. Games includes virtual worlds; Apps includes software, API simulations, and software-engineering tasks. Dataset platform tags describe the source of its examples, not an executable operating system.
+Use `resource_kind` to distinguish AI-generated outputs, environments with tasks, environment frameworks, benchmark suites, and static datasets. Games includes virtual worlds; Apps includes software, API simulations, and software-engineering tasks. Dataset platform tags describe the source of its examples, not an executable operating system. Use `dataset` for a corpus without an established evaluation task/protocol, and `dataset-and-benchmark` when both are present. An unreleased evaluator alone does not remove a documented benchmark protocol.
 
 Paper metadata lives in `data/papers.json`. Preserve the original title and author order; arXiv dates are first submissions. Other primary publications use their exact source URL and identified date meaning. If only a publication year is verified, set `published_at` to null and record `publication_year` with bilingual date notes; never invent a month/day or arXiv ID. Journal dates and identifiers stay separate. Keep summaries concise and original, and do not describe old scores as current performance.
 
@@ -27,6 +27,7 @@ python3 scripts/validate.py
 node --check static/app.js
 node --check static/search.js
 node --check static/registry.js
+node --check static/papers.js
 python3 -m unittest discover -s tests
 ```
 

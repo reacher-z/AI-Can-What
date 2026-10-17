@@ -8,13 +8,15 @@ A distinct authored application, environment, framework, benchmark, or dataset w
 
 Record resource type, intended use, development provenance, and platform independently. A screenshot dataset is not a runnable OS; an environment built with AI is not automatically a consumer-software showcase. Unknown facts remain unknown.
 
+Use the Dataset type for a corpus without an established evaluation task or benchmark protocol. Dataset + benchmark means the resource also defines an evaluation setting; it does not imply that all metrics, runtime images or evaluators are publicly released. For example, OS-Atlas Data is grounding pretraining material, while VideoGUI defines benchmark tasks but has not released its official metric implementation.
+
 ## Coverage still worth improving
 
 - More native Windows software with clear first-party AI-development evidence, beyond the first documented applications, scripts, and CLI tools. Native Windows, an interpreter-based script, and a WSL setup are different distribution/runtime claims.
 - A broader range of AI-assisted native mobile and desktop applications. The current collection includes creator accounts and release/store evidence for macOS, iOS, and Android examples.
 - Publicly runnable examples from a broader range of independent creators, with explicit licensing and setup information.
 - Recently released environments and benchmark versions, while preserving the version/date context of earlier papers.
-- Additional scoped browser observations of accessible examples, recorded as separate receipts rather than inferred from documentation or an HTTP 200 response. Current observations cover one game round, a product-search/history flow, sample chart controls and synthetic Markdown-slide navigation; see [the method and limits](browser-observations.md).
+- Additional scoped browser observations of accessible examples, recorded as separate receipts rather than inferred from documentation or an HTTP 200 response. Current observations cover one game round, a product-search/history flow, sample chart controls, synthetic Markdown-slide navigation and a local task-card creation/search/reload flow; see [the method and limits](browser-observations.md).
 - Search indexing and actual AI citations, measured separately from sitemap discovery and submission receipts.
 
 ## Maintenance

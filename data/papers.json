@@ -3428,6 +3428,315 @@
           "supports": "Author-supplied ordered authors, title, 2025 workshop venue and exact OpenReview URL; page/API verification prevented posting-date inspection."
         }
       ]
+    },
+    {
+      "id": "2602.10090",
+      "source_type": "arxiv",
+      "title": "Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning",
+      "authors": [
+        "Zhaoyang Wang",
+        "Canwen Xu",
+        "Boyi Liu",
+        "Yite Wang",
+        "Siwei Han",
+        "Zhewei Yao",
+        "Huaxiu Yao",
+        "Yuxiong He"
+      ],
+      "published_at": "2026-02-10",
+      "arxiv_url": "https://arxiv.org/abs/2602.10090",
+      "source_url": "https://arxiv.org/abs/2602.10090",
+      "project_ids": [
+        "agent-world-model"
+      ],
+      "date_note": "First arXiv submission date; current arXiv title and ordered authors. Dataset and harness revisions are separate.",
+      "description_en": "Introduces a pipeline for synthesizing executable MCP tool environments backed by databases, then using their state transitions and verifiers for multi-turn agent learning.",
+      "description_zh": "提出生成数据库驱动、可执行 MCP 工具环境的流水线，并利用其状态转换与评分器开展多轮 Agent 学习。"
+    },
+    {
+      "id": "2410.05080",
+      "source_type": "arxiv",
+      "title": "ScienceAgentBench: Toward Rigorous Assessment of Language Agents for Data-Driven Scientific Discovery",
+      "authors": [
+        "Ziru Chen",
+        "Shijie Chen",
+        "Yuting Ning",
+        "Qianheng Zhang",
+        "Boshi Wang",
+        "Botao Yu",
+        "Yifei Li",
+        "Zeyi Liao",
+        "Chen Wei",
+        "Zitong Lu",
+        "Vishal Dey",
+        "Mingyi Xue",
+        "Frazier N. Baker",
+        "Benjamin Burns",
+        "Daniel Adu-Ampratwum",
+        "Xuhui Huang",
+        "Xia Ning",
+        "Song Gao",
+        "Yu Su",
+        "Huan Sun"
+      ],
+      "published_at": "2024-10-07",
+      "arxiv_url": "https://arxiv.org/abs/2410.05080",
+      "source_url": "https://arxiv.org/abs/2410.05080",
+      "project_ids": [
+        "scienceagentbench"
+      ],
+      "date_note": "First arXiv submission date; current arXiv title and ordered authors. Dataset and harness revisions are separate.",
+      "description_en": "Introduces scientific-analysis tasks requiring standalone programs, with task-specific execution checks and output assessment grounded in published research.",
+      "description_zh": "提出需要独立程序完成的科学分析任务，依据已发表研究设计任务专用执行检查及输出评估。"
+    },
+    {
+      "id": "2509.16941",
+      "source_type": "arxiv",
+      "title": "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?",
+      "authors": [
+        "Xiang Deng",
+        "Jeff Da",
+        "Edwin Pan",
+        "Yannis Yiming He",
+        "Charles Ide",
+        "Kanak Garg",
+        "Niklas Lauffer",
+        "Andrew Park",
+        "Nitin Pasari",
+        "Chetan Rane",
+        "Karmini Sampath",
+        "Maya Krishnan",
+        "Srivatsa Kundurthy",
+        "Sean Hendryx",
+        "Zifan Wang",
+        "Vijay Bharadwaj",
+        "Jeff Holm",
+        "Raja Aluri",
+        "Chen Bo Calvin Zhang",
+        "Noah Jacobson",
+        "Bing Liu",
+        "Brad Kenstler"
+      ],
+      "published_at": "2025-09-21",
+      "arxiv_url": "https://arxiv.org/abs/2509.16941",
+      "source_url": "https://arxiv.org/abs/2509.16941",
+      "project_ids": [
+        "swe-bench-pro"
+      ],
+      "date_note": "First arXiv submission date; current arXiv title and ordered authors. Dataset and harness revisions are separate.",
+      "description_en": "Introduces long-horizon repository-level software-engineering tasks, separating public and nonpublic collections and evaluating proposed patches against test requirements.",
+      "description_zh": "提出长流程代码库级软件工程任务，区分公开及非公开集合，并依据测试要求评估候选补丁。"
+    },
+    {
+      "id": "2507.15887",
+      "source_type": "arxiv",
+      "title": "AlgoTune: Can Language Models Speed Up General-Purpose Numerical Programs?",
+      "authors": [
+        "Ori Press",
+        "Brandon Amos",
+        "Haoyu Zhao",
+        "Yikai Wu",
+        "Samuel K. Ainsworth",
+        "Dominik Krupke",
+        "Patrick Kidger",
+        "Touqir Sajed",
+        "Bartolomeo Stellato",
+        "Jisun Park",
+        "Nathanael Bosch",
+        "Eli Meril",
+        "Albert Steppi",
+        "Arman Zharmagambetov",
+        "Fangzhao Zhang",
+        "David Perez-Pineiro",
+        "Alberto Mercurio",
+        "Ni Zhan",
+        "Talor Abramovich",
+        "Kilian Lieret",
+        "Hanlin Zhang",
+        "Shirley Huang",
+        "Matthias Bethge",
+        "Ofir Press"
+      ],
+      "published_at": "2025-07-19",
+      "arxiv_url": "https://arxiv.org/abs/2507.15887",
+      "source_url": "https://arxiv.org/abs/2507.15887",
+      "project_ids": [
+        "algotune"
+      ],
+      "date_note": "First arXiv submission date; current arXiv title and ordered authors. Dataset and harness revisions are separate.",
+      "description_en": "Introduces numerical-program optimization tasks with problem generators, correctness validators and reference timings, plus an iterative optimization agent.",
+      "description_zh": "提出包含问题生成器、正确性验证器及参考计时的数值程序优化任务，并提供迭代式优化 Agent。"
+    },
+    {
+      "id": "2211.11501",
+      "source_type": "arxiv",
+      "title": "DS-1000: A Natural and Reliable Benchmark for Data Science Code Generation",
+      "authors": [
+        "Yuhang Lai",
+        "Chengxi Li",
+        "Yiming Wang",
+        "Tianyi Zhang",
+        "Ruiqi Zhong",
+        "Luke Zettlemoyer",
+        "Scott Wen-tau Yih",
+        "Daniel Fried",
+        "Sida Wang",
+        "Tao Yu"
+      ],
+      "published_at": "2022-11-18",
+      "arxiv_url": "https://arxiv.org/abs/2211.11501",
+      "source_url": "https://arxiv.org/abs/2211.11501",
+      "project_ids": [
+        "ds-1000"
+      ],
+      "date_note": "First arXiv submission date; current arXiv title and ordered authors. Dataset and harness revisions are separate.",
+      "description_en": "Introduces data-science code-generation problems with execution and code-form checks across seven Python libraries, using adapted real-world programming questions.",
+      "description_zh": "基于改编的真实编程问题，提出覆盖七种 Python 库的数据科学代码生成任务，并进行执行与代码形式检查。"
+    },
+    {
+      "id": "2606.03103",
+      "title": "DeskCraft: Benchmarking Desktop Agents on Professional Workflows and Human-in-the-Loop Collaboration",
+      "authors": [
+        "Wenkai Wang",
+        "Tao Xiong",
+        "Jingchen Ni",
+        "Yunpeng Bao",
+        "Xiyun Li",
+        "Tianqi Liu",
+        "Hongcan Guo",
+        "Zilong Huang",
+        "Shengyu Zhang"
+      ],
+      "published_at": "2026-06-02",
+      "arxiv_url": "https://arxiv.org/abs/2606.03103",
+      "source_url": "https://arxiv.org/abs/2606.03103",
+      "project_ids": [
+        "deskcraft"
+      ],
+      "description_en": "Introduces professional desktop tasks and a phased interaction protocol in which simulated users can clarify, interrupt or give feedback. The study examines long workflows and proactive collaboration; its released task set and model-backed simulator should be versioned separately from the original OSWorld tasks.",
+      "description_zh": "提出专业桌面任务及分阶段交互协议，允许模拟用户澄清、打断或反馈。研究关注长工作流与主动协作；已发布任务集和模型驱动的用户模拟器应与原始 OSWorld 任务分别固定版本。"
+    },
+    {
+      "id": "2508.09123",
+      "title": "OpenCUA: Open Foundations for Computer-Use Agents",
+      "authors": [
+        "Xinyuan Wang",
+        "Bowen Wang",
+        "Dunjie Lu",
+        "Junlin Yang",
+        "Tianbao Xie",
+        "Junli Wang",
+        "Jiaqi Deng",
+        "Xiaole Guo",
+        "Yiheng Xu",
+        "Chen Henry Wu",
+        "Zhennan Shen",
+        "Zhuokai Li",
+        "Ryan Li",
+        "Xiaochuan Li",
+        "Junda Chen",
+        "Boyuan Zheng",
+        "Peihang Li",
+        "Fangyu Lei",
+        "Ruisheng Cao",
+        "Yeqiao Fu",
+        "Dongchan Shin",
+        "Martin Shin",
+        "Jiarui Hu",
+        "Yuyan Wang",
+        "Jixuan Chen",
+        "Yuxiao Ye",
+        "Danyang Zhang",
+        "Dikang Du",
+        "Hao Hu",
+        "Huarong Chen",
+        "Zaida Zhou",
+        "Haotian Yao",
+        "Ziwei Chen",
+        "Qizheng Gu",
+        "Yipu Wang",
+        "Heng Wang",
+        "Diyi Yang",
+        "Victor Zhong",
+        "Flood Sung",
+        "Y. Charles",
+        "Zhilin Yang",
+        "Tao Yu"
+      ],
+      "published_at": "2025-08-12",
+      "arxiv_url": "https://arxiv.org/abs/2508.09123",
+      "source_url": "https://arxiv.org/abs/2508.09123",
+      "project_ids": [
+        "agentnet"
+      ],
+      "description_en": "Presents OpenCUA's demonstration collection, AgentNet trajectories and generated state-action reasoning pipeline for computer-use agents. The catalog links the released data and offline action evaluator, while model results and OSWorld evaluation remain separate from the artifact's data scope.",
+      "description_zh": "介绍 OpenCUA 的演示采集、AgentNet 轨迹及生成状态—动作推理的流程。目录关联已发布数据和离线动作评测器，模型成绩及 OSWorld 评测与该数据产物的范围保持区分。"
+    },
+    {
+      "id": "2406.10227",
+      "title": "VideoGUI: A Benchmark for GUI Automation from Instructional Videos",
+      "authors": [
+        "Kevin Qinghong Lin",
+        "Linjie Li",
+        "Difei Gao",
+        "Qinchen WU",
+        "Mingyi Yan",
+        "Zhengyuan Yang",
+        "Lijuan Wang",
+        "Mike Zheng Shou"
+      ],
+      "published_at": "2024-06-14",
+      "arxiv_url": "https://arxiv.org/abs/2406.10227",
+      "source_url": "https://arxiv.org/abs/2406.10227",
+      "project_ids": [
+        "videogui"
+      ],
+      "description_en": "Uses instructional videos to evaluate visual GUI workflows through high-level planning, subtask planning and atomic actions. These levels expose different failure modes in professional software; the reviewed release contains data, while its evaluation implementation is still listed as pending.",
+      "description_zh": "利用教学视频，从高层规划、子任务规划和原子动作三个层面评测视觉 GUI 工作流，区分专业软件操作中的不同失败原因。所核查版本提供数据，评测实现仍列为待发布。"
+    },
+    {
+      "id": "2502.08047",
+      "title": "WorldGUI: An Interactive Benchmark for Desktop GUI Automation from Any Starting Point",
+      "authors": [
+        "Henry Hengyuan Zhao",
+        "Kaiming Yang",
+        "Wendi Yu",
+        "Difei Gao",
+        "Mike Zheng Shou"
+      ],
+      "published_at": "2025-02-12",
+      "arxiv_url": "https://arxiv.org/abs/2502.08047",
+      "source_url": "https://arxiv.org/abs/2502.08047",
+      "project_ids": [
+        "worldgui"
+      ],
+      "description_en": "Studies desktop-agent robustness when a workflow starts from varied interface and application states. WorldGUI pairs base tasks with state augmentations and presents an agent that critiques planning and execution; condition variants should not be reported as independent user goals.",
+      "description_zh": "研究工作流从不同界面与应用状态开始时桌面智能体的鲁棒性。WorldGUI 为基础任务增加状态变体，并提出批评规划和执行的智能体；条件变体不能当作独立用户目标统计。"
+    },
+    {
+      "id": "2410.23218",
+      "title": "OS-ATLAS: A Foundation Action Model for Generalist GUI Agents",
+      "authors": [
+        "Zhiyong Wu",
+        "Zhenyu Wu",
+        "Fangzhi Xu",
+        "Yian Wang",
+        "Qiushi Sun",
+        "Chengyou Jia",
+        "Kanzhi Cheng",
+        "Zichen Ding",
+        "Liheng Chen",
+        "Paul Pu Liang",
+        "Yu Qiao"
+      ],
+      "published_at": "2024-10-30",
+      "arxiv_url": "https://arxiv.org/abs/2410.23218",
+      "source_url": "https://arxiv.org/abs/2410.23218",
+      "project_ids": [
+        "os-atlas-data"
+      ],
+      "description_en": "Describes cross-platform GUI grounding data collection and action-model training, combining newly collected interfaces with existing sources. Its public corpus supports grounding pretraining; data elements, evaluation tasks and released model variants are distinct units.",
+      "description_zh": "介绍跨平台 GUI 定位数据采集及动作模型训练，将新采集界面与已有来源结合。公开语料用于定位预训练，数据元素、评测任务和已发布模型版本是不同统计单位。"
     }
   ]
 }

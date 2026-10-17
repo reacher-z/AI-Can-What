@@ -13,6 +13,7 @@
 | 项目与证据 | 适合研究的问题 | 配置与限制 |
 | --- | --- | --- |
 | [SWE-bench](https://aicanwhat.com/zh/projects/swe-bench/) · [Source](https://www.swebench.com/) | 用项目测试评估真实代码库问题的修复。 | 衡量仓库级代码修复，并非图形界面操作或完整应用生成。Docker 评测需要较多资源，比较时应注明数据集变体和评测框架版本。 |
+| [SWE-bench Pro](https://aicanwhat.com/zh/projects/swe-bench-pro/) · [Source](https://github.com/scaleapi/SWE-bench_Pro-os) | 使用固定的 V2 任务及重新评分流程，评估独立的长流程修复语料；尚不能认定旧 Harbor 包与之等价。 | 当前公开 V2 有642项任务，HARD-51 是其子集，旧 v1 有731项；论文更大的集合包含未公开赛道。冻结 Harbor 包仍标731，尚不能视为 V2 的等价发布。V2 协议让 Agent 阶段离线，并在全新容器中重评捕获的补丁。版本、子集和不同命名空间不能累加为任务总数。 |
 
 ## 应用开发与方案选择
 
@@ -31,6 +32,14 @@
 | --- | --- | --- |
 | [Terminal-Bench](https://aicanwhat.com/zh/projects/terminal-bench/) · [Source](https://www.tbench.ai/) | 在带版本的任务环境中评估多步命令行操作结果。 | 当前仓库是持续更新的基准，所链接论文描述的是 Terminal-Bench 2.0。比较结果时需固定数据集与评测框架版本。运行需要 Harbor 和受支持的沙盒后端；服务费用与任务依赖各不相同。仓库采用 Apache 2.0。 |
 | [InterCode](https://aicanwhat.com/zh/projects/intercode/) · [Source](https://intercode-benchmark.github.io/) | 研究 Agent 如何利用编码任务中的错误及执行反馈。 | 需要 Python 3.8+、运行中的 Docker 服务及任务镜像。不同任务类型的配置流程不同；模型驱动的实验脚本需要相应服务访问。它基于实际执行反馈进行评测，并非静态代码数据集。仓库代码采用 MIT。 |
+
+## 保持正确性的性能优化
+
+只有同时保留正确性证据，并控制硬件、依赖与计时条件，运行速度提升才有明确意义。
+
+| 项目与证据 | 适合研究的问题 | 配置与限制 |
+| --- | --- | --- |
+| [AlgoTune](https://aicanwhat.com/zh/projects/algotune/) · [Source](https://algotune.io/) | 通过生成的留出输入测量求解器加速；单独出现1.0的适配器奖励，不代表解法正确。 | 计时取决于硬件、库版本、校准及并行资源竞争。154个任务族各自生成多组输入，输入数量不能当作新增任务。原始综合加速比、AlgoTune-Pass 完成率与 Harbor 奖励属于不同指标。Harbor 对无效或更慢的解法也记录1.0下限，因此该奖励本身不能证明正确性。 |
 
 ## 训练环境与任务合成
 

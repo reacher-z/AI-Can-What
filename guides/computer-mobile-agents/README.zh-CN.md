@@ -26,6 +26,7 @@
 | [ScienceBoard](https://aicanwhat.com/zh/projects/scienceboard/) · [Source](https://github.com/OS-Copilot/ScienceBoard) | 通过公开的原始虚拟机研究科学工作流；较新的预构建 Docker 镜像仍属于私有评审产物。 | 原始 Ubuntu 虚拟机公开。当前源码新增 Docker 原生后端，但预构建 Docker 镜像被文档列为等待再分发审查的私有评审资产。部分任务依赖 Google 登录或会变化的网页服务。上游报告的 20 项 Docker 验收仅是子集检查，不代表本站复现整个基准。 |
 | [CADWorld](https://aicanwhat.com/zh/projects/cadworld/) · [Source](https://github.com/Zdong104/CADWORLD) | 通过保存的产物评估 GUI 驱动的 FreeCAD 操作；CAM 任务需要宿主 FreeCAD 控制台。 | 需要 Linux／KVM Docker 主机及 Ubuntu FreeCAD 虚拟机。CAM 任务的在线评分和离线重评需要主机上的 FreeCAD 1.1.x 控制台；大多数其他检查通过 Python 解析文件。缺失 FreeCAD 可能影响 CAM 评分。200 项 GUI 基准应与论文中的 50 项纯终端消融分别比较。所查根目录及包元数据未找到项目级代码许可。 |
 | [EngiWorld](https://aicanwhat.com/zh/projects/engiworld/) · [Source](https://github.com/Hongcheng-Gao/EngiWorld) | 研究工程任务定义，同时考虑公开 Ubuntu 软件镜像覆盖范围更小。 | 发布内容包含 1,301 项任务定义，论文主要实验使用其中 306 项。公开镜像仅覆盖 15 个开源软件环境，所查清单均为 Ubuntu；专有软件镜像需另行取得合许可访问或自行准备。须遵循每项任务的 GUI／CLI 接口要求，并固定任务分类、资产及匹配镜像。 |
+| [DeskCraft](https://aicanwhat.com/zh/projects/deskcraft/) · [Source](https://github.com/mrwwk/DeskCraft) | 比较标准 Ubuntu 工作流与独立的交互任务划分；后者由模型驱动的用户模拟器回复。 | 已发布任务的虚拟机系统为 Ubuntu；继承的虚拟机后端代码不能证明存在同等的 Windows 或 macOS 任务集。交互回复使用模型驱动的用户模拟器，可选完成触发器也会调用模型，需固定这些配置。公开虚拟机与任务缓存分别下载。README 推荐 Python 3.10+，包元数据则要求 3.12+，部分交互示例仍用旧路径。代码及缓存卡声明 Apache-2.0，虚拟机仓库未声明许可。本次仅核查来源，未运行任务。 |
 
 ## 可执行移动流程
 

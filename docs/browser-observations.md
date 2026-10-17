@@ -13,6 +13,8 @@ Each record includes an original screenshot, its SHA-256 digest and attribution.
 - [CSV To Charts](https://aicanwhat.com/projects/gpt5-csv-to-charts/#browser-observations): the embedded sample changed from a line chart to a bar chart, and deselecting Profit left Sales visible. No file was uploaded. The image-save button was clicked, but download completion and PNG output were not verified; this is not a confirmed export failure.
 - [Markdown → Slides](https://aicanwhat.com/projects/gpt5-markdown-to-slides/#browser-observations): a synthetic two-slide document updated the preview, rendered a heading/paragraph/list, and navigated forward and back. Broader Markdown syntax, images, fullscreen, persistence and mobile behavior were not tested. The source has no built-in file-export feature.
 
+- [Tiny Kanban](https://aicanwhat.com/projects/gpt5-tiny-kanban/#browser-observations): one synthetic task card was created, found by title search and retained after one same-browser reload. The search query reset on reload; column totals stayed unfiltered. Drag/drop, WIP enforcement, editing, deletion, other search fields, cross-browser storage and mobile behavior were not tested.
+
 These records do not establish AI authorship, general reliability, benchmark scores, a security audit or ongoing availability. They also do not expand the catalog's project count. Preserve observed defects and limitations alongside successful steps.
 
 ## Adding a record

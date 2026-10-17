@@ -1359,3 +1359,32 @@ tbody tr:hover {
   text-decoration:underline;
   text-underline-offset:3px
 }
+
+.paper-tools {
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  margin:8px 0 25px;
+  padding:0 0 16px
+}
+.paper-actions {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px 22px;
+  font-size:13px
+}
+.paper-actions > a:not(.paper-download) {
+  text-decoration:underline;
+  text-underline-offset:3px
+}
+.paper-tools .search-box {
+  flex-basis:250px
+}
+.paper-tools select {
+  max-width:190px
+}
+@media(max-width:700px) {
+  .paper-tools select {
+    max-width:none
+  }
+}

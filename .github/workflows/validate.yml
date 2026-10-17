@@ -20,5 +20,6 @@ jobs:
       - run: node --check static/app.js
       - run: node --check static/search.js
       - run: node --check static/registry.js
+      - run: node --check static/papers.js
       - run: python3 -m unittest discover -s tests
-      - run: git diff --exit-code -- README.md README.zh-CN.md catalog guides references.bib
+      - run: git diff --exit-code -- README.md README.zh-CN.md catalog guides papers references.bib

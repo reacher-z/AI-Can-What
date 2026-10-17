@@ -58,8 +58,8 @@
       "repo_url": "https://github.com/openai/gpt-5-coding-examples",
       "demo_url": "https://gpt5-coding-examples.vercel.app/tiny-kanban/",
       "paper_url": null,
-      "limits_en": "The published implementation stores data in browser localStorage. It is a demo, not a documented multi-user service or benchmark.",
-      "limits_zh": "公开实现使用浏览器 localStorage 保存数据；属于演示项目，未声明多人协作服务或评测能力。",
+      "limits_en": "The published implementation stores data in browser localStorage. One synthetic card creation, title search and same-browser reload were observed separately; drag/drop and WIP enforcement were not tested. It is a demo, not a documented multi-user service or benchmark.",
+      "limits_zh": "公开实现使用浏览器 localStorage 保存数据。已单独记录一次合成卡片创建、标题搜索和同一浏览器重载；未测试拖放或 WIP 限制。属于演示项目，未声明多人协作服务或评测能力。",
       "enables_en": "Inspect how an AI-generated single-file app implements a useful task-management workflow.",
       "enables_zh": "观察 AI 生成的单文件应用如何实现实际的任务管理流程。",
       "resource_kind": "ai-generated-output",
@@ -75,7 +75,7 @@
         },
         {
           "url": "https://gpt5-coding-examples.vercel.app/tiny-kanban/",
-          "supports": "Public app endpoint returned HTTP 200; no interaction test was performed."
+          "supports": "Public demo with separately recorded synthetic card creation, title search and one same-browser reload. Other behavior was not tested."
         }
       ],
       "reviewed_at": "2026-10-16",
@@ -8994,6 +8994,1102 @@
         {
           "url": "https://github.com/Halluminate/WebBench/tree/ea7a1628443321363989f354401f0653e0cba6f4",
           "supports": "Source root contains README/license, CSV tasks and results; no runnable evaluator established."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "demo_url": null,
+      "paper_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "notemd",
+      "name": "note.md",
+      "platforms": [
+        "macos",
+        "linux"
+      ],
+      "implementation": "ai-built",
+      "creator": "wizlijun, note.md maintainer",
+      "description_en": "A desktop Markdown reader and editor with linked notes, separate annotation files, local vaults and configurable agent integrations.",
+      "description_zh": "桌面 Markdown 阅读与编辑应用，提供双向链接、独立批注文件、本地资料库及可配置 Agent 集成。",
+      "enables_en": "Read and edit Markdown, keep comments beside source documents, and share a file-based vault with search and automation tools.",
+      "enables_zh": "阅读和编辑 Markdown，在原文旁保存独立批注，并让搜索及自动化工具共享文件式资料库。",
+      "limits_en": "The inspected v6.1016.2 release supplies macOS and Linux beta artifacts. Windows source-build support is documented, but no Windows installer was verified in the inspected release inventory. Linux ARM desktop acceptance and some native plugins remain incomplete. Agent features need separately configured providers or local models; their costs are separate. No runtime or document round-trip testing was performed.",
+      "limits_zh": "所查 v6.1016.2 发布提供 macOS 和 Linux beta 文件。文档说明了 Windows 源码构建，但所查发布清单未验证 Windows 安装包。Linux ARM 桌面验收及部分原生插件仍不完整。Agent 功能需另行配置服务商或本地模型，费用另计；本次未测试运行或文档往返。",
+      "primary_url": "https://github.com/wizlijun/note.md",
+      "repo_url": "https://github.com/wizlijun/note.md",
+      "source_file_url": "https://github.com/wizlijun/note.md/blob/f2bdc01b2bfd0bf9f9129e144e550360aab444b8/src-tauri/src/main.rs",
+      "download_url": "https://github.com/wizlijun/note.md/releases/tag/v6.1016.2",
+      "provenance_source": "https://github.com/wizlijun/note.md/blob/f2bdc01b2bfd0bf9f9129e144e550360aab444b8/README.md",
+      "provenance_note_en": "The application README explicitly attributes development and maintenance to AI coding, with human review and smoke testing. This applies to note.md application development, not authorship of every dependency or user document.",
+      "provenance_note_zh": "应用 README 明确将开发和维护归于 AI 编码，同时保留人工审查与冒烟测试；该声明针对 note.md 开发，不涵盖每项依赖或用户文档的作者身份。",
+      "license_en": "The application repository is Apache-2.0; dependency and plugin terms remain separate.",
+      "license_zh": "应用仓库采用 Apache-2.0；依赖项和插件保留各自条款。",
+      "license_url": "https://github.com/wizlijun/note.md/blob/f2bdc01b2bfd0bf9f9129e144e550360aab444b8/LICENSE",
+      "runtime_note_en": "Tauri/Rust desktop binary with an operating-system WebView UI. macOS 13+ has separate Apple Silicon/Intel DMGs; Linux beta targets Debian 12/Omarchy. Source builds require Rust, pnpm and the sibling moraya-core checkout.",
+      "runtime_note_zh": "采用 Tauri／Rust 桌面二进制及操作系统 WebView 界面。macOS 13+ 分别提供 Apple Silicon／Intel DMG，Linux beta 面向 Debian 12／Omarchy。源码构建需 Rust、pnpm 及相邻目录的 moraya-core。",
+      "reviewed_version": {
+        "source_commit": "f2bdc01b2bfd0bf9f9129e144e550360aab444b8",
+        "release_tag": "v6.1016.2"
+      },
+      "provenance_chain": [
+        {
+          "url": "https://github.com/wizlijun/note.md/blob/f2bdc01b2bfd0bf9f9129e144e550360aab444b8/README.md",
+          "relationship": "Application-specific AI-development statement and link to official product/download site."
+        },
+        {
+          "url": "https://github.com/wizlijun/note.md/blob/f2bdc01b2bfd0bf9f9129e144e550360aab444b8/src-tauri/src/main.rs",
+          "relationship": "Actual application entry point; repository also contains frontend and Rust app source."
+        },
+        {
+          "url": "https://github.com/wizlijun/note.md/releases/tag/v6.1016.2",
+          "relationship": "Specific released desktop artifacts, separate from source support for other platforms."
+        }
+      ],
+      "distribution_evidence": {
+        "artifact_listing_url": "https://github.com/wizlijun/note.md/releases/expanded_assets/v6.1016.2",
+        "head_checks": [
+          {
+            "url": "https://github.com/wizlijun/note.md/releases/download/v6.1016.2/note.md-6.1016.2-aarch64.dmg",
+            "status": 200,
+            "content_length": "14586207",
+            "content_type": "application/octet-stream"
+          },
+          {
+            "url": "https://github.com/wizlijun/note.md/releases/download/v6.1016.2/note.md-6.1016.2-x86_64.dmg",
+            "status": 200,
+            "content_length": "15236603",
+            "content_type": "application/octet-stream"
+          },
+          {
+            "url": "https://github.com/wizlijun/note.md/releases/download/v6.1016.2/note.md_6.1016.2_amd64.deb",
+            "status": 200,
+            "content_length": "15930234",
+            "content_type": "application/octet-stream"
+          },
+          {
+            "url": "https://github.com/wizlijun/note.md/releases/download/v6.1016.2/note.md_6.1016.2_arm64.deb",
+            "status": 200,
+            "content_length": "15919278",
+            "content_type": "application/octet-stream"
+          }
+        ],
+        "method": "HTTP HEAD availability only; no installer downloaded or executed."
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/wizlijun/note.md/blob/f2bdc01b2bfd0bf9f9129e144e550360aab444b8/README.md",
+          "supports": "Explicit application authorship, Tauri/system-WebView architecture, platform limits and build instructions."
+        },
+        {
+          "url": "https://github.com/wizlijun/note.md/blob/f2bdc01b2bfd0bf9f9129e144e550360aab444b8/package.json",
+          "supports": "Version 6.1016.2, pinned pnpm and local moraya-core dependency."
+        },
+        {
+          "url": "https://github.com/wizlijun/note.md/blob/f2bdc01b2bfd0bf9f9129e144e550360aab444b8/LICENSE",
+          "supports": "Apache-2.0 license text."
+        },
+        {
+          "url": "https://github.com/wizlijun/note.md/releases/tag/v6.1016.2",
+          "supports": "Public macOS DMGs and Linux beta packages; file availability separately checked."
+        },
+        {
+          "url": "https://notemd.net/",
+          "supports": "Official product scope and provider-cost/platform caveats."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "demo_url": null,
+      "paper_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "rolltake",
+      "name": "Rolltake — Teleprompter",
+      "platforms": [
+        "ios"
+      ],
+      "implementation": "ai-built",
+      "creator": "Griffin Wooldridge",
+      "description_en": "An iPhone teleprompter with script editing, text/Markdown import, adjustable scrolling, mirror modes and Bluetooth remote controls.",
+      "description_zh": "iPhone 提词器，提供脚本编辑、文本／Markdown 导入、滚动调节、镜像模式及蓝牙遥控。",
+      "enables_en": "Prepare a script, adjust its reading layout and scroll it during rehearsal or presentation.",
+      "enables_zh": "准备脚本、调整阅读布局，并在排练或演示时滚动显示。",
+      "limits_en": "Requires iOS 17+. The reviewed store listing is an iPhone app; Apple Silicon compatibility does not establish a native Mac edition. Camera/Watch capabilities discussed in the creator article were not independently checked and are not used to expand this entry. No script, remote-control or privacy behavior was tested.",
+      "limits_zh": "需要 iOS 17+。所查商店版本面向 iPhone，Apple Silicon 兼容性不代表原生 Mac 版本。作者文章提及的相机／Watch 功能未独立核查，不用于扩展本条目范围。本次未测试脚本、遥控或隐私行为。",
+      "primary_url": "https://apps.apple.com/us/app/rolltake-teleprompter/id6806368467",
+      "repo_url": null,
+      "download_url": "https://apps.apple.com/us/app/rolltake-teleprompter/id6806368467",
+      "provenance_source": "https://griffinwooldridge.com/blog/build-ios-app-with-claude-code",
+      "provenance_note_en": "Griffin reports that Claude Code wrote all application Swift while he made product/design decisions and tested on hardware. The account links the exact shipped store ID; it does not assign AI authorship to Apple frameworks.",
+      "provenance_note_zh": "Griffin 报告应用 Swift 代码由 Claude Code 编写，自己负责产品／设计决策及真机测试。文章直接链接已上架的商店 ID，声明不包括 Apple 框架的作者身份。",
+      "license_en": "No public application source or reusable code license was established in the reviewed sources; the verified artifact is the store distribution.",
+      "license_zh": "所查来源未确立公开应用源码或可复用代码许可；已核实的产物是商店分发版本。",
+      "runtime_note_en": "Native SwiftUI iPhone application according to the creator; install through the App Store. The inspected listing is free and English-only. No Apple account was used during review.",
+      "runtime_note_zh": "作者说明这是原生 SwiftUI iPhone 应用，通过 App Store 安装。所查版本免费且仅列英语；核查未使用 Apple 账户。",
+      "reviewed_version": {
+        "app_store_id": "6806368467",
+        "version": "1.0",
+        "minimum_ios": "17.0"
+      },
+      "provenance_chain": [
+        {
+          "url": "https://griffinwooldridge.com/blog/build-ios-app-with-claude-code",
+          "relationship": "First-person implementation account explicitly names Rolltake and links App Store ID 6806368467."
+        },
+        {
+          "url": "https://apps.apple.com/us/app/rolltake-teleprompter/id6806368467",
+          "relationship": "Live listing identifies seller GRIFFIN MICHAEL WOOLDRIDGE and links rolltake.app."
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://griffinwooldridge.com/blog/build-ios-app-with-claude-code",
+          "supports": "Creator-owned account of Swift implementation, human decisions/testing and exact distribution link."
+        },
+        {
+          "url": "https://apps.apple.com/us/app/rolltake-teleprompter/id6806368467",
+          "supports": "Current iPhone workflow, seller, minimum OS and free distribution."
+        },
+        {
+          "url": "https://itunes.apple.com/lookup?id=6806368467&country=us",
+          "supports": "Official lookup confirms bundle com.griffin.rolltake, version 1.0 and iOS 17.0 minimum."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "demo_url": null,
+      "paper_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "review-books",
+      "name": "Review Books: Rate, Rank, Log",
+      "platforms": [
+        "ios"
+      ],
+      "implementation": "ai-assisted",
+      "creator": "whi / Hitoshi watanabe",
+      "description_en": "An iPhone personal-review log with custom fields, photos, pairwise rankings, search and JSON import/export.",
+      "description_zh": "iPhone 个人评价记录应用，提供自定义字段、照片、两两比较排名、搜索及 JSON 导入导出。",
+      "enables_en": "Create category-specific review books and compare personal favorites without relying on a predefined product database.",
+      "enables_zh": "按类别建立自定义评价册，并比较个人偏好，无需依赖预设商品数据库。",
+      "limits_en": "Requires iOS 16.4+; languages are Japanese and English. The free app includes ads, and its store privacy declaration lists tracking-related data. Local review storage must not be described as a blanket no-network guarantee. No public app source or ranking/export correctness was verified.",
+      "limits_zh": "需要 iOS 16.4+，提供日语和英语。免费版含广告，商店隐私声明列出与跟踪有关的数据；本地评价存储不能概括为完全不联网。本次未确立公开应用源码，也未验证排名或导出正确性。",
+      "primary_url": "https://apps.apple.com/us/app/review-books-rate-rank-log/id6809986409",
+      "repo_url": null,
+      "download_url": "https://apps.apple.com/us/app/review-books-rate-rank-log/id6809986409",
+      "provenance_source": "https://note.com/made_by_whi/n/n9735ba40681e",
+      "provenance_note_en": "The creator describes producing most design notes, code and tests through Claude Code, while choosing requirements and testing. The post links the exact store app and its matching whi product site; website source is not treated as application source.",
+      "provenance_note_zh": "作者描述通过 Claude Code 完成大部分设计记录、代码及测试，自己选择需求并试用核查。帖子链接确切商店应用及相应 whi 产品页；网站源码不视为应用源码。",
+      "license_en": "No public application source or reusable code license was established in the reviewed sources; the verified artifact is the store distribution.",
+      "license_zh": "所查来源未确立公开应用源码或可复用代码许可；已核实的产物是商店分发版本。",
+      "runtime_note_en": "Creator-described Expo/React Native application with local SQLite review storage; App Store distribution for iPhone. Advertising is an additional external-service path.",
+      "runtime_note_zh": "作者说明应用使用 Expo／React Native，并以本地 SQLite 保存评价记录；通过 App Store 向 iPhone 分发，广告另有外部服务路径。",
+      "reviewed_version": {
+        "app_store_id": "6809986409",
+        "version": "1.1.1",
+        "minimum_ios": "16.4"
+      },
+      "provenance_chain": [
+        {
+          "url": "https://note.com/made_by_whi/n/n9735ba40681e",
+          "relationship": "First-person AI-development account names the app and links App Store ID 6809986409."
+        },
+        {
+          "url": "https://apps.apple.com/us/app/review-books-rate-rank-log/id6809986409",
+          "relationship": "Live listing names Hitoshi watanabe, copyrights whi, and links the same whi-dev product site."
+        },
+        {
+          "url": "https://whi-dev.github.io/review-books-site/",
+          "relationship": "Matching product/distribution page only; no inference of native application source publication."
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://note.com/made_by_whi/n/n9735ba40681e",
+          "supports": "Application-specific development contribution, React Native/SQLite stack and release chain."
+        },
+        {
+          "url": "https://apps.apple.com/us/app/review-books-rate-rank-log/id6809986409",
+          "supports": "Current features, ads, privacy declaration, languages, seller and iOS requirement."
+        },
+        {
+          "url": "https://itunes.apple.com/lookup?id=6809986409&country=us",
+          "supports": "Official lookup confirms com.whi.reviewbooks, version 1.1.1 and iOS 16.4 minimum."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "demo_url": null,
+      "paper_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "nami-daily-flow",
+      "name": "Nami — Daily Flow",
+      "platforms": [
+        "ios"
+      ],
+      "implementation": "ai-assisted",
+      "creator": "Yannik Zuehlke / Tecton & Tide",
+      "description_en": "An iPhone/iPad habit tracker centered on three habits, daily check-ins, reminders and progress history.",
+      "description_zh": "围绕三个习惯设计的 iPhone／iPad 习惯记录应用，提供每日打卡、提醒和进展历史。",
+      "enables_en": "Track a small habit set and inspect consistency, with optional Pro widgets, statistics and iCloud synchronization.",
+      "enables_zh": "记录少量习惯并查看坚持情况，可选 Pro 功能包括小组件、统计及 iCloud 同步。",
+      "limits_en": "The current store requires iOS/iPadOS 26.2+. Pro features use a one-time in-app purchase. The earlier launch account described iPhone-only local storage without CloudKit, but the current listing includes iPad and Pro iCloud sync; this entry follows the current distribution. App behavior, reminders and synchronization were not independently tested.",
+      "limits_zh": "当前商店要求 iOS／iPadOS 26.2+；Pro 功能通过一次性内购解锁。早期开发文章描述仅面向 iPhone、没有 CloudKit 的本地存储，当前商店则列出 iPad 及 Pro iCloud 同步；本条目采用当前分发范围。本次未独立测试应用行为、提醒或同步功能。",
+      "primary_url": "https://apps.apple.com/us/app/nami-daily-flow/id6757530125",
+      "repo_url": null,
+      "download_url": "https://apps.apple.com/us/app/nami-daily-flow/id6757530125",
+      "provenance_source": "https://tectontide.com/en/blog/building-nami-ios-app-with-ai/",
+      "provenance_note_en": "Yannik credits Claude Code with specification/design work and Codex CLI with Swift feature implementation and tests, under his direction. His detailed article links the exact Nami store app, whose seller matches him.",
+      "provenance_note_zh": "Yannik 将规格／设计工作归于 Claude Code，将 Swift 功能实现与测试归于 Codex CLI，并由自己指导。详细文章链接确切的 Nami 商店应用，卖方与作者对应。",
+      "license_en": "No public application source or reusable code license was established in the reviewed sources; the verified artifact is the store distribution.",
+      "license_zh": "所查来源未确立公开应用源码或可复用代码许可；已核实的产物是商店分发版本。",
+      "runtime_note_en": "Creator-described SwiftUI/SwiftData app. The store lists English/German and optional paid Pro functionality; no Mac-native implementation is inferred from Apple Silicon compatibility.",
+      "runtime_note_zh": "作者说明使用 SwiftUI／SwiftData。商店列出英语／德语及可选付费 Pro 功能，不因 Apple Silicon 兼容性推断存在原生 Mac 实现。",
+      "reviewed_version": {
+        "app_store_id": "6757530125",
+        "version": "1.0",
+        "minimum_ios": "26.2"
+      },
+      "provenance_chain": [
+        {
+          "url": "https://tectontide.com/en/blog/building-nami-ios-app-with-ai/",
+          "relationship": "Named author describes concrete AI implementation/test work and links store ID 6757530125."
+        },
+        {
+          "url": "https://apps.apple.com/us/app/nami-daily-flow/id6757530125",
+          "relationship": "Live seller YANNIK ZUHLKE matches the author; developer links return to tectontide.com."
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://tectontide.com/en/blog/building-nami-ios-app-with-ai/",
+          "supports": "First-person division of implementation work and exact shipped-artifact link."
+        },
+        {
+          "url": "https://apps.apple.com/us/app/nami-daily-flow/id6757530125",
+          "supports": "Current three-habit workflow, iPad support, Pro purchase/sync and OS minimum."
+        },
+        {
+          "url": "https://itunes.apple.com/lookup?id=6757530125&country=us",
+          "supports": "Official lookup confirms bundle com.z5e.nami, version 1.0 and iOS 26.2 minimum."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "demo_url": null,
+      "paper_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "angle-calculator-tanaka",
+      "name": "Angle-Calculator",
+      "platforms": [
+        "android"
+      ],
+      "implementation": "ai-assisted",
+      "creator": "Shin / TANAKA KOGYO Lab",
+      "description_en": "An Android right-triangle calculator with a diagram, configurable decimal precision and named saved calculations.",
+      "description_zh": "Android 直角三角形计算器，提供示意图、可配置小数精度及命名保存的计算记录。",
+      "enables_en": "Enter known sides and angles, inspect the calculated triangle and recall previous values for repeated work.",
+      "enables_zh": "输入已知边长与角度，查看三角形计算结果，并为重复工作调取之前的数据。",
+      "limits_en": "The listing specifies Android 7.0+. Calculation accuracy, edge cases and suitability for manufacturing decisions were not independently tested. The creator reports substantial generated logic but also human coding and build/signing work; no whole-app authorship percentage is adopted. Public app source and reusable code licensing were not established.",
+      "limits_zh": "商店说明要求 Android 7.0+。本次未独立测试计算准确性、边界情形或制造决策适用性。作者报告大量逻辑由 AI 生成，同时保留人工编码及构建／签名工作；不采用整个应用的 AI 编写比例。未确立公开应用源码或可复用代码许可。",
+      "primary_url": "https://play.google.com/store/apps/details?id=com.anglecalc.app",
+      "repo_url": null,
+      "download_url": "https://play.google.com/store/apps/details?id=com.anglecalc.app",
+      "provenance_source": "https://note.com/royal_shin1960/n/n610f38a76665",
+      "provenance_note_en": "Shin identifies Claude Code as the implementation/error-fixing tool and describes human Android Studio build/signing steps. The development article directly links the TANAKA KOGYO Lab package com.anglecalc.app.",
+      "provenance_note_zh": "Shin 将 Claude Code 列为实现和修错工具，并描述人工执行的 Android Studio 构建／签名步骤；开发文章直接链接 TANAKA KOGYO Lab 的 com.anglecalc.app。",
+      "license_en": "No public application source or reusable code license was established in the reviewed sources; the verified artifact is the store distribution.",
+      "license_zh": "所查来源未确立公开应用源码或可复用代码许可；已核实的产物是商店分发版本。",
+      "runtime_note_en": "Native Android application according to the creator; Google Play supplies the release. The developer describes offline calculations and device-local storage; these privacy/runtime properties were not independently audited.",
+      "runtime_note_zh": "作者说明这是原生 Android 应用，由 Google Play 提供发布。开发者描述离线计算及设备本地存储，本次未独立审计这些隐私或运行属性。",
+      "reviewed_version": {
+        "android_package": "com.anglecalc.app",
+        "store_updated_at": "2025-12-17",
+        "minimum_android": "7.0 (developer listing)"
+      },
+      "provenance_chain": [
+        {
+          "url": "https://note.com/royal_shin1960/n/n610f38a76665",
+          "relationship": "Creator explains building the specific trigonometric app with Claude Code and supplies its exact Play link."
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.anglecalc.app",
+          "relationship": "Live Angle-Calculator distribution by TANAKA KOGYO Lab with matching function and Android compatibility."
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://note.com/royal_shin1960/n/n610f38a76665",
+          "supports": "Specific AI implementation contribution, retained human work and exact release link."
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.anglecalc.app",
+          "supports": "Current artifact identity, right-triangle functions, saved calculations and Android 7.0 requirement."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "demo_url": null,
+      "paper_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "curate-rank-your-media",
+      "name": "Curate: Rank Your Media",
+      "platforms": [
+        "android"
+      ],
+      "implementation": "ai-assisted",
+      "creator": "Michael Ethan Berkowitz / meberko; creator post u/slashx14",
+      "description_en": "An Android media log that ranks films, television, games and books through pairwise comparisons instead of fixed star scores.",
+      "description_zh": "Android 媒体记录应用，通过两两比较来排列电影、电视剧、游戏和书籍，而非固定星级。",
+      "enables_en": "Search external media catalogs, add items to a personal collection and refine rankings through preference comparisons.",
+      "enables_zh": "搜索外部媒体目录、将项目加入个人收藏，并通过偏好比较调整排名。",
+      "limits_en": "The developer started with handwritten Android/Kotlin code and later used Claude Code; this is a mixed-development project. Media lookup uses TMDB, RAWG, Google Books and Open Library; optional device sync uses Google Sign-In. An iOS launch is mentioned as preparation, not a verified released platform. Ranking, offline and sync behavior were not tested here.",
+      "limits_zh": "开发者先手写 Android／Kotlin 代码，之后使用 Claude Code，因此属于混合开发项目。媒体检索使用 TMDB、RAWG、Google Books 和 Open Library，可选跨设备同步使用 Google 登录。iOS 发布仅被提为准备工作，不列为已验证发布平台。本次未测试排名、离线或同步行为。",
+      "primary_url": "https://play.google.com/store/apps/details?id=com.meberko.curate",
+      "repo_url": null,
+      "download_url": "https://play.google.com/store/apps/details?id=com.meberko.curate",
+      "provenance_source": "https://www.reddit.com/r/ClaudeCode/comments/1rttpr1/sharing_my_claude_coded_media_ranking_app/",
+      "provenance_note_en": "The creator reports an initially handwritten app followed by Claude-generated implementation that he reviewed. The same first-person post links package com.meberko.curate, connecting the contribution claim to the released app rather than an AI-powered feature.",
+      "provenance_note_zh": "作者报告应用最初由自己手写，之后使用并审查 Claude 生成的实现。同一篇第一人称帖子链接 com.meberko.curate，将开发贡献声明对应到已发布应用，而非仅说明应用具有 AI 功能。",
+      "license_en": "No public application source or reusable code license was established in the reviewed sources; the verified artifact is the store distribution.",
+      "license_zh": "所查来源未确立公开应用源码或可复用代码许可；已核实的产物是商店分发版本。",
+      "runtime_note_en": "Google Play Android release; current store update is March 14, 2026. Local use and optional account sync are documented by the developer. The minimum Android version was not established from the inspected public listing.",
+      "runtime_note_zh": "Google Play 的 Android 发布，商店所列更新日期为 2026 年 3 月 14 日。开发者记录了本地使用及可选账号同步，所查公开商店页未确立最低 Android 版本。",
+      "reviewed_version": {
+        "android_package": "com.meberko.curate",
+        "store_updated_at": "2026-03-14"
+      },
+      "provenance_chain": [
+        {
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1rttpr1/sharing_my_claude_coded_media_ranking_app/",
+          "relationship": "Creator explains handwritten beginnings and subsequent Claude Code work, then links the exact Play package."
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.meberko.curate",
+          "relationship": "Live listing identifies meberko and Michael Ethan Berkowitz and documents the matching pairwise-media-ranking product."
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1rttpr1/sharing_my_claude_coded_media_ranking_app/",
+          "supports": "First-party scoped development account and exact distribution link."
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.meberko.curate",
+          "supports": "Current Android release, developer, external catalogs, optional sync and iOS preparation note."
+        }
+      ]
+    },
+    {
+      "id": "agent-world-model",
+      "name": "Agent World Model",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "environment-framework",
+      "primary_url": "https://github.com/Snowflake-Labs/agent-world-model",
+      "repo_url": "https://github.com/Snowflake-Labs/agent-world-model",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "description_en": "A generation pipeline and released suite of synthetic, SQL-backed tool environments exposed through MCP for multi-turn agent research.",
+      "description_zh": "用于多轮 Agent 研究的生成流水线及已发布合成工具环境套件，通过 MCP 提供接口并以 SQL 数据库维护状态。",
+      "paper_url": "https://arxiv.org/abs/2602.10090",
+      "enables_en": "Train tool-use agents in generated scenarios and check resulting database state using either code verifiers or code-augmented model judges.",
+      "enables_zh": "在生成场景中训练工具使用 Agent，并通过代码评分器或结合代码的模型评审检查数据库结果状态。",
+      "limits_en": "These are synthetic SQLite/MCP scenarios, not real production services. The release distinguishes 1,000 environments from 10,000 tasks. Pure-code and SQL-plus-model verification produce different evidence and must be identified. OpenEnv is an integration, not another task set; its done action does not run verification. No explicit pipeline-code license was located in inspected project metadata.",
+      "limits_zh": "这些是合成 SQLite／MCP 场景，并非真实生产服务；发布资料区分 1,000 个环境和 10,000 项任务。纯代码与 SQL 加模型评审提供不同证据，应注明模式。OpenEnv 属于集成，不是另一套任务；其 done 动作不会自动评测。所查项目元数据未明确流水线代码许可。",
+      "runtime_note_en": "Python >=3.12, uv-managed dependencies, generated databases and MCP servers. Synthesis, agents and SQL-mode judges require configured models; pure-code verification does not need a judge model. The OpenEnv integration executes supplied scenario code and relies on container isolation. No environment code was executed here.",
+      "runtime_note_zh": "需 Python >=3.12、uv 管理的依赖、生成数据库及 MCP 服务器。合成、Agent 和 SQL 模式评审需配置模型；纯代码评测不需要评审模型。OpenEnv 集成会执行所提供的场景代码，并依赖容器隔离。本次未执行环境代码。",
+      "license_en": "AgentWorldModel-1K declares CC BY 4.0. No standalone license or license field was found in the inspected pipeline repository root, README or pyproject. The OpenEnv wrapper's license must not be substituted for the upstream pipeline's missing declaration.",
+      "license_zh": "AgentWorldModel-1K 声明 CC BY 4.0；所查流水线仓库根目录、README 及 pyproject 未提供独立许可或许可字段。不能用 OpenEnv 封装的许可替代上游流水线缺失的声明。",
+      "license_url": "https://huggingface.co/datasets/Snowflake/AgentWorldModel-1K/blob/dde80a0283fe781bdc51656bce57063dc5650213/README.md",
+      "provenance_note_en": "The authors report generating environment code with models. This does not establish that the synthesis toolkit itself was AI-built; the project-level implementation label remains unknown.",
+      "provenance_note_zh": "作者说明使用模型生成环境代码，但这不能证明合成工具包本身由 AI 开发，因此项目级开发方式仍标为未知。",
+      "evidence": [
+        {
+          "url": "https://github.com/Snowflake-Labs/agent-world-model/blob/85e322f69279e3b3325b7377ec3bab788514e9cb/README.md",
+          "supports": "Canonical pipeline, 1,000 environments, interaction CLI and separate verification modes."
+        },
+        {
+          "url": "https://github.com/Snowflake-Labs/agent-world-model/blob/85e322f69279e3b3325b7377ec3bab788514e9cb/awm/cli.py",
+          "supports": "Public generation, environment, agent and verification command dispatch."
+        },
+        {
+          "url": "https://github.com/Snowflake-Labs/agent-world-model/blob/85e322f69279e3b3325b7377ec3bab788514e9cb/awm/core/agent.py",
+          "supports": "Substantive MCP tool-use agent and local scenario-server interaction code."
+        },
+        {
+          "url": "https://github.com/Snowflake-Labs/agent-world-model/blob/85e322f69279e3b3325b7377ec3bab788514e9cb/awm/core/verify.py",
+          "supports": "Code-mode verification versus SQL evidence plus an LLM judge."
+        },
+        {
+          "url": "https://github.com/Snowflake-Labs/agent-world-model/blob/85e322f69279e3b3325b7377ec3bab788514e9cb/pyproject.toml",
+          "supports": "Python >=3.12 and package 0.1.0; no license field."
+        },
+        {
+          "url": "https://huggingface.co/datasets/Snowflake/AgentWorldModel-1K/blob/dde80a0283fe781bdc51656bce57063dc5650213/README.md",
+          "supports": "CC BY 4.0; 1,000 scenario rows, ten tasks per scenario and two sets of 10K verifiers."
+        },
+        {
+          "url": "https://github.com/huggingface/OpenEnv/blob/55347f62e22f83a618b49ee984e2f684b69d8fbd/envs/agent_world_model_env/README.md",
+          "supports": "Pinned integration explicitly identifies Snowflake upstream; done/verify distinction and runtime isolation boundary."
+        },
+        {
+          "url": "https://github.com/huggingface/OpenEnv/blob/55347f62e22f83a618b49ee984e2f684b69d8fbd/envs/agent_world_model_env/openenv.yaml",
+          "supports": "Exact agent_world_model_env registry manifest identity."
+        }
+      ]
+    },
+    {
+      "id": "scienceagentbench",
+      "name": "ScienceAgentBench",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "environment-and-benchmark",
+      "primary_url": "https://github.com/OSU-NLP-Group/ScienceAgentBench",
+      "repo_url": "https://github.com/OSU-NLP-Group/ScienceAgentBench",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "description_en": "An executable benchmark for generating standalone Python programs that perform data-driven scientific analyses, with task assets and direct or containerized evaluation.",
+      "description_zh": "面向独立 Python 科学分析程序生成的可执行基准，提供任务资产以及直接运行或容器化评测流程。",
+      "paper_url": "https://arxiv.org/abs/2410.05080",
+      "enables_en": "Evaluate whether generated programs produce task-specific scientific outputs, using execution checks and visual judging where required.",
+      "enables_zh": "通过执行检查及必要的视觉评审，评估生成程序是否产生任务要求的科学分析输出。",
+      "limits_en": "Use the verified split with matching benchmark_verified assets; it was announced after the frozen 102-task Harbor package. The public runner still defaults to validation, so select the release explicitly. Some outputs use model-based visual judging and results can depend on scientific-library versions or randomness. Full assets are separately hosted and were not downloaded; authors request no redistribution of unpacked files.",
+      "limits_zh": "应使用 verified 划分及匹配的 benchmark_verified 资产；其发布时间晚于冻结的102项 Harbor 包。公开运行器仍默认 validation，因此需明确选择版本。部分输出采用模型视觉评审，结果会受科学库版本或随机性影响。完整资产另行托管，本次未下载；作者要求不要重新公开解压文件。",
+      "runtime_note_en": "The documented setup uses Python 3.10 and Docker evaluation or per-task Conda environments. Provide the benchmark assets and configured judge/model access. Task-specific dependencies, compute and memory affect reproduction; no programs, images or scientific datasets were run.",
+      "runtime_note_zh": "文档使用 Python 3.10，可通过 Docker 或各任务的 Conda 环境评测。需准备基准资产及评审／模型访问；各任务依赖、算力和内存会影响复现。本次未运行程序、镜像或科学数据集。",
+      "license_en": "Repository code is MIT. Most task material is CC BY 4.0; rasterio- and matminer-derived tasks retain their original licenses. The README's unpacked-file redistribution request is recorded separately from those license declarations.",
+      "license_zh": "仓库代码为 MIT，多数任务材料为 CC BY4.0；来自 rasterio 和 matminer 的任务保留原许可。README 对解压文件再分发的要求与这些许可声明分别记录。",
+      "license_url": "https://github.com/OSU-NLP-Group/ScienceAgentBench/blob/c26e151ed601ba109dc4d35e057ff8e73fec469d/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/OSU-NLP-Group/ScienceAgentBench/blob/c26e151ed601ba109dc4d35e057ff8e73fec469d/README.md",
+          "supports": "102 tasks, standalone program outputs, April 30 verified release, setup/assets and source-specific licenses."
+        },
+        {
+          "url": "https://github.com/OSU-NLP-Group/ScienceAgentBench/blob/c26e151ed601ba109dc4d35e057ff8e73fec469d/evaluation/harness/run_evaluation.py",
+          "supports": "Released Docker evaluator; default split remains validation."
+        },
+        {
+          "url": "https://github.com/OSU-NLP-Group/ScienceAgentBench/blob/c26e151ed601ba109dc4d35e057ff8e73fec469d/gpt4_visual_judge.py",
+          "supports": "Public visual-output judging code uses a configured GPT-4o service."
+        },
+        {
+          "url": "https://github.com/OSU-NLP-Group/ScienceAgentBench/blob/c26e151ed601ba109dc4d35e057ff8e73fec469d/LICENSE",
+          "supports": "MIT repository license."
+        },
+        {
+          "url": "https://huggingface.co/api/datasets/osunlp/ScienceAgentBench",
+          "supports": "Public ungated metadata declares 102 verified examples and a separate legacy validation config."
+        },
+        {
+          "url": "https://github.com/laude-institute/harbor/blob/3e9f14a7c1033896cc600d27de69d6948bcb3410/adapters/scienceagentbench/README.md",
+          "supports": "Canonical upstream link; adapter distinguishes deterministic/visual checks and documents patched-harness comparisons, resource limits and stochastic cases."
+        }
+      ]
+    },
+    {
+      "id": "swe-bench-pro",
+      "name": "SWE-bench Pro",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "benchmark-suite",
+      "primary_url": "https://github.com/scaleapi/SWE-bench_Pro-os",
+      "repo_url": "https://github.com/scaleapi/SWE-bench_Pro-os",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "description_en": "Scale AI's long-horizon repository-repair benchmark, with released public task containers, issue specifications and patch-verification tooling.",
+      "description_zh": "Scale AI 的长流程代码库修复基准，公开任务容器、问题说明及补丁验证工具。",
+      "paper_url": "https://arxiv.org/abs/2509.16941",
+      "enables_en": "Evaluate patches against task-specific failing and regression tests across Python, JavaScript/TypeScript and Go repositories.",
+      "enables_zh": "在 Python、JavaScript／TypeScript 和 Go 代码库中，通过任务专用失败测试及回归测试评估补丁。",
+      "limits_en": "Current public V2 has 642 tasks; HARD-51 is a subset, and legacy v1 has 731. The paper's broader collection includes nonpublic tracks. Frozen Harbor packages still advertise 731 and are not proven equivalent to V2. V2's reported protocol keeps the agent phase offline and re-grades captured patches in fresh containers. Do not combine versions, subsets or namespaces into an additive task count.",
+      "limits_zh": "当前公开 V2 有642项任务，HARD-51 是其子集，旧 v1 有731项；论文更大的集合包含未公开赛道。冻结 Harbor 包仍标731，尚不能视为 V2 的等价发布。V2 协议让 Agent 阶段离线，并在全新容器中重评捕获的补丁。版本、子集和不同命名空间不能累加为任务总数。",
+      "runtime_note_en": "V2 ships Harbor task directories and public linux/amd64 image references. The documented locked protocol uses Harbor with Modal's phase-specific network policy and a separate re-grader. Legacy local-Docker examples belong to v1. Container pulls, task execution and reference-patch claims were not independently tested.",
+      "runtime_note_zh": "V2 提供 Harbor 任务目录及公开 linux/amd64 镜像引用。文档中的固定协议使用 Harbor、Modal 分阶段网络策略及独立重评分器；旧的本地 Docker 示例属于 v1。本次未拉取容器、执行任务或独立验证参考补丁结果。",
+      "license_en": "Current harness/tooling is MIT. Task instructions, patches and tests retain the upstream repositories' licenses, including copyleft where applicable. The older Harbor adapter's Apache-2.0 statement does not establish uniform rights for the current release.",
+      "license_zh": "当前框架／工具采用 MIT；任务指令、补丁及测试保留原代码库许可，其中可能包含 copyleft 条款。旧 Harbor 适配器的 Apache-2.0 说明不能确立当前发布材料统一适用该许可。",
+      "license_url": "https://github.com/scaleapi/SWE-bench_Pro-os/blob/66f92766bba642462d4bbe5479e83f91f9211862/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/scaleapi/SWE-bench_Pro-os/blob/66f92766bba642462d4bbe5479e83f91f9211862/README.md",
+          "supports": "Canonical public V2/v1 separation, task counts, public images and separate private leaderboard."
+        },
+        {
+          "url": "https://github.com/scaleapi/SWE-bench_Pro-os/blob/66f92766bba642462d4bbe5479e83f91f9211862/v2/README.md",
+          "supports": "642 tasks across 11 repositories, HARD-51, offline agent phase and fresh-container grading."
+        },
+        {
+          "url": "https://github.com/scaleapi/SWE-bench_Pro-os/blob/66f92766bba642462d4bbe5479e83f91f9211862/v2/tooling/patch_replay.py",
+          "supports": "Public implementation of separate patch replay grading; source inspection only."
+        },
+        {
+          "url": "https://github.com/scaleapi/SWE-bench_Pro-os/blob/66f92766bba642462d4bbe5479e83f91f9211862/v2/hard51_ids.txt",
+          "supports": "Exactly 51 unique listed instance IDs."
+        },
+        {
+          "url": "https://github.com/scaleapi/SWE-bench_Pro-os/blob/66f92766bba642462d4bbe5479e83f91f9211862/LICENSE",
+          "supports": "MIT current harness license."
+        },
+        {
+          "url": "https://huggingface.co/datasets/ScaleAI/SWE-bench_Pro/blob/2d52cb3df914a3fcf80c7f66738b3a88ae37fc50/README.md",
+          "supports": "V2 default 642, hard51, v1 731 and task-content source-specific licensing."
+        },
+        {
+          "url": "https://github.com/laude-institute/harbor/blob/3e9f14a7c1033896cc600d27de69d6948bcb3410/adapters/swebenchpro/README.md",
+          "supports": "Legacy731-task adapter, changed test commands and an older incompatible blanket license statement."
+        },
+        {
+          "url": "https://hub.harborframework.com/datasets/cais/swebenchpro/latest",
+          "supports": "CAIS describes a modified731-task SWE-bench Pro package; related family, not identical runtime."
+        },
+        {
+          "url": "https://hub.harborframework.com/datasets/scale-ai/swe-bench-pro/latest",
+          "supports": "Package README identifies SWE-bench Pro and links the primary Scale paper/leaderboard."
+        }
+      ]
+    },
+    {
+      "id": "algotune",
+      "name": "AlgoTune",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "benchmark-suite",
+      "primary_url": "https://algotune.io/",
+      "repo_url": "https://github.com/oripress/AlgoTune",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "description_en": "A benchmark and execution harness for optimizing numerical and algorithmic programs while preserving valid outputs, measured against reference runtimes.",
+      "description_zh": "面向数值及算法程序优化的基准和执行框架，在保持输出有效的前提下与参考运行时间比较。",
+      "paper_url": "https://arxiv.org/abs/2507.15887",
+      "enables_en": "Measure correctness-preserving solver speedups on generated held-out inputs, using task-specific generators, validators and reference solvers.",
+      "enables_zh": "使用任务专用输入生成器、验证器和参考解法，在生成的保留输入上衡量保持正确性的求解器加速。",
+      "limits_en": "Timing depends on hardware, library versions, calibration and parallel contention. The 154 task families each generate many inputs; input counts are not additional tasks. Original aggregate speedup, AlgoTune-Pass resolve rate and Harbor rewards are different measures. Harbor documents a 1.0 floor for invalid or slower solutions, so that reward alone does not prove correctness.",
+      "limits_zh": "计时取决于硬件、库版本、校准及并行资源竞争。154个任务族各自生成多组输入，输入数量不能当作新增任务。原始综合加速比、AlgoTune-Pass 完成率与 Harbor 奖励属于不同指标。Harbor 对无效或更慢的解法也记录1.0下限，因此该奖励本身不能证明正确性。",
+      "runtime_note_en": "Python >=3.10 and numerical dependencies; documented launchers support standalone, SLURM and optional AWS paths. AlgoTuner requires model configuration. Preserve train/test input seeds, problem-size calibration, CPU/thread limits and correctness traces. No solver, timing benchmark or cloud resource was run.",
+      "runtime_note_zh": "需 Python >=3.10 及数值计算依赖；文档提供独立运行、SLURM 和可选 AWS 路径。AlgoTuner 需配置模型。应保留训练／测试输入种子、问题规模校准、CPU／线程限制及正确性记录。本次未运行解法、计时评测或云资源。",
+      "license_en": "Repository benchmark/harness code is MIT. Numerical libraries and other dependencies retain their own licenses.",
+      "license_zh": "仓库中的基准／框架代码采用 MIT，数值库及其他依赖保留各自许可。",
+      "license_url": "https://github.com/oripress/AlgoTune/blob/dff9914c10800c7a031c9e8c3d4d1c8cd1b38906/LICENSE",
+      "evidence": [
+        {
+          "url": "https://algotune.io/",
+          "supports": "Original metric is harmonic-mean speedup on validated held-out inputs; task API is described."
+        },
+        {
+          "url": "https://github.com/oripress/AlgoTune/blob/dff9914c10800c7a031c9e8c3d4d1c8cd1b38906/README.md",
+          "supports": "154 function tasks and separate AlgoTuner agent; standalone/SLURM/AWS setup."
+        },
+        {
+          "url": "https://github.com/oripress/AlgoTune/blob/dff9914c10800c7a031c9e8c3d4d1c8cd1b38906/AlgoTuneTasks/base.py",
+          "supports": "Public task generator/validator/reference-solver and calibrated train/test input machinery."
+        },
+        {
+          "url": "https://github.com/oripress/AlgoTune/blob/dff9914c10800c7a031c9e8c3d4d1c8cd1b38906/scripts/algotune.py",
+          "supports": "Substantive launcher for timing and agent runs; source inspected only."
+        },
+        {
+          "url": "https://github.com/oripress/AlgoTune/blob/dff9914c10800c7a031c9e8c3d4d1c8cd1b38906/pyproject.toml",
+          "supports": "Python >=3.10 package metadata."
+        },
+        {
+          "url": "https://github.com/oripress/AlgoTune/blob/dff9914c10800c7a031c9e8c3d4d1c8cd1b38906/LICENSE",
+          "supports": "MIT license."
+        },
+        {
+          "url": "https://github.com/laude-institute/harbor/blob/3e9f14a7c1033896cc600d27de69d6948bcb3410/adapters/algotune/README.md",
+          "supports": "Canonical upstream identity and explicit hardware, calibration, reward-floor and AlgoTune-Pass differences."
+        }
+      ]
+    },
+    {
+      "id": "ds-1000",
+      "name": "DS-1000",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "benchmark-suite",
+      "primary_url": "https://github.com/xlang-ai/DS-1000",
+      "repo_url": "https://github.com/xlang-ai/DS-1000",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "description_en": "An execution-tested data-science code-generation benchmark covering 1,000 Python problems across seven widely used libraries.",
+      "description_zh": "覆盖七种常用库、包含1,000道 Python 问题的数据科学代码生成基准，通过执行测试判分。",
+      "paper_url": "https://arxiv.org/abs/2211.11501",
+      "enables_en": "Check generated code using functional test cases and task-specific code-form constraints, and report accuracy by library or problem type.",
+      "enables_zh": "通过功能测试及任务专用代码形式约束检查生成代码，并按库或问题类型报告准确率。",
+      "limits_en": "This evaluates scoped code solutions, not complete application development or GUI navigation. The simplified release preserves problem content but changes packaging and removes the original infilling mode. It executes generated code and needs appropriate isolation; separate processes also matter for stateful libraries. Pin dataset and dependency versions when comparing original and Harbor runs.",
+      "limits_zh": "它评估限定范围的代码解法，而非完整应用开发或 GUI 导航。简化发布保留问题内容，但改变封装并移除原始填空模式。评测会执行生成代码，需要适当隔离；对有状态库，独立进程同样重要。比较原始及 Harbor 运行时应固定数据与依赖版本。",
+      "runtime_note_en": "The current environment file pins Python 3.10 and scientific-library versions. The released runner launches per-problem execution checks, plus test_string where supplied. The original-format branch and simplified test split are two protocols for the same benchmark family, not extra 1,000-task sets. No generated code was executed.",
+      "runtime_note_zh": "当前环境文件固定 Python 3.10 及科学库版本。已发布运行器逐问题执行检查，并在任务提供时执行 test_string。原始格式分支与简化 test 划分属于同一基准族的两种协议，不是额外的1,000项任务集合。本次未执行生成代码。",
+      "license_en": "Repository LICENSE and official dataset card declare CC BY-SA 4.0. Scientific-library dependencies retain their own licenses.",
+      "license_zh": "仓库 LICENSE 及官方数据卡声明 CC BY-SA4.0，科学库依赖保留各自许可。",
+      "license_url": "https://github.com/xlang-ai/DS-1000/blob/b39aab71da6d23ef8d3cac59a7c5f834516ab334/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/xlang-ai/DS-1000/blob/b39aab71da6d23ef8d3cac59a7c5f834516ab334/README.md",
+          "supports": "Original versus simplified release,1,000 problems, functional/surface tests and execution isolation guidance."
+        },
+        {
+          "url": "https://github.com/xlang-ai/DS-1000/blob/b39aab71da6d23ef8d3cac59a7c5f834516ab334/test_ds1000.py",
+          "supports": "Public process-based evaluator invokes test_execution and optional test_string."
+        },
+        {
+          "url": "https://github.com/xlang-ai/DS-1000/blob/b39aab71da6d23ef8d3cac59a7c5f834516ab334/environment.yml",
+          "supports": "Python 3.10 and pinned scientific-library dependencies."
+        },
+        {
+          "url": "https://github.com/xlang-ai/DS-1000/blob/b39aab71da6d23ef8d3cac59a7c5f834516ab334/LICENSE",
+          "supports": "CC BY-SA 4.0 repository license."
+        },
+        {
+          "url": "https://huggingface.co/datasets/xlangai/DS-1000",
+          "supports": "Official public test data and CC BY-SA 4.0 declaration."
+        },
+        {
+          "url": "https://github.com/laude-institute/harbor/blob/3e9f14a7c1033896cc600d27de69d6948bcb3410/adapters/ds1000/README.md",
+          "supports": "Adapter explicitly links the canonical DS-1000 and packages the same 1,000-problem family."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "deskcraft",
+      "name": "DeskCraft",
+      "platforms": [
+        "linux"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "resource_kind": "environment-and-benchmark",
+      "primary_url": "https://github.com/mrwwk/DeskCraft",
+      "repo_url": "https://github.com/mrwwk/DeskCraft",
+      "paper_url": "https://arxiv.org/abs/2606.03103",
+      "description_en": "An Ubuntu desktop benchmark for professional creative and engineering workflows, with 386 standard tasks and 152 tasks that add phased simulated-user interaction.",
+      "description_zh": "面向 Ubuntu 桌面专业创作与工程工作流的评测，包含 386 个标准任务及 152 个加入分阶段模拟用户交互的任务。",
+      "enables_en": "Evaluate long workflows across office, browser, design, video, audio and 3D applications using task-specific state and artifact checks. Interactive tasks test clarification and adaptation to later instructions through a user simulator.",
+      "enables_zh": "使用任务专属的状态与产物检查，评测办公、浏览器、设计、视频、音频和三维应用中的长流程；交互任务通过用户模拟器考查澄清需求及适应后续指令的能力。",
+      "limits_en": "The published task guest is Ubuntu; inherited VM-provider code does not establish equivalent Windows or macOS task suites. Interactive replies use a model-backed user simulator, and optional completion triggers also use a model, so pin these configurations. Public VM and task-cache assets are separate downloads. The README recommends Python 3.10+, while package metadata requires 3.12+; some interactive examples retain older paths. Code and the cache card declare Apache-2.0, but the VM repository does not declare a license. This source review did not run the tasks.",
+      "limits_zh": "已发布任务的虚拟机系统为 Ubuntu；继承的虚拟机后端代码不能证明存在同等的 Windows 或 macOS 任务集。交互回复使用模型驱动的用户模拟器，可选完成触发器也会调用模型，需固定这些配置。公开虚拟机与任务缓存分别下载。README 推荐 Python 3.10+，包元数据则要求 3.12+，部分交互示例仍用旧路径。代码及缓存卡声明 Apache-2.0，虚拟机仓库未声明许可。本次仅核查来源，未运行任务。",
+      "license_en": "Repository code is Apache-2.0; the task-cache card declares Apache-2.0. No license was stated for the separate Ubuntu VM repository; bundled applications and source assets retain their own terms.",
+      "license_zh": "仓库代码采用 Apache-2.0，任务缓存卡也声明 Apache-2.0。独立 Ubuntu 虚拟机仓库未注明许可，所含应用及来源素材仍受各自条款约束。",
+      "runtime_note_en": "Ubuntu guest with a compatible OSWorld-derived VM provider, public VM/cache assets and configured agent/user-simulator endpoints. Use the current standard_task.json and interactive_task.json indices with the matching ubuntu_examples base directory.",
+      "runtime_note_zh": "需使用 Ubuntu 虚拟机、兼容的 OSWorld 衍生虚拟机后端、公开 VM／缓存素材，以及配置好的智能体与用户模拟器端点。应将当前 standard_task.json、interactive_task.json 索引与对应 ubuntu_examples 根目录配合使用。",
+      "reviewed_version": {
+        "source_commit": "73985ecdd37e7db02a6ba617bc020161641af43a",
+        "standard_tasks": 386,
+        "interactive_tasks": 152
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/mrwwk/DeskCraft/blob/73985ecdd37e7db02a6ba617bc020161641af43a/README.md",
+          "supports": "Published Ubuntu scope, applications, public VM/cache links, task counts and state/artifact evaluators."
+        },
+        {
+          "url": "https://github.com/mrwwk/DeskCraft/blob/73985ecdd37e7db02a6ba617bc020161641af43a/evaluation_examples/standard_task.json",
+          "supports": "Reviewed index contains 386 distinct standard task IDs."
+        },
+        {
+          "url": "https://github.com/mrwwk/DeskCraft/blob/73985ecdd37e7db02a6ba617bc020161641af43a/evaluation_examples/interactive_task.json",
+          "supports": "Reviewed index contains 152 distinct interactive task IDs, with no overlap with the standard index."
+        },
+        {
+          "url": "https://github.com/mrwwk/DeskCraft/blob/73985ecdd37e7db02a6ba617bc020161641af43a/README_INTERACTIVE.md",
+          "supports": "Model-backed user simulation, phased triggers, CALL_USER override and older example paths."
+        },
+        {
+          "url": "https://github.com/mrwwk/DeskCraft/blob/73985ecdd37e7db02a6ba617bc020161641af43a/pyproject.toml",
+          "supports": "Package Python requirement is >=3.12."
+        },
+        {
+          "url": "https://github.com/mrwwk/DeskCraft/blob/73985ecdd37e7db02a6ba617bc020161641af43a/LICENSE",
+          "supports": "Apache-2.0 repository license."
+        },
+        {
+          "url": "https://huggingface.co/Wenkaiwang/ubuntu-qcow2",
+          "supports": "Author-linked public Ubuntu VM repository, with no declared card/license at the reviewed revision."
+        },
+        {
+          "url": "https://huggingface.co/datasets/Wenkaiwang/deskcraft_cache",
+          "supports": "Author-linked public task cache, whose card declares Apache-2.0."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "agentnet",
+      "name": "AgentNet (OpenCUA)",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux",
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "resource_kind": "dataset-and-benchmark",
+      "primary_url": "https://huggingface.co/datasets/xlangai/AgentNet",
+      "repo_url": "https://github.com/xlang-ai/OpenCUA",
+      "paper_url": "https://arxiv.org/abs/2508.09123",
+      "description_en": "Cross-platform computer-use demonstrations from the OpenCUA project, accompanied by recording tools and an offline action-matching evaluator.",
+      "description_zh": "OpenCUA 项目提供的跨平台计算机操作演示数据，并附录制工具和离线动作匹配评测器。",
+      "enables_en": "Train GUI agents on screenshot/action trajectories from Windows, macOS, Ubuntu and web interfaces. Use AgentNetBench to compare predicted low-level actions with annotated actions, including position, typing, key and scroll matching.",
+      "enables_zh": "利用来自 Windows、macOS、Ubuntu 与网页界面的截图／动作轨迹训练 GUI 智能体；通过 AgentNetBench 对比预测与标注的底层动作，包括位置、输入、按键和滚动。",
+      "limits_en": "This entry covers data and evaluation tools, not the OpenCUA model variants or a new live desktop environment. Human demonstrations are supplemented with generated descriptions, reasoning and quality labels. AgentNetBench scores recorded actions rather than live task completion and expects its own trajectory schema; the entire training corpus is not a verified held-out test split. Training code remains a release TODO. Code and data carry MIT licenses, with separate use/privacy/IP notices in the card. Platform tags describe recorded interfaces.",
+      "limits_zh": "本条收录数据和评测工具，不将 OpenCUA 模型版本或新的实时桌面环境计入。人工演示附有生成的描述、推理与质量标签。AgentNetBench 评的是录制动作匹配而非实时任务完成率，并要求其特定轨迹格式；不能把整个训练语料视为已核实的独立测试集。训练代码仍列为待发布。代码与数据采用 MIT，数据卡另附使用、隐私与知识产权说明。平台标签指录制界面。",
+      "license_en": "OpenCUA code and AgentNet LICENSE.txt use MIT. The dataset card separately states prohibited-use, privacy and third-party intellectual-property notices.",
+      "license_zh": "OpenCUA 代码及 AgentNet 的 LICENSE.txt 使用 MIT；数据卡另列禁止用途、隐私及第三方知识产权说明。",
+      "runtime_note_en": "Static JSONL plus multipart screenshot archives. The public offline evaluator under evaluation/agentnetbench documents Python 3.9+, Pillow and an OpenAI-compatible model endpoint; recording tools are a separate AgentNetTool submodule.",
+      "runtime_note_zh": "产物为静态 JSONL 和分卷截图压缩包。evaluation/agentnetbench 下公开的离线评测器注明 Python 3.9+、Pillow 与兼容 OpenAI 协议的模型端点；录制工具位于独立 AgentNetTool 子模块。",
+      "reviewed_version": {
+        "source_commit": "dfc91ba89f700d10f26ec50362d308571482ab8b",
+        "dataset_revision": "d76ee50a63fad81cfdbe576416757d7c2091ed50"
+      },
+      "evidence": [
+        {
+          "url": "https://huggingface.co/datasets/xlangai/AgentNet/blob/d76ee50a63fad81cfdbe576416757d7c2091ed50/README.md",
+          "supports": "Dataset targets, task/trajectory units, human vs synthesized fields, archive layout and separate usage notices."
+        },
+        {
+          "url": "https://huggingface.co/datasets/xlangai/AgentNet/blob/d76ee50a63fad81cfdbe576416757d7c2091ed50/LICENSE.txt",
+          "supports": "MIT dataset license."
+        },
+        {
+          "url": "https://github.com/xlang-ai/OpenCUA/blob/dfc91ba89f700d10f26ec50362d308571482ab8b/README.md",
+          "supports": "OpenCUA releases and remaining training-code TODO; models are separate artifacts."
+        },
+        {
+          "url": "https://github.com/xlang-ai/OpenCUA/blob/dfc91ba89f700d10f26ec50362d308571482ab8b/evaluation/agentnetbench/README.md",
+          "supports": "Public offline evaluator, supported action parsers, setup and required trajectory schema."
+        },
+        {
+          "url": "https://github.com/xlang-ai/OpenCUA/blob/dfc91ba89f700d10f26ec50362d308571482ab8b/evaluation/agentnetbench/eval.py",
+          "supports": "Action-level matching and penalties, rather than a live task-success evaluator."
+        },
+        {
+          "url": "https://github.com/xlang-ai/OpenCUA/blob/dfc91ba89f700d10f26ec50362d308571482ab8b/.gitmodules",
+          "supports": "Recording-tool submodule points to AgentNetTool."
+        },
+        {
+          "url": "https://github.com/xlang-ai/OpenCUA/blob/dfc91ba89f700d10f26ec50362d308571482ab8b/LICENSE",
+          "supports": "MIT repository license."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "videogui",
+      "name": "VideoGUI",
+      "platforms": [
+        "windows",
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "resource_kind": "dataset-and-benchmark",
+      "primary_url": "https://github.com/showlab/videogui",
+      "repo_url": "https://github.com/showlab/videogui",
+      "paper_url": "https://arxiv.org/abs/2406.10227",
+      "description_en": "Instructional-video GUI benchmark data for creative software, separating high-level planning, subtask planning and individual mouse/keyboard actions.",
+      "description_zh": "来自教学视频的创意软件 GUI 评测数据，分别考查高层规划、子任务规划及单步鼠标／键盘操作。",
+      "enables_en": "Study reconstruction of visual workflows in tools such as Photoshop, Premiere, After Effects, DaVinci Resolve and web creation interfaces. Inspect released high-plan, mid-plan and action data as separate evaluation units.",
+      "enables_zh": "研究在 Photoshop、Premiere、After Effects、DaVinci Resolve 与网页创作界面中重建视觉工作流；按不同评测单位检查已发布的高层规划、中层规划和动作数据。",
+      "limits_en": "Data is public, but the repository explicitly leaves evaluation code and metric implementation unreleased. It does not provide a turnkey application VM or reset-and-score harness. The paper reports 86 full tasks and 463 subtasks; the reviewed Hugging Face release exposes 82 high-plan metadata files, 462 mid-plan rows and 2,572 action rows, which are different units and must not be summed. No explicit license was found in the reviewed repository or dataset cards. Replaying professional applications requires suitable installations and licenses.",
+      "limits_zh": "数据已公开，但仓库明确将评测代码与指标实现列为尚未发布；未提供开箱即用的应用虚拟机或重置／评分框架。论文报告 86 个完整任务和 463 个子任务，所核查 Hugging Face 版本含 82 个高层规划元数据文件、462 条中层规划记录及 2,572 条动作记录；单位不同，不能相加。所查仓库与数据卡未找到明确许可。重放专业应用需要相应安装与许可。",
+      "license_en": "No explicit code/data license was declared in the reviewed repository or the three linked Hugging Face dataset cards.",
+      "license_zh": "所核查仓库及其链接的三个 Hugging Face 数据卡未声明明确代码／数据许可。",
+      "runtime_note_en": "Released recordings, screenshots and structured planning/action annotations; no released VideoGUI metric implementation was established. Windows/web tags denote source task interfaces, not validated host portability.",
+      "runtime_note_zh": "已发布录屏、截图及结构化规划／动作标注，未确立已发布的 VideoGUI 指标实现。Windows／Web 标签表示任务来源界面，不代表已验证的运行宿主兼容性。",
+      "reviewed_version": {
+        "source_commit": "ce073cfd41e27b3c2303f020e02130f3f2127933",
+        "high_plan_revision": "53ef16f2d26009c2234270c80f74ab9597c1108f",
+        "mid_plan_revision": "6852d8c9f2b9c586d7ff7cce2611080140f1a30c",
+        "action_revision": "0a8110739acf4c766d4d55c9672cb38d1d9bfcbd"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/showlab/videogui/blob/ce073cfd41e27b3c2303f020e02130f3f2127933/README.md",
+          "supports": "Three public dataset components, full-data link and unchecked evaluation-code/metric release TODO."
+        },
+        {
+          "url": "https://huggingface.co/datasets/VideoGUI/VideoGUI-High-Plan/tree/53ef16f2d26009c2234270c80f74ab9597c1108f",
+          "supports": "Reviewed file inventory contains 82 metadata.parquet files, not a verified count of all originally published tasks."
+        },
+        {
+          "url": "https://huggingface.co/datasets/VideoGUI/VideoGUI-Mid-Plan/blob/6852d8c9f2b9c586d7ff7cce2611080140f1a30c/README.md",
+          "supports": "Card declares 462 mid_plan examples; no explicit license."
+        },
+        {
+          "url": "https://huggingface.co/datasets/VideoGUI/VideoGUI-Action/blob/0a8110739acf4c766d4d55c9672cb38d1d9bfcbd/README.md",
+          "supports": "Card declares 2,572 action examples; no explicit license."
+        },
+        {
+          "url": "https://arxiv.org/abs/2406.10227",
+          "supports": "Original hierarchy, professional-software scope, Windows/web interface targets and original benchmark units."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "worldgui",
+      "name": "WorldGUI",
+      "platforms": [
+        "windows",
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "resource_kind": "dataset-and-benchmark",
+      "primary_url": "https://github.com/showlab/WorldGUI",
+      "repo_url": "https://github.com/showlab/WorldGUI",
+      "paper_url": "https://arxiv.org/abs/2502.08047",
+      "description_en": "Desktop and web workflow benchmark data with varied starting states, plus a public Windows agent implementation for planning and self-correction.",
+      "description_zh": "为桌面与网页工作流设置不同初始状态的评测数据，并提供用于规划及自我纠错的 Windows 智能体实现。",
+      "enables_en": "Compare how agents recover when documents, settings or interfaces are already partway through a workflow. Inspect instructions, videos, project-file references and pre-actions across ten office, system, development and media applications.",
+      "enables_zh": "比较文档、设置或界面处于流程中途时智能体的恢复能力；检查覆盖十种办公、系统、开发与媒体应用的指令、视频、项目文件引用和前置动作。",
+      "limits_en": "The current metadata has 611 task-condition records: 111 meta records and 500 augmented starting-state variants, rather than 611 independent workflow goals. Public agent code and data do not establish a packaged reset-and-score harness for the full corpus; the agent's self-critique is not independent benchmark ground truth. Setup uses an installed Windows desktop, model APIs and, for the documented parser, Google Cloud Vision. Application licenses and state preparation remain operator responsibilities. The dataset card declares Apache-2.0; no repository-wide code license was found.",
+      "limits_zh": "当前元数据含 611 条任务条件记录：111 条 meta 记录与 500 条增强初始状态变体，不能称为 611 个独立工作流目标。公开智能体代码与数据不能证明存在覆盖全语料的打包重置／评分框架；智能体的自我批评也不是独立的评测真值。设置依赖已安装应用的 Windows 桌面、模型 API，以及文档所述解析器使用的 Google Cloud Vision。应用许可和初始状态准备由运行者负责。数据卡声明 Apache-2.0，未找到覆盖仓库代码的许可。",
+      "license_en": "The WorldGUI-Bench dataset card declares Apache-2.0. No repository-wide code LICENSE was present at the inspected WorldGUI revision.",
+      "license_zh": "WorldGUI-Bench 数据卡声明 Apache-2.0；所核查 WorldGUI 版本未提供覆盖仓库代码的 LICENSE。",
+      "runtime_note_en": "The documented GUI-Thinker/WorldGUI-Agent setup targets Windows and Python 3.11, with model credentials and optional parser services. A frontend portability statement does not establish Android or iOS benchmark tasks.",
+      "runtime_note_zh": "文档中的 GUI-Thinker／WorldGUI-Agent 设置针对 Windows 与 Python 3.11，需模型凭据及可选解析服务。前端可移植性的说明不构成 Android 或 iOS 评测任务的证据。",
+      "reviewed_version": {
+        "source_commit": "2117f0a87bcd3b1f330d3727a7ec0643930e7d90",
+        "dataset_revision": "964c6a21c7379c611798c537e6330fd571ae91dc",
+        "task_condition_records": 611,
+        "meta_records": 111,
+        "augmented_records": 500
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/showlab/WorldGUI/blob/2117f0a87bcd3b1f330d3727a7ec0643930e7d90/README.md",
+          "supports": "Benchmark and current release, ten application groups/targets, public agent and data links."
+        },
+        {
+          "url": "https://github.com/showlab/WorldGUI/blob/2117f0a87bcd3b1f330d3727a7ec0643930e7d90/Get%20Started.md",
+          "supports": "Windows/Python setup, external model and OCR services, installed-desktop operation."
+        },
+        {
+          "url": "https://huggingface.co/datasets/hhenryz/WorldGUI-Bench/blob/964c6a21c7379c611798c537e6330fd571ae91dc/README.md",
+          "supports": "Dataset Apache-2.0 declaration and distinction between meta tasks and starting-state augmentations."
+        },
+        {
+          "url": "https://huggingface.co/datasets/hhenryz/WorldGUI-Bench/blob/964c6a21c7379c611798c537e6330fd571ae91dc/worldgui_metadata.json",
+          "supports": "Independently counted 611 unique condition IDs, including 111 _meta and 500 _aug_ records; records expose pre-actions rather than a complete reset/evaluation service."
+        },
+        {
+          "url": "https://arxiv.org/abs/2502.08047",
+          "supports": "Current original-paper title and authors, initial-state robustness research and agent critique framework."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "autocad-bench",
+      "name": "AutoCAD Bench",
+      "platforms": [
+        "windows"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "resource_kind": "environment-and-benchmark",
+      "primary_url": "https://github.com/markov-lab/autocad-bench",
+      "repo_url": "https://github.com/markov-lab/autocad-bench",
+      "paper_url": null,
+      "description_en": "A 50-task computer-use benchmark for dimensioned 2D drafting and true 3D modeling in AutoCAD, with a public corpus, Windows broker and final-DWG scoring code.",
+      "description_zh": "包含 50 个任务的 AutoCAD 计算机操作评测，覆盖带尺寸的二维绘图与真实三维建模，公开任务语料、Windows 控制代理及最终 DWG 评分代码。",
+      "enables_en": "Evaluate agents that reconstruct dimensioned references through visible mouse and keyboard input, including AutoCAD's in-app command bar. Inspect 21 two-dimensional and 29 three-dimensional tasks; 3D deliverables require model-space geometry and the specified Layout1 presentation.",
+      "enables_zh": "评测智能体通过可见鼠标、键盘及 AutoCAD 内置命令栏重建尺寸参考图的能力；检查 21 个二维与 29 个三维任务，其中三维产物要求模型空间几何和指定 Layout1 图纸呈现。",
+      "limits_en": "Operators must supply a licensed AutoCAD Windows worker; no ready-to-use hosted desktop is provided. The pinned contract specifies AutoCAD 2019, Windows Server 2022, broker v10 and evaluator v4; broker v11 remains a candidate. Gold files are scorer-side and model-hidden, not an access-gated public dataset. The pinned scorer contract makes deterministic final-DWG scoring authoritative, while the publisher report describes a vision judge as ground truth; these protocols must not be merged. The pinned contract still requires manual unit and AutoCAD-open audits of gold drawings before release-grade scoring; complete evaluator-cache coverage is a separate claim. No repository code/data license or verified publication date for the report was established. No runtime was tested.",
+      "limits_zh": "运行者需提供具有 AutoCAD 许可的 Windows 工作节点，项目未提供可直接使用的托管桌面。固定版本契约指定 AutoCAD 2019、Windows Server 2022、broker v10 与 evaluator v4；broker v11 仍为候选版本。参考真值文件属于评分端，对模型隐藏，不代表公开数据需要申请访问。固定评分契约以确定性最终 DWG 评分为权威，而发布方报告把视觉评判器描述为真值，两种协议不可混用。未确立仓库代码／数据许可，也未核实该报告发表日期。本次未测试运行。 固定协议仍要求先完成标准图纸的人工单位检查及 AutoCAD 打开检查，才能将评分用于正式发布；评分器缓存覆盖率属于另一项声明。",
+      "license_en": "No repository-wide code or corpus license was present at the inspected revision. AutoCAD is separately licensed software.",
+      "license_zh": "所核查版本未提供覆盖仓库代码或任务语料的许可；AutoCAD 需另行许可。",
+      "runtime_note_en": "Python 3.12; pinned worker AutoCAD 2019 R23.0.46.0.0 on Windows Server 2022 build 20348. The AWS reference backend requires the operator's image, infrastructure and storage; other backends implement the published plugin contract. Vision auditing has separate model/API requirements.",
+      "runtime_note_zh": "Python 3.12；固定工作节点为 Windows Server 2022 build 20348 上的 AutoCAD 2019 R23.0.46.0.0。AWS 参考后端要求运行者自备镜像、基础设施及存储，其他后端需实现公开插件契约。视觉审计另需模型／API。",
+      "reviewed_version": {
+        "source_commit": "d1a10bc4c85358ab857b08af48d51cdbc7114085",
+        "package_version": "0.1.0",
+        "contract": "autocad-bench-contract-v0.6",
+        "broker": "windows-autocad-2019-v10",
+        "evaluator": "autocad-2019-r23.0.46-v4",
+        "tasks": 50
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/markov-lab/autocad-bench/blob/d1a10bc4c85358ab857b08af48d51cdbc7114085/README.md",
+          "supports": "Public source corpus and harness, 2D/3D scope, active broker/evaluator boundary and candidate v11."
+        },
+        {
+          "url": "https://github.com/markov-lab/autocad-bench/blob/d1a10bc4c85358ab857b08af48d51cdbc7114085/tasks/manifest.jsonl",
+          "supports": "Reviewed 50 unique task IDs; gold paths belong to the trusted scorer-side manifest."
+        },
+        {
+          "url": "https://github.com/markov-lab/autocad-bench/blob/d1a10bc4c85358ab857b08af48d51cdbc7114085/docs/benchmark-contract.md",
+          "supports": "Pinned software, 21/29 task units, 7 development/43 evaluation split, GUI-only model capabilities and pending gold-audit confirmations."
+        },
+        {
+          "url": "https://github.com/markov-lab/autocad-bench/blob/d1a10bc4c85358ab857b08af48d51cdbc7114085/docs/final-dwg-scorer.md",
+          "supports": "Deterministic official score and separate vision calibration/audit role."
+        },
+        {
+          "url": "https://github.com/markov-lab/autocad-bench/blob/d1a10bc4c85358ab857b08af48d51cdbc7114085/src/autocad_bench/evaluation/run.py",
+          "supports": "Separate deterministic scoring and vision-judge output stages are implemented."
+        },
+        {
+          "url": "https://github.com/markov-lab/autocad-bench/blob/d1a10bc4c85358ab857b08af48d51cdbc7114085/docs/infrastructure-plugins.md",
+          "supports": "Operator-owned workers/resources and backend plugin interface."
+        },
+        {
+          "url": "https://github.com/markov-lab/autocad-bench/blob/d1a10bc4c85358ab857b08af48d51cdbc7114085/pyproject.toml",
+          "supports": "Package requires Python >=3.12,<3.13; no declared license field."
+        },
+        {
+          "url": "https://www.markovstudios.com/research/autocad-bench",
+          "supports": "First-party Introducing AutoCAD Bench report; vision-judge authority differs from pinned code documentation, and publication date/year was not established."
+        },
+        {
+          "url": "https://github.com/markov-lab/autocad-bench/blob/d1a10bc4c85358ab857b08af48d51cdbc7114085/docs/benchmark-contract.md#L118-L123",
+          "supports": "Pinned contract retains pending gold-drawing audit requirements; complete cached evaluator output is not proof those audits finished."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "os-atlas-data",
+      "name": "OS-Atlas Data",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux",
+        "android",
+        "web"
+      ],
+      "uses": [
+        "training"
+      ],
+      "resource_kind": "dataset",
+      "primary_url": "https://huggingface.co/datasets/OS-Copilot/OS-Atlas-data",
+      "repo_url": "https://github.com/OS-Copilot/OS-Atlas",
+      "paper_url": "https://arxiv.org/abs/2410.23218",
+      "description_en": "A cross-platform GUI grounding pretraining corpus combining newly captured desktop/web interfaces with reused mobile and web datasets.",
+      "description_zh": "跨平台 GUI 元素定位预训练语料，结合新采集的桌面／网页界面与复用的移动端、网页数据集。",
+      "enables_en": "Train screenshot-to-element grounding using referring instructions and normalized bounding boxes from Windows, macOS, Linux, Android and web interfaces. Inspect the acquisition and mixture of desktop, mobile and web sources.",
+      "enables_zh": "使用来自 Windows、macOS、Linux、Android 与网页界面的指代表达及归一化边界框，训练截图到界面元素的定位能力，并检查桌面、移动端和网页数据的采集及混合来源。",
+      "limits_en": "This release is static grounding training data, not a live environment, a task-completion benchmark or a collection of independent interaction trajectories. Its large reported count measures GUI elements. Several source components reuse AMEX, Rico/UIBert, SeeClick and other datasets, so they must not be counted as new original tasks. Training requires prompt wrapping and the documented coordinate convention. The repository and dataset card declare Apache-2.0; original component and screenshot rights remain relevant. Associated OS-Atlas models and ScreenSpot-v2 are not counted here.",
+      "limits_zh": "本发布是静态定位训练数据，不是实时环境、任务完成率评测或独立交互轨迹集合；其大规模统计单位是 GUI 元素。部分组件复用 AMEX、Rico／UIBert、SeeClick 等数据，不能算成新原创任务。训练时需添加提示模板并遵守文档中的坐标约定。仓库与数据卡声明 Apache-2.0，原始组件及截图权利仍需考虑。关联的 OS-Atlas 模型及 ScreenSpot-v2 不在此重复计数。",
+      "license_en": "The OS-Atlas repository license and OS-Atlas-data card declare Apache-2.0. This declaration should not be read as replacing the terms of every reused upstream component or third-party interface asset.",
+      "license_zh": "OS-Atlas 仓库许可及 OS-Atlas-data 数据卡声明 Apache-2.0，不能据此替代每个复用组件或第三方界面素材的原有条款。",
+      "runtime_note_en": "Public JSON annotations and multipart image archives; records use img_filename, instruction and normalized [left, top, right, bottom] boxes. Platform tags refer to collected interfaces, not software installed or reset by this artifact.",
+      "runtime_note_zh": "公开 JSON 标注及分卷图片压缩包；记录包含 img_filename、instruction，以及归一化的 [left, top, right, bottom] 边界框。平台标签指采集界面，不代表此产物会安装或重置对应软件。",
+      "reviewed_version": {
+        "source_commit": "bad08407ab54b5bf6c17a69fe1ced476b9494926",
+        "dataset_revision": "e3a4c90c5f6129c25efdaa0671b08a11f7cb8f3f"
+      },
+      "evidence": [
+        {
+          "url": "https://huggingface.co/datasets/OS-Copilot/OS-Atlas-data/blob/e3a4c90c5f6129c25efdaa0671b08a11f7cb8f3f/README.md",
+          "supports": "Explicit grounding-only data boundary, normalized boxes, new desktop captures, source-component reuse and Apache-2.0 card declaration."
+        },
+        {
+          "url": "https://github.com/OS-Copilot/OS-Atlas/blob/bad08407ab54b5bf6c17a69fe1ced476b9494926/README.md",
+          "supports": "Original data/model project, corpus release and separate model/evaluation artifacts."
+        },
+        {
+          "url": "https://github.com/OS-Copilot/OS-Atlas/blob/bad08407ab54b5bf6c17a69fe1ced476b9494926/LICENSE",
+          "supports": "Apache-2.0 repository license."
+        },
+        {
+          "url": "https://arxiv.org/abs/2410.23218",
+          "supports": "Original cross-platform collection work; reported scale is GUI elements, not tasks or episodes."
         }
       ]
     }

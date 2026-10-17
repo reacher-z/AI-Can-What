@@ -2,10 +2,11 @@
 
 [全部应用资源](../README.zh-CN.md) · [网站索引](https://aicanwhat.com/zh/apps/macos/)
 
-19 个条目。平台标签可能指可运行应用、环境目标或数据集中的截图来源；请同时查看资源类型和限制。
+22 个条目。平台标签可能指可运行应用、环境目标或数据集中的截图来源；请同时查看资源类型和限制。
 
 | 项目 | 资源类型 | 用途 | 原始来源 |
 | --- | --- | --- | --- |
+| [AgentNet (OpenCUA)](https://aicanwhat.com/zh/projects/agentnet/) | 数据集与评测 | 训练, 评测 | [Source](https://huggingface.co/datasets/xlangai/AgentNet) |
 | [Claude Code](https://aicanwhat.com/zh/projects/claude-code/) | AI 软件作品 | 作品展示 | [Source](https://github.com/anthropics/claude-code) |
 | [Context](https://aicanwhat.com/zh/projects/context-mcp/) | AI 软件作品 | 作品展示 | [Source](https://github.com/indragiek/Context) |
 | [Davit](https://aicanwhat.com/zh/projects/davit/) | AI 软件作品 | 作品展示 | [Source](https://davit.app/) |
@@ -16,7 +17,9 @@
 | [Headroom AI](https://aicanwhat.com/zh/projects/headroom-ai/) | AI 软件作品 | 作品展示 | [Source](https://github.com/MariuszT/headroom-ai) |
 | [LightCraft](https://aicanwhat.com/zh/projects/lightcraft/) | AI 软件作品 | 作品展示 | [Source](https://getartcraft.com/apps/lightcraft) |
 | [MacArena](https://aicanwhat.com/zh/projects/macarena/) | 环境与评测 | 评测 | [Source](https://github.com/MacPaw/MacArena) |
+| [note.md](https://aicanwhat.com/zh/projects/notemd/) | AI 软件作品 | 作品展示 | [Source](https://github.com/wizlijun/note.md) |
 | [OmniACT](https://aicanwhat.com/zh/projects/omniact/) | 数据集与评测 | 训练, 评测 | [Source](https://huggingface.co/datasets/Writer/omniact) |
+| [OS-Atlas Data](https://aicanwhat.com/zh/projects/os-atlas-data/) | 数据集 | 训练 | [Source](https://huggingface.co/datasets/OS-Copilot/OS-Atlas-data) |
 | [PdfCraft](https://aicanwhat.com/zh/projects/pdfcraft/) | AI 软件作品 | 作品展示 | [Source](https://getartcraft.com/apps/pdfcraft) |
 | [PhotoCraft](https://aicanwhat.com/zh/projects/photocraft/) | AI 软件作品 | 作品展示 | [Source](https://getartcraft.com/apps/photocraft) |
 | [Poirot](https://aicanwhat.com/zh/projects/poirot/) | AI 软件作品 | 作品展示 | [Source](https://github.com/a7t-ai/poirot) |

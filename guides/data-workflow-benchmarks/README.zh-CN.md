@@ -23,6 +23,8 @@
 | --- | --- | --- |
 | [BixBench](https://aicanwhat.com/zh/projects/bixbench/) · [Source](https://github.com/Future-House/BixBench) | 使用公开笔记本环境及选定答案评分器评估计算生物学分析。 | v1.5 修订并展平为 205 道问题；v1.0 有 296 道问题，两者成绩不能直接等同。公开划分名为 train，但包含基准答案及不得进入训练语料的声明。开放式答案可能需要模型判分。论文、README 与当前元数据的胶囊数量不一致；Harbor 的笔记本／CLI 变体也改变了工具、提示及评分细节。 |
 | [DABstep](https://aicanwhat.com/zh/projects/dabstep/) · [Source](https://huggingface.co/datasets/adyen/DABstep) | 结合公开 Agent 基线和答案评分协议，研究多文件业务数据推理。 | 公开 default 文件有 450 道问题，答案字段为空；10 道附答案的 dev 题中有 6 个 ID 与其重叠。评分检查最终答案，不验证笔记本正确性或 GUI 任务完成。Harbor 从已评分的公开提交重建 default 标签，其成绩尚不能视作官方隐藏答案评测的等价结果。当前 Space 已关闭新的人工验证申请，但仍开放未验证提交。 |
+| [ScienceAgentBench](https://aicanwhat.com/zh/projects/scienceagentbench/) · [Source](https://github.com/OSU-NLP-Group/ScienceAgentBench) | 结合匹配的 verified 资产和任务专用结果检查，评估独立的科学分析程序。 | 应使用 verified 划分及匹配的 benchmark_verified 资产；其发布时间晚于冻结的102项 Harbor 包。公开运行器仍默认 validation，因此需明确选择版本。部分输出采用模型视觉评审，结果会受科学库版本或随机性影响。完整资产另行托管，本次未下载；作者要求不要重新公开解压文件。 |
+| [DS-1000](https://aicanwhat.com/zh/projects/ds-1000/) · [Source](https://github.com/xlang-ai/DS-1000) | 利用执行测试和代码形式约束检查限定范围的 Python 数据科学解答；它不是完整应用工作流。 | 它评估限定范围的代码解法，而非完整应用开发或 GUI 导航。简化发布保留问题内容，但改变封装并移除原始填空模式。评测会执行生成代码，需要适当隔离；对有状态库，独立进程同样重要。比较原始及 Harbor 运行时应固定数据与依赖版本。 |
 
 ## 电子表格产物与办公工具
 

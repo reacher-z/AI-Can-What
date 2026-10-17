@@ -2,11 +2,13 @@
 
 [All app resources](../README.md) · [Website index](https://aicanwhat.com/apps/windows/)
 
-20 entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.
+25 entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.
 
 | Project | Resource type | Use | Primary source |
 | --- | --- | --- | --- |
 | [A9 Voice](https://aicanwhat.com/projects/a9-voice/) | Software made with AI | Showcase | [Source](https://a9voice.com/) |
+| [AgentNet (OpenCUA)](https://aicanwhat.com/projects/agentnet/) | Dataset + benchmark | Training, Evaluation | [Source](https://huggingface.co/datasets/xlangai/AgentNet) |
+| [AutoCAD Bench](https://aicanwhat.com/projects/autocad-bench/) | Environment + benchmark | Evaluation | [Source](https://github.com/markov-lab/autocad-bench) |
 | [Better Stickies](https://aicanwhat.com/projects/better-stickies/) | Software made with AI | Showcase | [Source](https://betterstickies.com/) |
 | [Claude Code](https://aicanwhat.com/projects/claude-code/) | Software made with AI | Showcase | [Source](https://github.com/anthropics/claude-code) |
 | [EffectCraft](https://aicanwhat.com/projects/effectcraft/) | Software made with AI | Showcase | [Source](https://getartcraft.com/apps/effectcraft) |
@@ -16,6 +18,7 @@
 | [LazyWords](https://aicanwhat.com/projects/lazywords/) | Software made with AI | Showcase | [Source](https://github.com/DemonazGH/LazyWords-Tauri) |
 | [LightCraft](https://aicanwhat.com/projects/lightcraft/) | Software made with AI | Showcase | [Source](https://getartcraft.com/apps/lightcraft) |
 | [OmniACT](https://aicanwhat.com/projects/omniact/) | Dataset + benchmark | Training, Evaluation | [Source](https://huggingface.co/datasets/Writer/omniact) |
+| [OS-Atlas Data](https://aicanwhat.com/projects/os-atlas-data/) | Dataset | Training | [Source](https://huggingface.co/datasets/OS-Copilot/OS-Atlas-data) |
 | [OSWorld](https://aicanwhat.com/projects/osworld/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/xlang-ai/OSWorld) |
 | [PdfCraft](https://aicanwhat.com/projects/pdfcraft/) | Software made with AI | Showcase | [Source](https://getartcraft.com/apps/pdfcraft) |
 | [PhotoCraft](https://aicanwhat.com/projects/photocraft/) | Software made with AI | Showcase | [Source](https://getartcraft.com/apps/photocraft) |
@@ -25,4 +28,6 @@
 | [ScreenSpot-Pro](https://aicanwhat.com/projects/screenspot-pro/) | Dataset + benchmark | Evaluation | [Source](https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding) |
 | [Sticky Notes (kunkel321)](https://aicanwhat.com/projects/kunkel321-sticky-notes/) | Software made with AI | Showcase | [Source](https://github.com/kunkel321/Stickies) |
 | [VectorCraft](https://aicanwhat.com/projects/vectorcraft/) | Software made with AI | Showcase | [Source](https://getartcraft.com/apps/vectorcraft) |
+| [VideoGUI](https://aicanwhat.com/projects/videogui/) | Dataset + benchmark | Evaluation | [Source](https://github.com/showlab/videogui) |
 | [Windows Agent Arena](https://aicanwhat.com/projects/windows-agent-arena/) | Environment + benchmark | Evaluation | [Source](https://microsoft.github.io/WindowsAgentArena/) |
+| [WorldGUI](https://aicanwhat.com/projects/worldgui/) | Dataset + benchmark | Evaluation | [Source](https://github.com/showlab/WorldGUI) |

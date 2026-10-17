@@ -35,10 +35,16 @@ HARBOR_RELATED = {
     'futurehouse/bixbench': 'bixbench',
     'futurehouse/bixbench-cli': 'bixbench',
     'adyen/dabstep': 'dabstep',
+    'algotune/algotune': 'algotune',
+    'cais/swebenchpro': 'swe-bench-pro',
+    'scale-ai/swe-bench-pro': 'swe-bench-pro',
+    'scienceagentbench/scienceagentbench': 'scienceagentbench',
+    'xlang/ds-1000': 'ds-1000',
 }
 OPENENV_RELATED = {'atari_env': 'arcade-learning-environment', 'browsergym_env': 'browsergym',
                    'harbor_env': 'harbor', 'openspiel_env': 'open-spiel', 'tau2_env': 'tau-bench', 'tbench2_env': 'terminal-bench',
-                   'openapp_env': 'openapps', 'unity_env': 'unity-ml-agents', 'textarena_env': 'textarena'}
+                   'openapp_env': 'openapps', 'unity_env': 'unity-ml-agents', 'textarena_env': 'textarena',
+                   'agent_world_model_env': 'agent-world-model'}
 
 
 def validate_url(value):

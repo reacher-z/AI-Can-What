@@ -2,7 +2,7 @@
 
 [全部应用资源](../README.zh-CN.md) · [网站索引](https://aicanwhat.com/zh/apps/android/)
 
-20 个条目。平台标签可能指可运行应用、环境目标或数据集中的截图来源；请同时查看资源类型和限制。
+23 个条目。平台标签可能指可运行应用、环境目标或数据集中的截图来源；请同时查看资源类型和限制。
 
 | 项目 | 资源类型 | 用途 | 原始来源 |
 | --- | --- | --- | --- |
@@ -14,7 +14,9 @@
 | [AndroidEnv](https://aicanwhat.com/zh/projects/androidenv/) | 环境框架 | 训练, 评测 | [Source](https://github.com/google-deepmind/android_env) |
 | [AndroidLab](https://aicanwhat.com/zh/projects/androidlab/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/THUDM/Android-Lab) |
 | [AndroidWorld](https://aicanwhat.com/zh/projects/androidworld/) | 环境与评测 | 训练, 评测 | [Source](https://google-research.github.io/android_world/) |
+| [Angle-Calculator](https://aicanwhat.com/zh/projects/angle-calculator-tanaka/) | AI 软件作品 | 作品展示 | [Source](https://play.google.com/store/apps/details?id=com.anglecalc.app) |
 | [AppSim-Bench](https://aicanwhat.com/zh/projects/appsim-bench/) | 环境与评测 | 评测 | [Source](https://github.com/Acrab-Agentic-Labs/AppSim) |
+| [Curate: Rank Your Media](https://aicanwhat.com/zh/projects/curate-rank-your-media/) | AI 软件作品 | 作品展示 | [Source](https://play.google.com/store/apps/details?id=com.meberko.curate) |
 | [GUI Odyssey](https://aicanwhat.com/zh/projects/gui-odyssey/) | 数据集与评测 | 训练, 评测 | [Source](https://github.com/OpenGVLab/GUI-Odyssey) |
 | [GUI-World](https://aicanwhat.com/zh/projects/gui-world/) | 数据集与评测 | 训练, 评测 | [Source](https://github.com/Dongping-Chen/GUI-World) |
 | [GUIAct (GUICourse)](https://aicanwhat.com/zh/projects/guiact/) | 数据集与评测 | 训练, 评测 | [Source](https://github.com/RUCBM/GUICourse) |
@@ -22,6 +24,7 @@
 | [MobileAgentBench](https://aicanwhat.com/zh/projects/mobileagentbench/) | 环境与评测 | 评测 | [Source](https://github.com/MobileAgentBench/mobile-agent-bench) |
 | [Nacre](https://aicanwhat.com/zh/projects/nacre/) | AI 软件作品 | 作品展示 | [Source](https://github.com/RYOITABASHI/Nacre) |
 | [OneBotan](https://aicanwhat.com/zh/projects/onebotan/) | AI 软件作品 | 作品展示 | [Source](https://github.com/mirute02/onebotan) |
+| [OS-Atlas Data](https://aicanwhat.com/zh/projects/os-atlas-data/) | 数据集 | 训练 | [Source](https://huggingface.co/datasets/OS-Copilot/OS-Atlas-data) |
 | [OS-Sentinel / MobileRisk-Live](https://aicanwhat.com/zh/projects/os-sentinel/) | 环境与评测 | 评测 | [Source](https://github.com/OS-Copilot/OS-Sentinel) |
 | [ScreenSpot](https://aicanwhat.com/zh/projects/screenspot/) | 数据集与评测 | 评测 | [Source](https://github.com/njucckevin/SeeClick) |
 | [Shelly](https://aicanwhat.com/zh/projects/shelly-android/) | AI 软件作品 | 作品展示 | [Source](https://github.com/RYOITABASHI/Shelly) |

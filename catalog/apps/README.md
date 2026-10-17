@@ -2,7 +2,7 @@
 
 [Back to the collection](../../README.md)
 
-94 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
+111 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
 
 Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows](windows/README.md) · [Linux](linux/README.md) · [iOS](ios/README.md) · [Android](android/README.md)
 
@@ -10,11 +10,14 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | --- | --- | --- | --- |
 | [A9 Voice](https://aicanwhat.com/projects/a9-voice/) | Software made with AI | Showcase | [Source](https://a9voice.com/) |
 | [ADE-bench](https://aicanwhat.com/projects/ade-bench/) | Environment + benchmark | Evaluation | [Source](https://github.com/dbt-labs/ade-bench) |
+| [Agent World Model](https://aicanwhat.com/projects/agent-world-model/) | Environment framework | Training, Evaluation | [Source](https://github.com/Snowflake-Labs/agent-world-model) |
 | [AgentBench](https://aicanwhat.com/projects/agentbench/) | Benchmark suite | Training, Evaluation | [Source](https://github.com/THUDM/AgentBench) |
 | [AgentBoard](https://aicanwhat.com/projects/agentboard/) | Benchmark suite | Evaluation | [Source](https://github.com/hkust-nlp/AgentBoard) |
 | [AgentDojo](https://aicanwhat.com/projects/agentdojo/) | Environment + benchmark | Evaluation | [Source](https://github.com/ethz-spylab/agentdojo) |
 | [AgentGym](https://aicanwhat.com/projects/agentgym/) | Environment framework | Training, Evaluation | [Source](https://agentgym.github.io/) |
 | [AgentGym-RL](https://aicanwhat.com/projects/agentgym-rl/) | Environment framework | Training, Evaluation | [Source](https://agentgym-rl.github.io/) |
+| [AgentNet (OpenCUA)](https://aicanwhat.com/projects/agentnet/) | Dataset + benchmark | Training, Evaluation | [Source](https://huggingface.co/datasets/xlangai/AgentNet) |
+| [AlgoTune](https://aicanwhat.com/projects/algotune/) | Benchmark suite | Evaluation | [Source](https://algotune.io/) |
 | [AMEX](https://aicanwhat.com/projects/amex/) | Dataset + benchmark | Training, Evaluation | [Source](https://huggingface.co/datasets/Yuxiang007/AMEX) |
 | [Anchor - Bet Blocker](https://aicanwhat.com/projects/anchor-bet-blocker/) | Software made with AI | Showcase | [Source](https://heyanchor.app/) |
 | [Android Bench](https://aicanwhat.com/projects/android-bench/) | Benchmark suite | Evaluation | [Source](https://hub.harborframework.com/datasets/android-bench/android-bench/latest) |
@@ -24,10 +27,12 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | [AndroidEnv](https://aicanwhat.com/projects/androidenv/) | Environment framework | Training, Evaluation | [Source](https://github.com/google-deepmind/android_env) |
 | [AndroidLab](https://aicanwhat.com/projects/androidlab/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/THUDM/Android-Lab) |
 | [AndroidWorld](https://aicanwhat.com/projects/androidworld/) | Environment + benchmark | Training, Evaluation | [Source](https://google-research.github.io/android_world/) |
+| [Angle-Calculator](https://aicanwhat.com/projects/angle-calculator-tanaka/) | Software made with AI | Showcase | [Source](https://play.google.com/store/apps/details?id=com.anglecalc.app) |
 | [API-Bank](https://aicanwhat.com/projects/api-bank/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/api-bank) |
 | [AppSim-Bench](https://aicanwhat.com/projects/appsim-bench/) | Environment + benchmark | Evaluation | [Source](https://github.com/Acrab-Agentic-Labs/AppSim) |
 | [AppWorld](https://aicanwhat.com/projects/appworld/) | Environment + benchmark | Training, Evaluation | [Source](https://appworld.dev/) |
 | [Audio Step Sequencer](https://aicanwhat.com/projects/gpt5-audio-step-sequencer/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/audio-step-sequencer) |
+| [AutoCAD Bench](https://aicanwhat.com/projects/autocad-bench/) | Environment + benchmark | Evaluation | [Source](https://github.com/markov-lab/autocad-bench) |
 | [Better Stickies](https://aicanwhat.com/projects/better-stickies/) | Software made with AI | Showcase | [Source](https://betterstickies.com/) |
 | [BIRD-Interact](https://aicanwhat.com/projects/bird-interact/) | Environment + benchmark | Evaluation | [Source](https://bird-interact.github.io/) |
 | [BixBench](https://aicanwhat.com/projects/bixbench/) | Environment + benchmark | Evaluation | [Source](https://github.com/Future-House/BixBench) |
@@ -37,9 +42,12 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | [Claude&#x27;s C Compiler](https://aicanwhat.com/projects/claudes-c-compiler/) | Software made with AI | Showcase | [Source](https://www.anthropic.com/engineering/building-c-compiler) |
 | [Context](https://aicanwhat.com/projects/context-mcp/) | Software made with AI | Showcase | [Source](https://github.com/indragiek/Context) |
 | [CRMArena](https://aicanwhat.com/projects/crmarena/) | Environment + benchmark | Evaluation | [Source](https://github.com/SalesforceAIResearch/CRMArena) |
+| [Curate: Rank Your Media](https://aicanwhat.com/projects/curate-rank-your-media/) | Software made with AI | Showcase | [Source](https://play.google.com/store/apps/details?id=com.meberko.curate) |
 | [DABstep](https://aicanwhat.com/projects/dabstep/) | Dataset + benchmark | Evaluation | [Source](https://huggingface.co/datasets/adyen/DABstep) |
 | [Davit](https://aicanwhat.com/projects/davit/) | Software made with AI | Showcase | [Source](https://davit.app/) |
+| [DeskCraft](https://aicanwhat.com/projects/deskcraft/) | Environment + benchmark | Evaluation | [Source](https://github.com/mrwwk/DeskCraft) |
 | [Dog-e-dex](https://aicanwhat.com/projects/dog-e-dex/) | Software made with AI | Showcase | [Source](https://apps.apple.com/us/app/dog-e-dex/id6741032284) |
+| [DS-1000](https://aicanwhat.com/projects/ds-1000/) | Benchmark suite | Evaluation | [Source](https://github.com/xlang-ai/DS-1000) |
 | [EffectCraft](https://aicanwhat.com/projects/effectcraft/) | Software made with AI | Showcase | [Source](https://getartcraft.com/apps/effectcraft) |
 | [EngiWorld](https://aicanwhat.com/projects/engiworld/) | Environment + benchmark | Evaluation | [Source](https://github.com/Hongcheng-Gao/EngiWorld) |
 | [FastRender](https://aicanwhat.com/projects/fastrender/) | Software made with AI | Showcase | [Source](https://github.com/wilsonzlin/fastrender) |
@@ -60,11 +68,14 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | [MLGym](https://aicanwhat.com/projects/mlgym/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/facebookresearch/MLGym) |
 | [MobileAgentBench](https://aicanwhat.com/projects/mobileagentbench/) | Environment + benchmark | Evaluation | [Source](https://github.com/MobileAgentBench/mobile-agent-bench) |
 | [Nacre](https://aicanwhat.com/projects/nacre/) | Software made with AI | Showcase | [Source](https://github.com/RYOITABASHI/Nacre) |
+| [Nami — Daily Flow](https://aicanwhat.com/projects/nami-daily-flow/) | Software made with AI | Showcase | [Source](https://apps.apple.com/us/app/nami-daily-flow/id6757530125) |
+| [note.md](https://aicanwhat.com/projects/notemd/) | Software made with AI | Showcase | [Source](https://github.com/wizlijun/note.md) |
 | [OfficeBench](https://aicanwhat.com/projects/officebench/) | Environment + benchmark | Evaluation | [Source](https://github.com/zlwang-cs/OfficeBench) |
 | [OmniACT](https://aicanwhat.com/projects/omniact/) | Dataset + benchmark | Training, Evaluation | [Source](https://huggingface.co/datasets/Writer/omniact) |
 | [OneBotan](https://aicanwhat.com/projects/onebotan/) | Software made with AI | Showcase | [Source](https://github.com/mirute02/onebotan) |
 | [Online Whiteboard](https://aicanwhat.com/projects/gpt5-online-whiteboard/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/online-whiteboard) |
 | [OpenEnv](https://aicanwhat.com/projects/openenv/) | Environment framework | Training, Evaluation | [Source](https://huggingface.co/docs/openenv) |
+| [OS-Atlas Data](https://aicanwhat.com/projects/os-atlas-data/) | Dataset | Training | [Source](https://huggingface.co/datasets/OS-Copilot/OS-Atlas-data) |
 | [OS-Sentinel / MobileRisk-Live](https://aicanwhat.com/projects/os-sentinel/) | Environment + benchmark | Evaluation | [Source](https://github.com/OS-Copilot/OS-Sentinel) |
 | [OSWorld](https://aicanwhat.com/projects/osworld/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/xlang-ai/OSWorld) |
 | [OSWorld 2.0](https://aicanwhat.com/projects/osworld-2/) | Environment + benchmark | Evaluation | [Source](https://github.com/xlang-ai/OSWorld-V2) |
@@ -73,7 +84,10 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | [PhotoCraft](https://aicanwhat.com/projects/photocraft/) | Software made with AI | Showcase | [Source](https://getartcraft.com/apps/photocraft) |
 | [Poirot](https://aicanwhat.com/projects/poirot/) | Software made with AI | Showcase | [Source](https://github.com/a7t-ai/poirot) |
 | [PourCraft Coffee](https://aicanwhat.com/projects/pourcraft-coffee/) | Software made with AI | Showcase | [Source](https://apps.apple.com/us/app/pourcraft-coffee/id6759871953) |
+| [Review Books: Rate, Rank, Log](https://aicanwhat.com/projects/review-books/) | Software made with AI | Showcase | [Source](https://apps.apple.com/us/app/review-books-rate-rank-log/id6809986409) |
 | [RhoUnpacker](https://aicanwhat.com/projects/rhounpacker/) | Software made with AI | Showcase | [Source](https://github.com/w1426421352/RhoUnpacker) |
+| [Rolltake — Teleprompter](https://aicanwhat.com/projects/rolltake/) | Software made with AI | Showcase | [Source](https://apps.apple.com/us/app/rolltake-teleprompter/id6806368467) |
+| [ScienceAgentBench](https://aicanwhat.com/projects/scienceagentbench/) | Environment + benchmark | Evaluation | [Source](https://github.com/OSU-NLP-Group/ScienceAgentBench) |
 | [ScienceBoard](https://aicanwhat.com/projects/scienceboard/) | Environment + benchmark | Evaluation | [Source](https://github.com/OS-Copilot/ScienceBoard) |
 | [Screen Printing Film Analyzer](https://aicanwhat.com/projects/screen-printing-film-analyzer/) | Software made with AI | Showcase | [Source](https://github.com/desordenades/Positive_Analyzer_for_Screen_Printing) |
 | [ScreenSpot](https://aicanwhat.com/projects/screenspot/) | Dataset + benchmark | Evaluation | [Source](https://github.com/njucckevin/SeeClick) |
@@ -87,6 +101,7 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | [StableToolBench](https://aicanwhat.com/projects/stabletoolbench/) | Environment + benchmark | Evaluation | [Source](https://github.com/THUNLP-MT/StableToolBench) |
 | [Sticky Notes (kunkel321)](https://aicanwhat.com/projects/kunkel321-sticky-notes/) | Software made with AI | Showcase | [Source](https://github.com/kunkel321/Stickies) |
 | [SWE-bench](https://aicanwhat.com/projects/swe-bench/) | Benchmark suite | Training, Evaluation | [Source](https://www.swebench.com/) |
+| [SWE-bench Pro](https://aicanwhat.com/projects/swe-bench-pro/) | Benchmark suite | Evaluation | [Source](https://github.com/scaleapi/SWE-bench_Pro-os) |
 | [SWE-Gym](https://aicanwhat.com/projects/swe-gym/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/SWE-Gym/SWE-Gym) |
 | [SWE-Lancer](https://aicanwhat.com/projects/swe-lancer/) | Benchmark suite | Evaluation | [Source](https://github.com/openai/frontier-evals/blob/main/project/swelancer/README.md) |
 | [SWE-smith](https://aicanwhat.com/projects/swe-smith/) | Environment framework | Training, Evaluation | [Source](https://github.com/SWE-bench/SWE-smith) |
@@ -99,6 +114,8 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | [VectorCraft](https://aicanwhat.com/projects/vectorcraft/) | Software made with AI | Showcase | [Source](https://getartcraft.com/apps/vectorcraft) |
 | [VibeTunnel](https://aicanwhat.com/projects/vibetunnel/) | Software made with AI | Showcase | [Source](https://vibetunnel.sh/) |
 | [Video Lite: Compress &amp; Resize](https://aicanwhat.com/projects/video-lite-compress-resize/) | Software made with AI | Showcase | [Source](https://apps.apple.com/us/app/video-lite-compress-resize/id6776254843) |
+| [VideoGUI](https://aicanwhat.com/projects/videogui/) | Dataset + benchmark | Evaluation | [Source](https://github.com/showlab/videogui) |
 | [Windows Agent Arena](https://aicanwhat.com/projects/windows-agent-arena/) | Environment + benchmark | Evaluation | [Source](https://microsoft.github.io/WindowsAgentArena/) |
 | [WorkBench](https://aicanwhat.com/projects/workbench/) | Environment + benchmark | Evaluation | [Source](https://github.com/olly-styles/WorkBench) |
+| [WorldGUI](https://aicanwhat.com/projects/worldgui/) | Dataset + benchmark | Evaluation | [Source](https://github.com/showlab/WorldGUI) |
 | [τ-Bench](https://aicanwhat.com/projects/tau-bench/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/sierra-research/tau2-bench) |

@@ -28,8 +28,8 @@
         {
           "question_en": "Which examples have actual interaction notes?",
           "question_zh": "哪些案例有实际操作记录？",
-          "answer_en": "Tic Tac Toe, Aldi Prices, CSV To Charts and Markdown → Slides have dated steps and screenshots for specific browser interactions. Each record separates visible outcomes from untested features; these are not full application certifications.",
-          "answer_zh": "井字棋、Aldi Prices、CSV To Charts 和 Markdown → Slides 记录了特定浏览器交互的日期、步骤与截图。各记录区分可见结果与未测试功能，不构成完整应用认证。"
+          "answer_en": "Tic Tac Toe, Aldi Prices, CSV To Charts, Markdown → Slides and Tiny Kanban have dated steps and screenshots for specific browser interactions. Each record separates visible outcomes from untested features; these are not full application certifications.",
+          "answer_zh": "井字棋、Aldi Prices、CSV To Charts、Markdown → Slides 和 Tiny Kanban 记录了特定浏览器交互的日期、步骤与截图。各记录区分可见结果与未测试功能，不构成完整应用认证。"
         }
       ],
       "groups": [
@@ -83,6 +83,11 @@
               "project_id": "gpt5-markdown-to-slides",
               "fit_en": "Inspect a typed-Markdown preview with a recorded two-slide navigation check; it has no built-in file export.",
               "fit_zh": "查看输入 Markdown 的预览工具及两页翻页记录；该工具没有内置文件导出。"
+            },
+            {
+              "project_id": "gpt5-tiny-kanban",
+              "fit_en": "Inspect a local task board with recorded card creation, title search and retention after a page reload; movement and WIP enforcement remain untested.",
+              "fit_zh": "查看具有卡片创建、标题搜索和页面重载保留记录的本地看板；卡片移动及 WIP 限制仍未测试。"
             }
           ]
         },
@@ -117,6 +122,16 @@
               "project_id": "shelly-android",
               "fit_en": "Inspect an Android terminal application with a documented prerelease distribution.",
               "fit_zh": "查看有预发布分发说明的 Android 终端应用。"
+            },
+            {
+              "project_id": "rolltake",
+              "fit_en": "Follow a creator-attributed SwiftUI implementation to its iPhone store artifact; public application source was not established.",
+              "fit_zh": "从作者说明的 SwiftUI 实现追溯到 iPhone 商店产物；尚未确认公开应用源码。"
+            },
+            {
+              "project_id": "curate-rank-your-media",
+              "fit_en": "Study an Android app whose author describes handwritten foundations followed by AI-assisted development.",
+              "fit_zh": "了解作者明确记录了先手写基础代码、后以 AI 辅助开发的 Android 应用。"
             }
           ]
         },
@@ -402,6 +417,11 @@
               "project_id": "engiworld",
               "fit_en": "Explore engineering task definitions while accounting for the narrower set of public Ubuntu software images.",
               "fit_zh": "研究工程任务定义，同时考虑公开 Ubuntu 软件镜像覆盖范围更小。"
+            },
+            {
+              "project_id": "deskcraft",
+              "fit_en": "Compare standard Ubuntu workflows with a separate interactive split whose replies come from a model-backed user simulator.",
+              "fit_zh": "比较标准 Ubuntu 工作流与独立的交互任务划分；后者由模型驱动的用户模拟器回复。"
             }
           ]
         },
@@ -619,6 +639,11 @@
               "project_id": "swe-bench",
               "fit_en": "Evaluate real repository issue resolution against project tests.",
               "fit_zh": "用项目测试评估真实代码库问题的修复。"
+            },
+            {
+              "project_id": "swe-bench-pro",
+              "fit_en": "Evaluate the distinct long-horizon repair corpus with pinned V2 tasks and re-grading; older Harbor packages are not proven equivalent.",
+              "fit_zh": "使用固定的 V2 任务及重新评分流程，评估独立的长流程修复语料；尚不能认定旧 Harbor 包与之等价。"
             }
           ]
         },
@@ -657,6 +682,20 @@
               "project_id": "intercode",
               "fit_en": "Study how an agent reacts to errors and execution feedback in coding tasks.",
               "fit_zh": "研究 Agent 如何利用编码任务中的错误及执行反馈。"
+            }
+          ]
+        },
+        {
+          "id": "optimization",
+          "title_en": "Correctness-preserving optimization",
+          "title_zh": "保持正确性的性能优化",
+          "intro_en": "Runtime improvement is meaningful only alongside correctness evidence and controlled hardware, dependencies and timing conditions.",
+          "intro_zh": "只有同时保留正确性证据，并控制硬件、依赖与计时条件，运行速度提升才有明确意义。",
+          "choices": [
+            {
+              "project_id": "algotune",
+              "fit_en": "Measure solver speedups with generated held-out inputs; an adapter reward of 1.0 alone does not establish a correct solution.",
+              "fit_zh": "通过生成的留出输入测量求解器加速；单独出现1.0的适配器奖励，不代表解法正确。"
             }
           ]
         },
@@ -765,6 +804,16 @@
               "project_id": "dabstep",
               "fit_en": "Study multi-file business-data reasoning with a public agent baseline and answer-scoring protocol.",
               "fit_zh": "结合公开 Agent 基线和答案评分协议，研究多文件业务数据推理。"
+            },
+            {
+              "project_id": "scienceagentbench",
+              "fit_en": "Evaluate standalone scientific-analysis programs with matching verified assets and task-specific output checks.",
+              "fit_zh": "结合匹配的 verified 资产和任务专用结果检查，评估独立的科学分析程序。"
+            },
+            {
+              "project_id": "ds-1000",
+              "fit_en": "Test scoped Python data-science solutions using execution and code-form constraints; this is not a full application workflow.",
+              "fit_zh": "利用执行测试和代码形式约束检查限定范围的 Python 数据科学解答；它不是完整应用工作流。"
             }
           ]
         },

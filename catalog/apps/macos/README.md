@@ -2,10 +2,11 @@
 
 [All app resources](../README.md) · [Website index](https://aicanwhat.com/apps/macos/)
 
-19 entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.
+22 entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.
 
 | Project | Resource type | Use | Primary source |
 | --- | --- | --- | --- |
+| [AgentNet (OpenCUA)](https://aicanwhat.com/projects/agentnet/) | Dataset + benchmark | Training, Evaluation | [Source](https://huggingface.co/datasets/xlangai/AgentNet) |
 | [Claude Code](https://aicanwhat.com/projects/claude-code/) | Software made with AI | Showcase | [Source](https://github.com/anthropics/claude-code) |
 | [Context](https://aicanwhat.com/projects/context-mcp/) | Software made with AI | Showcase | [Source](https://github.com/indragiek/Context) |
 | [Davit](https://aicanwhat.com/projects/davit/) | Software made with AI | Showcase | [Source](https://davit.app/) |
@@ -16,7 +17,9 @@
 | [Headroom AI](https://aicanwhat.com/projects/headroom-ai/) | Software made with AI | Showcase | [Source](https://github.com/MariuszT/headroom-ai) |
 | [LightCraft](https://aicanwhat.com/projects/lightcraft/) | Software made with AI | Showcase | [Source](https://getartcraft.com/apps/lightcraft) |
 | [MacArena](https://aicanwhat.com/projects/macarena/) | Environment + benchmark | Evaluation | [Source](https://github.com/MacPaw/MacArena) |
+| [note.md](https://aicanwhat.com/projects/notemd/) | Software made with AI | Showcase | [Source](https://github.com/wizlijun/note.md) |
 | [OmniACT](https://aicanwhat.com/projects/omniact/) | Dataset + benchmark | Training, Evaluation | [Source](https://huggingface.co/datasets/Writer/omniact) |
+| [OS-Atlas Data](https://aicanwhat.com/projects/os-atlas-data/) | Dataset | Training | [Source](https://huggingface.co/datasets/OS-Copilot/OS-Atlas-data) |
 | [PdfCraft](https://aicanwhat.com/projects/pdfcraft/) | Software made with AI | Showcase | [Source](https://getartcraft.com/apps/pdfcraft) |
 | [PhotoCraft](https://aicanwhat.com/projects/photocraft/) | Software made with AI | Showcase | [Source](https://getartcraft.com/apps/photocraft) |
 | [Poirot](https://aicanwhat.com/projects/poirot/) | Software made with AI | Showcase | [Source](https://github.com/a7t-ai/poirot) |

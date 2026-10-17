@@ -49,7 +49,7 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
     for category, labels in types.items():
         slug = {'game': 'games', 'website': 'websites', 'app': 'apps'}[category]
         summary += f'| [{labels[0]}]({origin}/{slug}/) | {counts[category]} | [Browse](catalog/{slug}/README.md) |\n'
-    summary += '\n[Research bibliography](' + origin + '/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)\n'
+    summary += '\n[Research bibliography](papers/README.md) · [Search papers on the website](' + origin + '/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)\n'
     summary += '\n[Selection guides](guides/README.md) compare AI software examples, browser and computer/mobile tasks, software generation, coding agents and data workflows by purpose and evidence.\n'
     observed_ids = {record['project_id'] for record in observations}
     summary += f'\n**{len(observations)} scoped browser observations across {len(observed_ids)} projects** record interaction steps, visible outcomes, screenshots and untested scope. These are not whole-application verification. [Observation data](data/observations.json) · [Method](docs/browser-observations.md).\n'
@@ -80,7 +80,7 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
 | 网站 | {counts['website']} | [浏览](catalog/websites/README.zh-CN.md) |
 | 应用 | {counts['app']} | [浏览](catalog/apps/README.zh-CN.md) |
 
-[研究文献]({origin}/zh/papers/) · [完整数据](data/catalog.json) · [贡献说明](CONTRIBUTING.md)
+[研究文献](papers/README.zh-CN.md) · [网页文献筛选]({origin}/zh/papers/) · [完整数据](data/catalog.json) · [贡献说明](CONTRIBUTING.md)
 
 [选择指南](guides/README.zh-CN.md)按用途和证据比较 AI 软件作品、浏览器与电脑／手机任务、软件生成、编程 Agent 以及数据工作流。
 
@@ -100,6 +100,7 @@ python3 scripts/validate.py
 node --check static/app.js
 node --check static/search.js
 node --check static/registry.js
+node --check static/papers.js
 python3 -m unittest discover -s tests
 ```
 

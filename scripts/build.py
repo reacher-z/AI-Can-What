@@ -14,7 +14,7 @@ from urllib.parse import urlsplit
 from xml.sax.saxutils import escape as xml_escape
 
 from catalog_docs import build_catalog_docs
-from papers import CORPORATE_AUTHORS, bibliography, bibtex, read_papers, paper_url
+from papers import CORPORATE_AUTHORS, bibliography, bibtex, read_papers, paper_url, build_paper_docs
 from registries import read_registries, registry_page
 from observations import read_observations, render_observations
 from guides import read_guides, guide_project_ids, guide_shortcuts, guides_index, guide_page, build_guide_docs
@@ -26,7 +26,7 @@ SLUGS = {'game': 'games', 'website': 'websites', 'app': 'apps'}
 USES = {'showcase': ('Showcase', '作品展示'), 'training': ('Training', '训练'), 'evaluation': ('Evaluation', '评测')}
 PLATFORMS = {'web': 'Web', 'macos': 'macOS', 'windows': 'Windows', 'linux': 'Linux', 'ios': 'iOS', 'android': 'Android'}
 IMPLEMENTATIONS = {'ai-built': ('AI-built, author-reported', '作者报告为 AI 构建'), 'ai-assisted': ('AI-assisted, author-reported', '作者报告为 AI 辅助开发'), 'human-built': ('Human-built, author-reported', '作者报告为人工开发'), 'unknown': ('Development provenance not established', '开发方式未确认')}
-KINDS = {'ai-generated-output': ('Software made with AI', 'AI 软件作品'), 'environment-and-benchmark': ('Environment + benchmark', '环境与评测'), 'environment-framework': ('Environment framework', '环境框架'), 'benchmark-suite': ('Benchmark suite', '评测套件'), 'dataset-and-benchmark': ('Dataset + benchmark', '数据集与评测')}
+KINDS = {'ai-generated-output': ('Software made with AI', 'AI 软件作品'), 'environment-and-benchmark': ('Environment + benchmark', '环境与评测'), 'environment-framework': ('Environment framework', '环境框架'), 'benchmark-suite': ('Benchmark suite', '评测套件'), 'dataset-and-benchmark': ('Dataset + benchmark', '数据集与评测'), 'dataset': ('Dataset', '数据集')}
 
 
 def read_inputs():
@@ -142,6 +142,7 @@ def page_shell(config, language, path, title, description, body, *, items=None, 
     home = lang_path(language)
     counterpart = lang_path('en' if zh else 'zh', path)
     full_title = title if title == config['name'] else title + ' · ' + config['name']
+    paper_script = f'<script src="/papers.js?v={asset_revision}" defer></script>' if papers is not None else ''
     return f'''<!doctype html>
 <html lang="{locale}">
 <head>
@@ -154,7 +155,7 @@ def page_shell(config, language, path, title, description, body, *, items=None, 
 <meta property="og:image" content="{origin}/social-card.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AI Can What? Software it builds. Worlds it learns in.">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{origin}/social-card.png"><meta name="twitter:image:alt" content="AI Can What? Software it builds. Worlds it learns in."><meta name="twitter:title" content="{escape(full_title, quote=True)}"><meta name="twitter:description" content="{escape(description, quote=True)}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css?v={asset_revision}">
-<script src="/search.js?v={asset_revision}" defer></script><script src="/app.js?v={asset_revision}" defer></script><script src="/registry.js?v={asset_revision}" defer></script>{structured(graph)}
+<script src="/search.js?v={asset_revision}" defer></script><script src="/app.js?v={asset_revision}" defer></script><script src="/registry.js?v={asset_revision}" defer></script>{paper_script}{structured(graph)}
 </head>
 <body>
 <a class="skip" href="#main">{('跳到正文' if zh else 'Skip to content')}</a>
@@ -221,7 +222,7 @@ def directory(config, entries, language, category=None, platform=None, observed_
 <p class="search-hint">{('关键词可组合搜索；用英文引号查找完整短语。' if zh else 'Combine keywords; put an exact phrase in double quotes.')}</p><div class="results-line"><span id="result-count" role="status" aria-live="polite">{len(visible)} {('条目录记录' if zh else 'entries')}</span><span>{('来源核查 ≠ 运行验证' if zh else 'Source review ≠ runtime verification')}</span></div></div>
 <div class="table-wrap"><table><thead><tr><th>{('项目' if zh else 'Project')}</th><th>{('类别' if zh else 'Type')}</th><th>{('用途' if zh else 'Use')}</th><th class="platform-head">{('平台' if zh else 'Platform')}</th><th>{('证据与日期' if zh else 'Evidence / reviewed')}</th></tr></thead><tbody>{rows}</tbody></table></div>
 <div class="empty" id="empty-state" hidden><h3>{('没有匹配的项目。' if zh else 'No projects match yet.')}</h3><p>{('换一个关键词，或重置筛选条件。' if zh else 'Try a different search or reset the filters.')}</p></div><noscript><p class="no-script">{('所有项目与链接均可直接浏览；搜索和筛选需要 JavaScript。' if zh else 'Every project and link is available here. Search and filtering use JavaScript.')}</p></noscript></section>
-<section class="note-strip" aria-label="{('目录说明' if zh else 'Reading the directory')}"><article><h3>{('作品、环境与评测资料。' if zh else 'Software, environments, and benchmarks.')}</h3><p>{('作品展示 AI 参与开发的成果；环境支持交互任务；基准和数据集提供评测材料。资源类型与开发方式分别标注。' if zh else 'Showcases document software made with AI. Environments support interaction; benchmarks and datasets support evaluation. Resource types and development provenance are labeled separately.')}</p></article><article><h3>{('从每条记录回到证据。' if zh else 'Follow every entry back to its evidence.')}</h3><p>{('我们记录原始链接、核查日期和已知限制。演示和代码由上游项目提供。' if zh else 'We record original links, review dates, and known limits. Demos and code belong to their upstream projects.')} <a href="{lang_path(language, '/about/')}">{('了解收录方法' if zh else 'Read our method')} ↗</a></p></article></section>'''
+<section class="note-strip" aria-label="{('目录说明' if zh else 'Reading the directory')}"><article><h3>{('作品、环境与评测资料。' if zh else 'Software, environments, and benchmarks.')}</h3><p>{('作品展示 AI 参与开发的成果；环境支持交互任务；基准定义评测任务，数据集提供训练或评测材料。资源类型与开发方式分别标注。' if zh else 'Showcases document software made with AI. Environments support interaction. Benchmarks define evaluation tasks; datasets provide training or evaluation material. Resource types and development provenance are labeled separately.')}</p></article><article><h3>{('从每条记录回到证据。' if zh else 'Follow every entry back to its evidence.')}</h3><p>{('我们记录原始链接、核查日期和已知限制。演示和代码由上游项目提供。' if zh else 'We record original links, review dates, and known limits. Demos and code belong to their upstream projects.')} <a href="{lang_path(language, '/about/')}">{('了解收录方法' if zh else 'Read our method')} ↗</a></p></article></section>'''
     return title, description, body, visible
 
 
@@ -302,7 +303,7 @@ def build():
         else: child.unlink()
     for child in (ROOT / 'static').iterdir():
         if child.is_file(): shutil.copy2(child, OUT / child.name)
-    revision = hashlib.sha256(b''.join((OUT / name).read_bytes() for name in ('styles.css', 'search.js', 'app.js', 'registry.js'))).hexdigest()[:12]
+    revision = hashlib.sha256(b''.join((OUT / name).read_bytes() for name in ('styles.css', 'search.js', 'app.js', 'registry.js', 'papers.js'))).hexdigest()[:12]
     pages = {}
     for language in ('en', 'zh'):
         for category in (None, *TYPES):
@@ -327,7 +328,7 @@ def build():
             pages[lang_path(language, path)] = page_shell(config, language, path, title, description, body, items=guide_entries, asset_revision=revision)
         title, description, body = about_page(config, language, observations, entries)
         pages[lang_path(language, '/about/')] = page_shell(config, language, '/about/', title, description, body, asset_revision=revision)
-        title, description, body = bibliography(papers, entries, language)
+        title, description, body = bibliography(papers, entries, language, repository=config['repository'])
         pages[lang_path(language, '/papers/')] = page_shell(config, language, '/papers/', title, description, body, papers=papers, asset_revision=revision)
         title, description, body, registry_items = registry_page(sources, registry_document, registry_records, entries, language)
         pages[lang_path(language, '/discover/')] = page_shell(config, language, '/discover/', title, description, body, registry_items=registry_items, asset_revision=revision)
@@ -370,10 +371,12 @@ Showcase entries describe author-reported AI development. Training and Evaluatio
 - [Machine-readable catalog]({origin}/catalog.json)
 - [Scoped browser observations]({origin}/observations.json)
 - [Source repository]({config['repository']})
+- [Repository bibliography]({config['repository']}/blob/main/papers/README.md)
 ''')
     (OUT / '404.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Page not found · AI Can What?</title><body><h1>That page is not in the directory.</h1><p><a href="/">Browse AI Can What?</a></p></body></html>')
     build_catalog_docs(ROOT, config, entries, papers, TYPES, KINDS, PLATFORMS, USES, sources, registry_document, observations)
     build_guide_docs(ROOT, guides, entries, origin)
+    build_paper_docs(ROOT, config, papers, entries)
     print(json.dumps({'entries': len(entries), 'papers': len(papers), 'browser_observations': len(observations), 'guides': len(guides), 'registry_records': len(registry_records), 'pages': len(pages), 'origin': origin, 'output': str(OUT)}))
 
 
