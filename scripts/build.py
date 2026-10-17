@@ -14,7 +14,7 @@ from urllib.parse import urlsplit
 from xml.sax.saxutils import escape as xml_escape
 
 from catalog_docs import build_catalog_docs
-from papers import CORPORATE_AUTHORS, bibliography, bibtex, read_papers
+from papers import CORPORATE_AUTHORS, bibliography, bibtex, read_papers, paper_url
 from registries import read_registries, registry_page
 from observations import read_observations, render_observations
 from guides import read_guides, guide_project_ids, guide_shortcuts, guides_index, guide_page, build_guide_docs
@@ -87,7 +87,7 @@ def use_pills(entry, language):
 
 def render_row(entry, language, observed=False):
     zh = language == 'zh'
-    search = ' '.join([entry['name'], entry['description_en'], entry['description_zh'], entry['content_type'], *KINDS[entry['resource_kind']], *entry['uses'], *entry['platforms']]).lower()
+    search = ' '.join([entry['id'], entry['name'], entry['description_en'], entry['description_zh'], entry['enables_en'], entry['enables_zh'], entry.get('creator', ''), entry['content_type'], *KINDS[entry['resource_kind']], *IMPLEMENTATIONS[entry['implementation']], *entry['uses'], *entry['platforms']]).lower()
     platforms = ', '.join(PLATFORMS[p] for p in entry['platforms']) or ('见上游说明' if zh else 'See upstream')
     observation_link = (f'<a class="observation-link" href="{project_path(language, entry)}#browser-observations">' + ('有浏览器操作记录' if zh else 'Browser observation recorded') + '</a>') if observed else ''
     return f'''<tr data-project="{entry['id']}" data-kind="{entry['resource_kind']}" data-search="{escape(search, quote=True)}" data-uses="{' '.join(entry['uses'])}" data-platforms="{' '.join(entry['platforms'])}">
@@ -121,8 +121,8 @@ def page_shell(config, language, path, title, description, body, *, items=None, 
         graph[1]['@type'] = 'CollectionPage'
         graph[1]['mainEntity'] = {'@id': canonical + '#list'}
         graph.append({'@type': 'ItemList', '@id': canonical + '#list', 'numberOfItems': len(papers), 'itemListElement': [
-            {'@type': 'ListItem', 'position': i + 1, 'item': {'@type': 'ScholarlyArticle', 'name': p['title'], 'url': p['arxiv_url'],
-             'author': [{'@type': 'Organization' if author in CORPORATE_AUTHORS else 'Person', 'name': author} for author in p['authors']], 'datePublished': p['published_at']}}
+            {'@type': 'ListItem', 'position': i + 1, 'item': {'@type': 'ScholarlyArticle', 'name': p['title'], 'url': paper_url(p),
+             'author': [{'@type': 'Organization' if author in CORPORATE_AUTHORS else 'Person', 'name': author} for author in p['authors']], **({'datePublished': p['published_at']} if p.get('published_at') else {})}}
             for i, p in enumerate(papers)]})
     collection_items = registry_items if registry_items is not None else guide_items
     if collection_items is not None:
@@ -154,7 +154,7 @@ def page_shell(config, language, path, title, description, body, *, items=None, 
 <meta property="og:image" content="{origin}/social-card.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AI Can What? Software it builds. Worlds it learns in.">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{origin}/social-card.png"><meta name="twitter:image:alt" content="AI Can What? Software it builds. Worlds it learns in."><meta name="twitter:title" content="{escape(full_title, quote=True)}"><meta name="twitter:description" content="{escape(description, quote=True)}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css?v={asset_revision}">
-<script src="/app.js?v={asset_revision}" defer></script><script src="/registry.js?v={asset_revision}" defer></script>{structured(graph)}
+<script src="/search.js?v={asset_revision}" defer></script><script src="/app.js?v={asset_revision}" defer></script><script src="/registry.js?v={asset_revision}" defer></script>{structured(graph)}
 </head>
 <body>
 <a class="skip" href="#main">{('跳到正文' if zh else 'Skip to content')}</a>
@@ -205,7 +205,7 @@ def directory(config, entries, language, category=None, platform=None, observed_
         platform_nav = f'<nav class="category-tabs platform-tabs" aria-label="{("应用平台" if zh else "App platforms")}">{"".join(platform_links)}</nav>'
         if scope_note:
             platform_nav += '<p class="scope-note">' + scope_note + '</p>'
-    tabs = [f'<a href="{lang_path(language)}"' + (' aria-current="page"' if not category else '') + f'>{("全部" if zh else "All projects")}<span class="count">{len(entries)}</span></a>']
+    tabs = [f'<a href="{lang_path(language)}"' + (' aria-current="page"' if not category else '') + f'>{("全部" if zh else "All entries")}<span class="count">{len(entries)}</span></a>']
     for key, labels in TYPES.items():
         tabs.append(f'<a href="{lang_path(language, "/" + SLUGS[key] + "/")}"' + (' aria-current="page"' if category == key else '') + f'>{labels[index]}<span class="count">{counts[key]}</span></a>')
     options_uses = ''.join(f'<option value="{key}">{labels[index]}</option>' for key, labels in USES.items())
@@ -215,10 +215,10 @@ def directory(config, entries, language, category=None, platform=None, observed_
     rows = '\n'.join(render_row(e, language, e['id'] in observed_ids) for e in visible)
     shortcuts = guide_shortcuts(guides, language) if not category else ''
     body = f'''<section class="hero"><div><p class="eyebrow">{('AI 软件与 Agent 环境目录' if zh else 'THE SOFTWARE & AGENT ENVIRONMENT INDEX')}</p><h1>{heading}</h1><p class="hero-copy">{description}</p></div><aside class="hero-note"><div class="two-lanes"><span>{('看 AI 构建' if zh else 'See it build')}</span><span class="lane-arrow" aria-hidden="true">↔</span><span>{('看 AI 行动' if zh else 'See it act')}</span></div><p>{('同一个目录，两个视角。浏览有据可查的作品，找到可供 Agent 训练与评测的环境。' if zh else 'Two sides of the same question. Discover what people build with AI, and where agents learn to get things done.')}</p><p><span class="pill">{('原始来源已查阅' if zh else 'Primary sources reviewed')}</span></p></aside></section>
-<div class="stats"><span><strong>{len(entries)}</strong> {('个项目' if zh else 'projects')}</span><span><strong>{counts['game']}</strong> {('游戏与虚拟世界' if zh else 'games / worlds')}</span><span><strong>{counts['website']}</strong> {('网站' if zh else 'websites')}</span><span><strong>{counts['app']}</strong> {('应用' if zh else 'apps')}</span><span class="updated">{('来源核查' if zh else 'Sources reviewed')} · {max(e['reviewed_at'] for e in entries)}</span></div>
+<div class="stats"><span><strong>{len(entries)}</strong> {('条目录记录' if zh else 'entries')}</span><span><strong>{counts['game']}</strong> {('游戏与虚拟世界' if zh else 'games / worlds')}</span><span><strong>{counts['website']}</strong> {('网站' if zh else 'websites')}</span><span><strong>{counts['app']}</strong> {('应用' if zh else 'apps')}</span><span class="updated">{('来源核查' if zh else 'Sources reviewed')} · {max(e['reviewed_at'] for e in entries)}</span></div>
 {shortcuts}<section class="directory" aria-labelledby="directory-title"><div class="directory-top"><div class="directory-heading"><h2 id="directory-title">{('浏览目录' if zh else 'Explore the directory')}</h2><a href="{config['repository']}/issues/new?template=resource.yml">{('建议一个项目' if zh else 'Suggest a project')} ↗</a></div><nav class="category-tabs" aria-label="{('项目类型' if zh else 'Project category')}">{''.join(tabs)}</nav>{platform_nav}
 <div class="filters"><label class="search-box"><span aria-hidden="true">⌕</span><span class="visually-hidden">{('搜索项目' if zh else 'Search projects')}</span><input id="catalog-search" type="search" placeholder="{('搜索项目、任务、平台…' if zh else 'Search projects, tasks, platforms…')}" autocomplete="off"></label><label class="visually-hidden" for="kind-filter">{('资源类型' if zh else 'Resource type')}</label><select id="kind-filter"><option value="">{('所有资源类型' if zh else 'All resource types')}</option>{options_kinds}</select><label class="visually-hidden" for="use-filter">{('用途' if zh else 'Use')}</label><select id="use-filter"><option value="">{('所有用途' if zh else 'All uses')}</option>{options_uses}</select>{platform_control}<button id="reset-filters" class="reset" type="button" hidden>{('重置' if zh else 'Reset')}</button></div>
-<div class="results-line"><span id="result-count" role="status" aria-live="polite">{len(visible)} {('个项目' if zh else 'projects')}</span><span>{('来源核查 ≠ 运行验证' if zh else 'Source review ≠ runtime verification')}</span></div></div>
+<p class="search-hint">{('关键词可组合搜索；用英文引号查找完整短语。' if zh else 'Combine keywords; put an exact phrase in double quotes.')}</p><div class="results-line"><span id="result-count" role="status" aria-live="polite">{len(visible)} {('条目录记录' if zh else 'entries')}</span><span>{('来源核查 ≠ 运行验证' if zh else 'Source review ≠ runtime verification')}</span></div></div>
 <div class="table-wrap"><table><thead><tr><th>{('项目' if zh else 'Project')}</th><th>{('类别' if zh else 'Type')}</th><th>{('用途' if zh else 'Use')}</th><th class="platform-head">{('平台' if zh else 'Platform')}</th><th>{('证据与日期' if zh else 'Evidence / reviewed')}</th></tr></thead><tbody>{rows}</tbody></table></div>
 <div class="empty" id="empty-state" hidden><h3>{('没有匹配的项目。' if zh else 'No projects match yet.')}</h3><p>{('换一个关键词，或重置筛选条件。' if zh else 'Try a different search or reset the filters.')}</p></div><noscript><p class="no-script">{('所有项目与链接均可直接浏览；搜索和筛选需要 JavaScript。' if zh else 'Every project and link is available here. Search and filtering use JavaScript.')}</p></noscript></section>
 <section class="note-strip" aria-label="{('目录说明' if zh else 'Reading the directory')}"><article><h3>{('作品、环境与评测资料。' if zh else 'Software, environments, and benchmarks.')}</h3><p>{('作品展示 AI 参与开发的成果；环境支持交互任务；基准和数据集提供评测材料。资源类型与开发方式分别标注。' if zh else 'Showcases document software made with AI. Environments support interaction; benchmarks and datasets support evaluation. Resource types and development provenance are labeled separately.')}</p></article><article><h3>{('从每条记录回到证据。' if zh else 'Follow every entry back to its evidence.')}</h3><p>{('我们记录原始链接、核查日期和已知限制。演示和代码由上游项目提供。' if zh else 'We record original links, review dates, and known limits. Demos and code belong to their upstream projects.')} <a href="{lang_path(language, '/about/')}">{('了解收录方法' if zh else 'Read our method')} ↗</a></p></article></section>'''
@@ -302,7 +302,7 @@ def build():
         else: child.unlink()
     for child in (ROOT / 'static').iterdir():
         if child.is_file(): shutil.copy2(child, OUT / child.name)
-    revision = hashlib.sha256((OUT / 'styles.css').read_bytes() + (OUT / 'app.js').read_bytes() + (OUT / 'registry.js').read_bytes()).hexdigest()[:12]
+    revision = hashlib.sha256(b''.join((OUT / name).read_bytes() for name in ('styles.css', 'search.js', 'app.js', 'registry.js'))).hexdigest()[:12]
     pages = {}
     for language in ('en', 'zh'):
         for category in (None, *TYPES):

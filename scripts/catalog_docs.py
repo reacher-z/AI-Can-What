@@ -44,7 +44,8 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
             text = f'# {title}\n\n[{("全部应用资源" if zh else "All app resources")}](../{filename}) · [{("网站索引" if zh else "Website index")}]({url})\n\n{intro}\n\n' + table(records, language) + '\n'
             (directory / filename).write_text(text, encoding='utf-8')
     counts = Counter(e['content_type'] for e in entries)
-    summary = f'**{len(entries)} catalog entries · {len(papers)} referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.\n\n## Browse\n\n| Category | Entries | Repository index |\n| --- | --- | --- |\n'
+    paper_only_count = sum(paper.get('catalog_status') == 'paper-only' for paper in papers)
+    summary = f'**{len(entries)} catalog entries · {len(papers)} research papers.** These counts are not additive. {paper_only_count} papers have no corresponding reviewed artifact entry; their release-status notes stay in the bibliography. Every catalog entry links evidence and records known limits.\n\n## Browse\n\n| Category | Entries | Repository index |\n| --- | --- | --- |\n'
     for category, labels in types.items():
         slug = {'game': 'games', 'website': 'websites', 'app': 'apps'}[category]
         summary += f'| [{labels[0]}]({origin}/{slug}/) | {counts[category]} | [Browse](catalog/{slug}/README.md) |\n'
@@ -71,7 +72,7 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
 
 **[访问网站]({origin}/zh/) · [English](README.md) · [收录方法]({origin}/zh/about/)**
 
-当前有 **{len(entries)} 条目录记录**，关联 **{len(papers)} 篇原始论文**。论文与项目记录有对应关系，数量不能相加。来源核查不代表已经运行或复现实验。
+当前有 **{len(entries)} 条目录记录、{len(papers)} 篇原始论文**，两类数量不能相加。其中 {paper_only_count} 篇尚无对应的已核查产物条目，文献页单独说明发布状态。来源核查不代表已经运行或复现实验。
 
 | 分类 | 条目 | 仓库索引 |
 | --- | --- | --- |
@@ -97,6 +98,7 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
 python3 scripts/build.py
 python3 scripts/validate.py
 node --check static/app.js
+node --check static/search.js
 node --check static/registry.js
 python3 -m unittest discover -s tests
 ```

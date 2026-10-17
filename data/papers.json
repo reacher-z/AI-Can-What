@@ -3002,6 +3002,432 @@
       "description_zh": "提出需执行代码并跨文件理解背景的金融数据分析问题，通过规范化后的最终答案比对评分。",
       "source_url": "https://arxiv.org/abs/2506.23719",
       "date_note": "published_at is the first arXiv submission date; title and author order follow the current arXiv record. Paper revisions and dataset versions are recorded separately."
+    },
+    {
+      "id": "2607.03525",
+      "title": "GameEngineBench: Evaluating Coding Agents on Real C++ Runtime Environments",
+      "authors": [
+        "Brian La",
+        "Sejoon Chang",
+        "Ben Kim",
+        "Junyoung Bae",
+        "Aamish Ahmad Beg",
+        "Sei Chang",
+        "Gonzalo Gonzalez-Pumariega",
+        "Kanav Goyal"
+      ],
+      "published_at": "2026-07-03",
+      "arxiv_url": "https://arxiv.org/abs/2607.03525",
+      "project_ids": [],
+      "description_en": "Introduces scoped C++ modification tasks inside Unreal Engine projects, evaluating compilation and runtime behavior across game-engine subsystems.",
+      "description_zh": "提出 Unreal Engine 项目中限定范围的 C++ 修改任务，评估不同游戏引擎子系统中的编译和运行行为。",
+      "source_url": "https://arxiv.org/abs/2607.03525",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred venue date.",
+      "catalog_status": "paper-only",
+      "reviewed_at": "2026-10-16",
+      "artifact_note_en": "The paper and author research page are public. No reviewable task/evaluator release was established: the inspected repository URL returned404. This paper record does not imply that the benchmark can be run from public artifacts.",
+      "artifact_note_zh": "论文及作者研究页已公开，但尚未确认可核查的任务与评分器发布；所检查的仓库地址返回404。本条论文记录不表示已能通过公开产物运行基准。",
+      "artifact_source_urls": [
+        "https://www.nitrode.com/research",
+        "https://github.com/Nitrode-Research/GameEngineBench"
+      ]
+    },
+    {
+      "id": "2608.21833",
+      "title": "GameXpert-Bench: How Far Are Coding Agents from Expert Game Development?",
+      "authors": [
+        "Kun Chen",
+        "Haorong Hong",
+        "Peizhong Gao",
+        "Jianfeng Lin",
+        "Tongxu Luo",
+        "Yuxuan Xie",
+        "Chenxu Liu",
+        "Jieling He",
+        "Zhongyuan Liu",
+        "Zeno Zeng"
+      ],
+      "published_at": "2026-08-22",
+      "arxiv_url": "https://arxiv.org/abs/2608.21833",
+      "project_ids": [],
+      "description_en": "Introduces separate tracks for game generation, defect repair and multi-turn optimization, combining interaction, behavioral tests and regression checks.",
+      "description_zh": "提出游戏生成、缺陷修复和多轮优化三条评测轨道，结合交互、行为测试及回归检查。",
+      "source_url": "https://arxiv.org/abs/2608.21833",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred venue date.",
+      "catalog_status": "paper-only",
+      "reviewed_at": "2026-10-16",
+      "artifact_note_en": "The repository currently contains a README and project-site scaffold. It says benchmark data, evaluation code and model artifacts are still being prepared; the website template license does not establish benchmark reuse terms.",
+      "artifact_note_zh": "仓库目前只有 README 和项目网站骨架，说明基准数据、评估代码和模型产物仍在准备中；网站模板许可不代表基准复用条款。",
+      "artifact_source_urls": [
+        "https://github.com/Kwen-Chen/GameXpert-Bench"
+      ]
+    },
+    {
+      "id": "2604.18394",
+      "title": "OpenGame: Open Agentic Coding for Games",
+      "authors": [
+        "Yilei Jiang",
+        "Jinyuan Hu",
+        "Qianyin Xiao",
+        "Yaozhi Zheng",
+        "Ruize Ma",
+        "Kaituo Feng",
+        "Jiaming Han",
+        "Tianshuo Peng",
+        "Kaixuan Fan",
+        "Manyuan Zhang",
+        "Xiangyu Yue"
+      ],
+      "published_at": "2026-04-20",
+      "arxiv_url": "https://arxiv.org/abs/2604.18394",
+      "project_ids": [],
+      "description_en": "Introduces an agentic web-game generation framework with reusable templates and debugging knowledge, and describes a benchmark based on build, visual and intent criteria.",
+      "description_zh": "提出使用可复用模板与调试知识的网页游戏生成框架，并描述基于构建、视觉和意图标准的评测基准。",
+      "source_url": "https://arxiv.org/abs/2604.18394",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred venue date.",
+      "catalog_status": "paper-only",
+      "reviewed_at": "2026-10-16",
+      "artifact_note_en": "The game-generation framework and example archives are public, but the README still describes the OpenGame-Bench evaluation pipeline as forthcoming. This record preserves the research without claiming a complete public evaluator.",
+      "artifact_note_zh": "游戏生成框架和示例归档已公开，但 README 仍将 OpenGame-Bench 评估流程列为待发布。本记录保留研究文献，不声称完整评分器已经公开。",
+      "artifact_source_urls": [
+        "https://github.com/leigest519/OpenGame"
+      ]
+    },
+    {
+      "id": "2505.19897",
+      "title": "ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic Scientific Workflows",
+      "authors": [
+        "Qiushi Sun",
+        "Zhoumianze Liu",
+        "Chang Ma",
+        "Zichen Ding",
+        "Fangzhi Xu",
+        "Zhangyue Yin",
+        "Haiteng Zhao",
+        "Zhenyu Wu",
+        "Kanzhi Cheng",
+        "Zhaoyang Liu",
+        "Jianing Wang",
+        "Qintong Li",
+        "Xiangru Tang",
+        "Tianbao Xie",
+        "Xiachong Feng",
+        "Xiang Li",
+        "Ben Kao",
+        "Wenhai Wang",
+        "Biqing Qi",
+        "Lingpeng Kong",
+        "Zhiyong Wu"
+      ],
+      "published_at": "2025-05-26",
+      "project_ids": [
+        "scienceboard"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2505.19897",
+      "source_url": "https://arxiv.org/abs/2505.19897",
+      "description_en": "Introduces scientific desktop workflows and application-aware evaluation for multimodal computer-use agents, spanning scientific software and research-document tasks.",
+      "description_zh": "提出面向多模态计算机操作 Agent 的科学桌面工作流及应用状态评测，覆盖科学软件和科研文档任务。",
+      "date_note": "published_at is the first arXiv submission date; title and ordered authors follow the current arXiv record, not an inferred venue or repository-release date."
+    },
+    {
+      "id": "2609.16251",
+      "title": "CADWorld: Computer-Use Benchmark for Long-Horizon Computer-Aided Design",
+      "authors": [
+        "Zihan Dong",
+        "Yuanzhe Liu",
+        "Zhiyuan Ma",
+        "Qishi Zhan",
+        "Dehan Kong",
+        "Guohao Li",
+        "Kaixin Li"
+      ],
+      "published_at": "2026-09-14",
+      "project_ids": [
+        "cadworld"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.16251",
+      "source_url": "https://arxiv.org/abs/2609.16251",
+      "description_en": "Defines long-horizon FreeCAD tasks and executable checks over saved projects, covering geometry, constraints and downstream engineering outputs.",
+      "description_zh": "定义 FreeCAD 长流程任务，并对保存的项目执行检查，覆盖几何、约束及后续工程输出。",
+      "date_note": "published_at is the first arXiv submission date; title and ordered authors follow the current arXiv record, not an inferred venue or repository-release date."
+    },
+    {
+      "id": "2609.37686",
+      "title": "EngiWorld: What Can Frontier Agents Deliver in Professional Engineering Environments?",
+      "authors": [
+        "Hongcheng Gao",
+        "Hailong Qu",
+        "Yu Lei",
+        "Henghui Sun",
+        "Haoyang Li",
+        "Yipeng Wei",
+        "Naihao Xue",
+        "Xiaohan Yu",
+        "Zhuo Tao",
+        "Yihe Zang",
+        "Yajiao Wang",
+        "Jingyi Tang",
+        "Yi Li",
+        "Jingjing Zhou",
+        "Jie Luo",
+        "Bohan Zeng",
+        "Chengyu Shen",
+        "Hao Jiang",
+        "Chong Chen",
+        "Bowen Qu",
+        "Olive Huang",
+        "Zeqiang Wang"
+      ],
+      "published_at": "2026-09-29",
+      "project_ids": [
+        "engiworld"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.37686",
+      "source_url": "https://arxiv.org/abs/2609.37686",
+      "description_en": "Introduces engineering tasks across multiple software domains and GUI/CLI interfaces, with artifact-based checks and a separately identified main-experiment subset.",
+      "description_zh": "提出覆盖多类工程软件及 GUI／CLI 接口的任务，基于工程文件判分，并明确区分主要实验使用的任务子集。",
+      "date_note": "published_at is the first arXiv submission date; title and ordered authors follow the current arXiv record, not an inferred venue or repository-release date."
+    },
+    {
+      "id": "2504.01786",
+      "title": "BlenderGym: Benchmarking Foundational Model Systems for Graphics Editing",
+      "authors": [
+        "Yunqi Gu",
+        "Ian Huang",
+        "Jihyeon Je",
+        "Guandao Yang",
+        "Leonidas Guibas"
+      ],
+      "published_at": "2025-04-02",
+      "project_ids": [
+        "blendergym"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2504.01786",
+      "source_url": "https://arxiv.org/abs/2504.01786",
+      "description_en": "Evaluates visual model systems on code-based Blender scene reconstruction across five graphics-editing categories, including the allocation of generation and verification effort.",
+      "description_zh": "在五类图形编辑任务中评估视觉模型系统通过代码重建 Blender 场景的能力，并研究生成与验证计算量的分配。",
+      "date_note": "published_at is the first arXiv submission date; title and ordered authors follow the current arXiv record, not an inferred venue or repository-release date."
+    },
+    {
+      "id": "2407.19056",
+      "title": "OfficeBench: Benchmarking Language Agents across Multiple Applications for Office Automation",
+      "authors": [
+        "Zilong Wang",
+        "Yuedong Cui",
+        "Li Zhong",
+        "Zimin Zhang",
+        "Da Yin",
+        "Bill Yuchen Lin",
+        "Jingbo Shang"
+      ],
+      "published_at": "2024-07-26",
+      "project_ids": [
+        "officebench"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2407.19056",
+      "source_url": "https://arxiv.org/abs/2407.19056",
+      "description_en": "Studies planning and application switching in office workflows through a structured operation space and task-specific document and execution checks.",
+      "description_zh": "通过结构化操作空间及任务专属文档、执行检查，研究办公工作流中的规划和应用切换。",
+      "date_note": "published_at is the first arXiv submission date; title and ordered authors follow the current arXiv record, not an inferred venue or repository-release date."
+    },
+    {
+      "id": "2406.14991",
+      "title": "SpreadsheetBench: Towards Challenging Real World Spreadsheet Manipulation",
+      "authors": [
+        "Zeyao Ma",
+        "Bohan Zhang",
+        "Jing Zhang",
+        "Jifan Yu",
+        "Xiaokang Zhang",
+        "Xiaohan Zhang",
+        "Sijia Luo",
+        "Xi Wang",
+        "Jie Tang"
+      ],
+      "published_at": "2024-06-21",
+      "project_ids": [
+        "spreadsheetbench"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2406.14991",
+      "source_url": "https://arxiv.org/abs/2406.14991",
+      "description_en": "Builds spreadsheet-manipulation tasks from real user requests and evaluates solutions against multiple workbook test cases per instruction.",
+      "description_zh": "从真实用户请求构建电子表格操作任务，并通过每条指令对应的多个工作簿测试用例评估解法。",
+      "date_note": "published_at is the first arXiv submission date; title and ordered authors follow the current arXiv record, not an inferred venue or repository-release date."
+    },
+    {
+      "id": "2606.29955",
+      "title": "SpreadsheetBench 2: Evaluating Agents on End-to-End Business Spreadsheet Workflows",
+      "authors": [
+        "Jian Zhu",
+        "Yuzheng Zhang",
+        "Zeyao Ma",
+        "Bohan Zhang",
+        "Armin Schoepf",
+        "Daniel Woloch",
+        "Peter Yiliu Wang",
+        "Guangyu Robert Yang",
+        "Samuel Jacob",
+        "Siddharth Nagisetty",
+        "Abhiram Chundru",
+        "Jean Lin",
+        "Spencer Mateega",
+        "Jing Zhang"
+      ],
+      "published_at": "2026-06-29",
+      "project_ids": [
+        "spreadsheetbench-2"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.29955",
+      "source_url": "https://arxiv.org/abs/2606.29955",
+      "description_en": "Introduces end-to-end spreadsheet generation, debugging and visualization workflows with complex cross-sheet dependencies and separate artifact-evaluation paths.",
+      "description_zh": "提出端到端电子表格生成、调试及可视化工作流，覆盖复杂跨表依赖并采用不同文件评测路径。",
+      "date_note": "published_at is the first arXiv submission date; title and ordered authors follow the current arXiv record, not an inferred venue or repository-release date."
+    },
+    {
+      "id": "2510.24411",
+      "source_type": "arxiv",
+      "title": "OS-Sentinel: Towards Safety-Enhanced Mobile GUI Agents via Hybrid Validation in Realistic Workflows",
+      "authors": [
+        "Qiushi Sun",
+        "Mukai Li",
+        "Zhoumianze Liu",
+        "Zhihui Xie",
+        "Fangzhi Xu",
+        "Zhangyue Yin",
+        "Kanzhi Cheng",
+        "Zehao Li",
+        "Zichen Ding",
+        "Qi Liu",
+        "Zhiyong Wu",
+        "Zhuosheng Zhang",
+        "Ben Kao",
+        "Lingpeng Kong"
+      ],
+      "published_at": "2025-10-28",
+      "arxiv_url": "https://arxiv.org/abs/2510.24411",
+      "source_url": "https://arxiv.org/abs/2510.24411",
+      "project_ids": [
+        "os-sentinel"
+      ],
+      "date_note": "Date is first arXiv submission; title and ordered authors follow current arXiv record. Artifact revisions are separate.",
+      "description_en": "Presents a mobile safety detector combining explicit state checks with contextual model judgments, alongside an Android research environment and annotated risk trajectories.",
+      "description_zh": "提出结合显式状态检查与上下文模型评审的移动安全检测器，并配套 Android 研究环境及风险轨迹标注。"
+    },
+    {
+      "id": "2604.08523",
+      "source_type": "arxiv",
+      "title": "ClawBench: Can AI Agents Complete Everyday Online Tasks?",
+      "authors": [
+        "Yuxuan Zhang",
+        "Yubo Wang",
+        "Yipeng Zhu",
+        "Penghui Du",
+        "Junwen Miao",
+        "Xuan Lu",
+        "Zhuofeng Li",
+        "Xingwei Qu",
+        "Zhengkang Guo",
+        "Yuanzhe Shen",
+        "Dingjie Song",
+        "Han Zhou",
+        "Tuney Zheng",
+        "Xian Wu",
+        "Hao Yu",
+        "Songcheng Cai",
+        "Yi Lu",
+        "Yunzhuo Hao",
+        "Minyi Lei",
+        "Liang Chen",
+        "Kai Zou",
+        "Huifeng Yin",
+        "Wendong Xu",
+        "Dongfu Jiang",
+        "Ping Nie",
+        "Jiaheng Liu",
+        "Wenhu Chen",
+        "Kelsey R. Allen"
+      ],
+      "published_at": "2026-04-09",
+      "arxiv_url": "https://arxiv.org/abs/2604.08523",
+      "source_url": "https://arxiv.org/abs/2604.08523",
+      "project_ids": [
+        "clawbench"
+      ],
+      "date_note": "Date is first arXiv submission; title and ordered authors follow current arXiv record. Artifact revisions are separate.",
+      "description_en": "Introduces browser-agent evaluation on everyday production-site workflows, with recorded interaction evidence and task-specific submission interception.",
+      "description_zh": "提出在日常生产网站流程上评测浏览器 Agent，并记录交互证据及按任务配置提交拦截。"
+    },
+    {
+      "id": "2506.21506",
+      "source_type": "arxiv",
+      "title": "Mind2Web 2: Evaluating Agentic Search with Agent-as-a-Judge",
+      "authors": [
+        "Boyu Gou",
+        "Zanming Huang",
+        "Yuting Ning",
+        "Yu Gu",
+        "Michael Lin",
+        "Weijian Qi",
+        "Andrei Kopanev",
+        "Botao Yu",
+        "Bernal Jiménez Gutiérrez",
+        "Yiheng Shu",
+        "Chan Hee Song",
+        "Jiaman Wu",
+        "Shijie Chen",
+        "Hanane Nour Moussa",
+        "Tianshu Zhang",
+        "Jian Xie",
+        "Yifei Li",
+        "Tianci Xue",
+        "Zeyi Liao",
+        "Kai Zhang",
+        "Boyuan Zheng",
+        "Zhaowei Cai",
+        "Viktor Rozgic",
+        "Morteza Ziyadi",
+        "Huan Sun",
+        "Yu Su"
+      ],
+      "published_at": "2025-06-26",
+      "arxiv_url": "https://arxiv.org/abs/2506.21506",
+      "source_url": "https://arxiv.org/abs/2506.21506",
+      "project_ids": [
+        "mind2web-2"
+      ],
+      "date_note": "Date is first arXiv submission; title and ordered authors follow current arXiv record. Artifact revisions are separate.",
+      "description_en": "Introduces long-horizon agentic-search tasks and task-specific judge agents that check answer coverage and attribution against web evidence.",
+      "description_zh": "提出长流程 Agent 搜索任务及任务专用评审 Agent，结合网页证据检查回答覆盖度和来源归属。"
+    },
+    {
+      "id": "webarena-verified-openreview",
+      "source_type": "openreview",
+      "title": "WebArena Verified: Reliable Evaluation for Web Agents",
+      "authors": [
+        "Amine El hattami",
+        "Megh Thakkar",
+        "Nicolas Chapados",
+        "Christopher Pal"
+      ],
+      "published_at": null,
+      "publication_year": 2025,
+      "url": "https://openreview.net/forum?id=94tlGxmqkN",
+      "source_url": "https://openreview.net/forum?id=94tlGxmqkN",
+      "project_ids": [
+        "webarena-verified"
+      ],
+      "catalog_status": "linked-project",
+      "description_en": "Revisits WebArena task definitions and evaluation, introducing deterministic structured comparisons and a separately defined difficult-task subset.",
+      "description_zh": "重新核查 WebArena 任务定义及评分流程，引入确定性的结构比较和单独定义的困难任务子集。",
+      "venue": "Workshop on Scaling Environments for Agents, NeurIPS 2025",
+      "date_note_en": "Year verified from the author citation; the original OpenReview posting day remains unverified.",
+      "date_note_zh": "年份由作者引用确认；原始 OpenReview 发布日仍未核实。",
+      "metadata_evidence": [
+        {
+          "url": "https://github.com/ServiceNow/webarena-verified/blob/6473f72db5dcefc97b5725b59e734504edc28a21/README.md",
+          "supports": "Author-supplied ordered authors, title, 2025 workshop venue and exact OpenReview URL; page/API verification prevented posting-date inspection."
+        }
+      ]
     }
   ]
 }

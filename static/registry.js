@@ -8,6 +8,7 @@
   const reset = document.querySelector('#registry-reset');
   const empty = document.querySelector('#registry-empty');
   const rows = [...document.querySelectorAll('[data-registry]')];
+  const textByRow = new Map(rows.map(row => [row, AICanWhatSearch.normalize(row.dataset.search)]));
   const zh = document.documentElement.lang === 'zh-CN';
   const parameters = new URL(location.href).searchParams;
   search.value = parameters.get('q') || '';
@@ -16,10 +17,11 @@
     if ([...control.options].some(option => option.value === value)) control.value = value;
   }
   function update() {
-    const query = search.value.trim().toLocaleLowerCase();
+    const query = search.value.trim();
+    const terms = AICanWhatSearch.terms(query);
     let visible = 0;
     for (const row of rows) {
-      const matches = (!query || row.dataset.search.includes(query)) &&
+      const matches = terms.every(term => textByRow.get(row).includes(term)) &&
         (!source.value || source.value === row.dataset.source) &&
         (!notes.value || notes.value === row.dataset.notes) &&
         (!version.value || version.value === row.dataset.versionStatus);

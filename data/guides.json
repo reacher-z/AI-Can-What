@@ -119,6 +119,30 @@
               "fit_zh": "查看有预发布分发说明的 Android 终端应用。"
             }
           ]
+        },
+        {
+          "id": "creative",
+          "title_en": "Creative desktop applications",
+          "title_zh": "创作类桌面应用",
+          "intro_en": "These alpha applications have creator-reported LLM assistance, public source and desktop release artifacts. Artifact availability does not establish professional file fidelity or runtime stability.",
+          "intro_zh": "这些 Alpha 应用有作者自述的 LLM 辅助开发证据、公开源码和桌面安装包。产物可下载并不代表专业文件兼容性或运行稳定性已经验证。",
+          "choices": [
+            {
+              "project_id": "photocraft",
+              "fit_en": "Inspect layered image editing with explicitly documented PSD and workflow limits.",
+              "fit_zh": "查看分层图像编辑实现及明确记录的 PSD 和工作流限制。"
+            },
+            {
+              "project_id": "vectorcraft",
+              "fit_en": "Study vector editing and cross-format exchange with incomplete Illustrator and Affinity compatibility.",
+              "fit_zh": "研究矢量编辑及格式交换，留意尚不完整的 Illustrator 和 Affinity 兼容性。"
+            },
+            {
+              "project_id": "filmcraft",
+              "fit_en": "Inspect a native video-editor implementation and its stated alpha-stage workflow gaps.",
+              "fit_zh": "查看原生视频编辑器实现及其公开说明的 Alpha 阶段工作流缺口。"
+            }
+          ]
         }
       ],
       "browse": [
@@ -199,6 +223,11 @@
               "fit_zh": "在自行部署的网站上通过结果检查评估多步操作。"
             },
             {
+              "project_id": "webarena-verified",
+              "fit_en": "Use the separately maintained evaluator and trace artifacts for the same WebArena task family; do not add its task counts to the original.",
+              "fit_zh": "使用单独维护的评分器及轨迹产物评估同一 WebArena 任务族；不要与原始任务数相加。"
+            },
+            {
               "project_id": "visualwebarena",
               "fit_en": "Add image-dependent reasoning to controlled website tasks.",
               "fit_zh": "在可控网站任务中加入依赖图像的推理。"
@@ -226,6 +255,21 @@
               "project_id": "online-mind2web",
               "fit_en": "Evaluate current-site task completion with recorded action and screenshot evidence.",
               "fit_zh": "结合动作及截图证据评估真实网站上的任务完成。"
+            },
+            {
+              "project_id": "clawbench",
+              "fit_en": "Study live workflows with request and trajectory evidence; task-specific interception does not block every external action.",
+              "fit_zh": "结合请求和轨迹证据研究在线流程；任务级拦截不会阻止所有外部操作。"
+            },
+            {
+              "project_id": "mind2web-2",
+              "fit_en": "Evaluate long-horizon search and cited answers with judge agents; the full task/evaluator distribution is gated.",
+              "fit_zh": "用评审 Agent 评估长流程搜索及带引用回答；完整任务和评分器分发有访问门槛。"
+            },
+            {
+              "project_id": "webbench",
+              "fit_en": "Find versioned live-site instructions while supplying your own agent, authorized accounts and outcome assessment.",
+              "fit_zh": "查找有版本记录的在线网站指令，并自行准备 Agent、获准使用的账号及结果评估。"
             }
           ]
         },
@@ -338,6 +382,30 @@
           ]
         },
         {
+          "id": "professional",
+          "title_en": "Scientific and engineering desktops",
+          "title_zh": "科学与工程桌面任务",
+          "intro_en": "Read task coverage separately from obtainable VM images. Commercial application licensing and application-specific artifact checks can determine which experiments are possible.",
+          "intro_zh": "分别检查任务覆盖和实际可获取的虚拟机镜像。商业软件许可及应用专用产物检查会影响哪些实验可以开展。",
+          "choices": [
+            {
+              "project_id": "scienceboard",
+              "fit_en": "Study scientific workflows using the public original VM; the newer prebuilt Docker image remains a private review artifact.",
+              "fit_zh": "通过公开的原始虚拟机研究科学工作流；较新的预构建 Docker 镜像仍属于私有评审产物。"
+            },
+            {
+              "project_id": "cadworld",
+              "fit_en": "Evaluate GUI-driven FreeCAD work through saved artifacts; CAM tasks need a host FreeCAD console.",
+              "fit_zh": "通过保存的产物评估 GUI 驱动的 FreeCAD 操作；CAM 任务需要宿主 FreeCAD 控制台。"
+            },
+            {
+              "project_id": "engiworld",
+              "fit_en": "Explore engineering task definitions while accounting for the narrower set of public Ubuntu software images.",
+              "fit_zh": "研究工程任务定义，同时考虑公开 Ubuntu 软件镜像覆盖范围更小。"
+            }
+          ]
+        },
+        {
           "id": "mobile",
           "title_en": "Executable mobile workflows",
           "title_zh": "可执行移动流程",
@@ -363,6 +431,11 @@
               "project_id": "iosworld",
               "fit_en": "Evaluate tasks across seeded research apps in an iOS simulator.",
               "fit_zh": "在 iOS 模拟器中评估预置研究应用的跨应用任务。"
+            },
+            {
+              "project_id": "os-sentinel",
+              "fit_en": "Study mobile action and trajectory safety detection; APK setup gaps and license conflicts are recorded separately from safety claims.",
+              "fit_zh": "研究移动操作和轨迹的安全检测；APK 配置缺口及许可冲突与安全性声明分别记录。"
             }
           ]
         },
@@ -692,6 +765,30 @@
               "project_id": "dabstep",
               "fit_en": "Study multi-file business-data reasoning with a public agent baseline and answer-scoring protocol.",
               "fit_zh": "结合公开 Agent 基线和答案评分协议，研究多文件业务数据推理。"
+            }
+          ]
+        },
+        {
+          "id": "office",
+          "title_en": "Spreadsheet artifacts and office tools",
+          "title_zh": "电子表格产物与办公工具",
+          "intro_en": "File correctness and coordinated tool use are different from native GUI navigation. Preserve workbook recalculation, scoring backend and whether email/calendar operations are simulations.",
+          "intro_zh": "文件正确性和工具协作不同于原生 GUI 导航。应记录工作簿重算、评分后端，以及邮件和日历操作是否为模拟。",
+          "choices": [
+            {
+              "project_id": "spreadsheetbench",
+              "fit_en": "Evaluate spreadsheet edits across workbook test cases; Verified is a subset of the original release.",
+              "fit_zh": "通过工作簿测试案例评估表格编辑；Verified 是原始发布的子集。"
+            },
+            {
+              "project_id": "spreadsheetbench-2",
+              "fit_en": "Evaluate distinct business spreadsheet workflows; VLM chart grading accepts PNGs directly, while XLSX chart extraction needs Windows Excel/WPS COM.",
+              "fit_zh": "评估独立的商业表格工作流；VLM 图表评分可直接接收 PNG，XLSX 图表提取则需要 Windows Excel/WPS COM。"
+            },
+            {
+              "project_id": "officebench",
+              "fit_en": "Study coordinated structured tools over local documents and simulated email/calendar files, rather than native Office GUI sessions.",
+              "fit_zh": "研究本地文档及模拟邮件／日历文件上的结构化工具协作，区别于原生 Office GUI 会话。"
             }
           ]
         },

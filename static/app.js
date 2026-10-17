@@ -2,6 +2,7 @@
   const search = document.querySelector('#catalog-search');
   if (!search) return;
   const rows = [...document.querySelectorAll('[data-project]')];
+  const textByRow = new Map(rows.map(row => [row, AICanWhatSearch.normalize(row.dataset.search)]));
   const use = document.querySelector('#use-filter');
   const kind = document.querySelector('#kind-filter');
   const platform = document.querySelector('#platform-filter');
@@ -17,17 +18,18 @@
     if ([...element.options].some(option => option.value === value)) element.value = value;
   }
   function update() {
-    const query = search.value.trim().toLocaleLowerCase();
+    const query = search.value.trim();
+    const terms = AICanWhatSearch.terms(query);
     let visible = 0;
     for (const row of rows) {
-      const matches = (!query || row.dataset.search.includes(query)) &&
+      const matches = terms.every(term => textByRow.get(row).includes(term)) &&
         (!kind?.value || row.dataset.kind === kind.value) &&
         (!use.value || row.dataset.uses.split(' ').includes(use.value)) &&
         (!platform?.value || row.dataset.platforms.split(' ').includes(platform.value));
       row.hidden = !matches;
       if (matches) visible++;
     }
-    count.textContent = zh ? `显示 ${visible} / ${rows.length} 个项目` : `${visible} of ${rows.length} projects`;
+    count.textContent = zh ? `显示 ${visible} / ${rows.length} 条记录` : `${visible} of ${rows.length} entries`;
     empty.hidden = visible !== 0;
     reset.hidden = !query && !use.value && !platform?.value && !kind?.value;
     const next = new URL(location.href);

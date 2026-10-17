@@ -39,6 +39,16 @@ Check the application’s actual distribution target. A browser client, a native
 | [RhoUnpacker](https://aicanwhat.com/projects/rhounpacker/) · [Source](https://github.com/w1426421352/RhoUnpacker) | Examine an AI-generated Windows CLI layer around a separately authored library. | The AI-generated part is the command-line layer; the core KartLibrary unpacking library is human-authored. The documented Native AOT target is Windows x64, and the project is GPLv3. |
 | [Shelly](https://aicanwhat.com/projects/shelly-android/) · [Source](https://github.com/RYOITABASHI/Shelly) | Inspect an Android terminal application with a documented prerelease distribution. | The maintainer calls it prerelease software and limits unattended-cycle verification to one Galaxy Z Fold6 observation. The rolling android-latest release is the documented APK source; its reviewed manifest identifies version 8.1.1. Repository code is GPLv3. |
 
+## Creative desktop applications
+
+These alpha applications have creator-reported LLM assistance, public source and desktop release artifacts. Artifact availability does not establish professional file fidelity or runtime stability.
+
+| Project and evidence | Use it to study | Setup and limits |
+| --- | --- | --- |
+| [PhotoCraft](https://aicanwhat.com/projects/photocraft/) · [Source](https://getartcraft.com/apps/photocraft) | Inspect layered image editing with explicitly documented PSD and workflow limits. | Early alpha. The maintainer says it is not ready to replace Photoshop in daily professional work; typography, plug-ins and other workflows remain incomplete. Application-level PSD saves are not byte-identical round trips, even when rendering matches. AVIF reading and JPEG XL are unavailable in the reviewed source. No editing or file-fidelity tests were run in this review. |
+| [VectorCraft](https://aicanwhat.com/projects/vectorcraft/) · [Source](https://getartcraft.com/apps/vectorcraft) | Study vector editing and cross-format exchange with incomplete Illustrator and Affinity compatibility. | Alpha. Reliable exchange of Illustrator editing data remains incomplete, Affinity files are read-only, and raster effects, 3D/material workflows and vertical CJK composition have gaps. The upstream readiness percentages are self-assessments and are not copied as validation. No native interaction or cross-application round trip was tested here. |
+| [FilmCraft](https://aicanwhat.com/projects/filmcraft/) · [Source](https://getartcraft.com/apps/filmcraft) | Inspect a native video-editor implementation and its stated alpha-stage workflow gaps. | Alpha. Premiere .prproj import and VST3/Audio Units/OpenFX hosting are absent. Codec and hardware paths vary: H.264 is the documented software delivery export, while H.265 needs supported hardware. Some effects/export rendering remain CPU-bound; the authors report less testing on Windows/Linux than macOS. No playback, export, codec-conformance or hardware test was performed here. |
+
 ## Selection questions
 
 ### Does “AI-built” mean every asset and dependency was generated?

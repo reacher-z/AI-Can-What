@@ -2,7 +2,7 @@
 
 [返回目录](../../README.zh-CN.md)
 
-80 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
+94 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
 
 按平台浏览：[Web](web/README.zh-CN.md) · [macOS](macos/README.zh-CN.md) · [Windows](windows/README.zh-CN.md) · [Linux](linux/README.zh-CN.md) · [iOS](ios/README.zh-CN.md) · [Android](android/README.zh-CN.md)
 
@@ -31,6 +31,8 @@
 | [Better Stickies](https://aicanwhat.com/zh/projects/better-stickies/) | AI 软件作品 | 作品展示 | [Source](https://betterstickies.com/) |
 | [BIRD-Interact](https://aicanwhat.com/zh/projects/bird-interact/) | 环境与评测 | 评测 | [Source](https://bird-interact.github.io/) |
 | [BixBench](https://aicanwhat.com/zh/projects/bixbench/) | 环境与评测 | 评测 | [Source](https://github.com/Future-House/BixBench) |
+| [BlenderGym](https://aicanwhat.com/zh/projects/blendergym/) | 评测套件 | 评测 | [Source](https://github.com/richard-guyunqi/BlenderGym-Open) |
+| [CADWorld](https://aicanwhat.com/zh/projects/cadworld/) | 环境与评测 | 评测 | [Source](https://github.com/Zdong104/CADWORLD) |
 | [Claude Code](https://aicanwhat.com/zh/projects/claude-code/) | AI 软件作品 | 作品展示 | [Source](https://github.com/anthropics/claude-code) |
 | [Claude&#x27;s C Compiler](https://aicanwhat.com/zh/projects/claudes-c-compiler/) | AI 软件作品 | 作品展示 | [Source](https://www.anthropic.com/engineering/building-c-compiler) |
 | [Context](https://aicanwhat.com/zh/projects/context-mcp/) | AI 软件作品 | 作品展示 | [Source](https://github.com/indragiek/Context) |
@@ -38,7 +40,10 @@
 | [DABstep](https://aicanwhat.com/zh/projects/dabstep/) | 数据集与评测 | 评测 | [Source](https://huggingface.co/datasets/adyen/DABstep) |
 | [Davit](https://aicanwhat.com/zh/projects/davit/) | AI 软件作品 | 作品展示 | [Source](https://davit.app/) |
 | [Dog-e-dex](https://aicanwhat.com/zh/projects/dog-e-dex/) | AI 软件作品 | 作品展示 | [Source](https://apps.apple.com/us/app/dog-e-dex/id6741032284) |
+| [EffectCraft](https://aicanwhat.com/zh/projects/effectcraft/) | AI 软件作品 | 作品展示 | [Source](https://getartcraft.com/apps/effectcraft) |
+| [EngiWorld](https://aicanwhat.com/zh/projects/engiworld/) | 环境与评测 | 评测 | [Source](https://github.com/Hongcheng-Gao/EngiWorld) |
 | [FastRender](https://aicanwhat.com/zh/projects/fastrender/) | AI 软件作品 | 作品展示 | [Source](https://github.com/wilsonzlin/fastrender) |
+| [FilmCraft](https://aicanwhat.com/zh/projects/filmcraft/) | AI 软件作品 | 作品展示 | [Source](https://getartcraft.com/apps/filmcraft) |
 | [GAIA](https://aicanwhat.com/zh/projects/gaia/) | 数据集与评测 | 评测 | [Source](https://huggingface.co/datasets/gaia-benchmark/GAIA) |
 | [Gaia2 (ARE)](https://aicanwhat.com/zh/projects/gaia2/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/facebookresearch/meta-agents-research-environments) |
 | [GUI Odyssey](https://aicanwhat.com/zh/projects/gui-odyssey/) | 数据集与评测 | 训练, 评测 | [Source](https://github.com/OpenGVLab/GUI-Odyssey) |
@@ -49,21 +54,27 @@
 | [InterCode](https://aicanwhat.com/zh/projects/intercode/) | 环境框架 | 评测 | [Source](https://intercode-benchmark.github.io/) |
 | [iOSWorld](https://aicanwhat.com/zh/projects/iosworld/) | 环境与评测 | 评测 | [Source](https://github.com/ljang0/iOSWorld) |
 | [LazyWords](https://aicanwhat.com/zh/projects/lazywords/) | AI 软件作品 | 作品展示 | [Source](https://github.com/DemonazGH/LazyWords-Tauri) |
+| [LightCraft](https://aicanwhat.com/zh/projects/lightcraft/) | AI 软件作品 | 作品展示 | [Source](https://getartcraft.com/apps/lightcraft) |
 | [LlamaTouch](https://aicanwhat.com/zh/projects/llamatouch/) | 环境与评测 | 评测 | [Source](https://github.com/LlamaTouch/LlamaTouch) |
 | [MacArena](https://aicanwhat.com/zh/projects/macarena/) | 环境与评测 | 评测 | [Source](https://github.com/MacPaw/MacArena) |
 | [MLGym](https://aicanwhat.com/zh/projects/mlgym/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/facebookresearch/MLGym) |
 | [MobileAgentBench](https://aicanwhat.com/zh/projects/mobileagentbench/) | 环境与评测 | 评测 | [Source](https://github.com/MobileAgentBench/mobile-agent-bench) |
 | [Nacre](https://aicanwhat.com/zh/projects/nacre/) | AI 软件作品 | 作品展示 | [Source](https://github.com/RYOITABASHI/Nacre) |
+| [OfficeBench](https://aicanwhat.com/zh/projects/officebench/) | 环境与评测 | 评测 | [Source](https://github.com/zlwang-cs/OfficeBench) |
 | [OmniACT](https://aicanwhat.com/zh/projects/omniact/) | 数据集与评测 | 训练, 评测 | [Source](https://huggingface.co/datasets/Writer/omniact) |
 | [OneBotan](https://aicanwhat.com/zh/projects/onebotan/) | AI 软件作品 | 作品展示 | [Source](https://github.com/mirute02/onebotan) |
 | [Online Whiteboard](https://aicanwhat.com/zh/projects/gpt5-online-whiteboard/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/online-whiteboard) |
 | [OpenEnv](https://aicanwhat.com/zh/projects/openenv/) | 环境框架 | 训练, 评测 | [Source](https://huggingface.co/docs/openenv) |
+| [OS-Sentinel / MobileRisk-Live](https://aicanwhat.com/zh/projects/os-sentinel/) | 环境与评测 | 评测 | [Source](https://github.com/OS-Copilot/OS-Sentinel) |
 | [OSWorld](https://aicanwhat.com/zh/projects/osworld/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/xlang-ai/OSWorld) |
 | [OSWorld 2.0](https://aicanwhat.com/zh/projects/osworld-2/) | 环境与评测 | 评测 | [Source](https://github.com/xlang-ai/OSWorld-V2) |
 | [OSWorld-Human](https://aicanwhat.com/zh/projects/osworld-human/) | 数据集与评测 | 评测 | [Source](https://github.com/WukLab/osworld-human) |
+| [PdfCraft](https://aicanwhat.com/zh/projects/pdfcraft/) | AI 软件作品 | 作品展示 | [Source](https://getartcraft.com/apps/pdfcraft) |
+| [PhotoCraft](https://aicanwhat.com/zh/projects/photocraft/) | AI 软件作品 | 作品展示 | [Source](https://getartcraft.com/apps/photocraft) |
 | [Poirot](https://aicanwhat.com/zh/projects/poirot/) | AI 软件作品 | 作品展示 | [Source](https://github.com/a7t-ai/poirot) |
 | [PourCraft Coffee](https://aicanwhat.com/zh/projects/pourcraft-coffee/) | AI 软件作品 | 作品展示 | [Source](https://apps.apple.com/us/app/pourcraft-coffee/id6759871953) |
 | [RhoUnpacker](https://aicanwhat.com/zh/projects/rhounpacker/) | AI 软件作品 | 作品展示 | [Source](https://github.com/w1426421352/RhoUnpacker) |
+| [ScienceBoard](https://aicanwhat.com/zh/projects/scienceboard/) | 环境与评测 | 评测 | [Source](https://github.com/OS-Copilot/ScienceBoard) |
 | [Screen Printing Film Analyzer](https://aicanwhat.com/zh/projects/screen-printing-film-analyzer/) | AI 软件作品 | 作品展示 | [Source](https://github.com/desordenades/Positive_Analyzer_for_Screen_Printing) |
 | [ScreenSpot](https://aicanwhat.com/zh/projects/screenspot/) | 数据集与评测 | 评测 | [Source](https://github.com/njucckevin/SeeClick) |
 | [ScreenSpot-Pro](https://aicanwhat.com/zh/projects/screenspot-pro/) | 数据集与评测 | 评测 | [Source](https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding) |
@@ -71,6 +82,8 @@
 | [Shelly](https://aicanwhat.com/zh/projects/shelly-android/) | AI 软件作品 | 作品展示 | [Source](https://github.com/RYOITABASHI/Shelly) |
 | [SPA-Bench](https://aicanwhat.com/zh/projects/spa-bench/) | 环境与评测 | 评测 | [Source](https://github.com/ai-agents-2030/SPA-Bench) |
 | [Spider2-V](https://aicanwhat.com/zh/projects/spider2-v/) | 环境与评测 | 评测 | [Source](https://spider2-v.github.io/) |
+| [SpreadsheetBench](https://aicanwhat.com/zh/projects/spreadsheetbench/) | 数据集与评测 | 评测 | [Source](https://github.com/RUCKBReasoning/SpreadsheetBench) |
+| [SpreadsheetBench 2](https://aicanwhat.com/zh/projects/spreadsheetbench-2/) | 数据集与评测 | 评测 | [Source](https://github.com/RUCKBReasoning/SpreadsheetBench-2) |
 | [StableToolBench](https://aicanwhat.com/zh/projects/stabletoolbench/) | 环境与评测 | 评测 | [Source](https://github.com/THUNLP-MT/StableToolBench) |
 | [Sticky Notes (kunkel321)](https://aicanwhat.com/zh/projects/kunkel321-sticky-notes/) | AI 软件作品 | 作品展示 | [Source](https://github.com/kunkel321/Stickies) |
 | [SWE-bench](https://aicanwhat.com/zh/projects/swe-bench/) | 评测套件 | 训练, 评测 | [Source](https://www.swebench.com/) |
@@ -83,6 +96,7 @@
 | [ToolSandbox](https://aicanwhat.com/zh/projects/toolsandbox/) | 环境与评测 | 评测 | [Source](https://machinelearning.apple.com/research/toolsandbox-stateful-conversational-llm-benchmark) |
 | [Travel Times Milwaukee](https://aicanwhat.com/zh/projects/travel-times-milwaukee/) | AI 软件作品 | 作品展示 | [Source](https://traveltimesapp.com/) |
 | [UI-Vision](https://aicanwhat.com/zh/projects/ui-vision/) | 数据集与评测 | 评测 | [Source](https://github.com/uivision/UI-Vision) |
+| [VectorCraft](https://aicanwhat.com/zh/projects/vectorcraft/) | AI 软件作品 | 作品展示 | [Source](https://getartcraft.com/apps/vectorcraft) |
 | [VibeTunnel](https://aicanwhat.com/zh/projects/vibetunnel/) | AI 软件作品 | 作品展示 | [Source](https://vibetunnel.sh/) |
 | [Video Lite: Compress &amp; Resize](https://aicanwhat.com/zh/projects/video-lite-compress-resize/) | AI 软件作品 | 作品展示 | [Source](https://apps.apple.com/us/app/video-lite-compress-resize/id6776254843) |
 | [Windows Agent Arena](https://aicanwhat.com/zh/projects/windows-agent-arena/) | 环境与评测 | 评测 | [Source](https://microsoft.github.io/WindowsAgentArena/) |

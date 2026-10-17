@@ -5,7 +5,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from registries import identity, validate_url
+from registries import identity, related_projects, validate_url
 from sync_registries import parse_harbor, parse_python_dictionary, parse_tree, records_digest, validate_census
 
 
@@ -72,6 +72,14 @@ class RegistryBoundaries(unittest.TestCase):
     def test_non_web_or_credential_urls_are_rejected(self):
         for url in ('javascript:alert(1)', 'https://user:password@example.org/x'):
             with self.assertRaises(ValueError): validate_url(url)
+
+    def test_verified_evaluator_maps_to_its_own_entry(self):
+        entries = [{'id': identifier} for identifier in ['webarena', 'webarena-verified']]
+        record = {'source_id': 'browsergym', 'url': 'https://example.org/configs.py', 'attributes': {}}
+        for key, expected in [('webarena_verified', 'webarena-verified'), ('webarena', 'webarena'),
+                              ('webarena_lite', 'webarena'), ('webarena_tiny', 'webarena')]:
+            record['source_key'] = key
+            self.assertEqual([e['id'] for e in related_projects(record, entries)], [expected])
 
 
 if __name__ == '__main__':

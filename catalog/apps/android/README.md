@@ -2,7 +2,7 @@
 
 [All app resources](../README.md) · [Website index](https://aicanwhat.com/apps/android/)
 
-19 entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.
+20 entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.
 
 | Project | Resource type | Use | Primary source |
 | --- | --- | --- | --- |
@@ -22,6 +22,7 @@
 | [MobileAgentBench](https://aicanwhat.com/projects/mobileagentbench/) | Environment + benchmark | Evaluation | [Source](https://github.com/MobileAgentBench/mobile-agent-bench) |
 | [Nacre](https://aicanwhat.com/projects/nacre/) | Software made with AI | Showcase | [Source](https://github.com/RYOITABASHI/Nacre) |
 | [OneBotan](https://aicanwhat.com/projects/onebotan/) | Software made with AI | Showcase | [Source](https://github.com/mirute02/onebotan) |
+| [OS-Sentinel / MobileRisk-Live](https://aicanwhat.com/projects/os-sentinel/) | Environment + benchmark | Evaluation | [Source](https://github.com/OS-Copilot/OS-Sentinel) |
 | [ScreenSpot](https://aicanwhat.com/projects/screenspot/) | Dataset + benchmark | Evaluation | [Source](https://github.com/njucckevin/SeeClick) |
 | [Shelly](https://aicanwhat.com/projects/shelly-android/) | Software made with AI | Showcase | [Source](https://github.com/RYOITABASHI/Shelly) |
 | [SPA-Bench](https://aicanwhat.com/projects/spa-bench/) | Environment + benchmark | Evaluation | [Source](https://github.com/ai-agents-2030/SPA-Bench) |

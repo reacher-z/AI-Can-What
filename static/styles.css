@@ -1336,3 +1336,26 @@ tbody tr:hover {
     margin-bottom:5px
   }
 }
+
+.search-hint {
+  margin:0 0 12px;
+  font-size:11px;
+  line-height:1.7;
+  color:var(--muted)
+}
+.paper-artifact-note {
+  border-left:3px solid #b3bd9c;
+  background:#f3f5ee;
+  padding:14px 18px;
+  margin:18px 0;
+  font-size:13px;
+  line-height:1.8;
+  color:#526458
+}
+.paper-artifact-note p {
+  margin:8px 0
+}
+.paper-artifact-note a {
+  text-decoration:underline;
+  text-underline-offset:3px
+}

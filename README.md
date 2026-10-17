@@ -7,15 +7,15 @@
 A source-backed directory of AI-built software and environments, benchmarks, and datasets for training and evaluating agents, organized into **Games & virtual worlds**, **Websites**, and **Apps**. Every entry has an original source, review date, practical limits, and its own static page.
 
 <!-- BEGIN GENERATED INDEX -->
-**167 catalog entries · 118 referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.
+**185 catalog entries · 132 research papers.** These counts are not additive. 3 papers have no corresponding reviewed artifact entry; their release-status notes stay in the bibliography. Every catalog entry links evidence and records known limits.
 
 ## Browse
 
 | Category | Entries | Repository index |
 | --- | --- | --- |
 | [Games & virtual worlds](https://aicanwhat.com/games/) | 56 | [Browse](catalog/games/README.md) |
-| [Websites](https://aicanwhat.com/websites/) | 31 | [Browse](catalog/websites/README.md) |
-| [Apps](https://aicanwhat.com/apps/) | 80 | [Browse](catalog/apps/README.md) |
+| [Websites](https://aicanwhat.com/websites/) | 35 | [Browse](catalog/websites/README.md) |
+| [Apps](https://aicanwhat.com/apps/) | 94 | [Browse](catalog/apps/README.md) |
 
 [Research bibliography](https://aicanwhat.com/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)
 
@@ -42,6 +42,7 @@ Python 3.10+ and Node.js, with no installed dependencies:
 python3 scripts/build.py
 python3 scripts/validate.py
 node --check static/app.js
+node --check static/search.js
 node --check static/registry.js
 python3 -m unittest discover -s tests
 python3 -m http.server 8768 --bind 127.0.0.1 --directory dist

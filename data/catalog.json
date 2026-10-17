@@ -291,8 +291,8 @@
       "repo_url": "https://github.com/web-arena-x/webarena",
       "demo_url": null,
       "paper_url": "https://arxiv.org/abs/2307.13854",
-      "limits_en": "Reproducible evaluation requires self-hosted services and controlled state resets. Shared demonstration sites are not a substitute for that setup.",
-      "limits_zh": "可复现评测需要自行部署服务并控制状态重置，不能直接以共享演示站点替代。",
+      "limits_en": "Reproducible evaluation requires self-hosted services and controlled state resets; shared demos do not replace that setup. WebArena-Verified separately revises the same task family and evaluator. Original/Verified and full/Hard task counts are not additive, and evaluator versions must accompany reported scores.",
+      "limits_zh": "可复现评测需要自行部署服务并控制状态重置，共享演示不能替代。WebArena-Verified 单独修订同一任务族及评分器。原始／Verified 及完整／Hard 数量不能相加，报告成绩应注明评分器版本。",
       "enables_en": "Measure completion of multi-step web tasks using executable checks of the resulting state.",
       "enables_zh": "通过可执行的结果检查，评估 Agent 是否完成多步骤网页任务。",
       "resource_kind": "environment-and-benchmark",
@@ -304,6 +304,14 @@
         {
           "url": "https://arxiv.org/abs/2307.13854",
           "supports": "Original paper describes functional websites and task-success evaluation."
+        },
+        {
+          "url": "https://github.com/ServiceNow/webarena-verified/blob/6473f72db5dcefc97b5725b59e734504edc28a21/README.md",
+          "supports": "WebArena-Verified revises the same task family; evaluator and subset counts are not additive."
+        },
+        {
+          "url": "https://servicenow.github.io/webarena-verified/",
+          "supports": "WebArena-Verified revises the same task family; evaluator and subset counts are not additive."
         }
       ],
       "reviewed_at": "2026-10-16",
@@ -7601,6 +7609,1391 @@
         {
           "url": "https://arxiv.org/abs/2506.23719",
           "supports": "Original paper identifies financial data-analysis scope, hidden-answer evaluation and small public developer set."
+        }
+      ]
+    },
+    {
+      "id": "photocraft",
+      "name": "PhotoCraft",
+      "description_en": "An alpha Rust image editor with layered documents, masks, brushes, editable type, adjustments and PSD/PSB import and saving.",
+      "description_zh": "处于 alpha 阶段的 Rust 图像编辑器，提供分层文档、蒙版、画笔、可编辑文字、调整及 PSD／PSB 读写。",
+      "content_type": "app",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux",
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-assisted",
+      "resource_kind": "ai-generated-output",
+      "creator": "ArtCraft team and contributors; creator announcement by u/ai_art_is_art",
+      "primary_url": "https://getartcraft.com/apps/photocraft",
+      "repo_url": "https://github.com/storytold/photocraft",
+      "source_file_url": "https://github.com/storytold/photocraft/blob/5f65579ecb44047c2a619036c18ff273202e1389/apps/photocraft/src/main.rs",
+      "download_url": "https://github.com/storytold/photocraft/releases/tag/v0.9.0",
+      "demo_url": null,
+      "paper_url": null,
+      "provenance_source": "https://www.reddit.com/r/GeminiAI/comments/1wwo52q/ive_created_open_source_100_rust_replacements_for/",
+      "provenance_note_en": "Author-reported LLM assistance; human direction and separately authored components remain.",
+      "provenance_note_zh": "作者报告使用 LLM 辅助开发；仍包含人工指导及独立开发的组件。",
+      "enables_en": "Study an AI-assisted implementation of layered image editing and scripted image operations through a native interface, CLI and documented command channel.",
+      "enables_zh": "研究 AI 辅助开发的分层图像编辑实现，以及通过原生界面、CLI 和文档化命令通道进行图像操作的方式。",
+      "limits_en": "Early alpha. The maintainer says it is not ready to replace Photoshop in daily professional work; typography, plug-ins and other workflows remain incomplete. Application-level PSD saves are not byte-identical round trips, even when rendering matches. AVIF reading and JPEG XL are unavailable in the reviewed source. No editing or file-fidelity tests were run in this review.",
+      "limits_zh": "早期 alpha。维护者明确表示尚不能替代 Photoshop 的日常专业工作，排版、插件及其他流程仍不完整。即使渲染相同，应用级 PSD 保存也不是逐字节一致的往返；已核查源码尚不能读取 AVIF 或 JPEG XL。本次未进行编辑或文件保真测试。",
+      "runtime_note_en": "Inspected source commit and v0.9.0 release separately. Release assets include native Windows MSI/portable packages, a universal macOS DMG, Linux packages and a self-hosted WebAssembly archive. Windows x64 MSI and macOS DMG returned HTTP 200 to HEAD requests; files were not downloaded or executed. Reviewed application build guidance requires Rust 1.95+. No hosted interactive web demo was established.",
+      "runtime_note_zh": "分别核查固定源码提交与 v0.9.0 发布。发布文件包含原生 Windows MSI／便携包、通用 macOS DMG、Linux 包及需自行托管的 WebAssembly 压缩包。Windows x64 MSI 与 macOS DMG 的 HEAD 请求返回 HTTP 200；未下载或执行文件。已核查的应用构建说明要求 Rust 1.95+，未确立公开托管的交互网页演示。",
+      "license_en": "Application code is dual-licensed MIT OR Apache-2.0. Bundled assets and fonts retain their listed licenses; ArtCraft branding has separate trademark restrictions and is excluded from the code-license grant.",
+      "license_zh": "应用代码采用 MIT 或 Apache-2.0 双重许可。随附素材与字体保留其列明的许可；ArtCraft 品牌有单独商标限制，不包含在代码许可授权中。",
+      "license_url": "https://github.com/storytold/photocraft/blob/5f65579ecb44047c2a619036c18ff273202e1389/LICENSE-MIT",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "reviewed_version": {
+        "source_commit": "5f65579ecb44047c2a619036c18ff273202e1389",
+        "source_version": "0.9.0",
+        "observed_release": "v0.9.0",
+        "source_and_release_not_runtime_compared": true
+      },
+      "distribution_evidence": {
+        "asset_listing_url": "https://github.com/storytold/photocraft/releases/expanded_assets/v0.9.0",
+        "artifacts": {
+          "windows": "https://github.com/storytold/photocraft/releases/download/v0.9.0/photocraft-0.9.0-windows-x64.msi",
+          "macos": "https://github.com/storytold/photocraft/releases/download/v0.9.0/photocraft-0.9.0-macos-universal.dmg",
+          "linux": "https://github.com/storytold/photocraft/releases/download/v0.9.0/photocraft-0.9.0-linux-x86_64.AppImage",
+          "web": "https://github.com/storytold/photocraft/releases/download/v0.9.0/photocraft-web-0.9.0.zip"
+        },
+        "head_checks": {
+          "windows": {
+            "artifact_url": "https://github.com/storytold/photocraft/releases/download/v0.9.0/photocraft-0.9.0-windows-x64.msi",
+            "status": 200,
+            "content_length": "69443584",
+            "content_type": "application/octet-stream"
+          },
+          "macos": {
+            "artifact_url": "https://github.com/storytold/photocraft/releases/download/v0.9.0/photocraft-0.9.0-macos-universal.dmg",
+            "status": 200,
+            "content_length": "90386785",
+            "content_type": "application/octet-stream"
+          }
+        },
+        "architecture_note_en": "Release filenames document Windows x64/x86/ARM64 and macOS Universal variants; only Windows x64 and macOS Universal asset availability received HEAD checks."
+      },
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/GeminiAI/comments/1wwo52q/ive_created_open_source_100_rust_replacements_for/",
+          "supports": "Creator-linked implementation provenance."
+        },
+        {
+          "url": "https://github.com/storytold/photocraft/blob/5f65579ecb44047c2a619036c18ff273202e1389/README.md",
+          "supports": "Project-specific capabilities, build/distribution documentation, maturity and known limitations."
+        },
+        {
+          "url": "https://github.com/storytold/photocraft/blob/5f65579ecb44047c2a619036c18ff273202e1389/Cargo.toml",
+          "supports": "Inspectable application workspace metadata, code version, Rust edition/build floor and dual code license."
+        },
+        {
+          "url": "https://github.com/storytold/photocraft/blob/5f65579ecb44047c2a619036c18ff273202e1389/apps/photocraft/src/main.rs",
+          "supports": "Published native application entry point; this is an application-source repository, not a release-only listing."
+        },
+        {
+          "url": "https://github.com/storytold/photocraft/releases/tag/v0.9.0",
+          "supports": "Specific public release and platform asset inventory."
+        },
+        {
+          "url": "https://github.com/storytold/photocraft/releases/download/v0.9.0/photocraft-0.9.0-windows-x64.msi",
+          "supports": "Windows x64 installer availability verified by HTTP HEAD; execution was not tested."
+        },
+        {
+          "url": "https://github.com/storytold/photocraft/releases/download/v0.9.0/photocraft-0.9.0-macos-universal.dmg",
+          "supports": "Universal macOS disk-image availability verified by HTTP HEAD; execution was not tested."
+        },
+        {
+          "url": "https://github.com/storytold/photocraft/blob/5f65579ecb44047c2a619036c18ff273202e1389/LICENSE-MIT",
+          "supports": "MIT license option."
+        },
+        {
+          "url": "https://github.com/storytold/photocraft/blob/5f65579ecb44047c2a619036c18ff273202e1389/LICENSE-APACHE",
+          "supports": "Apache-2.0 license option."
+        }
+      ]
+    },
+    {
+      "id": "vectorcraft",
+      "name": "VectorCraft",
+      "description_en": "An alpha Rust vector editor with paths, shapes, text, layers and native/SVG/PDF document workflows, distributed as desktop and WebAssembly builds.",
+      "description_zh": "处于 alpha 阶段的 Rust 矢量编辑器，提供路径、形状、文字、图层及原生／SVG／PDF 文档流程，并发布桌面和 WebAssembly 构建。",
+      "content_type": "app",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux",
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-assisted",
+      "resource_kind": "ai-generated-output",
+      "creator": "ArtCraft team and contributors; creator announcement by u/ai_art_is_art",
+      "primary_url": "https://getartcraft.com/apps/vectorcraft",
+      "repo_url": "https://github.com/storytold/vectorcraft",
+      "source_file_url": "https://github.com/storytold/vectorcraft/blob/8bc65329286dc1b84aa392997bb205613c3e96cb/apps/vectorcraft/src/main.rs",
+      "download_url": "https://github.com/storytold/vectorcraft/releases/tag/v0.12.0",
+      "demo_url": null,
+      "paper_url": null,
+      "provenance_source": "https://www.reddit.com/r/GeminiAI/comments/1wwo52q/ive_created_open_source_100_rust_replacements_for/",
+      "provenance_note_en": "Author-reported LLM assistance; human direction and separately authored components remain.",
+      "provenance_note_zh": "作者报告使用 LLM 辅助开发；仍包含人工指导及独立开发的组件。",
+      "enables_en": "Inspect vector drawing, path operations and document export implemented across a native editor and command interface.",
+      "enables_zh": "检查原生编辑器及命令接口中的矢量绘制、路径运算和文档导出实现。",
+      "limits_en": "Alpha. Reliable exchange of Illustrator editing data remains incomplete, Affinity files are read-only, and raster effects, 3D/material workflows and vertical CJK composition have gaps. The upstream readiness percentages are self-assessments and are not copied as validation. No native interaction or cross-application round trip was tested here.",
+      "limits_zh": "Alpha 阶段。Illustrator 编辑数据的可靠交换仍未完成，Affinity 文件仅支持读取，栅格特效、3D／材质流程及竖排 CJK 排版仍有缺口。未把上游自行评估的成熟度百分比当作验证结果。本次未测试原生交互或跨应用往返。",
+      "runtime_note_en": "Inspected source commit and v0.12.0 release separately. Release assets include native Windows MSI/portable packages, a universal macOS DMG, Linux packages and a self-hosted WebAssembly archive. Windows x64 MSI and macOS DMG returned HTTP 200 to HEAD requests; files were not downloaded or executed. Reviewed application build guidance requires Rust 1.95+. No hosted interactive web demo was established.",
+      "runtime_note_zh": "分别核查固定源码提交与 v0.12.0 发布。发布文件包含原生 Windows MSI／便携包、通用 macOS DMG、Linux 包及需自行托管的 WebAssembly 压缩包。Windows x64 MSI 与 macOS DMG 的 HEAD 请求返回 HTTP 200；未下载或执行文件。已核查的应用构建说明要求 Rust 1.95+，未确立公开托管的交互网页演示。",
+      "license_en": "Application code is dual-licensed MIT OR Apache-2.0. Bundled assets and fonts retain their listed licenses; ArtCraft branding has separate trademark restrictions and is excluded from the code-license grant.",
+      "license_zh": "应用代码采用 MIT 或 Apache-2.0 双重许可。随附素材与字体保留其列明的许可；ArtCraft 品牌有单独商标限制，不包含在代码许可授权中。",
+      "license_url": "https://github.com/storytold/vectorcraft/blob/8bc65329286dc1b84aa392997bb205613c3e96cb/LICENSE-MIT",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "reviewed_version": {
+        "source_commit": "8bc65329286dc1b84aa392997bb205613c3e96cb",
+        "source_version": "0.12.0",
+        "observed_release": "v0.12.0",
+        "source_and_release_not_runtime_compared": true
+      },
+      "distribution_evidence": {
+        "asset_listing_url": "https://github.com/storytold/vectorcraft/releases/expanded_assets/v0.12.0",
+        "artifacts": {
+          "windows": "https://github.com/storytold/vectorcraft/releases/download/v0.12.0/vectorcraft-0.12.0-windows-x64.msi",
+          "macos": "https://github.com/storytold/vectorcraft/releases/download/v0.12.0/vectorcraft-0.12.0-macos-universal.dmg",
+          "linux": "https://github.com/storytold/vectorcraft/releases/download/v0.12.0/vectorcraft-0.12.0-linux-x86_64.AppImage",
+          "web": "https://github.com/storytold/vectorcraft/releases/download/v0.12.0/vectorcraft-web-0.12.0.zip"
+        },
+        "head_checks": {
+          "windows": {
+            "artifact_url": "https://github.com/storytold/vectorcraft/releases/download/v0.12.0/vectorcraft-0.12.0-windows-x64.msi",
+            "status": 200,
+            "content_length": "101388288",
+            "content_type": "application/octet-stream"
+          },
+          "macos": {
+            "artifact_url": "https://github.com/storytold/vectorcraft/releases/download/v0.12.0/vectorcraft-0.12.0-macos-universal.dmg",
+            "status": 200,
+            "content_length": "136458785",
+            "content_type": "application/octet-stream"
+          }
+        },
+        "architecture_note_en": "Release filenames document Windows x64/x86/ARM64 and macOS Universal variants; only Windows x64 and macOS Universal asset availability received HEAD checks."
+      },
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/GeminiAI/comments/1wwo52q/ive_created_open_source_100_rust_replacements_for/",
+          "supports": "Creator-linked implementation provenance."
+        },
+        {
+          "url": "https://github.com/storytold/vectorcraft/blob/8bc65329286dc1b84aa392997bb205613c3e96cb/README.md",
+          "supports": "Project-specific capabilities, build/distribution documentation, maturity and known limitations."
+        },
+        {
+          "url": "https://github.com/storytold/vectorcraft/blob/8bc65329286dc1b84aa392997bb205613c3e96cb/Cargo.toml",
+          "supports": "Inspectable application workspace metadata, code version, Rust edition/build floor and dual code license."
+        },
+        {
+          "url": "https://github.com/storytold/vectorcraft/blob/8bc65329286dc1b84aa392997bb205613c3e96cb/apps/vectorcraft/src/main.rs",
+          "supports": "Published native application entry point; this is an application-source repository, not a release-only listing."
+        },
+        {
+          "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.12.0",
+          "supports": "Specific public release and platform asset inventory."
+        },
+        {
+          "url": "https://github.com/storytold/vectorcraft/releases/download/v0.12.0/vectorcraft-0.12.0-windows-x64.msi",
+          "supports": "Windows x64 installer availability verified by HTTP HEAD; execution was not tested."
+        },
+        {
+          "url": "https://github.com/storytold/vectorcraft/releases/download/v0.12.0/vectorcraft-0.12.0-macos-universal.dmg",
+          "supports": "Universal macOS disk-image availability verified by HTTP HEAD; execution was not tested."
+        },
+        {
+          "url": "https://github.com/storytold/vectorcraft/blob/8bc65329286dc1b84aa392997bb205613c3e96cb/LICENSE-MIT",
+          "supports": "MIT license option."
+        },
+        {
+          "url": "https://github.com/storytold/vectorcraft/blob/8bc65329286dc1b84aa392997bb205613c3e96cb/LICENSE-APACHE",
+          "supports": "Apache-2.0 license option."
+        }
+      ]
+    },
+    {
+      "id": "lightcraft",
+      "name": "LightCraft",
+      "description_en": "An alpha Rust photo library and RAW developer with catalog organization, nondestructive adjustments, masking and image-export workflows.",
+      "description_zh": "处于 alpha 阶段的 Rust 照片库与 RAW 显影应用，包含照片整理、非破坏性调整、蒙版及图像导出流程。",
+      "content_type": "app",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux",
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-assisted",
+      "resource_kind": "ai-generated-output",
+      "creator": "ArtCraft team and contributors; creator announcement by u/ai_art_is_art",
+      "primary_url": "https://getartcraft.com/apps/lightcraft",
+      "repo_url": "https://github.com/storytold/lightcraft",
+      "source_file_url": "https://github.com/storytold/lightcraft/blob/f34c7a8a89e0d1bade0a6889185f40acecc84a9f/apps/lightcraft/src/main.rs",
+      "download_url": "https://github.com/storytold/lightcraft/releases/tag/v0.8.0",
+      "demo_url": null,
+      "paper_url": null,
+      "provenance_source": "https://www.reddit.com/r/GeminiAI/comments/1wwo52q/ive_created_open_source_100_rust_replacements_for/",
+      "provenance_note_en": "Author-reported LLM assistance; human direction and separately authored components remain.",
+      "provenance_note_zh": "作者报告使用 LLM 辅助开发；仍包含人工指导及独立开发的组件。",
+      "enables_en": "Inspect a native photo-management and development pipeline, including configurable edits and automation through CLI/MCP entry points.",
+      "enables_zh": "检查原生照片管理与显影流程，包括可配置编辑及通过 CLI／MCP 入口进行自动化。",
+      "limits_en": "Alpha. Camera calibration is incomplete; unsupported RAW variants may fall back to embedded JPEG previews. Subject/sky selection currently uses classical heuristics, and on-screen HDR, video and some Lightroom Classic modules are missing. The README requires Rust 1.95 for workspace builds although root Cargo metadata still says 1.90. No camera-file fidelity was independently tested.",
+      "limits_zh": "Alpha 阶段。相机色彩标定尚不完整，不支持的 RAW 变体可能退回内嵌 JPEG 预览。主体／天空选择目前使用传统启发式方法，屏幕 HDR、视频及部分 Lightroom Classic 模块尚缺失。README 要求工作区构建使用 Rust 1.95，根 Cargo 元数据仍写 1.90。本次未独立测试相机文件保真度。",
+      "runtime_note_en": "Inspected source commit and v0.8.0 release separately. Release assets include native Windows MSI/portable packages, a universal macOS DMG, Linux packages and a self-hosted WebAssembly archive. Windows x64 MSI and macOS DMG returned HTTP 200 to HEAD requests; files were not downloaded or executed. Reviewed application build guidance requires Rust 1.95+. No hosted interactive web demo was established.",
+      "runtime_note_zh": "分别核查固定源码提交与 v0.8.0 发布。发布文件包含原生 Windows MSI／便携包、通用 macOS DMG、Linux 包及需自行托管的 WebAssembly 压缩包。Windows x64 MSI 与 macOS DMG 的 HEAD 请求返回 HTTP 200；未下载或执行文件。已核查的应用构建说明要求 Rust 1.95+，未确立公开托管的交互网页演示。",
+      "license_en": "Application code is dual-licensed MIT OR Apache-2.0. Bundled assets and fonts retain their listed licenses; ArtCraft branding has separate trademark restrictions and is excluded from the code-license grant.",
+      "license_zh": "应用代码采用 MIT 或 Apache-2.0 双重许可。随附素材与字体保留其列明的许可；ArtCraft 品牌有单独商标限制，不包含在代码许可授权中。",
+      "license_url": "https://github.com/storytold/lightcraft/blob/f34c7a8a89e0d1bade0a6889185f40acecc84a9f/LICENSE-MIT",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "reviewed_version": {
+        "source_commit": "f34c7a8a89e0d1bade0a6889185f40acecc84a9f",
+        "source_version": "0.8.0",
+        "observed_release": "v0.8.0",
+        "source_and_release_not_runtime_compared": true
+      },
+      "distribution_evidence": {
+        "asset_listing_url": "https://github.com/storytold/lightcraft/releases/expanded_assets/v0.8.0",
+        "artifacts": {
+          "windows": "https://github.com/storytold/lightcraft/releases/download/v0.8.0/lightcraft-0.8.0-windows-x64.msi",
+          "macos": "https://github.com/storytold/lightcraft/releases/download/v0.8.0/lightcraft-0.8.0-macos-universal.dmg",
+          "linux": "https://github.com/storytold/lightcraft/releases/download/v0.8.0/lightcraft-0.8.0-linux-x86_64.AppImage",
+          "web": "https://github.com/storytold/lightcraft/releases/download/v0.8.0/lightcraft-web-0.8.0.zip"
+        },
+        "head_checks": {
+          "windows": {
+            "artifact_url": "https://github.com/storytold/lightcraft/releases/download/v0.8.0/lightcraft-0.8.0-windows-x64.msi",
+            "status": 200,
+            "content_length": "87281664",
+            "content_type": "application/octet-stream"
+          },
+          "macos": {
+            "artifact_url": "https://github.com/storytold/lightcraft/releases/download/v0.8.0/lightcraft-0.8.0-macos-universal.dmg",
+            "status": 200,
+            "content_length": "107963600",
+            "content_type": "application/octet-stream"
+          }
+        },
+        "architecture_note_en": "Release filenames document Windows x64/x86/ARM64 and macOS Universal variants; only Windows x64 and macOS Universal asset availability received HEAD checks."
+      },
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/GeminiAI/comments/1wwo52q/ive_created_open_source_100_rust_replacements_for/",
+          "supports": "Creator-linked implementation provenance."
+        },
+        {
+          "url": "https://github.com/storytold/lightcraft/blob/f34c7a8a89e0d1bade0a6889185f40acecc84a9f/README.md",
+          "supports": "Project-specific capabilities, build/distribution documentation, maturity and known limitations."
+        },
+        {
+          "url": "https://github.com/storytold/lightcraft/blob/f34c7a8a89e0d1bade0a6889185f40acecc84a9f/Cargo.toml",
+          "supports": "Inspectable application workspace metadata, code version, Rust edition/build floor and dual code license."
+        },
+        {
+          "url": "https://github.com/storytold/lightcraft/blob/f34c7a8a89e0d1bade0a6889185f40acecc84a9f/apps/lightcraft/src/main.rs",
+          "supports": "Published native application entry point; this is an application-source repository, not a release-only listing."
+        },
+        {
+          "url": "https://github.com/storytold/lightcraft/releases/tag/v0.8.0",
+          "supports": "Specific public release and platform asset inventory."
+        },
+        {
+          "url": "https://github.com/storytold/lightcraft/releases/download/v0.8.0/lightcraft-0.8.0-windows-x64.msi",
+          "supports": "Windows x64 installer availability verified by HTTP HEAD; execution was not tested."
+        },
+        {
+          "url": "https://github.com/storytold/lightcraft/releases/download/v0.8.0/lightcraft-0.8.0-macos-universal.dmg",
+          "supports": "Universal macOS disk-image availability verified by HTTP HEAD; execution was not tested."
+        },
+        {
+          "url": "https://github.com/storytold/lightcraft/blob/f34c7a8a89e0d1bade0a6889185f40acecc84a9f/LICENSE-MIT",
+          "supports": "MIT license option."
+        },
+        {
+          "url": "https://github.com/storytold/lightcraft/blob/f34c7a8a89e0d1bade0a6889185f40acecc84a9f/LICENSE-APACHE",
+          "supports": "Apache-2.0 license option."
+        }
+      ]
+    },
+    {
+      "id": "pdfcraft",
+      "name": "PdfCraft",
+      "description_en": "An alpha Rust PDF workbench for viewing, searching, annotations, forms and page organization, with native applications and command-line tools.",
+      "description_zh": "处于 alpha 阶段的 Rust PDF 工作台，用于查看、搜索、批注、表单和页面整理，提供原生应用及命令行工具。",
+      "content_type": "app",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux",
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-assisted",
+      "resource_kind": "ai-generated-output",
+      "creator": "ArtCraft team and contributors; creator announcement by u/ai_art_is_art",
+      "primary_url": "https://getartcraft.com/apps/pdfcraft",
+      "repo_url": "https://github.com/storytold/pdfcraft",
+      "source_file_url": "https://github.com/storytold/pdfcraft/blob/924c4da4ac2879ac9107c6c82e20ac6be5570f0a/apps/pdfcraft/src/main.rs",
+      "download_url": "https://github.com/storytold/pdfcraft/releases/tag/v0.8.0",
+      "demo_url": null,
+      "paper_url": null,
+      "provenance_source": "https://www.reddit.com/r/GeminiAI/comments/1wwo52q/ive_created_open_source_100_rust_replacements_for/",
+      "provenance_note_en": "Author-reported LLM assistance; human direction and separately authored components remain.",
+      "provenance_note_zh": "作者报告使用 LLM 辅助开发；仍包含人工指导及独立开发的组件。",
+      "enables_en": "Inspect document viewing and page-operation workflows, including combining, splitting and automation through a shared PDF engine.",
+      "enables_zh": "检查文档查看及页面操作流程，包括合并、拆分和通过共享 PDF 引擎进行自动化。",
+      "limits_en": "Alpha. Existing-text editing, non-Latin OCR, Office interchange and advanced signature/preflight workflows remain limited; Word export can lose layout and Office-to-PDF is absent. Rendering still uses the separately authored hayro crate. The maintainers report unresolved crashes/hangs from fuzzing. This review did not validate editing, signatures or document fidelity.",
+      "limits_zh": "Alpha 阶段。已有文字编辑、非拉丁文字 OCR、Office 交换及高级签名／印前流程仍有限；Word 导出可能丢失布局，Office 转 PDF 尚未提供。渲染仍使用独立开发的 hayro 库。维护者记录了模糊测试发现的未解决崩溃或卡死。本次未验证编辑、签名或文档保真度。",
+      "runtime_note_en": "Inspected source commit and v0.8.0 release separately. Release assets include native Windows MSI/portable packages, a universal macOS DMG, Linux packages and a self-hosted WebAssembly archive. Windows x64 MSI and macOS DMG returned HTTP 200 to HEAD requests; files were not downloaded or executed. Reviewed application build guidance requires Rust 1.95+. No hosted interactive web demo was established.",
+      "runtime_note_zh": "分别核查固定源码提交与 v0.8.0 发布。发布文件包含原生 Windows MSI／便携包、通用 macOS DMG、Linux 包及需自行托管的 WebAssembly 压缩包。Windows x64 MSI 与 macOS DMG 的 HEAD 请求返回 HTTP 200；未下载或执行文件。已核查的应用构建说明要求 Rust 1.95+，未确立公开托管的交互网页演示。",
+      "license_en": "Application code is dual-licensed MIT OR Apache-2.0. Bundled assets and fonts retain their listed licenses; ArtCraft branding has separate trademark restrictions and is excluded from the code-license grant.",
+      "license_zh": "应用代码采用 MIT 或 Apache-2.0 双重许可。随附素材与字体保留其列明的许可；ArtCraft 品牌有单独商标限制，不包含在代码许可授权中。",
+      "license_url": "https://github.com/storytold/pdfcraft/blob/924c4da4ac2879ac9107c6c82e20ac6be5570f0a/LICENSE-MIT",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "reviewed_version": {
+        "source_commit": "924c4da4ac2879ac9107c6c82e20ac6be5570f0a",
+        "source_version": "0.8.0",
+        "observed_release": "v0.8.0",
+        "source_and_release_not_runtime_compared": true
+      },
+      "distribution_evidence": {
+        "asset_listing_url": "https://github.com/storytold/pdfcraft/releases/expanded_assets/v0.8.0",
+        "artifacts": {
+          "windows": "https://github.com/storytold/pdfcraft/releases/download/v0.8.0/pdfcraft-0.8.0-windows-x64.msi",
+          "macos": "https://github.com/storytold/pdfcraft/releases/download/v0.8.0/pdfcraft-0.8.0-macos-universal.dmg",
+          "linux": "https://github.com/storytold/pdfcraft/releases/download/v0.8.0/pdfcraft-0.8.0-linux-x86_64.AppImage",
+          "web": "https://github.com/storytold/pdfcraft/releases/download/v0.8.0/pdfcraft-web-0.8.0.zip"
+        },
+        "head_checks": {
+          "windows": {
+            "artifact_url": "https://github.com/storytold/pdfcraft/releases/download/v0.8.0/pdfcraft-0.8.0-windows-x64.msi",
+            "status": 200,
+            "content_length": "71266304",
+            "content_type": "application/octet-stream"
+          },
+          "macos": {
+            "artifact_url": "https://github.com/storytold/pdfcraft/releases/download/v0.8.0/pdfcraft-0.8.0-macos-universal.dmg",
+            "status": 200,
+            "content_length": "93992515",
+            "content_type": "application/octet-stream"
+          }
+        },
+        "architecture_note_en": "Release filenames document Windows x64/x86/ARM64 and macOS Universal variants; only Windows x64 and macOS Universal asset availability received HEAD checks."
+      },
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/GeminiAI/comments/1wwo52q/ive_created_open_source_100_rust_replacements_for/",
+          "supports": "Creator-linked implementation provenance."
+        },
+        {
+          "url": "https://github.com/storytold/pdfcraft/blob/924c4da4ac2879ac9107c6c82e20ac6be5570f0a/README.md",
+          "supports": "Project-specific capabilities, build/distribution documentation, maturity and known limitations."
+        },
+        {
+          "url": "https://github.com/storytold/pdfcraft/blob/924c4da4ac2879ac9107c6c82e20ac6be5570f0a/Cargo.toml",
+          "supports": "Inspectable application workspace metadata, code version, Rust edition/build floor and dual code license."
+        },
+        {
+          "url": "https://github.com/storytold/pdfcraft/blob/924c4da4ac2879ac9107c6c82e20ac6be5570f0a/apps/pdfcraft/src/main.rs",
+          "supports": "Published native application entry point; this is an application-source repository, not a release-only listing."
+        },
+        {
+          "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.8.0",
+          "supports": "Specific public release and platform asset inventory."
+        },
+        {
+          "url": "https://github.com/storytold/pdfcraft/releases/download/v0.8.0/pdfcraft-0.8.0-windows-x64.msi",
+          "supports": "Windows x64 installer availability verified by HTTP HEAD; execution was not tested."
+        },
+        {
+          "url": "https://github.com/storytold/pdfcraft/releases/download/v0.8.0/pdfcraft-0.8.0-macos-universal.dmg",
+          "supports": "Universal macOS disk-image availability verified by HTTP HEAD; execution was not tested."
+        },
+        {
+          "url": "https://github.com/storytold/pdfcraft/blob/924c4da4ac2879ac9107c6c82e20ac6be5570f0a/LICENSE-MIT",
+          "supports": "MIT license option."
+        },
+        {
+          "url": "https://github.com/storytold/pdfcraft/blob/924c4da4ac2879ac9107c6c82e20ac6be5570f0a/LICENSE-APACHE",
+          "supports": "Apache-2.0 license option."
+        },
+        {
+          "url": "https://github.com/storytold/printcraft",
+          "supports": "The creator-linked former repository URL redirects to storytold/pdfcraft; this is the renamed project, not a separate entry."
+        }
+      ]
+    },
+    {
+      "id": "filmcraft",
+      "name": "FilmCraft",
+      "description_en": "An alpha Rust video editor with a multitrack timeline, trimming, titles, color and audio controls, plus documented media-export and timeline-interchange paths.",
+      "description_zh": "处于 alpha 阶段的 Rust 视频编辑器，包含多轨时间线、修剪、字幕、颜色与音频控制，并提供文档化的媒体导出及时间线交换流程。",
+      "content_type": "app",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux",
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-assisted",
+      "resource_kind": "ai-generated-output",
+      "creator": "ArtCraft team and contributors; creator announcement by u/ai_art_is_art",
+      "primary_url": "https://getartcraft.com/apps/filmcraft",
+      "repo_url": "https://github.com/storytold/filmcraft",
+      "source_file_url": "https://github.com/storytold/filmcraft/blob/09aaf9bf15d510eda1c413c0ccabb1d7e08b41c5/apps/filmcraft/src/main.rs",
+      "download_url": "https://github.com/storytold/filmcraft/releases/tag/v0.8.0",
+      "demo_url": null,
+      "paper_url": null,
+      "provenance_source": "https://www.reddit.com/r/GeminiAI/comments/1wwo52q/ive_created_open_source_100_rust_replacements_for/",
+      "provenance_note_en": "Author-reported LLM assistance; human direction and separately authored components remain.",
+      "provenance_note_zh": "作者报告使用 LLM 辅助开发；仍包含人工指导及独立开发的组件。",
+      "enables_en": "Inspect an AI-assisted desktop editing implementation that connects timeline changes, media processing and scripted export through shared engine commands.",
+      "enables_zh": "检查 AI 辅助开发的桌面视频编辑实现，了解时间线修改、媒体处理和脚本导出如何共享引擎命令。",
+      "limits_en": "Alpha. Premiere .prproj import and VST3/Audio Units/OpenFX hosting are absent. Codec and hardware paths vary: H.264 is the documented software delivery export, while H.265 needs supported hardware. Some effects/export rendering remain CPU-bound; the authors report less testing on Windows/Linux than macOS. No playback, export, codec-conformance or hardware test was performed here.",
+      "limits_zh": "Alpha 阶段。尚无 Premiere .prproj 导入及 VST3／Audio Units／OpenFX 插件宿主。编解码与硬件路径存在差异：文档中的软件交付编码为 H.264，H.265 需要受支持硬件。部分特效及导出渲染仍依赖 CPU；作者称 Windows／Linux 的测试少于 macOS。本次未测试播放、导出、编解码一致性或硬件。",
+      "runtime_note_en": "Inspected source commit and v0.8.0 release separately. Release assets include native Windows MSI/portable packages, a universal macOS DMG, Linux packages and a self-hosted WebAssembly archive. Windows x64 MSI and macOS DMG returned HTTP 200 to HEAD requests; files were not downloaded or executed. Reviewed application build guidance requires Rust 1.95+. No hosted interactive web demo was established.",
+      "runtime_note_zh": "分别核查固定源码提交与 v0.8.0 发布。发布文件包含原生 Windows MSI／便携包、通用 macOS DMG、Linux 包及需自行托管的 WebAssembly 压缩包。Windows x64 MSI 与 macOS DMG 的 HEAD 请求返回 HTTP 200；未下载或执行文件。已核查的应用构建说明要求 Rust 1.95+，未确立公开托管的交互网页演示。",
+      "license_en": "Application code is dual-licensed MIT OR Apache-2.0. Bundled assets and fonts retain their listed licenses; ArtCraft branding has separate trademark restrictions and is excluded from the code-license grant.",
+      "license_zh": "应用代码采用 MIT 或 Apache-2.0 双重许可。随附素材与字体保留其列明的许可；ArtCraft 品牌有单独商标限制，不包含在代码许可授权中。",
+      "license_url": "https://github.com/storytold/filmcraft/blob/09aaf9bf15d510eda1c413c0ccabb1d7e08b41c5/LICENSE-MIT",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "reviewed_version": {
+        "source_commit": "09aaf9bf15d510eda1c413c0ccabb1d7e08b41c5",
+        "source_version": "0.8.0",
+        "observed_release": "v0.8.0",
+        "source_and_release_not_runtime_compared": true
+      },
+      "distribution_evidence": {
+        "asset_listing_url": "https://github.com/storytold/filmcraft/releases/expanded_assets/v0.8.0",
+        "artifacts": {
+          "windows": "https://github.com/storytold/filmcraft/releases/download/v0.8.0/filmcraft-0.8.0-windows-x64.msi",
+          "macos": "https://github.com/storytold/filmcraft/releases/download/v0.8.0/filmcraft-0.8.0-macos-universal.dmg",
+          "linux": "https://github.com/storytold/filmcraft/releases/download/v0.8.0/filmcraft-0.8.0-linux-x86_64.AppImage",
+          "web": "https://github.com/storytold/filmcraft/releases/download/v0.8.0/filmcraft-web-0.8.0.zip"
+        },
+        "head_checks": {
+          "windows": {
+            "artifact_url": "https://github.com/storytold/filmcraft/releases/download/v0.8.0/filmcraft-0.8.0-windows-x64.msi",
+            "status": 200,
+            "content_length": "57221120",
+            "content_type": "application/octet-stream"
+          },
+          "macos": {
+            "artifact_url": "https://github.com/storytold/filmcraft/releases/download/v0.8.0/filmcraft-0.8.0-macos-universal.dmg",
+            "status": 200,
+            "content_length": "73692833",
+            "content_type": "application/octet-stream"
+          }
+        },
+        "architecture_note_en": "Release filenames document Windows x64/x86/ARM64 and macOS Universal variants; only Windows x64 and macOS Universal asset availability received HEAD checks."
+      },
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/GeminiAI/comments/1wwo52q/ive_created_open_source_100_rust_replacements_for/",
+          "supports": "Creator-linked implementation provenance."
+        },
+        {
+          "url": "https://github.com/storytold/filmcraft/blob/09aaf9bf15d510eda1c413c0ccabb1d7e08b41c5/README.md",
+          "supports": "Project-specific capabilities, build/distribution documentation, maturity and known limitations."
+        },
+        {
+          "url": "https://github.com/storytold/filmcraft/blob/09aaf9bf15d510eda1c413c0ccabb1d7e08b41c5/Cargo.toml",
+          "supports": "Inspectable application workspace metadata, code version, Rust edition/build floor and dual code license."
+        },
+        {
+          "url": "https://github.com/storytold/filmcraft/blob/09aaf9bf15d510eda1c413c0ccabb1d7e08b41c5/apps/filmcraft/src/main.rs",
+          "supports": "Published native application entry point; this is an application-source repository, not a release-only listing."
+        },
+        {
+          "url": "https://github.com/storytold/filmcraft/releases/tag/v0.8.0",
+          "supports": "Specific public release and platform asset inventory."
+        },
+        {
+          "url": "https://github.com/storytold/filmcraft/releases/download/v0.8.0/filmcraft-0.8.0-windows-x64.msi",
+          "supports": "Windows x64 installer availability verified by HTTP HEAD; execution was not tested."
+        },
+        {
+          "url": "https://github.com/storytold/filmcraft/releases/download/v0.8.0/filmcraft-0.8.0-macos-universal.dmg",
+          "supports": "Universal macOS disk-image availability verified by HTTP HEAD; execution was not tested."
+        },
+        {
+          "url": "https://github.com/storytold/filmcraft/blob/09aaf9bf15d510eda1c413c0ccabb1d7e08b41c5/LICENSE-MIT",
+          "supports": "MIT license option."
+        },
+        {
+          "url": "https://github.com/storytold/filmcraft/blob/09aaf9bf15d510eda1c413c0ccabb1d7e08b41c5/LICENSE-APACHE",
+          "supports": "Apache-2.0 license option."
+        }
+      ]
+    },
+    {
+      "id": "effectcraft",
+      "name": "EffectCraft",
+      "description_en": "An alpha Rust motion-graphics and compositing app that combines layers, keyframes and effects, with native project files and documented Lottie/media export.",
+      "description_zh": "处于 alpha 阶段的 Rust 动态图形与合成应用，结合图层、关键帧和特效，提供原生项目格式及文档化的 Lottie／媒体导出。",
+      "content_type": "app",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux",
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-assisted",
+      "resource_kind": "ai-generated-output",
+      "creator": "ArtCraft team and contributors; creator announcement by u/ai_art_is_art",
+      "primary_url": "https://getartcraft.com/apps/effectcraft",
+      "repo_url": "https://github.com/storytold/effectcraft",
+      "source_file_url": "https://github.com/storytold/effectcraft/blob/8f02f52a44a4b1ea807d8824b92301b96f896a06/apps/effectcraft/src/main.rs",
+      "download_url": "https://github.com/storytold/effectcraft/releases/tag/v0.10.0",
+      "demo_url": null,
+      "paper_url": null,
+      "provenance_source": "https://www.reddit.com/r/GeminiAI/comments/1wwo52q/ive_created_open_source_100_rust_replacements_for/",
+      "provenance_note_en": "Author-reported LLM assistance; human direction and separately authored components remain.",
+      "provenance_note_zh": "作者报告使用 LLM 辅助开发；仍包含人工指导及独立开发的组件。",
+      "enables_en": "Inspect layer-based animation and compositing, including command-driven property changes, rendering and reusable project structures.",
+      "enables_zh": "检查基于图层的动画与合成，包括通过命令修改属性、渲染及复用项目结构。",
+      "limits_en": "Alpha. It cannot open After Effects .aep/.aepx projects or run its plug-ins; rendering equivalence has not been measured against After Effects. macOS is the most-tested platform. Upstream Windows ARM64 checks install the package and run the CLI but do not open the GUI. Optional tracking/masking models require separate downloads. No interaction or render/export test was performed here.",
+      "limits_zh": "Alpha 阶段。不能打开 After Effects .aep／.aepx 项目或运行其插件，尚未与 After Effects 测量渲染等价性。macOS 是测试最多的平台。上游 Windows ARM64 检查会安装包并运行 CLI，但不打开 GUI。可选跟踪／蒙版模型需另行下载。本次未测试交互、渲染或导出。",
+      "runtime_note_en": "Inspected source commit and v0.10.0 release separately. Release assets include native Windows MSI/portable packages, a universal macOS DMG, Linux packages and a self-hosted WebAssembly archive. Windows x64 MSI and macOS DMG returned HTTP 200 to HEAD requests; files were not downloaded or executed. Reviewed application build guidance requires Rust 1.95+. No hosted interactive web demo was established.",
+      "runtime_note_zh": "分别核查固定源码提交与 v0.10.0 发布。发布文件包含原生 Windows MSI／便携包、通用 macOS DMG、Linux 包及需自行托管的 WebAssembly 压缩包。Windows x64 MSI 与 macOS DMG 的 HEAD 请求返回 HTTP 200；未下载或执行文件。已核查的应用构建说明要求 Rust 1.95+，未确立公开托管的交互网页演示。",
+      "license_en": "Application code is dual-licensed MIT OR Apache-2.0. Bundled assets and fonts retain their listed licenses; ArtCraft branding has separate trademark restrictions and is excluded from the code-license grant.",
+      "license_zh": "应用代码采用 MIT 或 Apache-2.0 双重许可。随附素材与字体保留其列明的许可；ArtCraft 品牌有单独商标限制，不包含在代码许可授权中。",
+      "license_url": "https://github.com/storytold/effectcraft/blob/8f02f52a44a4b1ea807d8824b92301b96f896a06/LICENSE-MIT",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "reviewed_version": {
+        "source_commit": "8f02f52a44a4b1ea807d8824b92301b96f896a06",
+        "source_version": "0.10.0",
+        "observed_release": "v0.10.0",
+        "source_and_release_not_runtime_compared": true
+      },
+      "distribution_evidence": {
+        "asset_listing_url": "https://github.com/storytold/effectcraft/releases/expanded_assets/v0.10.0",
+        "artifacts": {
+          "windows": "https://github.com/storytold/effectcraft/releases/download/v0.10.0/effectcraft-0.10.0-windows-x64.msi",
+          "macos": "https://github.com/storytold/effectcraft/releases/download/v0.10.0/effectcraft-0.10.0-macos-universal.dmg",
+          "linux": "https://github.com/storytold/effectcraft/releases/download/v0.10.0/effectcraft-0.10.0-linux-x86_64.AppImage",
+          "web": "https://github.com/storytold/effectcraft/releases/download/v0.10.0/effectcraft-web-0.10.0.zip"
+        },
+        "head_checks": {
+          "windows": {
+            "artifact_url": "https://github.com/storytold/effectcraft/releases/download/v0.10.0/effectcraft-0.10.0-windows-x64.msi",
+            "status": 200,
+            "content_length": "50470912",
+            "content_type": "application/octet-stream"
+          },
+          "macos": {
+            "artifact_url": "https://github.com/storytold/effectcraft/releases/download/v0.10.0/effectcraft-0.10.0-macos-universal.dmg",
+            "status": 200,
+            "content_length": "64038819",
+            "content_type": "application/octet-stream"
+          }
+        },
+        "architecture_note_en": "Release filenames document Windows x64/x86/ARM64 and macOS Universal variants; only Windows x64 and macOS Universal asset availability received HEAD checks."
+      },
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/GeminiAI/comments/1wwo52q/ive_created_open_source_100_rust_replacements_for/",
+          "supports": "Creator-linked implementation provenance."
+        },
+        {
+          "url": "https://github.com/storytold/effectcraft/blob/8f02f52a44a4b1ea807d8824b92301b96f896a06/README.md",
+          "supports": "Project-specific capabilities, build/distribution documentation, maturity and known limitations."
+        },
+        {
+          "url": "https://github.com/storytold/effectcraft/blob/8f02f52a44a4b1ea807d8824b92301b96f896a06/Cargo.toml",
+          "supports": "Inspectable application workspace metadata, code version, Rust edition/build floor and dual code license."
+        },
+        {
+          "url": "https://github.com/storytold/effectcraft/blob/8f02f52a44a4b1ea807d8824b92301b96f896a06/apps/effectcraft/src/main.rs",
+          "supports": "Published native application entry point; this is an application-source repository, not a release-only listing."
+        },
+        {
+          "url": "https://github.com/storytold/effectcraft/releases/tag/v0.10.0",
+          "supports": "Specific public release and platform asset inventory."
+        },
+        {
+          "url": "https://github.com/storytold/effectcraft/releases/download/v0.10.0/effectcraft-0.10.0-windows-x64.msi",
+          "supports": "Windows x64 installer availability verified by HTTP HEAD; execution was not tested."
+        },
+        {
+          "url": "https://github.com/storytold/effectcraft/releases/download/v0.10.0/effectcraft-0.10.0-macos-universal.dmg",
+          "supports": "Universal macOS disk-image availability verified by HTTP HEAD; execution was not tested."
+        },
+        {
+          "url": "https://github.com/storytold/effectcraft/blob/8f02f52a44a4b1ea807d8824b92301b96f896a06/LICENSE-MIT",
+          "supports": "MIT license option."
+        },
+        {
+          "url": "https://github.com/storytold/effectcraft/blob/8f02f52a44a4b1ea807d8824b92301b96f896a06/LICENSE-APACHE",
+          "supports": "Apache-2.0 license option."
+        }
+      ]
+    },
+    {
+      "id": "scienceboard",
+      "name": "ScienceBoard",
+      "description_en": "A scientific desktop environment and benchmark covering molecular visualization, astronomy, GIS, algebra, theorem proving and scientific document workflows.",
+      "description_zh": "科学桌面环境及基准，覆盖分子可视化、天文学、GIS、代数、定理证明和科研文档流程。",
+      "content_type": "app",
+      "platforms": [
+        "linux"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "environment-and-benchmark",
+      "primary_url": "https://github.com/OS-Copilot/ScienceBoard",
+      "repo_url": "https://github.com/OS-Copilot/ScienceBoard",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2505.19897",
+      "enables_en": "Evaluate agents operating instrumented scientific applications and check task completion through application-specific state and artifact evaluators.",
+      "enables_zh": "评估 Agent 操作接入评测接口的科学应用，并通过应用专属状态及文件检查判定任务完成。",
+      "limits_en": "The original Ubuntu VM is public. Current source adds a Docker-native backend, but its prebuilt Docker image is documented as a private review artifact pending redistribution review. Some tasks depend on Google sign-in or changing web services. The reported 20-task Docker acceptance run is an upstream subset check, not full-suite reproduction by this catalog.",
+      "limits_zh": "原始 Ubuntu 虚拟机公开。当前源码新增 Docker 原生后端，但预构建 Docker 镜像被文档列为等待再分发审查的私有评审资产。部分任务依赖 Google 登录或会变化的网页服务。上游报告的 20 项 Docker 验收仅是子集检查，不代表本站复现整个基准。",
+      "license_en": "Framework code is MIT and the original VM Hub card is MIT-labeled. Bundled applications retain separate terms; the Docker delivery guide explicitly identifies ChimeraX redistribution/commercial-license constraints. The trajectory dataset has no license declaration in its inspected card.",
+      "license_zh": "框架代码采用 MIT，原始虚拟机 Hub 卡片也标注 MIT；内置应用保留独立条款。Docker 分发指南明确指出 ChimeraX 的再分发及商业许可限制；所查轨迹数据卡未声明许可。",
+      "runtime": "Python 3.11; Ubuntu 22.04 guest/application stack. Legacy operation uses VMware; Docker operation uses x86-64 Linux, Docker and an authorized locally prepared image without runtime KVM. Application state plugins and modified scientific applications are part of the setup.",
+      "platform_note": "Linux describes the Ubuntu scientific desktop. Windows support in legacy instructions is a VMware host choice, not Windows task coverage.",
+      "reviewed_version": {
+        "source_commit": "21b5eb0f1d00898f7de9e84c3d33a87c2f2b3c3e",
+        "vm_hub_commit": "3c7edc429c4035215def670804d9eb51ed4090b0"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/OS-Copilot/ScienceBoard/blob/21b5eb0f1d00898f7de9e84c3d33a87c2f2b3c3e/README.md",
+          "supports": "Scientific application families, original VM release, trajectories and the newer Docker backend."
+        },
+        {
+          "url": "https://github.com/OS-Copilot/ScienceBoard/blob/21b5eb0f1d00898f7de9e84c3d33a87c2f2b3c3e/vm_config/manual.md",
+          "supports": "Ubuntu 22.04 setup and modified ChimeraX, KAlgebra, Celestia, GRASS GIS, TeXstudio and Lean stack."
+        },
+        {
+          "url": "https://github.com/OS-Copilot/ScienceBoard/blob/21b5eb0f1d00898f7de9e84c3d33a87c2f2b3c3e/sci/docker/desktop_env.py",
+          "supports": "Inspectable Docker lifecycle/reset implementation; source read without execution."
+        },
+        {
+          "url": "https://github.com/OS-Copilot/ScienceBoard/blob/21b5eb0f1d00898f7de9e84c3d33a87c2f2b3c3e/docs/image-delivery.md",
+          "supports": "Docker image is a private review artifact; public redistribution requires separate application-license review."
+        },
+        {
+          "url": "https://github.com/OS-Copilot/ScienceBoard/blob/21b5eb0f1d00898f7de9e84c3d33a87c2f2b3c3e/docs/known-issues.md",
+          "supports": "Authentication/network dependencies, amd64 limits and the scope of upstream acceptance checks."
+        },
+        {
+          "url": "https://huggingface.co/OS-Copilot/ScienceBoard-Env",
+          "supports": "Public ungated original VM archive and MIT card; no archive downloaded."
+        },
+        {
+          "url": "https://github.com/OS-Copilot/ScienceBoard/blob/21b5eb0f1d00898f7de9e84c3d33a87c2f2b3c3e/LICENSE",
+          "supports": "MIT framework license."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "cadworld",
+      "name": "CADWorld",
+      "description_en": "A FreeCAD computer-use benchmark that evaluates screenshot-driven GUI work through executable checks on saved CAD projects and engineering outputs.",
+      "description_zh": "FreeCAD 计算机操作基准，通过对保存的 CAD 项目及工程输出执行检查，评估基于截图的 GUI 操作。",
+      "content_type": "app",
+      "platforms": [
+        "linux"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "environment-and-benchmark",
+      "primary_url": "https://github.com/Zdong104/CADWORLD",
+      "repo_url": "https://github.com/Zdong104/CADWORLD",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2609.16251",
+      "enables_en": "Evaluate modeling, sketch constraints, assembly, manufacturing and simulation workflows against task-specific artifact requirements.",
+      "enables_zh": "根据任务专属文件要求，评估建模、草图约束、装配、制造及仿真流程。",
+      "limits_en": "Requires a Linux/KVM Docker host and the Ubuntu FreeCAD VM. CAM-task evaluation, live or offline, needs a host FreeCAD 1.1.x console; most other checks parse files in Python. Omitting FreeCAD can invalidate CAM scores. Keep the 200-task GUI benchmark distinct from the paper's 50-task terminal-only ablation. A project-wide code license was not found in the reviewed root or package metadata.",
+      "limits_zh": "需要 Linux／KVM Docker 主机及 Ubuntu FreeCAD 虚拟机。CAM 任务的在线评分和离线重评需要主机上的 FreeCAD 1.1.x 控制台；大多数其他检查通过 Python 解析文件。缺失 FreeCAD 可能影响 CAM 评分。200 项 GUI 基准应与论文中的 50 项纯终端消融分别比较。所查根目录及包元数据未找到项目级代码许可。",
+      "license_en": "The task dataset declares Apache-2.0; the VM Hub card separately declares MIT. These declarations do not replace FreeCAD or other bundled software terms and do not resolve the missing project-wide GitHub code license.",
+      "license_zh": "任务数据集声明 Apache-2.0，虚拟机 Hub 卡片另行声明 MIT。这些声明不替代 FreeCAD 或其他内置软件条款，也不能补足 GitHub 项目级代码许可的缺失。",
+      "runtime": "Pinned source uses Python 3.12, Docker/QEMU and KVM. The documented VM defaults to 8 CPUs, 8 GB RAM and a 64 GB virtual disk; image storage and a matching host-side FreeCAD console are additional setup requirements.",
+      "platform_note": "Linux refers to the released Ubuntu task guest. FreeCAD's availability on other operating systems is not used as a benchmark platform claim.",
+      "reviewed_version": {
+        "source_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+        "task_dataset_commit": "fa02aa03b944daf2ae5b23e56d135bb7cbb75994",
+        "vm_hub_commit": "8dd055555291c787c9f9bbed2664ed416dfcbabb"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Zdong104/CADWORLD/blob/e5d0ebab8bd28da6e98c68c61db05747d1647f7b/README.md",
+          "supports": "Ubuntu screenshot/pyautogui workflow, KVM/Docker setup and host FreeCAD 1.1.x requirement."
+        },
+        {
+          "url": "https://github.com/Zdong104/CADWORLD/blob/e5d0ebab8bd28da6e98c68c61db05747d1647f7b/desktop_env/evaluators/metrics/freecad_cam.py",
+          "supports": "Inspectable CAM evaluator invokes a host FreeCAD console."
+        },
+        {
+          "url": "https://github.com/Zdong104/CADWORLD/blob/e5d0ebab8bd28da6e98c68c61db05747d1647f7b/pyproject.toml",
+          "supports": "Python package requirements; no project license field."
+        },
+        {
+          "url": "https://huggingface.co/datasets/Zihan1004/CADWORLD",
+          "supports": "Public tasks/evaluation assets with Apache-2.0 dataset declaration."
+        },
+        {
+          "url": "https://huggingface.co/Zihan1004/CADWorld",
+          "supports": "Public FreeCAD Ubuntu VM repository with separate MIT card."
+        },
+        {
+          "url": "https://cad-world.github.io/",
+          "supports": "Distinguishes the main GUI benchmark from the 50-task terminal-only ablation."
+        },
+        {
+          "url": "https://github.com/Zdong104/CADWORLD/blob/e5d0ebab8bd28da6e98c68c61db05747d1647f7b/README.md#L76-L89",
+          "supports": "Explicitly distinguishes mostly pure-Python metrics from 15 freecad-cam-* console checks, in live and archived scoring; recommends FreeCAD 1.1.x."
+        },
+        {
+          "url": "https://github.com/Zdong104/CADWORLD/blob/e5d0ebab8bd28da6e98c68c61db05747d1647f7b/README.md#L109-L111",
+          "supports": "Offline re-evaluation/diagnostics otherwise run with Python >=3.10 and requests; full live-run environment is separate."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "engiworld",
+      "name": "EngiWorld",
+      "description_en": "A professional engineering benchmark with GUI and CLI workflows across CAD, simulation, manufacturing, building design, electronics and 3D content creation.",
+      "description_zh": "专业工程基准，覆盖 CAD、仿真、制造、建筑设计、电子设计及三维内容制作的 GUI 与 CLI 工作流。",
+      "content_type": "app",
+      "platforms": [
+        "linux",
+        "windows"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "environment-and-benchmark",
+      "primary_url": "https://github.com/Hongcheng-Gao/EngiWorld",
+      "repo_url": "https://github.com/Hongcheng-Gao/EngiWorld",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2609.37686",
+      "enables_en": "Evaluate individual applications, software selection, cross-software coordination and optimization using task-specific checks on native engineering artifacts.",
+      "enables_zh": "通过对原生工程文件执行任务专属检查，评估单软件操作、软件选择、跨软件协作及设计优化。",
+      "limits_en": "The release provides 1,301 task definitions, while the paper's main experiments use 306 tasks. Public images cover only 15 open-source software environments, all Ubuntu in the inspected manifest; proprietary-software images require separate licensed access or user preparation. Respect each task's GUI/CLI contract and pin the task taxonomy, assets and matching image.",
+      "limits_zh": "发布内容包含 1,301 项任务定义，论文主要实验使用其中 306 项。公开镜像仅覆盖 15 个开源软件环境，所查清单均为 Ubuntu；专有软件镜像需另行取得合许可访问或自行准备。须遵循每项任务的 GUI／CLI 接口要求，并固定任务分类、资产及匹配镜像。",
+      "license_en": "Original code and the task dataset declare MIT. The OSWorld-derived runtime engine retains Apache-2.0 notices. Environment images have software-specific terms; no single permissive image license is declared.",
+      "license_zh": "原创代码及任务数据集声明 MIT；基于 OSWorld 的运行引擎保留 Apache-2.0 声明。环境镜像适用各软件自身条款，未声明统一的宽松镜像许可。",
+      "runtime": "Python 3.10+ on an x86_64 Linux Docker host, zstd-compressed VM images and model access. KVM accelerates execution; the documented runner can attempt slower software emulation. Complete task resources and matching images are distributed separately.",
+      "platform_note": "Task definitions target Windows and Ubuntu guests. The public image catalog currently contains Ubuntu 24.04 images only; Windows/proprietary runtime availability is not implied by the Windows task tag.",
+      "reviewed_version": {
+        "source_commit": "dc4936fffd46b764e0443c840081e7f1bd60d515",
+        "task_dataset_commit": "a9958dfec3cb9fea16be25551336edaa555a257d",
+        "image_dataset_commit": "a6690a8f8de7470a676b87032d7b3ab08f23a0d2"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Hongcheng-Gao/EngiWorld/blob/dc4936fffd46b764e0443c840081e7f1bd60d515/README.md",
+          "supports": "1,301 tasks, 306-task experiment subset, GUI/CLI interfaces and Windows/Ubuntu runtime design."
+        },
+        {
+          "url": "https://github.com/Hongcheng-Gao/EngiWorld/blob/dc4936fffd46b764e0443c840081e7f1bd60d515/task/single-software-execution/gui/librecad/task-08/eval.py",
+          "supports": "Concrete public evaluator checks engineering artifacts and GUI task constraints."
+        },
+        {
+          "url": "https://github.com/Hongcheng-Gao/EngiWorld/blob/dc4936fffd46b764e0443c840081e7f1bd60d515/runtime/pyproject.toml",
+          "supports": "Python >=3.10 and optional runtime dependency groups."
+        },
+        {
+          "url": "https://huggingface.co/datasets/HongchengGao/EngiWorld-Images/blob/a6690a8f8de7470a676b87032d7b3ab08f23a0d2/README.md",
+          "supports": "Only open-source software images are public; proprietary images are license-dependent."
+        },
+        {
+          "url": "https://huggingface.co/datasets/HongchengGao/EngiWorld-Images/blob/a6690a8f8de7470a676b87032d7b3ab08f23a0d2/manifest.json",
+          "supports": "15 published image manifests specify Ubuntu 24.04/amd64."
+        },
+        {
+          "url": "https://github.com/Hongcheng-Gao/EngiWorld/blob/dc4936fffd46b764e0443c840081e7f1bd60d515/THIRD_PARTY_NOTICES.md",
+          "supports": "Separates original MIT code from Apache-2.0 OSWorld-derived components."
+        },
+        {
+          "url": "https://huggingface.co/datasets/HongchengGao/EngiWorld-Tasks",
+          "supports": "Public task/evaluator artifact repository with MIT card."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "blendergym",
+      "name": "BlenderGym",
+      "description_en": "A 3D graphics-editing benchmark that asks model systems to modify Blender Python code so a starting scene matches a target scene.",
+      "description_zh": "三维图形编辑基准，要求模型系统修改 Blender Python 代码，使初始场景匹配目标场景。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "benchmark-suite",
+      "primary_url": "https://github.com/richard-guyunqi/BlenderGym-Open",
+      "repo_url": "https://github.com/richard-guyunqi/BlenderGym-Open",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2504.01786",
+      "enables_en": "Compare code-based edits for object placement, lighting, materials, blend shapes and procedural geometry using rendered and geometric metrics.",
+      "enables_zh": "通过渲染及几何指标，比较物体放置、照明、材质、形态混合和程序化几何的代码编辑结果。",
+      "limits_en": "This evaluates code-based scene reconstruction, not mouse-and-keyboard Blender operation. Public evaluation code and a dataset archive are available, but no benchmark-wide code or data license was found. Setup uses Python 3.10, an Infinigen Blender dependency and GPU-oriented packages; the starter script clones a dependency through SSH. Archives and execution were not tested.",
+      "limits_zh": "评估对象是基于代码的场景重建，不是鼠标键盘操作 Blender。评测代码及数据档案公开，但未找到覆盖整个基准的代码或数据许可。配置使用 Python 3.10、Infinigen Blender 依赖及偏向 GPU 的软件包，启动脚本通过 SSH 克隆依赖。本次未下载档案或执行验证。",
+      "license_en": "No project-level license file was present in the reviewed repository root, and the author-linked dataset card states no license. Blender/Infinigen and model dependencies have their own terms; those do not establish benchmark-data rights.",
+      "license_zh": "所查仓库根目录没有项目级许可文件，作者链接的数据卡也未声明许可。Blender／Infinigen 及模型依赖各有条款，但不能由此推断基准数据的使用许可。",
+      "runtime": "Conda/Python 3.10, the released TaskSolver and graphics-editing pipeline, Infinigen-provided Blender, and configured local or API-backed models. The package pins Torch/Transformers and includes FlashAttention/bitsandbytes dependencies.",
+      "platform_note": "Blender is the target application, but no operating-system tag is inferred from its cross-platform product support or shell-based installation instructions.",
+      "reviewed_version": {
+        "source_commit": "67c8b48bf8c548c701b6873db6fcc6527d756385",
+        "dataset_commit": "e519b50a5e87901f43b5a894a56e820bdc3a68a9"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/richard-guyunqi/BlenderGym-Open/blob/67c8b48bf8c548c701b6873db6fcc6527d756385/README.md",
+          "supports": "Official inference/evaluation release and author-linked dataset."
+        },
+        {
+          "url": "https://blendergym.github.io/",
+          "supports": "Five code-editing task categories and start/goal scene artifact design."
+        },
+        {
+          "url": "https://github.com/richard-guyunqi/BlenderGym-Open/blob/67c8b48bf8c548c701b6873db6fcc6527d756385/starter_setup.sh",
+          "supports": "Documented setup installs TaskSolver and clones the Infinigen dependency by SSH."
+        },
+        {
+          "url": "https://github.com/richard-guyunqi/BlenderGym-Open/blob/67c8b48bf8c548c701b6873db6fcc6527d756385/TaskSolver/setup.py",
+          "supports": "Pinned model/runtime dependencies, including GPU-oriented packages."
+        },
+        {
+          "url": "https://github.com/richard-guyunqi/BlenderGym-Open/blob/67c8b48bf8c548c701b6873db6fcc6527d756385/evaluation.py",
+          "supports": "Public artifact/render evaluation implementation."
+        },
+        {
+          "url": "https://huggingface.co/datasets/richard-guyunqi/BG_bench_data",
+          "supports": "Public ungated benchmark archive; no dataset license declaration."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "officebench",
+      "name": "OfficeBench",
+      "description_en": "An office-workflow benchmark in which language agents coordinate document, spreadsheet, email and calendar operations through structured tool commands.",
+      "description_zh": "办公工作流基准，让语言 Agent 通过结构化工具命令协调文档、电子表格、邮件及日历操作。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "environment-and-benchmark",
+      "primary_url": "https://github.com/zlwang-cs/OfficeBench",
+      "repo_url": "https://github.com/zlwang-cs/OfficeBench",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2407.19056",
+      "enables_en": "Evaluate planning and application switching across local office artifacts using exact, fuzzy and execution-based task checks.",
+      "enables_zh": "使用精确匹配、模糊匹配及执行式任务检查，评估围绕本地办公文件的规划和应用切换。",
+      "limits_en": "The released applications are Python-backed tools in a Docker workspace, not native Microsoft Office GUI sessions. Email writes local .eml files and calendar actions write .ics files; they are not live account integrations. Setup requires Python 3.10, Docker, document/OCR dependencies and model access. The legacy image recipe expects a local model-key file and uses an unpinned Ubuntu base.",
+      "limits_zh": "发布的“应用”是在 Docker 工作区内由 Python 实现的工具，不是原生 Microsoft Office GUI 会话。邮件操作写入本地 .eml 文件，日历操作写入 .ics 文件，并非真实账号集成。需 Python 3.10、Docker、文档／OCR 依赖及模型访问；旧镜像配置需要本地模型密钥文件，且 Ubuntu 基础镜像未固定版本。",
+      "license_en": "The repository declares Apache-2.0. Included frameworks, document libraries and operating-system packages retain their respective terms.",
+      "license_zh": "仓库声明 Apache-2.0；所包含框架、文档库及操作系统软件包保留各自条款。",
+      "runtime": "The Dockerfile installs LibreOffice and Tesseract. Excel/Word actions use openpyxl/python-docx; mail and calendar tools manipulate local files. Model/provider configuration and task-specific assets remain necessary.",
+      "platform_note": "The target is a structured office-tool environment. An Ubuntu container and Office file formats do not establish native Linux or Windows application coverage.",
+      "reviewed_version": {
+        "source_commit": "b978b808667c32b52ce19a67ce1def1de9ae02b7"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/zlwang-cs/OfficeBench/blob/b978b808667c32b52ce19a67ce1def1de9ae02b7/README.md",
+          "supports": "Cross-application transition/action design, setup and task evaluation."
+        },
+        {
+          "url": "https://github.com/zlwang-cs/OfficeBench/blob/b978b808667c32b52ce19a67ce1def1de9ae02b7/apps/email_app/email_send_email.py",
+          "supports": "Email operation writes .eml files under the local testbed rather than using an SMTP account."
+        },
+        {
+          "url": "https://github.com/zlwang-cs/OfficeBench/blob/b978b808667c32b52ce19a67ce1def1de9ae02b7/apps/calendar_app/calendar_create_event.py",
+          "supports": "Calendar operation writes local .ics files."
+        },
+        {
+          "url": "https://github.com/zlwang-cs/OfficeBench/blob/b978b808667c32b52ce19a67ce1def1de9ae02b7/apps/excel_app/excel_set_cell.py",
+          "supports": "Spreadsheet changes use openpyxl rather than an Excel GUI."
+        },
+        {
+          "url": "https://github.com/zlwang-cs/OfficeBench/blob/b978b808667c32b52ce19a67ce1def1de9ae02b7/apps/word_app/word_write_to_file.py",
+          "supports": "Document changes use python-docx rather than Word GUI control."
+        },
+        {
+          "url": "https://github.com/zlwang-cs/OfficeBench/blob/b978b808667c32b52ce19a67ce1def1de9ae02b7/docker/Dockerfile",
+          "supports": "Ubuntu/LibreOffice/Tesseract image and local key-file build assumption."
+        },
+        {
+          "url": "https://github.com/zlwang-cs/OfficeBench/blob/b978b808667c32b52ce19a67ce1def1de9ae02b7/LICENSE",
+          "supports": "Apache-2.0 repository license."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "spreadsheetbench",
+      "name": "SpreadsheetBench",
+      "description_en": "A real-world spreadsheet-editing dataset and benchmark with multiple workbook test cases for each user instruction.",
+      "description_zh": "真实场景电子表格编辑数据集与基准，为每条用户指令提供多个工作簿测试用例。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "dataset-and-benchmark",
+      "primary_url": "https://github.com/RUCKBReasoning/SpreadsheetBench",
+      "repo_url": "https://github.com/RUCKBReasoning/SpreadsheetBench",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2406.14991",
+      "enables_en": "Evaluate spreadsheet edits against expected cells and formatting across varied input workbooks, including irregular tables and multi-sheet files.",
+      "enables_zh": "在不同输入工作簿上按预期单元格及格式评估编辑结果，涵盖不规则表格与多工作表文件。",
+      "limits_en": "The complete release has 912 instructions; Verified is an expert-annotated 400-instance subset, not 400 additional tasks. The code also retains older 200-example setup paths. Formula results need recalculation through LibreOffice or Excel before checking; record the workbook release and calculation backend. This is artifact editing, not a packaged GUI-navigation benchmark.",
+      "limits_zh": "完整发布包含 912 条指令；Verified 是经专家标注的 400 项子集，不是新增 400 项任务。代码仍保留较早的 200 示例配置路径。判分前需通过 LibreOffice 或 Excel 重算公式结果，并记录工作簿版本及计算后端。这是文件编辑评测，不是封装好的 GUI 导航基准。",
+      "license_en": "The project README and official dataset card declare CC BY-SA 4.0. Code-execution infrastructure and document software dependencies have separate licenses.",
+      "license_zh": "项目 README 及官方数据卡声明 CC BY-SA 4.0；代码执行基础设施和文档软件依赖另有许可。",
+      "runtime": "Released Python inference/evaluation code with a CodeAct-derived Docker execution service. Current recalculation supports LibreOffice 7.5+ or Windows Excel/win32com; backend availability does not imply benchmark execution was independently tested.",
+      "platform_note": "Spreadsheet files and their evaluators are the target artifacts; cross-platform runner support is not converted into native-app platform tags.",
+      "reviewed_version": {
+        "source_commit": "49b73a94775fb489063f60ca1865e3a650079a79",
+        "dataset_commit": "ab0b742b0fc95b946f212d80ac7771b5531272e4"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/RUCKBReasoning/SpreadsheetBench/blob/49b73a94775fb489063f60ca1865e3a650079a79/README.md",
+          "supports": "912-instruction release, 400-instance Verified subset, legacy sample paths and CC BY-SA 4.0 declaration."
+        },
+        {
+          "url": "https://github.com/RUCKBReasoning/SpreadsheetBench/blob/49b73a94775fb489063f60ca1865e3a650079a79/evaluation/open_spreadsheet.py",
+          "supports": "LibreOffice and Excel COM recalculation backends in the current source."
+        },
+        {
+          "url": "https://huggingface.co/datasets/KAKA22/SpreadsheetBench",
+          "supports": "Public complete and Verified archives with CC BY-SA 4.0 card."
+        },
+        {
+          "url": "https://arxiv.org/abs/2406.14991",
+          "supports": "Original benchmark design with multiple test workbooks per instruction."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "spreadsheetbench-2",
+      "name": "SpreadsheetBench 2",
+      "description_en": "A distinct benchmark for end-to-end business spreadsheet generation, debugging and visualization across complex multi-sheet workbooks.",
+      "description_zh": "面向复杂多工作表的独立业务流程基准，覆盖端到端电子表格生成、调试及可视化。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "dataset-and-benchmark",
+      "primary_url": "https://github.com/RUCKBReasoning/SpreadsheetBench-2",
+      "repo_url": "https://github.com/RUCKBReasoning/SpreadsheetBench-2",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2606.29955",
+      "enables_en": "Evaluate delivered financial models, repaired formulas, template completions and charts through cell/formula checks and visualization checklists.",
+      "enables_zh": "通过单元格／公式检查及可视化清单，评估交付的财务模型、公式修复、模板补全及图表。",
+      "limits_en": "This is a new workflow task set, not the original benchmark's Verified subset. Recalculate input, reference and output workbooks before scoring. Extracting charts from XLSX for VLM grading requires Windows Excel/WPS COM; the evaluator also accepts PNG outputs directly. Data is MIT-labeled, but no root license for original evaluation code was found. The README's root Dockerfile command disagrees with its actual SWE-agent/ location.",
+      "limits_zh": "这是新的工作流任务集，不是原基准的 Verified 子集。评分前需重算输入、参考及输出工作簿。从 XLSX 提取图表进行视觉语言模型评分，需要 Windows 上的 Excel／WPS COM；评分器也直接接受 PNG 输出。数据标注 MIT，但未找到原创评测代码的根目录许可。README 的根目录 Dockerfile 命令与文件实际位于 SWE-agent/ 的位置不符。",
+      "license_en": "The official dataset card declares MIT. The bundled SWE-agent component has its own license; that does not automatically establish a license for all original repository code or external spreadsheet software.",
+      "license_zh": "官方数据卡声明 MIT。内置 SWE-agent 组件有自己的许可，但不能自动据此认定全部原创仓库代码及外部电子表格软件的许可。",
+      "runtime": "Python 3.11, the bundled SWE-agent workflow and a Docker image with LibreOffice. Numeric/formula checking and Windows COM/VLM visualization checking are separate evaluation paths. Pin data archive, harness, spreadsheet engine and judge.",
+      "platform_note": "Targets workbook artifacts. Windows is required by the current chart-export evaluator, not asserted as the platform of every benchmark workflow.",
+      "reviewed_version": {
+        "source_commit": "5842db8f836887db15144b267467339bb7458f92",
+        "dataset_commit": "5a2215ed4121945ab09d8723df2995602090b042"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/RUCKBReasoning/SpreadsheetBench-2/blob/5842db8f836887db15144b267467339bb7458f92/README.md",
+          "supports": "Separate workflow dataset, four implementation folders, recalculation protocol and Windows COM/VLM visualization path."
+        },
+        {
+          "url": "https://github.com/RUCKBReasoning/SpreadsheetBench-2/blob/5842db8f836887db15144b267467339bb7458f92/SWE-agent/spreadsheet.Dockerfile",
+          "supports": "Actual Dockerfile location and Python 3.11/LibreOffice execution environment."
+        },
+        {
+          "url": "https://github.com/RUCKBReasoning/SpreadsheetBench-2/blob/5842db8f836887db15144b267467339bb7458f92/evaluation/evaluation.py",
+          "supports": "Inspectable cell, formula and formatting comparison implementation."
+        },
+        {
+          "url": "https://github.com/RUCKBReasoning/SpreadsheetBench-2/blob/5842db8f836887db15144b267467339bb7458f92/evaluation/run_visual_vlm_checklist_eval.py",
+          "supports": "Excel/WPS COM chart export and separate VLM checklist grading."
+        },
+        {
+          "url": "https://huggingface.co/datasets/KAKA22/SpreadsheetBench-v2",
+          "supports": "Public workflow-data archives with MIT dataset card."
+        },
+        {
+          "url": "https://arxiv.org/abs/2606.29955",
+          "supports": "Original paper defines a new workflow-level task set, substantively distinct from SpreadsheetBench 1."
+        },
+        {
+          "url": "https://github.com/RUCKBReasoning/SpreadsheetBench-2/blob/5842db8f836887db15144b267467339bb7458f92/evaluation/run_visual_vlm_checklist_eval.py#L1197-L1222",
+          "supports": "Finds .xlsx and .png; if png_path assigns image_input directly; elif xlsx_path invokes chart_exporter."
+        },
+        {
+          "url": "https://github.com/RUCKBReasoning/SpreadsheetBench-2/blob/5842db8f836887db15144b267467339bb7458f92/evaluation/run_visual_vlm_checklist_eval.py#L246-L278",
+          "supports": "COM detection checks Excel.Application and Ket.Application and is used by the chart-image exporter."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "os-sentinel",
+      "name": "OS-Sentinel / MobileRisk-Live",
+      "resource_kind": "environment-and-benchmark",
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/OS-Copilot/OS-Sentinel",
+      "repo_url": "https://github.com/OS-Copilot/OS-Sentinel",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "description_en": "An Android safety-research framework combining state/rule checks and a vision-language judge, with mobile task scenarios and recorded-risk trajectory evaluation.",
+      "description_zh": "Android 安全研究框架，结合状态／规则检查与视觉语言模型评审，提供移动任务场景及风险轨迹评测。",
+      "paper_url": "https://arxiv.org/abs/2510.24411",
+      "enables_en": "Evaluate action-level and trajectory-level safety detection, or record agents operating in the AndroidWorld-based MobileSafetyBench implementation.",
+      "enables_zh": "评估动作级和轨迹级安全检测，或记录 Agent 在基于 AndroidWorld 的 MobileSafetyBench 实现中的操作。",
+      "limits_en": "Public code and task scenarios exist, but setup requires separately supplied Android apps. Four APK download URLs in root.py are literal placeholders; follow the app-version file manually. Safety detection is not a guarantee of safe behavior or task completion. The README MIT badge conflicts with the Apache-2.0 LICENSE; MobileRisk data has no public license card.",
+      "limits_zh": "代码及任务场景已公开，但需另行准备 Android 应用。root.py 中四个 APK 下载地址仍为占位符，需人工按版本文件准备。安全检测不等于安全行为或任务完成保证。README 的 MIT 徽章与 Apache-2.0 LICENSE 冲突；MobileRisk 数据未提供公开许可卡。",
+      "runtime_note_en": "Requires AndroidWorld/emulator setup, specified APK versions, Node.js/Appium/UIAutomator2 and task configuration. External VLM modes need model access. The repository calls its runtime MobileSafetyBench; the current paper calls the environment MobileRisk-Live. Recorded-data archives were listed, not downloaded.",
+      "runtime_note_zh": "需配置 AndroidWorld／模拟器、指定版本 APK、Node.js／Appium／UIAutomator2 及任务参数；外部视觉模型模式需模型访问。仓库运行环境名为 MobileSafetyBench，当前论文称 MobileRisk-Live。已确认记录数据档案列表，但未下载。",
+      "license_en": "Root LICENSE is Apache-2.0 while the README badge says MIT. MobileRisk has no public license declaration. Third-party Android applications retain their own terms.",
+      "license_zh": "根目录 LICENSE 为 Apache-2.0，但 README 徽章标注 MIT；MobileRisk 未公开声明许可。第三方 Android 应用保留各自条款。",
+      "license_url": "https://github.com/OS-Copilot/OS-Sentinel/blob/fd7f57aa92aab55b74defc2c804aaf842aaed3c2/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/OS-Copilot/OS-Sentinel/blob/fd7f57aa92aab55b74defc2c804aaf842aaed3c2/README.md",
+          "supports": "AndroidWorld/Appium setup, live step/record modes, recorded-data evaluators and MIT badge."
+        },
+        {
+          "url": "https://github.com/OS-Copilot/OS-Sentinel/blob/fd7f57aa92aab55b74defc2c804aaf842aaed3c2/msb.py",
+          "supports": "Substantive MobileSafetyEnv agent runner with task/scenario selection; source read only."
+        },
+        {
+          "url": "https://github.com/OS-Copilot/OS-Sentinel/blob/fd7f57aa92aab55b74defc2c804aaf842aaed3c2/pipeline/eval.py",
+          "supports": "Released rule/state, trajectory and action-level VLM safety evaluation."
+        },
+        {
+          "url": "https://github.com/OS-Copilot/OS-Sentinel/blob/fd7f57aa92aab55b74defc2c804aaf842aaed3c2/asset/tasks/tasks.json",
+          "supports": "80 scenario rows across 21 unique task_id values; these are not80 independent base workflows."
+        },
+        {
+          "url": "https://github.com/OS-Copilot/OS-Sentinel/blob/fd7f57aa92aab55b74defc2c804aaf842aaed3c2/root.py",
+          "supports": "Four APK URLs are literal placeholders; missing files must be supplied separately."
+        },
+        {
+          "url": "https://github.com/OS-Copilot/OS-Sentinel/blob/fd7f57aa92aab55b74defc2c804aaf842aaed3c2/asset/environments/apk_versions.txt",
+          "supports": "App versions and manual APK preparation; Simple Calendar filename differs from root.py."
+        },
+        {
+          "url": "https://github.com/OS-Copilot/OS-Sentinel/blob/fd7f57aa92aab55b74defc2c804aaf842aaed3c2/LICENSE",
+          "supports": "Apache-2.0 text conflicts with the badge."
+        },
+        {
+          "url": "https://huggingface.co/api/datasets/OS-Copilot/MobileRisk",
+          "supports": "Public ungated archive listing, no license card; archive contents not inspected."
+        },
+        {
+          "url": "https://arxiv.org/abs/2510.24411",
+          "supports": "Current paper names MobileRisk-Live and describes the hybrid safety detector."
+        }
+      ]
+    },
+    {
+      "id": "webarena-verified",
+      "name": "WebArena-Verified",
+      "resource_kind": "benchmark-suite",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/ServiceNow/webarena-verified",
+      "repo_url": "https://github.com/ServiceNow/webarena-verified",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "description_en": "A separately maintained WebArena evaluation artifact with revised task definitions, structured response checks and offline scoring from captured network traces.",
+      "description_zh": "独立维护的 WebArena 评测产物，提供修订任务、结构化答案检查及基于已记录网络轨迹的离线判分。",
+      "paper_url": "https://openreview.net/forum?id=94tlGxmqkN",
+      "enables_en": "Re-score recorded web-agent outputs with deterministic normalization and structural checks, or collect new runs using supported self-hosted sites.",
+      "enables_zh": "通过确定性的规范化及结构检查，对已记录网页 Agent 输出重新评分，或在支持的自建网站上收集新运行。",
+      "limits_en": "This revises the original WebArena task family. Its 812 full tasks and 258-task Hard subset in v1.2.3 are not independent tasks to add to WebArena. Offline scoring requires the expected response and trace artifacts; new trajectories still need sites and resets. Pin evaluator/data/image versions; scores need not match the original evaluator.",
+      "limits_zh": "它修订原始 WebArena 任务族。v1.2.3 的812项完整任务及258项 Hard 子集，不是可叠加到 WebArena 的新独立任务。离线判分需指定的答案和轨迹产物；收集新轨迹仍需网站及重置。应固定评分器、数据和镜像版本，成绩不一定与原始评分器一致。",
+      "runtime_note_en": "Python >=3.11 with CLI/package or Docker. The evaluator consumes agent responses and recorded network events. Website containers and optional map/Wikipedia downloads are separate. No container, task replay or state reset was executed.",
+      "runtime_note_zh": "支持 Python >=3.11 的 CLI／软件包或 Docker。评分器读取 Agent 答案和网络事件记录；网站容器及可选地图／维基百科下载需另行配置。本次未启动容器、重放任务或重置状态。",
+      "license_en": "Evaluator code and the v1.2.3 dataset card declare Apache-2.0. Underlying website software and content retain their own terms.",
+      "license_zh": "评分代码及 v1.2.3 数据卡声明 Apache-2.0，底层网站软件与内容仍适用各自条款。",
+      "license_url": "https://github.com/ServiceNow/webarena-verified/blob/6473f72db5dcefc97b5725b59e734504edc28a21/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/ServiceNow/webarena-verified/blob/6473f72db5dcefc97b5725b59e734504edc28a21/README.md",
+          "supports": "Released CLI/evaluator, offline traces, full/Hard sets, site deployment and author paper citation."
+        },
+        {
+          "url": "https://github.com/ServiceNow/webarena-verified/blob/6473f72db5dcefc97b5725b59e734504edc28a21/src/webarena_verified/core/evaluation/value_comparator.py",
+          "supports": "Inspectable recursive structural comparisons and assertion statuses."
+        },
+        {
+          "url": "https://github.com/ServiceNow/webarena-verified/blob/6473f72db5dcefc97b5725b59e734504edc28a21/pyproject.toml",
+          "supports": "Python >=3.11 and package/build configuration."
+        },
+        {
+          "url": "https://github.com/ServiceNow/webarena-verified/blob/6473f72db5dcefc97b5725b59e734504edc28a21/LICENSE",
+          "supports": "Apache-2.0 code license."
+        },
+        {
+          "url": "https://huggingface.co/datasets/AmineHA/WebArena-Verified/blob/0566051c3050bc41ee425cacc58c82528666d1b5/README.md",
+          "supports": "Full 812/Hard 258, Apache-2.0, v1.2.3 and matching source commit."
+        },
+        {
+          "url": "https://huggingface.co/datasets/AmineHA/WebArena-Verified/blob/0566051c3050bc41ee425cacc58c82528666d1b5/version.json",
+          "supports": "Dataset hash and source release metadata."
+        }
+      ]
+    },
+    {
+      "id": "clawbench",
+      "name": "ClawBench",
+      "resource_kind": "benchmark-suite",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/TIGER-AI-Lab/ClawBench",
+      "repo_url": "https://github.com/TIGER-AI-Lab/ClawBench",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "description_en": "A live-website evaluation framework with everyday task specifications, browser-agent harnesses, trace capture and request-based or trajectory-based scoring.",
+      "description_zh": "面向真实网站的评测框架，提供日常任务定义、浏览器 Agent 框架、轨迹记录及请求或轨迹评分。",
+      "paper_url": "https://arxiv.org/abs/2604.08523",
+      "enables_en": "Evaluate document-informed online workflows and inspect recorded actions, requests and model messages under a chosen corpus, harness and rubric.",
+      "enables_zh": "评估需要利用文档信息的在线流程，并在明确语料版本、框架和评分规则后检查动作、请求及模型消息。",
+      "limits_en": "Runs touch production websites and may need accounts or external services. Interception blocks only requests matching a task schema; nonmatching requests continue live, and placeholder schemas do not block submissions. A blocked request plus judge approval is not a committed real-world result. Current V1/V2 folders have 152/129 tasks; historical counts and scoring protocols differ.",
+      "limits_zh": "运行涉及真实生产网站，可能需要账号或外部服务。拦截仅阻止匹配任务规则的请求；未匹配请求仍发送到真实网站，占位规则不会阻止提交。请求被拦截且评审通过，不代表真实结果已提交。当前 V1／V2 目录有152／129项任务，历史数量及评分协议不同。",
+      "runtime_note_en": "Package v0.11.0 requires Python >=3.11, Docker/Podman or documented remote-browser setup, and model/judge configuration. Native interception scoring and historical V1 human-reference trajectory judging are separate protocols. Live sites, login and browser restrictions remain external dependencies.",
+      "runtime_note_zh": "v0.11.0 软件包要求 Python >=3.11、Docker／Podman 或文档支持的远程浏览器，并配置模型／评审服务。本地拦截评分与历史 V1 人工参考轨迹评审属于不同协议。真实网站、登录及浏览器限制仍是外部依赖。",
+      "license_en": "Repository code and inspected official task/V1-trace metadata declare Apache-2.0. This does not license third-party websites or authorize live task actions.",
+      "license_zh": "仓库代码及已查阅的官方任务／V1轨迹元数据声明 Apache-2.0；该许可不涵盖第三方网站，也不代表获得执行真实任务的授权。",
+      "license_url": "https://github.com/TIGER-AI-Lab/ClawBench/blob/07eb50a3d4c5a799f5ad4eebd57c67c10417787f/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/TIGER-AI-Lab/ClawBench/blob/07eb50a3d4c5a799f5ad4eebd57c67c10417787f/README.md",
+          "supports": "Released harnesses, current corpus counts and historical paper-count differences."
+        },
+        {
+          "url": "https://github.com/TIGER-AI-Lab/ClawBench/blob/07eb50a3d4c5a799f5ad4eebd57c67c10417787f/docs/faq.md",
+          "supports": "Account setup, nonmatching live requests, placeholder interception and distinct V1 trajectory scoring."
+        },
+        {
+          "url": "https://github.com/TIGER-AI-Lab/ClawBench/blob/07eb50a3d4c5a799f5ad4eebd57c67c10417787f/test-cases/v1/001-daily-life-food-uber-eats/task.json",
+          "supports": "One inspected task uses __PLACEHOLDER_WILL_NOT_MATCH__; no task was run."
+        },
+        {
+          "url": "https://github.com/TIGER-AI-Lab/ClawBench/blob/07eb50a3d4c5a799f5ad4eebd57c67c10417787f/src/clawbench/runner/judge.py",
+          "supports": "Public request/answer judging implementation and model configuration."
+        },
+        {
+          "url": "https://github.com/TIGER-AI-Lab/ClawBench/blob/07eb50a3d4c5a799f5ad4eebd57c67c10417787f/eval/scoring.md",
+          "supports": "Two-stage request scoring and older corpus denominators; not a universal state-commit guarantee."
+        },
+        {
+          "url": "https://github.com/TIGER-AI-Lab/ClawBench/blob/07eb50a3d4c5a799f5ad4eebd57c67c10417787f/pyproject.toml",
+          "supports": "Package 0.11.0, Python >=3.11 and bundled task/CLI implementation."
+        },
+        {
+          "url": "https://github.com/TIGER-AI-Lab/ClawBench/blob/07eb50a3d4c5a799f5ad4eebd57c67c10417787f/LICENSE",
+          "supports": "Apache-2.0 code license."
+        },
+        {
+          "url": "https://huggingface.co/api/datasets/NAIL-Group/ClawBench",
+          "supports": "Public ungated task metadata declares Apache-2.0."
+        },
+        {
+          "url": "https://huggingface.co/api/datasets/NAIL-Group/ClawBenchV1Trace",
+          "supports": "Public ungated trace metadata declares Apache-2.0; trace contents not downloaded."
+        }
+      ]
+    },
+    {
+      "id": "mind2web-2",
+      "name": "Mind2Web 2",
+      "resource_kind": "benchmark-suite",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/OSU-NLP-Group/Mind2Web-2",
+      "repo_url": "https://github.com/OSU-NLP-Group/Mind2Web-2",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "description_en": "An agentic-search benchmark for long-horizon web research and citation-backed synthesis, with a released judge-agent framework and versioned task-specific evaluators.",
+      "description_zh": "面向长流程网页研究及带来源综合回答的 Agent 搜索基准，提供公开评审 Agent 框架及带版本的任务专用评分器。",
+      "paper_url": "https://arxiv.org/abs/2506.21506",
+      "enables_en": "Assess completeness and source attribution of synthesized answers with task-specific verification trees and cached evidence pages.",
+      "enables_zh": "利用任务专用验证树及缓存证据网页，评估综合回答的完整性和来源归属。",
+      "limits_en": "Distinct from offline Mind2Web action prediction and Online-Mind2Web navigation. Public Git code includes 10 development evaluators; current full task/evaluator files on Hub are auto-gated and were not accessed. Full evaluator release was announced in October 2025, so the paper-era private-test description is historical. Live pages and model judgments require version/date controls.",
+      "limits_zh": "区别于离线 Mind2Web 动作预测和 Online-Mind2Web 导航。公开 Git 代码包含10个开发集评分器；Hub 当前完整任务／评分文件设有自动批准的访问门槛，本次未访问。完整评分器于2025年10月宣布发布，因此论文时期的私有测试集说明属于历史状态。实时网页及模型判分需固定版本和日期。",
+      "runtime_note_en": "Python >=3.11, browser/webpage-cache services and judge models; some tasks use Google Maps APIs. The runner defaults to 2025_07_14 evaluators while Hub lists 2025_10_23 scripts. Align script release, task split and caches. No browser or evaluator was executed.",
+      "runtime_note_zh": "需 Python >=3.11、浏览器／网页缓存服务及评审模型；部分任务使用 Google Maps API。运行器默认评分版本为2025_07_14，而 Hub 列出2025_10_23脚本。应对齐脚本版本、任务划分及缓存；本次未运行浏览器或评分器。",
+      "license_en": "Git repository code is MIT. Public Hub metadata declares CC BY 4.0 for the gated task/evaluator distribution. Live source pages retain their own terms.",
+      "license_zh": "Git 仓库代码采用 MIT；公开 Hub 元数据为需通过访问门槛的任务／评分分发声明 CC BY 4.0。实时来源网页仍适用各自条款。",
+      "license_url": "https://github.com/OSU-NLP-Group/Mind2Web-2/blob/1fcbfda98bf5c669daa2ed0a27f1d2f2499475ee/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/OSU-NLP-Group/Mind2Web-2/blob/1fcbfda98bf5c669daa2ed0a27f1d2f2499475ee/README.md",
+          "supports": "Search/synthesis scope, full-release announcement, caching and API requirements."
+        },
+        {
+          "url": "https://github.com/OSU-NLP-Group/Mind2Web-2/blob/1fcbfda98bf5c669daa2ed0a27f1d2f2499475ee/run_eval.py",
+          "supports": "Substantive task evaluation dispatcher and default script version."
+        },
+        {
+          "url": "https://github.com/OSU-NLP-Group/Mind2Web-2/blob/1fcbfda98bf5c669daa2ed0a27f1d2f2499475ee/eval_scripts/dev_set/yu_lineage.py",
+          "supports": "Public task-specific verification-tree and attribution checks."
+        },
+        {
+          "url": "https://github.com/OSU-NLP-Group/Mind2Web-2/blob/1fcbfda98bf5c669daa2ed0a27f1d2f2499475ee/eval_scripts/README.md",
+          "supports": "Directs users to Hub for current full evaluator scripts."
+        },
+        {
+          "url": "https://huggingface.co/api/datasets/osunlp/Mind2Web-2",
+          "supports": "gated=auto, dev_set/test_set, CC BY4.0 and 2025_10_23 filenames; gated contents not inspected."
+        },
+        {
+          "url": "https://github.com/OSU-NLP-Group/Mind2Web-2/blob/1fcbfda98bf5c669daa2ed0a27f1d2f2499475ee/pyproject.toml",
+          "supports": "Python >=3.11 and package dependencies."
+        },
+        {
+          "url": "https://github.com/OSU-NLP-Group/Mind2Web-2/blob/1fcbfda98bf5c669daa2ed0a27f1d2f2499475ee/LICENSE",
+          "supports": "MIT code license."
+        },
+        {
+          "url": "https://arxiv.org/abs/2506.21506",
+          "supports": "Original paper describes 130 tasks and a historical 10-development/120-test division."
+        }
+      ]
+    },
+    {
+      "id": "webbench",
+      "name": "WebBench",
+      "resource_kind": "dataset-and-benchmark",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/Halluminate/WebBench",
+      "repo_url": "https://github.com/Halluminate/WebBench",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "description_en": "A public collection of live-website task instructions spanning reading, account changes and file operations, accompanied by published evaluation results.",
+      "description_zh": "公开的真实网站任务指令集合，覆盖阅读、账号修改及文件操作，并附有已发布的评测结果。",
+      "paper_url": null,
+      "enables_en": "Select concrete browser workflows by action category and starting URL, then use a separately supplied authorized agent and outcome-review procedure.",
+      "enables_zh": "按操作类别和起始网址选择具体浏览器流程，再使用另行配置且获得授权的 Agent 与结果评审流程。",
+      "limits_en": "The repository publishes CSV tasks and results, not a complete resettable environment or evaluator package. WRITE tasks change real account state and need appropriate test-account authorization. The current main CSV has 2,647 records while the README reports 2,454; pin the file. All 315 HITL rows also occur in the main collection.",
+      "limits_zh": "仓库发布 CSV 任务及结果，并未提供完整可重置环境或评分器软件包。WRITE 任务会改变真实账号状态，需相应测试账号授权。当前主 CSV 有2,647条记录，README 则写2,454；应固定文件版本。315行 HITL 记录也全部存在于主集合。",
+      "runtime_note_en": "Bring your own browser agent, accounts where needed and task-outcome assessment. Public fields are ID, Starting URL, Category and Task; no executable outcome tests are embedded. Sites, authentication and downloads can change. No live task was attempted.",
+      "runtime_note_zh": "需自行准备浏览器 Agent、必要账号及任务结果评估方式。公开字段为 ID、Starting URL、Category 和 Task，不包含可执行结果测试。网站、认证及下载行为可能变化；本次未尝试真实任务。",
+      "license_en": "Repository LICENSE and official Hub card declare MIT. This does not cover third-party website content or authorize account mutations.",
+      "license_zh": "仓库 LICENSE 及官方 Hub 数据卡声明 MIT；该许可不涵盖第三方网站内容，也不授予修改账号状态的权限。",
+      "license_url": "https://github.com/Halluminate/WebBench/blob/ea7a1628443321363989f354401f0653e0cba6f4/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/Halluminate/WebBench/blob/ea7a1628443321363989f354401f0653e0cba6f4/README.md",
+          "supports": "Task categories, historical 2,454/452 headline; no own paper or complete evaluator identified."
+        },
+        {
+          "url": "https://github.com/Halluminate/WebBench/blob/ea7a1628443321363989f354401f0653e0cba6f4/webbenchfinal.csv",
+          "supports": "Pinned CSV has 2,647 unique IDs and 453 distinct Starting URL strings; metadata read only."
+        },
+        {
+          "url": "https://github.com/Halluminate/WebBench/blob/ea7a1628443321363989f354401f0653e0cba6f4/webbench_hitl_final.csv",
+          "supports": "315 rows with Difficulty; all IDs and task texts match records in main CSV."
+        },
+        {
+          "url": "https://github.com/Halluminate/WebBench/blob/ea7a1628443321363989f354401f0653e0cba6f4/LICENSE",
+          "supports": "MIT repository license."
+        },
+        {
+          "url": "https://huggingface.co/datasets/Halluminate/WebBench",
+          "supports": "Official MIT-labeled public ungated distribution."
+        },
+        {
+          "url": "https://github.com/Halluminate/WebBench/tree/ea7a1628443321363989f354401f0653e0cba6f4",
+          "supports": "Source root contains README/license, CSV tasks and results; no runnable evaluator established."
         }
       ]
     }

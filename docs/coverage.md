@@ -4,7 +4,7 @@ This directory covers software made with AI and resources used to train or evalu
 
 ## What counts as an entry
 
-A distinct authored application, environment, framework, benchmark, or dataset with a primary source and a specific use. Two named apps in one published example collection can be distinct entries; two links to the same app are merged. Papers and their associated project entries are counted separately and are not additive.
+A distinct authored application, environment, framework, benchmark, or dataset with a primary source and a specific use. Two named apps in one published example collection can be distinct entries; two links to the same app are merged. A separately maintained evaluator or new task release can have its own entry while sharing a project family. For example, WebArena-Verified revises WebArena's task family, and its full and Hard counts are not additive. Catalog totals count entries, not independent task universes. Papers and their associated entries are counted separately and are not additive.
 
 Record resource type, intended use, development provenance, and platform independently. A screenshot dataset is not a runnable OS; an environment built with AI is not automatically a consumer-software showcase. Unknown facts remain unknown.
 

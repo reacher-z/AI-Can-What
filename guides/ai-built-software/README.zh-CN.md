@@ -39,6 +39,16 @@
 | [RhoUnpacker](https://aicanwhat.com/zh/projects/rhounpacker/) · [Source](https://github.com/w1426421352/RhoUnpacker) | 研究围绕独立人工库构建的 AI 生成 Windows 命令行层。 | AI 生成的是命令行层，核心解包库 KartLibrary 由人工编写。文档中的 Native AOT 目标为 Windows x64，项目采用 GPLv3。 |
 | [Shelly](https://aicanwhat.com/zh/projects/shelly-android/) · [Source](https://github.com/RYOITABASHI/Shelly) | 查看有预发布分发说明的 Android 终端应用。 | 维护者将其列为预发布软件，后台自主执行循环仅记录过一次 Galaxy Z Fold6 验证。文档指定 android-latest 滚动发布为 APK 来源；本次核查的清单版本为 8.1.1。仓库代码采用 GPLv3。 |
 
+## 创作类桌面应用
+
+这些 Alpha 应用有作者自述的 LLM 辅助开发证据、公开源码和桌面安装包。产物可下载并不代表专业文件兼容性或运行稳定性已经验证。
+
+| 项目与证据 | 适合研究的问题 | 配置与限制 |
+| --- | --- | --- |
+| [PhotoCraft](https://aicanwhat.com/zh/projects/photocraft/) · [Source](https://getartcraft.com/apps/photocraft) | 查看分层图像编辑实现及明确记录的 PSD 和工作流限制。 | 早期 alpha。维护者明确表示尚不能替代 Photoshop 的日常专业工作，排版、插件及其他流程仍不完整。即使渲染相同，应用级 PSD 保存也不是逐字节一致的往返；已核查源码尚不能读取 AVIF 或 JPEG XL。本次未进行编辑或文件保真测试。 |
+| [VectorCraft](https://aicanwhat.com/zh/projects/vectorcraft/) · [Source](https://getartcraft.com/apps/vectorcraft) | 研究矢量编辑及格式交换，留意尚不完整的 Illustrator 和 Affinity 兼容性。 | Alpha 阶段。Illustrator 编辑数据的可靠交换仍未完成，Affinity 文件仅支持读取，栅格特效、3D／材质流程及竖排 CJK 排版仍有缺口。未把上游自行评估的成熟度百分比当作验证结果。本次未测试原生交互或跨应用往返。 |
+| [FilmCraft](https://aicanwhat.com/zh/projects/filmcraft/) · [Source](https://getartcraft.com/apps/filmcraft) | 查看原生视频编辑器实现及其公开说明的 Alpha 阶段工作流缺口。 | Alpha 阶段。尚无 Premiere .prproj 导入及 VST3／Audio Units／OpenFX 插件宿主。编解码与硬件路径存在差异：文档中的软件交付编码为 H.264，H.265 需要受支持硬件。部分特效及导出渲染仍依赖 CPU；作者称 Windows／Linux 的测试少于 macOS。本次未测试播放、导出、编解码一致性或硬件。 |
+
 ## 选择时的常见问题
 
 ### AI 构建是否代表所有素材和依赖都由 AI 生成？

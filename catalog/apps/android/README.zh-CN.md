@@ -2,7 +2,7 @@
 
 [全部应用资源](../README.zh-CN.md) · [网站索引](https://aicanwhat.com/zh/apps/android/)
 
-19 个条目。平台标签可能指可运行应用、环境目标或数据集中的截图来源；请同时查看资源类型和限制。
+20 个条目。平台标签可能指可运行应用、环境目标或数据集中的截图来源；请同时查看资源类型和限制。
 
 | 项目 | 资源类型 | 用途 | 原始来源 |
 | --- | --- | --- | --- |
@@ -22,6 +22,7 @@
 | [MobileAgentBench](https://aicanwhat.com/zh/projects/mobileagentbench/) | 环境与评测 | 评测 | [Source](https://github.com/MobileAgentBench/mobile-agent-bench) |
 | [Nacre](https://aicanwhat.com/zh/projects/nacre/) | AI 软件作品 | 作品展示 | [Source](https://github.com/RYOITABASHI/Nacre) |
 | [OneBotan](https://aicanwhat.com/zh/projects/onebotan/) | AI 软件作品 | 作品展示 | [Source](https://github.com/mirute02/onebotan) |
+| [OS-Sentinel / MobileRisk-Live](https://aicanwhat.com/zh/projects/os-sentinel/) | 环境与评测 | 评测 | [Source](https://github.com/OS-Copilot/OS-Sentinel) |
 | [ScreenSpot](https://aicanwhat.com/zh/projects/screenspot/) | 数据集与评测 | 评测 | [Source](https://github.com/njucckevin/SeeClick) |
 | [Shelly](https://aicanwhat.com/zh/projects/shelly-android/) | AI 软件作品 | 作品展示 | [Source](https://github.com/RYOITABASHI/Shelly) |
 | [SPA-Bench](https://aicanwhat.com/zh/projects/spa-bench/) | 环境与评测 | 评测 | [Source](https://github.com/ai-agents-2030/SPA-Bench) |

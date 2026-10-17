@@ -13,7 +13,9 @@ Actual browser interactions belong in `data/observations.json`, with concrete st
 
 Use `resource_kind` to distinguish AI-generated outputs, environments with tasks, environment frameworks, benchmark suites, and static datasets. Games includes virtual worlds; Apps includes software, API simulations, and software-engineering tasks. Dataset platform tags describe the source of its examples, not an executable operating system.
 
-Paper metadata lives in `data/papers.json` and maps back to stable catalog IDs. Preserve the original title and author order; dates are first arXiv submission dates. Journal dates and identifiers are separate fields. Keep summaries concise and original, and do not describe old model scores as current performance.
+Paper metadata lives in `data/papers.json`. Preserve the original title and author order; arXiv dates are first submissions. Other primary publications use their exact source URL and identified date meaning. If only a publication year is verified, set `published_at` to null and record `publication_year` with bilingual date notes; never invent a month/day or arXiv ID. Journal dates and identifiers stay separate. Keep summaries concise and original, and do not describe old scores as current performance.
+
+Papers normally map to stable catalog IDs. Relevant research without a reviewed catalog artifact can use `catalog_status: paper-only` and empty `project_ids`, with bilingual artifact notes, a status-review date and original artifact-source links. This preserves literature while keeping unreleased, partial or unverified artifacts out of runnable-project claims. These papers do not add to the project count. When a reviewed artifact is later added, update its association rather than duplicate the paper.
 
 Each entry needs concise original English and Chinese descriptions, practical limits, source URLs, and a review date. Prefer useful and representative projects over a large entry count. Never manufacture scores, endorsements, affiliation, licenses, or claims of AI authorship.
 
@@ -23,6 +25,7 @@ Run before proposing a change:
 python3 scripts/build.py
 python3 scripts/validate.py
 node --check static/app.js
+node --check static/search.js
 node --check static/registry.js
 python3 -m unittest discover -s tests
 ```
