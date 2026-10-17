@@ -2201,6 +2201,618 @@
       "description_en": "Surveys VGDL and GVGAI’s planning, learning and procedural-content tracks, clarifying their different access assumptions and evaluation goals.",
       "description_zh": "综述 VGDL 及 GVGAI 的规划、学习和程序化内容赛道，说明不同的信息访问假设与评测目标。",
       "source_url": "https://arxiv.org/abs/1802.10363"
+    },
+    {
+      "id": "2402.16801",
+      "title": "Craftax: A Lightning-Fast Benchmark for Open-Ended Reinforcement Learning",
+      "authors": [
+        "Michael Matthews",
+        "Michael Beukman",
+        "Benjamin Ellis",
+        "Mikayel Samvelyan",
+        "Matthew Jackson",
+        "Samuel Coward",
+        "Jakob Foerster"
+      ],
+      "published_at": "2024-02-26",
+      "arxiv_url": "https://arxiv.org/abs/2402.16801",
+      "project_ids": [
+        "craftax"
+      ],
+      "description_en": "Introduces Craftax-Classic as a JAX Crafter reimplementation and the extended Craftax world for exploration, planning and open-ended learning.",
+      "description_zh": "介绍以 JAX 重写的 Craftax-Classic，以及面向探索、规划和开放式学习的扩展 Craftax 世界。",
+      "source_url": "https://arxiv.org/abs/2402.16801"
+    },
+    {
+      "id": "2306.09884",
+      "title": "Jumanji: a Diverse Suite of Scalable Reinforcement Learning Environments in JAX",
+      "authors": [
+        "Clément Bonnet",
+        "Daniel Luo",
+        "Donal Byrne",
+        "Shikha Surana",
+        "Sasha Abramowitz",
+        "Paul Duckworth",
+        "Vincent Coyette",
+        "Laurence I. Midgley",
+        "Elshadai Tegegn",
+        "Tristan Kalloniatis",
+        "Omayma Mahjoub",
+        "Matthew Macfarlane",
+        "Andries P. Smit",
+        "Nathan Grinsztajn",
+        "Raphael Boige",
+        "Cemlyn N. Waters",
+        "Mohamed A. Mimouni",
+        "Ulrich A. Mbou Sob",
+        "Ruan de Kock",
+        "Siddarth Singh",
+        "Daniel Furelos-Blanco",
+        "Victor Le",
+        "Arnu Pretorius",
+        "Alexandre Laterre"
+      ],
+      "published_at": "2023-06-16",
+      "arxiv_url": "https://arxiv.org/abs/2306.09884",
+      "project_ids": [
+        "jumanji"
+      ],
+      "description_en": "Presents configurable JAX decision environments spanning logic games and combinatorial problems, with interfaces and evaluation baselines.",
+      "description_zh": "提出可配置的 JAX 决策环境，覆盖逻辑游戏和组合问题，并提供接口及评测基线。",
+      "source_url": "https://arxiv.org/abs/2306.09884"
+    },
+    {
+      "id": "2107.06857",
+      "title": "Scalable Evaluation of Multi-Agent Reinforcement Learning with Melting Pot",
+      "authors": [
+        "Joel Z. Leibo",
+        "Edgar Duéñez-Guzmán",
+        "Alexander Sasha Vezhnevets",
+        "John P. Agapiou",
+        "Peter Sunehag",
+        "Raphael Koster",
+        "Jayd Matyas",
+        "Charles Beattie",
+        "Igor Mordatch",
+        "Thore Graepel"
+      ],
+      "published_at": "2021-07-14",
+      "arxiv_url": "https://arxiv.org/abs/2107.06857",
+      "project_ids": [
+        "melting-pot"
+      ],
+      "description_en": "Introduces evaluation of multi-agent generalization to unfamiliar social situations using interactive worlds and reference co-players.",
+      "description_zh": "提出利用交互世界和参考共同参与者，评估多 Agent 对陌生社会场景的泛化能力。",
+      "source_url": "https://arxiv.org/abs/2107.06857"
+    },
+    {
+      "id": "2211.13746",
+      "title": "Melting Pot 2.0",
+      "authors": [
+        "John P. Agapiou",
+        "Alexander Sasha Vezhnevets",
+        "Edgar A. Duéñez-Guzmán",
+        "Jayd Matyas",
+        "Yiran Mao",
+        "Peter Sunehag",
+        "Raphael Köster",
+        "Udari Madhushani",
+        "Kavya Kopparapu",
+        "Ramona Comanescu",
+        "DJ Strouse",
+        "Michael B. Johanson",
+        "Sukhdeep Singh",
+        "Julia Haas",
+        "Igor Mordatch",
+        "Dean Mobbs",
+        "Joel Z. Leibo"
+      ],
+      "published_at": "2022-11-24",
+      "arxiv_url": "https://arxiv.org/abs/2211.13746",
+      "project_ids": [
+        "melting-pot"
+      ],
+      "description_en": "Documents Melting Pot 2.0 substrates, background populations, asymmetric roles and the social-generalization evaluation protocol.",
+      "description_zh": "介绍 Melting Pot 2.0 的基础世界、背景群体、非对称角色与社会泛化评测规范。",
+      "source_url": "https://arxiv.org/abs/2211.13746"
+    },
+    {
+      "id": "1612.03801",
+      "title": "DeepMind Lab",
+      "authors": [
+        "Charles Beattie",
+        "Joel Z. Leibo",
+        "Denis Teplyashin",
+        "Tom Ward",
+        "Marcus Wainwright",
+        "Heinrich Küttler",
+        "Andrew Lefrancq",
+        "Simon Green",
+        "Víctor Valdés",
+        "Amir Sadik",
+        "Julian Schrittwieser",
+        "Keith Anderson",
+        "Sarah York",
+        "Max Cant",
+        "Adam Cain",
+        "Adrian Bolton",
+        "Stephen Gaffney",
+        "Helen King",
+        "Demis Hassabis",
+        "Shane Legg",
+        "Stig Petersen"
+      ],
+      "published_at": "2016-12-12",
+      "arxiv_url": "https://arxiv.org/abs/1612.03801",
+      "project_ids": [
+        "deepmind-lab"
+      ],
+      "description_en": "Introduces a programmable first-person 3D platform for studying learning in visually diverse, partially observed worlds.",
+      "description_zh": "提出可编程的第一人称三维平台，用于研究视觉多样、部分可观测世界中的学习。",
+      "source_url": "https://arxiv.org/abs/1612.03801"
+    },
+    {
+      "id": "2011.07027",
+      "title": "DeepMind Lab2D",
+      "authors": [
+        "Charles Beattie",
+        "Thomas Köppe",
+        "Edgar A. Duéñez-Guzmán",
+        "Joel Z. Leibo"
+      ],
+      "published_at": "2020-11-13",
+      "arxiv_url": "https://arxiv.org/abs/2011.07027",
+      "project_ids": [
+        "deepmind-lab2d"
+      ],
+      "description_en": "Describes a grid-world simulator supporting researcher-designed environments and multi-agent learning experiments.",
+      "description_zh": "介绍支持研究者设计环境和多 Agent 学习实验的网格世界模拟器。",
+      "source_url": "https://arxiv.org/abs/2011.07027"
+    },
+    {
+      "id": "1908.03568",
+      "title": "Behaviour Suite for Reinforcement Learning",
+      "authors": [
+        "Ian Osband",
+        "Yotam Doron",
+        "Matteo Hessel",
+        "John Aslanides",
+        "Eren Sezener",
+        "Andre Saraiva",
+        "Katrina McKinney",
+        "Tor Lattimore",
+        "Csaba Szepesvari",
+        "Satinder Singh",
+        "Benjamin Van Roy",
+        "Richard Sutton",
+        "David Silver",
+        "Hado Van Hasselt"
+      ],
+      "published_at": "2019-08-09",
+      "arxiv_url": "https://arxiv.org/abs/1908.03568",
+      "project_ids": [
+        "bsuite"
+      ],
+      "description_en": "Defines controlled interactive experiments and standardized analysis for diagnosing core reinforcement-learning capabilities.",
+      "description_zh": "定义受控交互实验和标准化分析方法，用于诊断强化学习的核心能力。",
+      "source_url": "https://arxiv.org/abs/1908.03568"
+    },
+    {
+      "id": "2406.12905",
+      "title": "PufferLib: Making Reinforcement Learning Libraries and Environments Play Nice",
+      "authors": [
+        "Joseph Suarez"
+      ],
+      "published_at": "2024-06-11",
+      "arxiv_url": "https://arxiv.org/abs/2406.12905",
+      "project_ids": [
+        "pufferlib"
+      ],
+      "description_en": "Describes the original PufferLib environment interoperability and vectorization framework; later native Ocean/5.0 components require separate source documentation.",
+      "description_zh": "介绍早期 PufferLib 的环境互操作与向量化框架；后续原生 Ocean/5.0 组件需结合各自源码说明。",
+      "source_url": "https://arxiv.org/abs/2406.12905"
+    },
+    {
+      "id": "2011.06363",
+      "title": "Griddly: A platform for AI research in games",
+      "authors": [
+        "Chris Bamford",
+        "Shengyi Huang",
+        "Simon Lucas"
+      ],
+      "published_at": "2020-11-12",
+      "arxiv_url": "https://arxiv.org/abs/2011.06363",
+      "project_ids": [
+        "griddly"
+      ],
+      "description_en": "Presents the GDY-configurable game engine, observation interfaces and experiments on generalization across game configurations.",
+      "description_zh": "介绍通过 GDY 配置的游戏引擎、观察接口，以及跨游戏配置的泛化实验。",
+      "source_url": "https://arxiv.org/abs/2011.06363"
+    },
+    {
+      "id": "1910.04376",
+      "title": "RLCard: A Toolkit for Reinforcement Learning in Card Games",
+      "authors": [
+        "Daochen Zha",
+        "Kwei-Herng Lai",
+        "Yuanpu Cao",
+        "Songyi Huang",
+        "Ruzhe Wei",
+        "Junyu Guo",
+        "Xia Hu"
+      ],
+      "published_at": "2019-10-10",
+      "arxiv_url": "https://arxiv.org/abs/1910.04376",
+      "project_ids": [
+        "rlcard"
+      ],
+      "description_en": "Introduces card-game environments and common interfaces for reinforcement learning in imperfect-information settings.",
+      "description_zh": "提出用于不完全信息场景强化学习的卡牌环境与通用接口。",
+      "source_url": "https://arxiv.org/abs/1910.04376"
+    },
+    {
+      "id": "2312.12044",
+      "title": "XLand-MiniGrid: Scalable Meta-Reinforcement Learning Environments in JAX",
+      "authors": [
+        "Alexander Nikulin",
+        "Vladislav Kurenkov",
+        "Ilya Zisman",
+        "Artem Agarkov",
+        "Viacheslav Sinii",
+        "Sergey Kolesnikov"
+      ],
+      "published_at": "2023-12-19",
+      "arxiv_url": "https://arxiv.org/abs/2312.12044",
+      "project_ids": [
+        "xland-minigrid"
+      ],
+      "description_en": "Introduces compositional grid-world task distributions and JAX-based benchmarks for adaptive meta-reinforcement-learning agents.",
+      "description_zh": "提出组合式网格世界任务分布及 JAX 基准，用于研究能适应新任务的元强化学习 Agent。",
+      "source_url": "https://arxiv.org/abs/2312.12044"
+    },
+    {
+      "id": "2406.08451",
+      "title": "GUIOdyssey: A Comprehensive Dataset for Cross-App GUI Navigation on Mobile Devices",
+      "authors": [
+        "Quanfeng Lu",
+        "Wenqi Shao",
+        "Zitao Liu",
+        "Lingxiao Du",
+        "Fanqing Meng",
+        "Boxuan Li",
+        "Botong Chen",
+        "Siyuan Huang",
+        "Kaipeng Zhang",
+        "Ping Luo"
+      ],
+      "published_at": "2024-06-12",
+      "arxiv_url": "https://arxiv.org/abs/2406.08451",
+      "project_ids": [
+        "gui-odyssey"
+      ],
+      "description_en": "Introduces cross-app Android demonstrations with semantic annotations and studies history-aware action prediction across task, app and device splits.",
+      "description_zh": "提出带语义标注的 Android 跨应用示范数据，研究利用历史信息进行动作预测，并区分任务、应用和设备划分。",
+      "source_url": "https://arxiv.org/abs/2406.08451",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2406.10819",
+      "title": "GUI-World: A Video Benchmark and Dataset for Multimodal GUI-oriented Understanding",
+      "authors": [
+        "Dongping Chen",
+        "Yue Huang",
+        "Siyuan Wu",
+        "Jingyu Tang",
+        "Liuyi Chen",
+        "Yilin Bai",
+        "Zhigang He",
+        "Chenlong Wang",
+        "Huichi Zhou",
+        "Yiqiang Li",
+        "Tianshuo Zhou",
+        "Yue Yu",
+        "Chujie Gao",
+        "Qihui Zhang",
+        "Yi Gui",
+        "Zhen Li",
+        "Yao Wan",
+        "Pan Zhou",
+        "Jianfeng Gao",
+        "Lichao Sun"
+      ],
+      "published_at": "2024-06-16",
+      "arxiv_url": "https://arxiv.org/abs/2406.10819",
+      "project_ids": [
+        "gui-world"
+      ],
+      "description_en": "Builds video-based GUI understanding tasks across diverse interface scenarios and examines temporal context, frame selection and a GUI-oriented video model.",
+      "description_zh": "构建覆盖多类界面场景的视频 GUI 理解任务，研究时序上下文、帧选择及面向 GUI 的视频模型。",
+      "source_url": "https://arxiv.org/abs/2406.10819",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2406.03679",
+      "title": "On the Effects of Data Scale on UI Control Agents",
+      "authors": [
+        "Wei Li",
+        "William Bishop",
+        "Alice Li",
+        "Chris Rawles",
+        "Folawiyo Campbell-Ajala",
+        "Divya Tyamagundlu",
+        "Oriana Riva"
+      ],
+      "published_at": "2024-06-06",
+      "arxiv_url": "https://arxiv.org/abs/2406.03679",
+      "project_ids": [
+        "androidcontrol"
+      ],
+      "description_en": "Uses AndroidControl demonstrations with high- and low-level instructions to study how data scale affects UI action prediction and out-of-domain generalization.",
+      "description_zh": "利用同时包含高层与低层指令的 AndroidControl 示范，研究数据规模对 UI 动作预测及域外泛化的影响。",
+      "source_url": "https://arxiv.org/abs/2406.03679",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2406.11317",
+      "title": "GUICourse: From General Vision Language Models to Versatile GUI Agents",
+      "authors": [
+        "Wentong Chen",
+        "Junbo Cui",
+        "Jinyi Hu",
+        "Yujia Qin",
+        "Junjie Fang",
+        "Yue Zhao",
+        "Chongyi Wang",
+        "Jun Liu",
+        "Guirong Chen",
+        "Yupeng Huo",
+        "Yuan Yao",
+        "Yankai Lin",
+        "Zhiyuan Liu",
+        "Maosong Sun"
+      ],
+      "published_at": "2024-06-17",
+      "arxiv_url": "https://arxiv.org/abs/2406.11317",
+      "project_ids": [
+        "guiact"
+      ],
+      "description_en": "Presents GUICourse's GUIEnv, GUIAct and GUIChat datasets and a training pipeline for improving visual GUI perception and action prediction.",
+      "description_zh": "提出 GUICourse 中的 GUIEnv、GUIAct、GUIChat 数据集及训练流程，用于提升视觉 GUI 感知和动作预测。",
+      "source_url": "https://arxiv.org/abs/2406.11317",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2403.02713",
+      "title": "Android in the Zoo: Chain-of-Action-Thought for GUI Agents",
+      "authors": [
+        "Jiwen Zhang",
+        "Jihao Wu",
+        "Yihua Teng",
+        "Minghui Liao",
+        "Nuo Xu",
+        "Xiao Xiao",
+        "Zhongyu Wei",
+        "Duyu Tang"
+      ],
+      "published_at": "2024-03-05",
+      "arxiv_url": "https://arxiv.org/abs/2403.02713",
+      "project_ids": [
+        "aitz"
+      ],
+      "description_en": "Adds descriptions of screens, prior actions and intended next actions to Android demonstrations, studying how these annotations support GUI action prediction.",
+      "description_zh": "为 Android 示范补充屏幕、历史动作及后续动作意图描述，研究这些标注对 GUI 动作预测的作用。",
+      "source_url": "https://arxiv.org/abs/2403.02713",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2407.17490",
+      "title": "AMEX: Android Multi-annotation Expo Dataset for Mobile GUI Agents",
+      "authors": [
+        "Yuxiang Chai",
+        "Siyuan Huang",
+        "Yazhe Niu",
+        "Han Xiao",
+        "Liang Liu",
+        "Dingyu Zhang",
+        "Shuai Ren",
+        "Hongsheng Li"
+      ],
+      "published_at": "2024-07-03",
+      "arxiv_url": "https://arxiv.org/abs/2407.17490",
+      "project_ids": [
+        "amex"
+      ],
+      "description_en": "Introduces Android screenshots with element grounding, functionality descriptions and instruction-action chains to support mobile GUI agent training.",
+      "description_zh": "提出带元素定位、功能描述及指令动作链的 Android 截图数据，为移动 GUI Agent 训练提供多层标注。",
+      "source_url": "https://arxiv.org/abs/2407.17490",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2506.16042",
+      "title": "OSWorld-Human: Benchmarking the Efficiency of Computer-Use Agents",
+      "authors": [
+        "Reyna Abhyankar",
+        "Qi Qi",
+        "Yiying Zhang"
+      ],
+      "published_at": "2025-06-19",
+      "arxiv_url": "https://arxiv.org/abs/2506.16042",
+      "project_ids": [
+        "osworld-human"
+      ],
+      "description_en": "Analyzes computer-use agent latency and introduces human reference trajectories for evaluating action efficiency on OSWorld tasks.",
+      "description_zh": "分析计算机操作 Agent 的延迟，并引入人类参考轨迹，用于评估 OSWorld 任务中的动作效率。",
+      "source_url": "https://arxiv.org/abs/2506.16042",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2503.15661",
+      "title": "UI-Vision: A Desktop-centric GUI Benchmark for Visual Perception and Interaction",
+      "authors": [
+        "Shravan Nayak",
+        "Xiangru Jian",
+        "Kevin Qinghong Lin",
+        "Juan A. Rodriguez",
+        "Montek Kalsi",
+        "Rabiul Awal",
+        "Nicolas Chapados",
+        "M. Tamer Özsu",
+        "Aishwarya Agrawal",
+        "David Vazquez",
+        "Christopher Pal",
+        "Perouz Taslakian",
+        "Spandana Gella",
+        "Sai Rajeswar"
+      ],
+      "published_at": "2025-03-19",
+      "arxiv_url": "https://arxiv.org/abs/2503.15661",
+      "project_ids": [
+        "ui-vision"
+      ],
+      "description_en": "Defines desktop GUI element grounding, layout grounding and action prediction tasks; the inspected public release currently supplies the two grounding components.",
+      "description_zh": "定义桌面 GUI 的元素定位、布局定位和动作预测任务；本次检查的公开版本目前提供两个定位部分。",
+      "source_url": "https://arxiv.org/abs/2503.15661",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2404.16054",
+      "title": "LlamaTouch: A Faithful and Scalable Testbed for Mobile UI Task Automation",
+      "authors": [
+        "Li Zhang",
+        "Shihe Wang",
+        "Xianqing Jia",
+        "Zhihan Zheng",
+        "Yunhe Yan",
+        "Longxi Gao",
+        "Yuanchun Li",
+        "Mengwei Xu"
+      ],
+      "published_at": "2024-04-12",
+      "arxiv_url": "https://arxiv.org/abs/2404.16054",
+      "project_ids": [
+        "llamatouch"
+      ],
+      "description_en": "Evaluates Android task execution by matching essential application states, allowing successful traces to differ from a single reference action sequence.",
+      "description_zh": "通过匹配关键应用状态评估 Android 任务执行，使成功轨迹无需与某一条参考动作序列完全相同。",
+      "source_url": "https://arxiv.org/abs/2404.16054",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2511.20766",
+      "title": "OpenApps: Simulating Environment Variations to Measure UI-Agent Reliability",
+      "authors": [
+        "Karen Ullrich",
+        "Jingtong Su",
+        "Claudia Shi",
+        "Arjun Subramonian",
+        "Amir Bar",
+        "Ivan Evtimov",
+        "Nikolaos Tsilivis",
+        "Randall Balestriero",
+        "Julia Kempe",
+        "Mark Ibrahim"
+      ],
+      "published_at": "2025-11-25",
+      "arxiv_url": "https://arxiv.org/abs/2511.20766",
+      "project_ids": [
+        "openapps"
+      ],
+      "description_en": "Studies UI-agent reliability under changes to simulated app appearance and content, using configurable applications and state-based task rewards.",
+      "description_zh": "借助可配置应用及基于状态的任务奖励，研究模拟应用外观与内容变化对 UI Agent 可靠性的影响。",
+      "source_url": "https://arxiv.org/abs/2511.20766",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2603.04949",
+      "title": "TimeWarp: Evaluating Web Agents by Revisiting the Past",
+      "authors": [
+        "Md Farhan Ishmam",
+        "Kenneth Marino"
+      ],
+      "published_at": "2026-03-05",
+      "arxiv_url": "https://arxiv.org/abs/2603.04949",
+      "project_ids": [
+        "timewarp"
+      ],
+      "description_en": "Tests web-agent generalization across historical interface variants and proposes plan distillation to collect training trajectories spanning those variants.",
+      "description_zh": "跨历史界面变体测试网页 Agent 的泛化，并提出计划蒸馏方法以收集覆盖多个变体的训练轨迹。",
+      "source_url": "https://arxiv.org/abs/2603.04949",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2609.30604",
+      "title": "The Hard Part Comes After Search: Benchmarking Web Agents on Synthesizing, Organizing, and Displaying Knowledge",
+      "authors": [
+        "Alexander Gill",
+        "Md Farhan Ishmam",
+        "Xuyen Nguyen",
+        "Neha Bhat",
+        "Parker Henry DeYoung",
+        "Fateme Hashemi Chaleshtori",
+        "Nathan Stringham",
+        "Kenneth Marino",
+        "Ana Marasović"
+      ],
+      "published_at": "2026-09-24",
+      "arxiv_url": "https://arxiv.org/abs/2609.30604",
+      "project_ids": [
+        "knows"
+      ],
+      "description_en": "Introduces web research tasks ending in documents, spreadsheets or presentations, evaluated through artifact-specific checks combined with model judgments.",
+      "description_zh": "提出以文档、表格或演示文稿为最终成果的网页研究任务，结合成果专属检查与模型判分进行评估。",
+      "source_url": "https://arxiv.org/abs/2609.30604",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2606.29537",
+      "title": "OSWorld 2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks",
+      "authors": [
+        "Mengqi Yuan",
+        "Zilong Zhou",
+        "Xinzhuang Xiong",
+        "Weiming Wu",
+        "Jiayang Sun",
+        "Jiamin Song",
+        "Kaiqian Cui",
+        "Bowen Wang",
+        "Haoyuan Wu",
+        "Yitong Li",
+        "Dunjie Lu",
+        "Haikong Lu",
+        "Qi Zhen",
+        "Xinyuan Wang",
+        "Jiaqi Deng",
+        "Yuhao Yang",
+        "Cheng Chen",
+        "Boyuan Zheng",
+        "Alex Su",
+        "Xiao Yu",
+        "Hao Zou",
+        "Saaket Agashe",
+        "Xing Han Lu",
+        "Manpreet Kaur",
+        "Zhengyang Qi",
+        "Vincent Sunn Chen",
+        "Frederic Sala",
+        "Dayiheng Liu",
+        "Junyang Lin",
+        "Zhou Yu",
+        "Yu Su",
+        "Siva Reddy",
+        "Xin Eric Wang",
+        "Peng Qi",
+        "Tianbao Xie",
+        "Tao Yu"
+      ],
+      "published_at": "2026-06-28",
+      "arxiv_url": "https://arxiv.org/abs/2606.29537",
+      "project_ids": [
+        "osworld-2"
+      ],
+      "description_en": "Introduces a distinct set of long-horizon computer-use workflows that combine realistic artifacts, changing context and multi-application dependencies.",
+      "description_zh": "提出一套独立的长流程计算机操作任务，结合真实工作资料、变化中的上下文及跨应用依赖。",
+      "source_url": "https://arxiv.org/abs/2606.29537",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
     }
   ]
 }

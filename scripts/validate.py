@@ -12,6 +12,7 @@ from build import OUT, PLATFORMS, read_inputs, lang_path, project_path
 from papers import read_papers
 from registries import read_registries
 from observations import read_observations
+from guides import read_guides, guide_project_ids
 
 
 class Page(HTMLParser):
@@ -20,6 +21,7 @@ class Page(HTMLParser):
         self.hrefs, self.links, self.ids, self.projects, self.papers, self.registries, self.graphs = [], [], set(), [], [], [], []
         self.meta, self.language, self.h1 = {}, '', 0
         self.observations, self.images = [], []
+        self.guides = []
         self.json_parts, self.json_open = [], False
         self.feed(html)
 
@@ -35,6 +37,7 @@ class Page(HTMLParser):
         if a.get('data-paper'): self.papers.append(a['data-paper'])
         if a.get('data-registry'): self.registries.append(a['data-registry'])
         if a.get('data-observation'): self.observations.append(a['data-observation'])
+        if a.get('data-guide'): self.guides.append(a['data-guide'])
         if tag == 'img': self.images.append(a)
         if tag == 'script' and a.get('type') == 'application/ld+json': self.json_open, self.json_parts = True, []
 
@@ -52,6 +55,8 @@ def main():
     _, papers = read_papers(OUT.parent, entries)
     _, _, _, registry_records = read_registries(OUT.parent)
     observation_document, observations = read_observations(OUT.parent, entries)
+    guide_document, guides = read_guides(OUT.parent, entries)
+    assert json.loads((OUT / 'guides.json').read_text()) == guide_document
     assert json.loads((OUT / 'observations.json').read_text()) == observation_document
     origin = config['origin'].rstrip('/')
     urls = [node.text for node in ET.parse(OUT / 'sitemap.xml').findall('{*}url/{*}loc')]
@@ -72,7 +77,7 @@ def main():
             assert graph['@context'] == 'https://schema.org'
             for item in graph['@graph']:
                 if item['@type'] == 'ItemList':
-                    assert item['numberOfItems'] == len(item['itemListElement']) == len(page.projects or page.papers or page.registries), url
+                    assert item['numberOfItems'] == len(item['itemListElement']) == len(page.projects or page.papers or page.registries or page.guides), url
                     visible_links = {href if urlsplit(href).scheme else origin + href for href in page.hrefs}
                     for element in item['itemListElement']:
                         destination = element.get('url') or element['item']['url']
@@ -110,6 +115,15 @@ def main():
                 assert record['target_url'] in page.hrefs and record['id'] in page.ids, record['id']
         assert set(pages[lang_path(language, '/papers/')].papers) == {paper['id'] for paper in papers}
         assert set(pages[lang_path(language, '/discover/')].registries) == {record['id'] for record in registry_records}
+        assert set(pages[lang_path(language, '/guides/')].guides) == {guide['id'] for guide in guides}
+        by_id = {entry['id']: entry for entry in entries}
+        for guide in guides:
+            path = lang_path(language, '/guides/' + guide['id'] + '/')
+            page = pages[path]
+            assert page.projects == guide_project_ids(guide), path
+            for identifier in guide_project_ids(guide):
+                assert by_id[identifier]['primary_url'] in page.hrefs, (path, identifier)
+                assert path in pages[project_path(language, by_id[identifier])].hrefs, (path, 'Missing project backlink')
     robots = RobotFileParser()
     robots.parse((OUT / 'robots.txt').read_text().splitlines())
     for crawler in ('Googlebot', 'bingbot', 'OAI-SearchBot', 'PerplexityBot'):

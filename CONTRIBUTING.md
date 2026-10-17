@@ -29,6 +29,6 @@ python3 -m unittest discover -s tests
 
 The static site is generated into `dist/`. Edit source files, not generated pages. Keep public catalog data and source separate from private account records or credentials.
 
-The build also updates the root READMEs, category/platform indexes under `catalog/`, and `references.bib`. Include those generated changes in the same pull request; CI checks that they are current.
+The build also updates the root READMEs, category/platform indexes under `catalog/`, selection guides under `guides/`, and `references.bib`. Include those generated changes in the same pull request; CI checks that they are current. Edit selection guidance in `data/guides.json`: explain which question a resource answers, preserve setup limits and link existing catalog entries. A guide is not a ranking or another set of independent projects.
 
 Registry metadata belongs in the separate upstream discovery index. Finding a manifest or package in a registry is not sufficient to promote it into the reviewed catalog or label it AI-built. Follow [registry-discovery.md](docs/registry-discovery.md) for source snapshots, immutable version evidence, refreshes, and the distinction between packages and independent projects.

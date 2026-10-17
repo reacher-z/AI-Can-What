@@ -27,7 +27,8 @@ HARBOR_RELATED = {
     'terminal-bench/terminal-bench-cpu-only': 'terminal-bench',
 }
 OPENENV_RELATED = {'atari_env': 'arcade-learning-environment', 'browsergym_env': 'browsergym',
-                   'harbor_env': 'harbor', 'openspiel_env': 'open-spiel', 'tau2_env': 'tau-bench', 'tbench2_env': 'terminal-bench'}
+                   'harbor_env': 'harbor', 'openspiel_env': 'open-spiel', 'tau2_env': 'tau-bench', 'tbench2_env': 'terminal-bench',
+                   'openapp_env': 'openapps'}
 
 
 def validate_url(value):
@@ -66,7 +67,8 @@ def related_projects(record, entries):
     if source == 'browsergym':
         for prefix, identifier in [('miniwob', 'miniwob-plusplus'), ('visualwebarena', 'visualwebarena'),
                                    ('webarena', 'webarena'), ('workarena', 'workarena'),
-                                   ('assistantbench', 'assistantbench'), ('weblinx', 'weblinx')]:
+                                   ('assistantbench', 'assistantbench'), ('weblinx', 'weblinx'),
+                                   ('knows', 'knows'), ('timewarp', 'timewarp')]:
             if key == prefix or key.startswith(prefix + '_'):
                 matches.add(identifier)
     return [entry for entry in entries if entry['id'] in matches]

@@ -2,7 +2,7 @@
 
 [返回目录](../../README.zh-CN.md)
 
-42 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
+53 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
 
 | 项目 | 资源类型 | 用途 | 原始来源 |
 | --- | --- | --- | --- |
@@ -11,8 +11,12 @@
 | [Asteroid Game](https://aicanwhat.com/zh/projects/gpt5-asteroid-game/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/asteroid-game) |
 | [BALROG](https://aicanwhat.com/zh/projects/balrog/) | 评测套件 | 评测 | [Source](https://github.com/balrog-ai/BALROG) |
 | [Bash Fighter](https://aicanwhat.com/zh/projects/bash-fighter/) | AI 软件作品 | 作品展示 | [Source](https://bashfighter.itch.io/bash-fighter) |
+| [Behaviour Suite (bsuite)](https://aicanwhat.com/zh/projects/bsuite/) | 评测套件 | 训练, 评测 | [Source](https://github.com/google-deepmind/bsuite) |
 | [Cowboy Shooter](https://aicanwhat.com/zh/projects/cowboy-shooter/) | AI 软件作品 | 作品展示 | [Source](https://cowboy.raymelon.com/) |
+| [Craftax](https://aicanwhat.com/zh/projects/craftax/) | 环境与评测 | 训练, 评测 | [Source](https://craftaxenv.github.io/) |
 | [Crafter](https://aicanwhat.com/zh/projects/crafter/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/danijar/crafter) |
+| [DeepMind Lab](https://aicanwhat.com/zh/projects/deepmind-lab/) | 环境框架 | 训练, 评测 | [Source](https://github.com/google-deepmind/lab) |
+| [DeepMind Lab2D](https://aicanwhat.com/zh/projects/deepmind-lab2d/) | 环境框架 | 训练, 评测 | [Source](https://github.com/google-deepmind/lab2d) |
 | [DOOMscroll](https://aicanwhat.com/zh/projects/doomscroll/) | AI 软件作品 | 作品展示 | [Source](https://gisnep.com/doomscroll/) |
 | [Escape the Maze](https://aicanwhat.com/zh/projects/gpt5-escape-the-maze/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/escape-the-maze) |
 | [Firewood Splitting Simulator](https://aicanwhat.com/zh/projects/firewood-splitting-simulator/) | AI 软件作品 | 作品展示 | [Source](https://screen.toys/firewood/) |
@@ -20,11 +24,15 @@
 | [GameCode4D (Code2Games)](https://aicanwhat.com/zh/projects/gamecode4d/) | 数据集与评测 | 评测 | [Source](https://huggingface.co/datasets/AIGeeksGroup/GameCode4D) |
 | [GameCraft-Bench](https://aicanwhat.com/zh/projects/gamecraft-bench/) | 环境与评测 | 评测 | [Source](https://github.com/FreedomIntelligence/gamecraft-bench) |
 | [GameDevBench](https://aicanwhat.com/zh/projects/gamedevbench/) | 环境与评测 | 评测 | [Source](https://github.com/waynchi/gamedevbench) |
+| [Griddly](https://aicanwhat.com/zh/projects/griddly/) | 环境框架 | 训练, 评测 | [Source](https://griddly.readthedocs.io/) |
 | [GVGAI](https://aicanwhat.com/zh/projects/gvgai/) | 环境框架 | 评测 | [Source](https://github.com/GAIGResearch/GVGAI) |
 | [Gymnasium](https://aicanwhat.com/zh/projects/gymnasium/) | 环境框架 | 训练, 评测 | [Source](https://gymnasium.farama.org/) |
+| [Gymnax](https://aicanwhat.com/zh/projects/gymnax/) | 环境框架 | 训练, 评测 | [Source](https://github.com/RobertTLange/gymnax) |
 | [Jericho](https://aicanwhat.com/zh/projects/jericho/) | 环境框架 | 训练, 评测 | [Source](https://github.com/microsoft/jericho) |
+| [Jumanji](https://aicanwhat.com/zh/projects/jumanji/) | 环境与评测 | 训练, 评测 | [Source](https://instadeepai.github.io/jumanji/) |
 | [Legends of Future Past — 2026 reconstruction](https://aicanwhat.com/zh/projects/legends-of-future-past/) | AI 软件作品 | 作品展示 | [Source](https://github.com/jonradoff/lofp) |
 | [MAgent2](https://aicanwhat.com/zh/projects/magent2/) | 环境框架 | 训练, 评测 | [Source](https://magent2.farama.org/) |
+| [Melting Pot](https://aicanwhat.com/zh/projects/melting-pot/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/google-deepmind/meltingpot) |
 | [MineDojo](https://aicanwhat.com/zh/projects/minedojo/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/MineDojo/MineDojo) |
 | [MineRL](https://aicanwhat.com/zh/projects/minerl/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/minerllabs/minerl) |
 | [MiniGrid](https://aicanwhat.com/zh/projects/minigrid/) | 环境框架 | 训练, 评测 | [Source](https://minigrid.farama.org/) |
@@ -37,7 +45,9 @@
 | [PettingZoo](https://aicanwhat.com/zh/projects/pettingzoo/) | 环境框架 | 训练, 评测 | [Source](https://pettingzoo.farama.org/) |
 | [Procgen Benchmark](https://aicanwhat.com/zh/projects/procgen/) | 评测套件 | 训练, 评测 | [Source](https://github.com/openai/procgen) |
 | [Procgen2](https://aicanwhat.com/zh/projects/procgen2/) | 环境框架 | 训练, 评测 | [Source](https://github.com/Farama-Foundation/Procgen2) |
+| [PufferLib / Ocean](https://aicanwhat.com/zh/projects/pufferlib/) | 环境框架 | 训练, 评测 | [Source](https://puffer.ai/) |
 | [Pyramid Wars — browser demo](https://aicanwhat.com/zh/projects/pyramid-wars-demo/) | AI 软件作品 | 作品展示 | [Source](https://durian-arcade.itch.io/pyramid-wars) |
+| [RLCard](https://aicanwhat.com/zh/projects/rlcard/) | 环境框架 | 训练, 评测 | [Source](https://github.com/datamllab/rlcard) |
 | [ScienceWorld](https://aicanwhat.com/zh/projects/scienceworld/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/allenai/ScienceWorld) |
 | [Space Defenders](https://aicanwhat.com/zh/projects/space-defenders/) | AI 软件作品 | 作品展示 | [Source](https://jasonleow.com/space-defenders/) |
 | [Stable-Retro](https://aicanwhat.com/zh/projects/stable-retro/) | 环境框架 | 训练, 评测 | [Source](https://stable-retro.farama.org/) |
@@ -48,3 +58,4 @@
 | [V-GameGym (SKYLENAGE-GameCodeGym)](https://aicanwhat.com/zh/projects/v-gamegym/) | 数据集与评测 | 评测 | [Source](https://github.com/alibaba/SKYLENAGE-GameCodeGym) |
 | [VirtualHome](https://aicanwhat.com/zh/projects/virtualhome/) | 环境框架 | 训练 | [Source](https://github.com/xavierpuigf/virtualhome) |
 | [ViZDoom](https://aicanwhat.com/zh/projects/vizdoom/) | 环境与评测 | 训练, 评测 | [Source](https://vizdoom.farama.org/) |
+| [XLand-MiniGrid](https://aicanwhat.com/zh/projects/xland-minigrid/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/dunnolab/xland-minigrid) |

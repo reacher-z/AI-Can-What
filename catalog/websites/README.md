@@ -2,7 +2,7 @@
 
 [Back to the collection](../../README.md)
 
-25 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
+28 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
 
 | Project | Resource type | Use | Primary source |
 | --- | --- | --- | --- |
@@ -15,11 +15,14 @@
 | [Design2Code](https://aicanwhat.com/projects/design2code/) | Dataset + benchmark | Evaluation | [Source](https://github.com/NoviScl/Design2Code) |
 | [Interaction2Code](https://aicanwhat.com/projects/interaction2code/) | Dataset + benchmark | Evaluation | [Source](https://github.com/WebPAI/Interaction2Code) |
 | [IWR-Bench](https://aicanwhat.com/projects/iwr-bench/) | Dataset + benchmark | Evaluation | [Source](https://github.com/SIGMME/IWR-Bench) |
+| [KNOWS](https://aicanwhat.com/projects/knows/) | Benchmark suite | Evaluation | [Source](https://github.com/alexgill321/KNOWS-benchmark) |
 | [Mind2Web](https://aicanwhat.com/projects/mind2web/) | Dataset + benchmark | Training, Evaluation | [Source](https://osu-nlp-group.github.io/Mind2Web/) |
 | [MiniWoB++](https://aicanwhat.com/projects/miniwob-plusplus/) | Environment + benchmark | Training, Evaluation | [Source](https://miniwob.farama.org/) |
 | [Online-Mind2Web](https://aicanwhat.com/projects/online-mind2web/) | Benchmark suite | Evaluation | [Source](https://github.com/OSU-NLP-Group/Online-Mind2Web) |
+| [OpenApps](https://aicanwhat.com/projects/openapps/) | Environment framework | Training, Evaluation | [Source](https://github.com/facebookresearch/OpenApps) |
 | [Smartwatch Product Page](https://aicanwhat.com/projects/gpt5-smartwatch-product-page/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/product-launch-page) |
 | [Social Media Card Cropper](https://aicanwhat.com/projects/social-media-card-cropper/) | Software made with AI | Showcase | [Source](https://tools.simonwillison.net/social-media-cropper) |
+| [TimeWarp](https://aicanwhat.com/projects/timewarp/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/sparklabutah/timewarp) |
 | [VisualWebArena](https://aicanwhat.com/projects/visualwebarena/) | Environment + benchmark | Evaluation | [Source](https://jykoh.com/vwa) |
 | [VisualWebBench](https://aicanwhat.com/projects/visualwebbench/) | Dataset + benchmark | Evaluation | [Source](https://visualwebbench.github.io/) |
 | [WebArena](https://aicanwhat.com/projects/webarena/) | Environment + benchmark | Training, Evaluation | [Source](https://webarena.dev/) |

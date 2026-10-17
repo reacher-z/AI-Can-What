@@ -1113,3 +1113,226 @@ tbody tr:hover {
   .registry-table .registry-metadata {font-size:10px}
   .registry-table .project-name {max-width:92%;font-size:14px}
 }
+
+/* Selection guides: readable comparisons with the same evidence on small screens. */
+.guide-shortcuts {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px 24px;
+  margin:22px 0 10px;
+  font-size:12px;
+  line-height:1.6
+}
+.guide-shortcuts-title {
+  color:var(--muted)
+}
+.guide-index {
+  padding:50px 0 70px
+}
+.guide-index h1,.guide-header h1 {
+  font-size:48px;
+  line-height:1.12;
+  max-width:1000px
+}
+.guide-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  margin-top:36px
+}
+.guide-card {
+  border-top:2px solid var(--line);
+  padding:24px 0
+}
+.guide-card h2 {
+  font-size:24px;
+  line-height:1.4;
+  margin:0 0 12px
+}
+.guide-card h2 span {
+  color:var(--green);
+  font-size:18px
+}
+.guide-card p,.guide-intro {
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.8;
+  max-width:900px
+}
+.guide-header {
+  padding:12px 0 18px
+}
+.guide-date {
+  font-size:12px;
+  color:var(--muted);
+  margin:24px 0
+}
+.guide-answer {
+  max-width:1000px;
+  padding-left:24px;
+  border-left:3px solid var(--green);
+  font-size:18px;
+  line-height:1.85
+}
+.guide-toc {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 24px;
+  font-size:13px;
+  padding:18px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line)
+}
+.guide-toc a,.detail-guides a,.guide-method a {
+  text-decoration:underline;
+  text-underline-offset:4px
+}
+.guide-section,.guide-questions,.guide-method {
+  margin:48px 0;
+  scroll-margin-top:24px
+}
+.guide-section h2,.guide-questions h2,.guide-method h2 {
+  font-size:28px;
+  line-height:1.4;
+  letter-spacing:-.7px;
+  margin:0 0 12px
+}
+.guide-table-wrap {
+  margin-top:24px;
+  border:1px solid var(--line);
+  border-radius:7px;
+  overflow:hidden
+}
+.guide-table {
+  table-layout:fixed
+}
+.guide-table th:first-child {
+  width:24%
+}
+.guide-table th:nth-child(2) {
+  width:29%
+}
+.guide-table th:last-child {
+  width:47%
+}
+.guide-table td,.guide-table tbody th {
+  padding:24px;
+  font-size:14px;
+  line-height:1.8;
+  vertical-align:top;
+  overflow-wrap:anywhere;
+  border-top:0;
+  border-bottom:1px solid var(--line)
+}
+.guide-table tbody th {
+  font-family:inherit;
+  letter-spacing:0;
+  text-transform:none;
+  background:transparent;
+  color:var(--ink);
+  font-weight:650;
+  font-size:16px
+}
+.guide-table tbody tr:last-child th,.guide-table tbody tr:last-child td {
+  border-bottom:0
+}
+.guide-table td {
+  color:#526458
+}
+.guide-kind,.guide-source {
+  display:block;
+  font-size:11px;
+  line-height:1.7;
+  margin-top:8px;
+  font-weight:400
+}
+.guide-kind {
+  color:var(--muted)
+}
+.guide-source {
+  color:var(--green);
+  text-decoration:underline;
+  text-underline-offset:3px
+}
+.guide-questions,.guide-method {
+  max-width:900px
+}
+.guide-questions h3 {
+  margin:28px 0 10px;
+  font-size:19px;
+  line-height:1.5
+}
+.guide-questions p,.guide-method p {
+  font-size:15px;
+  line-height:1.9;
+  color:#526458
+}
+.guide-method {
+  border-top:1px solid var(--line);
+  padding-top:28px;
+  margin-bottom:65px
+}
+@media(max-width:700px) {
+  .guide-shortcuts {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 18px
+  }
+  .guide-shortcuts-title {
+    grid-column:1 / -1
+  }
+  .guide-index {
+    padding-top:35px
+  }
+  .guide-index h1,.guide-header h1 {
+    font-size:34px;
+    line-height:1.2;
+    letter-spacing:-1px
+  }
+  .guide-grid {
+    grid-template-columns:1fr;
+    gap:0;
+    margin-top:26px
+  }
+  .guide-card h2 {
+    font-size:23px
+  }
+  .guide-answer {
+    padding-left:16px;
+    font-size:16px
+  }
+  .guide-toc {
+    gap:12px 20px
+  }
+  .guide-section h2,.guide-questions h2,.guide-method h2 {
+    font-size:25px
+  }
+  .guide-table,.guide-table tbody,.guide-table tr,.guide-table tbody th,.guide-table td {
+    display:block;
+    width:auto;
+    max-width:none
+  }
+  .guide-table tr {
+    padding:22px 18px
+  }
+  .guide-table tbody th,.guide-table th:first-child,.guide-table td,.guide-table td:first-child,.guide-table td:last-child {
+    width:auto;
+    padding:0;
+    border:0
+  }
+  .guide-table tbody th {
+    margin-bottom:18px
+  }
+  .guide-table td + td {
+    margin-top:15px
+  }
+  .guide-table td::before {
+    content:attr(data-label);
+    display:block;
+    font-size:11px;
+    font-weight:650;
+    color:var(--ink);
+    margin-bottom:5px
+  }
+}

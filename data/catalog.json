@@ -170,8 +170,8 @@
       "repo_url": "https://github.com/danijar/crafter",
       "demo_url": null,
       "paper_url": "https://arxiv.org/abs/2109.06780",
-      "limits_en": "A simplified 2D research world. Python and a Pygame human interface are documented; the reviewed sources do not enumerate tested operating systems.",
-      "limits_zh": "属于简化的二维研究环境。文档提供 Python 和 Pygame 人类界面，但未列出已测试的操作系统。",
+      "limits_en": "A simplified 2D research world. Python and a Pygame human interface are documented; the reviewed sources do not enumerate tested operating systems. Craftax-Classic is a reimplementation and full Craftax changes the mechanics; results are not interchangeable.",
+      "limits_zh": "属于简化的二维研究环境。文档提供 Python 和 Pygame 人类界面，但未列出已测试的操作系统。 Craftax-Classic 是重实现，完整 Craftax 则改变了机制，结果不能直接互换。",
       "enables_en": "Train agents and measure which survival and crafting achievements they can unlock.",
       "enables_zh": "训练 Agent，并观察其能解锁哪些生存和制作成就。",
       "resource_kind": "environment-and-benchmark",
@@ -185,6 +185,10 @@
         {
           "url": "https://arxiv.org/abs/2109.06780",
           "supports": "Original paper defines the training and achievement-based evaluation setting."
+        },
+        {
+          "url": "https://github.com/MichaelTMatthews/Craftax#readme",
+          "supports": "Distinguishes Craftax-Classic, which reimplements Crafter, from the expanded full Craftax environment."
         }
       ],
       "reviewed_at": "2026-10-16",
@@ -433,8 +437,8 @@
       "repo_url": "https://github.com/xlang-ai/OSWorld",
       "demo_url": null,
       "paper_url": "https://arxiv.org/abs/2404.07972",
-      "limits_en": "Requires VM images and supported providers. The repository includes OSWorld-Verified updates; comparisons must identify the version. Running on a macOS host does not imply macOS task coverage.",
-      "limits_zh": "需要虚拟机镜像及受支持的运行方式。仓库包含 OSWorld-Verified 更新，比较结果时应注明版本；Mac 主机支持不等于 macOS 任务覆盖。",
+      "limits_en": "Requires VM images and supported providers. This entry covers original OSWorld and OSWorld-Verified; OSWorld 2.0/2.1 is a separate long-horizon benchmark with different tasks and scores. Identify the version when comparing results. Running on a macOS host does not imply macOS task coverage.",
+      "limits_zh": "需要虚拟机镜像及受支持的运行方式。本条目覆盖原始 OSWorld 和 OSWorld-Verified；OSWorld 2.0／2.1 是任务及评分口径不同的独立长流程基准。比较结果时需注明版本。Mac 主机支持不等于 macOS 任务覆盖。",
       "enables_en": "Evaluate multi-application computer use against final application and file states.",
       "enables_zh": "通过应用和文件的最终状态，评估跨应用电脑操作能力。",
       "resource_kind": "environment-and-benchmark",
@@ -447,6 +451,22 @@
         {
           "url": "https://arxiv.org/abs/2404.07972",
           "supports": "Original paper describes application tasks and execution-based checks."
+        },
+        {
+          "url": "https://osworld-v1.xlang.ai/",
+          "supports": "The original official site links the OSWorld 2.0 announcement; this does not change the original task set."
+        },
+        {
+          "url": "https://osworld-v2.xlang.ai/",
+          "supports": "Official OSWorld 2.0 release page distinguishes long-horizon workflows and links the new paper and code."
+        },
+        {
+          "url": "https://github.com/xlang-ai/OSWorld-V2",
+          "supports": "Separate official repository for the second release and its additional web services."
+        },
+        {
+          "url": "https://arxiv.org/abs/2606.29537",
+          "supports": "Primary paper identifies 108 long-horizon tasks; first arXiv submission was 2026-06-28, distinct from the website announcement date."
         }
       ],
       "reviewed_at": "2026-10-16",
@@ -1863,8 +1883,8 @@
       "repo_url": "https://github.com/Farama-Foundation/Minigrid",
       "demo_url": null,
       "paper_url": "https://arxiv.org/abs/2306.13831",
-      "limits_en": "Current README requires Python 3.11+ and does not officially support Windows. Licensing is inconsistent in the reviewed branch: pyproject.toml says MIT, while LICENSE contains incomplete Apache 2.0 text. A definitive license was not established.",
-      "limits_zh": "当前 README 要求 Python 3.11+，并未正式支持 Windows。所审查分支的许可信息不一致：pyproject.toml 标注 MIT，但 LICENSE 含不完整的 Apache 2.0 文本；本次未确定最终适用许可。",
+      "limits_en": "Current README requires Python 3.11+ and does not officially support Windows. Licensing is inconsistent in the reviewed branch: pyproject.toml says MIT, while LICENSE contains incomplete Apache 2.0 text. A definitive license was not established. XLand-MiniGrid is a separate JAX suite with changing rulesets; its included MiniGrid ports overlap existing tasks.",
+      "limits_zh": "当前 README 要求 Python 3.11+，并未正式支持 Windows。所审查分支的许可信息不一致：pyproject.toml 标注 MIT，但 LICENSE 含不完整的 Apache 2.0 文本；本次未确定最终适用许可。 XLand-MiniGrid 是具有变化规则集的独立 JAX 套件，其附带 MiniGrid 移植内容与现有任务重合。",
       "enables_en": "Create controlled curricula and evaluate navigation, memory and language-conditioned action composition.",
       "enables_zh": "构建可控课程，评估导航、记忆和语言条件下的动作组合。",
       "resource_kind": "environment-framework",
@@ -1885,6 +1905,10 @@
         {
           "url": "https://arxiv.org/abs/2306.13831",
           "supports": "Author paper describes MiniGrid and MiniWorld design, APIs and goal-oriented tasks."
+        },
+        {
+          "url": "https://github.com/dunnolab/xland-minigrid#readme",
+          "supports": "Distinguishes changing-ruleset meta-learning tasks from included ports of MiniGrid environments."
         }
       ],
       "reviewed_at": "2026-10-16",
@@ -5341,6 +5365,1499 @@
       "reviewed_at": "2026-10-16",
       "verification": "source-reviewed",
       "platform_note": "No operating-system tags are inferred from Java."
+    },
+    {
+      "id": "a9-voice",
+      "name": "A9 Voice",
+      "creator": "Atlas9 LLC / Jwishon",
+      "description_en": "A Windows dictation and meeting-notes application with hotkey voice input, transcription and locally stored note folders.",
+      "description_zh": "提供快捷键语音输入、转写和本机笔记文件夹的 Windows 听写及会议笔记应用。",
+      "platforms": [
+        "windows"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://a9voice.com/",
+      "repo_url": null,
+      "distribution_repository_url": "https://github.com/atlas9-ai/a9voice-releases",
+      "download_url": "https://github.com/atlas9-ai/a9voice-releases/releases/tag/v1.0.9",
+      "provenance_source": "https://www.reddit.com/r/windowsapps/comments/1x36rwl/i_vibecoded_a_windows_dictation_meetingnotes_app/",
+      "enables_en": "Dictate into other applications and organize meeting transcripts and notes.",
+      "enables_zh": "向其他应用输入听写文本，并整理会议转写和笔记。",
+      "limits_en": "Requires 64-bit Windows 10/11. Dictation is free; Notes has a trial then a paid license. Selected cloud providers receive the configured audio/text, and license checks require network access.",
+      "limits_zh": "需要 64 位 Windows 10/11。听写免费，Notes 试用后需付费许可。选择云服务时，相应音频或文本会发送给提供方，许可检查也需要联网。",
+      "provenance_note_en": "The maker says Claude wrote nearly all application code and describes agents implementing feature specifications on branches, with human product decisions, testing and review.",
+      "provenance_note_zh": "作者说明 Claude 编写了应用大部分代码，并描述 Agent 根据功能规格在分支中实现，由人类负责产品决策、测试和审查。",
+      "license_en": "Proprietary. The public GitHub repository distributes releases and documentation, not application source.",
+      "license_zh": "专有软件。公开 GitHub 仓库用于分发版本和文档，不提供应用源码。",
+      "license_url": "https://github.com/atlas9-ai/a9voice-releases/blob/main/LICENSE",
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/windowsapps/comments/1x36rwl/i_vibecoded_a_windows_dictation_meetingnotes_app/",
+          "supports": "Maker Jwishon gives a detailed Claude/agent implementation account and links the exact official website and distribution repository."
+        },
+        {
+          "url": "https://github.com/atlas9-ai/a9voice-releases#readme",
+          "supports": "Publisher documents native Windows 10/11 x64 distribution and app functions."
+        },
+        {
+          "url": "https://github.com/atlas9-ai/a9voice-releases/releases/tag/v1.0.9",
+          "supports": "Publisher release dated 2026-10-16 includes Windows x64 EXE installers; none was downloaded or run."
+        },
+        {
+          "url": "https://github.com/atlas9-ai/a9voice-releases/blob/main/LICENSE",
+          "supports": "Publisher's proprietary license distinguishes free dictation, trial/paid Notes, cloud-provider data handling and license checks."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "better-stickies",
+      "name": "Better Stickies",
+      "creator": "HimaSphere",
+      "description_en": "A desktop sticky-note application for rich text, file shortcuts, pasted images, code blocks, reminders and tabbed notes.",
+      "description_zh": "支持富文本、文件快捷方式、粘贴图片、代码块、提醒和分页便签的桌面便签应用。",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://betterstickies.com/",
+      "repo_url": null,
+      "distribution_repository_url": "https://github.com/HimaSphere/BetterStickies",
+      "download_url": "https://github.com/HimaSphere/BetterStickies/releases/tag/v1.2.1",
+      "provenance_source": "https://www.reddit.com/r/ClaudeAI/comments/1weari5/comment/p9c52cm/",
+      "enables_en": "Keep mixed-format notes and reminders on the desktop without moving them into a browser.",
+      "enables_zh": "直接在桌面保存混合格式的便签及提醒。",
+      "limits_en": "The free edition limits note slots; Premium removes that limit. Windows EXE and Linux packages are published, while macOS remains listed as in development in the reviewed README.",
+      "limits_zh": "免费版限制便签槽位，Premium 可解除限制。已发布 Windows EXE 和 Linux 安装包，核查时 README 仍将 macOS 列为开发中。",
+      "provenance_note_en": "The maintainer's artifact-specific post says the app was built entirely with Claude Code and describes its PySide6 implementation and ongoing feature work; exact code authorship is not independently audited.",
+      "provenance_note_zh": "维护者针对该应用的帖子说明全程使用 Claude Code 构建，并介绍 PySide6 实现及后续功能开发；具体代码归属未独立审计。",
+      "license_en": "Proprietary, with free and paid editions; the GitHub repository explicitly states it contains releases only, not source code.",
+      "license_zh": "专有软件，分免费版和付费版；GitHub 仓库明确说明只提供发布文件，不提供源码。",
+      "license_url": "https://github.com/HimaSphere/BetterStickies#readme",
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1weari5/comment/p9c52cm/",
+          "supports": "Comment by the maintainer HimaSphere explicitly attributes the app's development to Claude Code and identifies its functions and desktop technology."
+        },
+        {
+          "url": "https://github.com/HimaSphere/BetterStickies#readme",
+          "supports": "Publisher documents Windows/Linux support, macOS status, free/Premium distinction and proprietary distribution-only repository."
+        },
+        {
+          "url": "https://github.com/HimaSphere/BetterStickies/releases/tag/v1.2.1",
+          "supports": "Release contains Windows EXE and Linux AppImage/tar packages; no package was executed."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "screen-printing-film-analyzer",
+      "name": "Screen Printing Film Analyzer",
+      "creator": "Gerard (desordenades) / Trama Serigrafia",
+      "description_en": "A Python command-line utility that examines printing-film PDFs and exports annotated TIFF images and a text report.",
+      "description_zh": "检查丝网印刷制版 PDF，并导出标注 TIFF 图片及文本报告的 Python 命令行工具。",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://github.com/desordenades/Positive_Analyzer_for_Screen_Printing",
+      "repo_url": "https://github.com/desordenades/Positive_Analyzer_for_Screen_Printing",
+      "download_url": null,
+      "provenance_source": "https://github.com/desordenades/Positive_Analyzer_for_Screen_Printing#readme",
+      "enables_en": "Review thin line/dot features in PDF printing films and inspect the workshop's automation script.",
+      "enables_zh": "检查印刷制版 PDF 中过细的线条或网点，并查看工作室的自动化脚本。",
+      "limits_en": "Requires Python dependencies and workshop-specific calibration. The actual file is Screen_Printing_Positive_Analyzer.py, while the README names a different script. SMTP reporting is optional; processing was not executed here.",
+      "limits_zh": "需要 Python 依赖及针对工作室的参数校准。实际文件为 Screen_Printing_Positive_Analyzer.py，README 使用了不同文件名。SMTP 报告可选，本轮未执行处理。",
+      "provenance_note_en": "The maintainer explicitly says the script was generated with Gemini assistance to solve a daily workshop problem, then adjusted using real manual-printing designs.",
+      "provenance_note_zh": "维护者明确说明脚本借助 Gemini 生成，用于解决工作室日常问题，并使用实际手工印刷设计调整。",
+      "runtime_note_en": "Runs as a Python script. The maintainer documents Windows CMD and macOS/Linux environment setup; this is not a browser application or a packaged Windows EXE.",
+      "runtime_note_zh": "通过 Python 解释器运行。维护者记录了 Windows CMD 和 macOS/Linux 环境设置；它不是浏览器应用，也不是打包的 Windows EXE。",
+      "license_en": "GPL-3.0 for the repository.",
+      "license_zh": "仓库采用 GPL-3.0。",
+      "license_url": "https://github.com/desordenades/Positive_Analyzer_for_Screen_Printing/blob/main/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/desordenades/Positive_Analyzer_for_Screen_Printing#readme",
+          "supports": "Maintainer explicitly attributes script generation to Gemini assistance and documents PDF/TIFF workflow and per-platform environment configuration."
+        },
+        {
+          "url": "https://github.com/desordenades/Positive_Analyzer_for_Screen_Printing/blob/main/Screen_Printing_Positive_Analyzer.py",
+          "supports": "Actual public Python artifact exists under this filename; static parsing succeeded without execution."
+        },
+        {
+          "url": "https://github.com/desordenades/Positive_Analyzer_for_Screen_Printing/blob/main/LICENSE",
+          "supports": "Repository provides a GPL version 3 license."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "poirot",
+      "name": "Poirot",
+      "creator": "a7t-ai maintainers",
+      "description_en": "A native macOS companion for browsing Claude Code sessions, inspecting tool activity and reviewing conversation history.",
+      "description_zh": "用于浏览 Claude Code 会话、检查工具操作和回看对话历史的原生 macOS 配套应用。",
+      "platforms": [
+        "macos"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://github.com/a7t-ai/poirot",
+      "repo_url": "https://github.com/a7t-ai/poirot",
+      "download_url": "https://github.com/a7t-ai/poirot/releases/tag/v26.08.5",
+      "provenance_source": "https://github.com/a7t-ai/poirot#the-story",
+      "enables_en": "Inspect locally stored agent sessions and their file changes from a desktop interface.",
+      "enables_zh": "通过桌面界面查看本地保存的 Agent 会话及文件修改。",
+      "limits_en": "Requires macOS 15+. Session views depend on existing Claude Code data; rate-limit features rely on its stored authentication and provider interfaces.",
+      "limits_zh": "需要 macOS 15 及以上版本。会话视图依赖已有 Claude Code 数据，用量限制功能依赖其保存的认证信息和提供方接口。",
+      "provenance_note_en": "The maintainers specifically identify architecture, parser, UI and tests as components built with Claude Code as a copilot, rather than merely stating that the app integrates an AI tool.",
+      "provenance_note_zh": "维护者具体说明架构、解析器、界面和测试均与 Claude Code 协作构建，不只是描述应用接入了 AI 工具。",
+      "license_en": "MIT for the published application source.",
+      "license_zh": "公开应用源码采用 MIT。",
+      "license_url": "https://github.com/a7t-ai/poirot/blob/main/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/a7t-ai/poirot#the-story",
+          "supports": "First-party statement identifies substantial Claude Code participation across architecture, parsing, UI and tests."
+        },
+        {
+          "url": "https://github.com/a7t-ai/poirot#readme",
+          "supports": "Repository documents native SwiftUI implementation, macOS requirements and local transcript dependencies."
+        },
+        {
+          "url": "https://github.com/a7t-ai/poirot/releases/tag/v26.08.5",
+          "supports": "Published release contains Poirot-v26.08.5.dmg; no application was installed or run."
+        },
+        {
+          "url": "https://github.com/a7t-ai/poirot/blob/main/LICENSE",
+          "supports": "Application source has an MIT license."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "nacre",
+      "name": "Nacre",
+      "creator": "RYO ITABASHI",
+      "description_en": "An Android Japanese keyboard with split layouts, kana-kanji conversion, developer shortcuts and optional voice-input processing.",
+      "description_zh": "提供分体布局、假名汉字转换、开发者快捷键及可选语音处理的 Android 日语输入法。",
+      "platforms": [
+        "android"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://github.com/RYOITABASHI/Nacre",
+      "repo_url": "https://github.com/RYOITABASHI/Nacre",
+      "download_url": "https://github.com/RYOITABASHI/Nacre/releases/tag/build-365",
+      "provenance_source": "https://github.com/RYOITABASHI/Shelly#the-story",
+      "enables_en": "Type Japanese on an Android device with a keyboard designed for compact and foldable layouts.",
+      "enables_zh": "使用面向紧凑屏幕与折叠屏布局设计的键盘，在 Android 设备上输入日语。",
+      "limits_en": "Distributed as a developer APK requiring input-method setup. The build declares Android API 26 minimum, while optional speech/language models require separate downloads and suitable device resources.",
+      "limits_zh": "以开发版 APK 分发，需要进行输入法设置。构建声明最低 Android API 26，可选语音及语言模型还需单独下载并满足设备资源要求。",
+      "provenance_note_en": "In his own Shelly development account, the same maintainer names and links Nacre and explicitly says this Kotlin keyboard was created entirely through AI conversation; the claim concerns this distinct keyboard app.",
+      "provenance_note_zh": "同一维护者在自己的 Shelly 开发说明中点名并链接 Nacre，明确表示这款 Kotlin 键盘完全通过与 AI 对话创建；声明针对独立的输入法应用。",
+      "license_en": "Apache-2.0 for Nacre; third-party dictionaries and runtimes retain BSD, MIT and LGPL licenses documented in the repository.",
+      "license_zh": "Nacre 采用 Apache-2.0；第三方词典及运行时保留仓库列明的 BSD、MIT 和 LGPL 许可。",
+      "license_url": "https://github.com/RYOITABASHI/Nacre/blob/main/LICENSE",
+      "evidence": [
+        {
+          "url": "https://github.com/RYOITABASHI/Shelly#the-story",
+          "supports": "Maintainer's first-party account explicitly identifies Nacre by name/link and attributes its creation to AI conversation."
+        },
+        {
+          "url": "https://github.com/RYOITABASHI/Nacre#readme",
+          "supports": "Keyboard-specific repository documents functionality, model downloads and build/distribution requirements."
+        },
+        {
+          "url": "https://github.com/RYOITABASHI/Nacre/blob/main/app/build.gradle.kts",
+          "supports": "Build configuration declares minSdk 26; this is a source declaration, not an independent device test."
+        },
+        {
+          "url": "https://github.com/RYOITABASHI/Nacre/releases/tag/build-365",
+          "supports": "Release listing contains nacre-365.apk; the APK was not installed."
+        },
+        {
+          "url": "https://github.com/RYOITABASHI/Nacre/blob/main/THIRD_PARTY_LICENSES.md",
+          "supports": "Repository separately records licenses for Mozc, whisper.cpp, llama.cpp and KenLM."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "shagunly",
+      "name": "Shagunly",
+      "creator": "Piyush Grover",
+      "description_en": "A native iPhone and iPad ledger for recording gifts and cash exchanged at celebrations, organized by person and occasion.",
+      "description_zh": "按人物和场合记录庆典礼物及礼金往来的原生 iPhone/iPad 礼簿应用。",
+      "platforms": [
+        "ios"
+      ],
+      "implementation": "ai-built",
+      "primary_url": "https://apps.apple.com/us/app/shagunly/id6783436742",
+      "repo_url": null,
+      "download_url": "https://apps.apple.com/us/app/shagunly/id6783436742",
+      "provenance_source": "https://piyushgrover.com/shagunly.html",
+      "enables_en": "Record gifts given and received and revisit the history of a relationship or event.",
+      "enables_zh": "记录赠出和收到的礼物，并回看特定关系或活动的往来历史。",
+      "limits_en": "Requires iOS/iPadOS 17+ and account sign-in for its hosted backend. The creator still describes Android as in development; no Android or native macOS support is claimed here.",
+      "limits_zh": "需要 iOS/iPadOS 17 及以上版本，并登录账户使用托管后端。作者仍将 Android 列为开发中，本条目不扩展为 Android 或原生 macOS 支持。",
+      "provenance_note_en": "The creator's case study says he designed the product in Figma and directed Claude to implement every screen, flow and backend interaction without hand-writing code.",
+      "provenance_note_zh": "作者案例说明自己在 Figma 中设计产品，再指导 Claude 实现各个界面、流程和后端交互，没有手工编写代码。",
+      "license_en": "Public App Store distribution; no public application source or open-source license was identified.",
+      "license_zh": "通过 App Store 公开分发，未找到公开应用源码或开源许可。",
+      "license_url": null,
+      "evidence": [
+        {
+          "url": "https://piyushgrover.com/shagunly.html",
+          "supports": "Creator's detailed case study separates human Figma/product design from Claude-generated implementation and directly links the app."
+        },
+        {
+          "url": "https://apps.apple.com/us/app/shagunly/id6783436742",
+          "supports": "Public store listing identifies Piyush Grover, iPhone/iPad availability and current app features."
+        },
+        {
+          "url": "https://itunes.apple.com/lookup?id=6783436742&country=us",
+          "supports": "Apple lookup confirms exact app identity, seller and iOS 17 minimum."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "travel-times-milwaukee",
+      "name": "Travel Times Milwaukee",
+      "creator": "Vinny Carpenter",
+      "description_en": "An iPhone and iPad utility for Milwaukee freeway travel times, incidents, favorite routes and commute alerts.",
+      "description_zh": "展示密尔沃基高速路行程时间、事故信息、收藏路线及通勤提醒的 iPhone/iPad 工具。",
+      "platforms": [
+        "ios"
+      ],
+      "implementation": "ai-assisted",
+      "primary_url": "https://traveltimesapp.com/",
+      "repo_url": null,
+      "download_url": "https://apps.apple.com/us/app/travel-times-milwaukee/id932688030",
+      "provenance_source": "https://vinny.dev/blog/2026-04-12-one-week-with-ai-copilot/",
+      "enables_en": "Review regional traffic information and organize frequently used routes in a native mobile interface.",
+      "enables_zh": "在原生移动界面中查看地区交通信息，并整理常用路线。",
+      "limits_en": "The current store metadata requires iOS/iPadOS 26+. Information depends on Wisconsin traffic feeds; data accuracy/freshness was not independently checked. The separately described Android port has no verified public artifact in this review.",
+      "limits_zh": "当前商店元数据要求 iOS/iPadOS 26 及以上版本。信息依赖威斯康星州交通数据，本轮未独立核验准确性和时效；另述 Android 移植尚未核实公开产物。",
+      "provenance_note_en": "The original 2014 app was human-built. Carpenter's 2026 account details substantial Claude-generated feature and refactoring work, with line-by-line human review and some manual fixes; the label applies to that documented evolution.",
+      "provenance_note_zh": "2014 年原始应用由人工构建。Carpenter 的 2026 年记录详细描述大量 Claude 生成的功能和重构、逐行人工审查及部分手动修复；标签针对这段有记录的演进。",
+      "license_en": "Public App Store application; no public source repository or open-source license was identified in reviewed materials.",
+      "license_zh": "公开 App Store 应用，已核查资料中未找到公共源码仓库或开源许可。",
+      "license_url": null,
+      "evidence": [
+        {
+          "url": "https://vinny.dev/blog/2026-04-12-one-week-with-ai-copilot/",
+          "supports": "Creator gives artifact-specific accounts of AI implementation, existing human code, manual review and corrections during the iOS rebuild."
+        },
+        {
+          "url": "https://apps.apple.com/us/app/travel-times-milwaukee/id932688030",
+          "supports": "Store lists the same creator and released iPhone/iPad app; version history corroborates the documented 2026 feature additions."
+        },
+        {
+          "url": "https://itunes.apple.com/lookup?id=932688030&country=us",
+          "supports": "Apple metadata confirms current app title, Vinny Carpenter as seller and iOS 26 minimum."
+        },
+        {
+          "url": "https://traveltimesapp.com/",
+          "supports": "Creator's official website links the exact store artifact and identifies the regional data source."
+        }
+      ],
+      "content_type": "app",
+      "uses": [
+        "showcase"
+      ],
+      "resource_kind": "ai-generated-output",
+      "paper_url": null,
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "craftax",
+      "name": "Craftax",
+      "description_en": "A JAX survival-and-crafting world that extends Crafter with roguelike mechanics; Craftax-Classic is a separate simpler mode in the same project.",
+      "description_zh": "用 JAX 实现的生存与制作世界，在 Crafter 基础上扩展了类 roguelike 机制；同一项目另提供较简化的 Craftax-Classic 模式。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://craftaxenv.github.io/",
+      "repo_url": "https://github.com/MichaelTMatthews/Craftax",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2402.16801",
+      "limits_en": "Craftax and Craftax-Classic have different mechanics and should not share scores. Version fixes changed plant growth and Classic death rewards. Python 3.9+ is required; accelerator JAX must be installed separately and first use compiles functions. Code is MIT; no gameplay was tested.",
+      "limits_zh": "Craftax 与 Craftax-Classic 的机制不同，不能混用成绩。版本修复改变了植物生长和 Classic 死亡奖励。需要 Python 3.9+，加速器版 JAX 需另行安装，首次使用会编译函数。代码采用 MIT，未实际测试游戏。",
+      "enables_en": "Study exploration, long-term planning and progression in a procedurally generated world, using explicit environment and reset settings.",
+      "enables_zh": "在程序化生成的世界中研究探索、长期规划和成长过程，并明确记录环境及重置设置。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "PyPI craftax 1.6.1; Python/JAX with a gymnax-style API and optional Pygame human-play commands.",
+      "evidence": [
+        {
+          "url": "https://github.com/MichaelTMatthews/Craftax#readme",
+          "supports": "Documents Crafter lineage, expanded/Classic modes, setup, JAX compilation, reset pitfalls and version errata."
+        },
+        {
+          "url": "https://github.com/MichaelTMatthews/Craftax/blob/main/pyproject.toml",
+          "supports": "Declares version 1.6.1 and Python >=3.9."
+        },
+        {
+          "url": "https://github.com/MichaelTMatthews/Craftax/blob/main/LICENSE",
+          "supports": "Project code is MIT licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2402.16801",
+          "supports": "Original paper distinguishes Craftax-Classic from the expanded Craftax benchmark."
+        },
+        {
+          "url": "https://pypi.org/project/craftax/1.6.1/",
+          "supports": "PyPI metadata observed at review lists craftax 1.6.1, Python >=3.9; distributions were not downloaded."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "CPU/GPU/TPU are execution backends, not documented operating-system targets."
+    },
+    {
+      "id": "jumanji",
+      "name": "Jumanji",
+      "description_en": "A JAX suite of interactive logic games, packing, routing and other decision-making environments with configurable problem instances.",
+      "description_zh": "用 JAX 实现的交互式逻辑游戏、装箱、路径规划等决策环境套件，可配置问题实例。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://instadeepai.github.io/jumanji/",
+      "repo_url": "https://github.com/instadeepai/jumanji",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2306.09884",
+      "limits_en": "Requires Python 3.10+ and a suitable JAX backend. Rendering uses a Matplotlib GUI backend. Environment versions and instance generators affect comparisons; internal simulator state is not the same as the agent's observation. Repository code is Apache 2.0.",
+      "limits_zh": "需要 Python 3.10+ 和合适的 JAX 后端，渲染依赖 Matplotlib GUI 后端。环境版本和实例生成器会影响比较；模拟器内部状态不同于 Agent 可见的观察。仓库代码采用 Apache 2.0。",
+      "enables_en": "Train or compare policies on game-like and combinatorial tasks while varying initial-state distributions and problem size.",
+      "enables_zh": "在游戏式与组合决策任务上训练或比较策略，并改变初始状态分布和问题规模。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "PyPI jumanji 1.1.2; JAX state/timestep API with JIT/vectorization and optional rendering/training examples.",
+      "evidence": [
+        {
+          "url": "https://github.com/instadeepai/jumanji#readme",
+          "supports": "Documents task categories, installation, state-versus-observation distinction, rendering and environment versioning."
+        },
+        {
+          "url": "https://github.com/instadeepai/jumanji/blob/main/pyproject.toml",
+          "supports": "Current metadata requires Python >=3.10 and lists JAX dependencies."
+        },
+        {
+          "url": "https://github.com/instadeepai/jumanji/blob/main/LICENSE",
+          "supports": "Repository code is Apache 2.0 licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2306.09884",
+          "supports": "Primary paper introduces the configurable environment suite."
+        },
+        {
+          "url": "https://pypi.org/project/jumanji/1.1.2/",
+          "supports": "PyPI metadata observed at review lists jumanji 1.1.2, Python >=3.10; distributions were not downloaded."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "The reviewed project does not publish a single OS support matrix for every JAX/backend configuration."
+    },
+    {
+      "id": "melting-pot",
+      "name": "Melting Pot",
+      "description_en": "A multi-agent social-evaluation suite pairing interactive worlds with background agent populations to test generalization to unfamiliar partners.",
+      "description_zh": "将交互世界与背景 Agent 群体组合的多 Agent 社会交互评测套件，用于测试面对陌生伙伴时的泛化能力。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/google-deepmind/meltingpot",
+      "repo_url": "https://github.com/google-deepmind/meltingpot",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2211.13746",
+      "limits_en": "Substrates used for training and evaluation scenarios with background populations are different units. Current package requires Python 3.11+, Lab2D and TensorFlow; missing Lab2D wheels require source builds. Pin substrate/scenario and population versions. Repository code is Apache 2.0.",
+      "limits_zh": "训练使用的基础世界与包含背景群体的评测场景是不同单位。当前包要求 Python 3.11+、Lab2D 和 TensorFlow；缺少对应 Lab2D wheel 时需源码构建。应固定基础世界、场景和群体版本。仓库代码采用 Apache 2.0。",
+      "enables_en": "Evaluate cooperation, competition and social adaptation beyond an agent's original training partners.",
+      "enables_zh": "评估超出原训练伙伴范围的合作、竞争与社会适应能力。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "PyPI dm-meltingpot 2.4.1; Python with dmlab2d, dm_env and model/evaluation dependencies; optional human-player scripts.",
+      "evidence": [
+        {
+          "url": "https://github.com/google-deepmind/meltingpot#readme",
+          "supports": "Documents training substrates, social evaluation, background populations, installation and Lab2D dependency."
+        },
+        {
+          "url": "https://github.com/google-deepmind/meltingpot/blob/main/setup.py",
+          "supports": "Requires Python >=3.11 and declares Linux/macOS and TensorFlow/dmlab2d dependencies."
+        },
+        {
+          "url": "https://github.com/google-deepmind/meltingpot/blob/main/LICENSE",
+          "supports": "Repository code is Apache 2.0 licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2107.06857",
+          "supports": "Original paper defines social-generalization evaluation."
+        },
+        {
+          "url": "https://arxiv.org/abs/2211.13746",
+          "supports": "Version 2.0 report explains substrates, scenarios, background populations and asymmetric roles."
+        },
+        {
+          "url": "https://pypi.org/project/dm-meltingpot/2.4.1/",
+          "supports": "PyPI metadata observed at review lists dm-meltingpot 2.4.1, Python >=3.11; distributions were not downloaded."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "deepmind-lab",
+      "name": "DeepMind Lab",
+      "description_en": "A customizable first-person 3D game platform for visual navigation, memory and control tasks, built on the Quake III/ioquake3 engine lineage.",
+      "description_zh": "可定制的第一人称三维游戏平台，用于视觉导航、记忆和控制任务，基于 Quake III/ioquake3 引擎体系。",
+      "content_type": "game",
+      "platforms": [
+        "linux"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/google-deepmind/lab",
+      "repo_url": "https://github.com/google-deepmind/lab",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1612.03801",
+      "limits_en": "Source-build instructions target Linux x86 and include historical Python/Bazel guidance; modern compatibility was not tested. Rendering needs SDL2 and an OpenGL/EGL/GLX or software backend. Licensing is mixed: engine/OpenArena components use GPLv2, main assets CC BY 4.0, with additional component notices.",
+      "limits_zh": "源码构建说明面向 Linux x86，包含历史 Python/Bazel 配置，本次未测试现代兼容性。渲染需要 SDL2 及 OpenGL/EGL/GLX 或软件后端。许可混合：引擎和 OpenArena 组件采用 GPLv2，主要素材采用 CC BY 4.0，其他组件另有说明。",
+      "enables_en": "Create and compare visually rich, partially observed tasks using a programmable level system and agent API.",
+      "enables_zh": "通过可编程关卡系统和 Agent 接口，创建并比较视觉丰富、部分可观测的任务。",
+      "resource_kind": "environment-framework",
+      "runtime": "Source-only Bazel build with Python/dm_env bindings and Lua level logic; optional self-built pip package. Latest listed GitHub release is release-2020-12-07.",
+      "evidence": [
+        {
+          "url": "https://github.com/google-deepmind/lab#readme",
+          "supports": "Documents Linux-oriented source builds, APIs, dependencies and human/random-agent examples."
+        },
+        {
+          "url": "https://github.com/google-deepmind/lab/blob/master/docs/users/build.md",
+          "supports": "Provides author build guidance for the source distribution."
+        },
+        {
+          "url": "https://github.com/google-deepmind/lab/blob/master/LICENSE",
+          "supports": "Separates GPLv2 engine/OpenArena, CC BY 4.0 assets and other component terms."
+        },
+        {
+          "url": "https://github.com/google-deepmind/lab/releases/tag/release-2020-12-07",
+          "supports": "Latest non-prerelease GitHub listing observed at review; this is not a claim that current source is identical."
+        },
+        {
+          "url": "https://arxiv.org/abs/1612.03801",
+          "supports": "Original platform paper describes first-person visual and partially observed worlds."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Linux is the documented build target; other operating systems are not inferred from the underlying engine."
+    },
+    {
+      "id": "deepmind-lab2d",
+      "name": "DeepMind Lab2D",
+      "description_en": "A C++/Lua engine for building layered two-dimensional grid worlds with multiple agents, text maps and programmable behavior.",
+      "description_zh": "用于构建分层二维网格世界的 C++/Lua 引擎，支持多个 Agent、文本地图和可编程行为。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/google-deepmind/lab2d",
+      "repo_url": "https://github.com/google-deepmind/lab2d",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2011.07027",
+      "limits_en": "Lab2D is an environment engine, distinct from the Melting Pot scenarios built on it and the 3D DeepMind Lab project. Wheels are provided for selected Linux/macOS configurations; other setups need a Bazel source build. Code is Apache 2.0, with external dependency terms.",
+      "limits_zh": "Lab2D 是环境引擎，与基于它构建的 Melting Pot 场景及三维 DeepMind Lab 项目不同。部分 Linux/macOS 配置提供 wheel，其他配置需要 Bazel 源码构建。代码采用 Apache 2.0，外部依赖另有条款。",
+      "enables_en": "Design custom multi-agent worlds and expose them through dm_env or the lower-level C interface.",
+      "enables_zh": "设计自定义多 Agent 世界，并通过 dm_env 或底层 C 接口使用。",
+      "resource_kind": "environment-framework",
+      "runtime": "PyPI dmlab2d 1.0.2; native C++/Lua backend, Python dm_env interface and platform-specific wheels or Bazel build.",
+      "evidence": [
+        {
+          "url": "https://github.com/google-deepmind/lab2d#readme",
+          "supports": "Defines grid-world authoring, multiple agents, APIs, wheels and native-build constraints."
+        },
+        {
+          "url": "https://github.com/google-deepmind/lab2d/blob/main/LICENSE",
+          "supports": "Repository code is Apache 2.0 licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2011.07027",
+          "supports": "Original whitepaper describes researcher-led multi-agent environment design."
+        },
+        {
+          "url": "https://pypi.org/project/dmlab2d/1.0.2/",
+          "supports": "PyPI metadata observed at review lists dmlab2d 1.0.2; distributions were not downloaded."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "bsuite",
+      "name": "Behaviour Suite (bsuite)",
+      "description_en": "A collection of controlled interactive RL experiments designed to diagnose exploration, memory and other agent capabilities with standardized logging.",
+      "description_zh": "一组受控的交互式强化学习实验，通过标准化记录诊断探索、记忆等 Agent 能力。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/google-deepmind/bsuite",
+      "repo_url": "https://github.com/google-deepmind/bsuite",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1908.03568",
+      "limits_en": "These are diagnostic tasks rather than a realistic open world. Evaluation depends on the experiment ID, configuration and prescribed episode count. README setup examples reference older Python versions and optional baseline stacks; current compatibility was not tested. Code is Apache 2.0.",
+      "limits_zh": "这些是诊断任务，而非写实开放世界。评测依赖实验 ID、配置和规定的回合数。README 配置示例涉及较旧的 Python 版本及可选基线依赖，本次未测试当前兼容性。代码采用 Apache 2.0。",
+      "enables_en": "Compare learning behavior across small controlled tasks and inspect where an agent succeeds or fails.",
+      "enables_zh": "跨小型受控任务比较学习行为，检查 Agent 成功或失败的具体能力。",
+      "resource_kind": "benchmark-suite",
+      "runtime": "PyPI bsuite 0.3.6; dm_env interface, experiment sweeps and CSV/reporting tools; optional baseline dependencies are separate.",
+      "evidence": [
+        {
+          "url": "https://github.com/google-deepmind/bsuite#readme",
+          "supports": "Documents experiment/configuration IDs, dm_env interaction, episode budgets, logging and optional baselines."
+        },
+        {
+          "url": "https://github.com/google-deepmind/bsuite/blob/main/setup.py",
+          "supports": "Shows distinct environment versus baseline dependency groups."
+        },
+        {
+          "url": "https://github.com/google-deepmind/bsuite/blob/main/LICENSE",
+          "supports": "Repository code is Apache 2.0 licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/1908.03568",
+          "supports": "Primary paper defines the controlled capability-diagnostic suite."
+        },
+        {
+          "url": "https://pypi.org/project/bsuite/0.3.6/",
+          "supports": "PyPI metadata observed at review lists bsuite 0.3.6; distributions were not downloaded."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Package classifiers list OS families, but this review does not establish a tested support matrix for the optional stacks."
+    },
+    {
+      "id": "pufferlib",
+      "name": "PufferLib / Ocean",
+      "description_en": "An RL execution framework with an Ocean collection of native game and simulation implementations, alongside environment integration and training infrastructure.",
+      "description_zh": "包含 Ocean 原生游戏与模拟实现集合的强化学习执行框架，并提供环境集成和训练基础设施。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos",
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://puffer.ai/",
+      "repo_url": "https://github.com/PufferAI/PufferLib",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2406.12905",
+      "limits_en": "PyPI still lists 3.0.0 while the default source branch is 5.0 with C/CUDA builds; do not mix their setup recipes. macOS CPU and web paths cover selected environments, not all training modes. The 5.0-experiments release contains experiment/model data. MIT framework terms do not establish all third-party asset rights.",
+      "limits_zh": "PyPI 仍列为 3.0.0，而默认源码分支为使用 C/CUDA 构建的 5.0，不能混用配置说明。macOS CPU 与 Web 路径仅覆盖部分环境，不代表所有训练模式。5.0-experiments 发布的是实验和模型数据。MIT 框架许可不代表所有第三方素材权利。",
+      "enables_en": "Build or study native simulation tasks, run vectorized agent experiments and inspect the source of selected Ocean environments.",
+      "enables_zh": "构建或研究原生模拟任务，运行向量化 Agent 实验，并查看选定 Ocean 环境的源码。",
+      "resource_kind": "environment-framework",
+      "runtime": "Older Python distribution: pufferlib 3.0.0. Current 5.0 source has native CUDA training, CPU play/evaluation and Emscripten web build modes.",
+      "evidence": [
+        {
+          "url": "https://github.com/PufferAI/PufferLib/tree/5.0/ocean",
+          "supports": "Inspectable native environment source collection establishes substantive simulator artifacts beyond wrappers."
+        },
+        {
+          "url": "https://github.com/PufferAI/PufferLib/blob/5.0/build.sh",
+          "supports": "Source documents native/CUDA, CPU and web modes and Linux/macOS-specific dependencies; not executed."
+        },
+        {
+          "url": "https://puffer.ai/blog/2.0/",
+          "supports": "First-party account explains the introduction of independently implemented Ocean C environments."
+        },
+        {
+          "url": "https://github.com/PufferAI/PufferLib/releases/tag/5.0-experiments",
+          "supports": "Release body identifies experiment logs and pretrained models, not a new Python package."
+        },
+        {
+          "url": "https://github.com/PufferAI/PufferLib/blob/5.0/LICENSE",
+          "supports": "Framework repository is MIT licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2406.12905",
+          "supports": "Original paper describes the earlier interoperability/vectorization architecture, not current 5.0 compatibility."
+        },
+        {
+          "url": "https://pypi.org/project/pufferlib/3.0.0/",
+          "supports": "PyPI metadata observed at review lists pufferlib 3.0.0, Python >=3.9; distributions were not downloaded."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "The source has Linux/macOS CPU and Emscripten browser paths; CUDA training availability and per-environment support are narrower."
+    },
+    {
+      "id": "gymnax",
+      "name": "Gymnax",
+      "description_en": "A functional JAX environment library with implemented classic-control, diagnostic and small-game tasks, exposing explicit state, randomness and parameters.",
+      "description_zh": "采用函数式接口的 JAX 环境库，实现经典控制、诊断和小型游戏任务，显式传递状态、随机数和参数。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/RobertTLange/gymnax",
+      "repo_url": "https://github.com/RobertTLange/gymnax",
+      "demo_url": null,
+      "paper_url": null,
+      "limits_en": "Many tasks reimplement Gym, bsuite or MinAtar and are not new benchmark families. PyPI 1.0.0 requires Python 3.10–3.13; the default env-dev branch contains older setup text. Pin code and task parameters and do not assume behavior matches upstream implementations. Code is Apache 2.0.",
+      "limits_zh": "许多任务重新实现 Gym、bsuite 或 MinAtar，不应算作新的基准系列。PyPI 1.0.0 要求 Python 3.10–3.13，默认 env-dev 分支仍含较旧的配置文字。应固定代码和任务参数，不假定行为与上游实现完全相同。代码采用 Apache 2.0。",
+      "enables_en": "Run batched JAX rollouts and vary environment parameters for controlled or meta-learning experiments.",
+      "enables_zh": "批量运行 JAX 轨迹，并改变环境参数进行受控实验或元学习研究。",
+      "resource_kind": "environment-framework",
+      "runtime": "PyPI gymnax 1.0.0; JAX/jaxlib and related Python dependencies, with an explicit-state reset/step API.",
+      "evidence": [
+        {
+          "url": "https://github.com/RobertTLange/gymnax/blob/env-dev/README.md",
+          "supports": "Documents JAX interface, implemented task families, installation and repository-only software citation."
+        },
+        {
+          "url": "https://github.com/RobertTLange/gymnax/blob/env-dev/gymnax/environments/bsuite/deep_sea.py",
+          "supports": "Contains a substantive JAX state-transition implementation and attribution to original bsuite."
+        },
+        {
+          "url": "https://github.com/RobertTLange/gymnax/blob/env-dev/LICENSE",
+          "supports": "Repository code is Apache 2.0 licensed."
+        },
+        {
+          "url": "https://pypi.org/project/gymnax/1.0.0/",
+          "supports": "PyPI metadata observed at review lists gymnax 1.0.0, Python <3.14,>=3.10; distributions were not downloaded."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "No OS tag is inferred from JAX backend availability."
+    },
+    {
+      "id": "griddly",
+      "name": "Griddly",
+      "description_en": "A configurable grid-world game engine using a YAML description language to define mechanics, observations and single- or multi-agent tasks.",
+      "description_zh": "使用 YAML 描述语言定义机制、观察与单 Agent 或多 Agent 任务的可配置网格游戏引擎。",
+      "content_type": "game",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows",
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://griddly.readthedocs.io/",
+      "repo_url": "https://github.com/Bam4d/Griddly",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2011.06363",
+      "limits_en": "Pixel rendering and native builds have Vulkan/toolchain requirements. PyPI 1.6.7, older GitHub releases and the develop branch are different snapshots. Engine code is MIT, but official documentation says the Oryx artwork requires a purchased license for use in a product; do not assume the art is MIT.",
+      "limits_zh": "像素渲染和原生构建有 Vulkan 及工具链要求。PyPI 1.6.7、较旧 GitHub 发布与 develop 分支是不同快照。引擎代码采用 MIT，但官方文档说明 Oryx 素材用于产品时需要购买许可，不能假定素材也采用 MIT。",
+      "enables_en": "Author game mechanics and compare agents under different observation types, maps and interaction rules.",
+      "enables_zh": "编写游戏机制，并在不同观察类型、地图和交互规则下比较 Agent。",
+      "resource_kind": "environment-framework",
+      "runtime": "PyPI griddly 1.6.7; C++ engine/Python interface, GDY YAML tasks, native builds and a documented WebAssembly build path.",
+      "evidence": [
+        {
+          "url": "https://github.com/Bam4d/Griddly/blob/develop/README.md",
+          "supports": "Documents GDY, observation modes, native platform prerequisites and WebAssembly builds."
+        },
+        {
+          "url": "https://github.com/Bam4d/Griddly/blob/develop/LICENSE",
+          "supports": "Engine repository code is MIT licensed."
+        },
+        {
+          "url": "https://griddly.readthedocs.io/en/latest/about/artwork.html",
+          "supports": "Official artwork page distinguishes Oryx product-use licensing from engine code."
+        },
+        {
+          "url": "https://arxiv.org/abs/2011.06363",
+          "supports": "Original paper describes configurable games, observers and the C++ engine."
+        },
+        {
+          "url": "https://pypi.org/project/griddly/1.6.7/",
+          "supports": "PyPI metadata observed at review lists griddly 1.6.7; distributions were not downloaded."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "Web denotes the documented WebAssembly build target, not a verified hosted benchmark; native platforms follow author build instructions."
+    },
+    {
+      "id": "rlcard",
+      "name": "RLCard",
+      "description_en": "A card-game environment toolkit exposing observations, legal actions and trajectories for reinforcement learning and search under imperfect information.",
+      "description_zh": "为不完全信息条件下的强化学习与搜索提供观察、合法动作和轨迹的卡牌游戏环境工具包。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/datamllab/rlcard",
+      "repo_url": "https://github.com/datamllab/rlcard",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1910.04376",
+      "limits_en": "Game-specific rules and action abstractions affect comparability. The default package contains environments; learning algorithms and graphical demos have separate dependencies/projects. PyPI lists 1.2.0 while the latest GitHub release is older. Repository code is MIT; no model or game interaction was run.",
+      "limits_zh": "不同游戏的规则和动作抽象会影响可比性。默认包包含环境，学习算法和图形演示另有依赖或项目。PyPI 列为 1.2.0，最新 GitHub 发布则较旧。仓库代码采用 MIT，未运行模型或游戏交互。",
+      "enables_en": "Train or compare card-game policies with explicit legal-action handling and reproducible seeded episodes.",
+      "enables_zh": "通过明确的合法动作处理和固定种子的回合，训练或比较卡牌游戏策略。",
+      "resource_kind": "environment-framework",
+      "runtime": "PyPI rlcard 1.2.0; Python/NumPy/termcolor environments, with optional PyTorch training extras and separate GUI examples.",
+      "evidence": [
+        {
+          "url": "https://github.com/datamllab/rlcard#readme",
+          "supports": "Documents card environments, legal-action/state interfaces, installation and separate training/GUI components."
+        },
+        {
+          "url": "https://github.com/datamllab/rlcard/blob/master/setup.py",
+          "supports": "Lists core environment dependencies and optional training dependencies."
+        },
+        {
+          "url": "https://github.com/datamllab/rlcard/blob/master/LICENSE.md",
+          "supports": "Repository code is MIT licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/1910.04376",
+          "supports": "Original toolkit paper explains imperfect-information card environments and interfaces."
+        },
+        {
+          "url": "https://pypi.org/project/rlcard/1.2.0/",
+          "supports": "PyPI metadata observed at review lists rlcard 1.2.0; distributions were not downloaded."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "No native OS or web target is inferred from the Python API or separate GUI project."
+    },
+    {
+      "id": "xland-minigrid",
+      "name": "XLand-MiniGrid",
+      "description_en": "A JAX grid-world suite for meta-reinforcement learning where composable rules and goals change the dynamics an agent must discover.",
+      "description_zh": "用于元强化学习的 JAX 网格世界套件，通过组合规则和目标改变 Agent 需要探索的环境动力学。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/dunnolab/xland-minigrid",
+      "repo_url": "https://github.com/dunnolab/xland-minigrid",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2312.12044",
+      "limits_en": "This is a from-scratch meta-learning suite inspired by XLand/MiniGrid, not a release of DeepMind's original XLand. First benchmark loading downloads cached ruleset data. PyPI 0.9.3 requires Python 3.9+ and appropriate JAX setup. Included MiniGrid ports overlap existing tasks and have limited maintenance. Code is Apache 2.0.",
+      "limits_zh": "这是受 XLand/MiniGrid 启发、从头实现的元学习套件，并非 DeepMind 原 XLand 的发布。首次加载基准会下载并缓存规则集数据。PyPI 0.9.3 要求 Python 3.9+ 和相应 JAX 配置。附带的 MiniGrid 移植任务与已有任务重合，维护有限。代码采用 Apache 2.0。",
+      "enables_en": "Train and evaluate adaptation to changing rulesets, using explicit train/test task distributions and optional visual observations.",
+      "enables_zh": "通过明确的训练、测试任务分布和可选视觉观察，训练与评估对变化规则集的适应能力。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "PyPI xminigrid 0.9.3; functional JAX environment API, ruleset generator and separately loaded benchmark data.",
+      "evidence": [
+        {
+          "url": "https://github.com/dunnolab/xland-minigrid#readme",
+          "supports": "Documents from-scratch implementation, composable rules/goals, benchmark downloads and limited support for included MiniGrid ports."
+        },
+        {
+          "url": "https://github.com/dunnolab/xland-minigrid/blob/main/pyproject.toml",
+          "supports": "Declares Python >=3.9 and JAX-related requirements."
+        },
+        {
+          "url": "https://github.com/dunnolab/xland-minigrid/blob/main/LICENSE",
+          "supports": "Repository code is Apache 2.0 licensed."
+        },
+        {
+          "url": "https://arxiv.org/abs/2312.12044",
+          "supports": "Original paper introduces the meta-RL environment suite and ruleset benchmarks."
+        },
+        {
+          "url": "https://pypi.org/project/xminigrid/0.9.3/",
+          "supports": "PyPI metadata observed at review lists xminigrid 0.9.3, Python >=3.9; distributions were not downloaded."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "platform_note": "CPU/GPU/TPU support is not used to infer operating-system tags."
+    },
+    {
+      "id": "gui-odyssey",
+      "name": "GUI Odyssey",
+      "description_en": "An offline Android dataset of cross-app navigation demonstrations, combining screenshots and actions with instructions and semantic reasoning annotations.",
+      "description_zh": "面向 Android 跨应用导航的离线示范数据集，提供截图、动作、指令及语义推理标注。",
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "primary_url": "https://github.com/OpenGVLab/GUI-Odyssey",
+      "repo_url": "https://github.com/OpenGVLab/GUI-Odyssey",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2406.08451",
+      "enables_en": "Train action predictors and compare cross-app generalization using the released app, device, task and random splits.",
+      "enables_zh": "训练动作预测模型，并利用已发布的应用、设备、任务及随机划分比较跨应用泛化能力。",
+      "limits_en": "Recorded trajectories, not an interactive emulator. The authors recommend the July 2025 GUIOdyssey release over the original Hub mirror; specify the data version and split. The current dataset is public and labeled CC BY 4.0. A separate repository code license was not located.",
+      "limits_zh": "提供记录的轨迹，不是交互式模拟器。作者建议使用 2025 年 7 月更新的 GUIOdyssey 数据，而非最初的 Hub 镜像；比较时需注明版本和划分。当前数据公开并标注 CC BY 4.0；未找到单独的仓库代码许可。",
+      "resource_kind": "dataset-and-benchmark",
+      "runtime": "Offline screenshot/action data with processing, fine-tuning and evaluation instructions; no device image is included in this listing.",
+      "evidence": [
+        {
+          "url": "https://github.com/OpenGVLab/GUI-Odyssey#readme",
+          "supports": "Documents cross-app Android demonstrations, split choices and the recommended July 2025 dataset release."
+        },
+        {
+          "url": "https://huggingface.co/datasets/hflqf88888/GUIOdyssey",
+          "supports": "Current author-linked public dataset, annotations and CC BY 4.0 declaration."
+        },
+        {
+          "url": "https://github.com/OpenGVLab/GUI-Odyssey/blob/master/Quickstart.md",
+          "supports": "Describes data preparation, model fine-tuning and offline evaluation."
+        }
+      ],
+      "implementation": "unknown",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "gui-world",
+      "name": "GUI-World",
+      "description_en": "A GUI video dataset and offline benchmark for understanding interface content, changes and operation sequences across desktop, mobile, web and XR recordings.",
+      "description_zh": "覆盖桌面、移动端、网页及 XR 录屏的 GUI 视频数据集与离线基准，评估界面内容、变化及操作序列理解。",
+      "content_type": "app",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "primary_url": "https://github.com/Dongping-Chen/GUI-World",
+      "repo_url": "https://github.com/Dongping-Chen/GUI-World",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2406.10819",
+      "enables_en": "Train on annotated GUI videos and evaluate temporal understanding through the released question-answering splits and inference/judging code.",
+      "enables_zh": "使用带标注的 GUI 视频训练模型，并通过已发布的问答划分及推理、判分代码评估时序理解。",
+      "limits_en": "Video question answering does not execute GUI actions or verify workflow completion. The dataset is public under CC BY 4.0; evaluation needs a chosen model and, for judged responses, a configured judge. GUI-Vid is the associated model, not a separate environment.",
+      "limits_zh": "视频问答不会执行 GUI 动作，也不验证工作流完成情况。数据按 CC BY 4.0 公开；评测需配置被测模型，依赖模型判分的回答还需配置评审模型。GUI-Vid 是关联模型，不是另一个环境。",
+      "resource_kind": "dataset-and-benchmark",
+      "platform_note": "Platform tags describe source recordings, not native installation support. The source also covers XR, which has no platform tag in this catalog.",
+      "evidence": [
+        {
+          "url": "https://github.com/Dongping-Chen/GUI-World/blob/master/Readme.md",
+          "supports": "Defines the dataset and evaluation code and identifies GUI-Vid as a fine-tuned video model."
+        },
+        {
+          "url": "https://huggingface.co/datasets/ONE-Lab/GUI-World",
+          "supports": "Public video/annotation artifact with training and benchmark files; the card text declares CC BY 4.0."
+        },
+        {
+          "url": "https://github.com/Dongping-Chen/GUI-World/blob/master/evaluation/README.md",
+          "supports": "Documents inference, supported providers, answer judging and offline evaluation outputs."
+        },
+        {
+          "url": "https://gui-world.github.io/",
+          "supports": "Identifies web, macOS, Windows, Android, iOS and XR recording scenarios."
+        }
+      ],
+      "implementation": "unknown",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "androidcontrol",
+      "name": "AndroidControl",
+      "description_en": "Human Android task demonstrations with both overall goals and step instructions, plus screenshots, accessibility trees and structured actions.",
+      "description_zh": "提供 Android 人类任务示范，包含整体目标、逐步指令、截图、无障碍树及结构化动作。",
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "primary_url": "https://github.com/google-research/google-research/tree/master/android_control",
+      "repo_url": "https://github.com/google-research/google-research/tree/master/android_control",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2406.03679",
+      "enables_en": "Study how training-data scale and instruction granularity affect action prediction and generalization to unfamiliar apps and tasks.",
+      "enables_zh": "研究训练数据规模及指令粒度如何影响动作预测，以及对未见应用和任务的泛化。",
+      "limits_en": "Public GZIP TFRecords and split files provide offline demonstrations, not a runnable device environment. Accessibility-tree parsing uses android_env protobuf definitions. The release README carries an Apache-2.0 notice for that file; a separate license statement for the hosted dataset was not located.",
+      "limits_zh": "公开的 GZIP TFRecord 及划分文件提供离线示范，不是可运行的设备环境。解析无障碍树需使用 android_env 的 protobuf 定义。发布说明对该文件注明 Apache-2.0；未找到托管数据集的单独许可声明。",
+      "resource_kind": "dataset-and-benchmark",
+      "runtime": "TensorFlow TFRecord reader plus Android accessibility protobuf definitions; public bucket objects were inspected without downloading the full dataset.",
+      "evidence": [
+        {
+          "url": "https://github.com/google-research/google-research/blob/master/android_control/README.md",
+          "supports": "Specifies dataset fields, action space, parsing requirements, data location and the file-level Apache-2.0 notice."
+        },
+        {
+          "url": "https://storage.googleapis.com/storage/v1/b/gresearch/o?prefix=android_control%2F&maxResults=50",
+          "supports": "Public bucket metadata lists the TFRecord shards and released split files without authentication."
+        },
+        {
+          "url": "https://research.google/pubs/on-the-effects-of-data-scale-on-ui-control-agents/",
+          "supports": "Primary author publication page links the dataset's training-scale and generalization study."
+        }
+      ],
+      "implementation": "unknown",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "guiact",
+      "name": "GUIAct (GUICourse)",
+      "description_en": "The released navigation component of GUICourse: screenshot/action data for single-step and multi-step website tasks and Android interactions.",
+      "description_zh": "GUICourse 已发布的导航数据部分，包含单步、多步网页任务及 Android 交互的截图与动作记录。",
+      "content_type": "app",
+      "platforms": [
+        "web",
+        "android"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "primary_url": "https://github.com/RUCBM/GUICourse",
+      "repo_url": "https://github.com/RUCBM/GUICourse",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2406.11317",
+      "enables_en": "Train visual GUI action predictors and evaluate them on the published smartphone, web-single and web-multi train/test splits.",
+      "enables_zh": "训练视觉 GUI 动作预测模型，并使用已发布的 smartphone、web-single 和 web-multi 训练／测试划分评估。",
+      "limits_en": "Static JSON/Parquet records with processing and evaluation code; no packaged live environment. The repository declares code MIT and datasets CC BY 4.0, while GUIAct's public Hub card says Apache-2.0. Data licensing is inconsistent. The separate GUIEnv-global pretraining release remains unchecked in the project checklist.",
+      "limits_zh": "提供静态 JSON／Parquet 记录及处理、评测代码，未封装实时环境。仓库声明代码采用 MIT、数据采用 CC BY 4.0，但 GUIAct 的公开 Hub 卡片标注 Apache-2.0，数据许可存在冲突。项目清单中独立的 GUIEnv-global 预训练数据仍未标记为已发布。",
+      "resource_kind": "dataset-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/RUCBM/GUICourse#readme",
+          "supports": "Defines GUIAct's web/Android scope, release checklist, preprocessing/evaluation code and code/data license declarations."
+        },
+        {
+          "url": "https://huggingface.co/datasets/yiye2023/GUIAct",
+          "supports": "Public smartphone, web-single and web-multi train/test JSON/Parquet files; dataset card declares Apache-2.0, conflicting with the repository."
+        },
+        {
+          "url": "https://arxiv.org/abs/2406.11317",
+          "supports": "Original GUICourse paper distinguishes GUIAct navigation from the GUIEnv and GUIChat components."
+        }
+      ],
+      "implementation": "unknown",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "aitz",
+      "name": "Android in the Zoo (AITZ)",
+      "description_en": "An Android-in-the-Wild-derived dataset that adds screen descriptions and action-reasoning annotations to recorded screenshot/action sequences.",
+      "description_zh": "基于 Android in the Wild 子集构建的数据集，为记录的截图与动作序列补充屏幕描述及动作推理标注。",
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "primary_url": "https://github.com/SuperAutomateAgent/CoAT-Android",
+      "repo_url": "https://github.com/SuperAutomateAgent/CoAT-Android",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2403.02713",
+      "enables_en": "Train or evaluate mobile action prediction with the released Chain-of-Action-Thought annotations and evaluation scripts.",
+      "enables_zh": "利用已发布的 Chain-of-Action-Thought 标注及评测脚本，训练或评估移动端动作预测。",
+      "limits_en": "An enriched subset of AITW, not independent live-device tasks or an emulator. Screenshots, JSON samples and evaluation code are inspectable in the repository; the full archive is linked through Google Drive and Baidu and was not downloaded. The README displays an Apache-2.0 badge, but no standalone license or precise dataset licensing scope was located.",
+      "limits_zh": "这是 AITW 的增强标注子集，不是独立的实时设备任务或模拟器。仓库可查看截图、JSON 样本及评测代码；完整档案通过 Google Drive 和百度网盘提供，本次未下载。README 展示 Apache-2.0 许可徽章，但未找到独立许可文件或明确的数据许可适用范围。",
+      "resource_kind": "dataset-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://github.com/SuperAutomateAgent/CoAT-Android#readme",
+          "supports": "Documents semantic annotation fields, download locations and released action-prediction evaluation."
+        },
+        {
+          "url": "https://github.com/SuperAutomateAgent/CoAT-Android/tree/main/data-example",
+          "supports": "Public screenshot and JSON examples make the annotation artifact inspectable without accessing the full external archive."
+        },
+        {
+          "url": "https://github.com/SuperAutomateAgent/CoAT-Android/blob/main/coat/evaluate.py",
+          "supports": "Released offline action-prediction evaluation implementation."
+        },
+        {
+          "url": "https://arxiv.org/abs/2403.02713",
+          "supports": "Primary paper explains AITW-derived data construction and Chain-of-Action-Thought annotations."
+        }
+      ],
+      "implementation": "unknown",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "amex",
+      "name": "AMEX",
+      "description_en": "An Android GUI dataset combining element grounding, screen and element functionality descriptions, and instruction-following action chains.",
+      "description_zh": "结合元素定位、屏幕及元素功能描述、指令驱动动作链的 Android GUI 数据集。",
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "primary_url": "https://huggingface.co/datasets/Yuxiang007/AMEX",
+      "repo_url": null,
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2407.17490",
+      "enables_en": "Train mobile interface perception and action prediction from three complementary annotation levels, with public samples for inspecting their formats.",
+      "enables_zh": "利用三个互补标注层级训练移动界面感知和动作预测，并通过公开样本查看数据格式。",
+      "limits_en": "Offline screenshot and annotation archives, not a device runtime. The public dataset is CC BY 4.0; full screenshots use multipart ZIP archives. Its action-chain format differs from AndroidControl, so action records cannot be treated as directly interchangeable. No separate runnable benchmark harness is claimed here.",
+      "limits_zh": "提供离线截图及标注档案，不包含设备运行环境。公开数据采用 CC BY 4.0；完整截图使用分卷 ZIP。动作链格式与 AndroidControl 不同，不能直接互换。本条目不将其描述为独立可运行的评测框架。",
+      "resource_kind": "dataset-and-benchmark",
+      "evidence": [
+        {
+          "url": "https://huggingface.co/datasets/Yuxiang007/AMEX",
+          "supports": "Author-maintained public release declares CC BY 4.0, describes annotation levels, archive assembly and differing AndroidControl action spaces."
+        },
+        {
+          "url": "https://huggingface.co/datasets/Yuxiang007/AMEX/tree/main",
+          "supports": "Public sample annotations/screenshots and full element, instruction and multipart screenshot archives are present."
+        },
+        {
+          "url": "https://arxiv.org/abs/2407.17490",
+          "supports": "Primary paper describes the mobile dataset's three annotation levels."
+        }
+      ],
+      "implementation": "unknown",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "osworld-human",
+      "name": "OSWorld-Human",
+      "description_en": "Human reference trajectories and efficiency scoring for OSWorld tasks, measuring how many agent actions a successful workflow requires.",
+      "description_zh": "为 OSWorld 任务提供人类参考轨迹及效率评分，用于衡量 Agent 成功完成工作流所需的动作数量。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "primary_url": "https://github.com/WukLab/osworld-human",
+      "repo_url": "https://github.com/WukLab/osworld-human",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2506.16042",
+      "enables_en": "Compare agent action efficiency against annotated human trajectories using the released weighted-efficiency scorer.",
+      "enables_zh": "利用已发布的加权效率评分程序，将 Agent 的动作效率与人工标注轨迹比较。",
+      "limits_en": "The authors explicitly say not to use these data for training because the trajectories expose OSWorld evaluation solutions. This adds reference data and a scorer, not new desktop images. Report the OSWorld task version, maximum steps and single-action versus grouped-action convention. No explicit repository license was located.",
+      "limits_zh": "作者明确要求不要用于训练，因为轨迹包含 OSWorld 评测任务答案。本项目补充参考数据及评分程序，不提供新的桌面镜像。结果需注明 OSWorld 任务版本、最大步数及单动作／分组动作口径。未找到明确的仓库许可。",
+      "resource_kind": "dataset-and-benchmark",
+      "platform_note": "No OS tags are inferred from the upstream OSWorld environment; this release contains reference traces and scoring code.",
+      "evidence": [
+        {
+          "url": "https://github.com/WukLab/osworld-human#readme",
+          "supports": "Defines human reference traces, evaluation-only restriction and single/grouped-action efficiency scores."
+        },
+        {
+          "url": "https://github.com/WukLab/osworld-human/blob/main/score.py",
+          "supports": "Public scoring implementation consumes agent results and human reference information."
+        },
+        {
+          "url": "https://arxiv.org/abs/2506.16042",
+          "supports": "Primary study distinguishes latency analysis from reference-trajectory efficiency benchmarking."
+        }
+      ],
+      "implementation": "unknown",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "ui-vision",
+      "name": "UI-Vision",
+      "description_en": "An offline desktop GUI benchmark with publicly released element-grounding and layout-grounding screenshots, annotations and evaluation code.",
+      "description_zh": "离线桌面 GUI 基准，已公开元素定位、布局定位所需的截图、标注及评测代码。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "primary_url": "https://github.com/uivision/UI-Vision",
+      "repo_url": "https://github.com/uivision/UI-Vision",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2503.15661",
+      "enables_en": "Evaluate target localization and spatial/layout understanding on screenshots from desktop software.",
+      "enables_zh": "在桌面软件截图上评估目标定位及空间、布局理解能力。",
+      "limits_en": "The public release covers grounding; the paper's action-prediction component still has a 'Coming soon' placeholder. This is static screenshot evaluation, not a desktop execution environment. The public dataset card declares MIT and evaluation use; native OS support is not established by the artifact.",
+      "limits_zh": "公开版本覆盖定位任务；论文中的动作预测部分仍是“Coming soon”占位说明。这是静态截图评测，不是桌面执行环境。公开数据卡声明 MIT 及评测用途；不能据此认定其支持某个原生操作系统。",
+      "resource_kind": "dataset-and-benchmark",
+      "platform_note": "No OS tags are inferred from desktop screenshots or application names.",
+      "evidence": [
+        {
+          "url": "https://github.com/uivision/UI-Vision#readme",
+          "supports": "Release announcement specifies element and layout grounding data and evaluation code."
+        },
+        {
+          "url": "https://huggingface.co/datasets/ServiceNow/ui-vision",
+          "supports": "Public MIT-labeled dataset contains element/layout annotations and images; intended usage is evaluation and analysis."
+        },
+        {
+          "url": "https://github.com/uivision/UI-Vision/blob/main/eval/action_prediction/README.md",
+          "supports": "Action-prediction evaluator remains a Coming soon placeholder."
+        },
+        {
+          "url": "https://github.com/uivision/UI-Vision/tree/main/eval/grounding",
+          "supports": "Inspectable code for the released grounding evaluations."
+        }
+      ],
+      "implementation": "unknown",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "llamatouch",
+      "name": "LlamaTouch",
+      "description_en": "An Android task-execution and evaluation testbed that checks whether agent traces reach annotated essential application states.",
+      "description_zh": "Android 任务执行与评测平台，通过检查 Agent 轨迹是否到达人工标注的关键应用状态来评估任务完成。",
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "primary_url": "https://github.com/LlamaTouch/LlamaTouch",
+      "repo_url": "https://github.com/LlamaTouch/LlamaTouch",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2404.16054",
+      "enables_en": "Run mobile agents through AgentEnv and evaluate recorded screenshots and view hierarchies with essential-state matching rather than exact action-sequence equality.",
+      "enables_zh": "通过 AgentEnv 运行移动端 Agent，并依据记录的截图及界面层级匹配关键状态，无需动作序列逐项完全一致。",
+      "limits_en": "Requires separate AgentEnv/Evaluator components, Android setup and app accounts/permissions. The documented setup uses Python 3.9 and a Pixel 6a API 31 emulator. Full traces and emulator packages are externally hosted; their downloads were not tested. No explicit project license was located; real app versions and login state affect reproduction.",
+      "limits_zh": "需配置独立的 AgentEnv／Evaluator 组件、Android 环境及应用账号和权限。文档使用 Python 3.9 与 Pixel 6a API 31 模拟器。完整轨迹及模拟器包由外部网盘托管，本次未测试下载。未找到明确的项目许可；真实应用版本及登录状态会影响复现。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Android device or emulator accessed through AgentEnv; essential-state scoring is implemented in the separate Evaluator repository.",
+      "evidence": [
+        {
+          "url": "https://github.com/LlamaTouch/LlamaTouch#readme",
+          "supports": "Defines task metadata, AITW-derived and newly collected tasks, essential-state annotations and component boundaries."
+        },
+        {
+          "url": "https://github.com/LlamaTouch/AgentEnv#readme",
+          "supports": "Public device/emulator bridge; documents Python 3.9, Pixel 6a API 31 and account/permission setup."
+        },
+        {
+          "url": "https://github.com/LlamaTouch/Evaluator#readme",
+          "supports": "Public essential-state evaluator with task-trace inputs and alternative action-matching baselines."
+        },
+        {
+          "url": "https://github.com/LlamaTouch/LlamaTouch/blob/main/dataset/README.md",
+          "supports": "Documents the externally hosted dataset archive and on-disk structure."
+        }
+      ],
+      "implementation": "unknown",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "openapps",
+      "name": "OpenApps",
+      "description_en": "A browser-hosted ecosystem of configurable simulated apps for training UI agents and measuring reliability across interface and content variations.",
+      "description_zh": "在浏览器中运行的可配置模拟应用生态，用于训练 UI Agent，并衡量界面及内容变化下的可靠性。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "primary_url": "https://github.com/facebookresearch/OpenApps",
+      "repo_url": "https://github.com/facebookresearch/OpenApps",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2511.20766",
+      "enables_en": "Vary simulated app appearance and state while scoring tasks against the underlying Python application state.",
+      "enables_zh": "改变模拟应用的界面及状态，并依据底层 Python 应用状态对任务完成情况判分。",
+      "limits_en": "Uses CC BY-NC 4.0. Requires Python 3.11–3.13 and Chromium for agent interaction. Desktop/phone styling remains browser simulation. The v1.0-paper tag preserves the paper-era configuration surface but includes later reward fixes; it is not an exact snapshot of the original runs.",
+      "limits_zh": "采用 CC BY-NC 4.0。需 Python 3.11–3.13；Agent 交互还需 Chromium。桌面或手机外观均为浏览器模拟。v1.0-paper 标签保留论文时期的配置接口，但包含后续奖励修正，并非原始实验的完整快照。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python/FastHTML web apps, configurable tasks and BrowserGym interaction; agent credentials depend on the selected model.",
+      "platform_note": "Only web is tagged. Phone/tablet layouts and macOS/Windows-style chrome are not native operating-system environments.",
+      "evidence": [
+        {
+          "url": "https://github.com/facebookresearch/OpenApps#readme",
+          "supports": "Documents browser-hosted apps, state-based rewards, training/evaluation, BrowserGym and paper-tag limitations."
+        },
+        {
+          "url": "https://github.com/facebookresearch/OpenApps/blob/main/pyproject.toml",
+          "supports": "Current package requires Python >=3.11,<3.14."
+        },
+        {
+          "url": "https://github.com/facebookresearch/OpenApps/blob/main/LICENSE",
+          "supports": "Project license is Creative Commons Attribution-NonCommercial 4.0."
+        },
+        {
+          "url": "https://facebookresearch.github.io/OpenApps/",
+          "supports": "Documents theme, layout, content and device-size configuration for simulated apps."
+        }
+      ],
+      "implementation": "unknown",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "license_en": "CC BY-NC 4.0; the repository license includes a noncommercial condition.",
+      "license_zh": "CC BY-NC 4.0，仓库许可包含非商业使用条件。",
+      "license_url": "https://github.com/facebookresearch/OpenApps/blob/main/LICENSE"
+    },
+    {
+      "id": "timewarp",
+      "name": "TimeWarp",
+      "description_en": "A web-agent benchmark with controlled Wiki, News and Shop environments rendered in multiple historical interface styles.",
+      "description_zh": "提供 Wiki、News 和 Shop 受控网站环境的网页 Agent 基准，以多个历史时期的界面风格测试泛化。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "primary_url": "https://github.com/sparklabutah/timewarp",
+      "repo_url": "https://github.com/sparklabutah/timewarp",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2603.04949",
+      "enables_en": "Compare agents across website versions and train with the project's plan-distillation and trajectory workflow.",
+      "enables_zh": "跨网站版本比较 Agent，并使用项目提供的计划蒸馏与轨迹流程进行训练。",
+      "limits_en": "Self-hosted historical-style variants, not a continually changing live web. Start the environment services and configure the agent; residual tasks require a model judge. Public data cards and README indicate MIT, but pyproject declares Apache-2.0 and no standalone license was found. Record UI version, task revision and judge configuration.",
+      "limits_zh": "这是自行部署的历史风格变体，不是持续变化的真实互联网。需启动环境服务并配置 Agent，部分剩余任务需模型判分。公开数据卡及 README 标注 MIT，但 pyproject 声明 Apache-2.0，且未找到独立许可文件。结果需记录界面版本、任务修订及评审模型配置。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "Documented Conda/Python 3.11 setup, local Wiki/News/Shop services and BrowserGym integration; scoring combines rule checks with model judging for designated tasks.",
+      "evidence": [
+        {
+          "url": "https://github.com/sparklabutah/timewarp#readme",
+          "supports": "Defines controlled UI variants, local setup, BrowserGym, training traces and the residual llm_judge tasks despite a broader deterministic-scoring claim."
+        },
+        {
+          "url": "https://huggingface.co/datasets/sparklabutah/timewarp",
+          "supports": "Public task dataset marked MIT."
+        },
+        {
+          "url": "https://huggingface.co/datasets/sparklabutah/timewarp-env-data",
+          "supports": "Public environment assets marked MIT, including the Shop catalog."
+        },
+        {
+          "url": "https://github.com/sparklabutah/timewarp/blob/master/pyproject.toml",
+          "supports": "Package metadata declares Apache-2.0, inconsistent with the README MIT badge."
+        }
+      ],
+      "implementation": "unknown",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "knows",
+      "name": "KNOWS",
+      "description_en": "A browser-agent benchmark for researching sources and producing Google Docs, Sheets and Slides artifacts through multi-step workflows.",
+      "description_zh": "面向网页 Agent 的基准，要求通过多步工作流研究资料并生成 Google Docs、Sheets 和 Slides 成果。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "primary_url": "https://github.com/alexgill321/KNOWS-benchmark",
+      "repo_url": "https://github.com/alexgill321/KNOWS-benchmark",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2609.30604",
+      "enables_en": "Evaluate research-to-artifact workflows with task-specific structure, content, layout and browsing-trace checks plus model judges.",
+      "enables_zh": "结合任务专属的结构、内容、布局及浏览轨迹检查和模型判分，评估从资料研究到成果制作的流程。",
+      "limits_en": "Uses real Google Workspace, requiring accounts, enabled APIs and evaluator access to files; some tasks need fresh write targets. Code/data are Apache-2.0. The public Hub dataset contains prompts and rubrics, while scoring needs repository evaluators and release assets. Configure the judge and report the release tag; external pages can change. The Hub card describes v1.1.0, while the current GitHub release is v1.2.0; do not mix prompt and evaluator/gold-data versions. Official evaluation rules prohibit evaluated agents from accessing evaluator code, checkpoints.md or reference data.",
+      "limits_zh": "使用真实 Google Workspace，需账号、已启用的 API 及评测方对文件的访问权限；部分任务需新建写入目标。代码和数据采用 Apache-2.0。公开 Hub 数据只含提示及评分细则，判分需仓库中的评测程序和发布资产。需配置评审模型、注明版本标签；外部网页可能变化。 Hub 数据卡对应 v1.1.0，当前 GitHub 发布为 v1.2.0，提示与评分器／标准资料版本不能混用。官方评测规则禁止被评测 Agent 访问评分器代码、checkpoints.md 或参考资料。",
+      "resource_kind": "benchmark-suite",
+      "runtime": "Python >=3.10 package or standalone evaluators; Google Workspace API credentials and Gemini API or supported local judges; browser harnesses use Chromium.",
+      "evidence": [
+        {
+          "url": "https://github.com/alexgill321/KNOWS-benchmark#readme",
+          "supports": "Defines real Workspace artifact tasks, credentials/provisioning, hybrid scoring, BrowserGym package and versioned releases."
+        },
+        {
+          "url": "https://github.com/alexgill321/KNOWS-benchmark/blob/main/RUNNING_STANDALONE.md",
+          "supports": "Describes artifact provisioning, history capture and evaluation outside the reference harness."
+        },
+        {
+          "url": "https://huggingface.co/datasets/utahnlp/knows-benchmark",
+          "supports": "Public Apache-2.0 task prompts/rubrics; these data do not replace the executable evaluators."
+        },
+        {
+          "url": "https://github.com/alexgill321/KNOWS-benchmark/blob/main/LICENSE",
+          "supports": "Repository license is Apache-2.0."
+        },
+        {
+          "url": "https://github.com/alexgill321/KNOWS-benchmark#readme",
+          "supports": "Official evaluation rules restrict agent access to evaluators, checkpoints.md and reference data; public release/version evidence must be kept aligned with prompts and gold assets."
+        },
+        {
+          "url": "https://github.com/alexgill321/KNOWS-benchmark/releases/tag/v1.2.0",
+          "supports": "Public v1.2.0 release distributes matching evaluator gold data; it must not be silently mixed with another prompt release."
+        },
+        {
+          "url": "https://github.com/alexgill321/KNOWS-benchmark/blob/main/ASSETS.md",
+          "supports": "Documents anyone-with-link write access on provisioned targets and OAuth requirement for the slides_17 instance 1 copy."
+        }
+      ],
+      "implementation": "unknown",
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "runtime_note_en": "The reference provisioner creates fresh Drive targets with anyone-with-link write access. The slides_17 instance 1 presentation copy requires OAuth; folder-only provisioning can use either supported credential type.",
+      "runtime_note_zh": "参考配置脚本新建的 Drive 目标允许持链接者编辑。slides_17 第 1 个实例复制演示文稿时需要 OAuth；仅创建文件夹可使用两种受支持凭据中的任一种。"
+    },
+    {
+      "id": "osworld-2",
+      "name": "OSWorld 2.0",
+      "description_en": "A distinct 108-task computer-use benchmark for long-horizon workflows spanning Ubuntu desktop applications and web services.",
+      "description_zh": "包含 108 项独立任务的计算机操作基准，覆盖 Ubuntu 桌面应用与网页服务中的长流程工作。",
+      "content_type": "app",
+      "platforms": [
+        "linux",
+        "web"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/xlang-ai/OSWorld-V2",
+      "repo_url": "https://github.com/xlang-ai/OSWorld-V2",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2606.29537",
+      "enables_en": "Evaluate workflows requiring persistent context, cross-source information and coordinated actions across multiple applications.",
+      "enables_zh": "评估需要持续跟踪上下文、综合多个信息源及协调跨应用动作的工作流。",
+      "limits_en": "Public Apache-2.0 harness; task code is auto-gated and labeled Apache-2.0. Complete assets are separately gated with no license declaration in their public card. The current osworld-v2.1 release needs Python >=3.12, an Ubuntu VM, matching self-hosted websites and some task-specific services. Pin all components; its tasks and scores differ from original OSWorld/Verified. The release manifest reports a Task029 setup timeout and incomplete Docker boot verification.",
+      "limits_zh": "公开框架采用 Apache-2.0；任务代码需通过自动批准的访问门槛，标注 Apache-2.0。完整资产另设访问门槛，公开卡片未声明许可。当前 osworld-v2.1 需 Python >=3.12、Ubuntu 虚拟机、配套自建网站及部分任务专属服务。需固定所有组件版本；任务及成绩不能与原始 OSWorld／Verified 混用。 该发布清单记录 Task029 初始化超时，Docker 启动验证未完成。",
+      "resource_kind": "environment-and-benchmark",
+      "runtime": "The current manifest pins Ubuntu images for AWS and Docker, plus task/assets/website versions. It reports a Task029 setup timeout and incomplete Docker boot verification. GitLab-backed tasks need a private GitLab service.",
+      "platform_note": "Linux describes the pinned Ubuntu guests; web describes tasks using mocked website services. Legacy provider code and host compatibility do not establish Windows or macOS task coverage.",
+      "evidence": [
+        {
+          "url": "https://github.com/xlang-ai/OSWorld-V2#readme",
+          "supports": "Released harness, Python >=3.12, Ubuntu provider images, self-hosted services and separate gates for task code and complete assets."
+        },
+        {
+          "url": "https://github.com/xlang-ai/OSWorld-V2/blob/main/desktop_env/desktop_env.py",
+          "supports": "Public environment control and task-evaluation dispatch implementation, not a paper-only placeholder."
+        },
+        {
+          "url": "https://github.com/xlang-ai/OSWorld-V2/blob/main/benchmark_releases/osworld-v2.1.json",
+          "supports": "Active 108-task release pins Ubuntu images and component versions; records Task029 timeout and incomplete Docker verification."
+        },
+        {
+          "url": "https://github.com/xlang-ai/OSWorld-V2/blob/main/LICENSE",
+          "supports": "Public harness uses Apache-2.0."
+        },
+        {
+          "url": "https://huggingface.co/datasets/xlangai/osworld_v2_tasks",
+          "supports": "Public dataset metadata declares automatic gating and Apache-2.0; gated task files were not accessed."
+        },
+        {
+          "url": "https://huggingface.co/datasets/xlangai/osworld_v2_assets_gated",
+          "supports": "Complete asset dataset is automatically gated; public metadata has no license card."
+        },
+        {
+          "url": "https://github.com/Task-Web/OSWorld-web/tree/osworld-v2.1",
+          "supports": "Companion website deployment source is pinned by the current benchmark release."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
     }
   ]
 }

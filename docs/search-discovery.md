@@ -8,6 +8,8 @@ Google's [AI search guidance](https://developers.google.com/search/docs/appearan
 
 Homepage titles describe the catalog in each page's language, with the brand kept concise, following Google's [title-link guidance](https://developers.google.com/search/docs/appearance/title-link). `WebSite.sameAs` points to the corresponding public repository. Scoped browser observations add original steps and screenshots to selected project pages; they do not create ratings or imply that untested features work. These changes improve the information available to readers and crawlers; their ranking or citation effect is unmeasured.
 
+The bilingual [selection guides](https://aicanwhat.com/guides/) answer concrete resource-selection questions, compare interaction settings and setup limits, and link both primary sources and project notes. Matching Markdown guides live in the public repository. This follows the purpose of Google's [helpful-content guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content): provide a useful explanation and original organization for readers. Guide membership does not add independent projects, create a ranking, or imply full runtime testing. The method page explicitly discloses AI-assisted research, writing and site development.
+
 ## After deploying
 
 1. Confirm public HTTPS, the canonical URL, the correct sitemap origin, and a genuine HTTP 404 for an unknown page.

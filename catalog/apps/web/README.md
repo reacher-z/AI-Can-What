@@ -2,13 +2,16 @@
 
 [All app resources](../README.md) · [Website index](https://aicanwhat.com/apps/web/)
 
-7 entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.
+10 entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.
 
 | Project | Resource type | Use | Primary source |
 | --- | --- | --- | --- |
 | [Audio Step Sequencer](https://aicanwhat.com/projects/gpt5-audio-step-sequencer/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/audio-step-sequencer) |
+| [GUI-World](https://aicanwhat.com/projects/gui-world/) | Dataset + benchmark | Training, Evaluation | [Source](https://github.com/Dongping-Chen/GUI-World) |
+| [GUIAct (GUICourse)](https://aicanwhat.com/projects/guiact/) | Dataset + benchmark | Training, Evaluation | [Source](https://github.com/RUCBM/GUICourse) |
 | [OmniACT](https://aicanwhat.com/projects/omniact/) | Dataset + benchmark | Training, Evaluation | [Source](https://huggingface.co/datasets/Writer/omniact) |
 | [Online Whiteboard](https://aicanwhat.com/projects/gpt5-online-whiteboard/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/online-whiteboard) |
+| [OSWorld 2.0](https://aicanwhat.com/projects/osworld-2/) | Environment + benchmark | Evaluation | [Source](https://github.com/xlang-ai/OSWorld-V2) |
 | [ScreenSpot](https://aicanwhat.com/projects/screenspot/) | Dataset + benchmark | Evaluation | [Source](https://github.com/njucckevin/SeeClick) |
 | [TheAgentCompany](https://aicanwhat.com/projects/the-agent-company/) | Environment + benchmark | Evaluation | [Source](https://github.com/TheAgentCompany/TheAgentCompany) |
 | [Tiny Kanban](https://aicanwhat.com/projects/gpt5-tiny-kanban/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/tiny-kanban) |

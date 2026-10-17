@@ -7,17 +7,19 @@
 A source-backed directory of AI-built software and environments, benchmarks, and datasets for training and evaluating agents, organized into **Games & virtual worlds**, **Websites**, and **Apps**. Every entry has an original source, review date, practical limits, and its own static page.
 
 <!-- BEGIN GENERATED INDEX -->
-**124 catalog entries · 86 referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.
+**155 catalog entries · 110 referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.
 
 ## Browse
 
 | Category | Entries | Repository index |
 | --- | --- | --- |
-| [Games & virtual worlds](https://aicanwhat.com/games/) | 42 | [Browse](catalog/games/README.md) |
-| [Websites](https://aicanwhat.com/websites/) | 25 | [Browse](catalog/websites/README.md) |
-| [Apps](https://aicanwhat.com/apps/) | 57 | [Browse](catalog/apps/README.md) |
+| [Games & virtual worlds](https://aicanwhat.com/games/) | 53 | [Browse](catalog/games/README.md) |
+| [Websites](https://aicanwhat.com/websites/) | 28 | [Browse](catalog/websites/README.md) |
+| [Apps](https://aicanwhat.com/apps/) | 74 | [Browse](catalog/apps/README.md) |
 
 [Research bibliography](https://aicanwhat.com/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)
+
+[Selection guides](guides/README.md) compare AI software examples, browser-agent tasks, computer/mobile interaction and software-generation benchmarks by purpose and evidence.
 
 **2 scoped browser observations across 2 projects** record interaction steps, visible outcomes, screenshots and untested scope. These are not whole-application verification. [Observation data](data/observations.json) · [Method](docs/browser-observations.md).
 
@@ -29,6 +31,8 @@ A source-backed directory of AI-built software and environments, benchmarks, and
 Showcase describes software made with AI. Training and Evaluation describe environment uses; they do not imply that AI created the environment. Development provenance is recorded separately. Platform tags reflect the cited project's documentation, and unknown values stay unknown.
 
 The directory links to upstream code and demos. It does not host or claim to have independently tested every application. Read each entry's limits and the upstream license before using it.
+
+Research, bilingual writing and website development use AI assistance. Source-reviewed means original material was checked; actual browser interactions are recorded separately with their date, steps and limits. The public source and original project links make the claims inspectable and correctable.
 
 ## Build locally
 
@@ -51,9 +55,11 @@ The website is bilingual. Static HTML contains the complete directory and projec
 data/catalog.json          Reviewed entries and supporting sources
 data/papers.json           Original research metadata and summaries
 data/observations.json     Scoped browser actions, results and screenshot evidence
+data/guides.json           Original selection guidance and project associations
 data/registry-index.json   Separately labeled upstream registry metadata
 data/registry-sources.json Source definitions and inventory boundaries
 catalog/                   Generated category and platform README indexes
+guides/                    Generated bilingual resource-selection guides
 references.bib             Generated bibliography
 static/                    Browser assets
 scripts/build.py           Static page generator

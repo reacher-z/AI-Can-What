@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "guides": [
+    {
+      "id": "ai-built-software",
+      "reviewed_at": "2026-10-16",
+      "label_en": "Find AI-built software",
+      "label_zh": "寻找 AI 软件作品",
+      "title_en": "AI-built software: examples and development evidence",
+      "title_zh": "AI 软件作品：从案例找到开发证据",
+      "description_en": "Find games, websites and native apps with first-party AI-development statements, then distinguish code, demos and limited interaction evidence.",
+      "description_zh": "从游戏、网站和原生应用中寻找有作者 AI 开发说明的作品，区分源码、演示与有限操作证据。",
+      "answer_en": "Start with the artifact and its creator’s development account. A public demo shows an available interface; source code shows an implementation; neither alone proves who wrote it. The projects below have explicit author evidence, with the contribution scope and practical limits preserved.",
+      "answer_zh": "先找具体作品，再看创作者的开发记录。公开演示能展示界面，源码能展示实现，两者都不能单独证明开发方式。下列项目均有明确作者证据，并保留 AI 参与范围及实际限制。",
+      "questions": [
+        {
+          "question_en": "Does “AI-built” mean every asset and dependency was generated?",
+          "question_zh": "AI 构建是否代表所有素材和依赖都由 AI 生成？",
+          "answer_en": "No. Read the attributed contribution scope. A generated interface can use a human-written library; a generated game can contain human-made models, music and an original game design.",
+          "answer_zh": "不是。应查看作者声明的具体范围。生成界面可能使用人工编写的库，生成游戏也可能包含人工模型、音乐和原创设计。"
+        },
+        {
+          "question_en": "Where can I find more examples for a particular platform?",
+          "question_zh": "如何找到某个平台的更多作品？",
+          "answer_en": "Use the app-platform indexes and select Software made with AI. The broader category also contains environment and dataset resources, whose platform tags have a different meaning.",
+          "answer_zh": "进入应用平台索引并选择“AI 软件作品”。较大的分类还包含环境和数据集，这些条目的平台标签含义不同。"
+        },
+        {
+          "question_en": "Which examples have actual interaction notes?",
+          "question_zh": "哪些案例有实际操作记录？",
+          "answer_en": "The Tic Tac Toe and Aldi Prices notes record a specific browser flow with dated steps and screenshots. They do not certify the full application, computer-opponent strategy or price-data accuracy.",
+          "answer_zh": "井字棋和 Aldi Prices 条目记录了具体浏览器流程，附日期、步骤和截图；它们不认证完整应用、电脑策略或价格数据准确性。"
+        }
+      ],
+      "groups": [
+        {
+          "id": "games",
+          "title_en": "Games and interactive toys",
+          "title_zh": "游戏与互动作品",
+          "intro_en": "Compare an original demo, a reconstruction and a work with human-produced assets. Their creation claims cover different components.",
+          "intro_zh": "对照原创演示、重建作品及使用人工素材的作品，留意各自开发声明覆盖的组件。",
+          "choices": [
+            {
+              "project_id": "gpt5-tic-tac-toe-game",
+              "fit_en": "Inspect a published generating prompt, single-file game and one recorded two-player round.",
+              "fit_zh": "查看公开生成提示、单文件游戏及一局双人操作记录。"
+            },
+            {
+              "project_id": "threejs-quake",
+              "fit_en": "Study an AI-assisted browser port while preserving the original game’s authorship and separate data rights.",
+              "fit_zh": "研究 AI 辅助浏览器移植，同时保留原游戏作者及独立素材权利。"
+            },
+            {
+              "project_id": "firewood-splitting-simulator",
+              "fit_en": "See how generated implementation can work with an artist’s scans, animation and sound.",
+              "fit_zh": "了解生成实现如何结合作者的扫描、动画及声音素材。"
+            }
+          ]
+        },
+        {
+          "id": "websites",
+          "title_en": "Websites and browser tools",
+          "title_zh": "网站与浏览器工具",
+          "intro_en": "These examples connect a concrete use to a traceable maker account. A hosted interface does not establish backend correctness or a reuse license.",
+          "intro_zh": "这些案例将具体用途与可追溯的作者说明关联；托管界面不代表后端正确或已授予复用许可。",
+          "choices": [
+            {
+              "project_id": "aldi-prices",
+              "fit_en": "Inspect a data-driven site and the separately recorded search-to-history interaction.",
+              "fit_zh": "查看数据网站及独立记录的搜索到历史页面流程。"
+            },
+            {
+              "project_id": "social-media-card-cropper",
+              "fit_en": "Follow an openly documented implementation history for an image-cropping browser tool.",
+              "fit_zh": "追溯图片裁切工具公开记录的实现过程。"
+            }
+          ]
+        },
+        {
+          "id": "native",
+          "title_en": "Desktop and mobile software",
+          "title_zh": "桌面与移动软件",
+          "intro_en": "Check the application’s actual distribution target. A browser client, a native bundle and a command-line layer have different installation and provenance boundaries.",
+          "intro_zh": "检查应用实际分发目标；浏览器客户端、原生安装包和命令行封装的安装与开发来源边界不同。",
+          "choices": [
+            {
+              "project_id": "context-mcp",
+              "fit_en": "Inspect a native macOS MCP client with creator development evidence and published code.",
+              "fit_zh": "查看有作者开发证据和公开源码的原生 macOS MCP 客户端。"
+            },
+            {
+              "project_id": "davit",
+              "fit_en": "Inspect a native Mac interface that manages Linux containers; the target and managed runtime differ.",
+              "fit_zh": "查看管理 Linux 容器的原生 Mac 界面，区分应用平台与被管理的运行环境。"
+            },
+            {
+              "project_id": "a9-voice",
+              "fit_en": "Compare a packaged Windows application with a public release history but proprietary source.",
+              "fit_zh": "对照有公开版本历史、但源码专有的打包 Windows 应用。"
+            },
+            {
+              "project_id": "rhounpacker",
+              "fit_en": "Examine an AI-generated Windows CLI layer around a separately authored library.",
+              "fit_zh": "研究围绕独立人工库构建的 AI 生成 Windows 命令行层。"
+            },
+            {
+              "project_id": "shelly-android",
+              "fit_en": "Inspect an Android terminal application with a documented prerelease distribution.",
+              "fit_zh": "查看有预发布分发说明的 Android 终端应用。"
+            }
+          ]
+        }
+      ],
+      "browse": [
+        {
+          "path": "/?kind=ai-generated-output",
+          "label_en": "All software examples",
+          "label_zh": "全部软件作品"
+        },
+        {
+          "path": "/apps/windows/?kind=ai-generated-output",
+          "label_en": "Windows examples",
+          "label_zh": "Windows 作品"
+        },
+        {
+          "path": "/apps/macos/?kind=ai-generated-output",
+          "label_en": "macOS examples",
+          "label_zh": "macOS 作品"
+        },
+        {
+          "path": "/apps/ios/?kind=ai-generated-output",
+          "label_en": "iOS examples",
+          "label_zh": "iOS 作品"
+        },
+        {
+          "path": "/apps/android/?kind=ai-generated-output",
+          "label_en": "Android examples",
+          "label_zh": "Android 作品"
+        }
+      ]
+    },
+    {
+      "id": "browser-agent-benchmarks",
+      "reviewed_at": "2026-10-16",
+      "label_en": "Test a browser agent",
+      "label_zh": "评测浏览器 Agent",
+      "title_en": "Browser agent benchmarks: controlled sites, live tasks and recorded data",
+      "title_zh": "浏览器 Agent 评测：可控网站、在线任务与记录数据",
+      "description_en": "Compare browser-agent resources by interaction setting, scoring and setup: self-hosted sites, live-web evaluation, recorded trajectories and shared frameworks.",
+      "description_zh": "按交互方式、评分及配置比较浏览器 Agent 资料：自行部署网站、真实网页评测、记录轨迹和统一框架。",
+      "answer_en": "Choose the evaluation setting before choosing a benchmark. Controlled sites let you reset task state; live-web tasks expose changing content and dependencies; recorded trajectories test predictions without an open-ended browser run. A shared framework can connect these resources without making their scores interchangeable.",
+      "answer_zh": "先决定评测设置，再选择基准。可控网站支持重置任务状态，真实网页任务会受到内容和外部依赖变化影响，记录轨迹则在没有开放式浏览器执行的情况下测试预测能力。统一框架能连接这些资料，但不会让分数天然可比。",
+      "questions": [
+        {
+          "question_en": "Can a screenshot or recorded action benchmark prove end-to-end task completion?",
+          "question_zh": "截图或记录动作基准能证明完整任务完成吗？",
+          "answer_en": "No. Target localization and action prediction measure components. End-to-end completion needs an executed trajectory and the benchmark’s outcome check or stated judging procedure.",
+          "answer_zh": "不能。目标定位和动作预测衡量局部能力，完整任务完成需要实际执行轨迹，并使用基准的结果检查或明确评分流程。"
+        },
+        {
+          "question_en": "What should an evaluation report preserve?",
+          "question_zh": "评测报告应保留哪些条件？",
+          "answer_en": "Record the benchmark revision, task split, browser observation/action interface, reset procedure, model and tool access, judge configuration and run date. Changing these can change what the score measures.",
+          "answer_zh": "记录基准版本、任务划分、浏览器观察与动作接口、重置步骤、模型和工具权限、评审配置及运行日期；这些条件变化会改变分数含义。"
+        },
+        {
+          "question_en": "Is BrowserGym itself another independent task set?",
+          "question_zh": "BrowserGym 本身是另一套独立任务吗？",
+          "answer_en": "It is a framework integrating multiple resources. Each benchmark retains its own setup and access requirements. Do not add framework integrations to the underlying task counts as new independent projects.",
+          "answer_zh": "它是集成多种资料的框架，各基准保留自己的配置与访问要求，不能把框架集成数量再当作独立项目叠加到原始任务数中。"
+        }
+      ],
+      "groups": [
+        {
+          "id": "controlled",
+          "title_en": "Controlled interaction tasks",
+          "title_zh": "可控交互任务",
+          "intro_en": "Choose these when resettable state and a specified task outcome are central to the experiment. Hosting and approved instance access are part of the setup.",
+          "intro_zh": "当可重置状态及明确任务结果是实验核心时，从此类资料开始；托管与实例访问许可也是配置的一部分。",
+          "choices": [
+            {
+              "project_id": "miniwob-plusplus",
+              "fit_en": "Isolate short web-control skills in synthetic tasks.",
+              "fit_zh": "在合成任务中单独研究短程网页控制能力。"
+            },
+            {
+              "project_id": "webarena",
+              "fit_en": "Evaluate multi-step work on self-hosted sites with outcome checks.",
+              "fit_zh": "在自行部署的网站上通过结果检查评估多步操作。"
+            },
+            {
+              "project_id": "visualwebarena",
+              "fit_en": "Add image-dependent reasoning to controlled website tasks.",
+              "fit_zh": "在可控网站任务中加入依赖图像的推理。"
+            },
+            {
+              "project_id": "workarena",
+              "fit_en": "Study enterprise workflows when the required ServiceNow access is available.",
+              "fit_zh": "在具备所需 ServiceNow 访问权限时研究企业流程。"
+            }
+          ]
+        },
+        {
+          "id": "live",
+          "title_en": "Live-web evaluation",
+          "title_zh": "真实网页评测",
+          "intro_en": "These settings exercise current external websites. Preserve dates and judge details; changes outside the agent can affect a run.",
+          "intro_zh": "此类设置使用当时的外部网站。需保留日期与评审细节，Agent 之外的变化也会影响执行。",
+          "choices": [
+            {
+              "project_id": "webvoyager",
+              "fit_en": "Study multimodal browsing trajectories with an automated visual judge.",
+              "fit_zh": "研究使用自动视觉评审的多模态浏览轨迹。"
+            },
+            {
+              "project_id": "online-mind2web",
+              "fit_en": "Evaluate current-site task completion with recorded action and screenshot evidence.",
+              "fit_zh": "结合动作及截图证据评估真实网站上的任务完成。"
+            }
+          ]
+        },
+        {
+          "id": "recorded",
+          "title_en": "Recorded demonstrations",
+          "title_zh": "记录的演示数据",
+          "intro_en": "Use these for action prediction, instruction following or component studies. They are not substitutes for running an agent freely on a live website.",
+          "intro_zh": "适用于动作预测、指令跟随或组件研究，不能替代 Agent 在真实网站上的自由执行。",
+          "choices": [
+            {
+              "project_id": "mind2web",
+              "fit_en": "Study generalization across held-out tasks, sites and domains using recorded actions.",
+              "fit_zh": "通过记录动作研究跨任务、网站和领域的泛化。"
+            },
+            {
+              "project_id": "weblinx",
+              "fit_en": "Study multi-turn browsing instructions and demonstrated actions.",
+              "fit_zh": "研究多轮浏览指令及演示动作。"
+            }
+          ]
+        },
+        {
+          "id": "framework",
+          "title_en": "Shared experiment interface",
+          "title_zh": "统一实验接口",
+          "intro_en": "A common interface can reduce integration work while leaving each benchmark’s environment and scoring assumptions intact.",
+          "intro_zh": "统一接口可以减少集成工作，但仍应保留各基准的环境及评分假设。",
+          "choices": [
+            {
+              "project_id": "browsergym",
+              "fit_en": "Connect supported web benchmarks to a common research interface.",
+              "fit_zh": "将支持的网页基准接入统一研究接口。"
+            }
+          ]
+        }
+      ],
+      "browse": [
+        {
+          "path": "/websites/?use=evaluation",
+          "label_en": "All web evaluation resources",
+          "label_zh": "全部网页评测资料"
+        },
+        {
+          "path": "/discover/?source=browsergym",
+          "label_en": "BrowserGym upstream configurations",
+          "label_zh": "BrowserGym 上游配置"
+        }
+      ]
+    },
+    {
+      "id": "computer-mobile-agents",
+      "reviewed_at": "2026-10-16",
+      "label_en": "Test computer & phone use",
+      "label_zh": "评测电脑与手机操作",
+      "title_en": "Computer-use and mobile-agent benchmarks: environments versus datasets",
+      "title_zh": "电脑与手机 Agent 评测：交互环境与静态数据",
+      "description_en": "Choose desktop VMs, Android/iOS research apps or static GUI datasets while keeping target OS, host requirements, scoring and access limits separate.",
+      "description_zh": "比较桌面虚拟机、Android/iOS 研究应用及静态 GUI 数据集，区分目标系统、宿主要求、评分和访问限制。",
+      "answer_en": "Match the resource to the capability you need to measure. Whole-workflow evaluation needs an executable desktop or phone environment and a defined outcome. Grounding and action-program datasets isolate components. The host running an emulator is not necessarily the operating system an agent is being evaluated on.",
+      "answer_zh": "按需要测量的能力选择资料。完整流程评测需要可执行的桌面或手机环境及明确结果；定位和动作程序数据集用于单独研究组件。运行模拟器的宿主系统，不一定是 Agent 任务所针对的操作系统。",
+      "questions": [
+        {
+          "question_en": "Does running a benchmark on a Mac make it a macOS benchmark?",
+          "question_zh": "在 Mac 上运行基准，就代表评测 macOS 吗？",
+          "answer_en": "No. A Mac may host an Android emulator or another OS image. Read the target applications and task environment separately from host architecture, virtualization and driver requirements.",
+          "answer_zh": "不是。Mac 可能承载 Android 模拟器或其他系统镜像。应将目标应用及任务环境，与宿主架构、虚拟化和驱动要求分别检查。"
+        },
+        {
+          "question_en": "Can I compare static grounding accuracy with task success?",
+          "question_zh": "静态定位准确率能和任务成功率直接比较吗？",
+          "answer_en": "They measure different units. A correctly localized control may still be followed by an incorrect action or plan. Compare the same task unit, inputs and evaluation protocol, and report component and workflow results separately.",
+          "answer_zh": "两者的测量单位不同。控件定位正确后仍可能出现错误动作或计划。比较时应统一任务单位、输入和评测协议，并分别报告组件与完整流程结果。"
+        },
+        {
+          "question_en": "Are research app replicas the original commercial services?",
+          "question_zh": "研究应用仿真就是原商业服务吗？",
+          "answer_en": "No. Seeded or simulated apps provide controlled workflows and data. Their results should not be reported as demonstrated success on the named production services without separate evidence.",
+          "answer_zh": "不是。预置或模拟应用提供可控流程和数据，未经独立证明，不能把实验结果描述为在相应生产服务上完成任务。"
+        }
+      ],
+      "groups": [
+        {
+          "id": "desktop",
+          "title_en": "Executable desktop tasks",
+          "title_zh": "可执行桌面任务",
+          "intro_en": "Start with the target OS and available virtualization. Check task revisions, application licensing and whether resets restore the state needed by the evaluator.",
+          "intro_zh": "先看目标系统与可用虚拟化条件，再确认任务版本、应用许可，以及重置是否恢复评分器需要的状态。",
+          "choices": [
+            {
+              "project_id": "osworld",
+              "fit_en": "Evaluate multi-application desktop workflows with final-state checks.",
+              "fit_zh": "通过最终状态检查评估跨应用桌面流程。"
+            },
+            {
+              "project_id": "osworld-2",
+              "fit_en": "Study the separate long-horizon Ubuntu-and-web task set, with gated task/assets access and pinned release components.",
+              "fit_zh": "研究独立的 Ubuntu 与网页长流程任务集，留意任务／资产访问门槛和固定组件版本。"
+            },
+            {
+              "project_id": "windows-agent-arena",
+              "fit_en": "Study Windows GUI workflows on the prescribed VM setup.",
+              "fit_zh": "在指定虚拟机配置上研究 Windows GUI 流程。"
+            },
+            {
+              "project_id": "macarena",
+              "fit_en": "Study native macOS interaction with Apple-hardware and VM requirements.",
+              "fit_zh": "在满足 Apple 硬件和虚拟机要求的条件下研究原生 macOS 交互。"
+            }
+          ]
+        },
+        {
+          "id": "mobile",
+          "title_en": "Executable mobile workflows",
+          "title_zh": "可执行移动流程",
+          "intro_en": "These projects require prepared devices or emulators and particular applications. Keep simulation, real installed apps and scoring methods explicit.",
+          "intro_zh": "这些项目需要准备设备或模拟器和特定应用；应明确区分模拟应用、真实安装应用及评分方式。",
+          "choices": [
+            {
+              "project_id": "androidworld",
+              "fit_en": "Evaluate repeatable Android workflows with parameterized tasks.",
+              "fit_zh": "通过参数化任务评估可重复的 Android 流程。"
+            },
+            {
+              "project_id": "androidlab",
+              "fit_en": "Compare Android agents with the released images and instruction data.",
+              "fit_zh": "使用发布的镜像和指令数据比较 Android Agent。"
+            },
+            {
+              "project_id": "appsim-bench",
+              "fit_en": "Study controlled simulated Android apps and seeded task state.",
+              "fit_zh": "研究可控模拟 Android 应用及预置任务状态。"
+            },
+            {
+              "project_id": "iosworld",
+              "fit_en": "Evaluate tasks across seeded research apps in an iOS simulator.",
+              "fit_zh": "在 iOS 模拟器中评估预置研究应用的跨应用任务。"
+            }
+          ]
+        },
+        {
+          "id": "datasets",
+          "title_en": "Static screenshots and trajectories",
+          "title_zh": "静态截图与轨迹",
+          "intro_en": "Use these when the research question concerns perception or action prediction. Downloading screenshots does not supply the applications or an executable operating system.",
+          "intro_zh": "当问题涉及感知或动作预测时使用此类资料；下载截图并不会获得对应应用或可执行操作系统。",
+          "choices": [
+            {
+              "project_id": "screenspot-pro",
+              "fit_en": "Measure target localization in high-resolution professional interfaces.",
+              "fit_zh": "在高分辨率专业界面中测量目标定位能力。"
+            },
+            {
+              "project_id": "omniact",
+              "fit_en": "Study screen-and-instruction conversion into action programs.",
+              "fit_zh": "研究从屏幕及指令到动作程序的转换。"
+            },
+            {
+              "project_id": "android-in-the-wild",
+              "fit_en": "Study recorded Android demonstrations and action prediction.",
+              "fit_zh": "研究记录的 Android 演示与动作预测。"
+            }
+          ]
+        }
+      ],
+      "browse": [
+        {
+          "path": "/apps/windows/?use=evaluation",
+          "label_en": "Windows evaluation",
+          "label_zh": "Windows 评测"
+        },
+        {
+          "path": "/apps/macos/?use=evaluation",
+          "label_en": "macOS evaluation",
+          "label_zh": "macOS 评测"
+        },
+        {
+          "path": "/apps/android/?use=evaluation",
+          "label_en": "Android evaluation",
+          "label_zh": "Android 评测"
+        },
+        {
+          "path": "/apps/ios/?use=evaluation",
+          "label_en": "iOS evaluation",
+          "label_zh": "iOS 评测"
+        }
+      ]
+    },
+    {
+      "id": "software-generation",
+      "reviewed_at": "2026-10-16",
+      "label_en": "Evaluate software generation",
+      "label_zh": "评测软件生成",
+      "title_en": "Web and game generation benchmarks: appearance, interaction and execution",
+      "title_zh": "网页与游戏生成评测：外观、交互和执行",
+      "description_en": "Compare webpage reconstruction and game-development benchmarks by supplied inputs, generated artifact, tested behavior and released evaluation materials.",
+      "description_zh": "按输入资料、生成产物、测试行为及已发布评测材料，比较网页重建和游戏开发基准。",
+      "answer_en": "Specify what the generated software must reproduce: a screenshot, an interaction trace, a scoped edit or a complete runnable project. These are different targets. Visual similarity does not establish functional equivalence, and a playable game does not automatically demonstrate subjective quality or a general game-playing policy.",
+      "answer_zh": "先明确生成软件需要复现什么：截图、交互轨迹、局部修改，还是完整可运行项目。这些目标不同。视觉相似不代表功能等价；游戏可玩也不能自动证明主观质量或通用游戏策略。",
+      "questions": [
+        {
+          "question_en": "Which benchmark matches screenshot-to-code work?",
+          "question_zh": "哪类基准适合截图转代码？",
+          "answer_en": "Start with a visual reconstruction benchmark such as Design2Code. If the requirement includes state changes or interaction traces, inspect Interaction2Code or IWR-Bench and their exact tested transitions.",
+          "answer_zh": "可从 Design2Code 等视觉重建基准开始。如果要求包含状态变化或交互轨迹，应查看 Interaction2Code 或 IWR-Bench 及其具体测试的转换。"
+        },
+        {
+          "question_en": "Are game development and game playing the same evaluation?",
+          "question_zh": "游戏开发和玩游戏是同一种评测吗？",
+          "answer_en": "No. Development benchmarks evaluate generated or edited software artifacts. Game-playing environments evaluate an agent’s actions inside a world. Report which side of that boundary the experiment measures.",
+          "answer_zh": "不是。开发基准评估生成或修改的软件产物，游戏环境则评估 Agent 在世界中的行动。报告实验时应明确测量的是哪一种能力。"
+        },
+        {
+          "question_en": "Does a public paper mean the complete evaluator is available?",
+          "question_zh": "论文公开就代表完整评分流程已发布吗？",
+          "answer_en": "No. Inspect code, task data, assets, access approval and judge configuration separately. Dashboard2Code has gated data; the reviewed GameCode4D release exposes only part of the described engine pipeline.",
+          "answer_zh": "不是。需分别检查代码、任务数据、素材、访问审批和评审配置。Dashboard2Code 的数据需申请；已核查的 GameCode4D 发布仅覆盖所描述引擎流程的一部分。"
+        }
+      ],
+      "groups": [
+        {
+          "id": "web",
+          "title_en": "Webpage reconstruction",
+          "title_zh": "网页重建",
+          "intro_en": "Match the inputs and tested behavior: a still image, specified state transitions, a video trajectory or dashboard exploration. Do not infer backend equivalence from a visual score.",
+          "intro_zh": "匹配输入及测试行为：静态图像、指定状态转换、视频轨迹或仪表盘探索；不要从视觉分数推断后端等价。",
+          "choices": [
+            {
+              "project_id": "design2code",
+              "fit_en": "Evaluate visual reconstruction from supplied webpage screenshots.",
+              "fit_zh": "评估根据网页截图进行的视觉重建。"
+            },
+            {
+              "project_id": "interaction2code",
+              "fit_en": "Evaluate specified interactions as well as visible page states.",
+              "fit_zh": "同时评估指定交互与可见页面状态。"
+            },
+            {
+              "project_id": "iwr-bench",
+              "fit_en": "Reconstruct visible states and interactions demonstrated in a video.",
+              "fit_zh": "重建视频演示的可见状态及交互。"
+            },
+            {
+              "project_id": "dashboard2code",
+              "fit_en": "Inspect dashboard exploration and generation with explicit data-access constraints.",
+              "fit_zh": "在明确数据访问限制的前提下研究仪表盘探索与生成。"
+            }
+          ]
+        },
+        {
+          "id": "games",
+          "title_en": "Game projects and game-world artifacts",
+          "title_zh": "游戏项目与世界产物",
+          "intro_en": "An existing-project edit, a complete game and a generated 3D scene call for different checks. Pin engine and task versions before interpreting comparisons.",
+          "intro_zh": "现有项目修改、完整游戏和生成的三维场景需要不同检查；解读比较结果前，应固定引擎及任务版本。",
+          "choices": [
+            {
+              "project_id": "gamedevbench",
+              "fit_en": "Evaluate scoped edits to existing Godot projects.",
+              "fit_zh": "评估对已有 Godot 项目的限定范围修改。"
+            },
+            {
+              "project_id": "gamecraft-bench",
+              "fit_en": "Evaluate complete 2D Godot games through launched artifacts and replayed input.",
+              "fit_zh": "通过启动产物及输入重放评估完整二维 Godot 游戏。"
+            },
+            {
+              "project_id": "v-gamegym",
+              "fit_en": "Compare Pygame generation using code, screenshots and short recordings.",
+              "fit_zh": "结合代码、截图及短时录像比较 Pygame 生成。"
+            },
+            {
+              "project_id": "gamecode4d",
+              "fit_en": "Inspect game-world prompts and Blender artifacts while tracking missing pipeline components.",
+              "fit_zh": "查看游戏世界提示和 Blender 产物，同时保留未发布流程组件的说明。"
+            }
+          ]
+        }
+      ],
+      "browse": [
+        {
+          "path": "/games/?use=evaluation",
+          "label_en": "All game evaluation resources",
+          "label_zh": "全部游戏评测资料"
+        },
+        {
+          "path": "/websites/?use=evaluation",
+          "label_en": "All web evaluation resources",
+          "label_zh": "全部网页评测资料"
+        }
+      ]
+    }
+  ]
+}

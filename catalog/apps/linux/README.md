@@ -2,15 +2,18 @@
 
 [All app resources](../README.md) · [Website index](https://aicanwhat.com/apps/linux/)
 
-8 entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.
+11 entries. Platform tags can describe a runnable application, an environment target, or a dataset’s screenshot source; read each entry’s resource type and limits.
 
 | Project | Resource type | Use | Primary source |
 | --- | --- | --- | --- |
+| [Better Stickies](https://aicanwhat.com/projects/better-stickies/) | Software made with AI | Showcase | [Source](https://betterstickies.com/) |
 | [Claude Code](https://aicanwhat.com/projects/claude-code/) | Software made with AI | Showcase | [Source](https://github.com/anthropics/claude-code) |
 | [Claude&#x27;s C Compiler](https://aicanwhat.com/projects/claudes-c-compiler/) | Software made with AI | Showcase | [Source](https://www.anthropic.com/engineering/building-c-compiler) |
 | [FastRender](https://aicanwhat.com/projects/fastrender/) | Software made with AI | Showcase | [Source](https://github.com/wilsonzlin/fastrender) |
 | [OmniACT](https://aicanwhat.com/projects/omniact/) | Dataset + benchmark | Training, Evaluation | [Source](https://huggingface.co/datasets/Writer/omniact) |
 | [OSWorld](https://aicanwhat.com/projects/osworld/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/xlang-ai/OSWorld) |
+| [OSWorld 2.0](https://aicanwhat.com/projects/osworld-2/) | Environment + benchmark | Evaluation | [Source](https://github.com/xlang-ai/OSWorld-V2) |
+| [Screen Printing Film Analyzer](https://aicanwhat.com/projects/screen-printing-film-analyzer/) | Software made with AI | Showcase | [Source](https://github.com/desordenades/Positive_Analyzer_for_Screen_Printing) |
 | [ScreenSpot-Pro](https://aicanwhat.com/projects/screenspot-pro/) | Dataset + benchmark | Evaluation | [Source](https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding) |
 | [Spider2-V](https://aicanwhat.com/projects/spider2-v/) | Environment + benchmark | Evaluation | [Source](https://spider2-v.github.io/) |
 | [VibeTunnel](https://aicanwhat.com/projects/vibetunnel/) | Software made with AI | Showcase | [Source](https://vibetunnel.sh/) |
