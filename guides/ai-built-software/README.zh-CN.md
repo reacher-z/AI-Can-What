@@ -24,6 +24,8 @@
 | --- | --- | --- |
 | [Aldi Prices](https://aicanwhat.com/zh/projects/aldi-prices/) · [Source](https://aldi-prices.lawruk.com/) | 查看数据网站及独立记录的搜索到历史页面流程。 | 作者将其描述为个人价格记录。CSV 并非完整或实时的零售商价格源，覆盖范围和时效取决于记录的数据。 本轮查阅的仓库中未确认源代码复用许可。 |
 | [Social Media Card Cropper](https://aicanwhat.com/zh/projects/social-media-card-cropper/) · [Source](https://tools.simonwillison.net/social-media-cropper) | 追溯图片裁切工具公开记录的实现过程。 | 工具使用第三方浏览器库，并可能从 CDN 加载图片编码器。导出支持及速度取决于浏览器；本轮未上传或处理图片。 仓库代码采用 Apache 2.0 许可，外部库保留各自条款。 |
+| [CSV To Charts](https://aicanwhat.com/zh/projects/gpt5-csv-to-charts/) · [Source](https://github.com/openai/gpt-5-coding-examples/tree/77f6322723703941f0b884d1a1cb77c60aad5187/apps/csv-to-charts) | 查看文件转图表演示及独立记录的样例图表操作；文件导入与 PNG 输出仍未验证。 | 独立浏览器记录覆盖内置样例、图表类型切换及数据列显隐。文件导入和 PNG 输出未验证。Chart.js 从未固定版本的 CDN 加载。源码显示空字符串会转成零，逗号会被删除；无效数值在饼图／环形图中被跳过，在柱状图／折线图中变为缺口。未确立分析正确性及 CSV 兼容性。 |
+| [Markdown → Slides](https://aicanwhat.com/zh/projects/gpt5-markdown-to-slides/) · [Source](https://github.com/openai/gpt-5-coding-examples/tree/77f6322723703941f0b884d1a1cb77c60aad5187/apps/markdown-to-slides) | 查看输入 Markdown 的预览工具及两页翻页记录；该工具没有内置文件导出。 | 这个预览与演示示例使用简化的自定义 Markdown 解析器，没有内置 PPTX、PDF 或 HTML 导出。localStorage 只保存主题，文档会从示例重新初始化。独立浏览器记录覆盖两页合成文本及前后翻页，不代表完整 Markdown 兼容性；远程图片可能需要联网。 |
 
 ## 桌面与移动软件
 
@@ -49,7 +51,7 @@
 
 ### 哪些案例有实际操作记录？
 
-井字棋和 Aldi Prices 条目记录了具体浏览器流程，附日期、步骤和截图；它们不认证完整应用、电脑策略或价格数据准确性。
+井字棋、Aldi Prices、CSV To Charts 和 Markdown → Slides 记录了特定浏览器交互的日期、步骤与截图。各记录区分可见结果与未测试功能，不构成完整应用认证。
 
 ## 继续查找
 

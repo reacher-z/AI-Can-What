@@ -6858,6 +6858,751 @@
       ],
       "reviewed_at": "2026-10-16",
       "verification": "source-reviewed"
+    },
+    {
+      "id": "webgen-bench",
+      "name": "WebGen-Bench",
+      "description_en": "A benchmark for generating interactive, multi-file websites from instructions, with browser-agent functional checks and appearance evaluation.",
+      "description_zh": "面向指令驱动、多文件交互网站生成的基准，提供浏览器 Agent 功能检查及外观评测。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/mnluzimu/WebGen-Bench",
+      "repo_url": "https://github.com/mnluzimu/WebGen-Bench",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2505.03733",
+      "enables_en": "Compare generated web applications against requested interaction flows and train generation agents with the released instruction data.",
+      "enables_zh": "按要求的交互流程比较生成的网站，并使用已发布的指令数据训练生成 Agent。",
+      "limits_en": "Functional scoring uses a WebVoyager VLM judge, so outcomes can vary with the judge and configuration. Requires a generator, browser stack and model access. Public Hub data is MIT-labeled; no project-wide license for the original code was located. Harbor changes timeouts and uses work-in-progress reference apps; report the harness and judge.",
+      "limits_zh": "功能判分使用 WebVoyager 视觉语言模型评审，结果会随评审模型及配置变化。需配置生成器、浏览器组件和模型访问。公开 Hub 数据标注 MIT；未找到原始代码的项目级许可。Harbor 调整了超时设置，参考应用仍在完善；结果需注明框架及评审模型。",
+      "resource_kind": "benchmark-suite",
+      "runtime": "Original scripts document Windows 11 and Linux workflows. The separate Harbor adapter packages Python 3.11, Node.js, Selenium and Chromium; its setup supports Linux/macOS. These are runner requirements, while generated artifacts target the web.",
+      "platform_note": "Web describes the generated websites. Host operating systems are not native-app targets.",
+      "evidence": [
+        {
+          "url": "https://github.com/mnluzimu/WebGen-Bench#readme",
+          "supports": "Author release of task data, generation integrations, WebVoyager functional evaluation and appearance scoring."
+        },
+        {
+          "url": "https://huggingface.co/datasets/luzimu/WebGen-Bench",
+          "supports": "Public MIT-labeled instruction data with train and test splits."
+        },
+        {
+          "url": "https://github.com/mnluzimu/WebGen-Bench/blob/main/src/ui_test_bolt/compute_acc.py",
+          "supports": "Inspectable aggregation of the judge's functional-test outcomes."
+        },
+        {
+          "url": "https://github.com/harbor-framework/harbor/blob/2de4605b9404eada7d341388291e6e469c90330b/adapters/webgen_bench/README.md",
+          "supports": "Pinned adapter links the canonical dataset and documents VLM variability, timeout changes and incomplete reference-solution validation."
+        },
+        {
+          "url": "https://arxiv.org/abs/2505.03733",
+          "supports": "Original website-generation benchmark and training-data study."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "android-bench",
+      "name": "Android Bench",
+      "description_en": "The public 1.0 task set for Android software engineering: agents edit Kotlin/Java repositories and have their patches checked by build and test harnesses.",
+      "description_zh": "Android 软件工程的公开 1.0 任务集：Agent 修改 Kotlin／Java 代码库，由构建与测试框架检查补丁。",
+      "content_type": "app",
+      "platforms": [
+        "android"
+      ],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://hub.harborframework.com/datasets/android-bench/android-bench/latest",
+      "repo_url": "https://github.com/android-bench/android-bench",
+      "demo_url": null,
+      "paper_url": null,
+      "enables_en": "Evaluate Android API, Gradle and application/library maintenance tasks using the public 100-task release.",
+      "enables_zh": "使用公开的 100 项任务评估 Android API、Gradle 及应用／库维护能力。",
+      "limits_en": "This entry covers public 1.0 tasks; Android Bench 2.0 has a separate private 30-task set. The original Apache-2.0 harness is archived and points to Harbor. Evaluated repositories retain their own licenses, including GPL/AGPL. Local Harbor evaluation requires x86_64/KVM and substantial resources; the archived README and package metadata disagree on Python minimums.",
+      "limits_zh": "本条目覆盖公开 1.0 任务；Android Bench 2.0 另有私有的 30 项任务。原始 Apache-2.0 框架已归档并转向 Harbor；被测仓库保留各自许可，包括 GPL／AGPL。本地 Harbor 评测需要 x86_64／KVM 及较多资源；归档 README 与包元数据的最低 Python 版本不一致。",
+      "resource_kind": "benchmark-suite",
+      "runtime": "The current public Harbor README lists 8 CPU cores, 32 GB RAM and 120 GB free disk with KVM for Android emulators. The archived harness README says Python 3.14+, while pyproject.toml says >=3.11; neither is presented as a verified current Harbor requirement.",
+      "platform_note": "Android is the target development platform; this is code-editing evaluation, not a mobile GUI navigation benchmark. KVM/Linux host requirements do not add a native Linux app tag.",
+      "evidence": [
+        {
+          "url": "https://developer.android.com/bench",
+          "supports": "The official site explicitly labels its Harbor link as the 1.0 dataset."
+        },
+        {
+          "url": "https://hub.harborframework.com/datasets/android-bench/android-bench/latest",
+          "supports": "Public 100-task package and documented x86_64/KVM, CPU, RAM and storage requirements."
+        },
+        {
+          "url": "https://github.com/android-bench/android-bench#readme",
+          "supports": "Archived harness, Harbor migration, patch/test workflow and documented Python prerequisite."
+        },
+        {
+          "url": "https://github.com/android-bench/android-bench/blob/main/pyproject.toml",
+          "supports": "Package metadata allows Python >=3.11, differing from the README."
+        },
+        {
+          "url": "https://github.com/android-bench/android-bench/blob/main/LICENSE",
+          "supports": "Harness license is Apache-2.0."
+        },
+        {
+          "url": "https://github.com/android-bench/android-bench/blob/main/docs/tech_report.md",
+          "supports": "Original dated 100-task report; its repository-source analysis includes GPL/AGPL projects."
+        },
+        {
+          "url": "https://developer.android.com/bench/methodology/2",
+          "supports": "Official 2.0 methodology specifies 30 long-horizon tasks and explicitly states that its dataset is private."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "swe-lancer",
+      "name": "SWE-Lancer",
+      "description_en": "A software-engineering benchmark whose public Diamond release combines application-code fixes with choosing among implementation proposals from real freelance work.",
+      "description_zh": "软件工程基准，其公开 Diamond 版本结合真实自由职业项目中的应用代码修复及实现方案选择。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/openai/frontier-evals/blob/main/project/swelancer/README.md",
+      "repo_url": "https://github.com/openai/frontier-evals/tree/main/project/swelancer",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2502.12115",
+      "enables_en": "Evaluate end-to-end code changes and engineering-manager proposal decisions as separate tracks within one benchmark family.",
+      "enables_zh": "在同一基准族中分别评估端到端代码修改及工程管理者的方案选择。",
+      "limits_en": "The public release is a subset of the paper's broader task collection. Diamond's 463 tasks comprise 198 coding and 265 manager tasks; combined and split packages must not be added together. Code is MIT, with underlying application terms separate. Valid original runs disable internet on Linux. Harbor changes prompts/test visibility and omits the monetary metric.",
+      "limits_zh": "公开版本只是论文更大任务集合的子集。Diamond 的 463 项任务由 198 项编码任务和 265 项管理任务构成，不能将总包与子集相加。代码采用 MIT，底层应用另有条款。原始协议要求在 Linux 上禁用网络；Harbor 修改了提示及测试可见性，且不报告金额指标。",
+      "resource_kind": "benchmark-suite",
+      "runtime": "Python >=3.11, uv and the project's Docker/shared evaluation components. Manager tasks use the monolithic image; image builds and caches can be large. Model credentials are configuration-dependent.",
+      "platform_note": "Targets repository changes and proposal decisions. Runner OS and the test browser are not treated as native-app deployment platforms.",
+      "evidence": [
+        {
+          "url": "https://github.com/openai/frontier-evals/blob/main/project/swelancer/README.md",
+          "supports": "Original run protocol, IC/manager distinction, offline Linux requirement and removal of 39 internet-dependent IC tasks."
+        },
+        {
+          "url": "https://github.com/openai/frontier-evals/blob/main/project/swelancer/LICENSE.md",
+          "supports": "SWE-Lancer project code is MIT licensed."
+        },
+        {
+          "url": "https://github.com/openai/frontier-evals/blob/main/project/swelancer/pyproject.toml",
+          "supports": "Python >=3.11 and shared local evaluation dependencies."
+        },
+        {
+          "url": "https://github.com/harbor-framework/harbor/blob/2de4605b9404eada7d341388291e6e469c90330b/adapters/swelancer/README.md",
+          "supports": "Pinned adapter reconciles 198 IC plus 265 manager tasks and documents prompt, test-visibility and metric differences from the original harness."
+        },
+        {
+          "url": "https://arxiv.org/abs/2502.12115",
+          "supports": "Original freelance-task study distinguishes code execution, managerial decisions and the public Diamond split."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "swe-smith",
+      "name": "SWE-smith",
+      "description_en": "A toolkit that builds repository execution environments and synthesizes code-repair tasks by introducing changes that fail existing tests.",
+      "description_zh": "通过构建代码库执行环境，并引入会使现有测试失败的修改来合成代码修复任务的工具包。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "primary_url": "https://github.com/SWE-bench/SWE-smith",
+      "repo_url": "https://github.com/SWE-bench/SWE-smith",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2504.21798",
+      "enables_en": "Generate test-backed software-engineering training tasks, collect agent trajectories and evaluate repair attempts in repository-specific containers.",
+      "enables_zh": "生成有测试依据的软件工程训练任务、收集 Agent 轨迹，并在各代码库的容器中评估修复尝试。",
+      "limits_en": "Training-oriented tasks are not a held-out SWE-bench evaluation set. Pin the task revision and partition: published dataset sizes have changed, and Harbor's 100-task package is only a slice. Toolkit and Hub data declare MIT; source repositories retain their terms. Requires Docker on supported Ubuntu; the authors do not support Windows/macOS. Harbor's adapter reports some synthetic oracle failures.",
+      "limits_zh": "面向训练的任务不是独立保留的 SWE-bench 评测集。需固定任务版本及划分：发布数据规模已有变化，Harbor 的 100 项任务包只是子集。工具包和 Hub 数据声明 MIT，源代码库保留各自条款。需在受支持的 Ubuntu 上使用 Docker；作者不支持 Windows／macOS。Harbor 适配器提示部分合成参考补丁可能失败。",
+      "resource_kind": "environment-framework",
+      "runtime": "Python >=3.10 per package metadata; Docker repository images and test dependencies. The authors document Ubuntu 22.04.4 LTS. Harbor's reviewed adapter emits Python-profile tasks and may install verifier dependencies at run time.",
+      "platform_note": "Repository-code tasks are not tagged by the operating system of the runner.",
+      "evidence": [
+        {
+          "url": "https://github.com/SWE-bench/SWE-smith#readme",
+          "supports": "Environment construction, task synthesis, test validation, trajectory resources and Ubuntu/Docker support boundaries."
+        },
+        {
+          "url": "https://github.com/SWE-bench/SWE-smith/blob/main/LICENSE",
+          "supports": "Toolkit code uses MIT."
+        },
+        {
+          "url": "https://github.com/SWE-bench/SWE-smith/blob/main/pyproject.toml",
+          "supports": "Package requires Python >=3.10."
+        },
+        {
+          "url": "https://huggingface.co/datasets/SWE-bench/SWE-smith",
+          "supports": "Public MIT-labeled training-task data, including test lists and image references."
+        },
+        {
+          "url": "https://github.com/harbor-framework/harbor/blob/2de4605b9404eada7d341388291e6e469c90330b/adapters/swesmith/README.md",
+          "supports": "Pinned adapter's default 100-task slice, Python-profile restriction and possible synthetic-oracle failures."
+        },
+        {
+          "url": "https://arxiv.org/abs/2504.21798",
+          "supports": "Original work on synthesizing software-engineering training tasks and execution environments."
+        }
+      ],
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "unity-ml-agents",
+      "name": "Unity ML-Agents",
+      "description_en": "A Unity SDK and Python interface that turn game and simulation scenes into interactive environments for reinforcement learning, imitation learning and multi-agent research.",
+      "description_zh": "通过 Unity SDK 和 Python 接口，将游戏与模拟场景连接为可交互环境，用于强化学习、模仿学习及多 Agent 研究。",
+      "content_type": "game",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "environment-framework",
+      "creator": "Unity Technologies and ML-Agents contributors",
+      "primary_url": "https://github.com/Unity-Technologies/ml-agents",
+      "repo_url": "https://github.com/Unity-Technologies/ml-agents",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1809.02627",
+      "enables_en": "Train and compare policies in instrumented Unity scenes using vector or visual observations, continuous or discrete actions, demonstration data and cooperative or competitive agents.",
+      "enables_zh": "在接入接口的 Unity 场景中，通过向量或视觉观测、连续或离散动作、演示数据及合作或竞争 Agent，训练和比较策略。",
+      "limits_en": "An environment toolkit, not a fixed benchmark or game-generation system. Release 23 documents Unity 6000.0+, C# package 4.0.0 and Python packages 1.1.0 with Python 3.10.1–3.10.12; source and package versions must be pinned separately. The reviewed OpenEnv wrapper uses only the first agent and does not support multi-agent environments; its x86_64 Docker binaries do not run on Apple Silicon.",
+      "limits_zh": "这是环境工具包，不是固定基准或游戏生成系统。Release 23 文档指定 Unity 6000.0+、C# 包 4.0.0、Python 包 1.1.0 及 Python 3.10.1–3.10.12；源码与发布包需分别固定版本。已核查的 OpenEnv 封装仅使用首个 Agent，不支持多 Agent 环境，其 x86_64 Docker 二进制不能在 Apple Silicon 上运行。",
+      "runtime_note_en": "Authoring or modifying scenes needs the Unity Editor and matching ML-Agents package; Python controls the Editor or a platform-specific executable. The pinned OpenEnv wrapper can download example binaries and run a local server; graphics mode needs a display. Desktop tags describe documented environment runtimes, not coverage of every Unity export platform.",
+      "runtime_note_zh": "创作或修改场景需要 Unity Editor 及匹配的 ML-Agents 包；Python 控制 Editor 或特定平台的可执行文件。固定版本的 OpenEnv 封装可下载示例二进制并启动本地服务，图形模式需要显示环境。桌面平台标签表示文档列出的环境运行平台，不代表所有 Unity 导出平台均已覆盖。",
+      "license_en": "ML-Agents toolkit code is Apache-2.0, with separate third-party notices. Unity Editor software has its own terms; the toolkit license does not replace engine, dependency or external-asset terms.",
+      "license_zh": "ML-Agents 工具包代码采用 Apache-2.0，并附有独立第三方声明。Unity Editor 有自己的软件条款；工具包许可不替代引擎、依赖或外部素材条款。",
+      "license_url": "https://github.com/Unity-Technologies/ml-agents/blob/a2777719560e4676be99e2ea128c5eb1fbeb3dbb/LICENSE.md",
+      "reviewed_version": {
+        "source_commit": "a2777719560e4676be99e2ea128c5eb1fbeb3dbb",
+        "source_ref": "release_23 / release_23_tag",
+        "documented_unity_package": "4.0.0",
+        "documented_python_package": "1.1.0",
+        "source_python_version": "1.2.0.dev0",
+        "openenv_wrapper_commit": "55347f62e22f83a618b49ee984e2f684b69d8fbd"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Unity-Technologies/ml-agents/blob/a2777719560e4676be99e2ea128c5eb1fbeb3dbb/Readme.md",
+          "supports": "Canonical SDK/Python toolkit, training methods, example scenes, release-component table and original reference paper."
+        },
+        {
+          "url": "https://github.com/Unity-Technologies/ml-agents/blob/a2777719560e4676be99e2ea128c5eb1fbeb3dbb/com.unity.ml-agents/Documentation~/Installation.md",
+          "supports": "Unity 6000.0+, Python 3.10.1–3.10.12, package versus source installation, desktop virtual environments and Windows setup."
+        },
+        {
+          "url": "https://github.com/Unity-Technologies/ml-agents/blob/a2777719560e4676be99e2ea128c5eb1fbeb3dbb/com.unity.ml-agents/package.json",
+          "supports": "Unity package 4.0.0 and Unity 6000.0 requirement at the reviewed commit."
+        },
+        {
+          "url": "https://github.com/Unity-Technologies/ml-agents/blob/a2777719560e4676be99e2ea128c5eb1fbeb3dbb/ml-agents/mlagents/trainers/__init__.py",
+          "supports": "Source reports 1.2.0.dev0; this is preserved separately from the documented PyPI 1.1.0 package."
+        },
+        {
+          "url": "https://pypi.org/pypi/mlagents/1.1.0/json",
+          "supports": "Published package version and Python upper/lower bounds."
+        },
+        {
+          "url": "https://github.com/Unity-Technologies/ml-agents/blob/a2777719560e4676be99e2ea128c5eb1fbeb3dbb/LICENSE.md",
+          "supports": "Apache-2.0 toolkit license."
+        },
+        {
+          "url": "https://github.com/Unity-Technologies/ml-agents/blob/a2777719560e4676be99e2ea128c5eb1fbeb3dbb/Third%20Party%20Notices.md",
+          "supports": "Separately attributed third-party components."
+        },
+        {
+          "url": "https://unity.com/legal/editor-terms-of-service/software",
+          "supports": "Unity Editor has separate software terms; no claim that the engine is licensed by the toolkit Apache license."
+        },
+        {
+          "url": "https://github.com/huggingface/OpenEnv/blob/55347f62e22f83a618b49ee984e2f684b69d8fbd/envs/unity_env/README.md",
+          "supports": "Exact unity_env wrapper relationship, supported example names, first-agent-only scope, native desktop binaries and Apple-Silicon Docker limitation."
+        }
+      ]
+    },
+    {
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "textarena",
+      "name": "TextArena",
+      "description_en": "A collection of competitive and cooperative text-based games with a shared string-observation/string-action interface for training and evaluating language-model agents.",
+      "description_zh": "提供竞争与合作类文字游戏，以统一的字符串观测与动作接口训练、评估语言模型 Agent。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "environment-and-benchmark",
+      "creator": "Leon Guertler, Bobby Cheng and TextArena contributors",
+      "primary_url": "https://github.com/TextArena/TextArena",
+      "repo_url": "https://github.com/TextArena/TextArena",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2504.11442",
+      "enables_en": "Run self-play or agent-versus-agent games to study sequential decisions, negotiation and social reasoning; choose a specific game, opponent and language configuration for comparison.",
+      "enables_zh": "运行自我对弈或 Agent 对战，研究序列决策、协商和社会推理；比较时需选定具体游戏、对手及语言配置。",
+      "limits_en": "Requires Python 3.10+ and game-specific dependencies or word data. Provider-backed example agents need credentials; local game logic does not itself supply a model. PyPI 0.7.4 and the reviewed main-branch metadata (0.7.3) differ, so pin the package or commit and game ID. Hosted ratings are separate from a fixed offline test; multilingual coverage and review quality vary by game and language.",
+      "limits_zh": "需要 Python 3.10+，部分游戏另需依赖或词表。使用外部模型服务的示例 Agent 需要凭据，本地游戏逻辑本身不提供模型。PyPI 0.7.4 与已核查主分支的版本元数据 0.7.3 不一致，应固定包或提交及游戏 ID。托管评分不同于固定离线测试，多语言覆盖和核查程度因游戏、语言而异。",
+      "runtime_note_en": "Use the Python package with an agent callable that accepts text and returns text. The OpenEnv textarena_env record is a configurable HTTP wrapper whose documented default is one-player Wordle-v0; do not treat that wrapper or its sample as an additional benchmark family. No native OS support claim is inferred from Python alone.",
+      "runtime_note_zh": "通过 Python 包调用接收文本并返回文本的 Agent。OpenEnv 的 textarena_env 是可配置 HTTP 封装，文档默认使用单人 Wordle-v0；不能将封装或示例另计为独立基准族，也不因使用 Python 就推断原生操作系统支持。",
+      "license_en": "Core repository code is MIT. Optional model integrations and word-data dependencies have separate terms; the wordgames extra documents wordfreq as Apache-2.0.",
+      "license_zh": "核心仓库代码采用 MIT；可选模型接口及词表依赖另有条款，wordgames 扩展将 wordfreq 标注为 Apache-2.0。",
+      "license_url": "https://github.com/TextArena/TextArena/blob/1e3160dea659971f120bf42708fafa8ea3001b81/LICENSE",
+      "reviewed_version": {
+        "source_commit": "1e3160dea659971f120bf42708fafa8ea3001b81",
+        "source_metadata_version": "0.7.3",
+        "pypi_version": "0.7.4",
+        "openenv_wrapper_commit": "55347f62e22f83a618b49ee984e2f684b69d8fbd"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/TextArena/TextArena/blob/1e3160dea659971f120bf42708fafa8ea3001b81/README.md",
+          "supports": "Game-interface scope, self-play, local examples, hosted play, original paper and tiered multilingual coverage."
+        },
+        {
+          "url": "https://github.com/TextArena/TextArena/blob/1e3160dea659971f120bf42708fafa8ea3001b81/pyproject.toml",
+          "supports": "Python 3.10+, source metadata version, core/optional dependencies and wordgames extra."
+        },
+        {
+          "url": "https://github.com/TextArena/TextArena/blob/1e3160dea659971f120bf42708fafa8ea3001b81/LICENSE",
+          "supports": "MIT license and named copyright holders."
+        },
+        {
+          "url": "https://pypi.org/pypi/textarena/0.7.4/json",
+          "supports": "Published 0.7.4 package metadata is distinct from reviewed main source metadata."
+        },
+        {
+          "url": "https://github.com/huggingface/OpenEnv/blob/55347f62e22f83a618b49ee984e2f684b69d8fbd/envs/textarena_env/README.md",
+          "supports": "Canonical project link, configurable wrapper, default Wordle-v0, default one player and optional NLTK downloads."
+        },
+        {
+          "url": "https://arxiv.org/abs/2504.11442",
+          "supports": "Original TextArena paper; historical paper environment count is not presented as current coverage."
+        }
+      ]
+    },
+    {
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "momaland",
+      "name": "MOMAland",
+      "description_en": "A multi-objective multi-agent environment suite whose PettingZoo-style interfaces return reward vectors, including board games, cooperative physics tasks and resource-allocation simulations.",
+      "description_zh": "多目标、多 Agent 环境套件，采用类似 PettingZoo 的接口返回奖励向量，包含棋盘游戏、合作物理任务和资源分配模拟。",
+      "content_type": "game",
+      "platforms": [],
+      "uses": [
+        "training",
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "environment-and-benchmark",
+      "creator": "Farama Foundation and MOMAland contributors",
+      "primary_url": "https://github.com/Farama-Foundation/MOMAland",
+      "repo_url": "https://github.com/Farama-Foundation/MOMAland",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2407.16312",
+      "enables_en": "Compare multi-agent policies under competing objectives and utility choices, including multi-objective Connect4, Breakthrough and Pistonball, using versioned environments and supplied learning baselines.",
+      "enables_zh": "使用带版本的环境及配套学习基线，比较多 Agent 策略在相互竞争的目标与效用选择下的表现，例如多目标 Connect4、Breakthrough 和 Pistonball。",
+      "limits_en": "Reward vectors need an explicit utility, scalarization or multi-objective evaluation protocol; scores are not interchangeable with scalar-reward PettingZoo results. PyPI 0.2.0 metadata permits Python 3.9+, while the reviewed main source requires 3.11+. Optional learning extras add JAX and other dependencies. LICENSE and the package license field say GPLv3, but an MIT classifier conflicts with them.",
+      "limits_zh": "奖励向量需要明确的效用、标量化或多目标评估协议，成绩不能与 PettingZoo 标量奖励结果直接互换。PyPI 0.2.0 元数据允许 Python 3.9+，已核查主分支源码要求 3.11+。可选学习扩展还需 JAX 等依赖。LICENSE 及包的 license 字段写明 GPLv3，但同时存在冲突的 MIT 分类标签。",
+      "runtime_note_en": "Python environment APIs and optional renderers; some environments adapt existing PettingZoo tasks and others come from multi-objective literature. Pin the library commit/package, versioned environment ID and objective configuration. Desktop OS support was not established by this review.",
+      "runtime_note_zh": "提供 Python 环境 API 及可选渲染器；部分环境改编自 PettingZoo，其他来自多目标研究。需固定库提交或包、带版本的环境 ID 及目标配置。本次未确立特定桌面操作系统支持。",
+      "license_en": "Repository LICENSE is GNU GPLv3 and pyproject license text agrees; the same pyproject also includes a contradictory MIT classifier. Preserve that inconsistency rather than describing the suite as MIT. Dependencies retain their own licenses.",
+      "license_zh": "仓库 LICENSE 为 GNU GPLv3，pyproject 的许可文本与之相同；但同一文件又包含冲突的 MIT 分类标签。应保留此不一致信息，不能将套件概括为 MIT。依赖项各自保留其许可。",
+      "license_url": "https://github.com/Farama-Foundation/MOMAland/blob/b81f2330df45b2c39ef56aa3a94e7539023d5f8c/LICENSE",
+      "reviewed_version": {
+        "source_commit": "b81f2330df45b2c39ef56aa3a94e7539023d5f8c",
+        "source_metadata_version": "0.2.0",
+        "source_requires_python": ">=3.11",
+        "pypi_version": "0.2.0",
+        "pypi_requires_python": ">=3.9"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Farama-Foundation/MOMAland/blob/b81f2330df45b2c39ef56aa3a94e7539023d5f8c/README.md",
+          "supports": "Vector rewards, PettingZoo-style API, optional dependencies, learning algorithms, environment versioning and current publisher citation."
+        },
+        {
+          "url": "https://momaland.farama.org/environments/all-envs/",
+          "supports": "Official environment list and competing objectives, including Connect4, Breakthrough, Pistonball and adapted PettingZoo environments."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/MOMAland/blob/b81f2330df45b2c39ef56aa3a94e7539023d5f8c/pyproject.toml",
+          "supports": "Main source Python 3.11+, optional JAX-based learning dependencies, GPLv3 license text and conflicting MIT classifier."
+        },
+        {
+          "url": "https://github.com/Farama-Foundation/MOMAland/blob/b81f2330df45b2c39ef56aa3a94e7539023d5f8c/LICENSE",
+          "supports": "GPLv3 license text."
+        },
+        {
+          "url": "https://pypi.org/pypi/momaland/0.2.0/json",
+          "supports": "Published 0.2.0 package metadata allows Python 3.9+, distinct from the reviewed source checkout."
+        },
+        {
+          "url": "https://momaland.farama.org/",
+          "supports": "Original arXiv citation for the environment suite."
+        },
+        {
+          "url": "https://arxiv.org/abs/2407.16312",
+          "supports": "Original multi-objective multi-agent benchmark paper and author metadata."
+        }
+      ]
+    },
+    {
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "gpt5-markdown-to-slides",
+      "name": "Markdown → Slides",
+      "description_en": "An OpenAI-published generated browser tool that turns typed Markdown into a slide preview, using lines of three hyphens as slide breaks.",
+      "description_zh": "OpenAI 发布的生成式浏览器工具，将输入的 Markdown 转为幻灯片预览，以独立一行的三个连字符分隔页面。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "resource_kind": "ai-generated-output",
+      "creator": "OpenAI",
+      "primary_url": "https://github.com/openai/gpt-5-coding-examples/tree/77f6322723703941f0b884d1a1cb77c60aad5187/apps/markdown-to-slides",
+      "repo_url": "https://github.com/openai/gpt-5-coding-examples",
+      "source_file_url": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/apps/markdown-to-slides/index.html",
+      "demo_url": "https://gpt5-coding-examples.vercel.app/markdown-to-slides",
+      "paper_url": null,
+      "provenance_source": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/README.md",
+      "provenance_note_en": "OpenAI describes this collection as application code generated from single GPT-5 or GPT-5.2 prompts without handwritten application code. The exact pinned manifest identifies this base example but does not name an individual model checkpoint. This is publisher-reported provenance, not an independent authorship audit.",
+      "provenance_note_zh": "OpenAI 将该集合描述为通过单次 GPT-5 或 GPT-5.2 提示生成应用代码、未手写应用代码。固定清单明确标识这个基础示例，但未给出具体模型检查点。这属于发布者开发来源声明，并非独立作者身份审计。",
+      "enables_en": "Inspect a generated document-to-preview workflow with Markdown editing, live slide rendering, previous/next and keyboard navigation, theme selection and browser fullscreen controls.",
+      "enables_zh": "检查生成的文档转预览流程，包括 Markdown 编辑、实时页面渲染、前后翻页及键盘导航、主题选择和浏览器全屏控制。",
+      "limits_en": "A small custom Markdown parser powers this preview/presentation demo. There is no built-in PPTX, PDF or HTML export. Only the theme is saved to localStorage; the document restarts from a sample. A separate browser record covers a two-slide synthetic document and previous/next navigation, not full Markdown compatibility. Remote images can need network access.",
+      "limits_zh": "这个预览与演示示例使用简化的自定义 Markdown 解析器，没有内置 PPTX、PDF 或 HTML 导出。localStorage 只保存主题，文档会从示例重新初始化。独立浏览器记录覆盖两页合成文本及前后翻页，不代表完整 Markdown 兼容性；远程图片可能需要联网。",
+      "runtime_note_en": "Single HTML/CSS/JavaScript artifact with a textarea and client-side rendering. The demo HTML matched the pinned source at source review. A later browser check rendered two typed slides and navigated between them; fullscreen, theme persistence, images and broader syntax were not tested.",
+      "runtime_note_zh": "单文件 HTML/CSS/JavaScript 作品，提供文本输入框并在浏览器端渲染。源码核查时演示 HTML 与固定源码一致；后续浏览器检查渲染了两页输入文本并进行翻页，未测试全屏、主题持久化、图片或更多语法。",
+      "license_en": "Repository application code is MIT. External images referenced by a deck have separate ownership and terms.",
+      "license_zh": "仓库应用代码采用 MIT；幻灯片引用的外部图片另有权属及条款。",
+      "license_url": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/LICENSE",
+      "reviewed_version": {
+        "source_commit": "77f6322723703941f0b884d1a1cb77c60aad5187",
+        "manifest_path": "examples/markdown-to-slides.yaml",
+        "application_blob": "10efecbe9a139a6efd0b5c87b94cad42eca35070",
+        "html_sha256": "d96d39a8a07e11ef3212b80add16b7f5702f020381a0244d2717ed2ddb59ea64"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/README.md",
+          "supports": "First-party single-prompt generation claim, human-code scope and link to the hosted collection."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/examples/markdown-to-slides.yaml",
+          "supports": "Exact example ID, title and generating prompt; no explicit per-example model checkpoint field."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/apps/markdown-to-slides/index.html",
+          "supports": "Textarea input, slide-splitting/parser, navigation/fullscreen/theme logic, theme-only storage and absence of a file-export path."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/LICENSE",
+          "supports": "MIT license for repository code."
+        },
+        {
+          "url": "https://gpt5-coding-examples.vercel.app/markdown-to-slides",
+          "supports": "Source-supported hosted route whose fetched HTML matched the pinned source. Later limited browser interactions are recorded separately in observations.json."
+        }
+      ]
+    },
+    {
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "id": "gpt5-csv-to-charts",
+      "name": "CSV To Charts",
+      "description_en": "An OpenAI-published generated browser tool that reads a CSV file and configures bar, line, pie or doughnut charts with column mapping, colors and PNG download logic.",
+      "description_zh": "OpenAI 发布的生成式浏览器工具，读取 CSV 文件并配置柱状图、折线图、饼图或环形图，包含列映射、颜色设置及 PNG 下载逻辑。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "resource_kind": "ai-generated-output",
+      "creator": "OpenAI",
+      "primary_url": "https://github.com/openai/gpt-5-coding-examples/tree/77f6322723703941f0b884d1a1cb77c60aad5187/apps/csv-to-charts",
+      "repo_url": "https://github.com/openai/gpt-5-coding-examples",
+      "source_file_url": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/apps/csv-to-charts/index.html",
+      "demo_url": "https://gpt5-coding-examples.vercel.app/csv-to-charts",
+      "paper_url": null,
+      "provenance_source": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/README.md",
+      "provenance_note_en": "OpenAI attributes the application collection to single GPT-5 or GPT-5.2 prompts without handwritten application code; the exact example manifest has no model-checkpoint field. The generated application uses the separately authored Chart.js library, so the authorship claim does not extend to that dependency.",
+      "provenance_note_zh": "OpenAI 将该应用集合归因于单次 GPT-5 或 GPT-5.2 提示生成、未手写应用代码；该示例清单未给出模型检查点。生成应用使用独立开发的 Chart.js，因此开发来源声明不包括这一依赖。",
+      "enables_en": "Inspect a generated file-to-chart workflow: local FileReader input, header/delimiter controls, numeric-column selection, chart/color changes and a canvas-to-PNG download handler.",
+      "enables_zh": "检查生成的文件转图表流程：本地 FileReader 读取、表头与分隔符控制、数值列选择、图表及颜色切换，以及画布转 PNG 下载处理。",
+      "limits_en": "A separate browser observation covers the built-in sample, chart-type change and dataset visibility. File import and PNG output are unverified. Chart.js loads from an unversioned CDN. Source inspection shows empty strings become zero and commas are stripped; invalid numbers are skipped in pie/doughnut charts or become gaps in bar/line data. Analytical correctness and CSV compatibility were not established.",
+      "limits_zh": "独立浏览器记录覆盖内置样例、图表类型切换及数据列显隐。文件导入和 PNG 输出未验证。Chart.js 从未固定版本的 CDN 加载。源码显示空字符串会转成零，逗号会被删除；无效数值在饼图／环形图中被跳过，在柱状图／折线图中变为缺口。未确立分析正确性及 CSV 兼容性。",
+      "runtime_note_en": "Single HTML application with an embedded sample and file picker/dropzone, without paste-text input. Source inspection shows local FileReader parsing and a PNG data-URL handler. A later browser check used only the built-in sample; Save as image was clicked, but download completion was not verified.",
+      "runtime_note_zh": "单文件 HTML 应用，内置样例并提供文件选择／拖放区域，没有粘贴文本输入界面。源码包含本地 FileReader 解析及 PNG 数据地址处理。后续浏览器检查只使用内置样例；已点击 Save as image，但未确认下载完成。",
+      "license_en": "Repository application code is MIT; Chart.js is separately MIT-licensed. The application does not pin the Chart.js version served by the CDN.",
+      "license_zh": "仓库应用代码采用 MIT，Chart.js 也独立采用 MIT；应用未固定 CDN 提供的 Chart.js 版本。",
+      "license_url": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/LICENSE",
+      "reviewed_version": {
+        "source_commit": "77f6322723703941f0b884d1a1cb77c60aad5187",
+        "manifest_path": "examples/csv-to-charts.yaml",
+        "application_blob": "0df508248f9b0a13438b3476daf1f7e102c1d298",
+        "html_sha256": "cdf87d597ac5e713b76ecee5df4ee208811a563baa59c1826f9c91fcf00ff8b0",
+        "cdn_chartjs_version_observed": "4.5.1",
+        "cdn_dependency_is_unpinned": true
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/README.md",
+          "supports": "First-party application-code generation claim and hosted collection link."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/examples/csv-to-charts.yaml",
+          "supports": "Exact base-example ID and prompt for CSV chart generation, chart choices, colors and image saving."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/apps/csv-to-charts/index.html",
+          "supports": "FileReader input, CSV parsing, chart type and column controls, empty-string numeric coercion, unversioned Chart.js CDN and toBase64Image PNG download handler."
+        },
+        {
+          "url": "https://github.com/openai/gpt-5-coding-examples/blob/77f6322723703941f0b884d1a1cb77c60aad5187/LICENSE",
+          "supports": "MIT license for repository code."
+        },
+        {
+          "url": "https://github.com/chartjs/Chart.js/blob/master/LICENSE.md",
+          "supports": "Chart.js is a separately authored MIT-licensed dependency."
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/chart.js/package.json",
+          "supports": "CDN metadata reported Chart.js 4.5.1 at review time; the application source does not pin it."
+        },
+        {
+          "url": "https://gpt5-coding-examples.vercel.app/csv-to-charts",
+          "supports": "HTTP-fetched HTML matched the pinned source. Later bounded browser observations are recorded separately; PNG output was not verified."
+        }
+      ]
+    },
+    {
+      "id": "ade-bench",
+      "name": "ADE-bench",
+      "description_en": "A container-based benchmark for agents that repair and modify dbt projects, SQL transformations and warehouse outputs.",
+      "description_zh": "基于容器的基准，评估 Agent 修复或修改 dbt 项目、SQL 转换及数据仓库结果的能力。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "environment-and-benchmark",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "primary_url": "https://github.com/dbt-labs/ade-bench",
+      "repo_url": "https://github.com/dbt-labs/ade-bench",
+      "paper_url": null,
+      "enables_en": "Evaluate changes to data models and analytics pipelines using task-specific dbt tests and expected-table comparisons.",
+      "enables_zh": "通过任务专用 dbt 测试和预期结果表比对，评估数据模型及分析流水线的修改。",
+      "limits_en": "DuckDB tasks copy a local database into a task container. Snowflake tasks use a real account, create or replace trial databases/users/roles, and leave objects behind; upstream advises a separate test account. Database/project variants differ by task. The frozen Harbor package has 48 DuckDB+dbt tasks and does not represent every task in the current source.",
+      "limits_zh": "DuckDB 任务会把本地数据库复制到任务容器。Snowflake 任务使用真实账号，创建或替换试验数据库、用户及角色，且会保留这些对象；上游建议使用独立测试账号。数据库及项目变体因任务而异。固定的 Harbor 包含 48 项 DuckDB+dbt 任务，不能代表当前源码中的全部任务。",
+      "license_en": "Repository code is Apache-2.0. The database release and inspected metadata do not establish separate terms for every source dataset; do not assume all warehouse contents share the code license.",
+      "license_zh": "仓库代码采用 Apache-2.0。数据库发布及已查阅元数据未确立每个原始数据集的独立条款，不能假定所有仓库内容均沿用代码许可。",
+      "license_url": "https://github.com/dbt-labs/ade-bench/blob/c305600ebf17e7e7c4550bd401b6ddb530beb7c8/LICENSE",
+      "runtime_note_en": "Python >=3.10, Docker/Compose, shared dbt projects and separately distributed DuckDB files. Model credentials depend on the selected agent; the bundled reference-solution agent can check task setup without a model. Source inspection found 60 ready task folders at the pinned revision; readiness is not independent runtime verification.",
+      "runtime_note_zh": "需 Python >=3.10、Docker/Compose、共享 dbt 项目及另行分发的 DuckDB 文件。模型凭证取决于所选 Agent；内置参考解法 Agent 可在不调用模型时检查任务配置。固定版本的源码有 60 个标为 ready 的任务目录，该状态不代表已独立验证运行。",
+      "evidence": [
+        {
+          "url": "https://github.com/dbt-labs/ade-bench/blob/c305600ebf17e7e7c4550bd401b6ddb530beb7c8/README.md",
+          "supports": "Canonical task lifecycle, dbt checks, Docker isolation, local DuckDB copies and real Snowflake object changes/persistence."
+        },
+        {
+          "url": "https://github.com/dbt-labs/ade-bench/blob/c305600ebf17e7e7c4550bd401b6ddb530beb7c8/tasks/airbnb001/task.yaml",
+          "supports": "A ready task repairs a dbt macro migration and compares five output tables; database/project variants are explicit."
+        },
+        {
+          "url": "https://github.com/dbt-labs/ade-bench/blob/c305600ebf17e7e7c4550bd401b6ddb530beb7c8/ade_bench/setup/snowflake_setup.py",
+          "supports": "Source issues DROP/CREATE DATABASE, ROLE and USER commands against configured Snowflake credentials."
+        },
+        {
+          "url": "https://github.com/dbt-labs/ade-bench/blob/c305600ebf17e7e7c4550bd401b6ddb530beb7c8/pyproject.toml",
+          "supports": "Python >=3.10; package metadata version 1.0.0rc1."
+        },
+        {
+          "url": "https://github.com/dbt-labs/ade-bench/releases/tag/databases",
+          "supports": "Public release lists shared DuckDB binaries; metadata inspected, binaries not downloaded."
+        },
+        {
+          "url": "https://github.com/dbt-labs/ade-bench/blob/c305600ebf17e7e7c4550bd401b6ddb530beb7c8/shared/databases/catalog.yaml",
+          "supports": "The inspected database metadata catalog is empty, so it does not resolve per-database source terms."
+        },
+        {
+          "url": "https://github.com/laude-institute/harbor/blob/3e9f14a7c1033896cc600d27de69d6948bcb3410/adapters/adebench/README.md",
+          "supports": "Harbor adapter describes 48 DuckDB+dbt tasks and excludes Snowflake/dbt-fusion variants."
+        }
+      ]
+    },
+    {
+      "id": "bixbench",
+      "name": "BixBench",
+      "description_en": "A bioinformatics benchmark with a released notebook execution environment for agents that inspect data, run Python/R/Bash analyses and interpret results.",
+      "description_zh": "生物信息学基准，提供笔记本执行环境，让 Agent 检查数据、运行 Python／R／Bash 分析并解释结果。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "environment-and-benchmark",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "primary_url": "https://github.com/Future-House/BixBench",
+      "repo_url": "https://github.com/Future-House/BixBench",
+      "paper_url": "https://arxiv.org/abs/2503.00096",
+      "enables_en": "Evaluate multi-step computational analyses with open answers or multiple-choice answers, separately from zero-shot question-answering baselines.",
+      "enables_zh": "通过开放式或选择题答案评估多步计算分析，并与不执行分析的零样本问答基线分别比较。",
+      "limits_en": "v1.5 revises and flattens the benchmark to 205 questions; v1.0 has 296 questions and is not score-equivalent. The public split is named train but includes benchmark answers and a no-training-corpus notice. Open answers can require model judging. Capsule counts differ across paper, README and current metadata. Harbor notebook/CLI variants alter tools, prompts and grading details.",
+      "limits_zh": "v1.5 修订并展平为 205 道问题；v1.0 有 296 道问题，两者成绩不能直接等同。公开划分名为 train，但包含基准答案及不得进入训练语料的声明。开放式答案可能需要模型判分。论文、README 与当前元数据的胶囊数量不一致；Harbor 的笔记本／CLI 变体也改变了工具、提示及评分细节。",
+      "license_en": "Repository code and the public dataset card declare Apache-2.0. Third-party capsule files were not unpacked or individually licensed in this review. The dataset contamination notice is an evaluation-integrity instruction, separate from the license declaration.",
+      "license_zh": "仓库代码及公开数据卡声明 Apache-2.0。本次未解压并逐项核查胶囊中的第三方文件许可。数据中的防污染声明属于评测完整性要求，应与许可声明分别理解。",
+      "license_url": "https://github.com/Future-House/BixBench/blob/49311180bdacb324c596f2e07596c126f2004008/LICENSE",
+      "runtime_note_en": "Python >=3.12 with Aviary/fhda and a Jupyter kernel; upstream recommends its Docker image. Data capsules and model/judge access are separate requirements. Hub metadata is public and ungated despite the README login instruction. Pin dataset revision, execution mode, grader and replica settings.",
+      "runtime_note_zh": "需 Python >=3.12、Aviary／fhda 及 Jupyter 内核；上游推荐其 Docker 镜像。数据胶囊和模型／评审服务需另行准备。虽然 README 有登录说明，当前 Hub 元数据及任务文件公开且无访问门槛。应固定数据版本、执行模式、评分器及重复运行设置。",
+      "evidence": [
+        {
+          "url": "https://github.com/Future-House/BixBench/blob/49311180bdacb324c596f2e07596c126f2004008/README.md",
+          "supports": "Released notebook trajectory generation, zero-shot baseline distinction, Docker and model/grader setup; README states 60 capsules."
+        },
+        {
+          "url": "https://github.com/Future-House/BixBench/blob/49311180bdacb324c596f2e07596c126f2004008/bixbench/generate_trajectories.py",
+          "supports": "Public implementation loads question records and capsules, creates DataAnalysisEnv instances and performs environment steps."
+        },
+        {
+          "url": "https://github.com/Future-House/BixBench/blob/49311180bdacb324c596f2e07596c126f2004008/bixbench/graders.py",
+          "supports": "Grading includes string, range and model-based paths; open-ended range grading uses a model, so eval_mode names alone do not prove deterministic scoring."
+        },
+        {
+          "url": "https://github.com/Future-House/BixBench/blob/49311180bdacb324c596f2e07596c126f2004008/pyproject.toml",
+          "supports": "Python >=3.12 and pinned fhda v1.5.0 dependency."
+        },
+        {
+          "url": "https://huggingface.co/datasets/futurehouse/BixBench/blob/f8cc3bdcc6357c88b8c3648306522b9c422dc95a/README.md",
+          "supports": "Apache-2.0 declaration; September 2025 v1.5 revision note; original v1.0 retained; public split named train."
+        },
+        {
+          "url": "https://huggingface.co/datasets/futurehouse/BixBench/blob/f8cc3bdcc6357c88b8c3648306522b9c422dc95a/BixBench.jsonl",
+          "supports": "205 public question rows, 59 unique capsule_uuid/data_folder values, reference answers and no-training-corpus notices; no separate held-out split established."
+        },
+        {
+          "url": "https://arxiv.org/html/2503.00096v3",
+          "supports": "Paper v3 describes 205 questions and 61 scenarios, which differs from current file metadata."
+        },
+        {
+          "url": "https://github.com/laude-institute/harbor/blob/3e9f14a7c1033896cc600d27de69d6948bcb3410/adapters/bixbench/README.md",
+          "supports": "Notebook and CLI adapter variants are one project family; tool access, prompts and judge wording differ."
+        }
+      ]
+    },
+    {
+      "id": "dabstep",
+      "name": "DABstep",
+      "description_en": "Multi-file data-analysis tasks combining payment records, JSON business data and documentation, with a public code-executing agent baseline and answer scorer.",
+      "description_zh": "多文件数据分析任务，结合支付记录、JSON 业务数据及说明文档，并公开代码执行型 Agent 基线和答案评分器。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "dataset-and-benchmark",
+      "demo_url": null,
+      "reviewed_at": "2026-10-16",
+      "verification": "source-reviewed",
+      "primary_url": "https://huggingface.co/datasets/adyen/DABstep",
+      "repo_url": "https://huggingface.co/spaces/adyen/DABstep/tree/main",
+      "paper_url": "https://arxiv.org/abs/2506.23719",
+      "enables_en": "Evaluate data joins, aggregation, business-rule interpretation and precise result reporting across heterogeneous files; local scoring is available when reference answers are provided.",
+      "enables_zh": "评估跨异构文件的数据关联、聚合、业务规则理解及精确结果报告；在具备参考答案时可本地判分。",
+      "limits_en": "The public default file has 450 questions with empty answer fields; the 10 answered dev questions share six of those IDs. Scoring checks final answers, not notebook validity or GUI completion. Harbor reconstructs default labels from scored public submissions, so its scores are not established as equivalent to official hidden-answer evaluation. The current Space closes new manual validation requests while keeping unvalidated submissions open.",
+      "limits_zh": "公开 default 文件有 450 道问题，答案字段为空；10 道附答案的 dev 题中有 6 个 ID 与其重叠。评分检查最终答案，不验证笔记本正确性或 GUI 任务完成。Harbor 从已评分的公开提交重建 default 标签，其成绩尚不能视作官方隐藏答案评测的等价结果。当前 Space 已关闭新的人工验证申请，但仍开放未验证提交。",
+      "license_en": "Dataset and Space LICENSE files declare CC BY 4.0. Space setup.py instead lists an MIT classifier; package-code licensing metadata is inconsistent and should not be presented as uniformly resolved.",
+      "license_zh": "数据集和 Space 的 LICENSE 文件声明 CC BY 4.0，但 Space 的 setup.py 标注 MIT 分类；软件包代码的许可元数据存在冲突，不能说已统一明确。",
+      "license_url": "https://huggingface.co/datasets/adyen/DABstep/blob/523e6627415c6ebafa0954ce0df9cd93b6c0914d/LICENSE",
+      "runtime_note_en": "The author baseline documents Python 3.10, pinned smolagents dependencies, a model endpoint and seven shared context files. It executes Python for analysis; source review did not verify sandbox isolation. The Space includes the scorer and leaderboard service, not an official locally complete hidden-answer test set.",
+      "runtime_note_zh": "作者基线文档使用 Python 3.10、固定的 smolagents 依赖、模型端点及七个共享背景文件，并通过执行 Python 完成分析；本次源码核查未验证其沙箱隔离。Space 提供评分器和榜单服务，不等于官方完整隐藏答案测试集可在本地取得。",
+      "evidence": [
+        {
+          "url": "https://huggingface.co/datasets/adyen/DABstep/blob/523e6627415c6ebafa0954ce0df9cd93b6c0914d/README.md",
+          "supports": "Task/submission/task-score configurations; tasks has default/dev splits. The README colloquially calls configurations splits."
+        },
+        {
+          "url": "https://huggingface.co/datasets/adyen/DABstep/blob/523e6627415c6ebafa0954ce0df9cd93b6c0914d/data/tasks/all.jsonl",
+          "supports": "450 public question rows, 378 hard and 72 easy; answer fields are empty."
+        },
+        {
+          "url": "https://huggingface.co/datasets/adyen/DABstep/blob/523e6627415c6ebafa0954ce0df9cd93b6c0914d/data/tasks/dev.jsonl",
+          "supports": "10 answered dev questions, with six task IDs also present in default."
+        },
+        {
+          "url": "https://huggingface.co/spaces/adyen/DABstep/blob/d4431c2e4a695cbe43c33aab2adaa304a37ae64a/baseline/README.md",
+          "supports": "Public Python 3.10 baseline invocation for default/dev tasks."
+        },
+        {
+          "url": "https://huggingface.co/spaces/adyen/DABstep/blob/d4431c2e4a695cbe43c33aab2adaa304a37ae64a/baseline/utils.py",
+          "supports": "CodeAgent setup and Python execution plus seven context-file downloads; source read only."
+        },
+        {
+          "url": "https://huggingface.co/spaces/adyen/DABstep/blob/d4431c2e4a695cbe43c33aab2adaa304a37ae64a/dabstep_benchmark/evaluation/scorer.py",
+          "supports": "Deterministic answer comparison with numeric tolerances, normalized/fuzzy strings and list handling; no model judge in this scorer."
+        },
+        {
+          "url": "https://huggingface.co/spaces/adyen/DABstep/blob/d4431c2e4a695cbe43c33aab2adaa304a37ae64a/dabstep_benchmark/content.py",
+          "supports": "Current distinction between closed manual validations and open unvalidated submissions; v2 is announced, not independently verified as released."
+        },
+        {
+          "url": "https://huggingface.co/spaces/adyen/DABstep/blob/d4431c2e4a695cbe43c33aab2adaa304a37ae64a/LICENSE",
+          "supports": "Space root license declares CC BY 4.0."
+        },
+        {
+          "url": "https://huggingface.co/spaces/adyen/DABstep/blob/d4431c2e4a695cbe43c33aab2adaa304a37ae64a/setup.py",
+          "supports": "Package classifier says MIT, conflicting with the root license declaration."
+        },
+        {
+          "url": "https://github.com/laude-institute/harbor/blob/3e9f14a7c1033896cc600d27de69d6948bcb3410/adapters/dabstep/run_adapter.py",
+          "supports": "Adapter source reconstructs labels from public scored submissions and cleans the selected answers; no extraction was run."
+        },
+        {
+          "url": "https://arxiv.org/abs/2506.23719",
+          "supports": "Original paper identifies financial data-analysis scope, hidden-answer evaluation and small public developer set."
+        }
+      ]
     }
   ]
 }

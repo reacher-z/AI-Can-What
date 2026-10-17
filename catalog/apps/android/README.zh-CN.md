@@ -2,11 +2,12 @@
 
 [全部应用资源](../README.zh-CN.md) · [网站索引](https://aicanwhat.com/zh/apps/android/)
 
-18 个条目。平台标签可能指可运行应用、环境目标或数据集中的截图来源；请同时查看资源类型和限制。
+19 个条目。平台标签可能指可运行应用、环境目标或数据集中的截图来源；请同时查看资源类型和限制。
 
 | 项目 | 资源类型 | 用途 | 原始来源 |
 | --- | --- | --- | --- |
 | [AMEX](https://aicanwhat.com/zh/projects/amex/) | 数据集与评测 | 训练, 评测 | [Source](https://huggingface.co/datasets/Yuxiang007/AMEX) |
+| [Android Bench](https://aicanwhat.com/zh/projects/android-bench/) | 评测套件 | 评测 | [Source](https://hub.harborframework.com/datasets/android-bench/android-bench/latest) |
 | [Android in the Wild](https://aicanwhat.com/zh/projects/android-in-the-wild/) | 数据集与评测 | 训练, 评测 | [Source](https://github.com/google-research/google-research/tree/master/android_in_the_wild) |
 | [Android in the Zoo (AITZ)](https://aicanwhat.com/zh/projects/aitz/) | 数据集与评测 | 训练, 评测 | [Source](https://github.com/SuperAutomateAgent/CoAT-Android) |
 | [AndroidControl](https://aicanwhat.com/zh/projects/androidcontrol/) | 数据集与评测 | 训练, 评测 | [Source](https://github.com/google-research/google-research/tree/master/android_control) |

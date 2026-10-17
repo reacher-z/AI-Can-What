@@ -4,14 +4,15 @@
 
 按输入资料、生成产物、测试行为及已发布评测材料，比较网页重建和游戏开发基准。
 
-先明确生成软件需要复现什么：截图、交互轨迹、局部修改，还是完整可运行项目。这些目标不同。视觉相似不代表功能等价；游戏可玩也不能自动证明主观质量或通用游戏策略。
+先明确生成软件需要复现什么：文字规格、截图、交互轨迹、局部修改，还是完整可运行项目。这些目标不同。视觉相似不代表功能等价；游戏可玩也不能自动证明主观质量或通用游戏策略。
 
 ## 网页重建
 
-匹配输入及测试行为：静态图像、指定状态转换、视频轨迹或仪表盘探索；不要从视觉分数推断后端等价。
+匹配输入及测试行为：文字规格、静态图像、指定状态转换、视频轨迹或仪表盘探索；不要从视觉分数推断后端等价。
 
 | 项目与证据 | 适合研究的问题 | 配置与限制 |
 | --- | --- | --- |
+| [WebGen-Bench](https://aicanwhat.com/zh/projects/webgen-bench/) · [Source](https://github.com/mnluzimu/WebGen-Bench) | 通过功能及外观检查，评估根据指令生成的交互网站。 | 功能判分使用 WebVoyager 视觉语言模型评审，结果会随评审模型及配置变化。需配置生成器、浏览器组件和模型访问。公开 Hub 数据标注 MIT；未找到原始代码的项目级许可。Harbor 调整了超时设置，参考应用仍在完善；结果需注明框架及评审模型。 |
 | [Design2Code](https://aicanwhat.com/zh/projects/design2code/) · [Source](https://github.com/NoviScl/Design2Code) | 评估根据网页截图进行的视觉重建。 | 评估视觉还原，不验证后端功能或交互任务完成情况。作者限定研究用途；Design2Code 与 Design2Code-Hard 为不同测试集。 |
 | [Interaction2Code](https://aicanwhat.com/zh/projects/interaction2code/) · [Source](https://github.com/WebPAI/Interaction2Code) | 同时评估指定交互与可见页面状态。 | 评估指定交互的状态变化，不能证明完整网站流程或后端等价。代码与数据可公开查看，但已核查的仓库及数据卡未注明项目级代码许可或数据许可。 |
 | [IWR-Bench](https://aicanwhat.com/zh/projects/iwr-bench/) · [Source](https://github.com/SIGMME/IWR-Bench) | 重建视频演示的可见状态及交互。 | 采用预设轨迹和模型辅助评审，不能证明完整网站或后端等价。公开数据集标注 Apache 2.0；未找到基准代码的项目级许可。运行需配置浏览器与模型。 |

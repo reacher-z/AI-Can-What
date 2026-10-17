@@ -84,6 +84,90 @@
         "caption_en": "Large Eggs history view after keyword filtering and navigation. Website by Jim Lawruk; displayed prices are not independently validated.",
         "caption_zh": "关键词筛选及跳转后的 Large Eggs 历史页面。网站由 Jim Lawruk 制作，图中价格未独立验证。"
       }
+    },
+    {
+      "id": "csv-sample-chart-controls-2026-10-16",
+      "project_id": "gpt5-csv-to-charts",
+      "observed_on": "2026-10-16",
+      "target_url": "https://gpt5-coding-examples.vercel.app/csv-to-charts",
+      "deployment_commit": null,
+      "environment_en": "Chrome on macOS · desktop · publisher sample · no account",
+      "environment_zh": "macOS Chrome · 桌面 · 发布者内置样例 · 无账户",
+      "summary_en": "The sample changed from a two-series line chart to a Sales-only bar chart.",
+      "summary_zh": "样例从双数据列折线图切换为仅含 Sales 的柱状图。",
+      "steps": [
+        {
+          "action_en": "Open the demo without selecting a file.",
+          "result_en": "A default dataset loaded, with a line chart showing Sales and Profit.",
+          "action_zh": "打开演示，不选择文件。",
+          "result_zh": "默认数据加载，折线图显示 Sales 和 Profit。"
+        },
+        {
+          "action_en": "Select Bar in Chart type.",
+          "result_en": "The control and chart label changed to Bar; the visible chart used vertical bars.",
+          "action_zh": "在 Chart type 中选择 Bar。",
+          "result_zh": "控件及图表标签变为 Bar，画面显示竖直柱形。"
+        },
+        {
+          "action_en": "Uncheck Profit while leaving Sales selected.",
+          "result_en": "Profit disappeared from the chart legend and the color controls; Sales remained visible.",
+          "action_zh": "取消 Profit，保留 Sales。",
+          "result_zh": "Profit 从图例及颜色控件中消失，Sales 仍显示。"
+        },
+        {
+          "action_en": "Click Save as image.",
+          "result_en": "The button was activated, but completed file creation was not verified. The page continued to show the same bar chart.",
+          "action_zh": "点击 Save as image。",
+          "result_zh": "按钮已触发，但没有确认文件生成完成；页面继续显示同一柱状图。"
+        }
+      ],
+      "scope_en": "This covers chart-type and dataset-visibility controls on the publisher’s built-in sample. No file was uploaded, and CSV parsing, numeric correctness, colors, pie/doughnut modes and mobile behavior were not tested. PNG export remains unconfirmed; a download-observation timeout alone does not prove an application failure.",
+      "scope_zh": "仅覆盖发布者内置样例上的图表类型和数据列显隐。未上传文件，也未测试 CSV 解析、数值正确性、颜色、饼图／环形图或手机表现。PNG 导出仍未确认，下载观察超时本身不能证明应用故障。",
+      "screenshot": {
+        "url": "/observation-csv-chart-2026-10-16.jpg",
+        "sha256": "78ebeeec9b29330ccf6ea6a385e9aef6a967a1fb8055b6ac1c4e416580ca017c",
+        "caption_en": "Observed Sales-only bar chart using the embedded sample. Demo published by OpenAI; chart rendering uses Chart.js.",
+        "caption_zh": "使用内置样例实际显示的单列 Sales 柱状图。演示由 OpenAI 发布，图表使用 Chart.js 渲染。"
+      }
+    },
+    {
+      "id": "markdown-two-slides-2026-10-16",
+      "project_id": "gpt5-markdown-to-slides",
+      "observed_on": "2026-10-16",
+      "target_url": "https://gpt5-coding-examples.vercel.app/markdown-to-slides",
+      "deployment_commit": null,
+      "environment_en": "Chrome on macOS · desktop · synthetic text · no account",
+      "environment_zh": "macOS Chrome · 桌面 · 合成文本 · 无账户",
+      "summary_en": "Typed Markdown produced two slides with working previous/next navigation.",
+      "summary_zh": "输入的 Markdown 生成两页预览，并可前后翻页。",
+      "steps": [
+        {
+          "action_en": "Replace the initial sample with two synthetic slides separated by a line containing three hyphens.",
+          "result_en": "The preview updated to Slide 1 of 2, with the Sample deck heading and its paragraph.",
+          "action_zh": "把初始示例替换为两页合成文本，以独立一行的三个连字符分隔。",
+          "result_zh": "预览更新为 Slide 1 of 2，显示 Sample deck 标题及正文。"
+        },
+        {
+          "action_en": "Click Next slide.",
+          "result_en": "The counter showed Slide 2 of 2. The Second slide heading and an Apples/Oranges bullet list were visible.",
+          "action_zh": "点击 Next slide。",
+          "result_zh": "计数显示 Slide 2 of 2，出现 Second slide 标题及 Apples／Oranges 项目列表。"
+        },
+        {
+          "action_en": "Click Previous slide.",
+          "result_en": "The counter returned to Slide 1 of 2 and the first heading and paragraph reappeared.",
+          "action_zh": "点击 Previous slide。",
+          "result_zh": "计数回到 Slide 1 of 2，第一页面的标题及正文重新显示。"
+        }
+      ],
+      "scope_en": "This checks basic heading/paragraph/list rendering, the slide delimiter and two navigation buttons using synthetic text. It does not test broader Markdown conformance, images, fullscreen, keyboard shortcuts, persistence or mobile behavior. Source review found no built-in file-export feature; no export was attempted.",
+      "scope_zh": "使用合成文本检查基本标题、段落、列表、分隔符及两个翻页按钮。未测试更多 Markdown 兼容性、图片、全屏、快捷键、持久化或手机表现。源码核查未发现内置文件导出功能，本次也未尝试导出。",
+      "screenshot": {
+        "url": "/observation-markdown-slides-2026-10-16.jpg",
+        "sha256": "204eaa8dc8b19d70df8ae289643f2b3047d0339071a5bf9cac729a823ee94af4",
+        "caption_en": "Observed second slide and two-slide counter beside the synthetic Markdown input. Demo published by OpenAI.",
+        "caption_zh": "合成 Markdown 输入旁实际显示的第二页及两页计数。演示由 OpenAI 发布。"
+      }
     }
   ]
 }

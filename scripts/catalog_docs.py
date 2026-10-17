@@ -49,7 +49,7 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
         slug = {'game': 'games', 'website': 'websites', 'app': 'apps'}[category]
         summary += f'| [{labels[0]}]({origin}/{slug}/) | {counts[category]} | [Browse](catalog/{slug}/README.md) |\n'
     summary += '\n[Research bibliography](' + origin + '/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)\n'
-    summary += '\n[Selection guides](guides/README.md) compare AI software examples, browser-agent tasks, computer/mobile interaction and software-generation benchmarks by purpose and evidence.\n'
+    summary += '\n[Selection guides](guides/README.md) compare AI software examples, browser and computer/mobile tasks, software generation, coding agents and data workflows by purpose and evidence.\n'
     observed_ids = {record['project_id'] for record in observations}
     summary += f'\n**{len(observations)} scoped browser observations across {len(observed_ids)} projects** record interaction steps, visible outcomes, screenshots and untested scope. These are not whole-application verification. [Observation data](data/observations.json) · [Method](docs/browser-observations.md).\n'
     registry_count = len(registry_document['records'])
@@ -81,7 +81,7 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
 
 [研究文献]({origin}/zh/papers/) · [完整数据](data/catalog.json) · [贡献说明](CONTRIBUTING.md)
 
-[选择指南](guides/README.zh-CN.md)按用途和证据比较 AI 软件作品、浏览器 Agent 任务、电脑／手机交互以及软件生成评测。
+[选择指南](guides/README.zh-CN.md)按用途和证据比较 AI 软件作品、浏览器与电脑／手机任务、软件生成、编程 Agent 以及数据工作流。
 
 另有 **{len(observations)} 条浏览器操作记录，覆盖 {len(observed_ids)} 个项目**，包含步骤、可见结果、截图及未测试范围；不代表整个应用已完成验证。[操作记录](data/observations.json) · [记录方法](docs/browser-observations.md)。
 

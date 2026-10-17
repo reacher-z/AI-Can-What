@@ -2813,6 +2813,195 @@
       "description_zh": "提出一套独立的长流程计算机操作任务，结合真实工作资料、变化中的上下文及跨应用依赖。",
       "source_url": "https://arxiv.org/abs/2606.29537",
       "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2505.03733",
+      "project_ids": [
+        "webgen-bench"
+      ],
+      "title": "WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch",
+      "authors": [
+        "Zimu Lu",
+        "Yunqiao Yang",
+        "Houxing Ren",
+        "Haotian Hou",
+        "Han Xiao",
+        "Ke Wang",
+        "Weikang Shi",
+        "Aojun Zhou",
+        "Mingjie Zhan",
+        "Hongsheng Li"
+      ],
+      "published_at": "2025-05-06",
+      "source_url": "https://arxiv.org/abs/2505.03733",
+      "arxiv_url": "https://arxiv.org/abs/2505.03733",
+      "description_en": "Introduces instruction-based website generation tasks and browser-agent functional evaluation, together with instruction data for training code-generation systems.",
+      "description_zh": "提出基于指令的网站生成任务及浏览器 Agent 功能评测，并发布用于训练代码生成系统的指令数据。",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2502.12115",
+      "project_ids": [
+        "swe-lancer"
+      ],
+      "title": "SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?",
+      "authors": [
+        "Samuel Miserendino",
+        "Michele Wang",
+        "Tejal Patwardhan",
+        "Johannes Heidecke"
+      ],
+      "published_at": "2025-02-17",
+      "source_url": "https://arxiv.org/abs/2502.12115",
+      "arxiv_url": "https://arxiv.org/abs/2502.12115",
+      "description_en": "Studies freelance software-engineering work through code-fix and implementation-proposal tasks, with end-to-end tests and a public Diamond evaluation split.",
+      "description_zh": "通过代码修复与实现方案选择任务研究自由职业软件工程工作，提供端到端测试及公开的 Diamond 评测划分。",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "2504.21798",
+      "project_ids": [
+        "swe-smith"
+      ],
+      "title": "SWE-smith: Scaling Data for Software Engineering Agents",
+      "authors": [
+        "John Yang",
+        "Kilian Lieret",
+        "Carlos E. Jimenez",
+        "Alexander Wettig",
+        "Kabir Khandpur",
+        "Yanzhe Zhang",
+        "Binyuan Hui",
+        "Ofir Press",
+        "Ludwig Schmidt",
+        "Diyi Yang"
+      ],
+      "published_at": "2025-04-30",
+      "source_url": "https://arxiv.org/abs/2504.21798",
+      "arxiv_url": "https://arxiv.org/abs/2504.21798",
+      "description_en": "Constructs executable repository environments and synthesizes test-failing changes to scale software-engineering training tasks and agent trajectories.",
+      "description_zh": "构建可执行的代码库环境，通过合成导致测试失败的修改，扩大软件工程训练任务及 Agent 轨迹数据。",
+      "date_note": "published_at is the first arXiv submission date; title and authors follow the current arXiv record, not an inferred conference publication date."
+    },
+    {
+      "id": "1809.02627",
+      "title": "Unity: A General Platform for Intelligent Agents",
+      "authors": [
+        "Arthur Juliani",
+        "Vincent-Pierre Berges",
+        "Ervin Teng",
+        "Andrew Cohen",
+        "Jonathan Harper",
+        "Chris Elion",
+        "Chris Goy",
+        "Yuan Gao",
+        "Hunter Henry",
+        "Marwan Mattar",
+        "Danny Lange"
+      ],
+      "published_at": "2018-09-07",
+      "arxiv_url": "https://arxiv.org/abs/1809.02627",
+      "project_ids": [
+        "unity-ml-agents"
+      ],
+      "description_en": "Examines game engines as configurable research platforms and uses Unity ML-Agents to illustrate environments with visual, physical, task and social complexity.",
+      "description_zh": "将游戏引擎作为可配置研究平台进行讨论，并以 Unity ML-Agents 展示具有视觉、物理、任务与社会交互复杂度的环境。",
+      "source_url": "https://arxiv.org/abs/1809.02627",
+      "metadata_source_url": "https://huggingface.co/api/papers/1809.02627"
+    },
+    {
+      "id": "2504.11442",
+      "title": "TextArena",
+      "authors": [
+        "Leon Guertler",
+        "Bobby Cheng",
+        "Simon Yu",
+        "Bo Liu",
+        "Leshem Choshen",
+        "Cheston Tan"
+      ],
+      "published_at": "2025-04-15",
+      "arxiv_url": "https://arxiv.org/abs/2504.11442",
+      "project_ids": [
+        "textarena"
+      ],
+      "description_en": "Introduces TextArena as a text-game collection and online-play interface for studying and training interactive language-model behavior, including competitive social reasoning.",
+      "description_zh": "提出文字游戏集合及在线对战接口 TextArena，用于研究和训练语言模型的交互行为，包括对抗中的社会推理。",
+      "source_url": "https://arxiv.org/abs/2504.11442",
+      "metadata_source_url": "https://huggingface.co/api/papers/2504.11442"
+    },
+    {
+      "id": "2407.16312",
+      "title": "MOMAland: A Set of Benchmarks for Multi-Objective Multi-Agent Reinforcement Learning",
+      "authors": [
+        "Florian Felten",
+        "Umut Ucak",
+        "Hicham Azmani",
+        "Gao Peng",
+        "Willem Röpke",
+        "Hendrik Baier",
+        "Patrick Mannion",
+        "Diederik M. Roijers",
+        "Jordan K. Terry",
+        "El-Ghazali Talbi",
+        "Grégoire Danoy",
+        "Ann Nowé",
+        "Roxana Rădulescu"
+      ],
+      "published_at": "2024-07-23",
+      "arxiv_url": "https://arxiv.org/abs/2407.16312",
+      "project_ids": [
+        "momaland"
+      ],
+      "description_en": "Introduces a standardized collection of multi-objective multi-agent environments and baseline learning methods for comparing policies under differing rewards and utility assumptions.",
+      "description_zh": "提出标准化的多目标、多 Agent 环境集合及学习基线，用于在不同奖励与效用假设下比较策略。",
+      "source_url": "https://arxiv.org/abs/2407.16312",
+      "metadata_source_url": "https://huggingface.co/api/papers/2407.16312"
+    },
+    {
+      "id": "2503.00096",
+      "title": "BixBench: a Comprehensive Benchmark for LLM-based Agents in Computational Biology",
+      "authors": [
+        "Ludovico Mitchener",
+        "Jon M Laurent",
+        "Alex Andonian",
+        "Benjamin Tenmann",
+        "Siddharth Narayanan",
+        "Geemi P Wellawatte",
+        "Andrew White",
+        "Lorenzo Sani",
+        "Samuel G Rodriques"
+      ],
+      "published_at": "2025-02-28",
+      "arxiv_url": "https://arxiv.org/abs/2503.00096",
+      "project_ids": [
+        "bixbench"
+      ],
+      "description_en": "Introduces bioinformatics data-analysis capsules and a notebook-based agent harness, with open-answer and multiple-choice evaluation of multi-step computational work.",
+      "description_zh": "提出生物信息学数据分析胶囊及基于笔记本的 Agent 框架，通过开放式和选择题评估多步计算工作。",
+      "source_url": "https://arxiv.org/abs/2503.00096",
+      "date_note": "published_at is the first arXiv submission date; title and author order follow the current arXiv record. Paper revisions and dataset versions are recorded separately."
+    },
+    {
+      "id": "2506.23719",
+      "title": "DABstep: Data Agent Benchmark for Multi-step Reasoning",
+      "authors": [
+        "Alex Egg",
+        "Martin Iglesias Goyanes",
+        "Friso Kingma",
+        "Andreu Mora",
+        "Leandro von Werra",
+        "Thomas Wolf"
+      ],
+      "published_at": "2025-06-30",
+      "arxiv_url": "https://arxiv.org/abs/2506.23719",
+      "project_ids": [
+        "dabstep"
+      ],
+      "description_en": "Introduces financial data-analysis questions requiring code execution and contextual reasoning over multiple files, scored through normalized final-answer comparisons.",
+      "description_zh": "提出需执行代码并跨文件理解背景的金融数据分析问题，通过规范化后的最终答案比对评分。",
+      "source_url": "https://arxiv.org/abs/2506.23719",
+      "date_note": "published_at is the first arXiv submission date; title and author order follow the current arXiv record. Paper revisions and dataset versions are recorded separately."
     }
   ]
 }

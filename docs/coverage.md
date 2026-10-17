@@ -14,7 +14,7 @@ Record resource type, intended use, development provenance, and platform indepen
 - A broader range of AI-assisted native mobile and desktop applications. The current collection includes creator accounts and release/store evidence for macOS, iOS, and Android examples.
 - Publicly runnable examples from a broader range of independent creators, with explicit licensing and setup information.
 - Recently released environments and benchmark versions, while preserving the version/date context of earlier papers.
-- Additional scoped browser observations of accessible examples, recorded as separate receipts rather than inferred from documentation or an HTTP 200 response. The initial two observations cover one game round and one product-search/history flow; see [the method and limits](browser-observations.md).
+- Additional scoped browser observations of accessible examples, recorded as separate receipts rather than inferred from documentation or an HTTP 200 response. Current observations cover one game round, a product-search/history flow, sample chart controls and synthetic Markdown-slide navigation; see [the method and limits](browser-observations.md).
 - Search indexing and actual AI citations, measured separately from sitemap discovery and submission receipts.
 
 ## Maintenance
@@ -23,7 +23,7 @@ Use the generated category and platform indexes to find gaps. Check the original
 
 The website and repository both expose platform indexes for app resources. A platform may describe a runnable application, an environment target, or screenshots in a dataset. Each index shows those resource types separately, and the website reports its software-showcase coverage explicitly.
 
-[Selection guides](../guides/README.md) connect existing projects to concrete goals: finding AI-made software, testing browser agents, testing computer/mobile use and evaluating software generation. Their groupings explain distinct tasks and evidence requirements; they are not additional projects or quality rankings. Guides and project notes link in both directions, and each comparison preserves the catalog's current setup limits.
+[Selection guides](../guides/README.md) connect existing projects to concrete goals: finding AI-made software, testing browser agents, testing computer/mobile use, evaluating software generation, studying coding agents and comparing data workflows. Their groupings explain distinct tasks and evidence requirements; they are not additional projects or quality rankings. Guides and project notes link in both directions, and each comparison preserves the catalog's current setup limits.
 
 The [upstream registry index](https://aicanwhat.com/discover/) captures a broader discovery surface with source-specific boundaries. Those records are metadata only, can include versions, wrappers, test packages and off-topic datasets, and are not added to the reviewed project count. See the [registry method](registry-discovery.md) for coverage and refresh rules.
 

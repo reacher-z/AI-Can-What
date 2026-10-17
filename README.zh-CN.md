@@ -4,19 +4,19 @@
 
 **[访问网站](https://aicanwhat.com/zh/) · [English](README.md) · [收录方法](https://aicanwhat.com/zh/about/)**
 
-当前有 **155 条目录记录**，关联 **110 篇原始论文**。论文与项目记录有对应关系，数量不能相加。来源核查不代表已经运行或复现实验。
+当前有 **167 条目录记录**，关联 **118 篇原始论文**。论文与项目记录有对应关系，数量不能相加。来源核查不代表已经运行或复现实验。
 
 | 分类 | 条目 | 仓库索引 |
 | --- | --- | --- |
-| 游戏与虚拟世界 | 53 | [浏览](catalog/games/README.zh-CN.md) |
-| 网站 | 28 | [浏览](catalog/websites/README.zh-CN.md) |
-| 应用 | 74 | [浏览](catalog/apps/README.zh-CN.md) |
+| 游戏与虚拟世界 | 56 | [浏览](catalog/games/README.zh-CN.md) |
+| 网站 | 31 | [浏览](catalog/websites/README.zh-CN.md) |
+| 应用 | 80 | [浏览](catalog/apps/README.zh-CN.md) |
 
 [研究文献](https://aicanwhat.com/zh/papers/) · [完整数据](data/catalog.json) · [贡献说明](CONTRIBUTING.md)
 
-[选择指南](guides/README.zh-CN.md)按用途和证据比较 AI 软件作品、浏览器 Agent 任务、电脑／手机交互以及软件生成评测。
+[选择指南](guides/README.zh-CN.md)按用途和证据比较 AI 软件作品、浏览器与电脑／手机任务、软件生成、编程 Agent 以及数据工作流。
 
-另有 **2 条浏览器操作记录，覆盖 2 个项目**，包含步骤、可见结果、截图及未测试范围；不代表整个应用已完成验证。[操作记录](data/observations.json) · [记录方法](docs/browser-observations.md)。
+另有 **4 条浏览器操作记录，覆盖 4 个项目**，包含步骤、可见结果、截图及未测试范围；不代表整个应用已完成验证。[操作记录](data/observations.json) · [记录方法](docs/browser-observations.md)。
 
 [上游注册表索引](https://aicanwhat.com/zh/discover/)另提供 **490 条来自 5 个来源的元数据记录**。它们包含版本、分支、清单与配置，尚未逐项核查，不能与精选项目数相加。[查看来源覆盖](catalog/registries/README.zh-CN.md)。
 

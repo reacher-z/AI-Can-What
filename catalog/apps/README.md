@@ -2,13 +2,14 @@
 
 [Back to the collection](../../README.md)
 
-74 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
+80 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
 
 Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows](windows/README.md) · [Linux](linux/README.md) · [iOS](ios/README.md) · [Android](android/README.md)
 
 | Project | Resource type | Use | Primary source |
 | --- | --- | --- | --- |
 | [A9 Voice](https://aicanwhat.com/projects/a9-voice/) | Software made with AI | Showcase | [Source](https://a9voice.com/) |
+| [ADE-bench](https://aicanwhat.com/projects/ade-bench/) | Environment + benchmark | Evaluation | [Source](https://github.com/dbt-labs/ade-bench) |
 | [AgentBench](https://aicanwhat.com/projects/agentbench/) | Benchmark suite | Training, Evaluation | [Source](https://github.com/THUDM/AgentBench) |
 | [AgentBoard](https://aicanwhat.com/projects/agentboard/) | Benchmark suite | Evaluation | [Source](https://github.com/hkust-nlp/AgentBoard) |
 | [AgentDojo](https://aicanwhat.com/projects/agentdojo/) | Environment + benchmark | Evaluation | [Source](https://github.com/ethz-spylab/agentdojo) |
@@ -16,6 +17,7 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | [AgentGym-RL](https://aicanwhat.com/projects/agentgym-rl/) | Environment framework | Training, Evaluation | [Source](https://agentgym-rl.github.io/) |
 | [AMEX](https://aicanwhat.com/projects/amex/) | Dataset + benchmark | Training, Evaluation | [Source](https://huggingface.co/datasets/Yuxiang007/AMEX) |
 | [Anchor - Bet Blocker](https://aicanwhat.com/projects/anchor-bet-blocker/) | Software made with AI | Showcase | [Source](https://heyanchor.app/) |
+| [Android Bench](https://aicanwhat.com/projects/android-bench/) | Benchmark suite | Evaluation | [Source](https://hub.harborframework.com/datasets/android-bench/android-bench/latest) |
 | [Android in the Wild](https://aicanwhat.com/projects/android-in-the-wild/) | Dataset + benchmark | Training, Evaluation | [Source](https://github.com/google-research/google-research/tree/master/android_in_the_wild) |
 | [Android in the Zoo (AITZ)](https://aicanwhat.com/projects/aitz/) | Dataset + benchmark | Training, Evaluation | [Source](https://github.com/SuperAutomateAgent/CoAT-Android) |
 | [AndroidControl](https://aicanwhat.com/projects/androidcontrol/) | Dataset + benchmark | Training, Evaluation | [Source](https://github.com/google-research/google-research/tree/master/android_control) |
@@ -28,10 +30,12 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | [Audio Step Sequencer](https://aicanwhat.com/projects/gpt5-audio-step-sequencer/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/audio-step-sequencer) |
 | [Better Stickies](https://aicanwhat.com/projects/better-stickies/) | Software made with AI | Showcase | [Source](https://betterstickies.com/) |
 | [BIRD-Interact](https://aicanwhat.com/projects/bird-interact/) | Environment + benchmark | Evaluation | [Source](https://bird-interact.github.io/) |
+| [BixBench](https://aicanwhat.com/projects/bixbench/) | Environment + benchmark | Evaluation | [Source](https://github.com/Future-House/BixBench) |
 | [Claude Code](https://aicanwhat.com/projects/claude-code/) | Software made with AI | Showcase | [Source](https://github.com/anthropics/claude-code) |
 | [Claude&#x27;s C Compiler](https://aicanwhat.com/projects/claudes-c-compiler/) | Software made with AI | Showcase | [Source](https://www.anthropic.com/engineering/building-c-compiler) |
 | [Context](https://aicanwhat.com/projects/context-mcp/) | Software made with AI | Showcase | [Source](https://github.com/indragiek/Context) |
 | [CRMArena](https://aicanwhat.com/projects/crmarena/) | Environment + benchmark | Evaluation | [Source](https://github.com/SalesforceAIResearch/CRMArena) |
+| [DABstep](https://aicanwhat.com/projects/dabstep/) | Dataset + benchmark | Evaluation | [Source](https://huggingface.co/datasets/adyen/DABstep) |
 | [Davit](https://aicanwhat.com/projects/davit/) | Software made with AI | Showcase | [Source](https://davit.app/) |
 | [Dog-e-dex](https://aicanwhat.com/projects/dog-e-dex/) | Software made with AI | Showcase | [Source](https://apps.apple.com/us/app/dog-e-dex/id6741032284) |
 | [FastRender](https://aicanwhat.com/projects/fastrender/) | Software made with AI | Showcase | [Source](https://github.com/wilsonzlin/fastrender) |
@@ -71,6 +75,8 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | [Sticky Notes (kunkel321)](https://aicanwhat.com/projects/kunkel321-sticky-notes/) | Software made with AI | Showcase | [Source](https://github.com/kunkel321/Stickies) |
 | [SWE-bench](https://aicanwhat.com/projects/swe-bench/) | Benchmark suite | Training, Evaluation | [Source](https://www.swebench.com/) |
 | [SWE-Gym](https://aicanwhat.com/projects/swe-gym/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/SWE-Gym/SWE-Gym) |
+| [SWE-Lancer](https://aicanwhat.com/projects/swe-lancer/) | Benchmark suite | Evaluation | [Source](https://github.com/openai/frontier-evals/blob/main/project/swelancer/README.md) |
+| [SWE-smith](https://aicanwhat.com/projects/swe-smith/) | Environment framework | Training, Evaluation | [Source](https://github.com/SWE-bench/SWE-smith) |
 | [Terminal-Bench](https://aicanwhat.com/projects/terminal-bench/) | Environment + benchmark | Evaluation | [Source](https://www.tbench.ai/) |
 | [TheAgentCompany](https://aicanwhat.com/projects/the-agent-company/) | Environment + benchmark | Evaluation | [Source](https://github.com/TheAgentCompany/TheAgentCompany) |
 | [Tiny Kanban](https://aicanwhat.com/projects/gpt5-tiny-kanban/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/tiny-kanban) |

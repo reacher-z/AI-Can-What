@@ -7,21 +7,21 @@
 A source-backed directory of AI-built software and environments, benchmarks, and datasets for training and evaluating agents, organized into **Games & virtual worlds**, **Websites**, and **Apps**. Every entry has an original source, review date, practical limits, and its own static page.
 
 <!-- BEGIN GENERATED INDEX -->
-**155 catalog entries · 110 referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.
+**167 catalog entries · 118 referenced papers.** Paper references overlap the catalog; these counts are not additive. Every entry links its evidence and records known limits.
 
 ## Browse
 
 | Category | Entries | Repository index |
 | --- | --- | --- |
-| [Games & virtual worlds](https://aicanwhat.com/games/) | 53 | [Browse](catalog/games/README.md) |
-| [Websites](https://aicanwhat.com/websites/) | 28 | [Browse](catalog/websites/README.md) |
-| [Apps](https://aicanwhat.com/apps/) | 74 | [Browse](catalog/apps/README.md) |
+| [Games & virtual worlds](https://aicanwhat.com/games/) | 56 | [Browse](catalog/games/README.md) |
+| [Websites](https://aicanwhat.com/websites/) | 31 | [Browse](catalog/websites/README.md) |
+| [Apps](https://aicanwhat.com/apps/) | 80 | [Browse](catalog/apps/README.md) |
 
 [Research bibliography](https://aicanwhat.com/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)
 
-[Selection guides](guides/README.md) compare AI software examples, browser-agent tasks, computer/mobile interaction and software-generation benchmarks by purpose and evidence.
+[Selection guides](guides/README.md) compare AI software examples, browser and computer/mobile tasks, software generation, coding agents and data workflows by purpose and evidence.
 
-**2 scoped browser observations across 2 projects** record interaction steps, visible outcomes, screenshots and untested scope. These are not whole-application verification. [Observation data](data/observations.json) · [Method](docs/browser-observations.md).
+**4 scoped browser observations across 4 projects** record interaction steps, visible outcomes, screenshots and untested scope. These are not whole-application verification. [Observation data](data/observations.json) · [Method](docs/browser-observations.md).
 
 [Upstream registry index](https://aicanwhat.com/discover/): **490 metadata records from 5 sources**. These include versions, forks, manifests, and configurations; they are not individually reviewed projects and must not be added to the catalog count. [Source coverage](catalog/registries/README.md).
 <!-- END GENERATED INDEX -->

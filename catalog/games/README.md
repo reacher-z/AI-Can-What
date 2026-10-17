@@ -2,7 +2,7 @@
 
 [Back to the collection](../../README.md)
 
-53 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
+56 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
 
 | Project | Resource type | Use | Primary source |
 | --- | --- | --- | --- |
@@ -38,6 +38,7 @@
 | [MiniGrid](https://aicanwhat.com/projects/minigrid/) | Environment framework | Training, Evaluation | [Source](https://minigrid.farama.org/) |
 | [MiniHack](https://aicanwhat.com/projects/minihack/) | Environment framework | Training, Evaluation | [Source](https://github.com/NetHack-LE/minihack) |
 | [MiniWorld](https://aicanwhat.com/projects/miniworld/) | Environment framework | Training, Evaluation | [Source](https://miniworld.farama.org/) |
+| [MOMAland](https://aicanwhat.com/projects/momaland/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/Farama-Foundation/MOMAland) |
 | [MPE2](https://aicanwhat.com/projects/mpe2/) | Environment framework | Training, Evaluation | [Source](https://mpe2.farama.org/) |
 | [Neon Zenith](https://aicanwhat.com/projects/neon-zenith/) | Software made with AI | Showcase | [Source](https://github.com/billpwchan/neon-zenith) |
 | [NetHack Learning Environment](https://aicanwhat.com/projects/nethack-learning-environment/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/NetHack-LE/nle) |
@@ -51,10 +52,12 @@
 | [ScienceWorld](https://aicanwhat.com/projects/scienceworld/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/allenai/ScienceWorld) |
 | [Space Defenders](https://aicanwhat.com/projects/space-defenders/) | Software made with AI | Showcase | [Source](https://jasonleow.com/space-defenders/) |
 | [Stable-Retro](https://aicanwhat.com/projects/stable-retro/) | Environment framework | Training, Evaluation | [Source](https://stable-retro.farama.org/) |
+| [TextArena](https://aicanwhat.com/projects/textarena/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/TextArena/TextArena) |
 | [TextWorld](https://aicanwhat.com/projects/textworld/) | Environment framework | Training, Evaluation | [Source](https://github.com/microsoft/TextWorld) |
 | [Three.js Quake](https://aicanwhat.com/projects/threejs-quake/) | Software made with AI | Showcase | [Source](https://github.com/mrdoob/three-quake) |
 | [Tic Tac Toe — Imperium Edition](https://aicanwhat.com/projects/gpt5-tic-tac-toe-game/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/tic-tac-toe-game) |
 | [Typing Rain](https://aicanwhat.com/projects/gpt5-typing-rain/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/typing-rain) |
+| [Unity ML-Agents](https://aicanwhat.com/projects/unity-ml-agents/) | Environment framework | Training, Evaluation | [Source](https://github.com/Unity-Technologies/ml-agents) |
 | [V-GameGym (SKYLENAGE-GameCodeGym)](https://aicanwhat.com/projects/v-gamegym/) | Dataset + benchmark | Evaluation | [Source](https://github.com/alibaba/SKYLENAGE-GameCodeGym) |
 | [VirtualHome](https://aicanwhat.com/projects/virtualhome/) | Environment framework | Training | [Source](https://github.com/xavierpuigf/virtualhome) |
 | [ViZDoom](https://aicanwhat.com/projects/vizdoom/) | Environment + benchmark | Training, Evaluation | [Source](https://vizdoom.farama.org/) |

@@ -2,13 +2,14 @@
 
 [返回目录](../../README.zh-CN.md)
 
-74 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
+80 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
 
 按平台浏览：[Web](web/README.zh-CN.md) · [macOS](macos/README.zh-CN.md) · [Windows](windows/README.zh-CN.md) · [Linux](linux/README.zh-CN.md) · [iOS](ios/README.zh-CN.md) · [Android](android/README.zh-CN.md)
 
 | 项目 | 资源类型 | 用途 | 原始来源 |
 | --- | --- | --- | --- |
 | [A9 Voice](https://aicanwhat.com/zh/projects/a9-voice/) | AI 软件作品 | 作品展示 | [Source](https://a9voice.com/) |
+| [ADE-bench](https://aicanwhat.com/zh/projects/ade-bench/) | 环境与评测 | 评测 | [Source](https://github.com/dbt-labs/ade-bench) |
 | [AgentBench](https://aicanwhat.com/zh/projects/agentbench/) | 评测套件 | 训练, 评测 | [Source](https://github.com/THUDM/AgentBench) |
 | [AgentBoard](https://aicanwhat.com/zh/projects/agentboard/) | 评测套件 | 评测 | [Source](https://github.com/hkust-nlp/AgentBoard) |
 | [AgentDojo](https://aicanwhat.com/zh/projects/agentdojo/) | 环境与评测 | 评测 | [Source](https://github.com/ethz-spylab/agentdojo) |
@@ -16,6 +17,7 @@
 | [AgentGym-RL](https://aicanwhat.com/zh/projects/agentgym-rl/) | 环境框架 | 训练, 评测 | [Source](https://agentgym-rl.github.io/) |
 | [AMEX](https://aicanwhat.com/zh/projects/amex/) | 数据集与评测 | 训练, 评测 | [Source](https://huggingface.co/datasets/Yuxiang007/AMEX) |
 | [Anchor - Bet Blocker](https://aicanwhat.com/zh/projects/anchor-bet-blocker/) | AI 软件作品 | 作品展示 | [Source](https://heyanchor.app/) |
+| [Android Bench](https://aicanwhat.com/zh/projects/android-bench/) | 评测套件 | 评测 | [Source](https://hub.harborframework.com/datasets/android-bench/android-bench/latest) |
 | [Android in the Wild](https://aicanwhat.com/zh/projects/android-in-the-wild/) | 数据集与评测 | 训练, 评测 | [Source](https://github.com/google-research/google-research/tree/master/android_in_the_wild) |
 | [Android in the Zoo (AITZ)](https://aicanwhat.com/zh/projects/aitz/) | 数据集与评测 | 训练, 评测 | [Source](https://github.com/SuperAutomateAgent/CoAT-Android) |
 | [AndroidControl](https://aicanwhat.com/zh/projects/androidcontrol/) | 数据集与评测 | 训练, 评测 | [Source](https://github.com/google-research/google-research/tree/master/android_control) |
@@ -28,10 +30,12 @@
 | [Audio Step Sequencer](https://aicanwhat.com/zh/projects/gpt5-audio-step-sequencer/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/audio-step-sequencer) |
 | [Better Stickies](https://aicanwhat.com/zh/projects/better-stickies/) | AI 软件作品 | 作品展示 | [Source](https://betterstickies.com/) |
 | [BIRD-Interact](https://aicanwhat.com/zh/projects/bird-interact/) | 环境与评测 | 评测 | [Source](https://bird-interact.github.io/) |
+| [BixBench](https://aicanwhat.com/zh/projects/bixbench/) | 环境与评测 | 评测 | [Source](https://github.com/Future-House/BixBench) |
 | [Claude Code](https://aicanwhat.com/zh/projects/claude-code/) | AI 软件作品 | 作品展示 | [Source](https://github.com/anthropics/claude-code) |
 | [Claude&#x27;s C Compiler](https://aicanwhat.com/zh/projects/claudes-c-compiler/) | AI 软件作品 | 作品展示 | [Source](https://www.anthropic.com/engineering/building-c-compiler) |
 | [Context](https://aicanwhat.com/zh/projects/context-mcp/) | AI 软件作品 | 作品展示 | [Source](https://github.com/indragiek/Context) |
 | [CRMArena](https://aicanwhat.com/zh/projects/crmarena/) | 环境与评测 | 评测 | [Source](https://github.com/SalesforceAIResearch/CRMArena) |
+| [DABstep](https://aicanwhat.com/zh/projects/dabstep/) | 数据集与评测 | 评测 | [Source](https://huggingface.co/datasets/adyen/DABstep) |
 | [Davit](https://aicanwhat.com/zh/projects/davit/) | AI 软件作品 | 作品展示 | [Source](https://davit.app/) |
 | [Dog-e-dex](https://aicanwhat.com/zh/projects/dog-e-dex/) | AI 软件作品 | 作品展示 | [Source](https://apps.apple.com/us/app/dog-e-dex/id6741032284) |
 | [FastRender](https://aicanwhat.com/zh/projects/fastrender/) | AI 软件作品 | 作品展示 | [Source](https://github.com/wilsonzlin/fastrender) |
@@ -71,6 +75,8 @@
 | [Sticky Notes (kunkel321)](https://aicanwhat.com/zh/projects/kunkel321-sticky-notes/) | AI 软件作品 | 作品展示 | [Source](https://github.com/kunkel321/Stickies) |
 | [SWE-bench](https://aicanwhat.com/zh/projects/swe-bench/) | 评测套件 | 训练, 评测 | [Source](https://www.swebench.com/) |
 | [SWE-Gym](https://aicanwhat.com/zh/projects/swe-gym/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/SWE-Gym/SWE-Gym) |
+| [SWE-Lancer](https://aicanwhat.com/zh/projects/swe-lancer/) | 评测套件 | 评测 | [Source](https://github.com/openai/frontier-evals/blob/main/project/swelancer/README.md) |
+| [SWE-smith](https://aicanwhat.com/zh/projects/swe-smith/) | 环境框架 | 训练, 评测 | [Source](https://github.com/SWE-bench/SWE-smith) |
 | [Terminal-Bench](https://aicanwhat.com/zh/projects/terminal-bench/) | 环境与评测 | 评测 | [Source](https://www.tbench.ai/) |
 | [TheAgentCompany](https://aicanwhat.com/zh/projects/the-agent-company/) | 环境与评测 | 评测 | [Source](https://github.com/TheAgentCompany/TheAgentCompany) |
 | [Tiny Kanban](https://aicanwhat.com/zh/projects/gpt5-tiny-kanban/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/tiny-kanban) |

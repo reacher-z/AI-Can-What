@@ -10,6 +10,8 @@ Each record includes an original screenshot, its SHA-256 digest and attribution.
 
 - [Tic Tac Toe](https://aicanwhat.com/projects/gpt5-tic-tac-toe-game/#browser-observations): one default local two-player round, occupied-cell handling, a top-row X win, score update and terminal-state handling. Computer-opponent strategy, draws, persistence and mobile behavior were not tested.
 - [Aldi Prices](https://aicanwhat.com/projects/aldi-prices/#browser-observations): product search and navigation to a dated history table and chart. Price accuracy, calculations, completeness, freshness and mobile behavior were not tested. The captured chart has a clipped label at its right edge.
+- [CSV To Charts](https://aicanwhat.com/projects/gpt5-csv-to-charts/#browser-observations): the embedded sample changed from a line chart to a bar chart, and deselecting Profit left Sales visible. No file was uploaded. The image-save button was clicked, but download completion and PNG output were not verified; this is not a confirmed export failure.
+- [Markdown → Slides](https://aicanwhat.com/projects/gpt5-markdown-to-slides/#browser-observations): a synthetic two-slide document updated the preview, rendered a heading/paragraph/list, and navigated forward and back. Broader Markdown syntax, images, fullscreen, persistence and mobile behavior were not tested. The source has no built-in file-export feature.
 
 These records do not establish AI authorship, general reliability, benchmark scores, a security audit or ongoing availability. They also do not expand the catalog's project count. Preserve observed defects and limitations alongside successful steps.
 

@@ -24,6 +24,8 @@ These examples connect a concrete use to a traceable maker account. A hosted int
 | --- | --- | --- |
 | [Aldi Prices](https://aicanwhat.com/projects/aldi-prices/) · [Source](https://aldi-prices.lawruk.com/) | Inspect a data-driven site and the separately recorded search-to-history interaction. | The creator describes this as a personal price log. Its CSV is not a comprehensive or live retailer price feed; coverage and freshness depend on the recorded observations. A source-code reuse license was not identified in the reviewed repository. |
 | [Social Media Card Cropper](https://aicanwhat.com/projects/social-media-card-cropper/) · [Source](https://tools.simonwillison.net/social-media-cropper) | Follow an openly documented implementation history for an image-cropping browser tool. | The tool uses third-party browser libraries and may load image-encoder code from a CDN. Export support and speed depend on the browser; no image was uploaded or processed in this review. Repository code is Apache-2.0 licensed; external libraries retain their own terms. |
+| [CSV To Charts](https://aicanwhat.com/projects/gpt5-csv-to-charts/) · [Source](https://github.com/openai/gpt-5-coding-examples/tree/77f6322723703941f0b884d1a1cb77c60aad5187/apps/csv-to-charts) | Inspect a file-to-chart demo with separately recorded sample-chart controls; imported files and PNG output remain unverified. | A separate browser observation covers the built-in sample, chart-type change and dataset visibility. File import and PNG output are unverified. Chart.js loads from an unversioned CDN. Source inspection shows empty strings become zero and commas are stripped; invalid numbers are skipped in pie/doughnut charts or become gaps in bar/line data. Analytical correctness and CSV compatibility were not established. |
+| [Markdown → Slides](https://aicanwhat.com/projects/gpt5-markdown-to-slides/) · [Source](https://github.com/openai/gpt-5-coding-examples/tree/77f6322723703941f0b884d1a1cb77c60aad5187/apps/markdown-to-slides) | Inspect a typed-Markdown preview with a recorded two-slide navigation check; it has no built-in file export. | A small custom Markdown parser powers this preview/presentation demo. There is no built-in PPTX, PDF or HTML export. Only the theme is saved to localStorage; the document restarts from a sample. A separate browser record covers a two-slide synthetic document and previous/next navigation, not full Markdown compatibility. Remote images can need network access. |
 
 ## Desktop and mobile software
 
@@ -49,7 +51,7 @@ Use the app-platform indexes and select Software made with AI. The broader categ
 
 ### Which examples have actual interaction notes?
 
-The Tic Tac Toe and Aldi Prices notes record a specific browser flow with dated steps and screenshots. They do not certify the full application, computer-opponent strategy or price-data accuracy.
+Tic Tac Toe, Aldi Prices, CSV To Charts and Markdown → Slides have dated steps and screenshots for specific browser interactions. Each record separates visible outcomes from untested features; these are not full application certifications.
 
 ## Continue exploring
 

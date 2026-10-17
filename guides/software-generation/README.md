@@ -4,14 +4,15 @@
 
 Compare webpage reconstruction and game-development benchmarks by supplied inputs, generated artifact, tested behavior and released evaluation materials.
 
-Specify what the generated software must reproduce: a screenshot, an interaction trace, a scoped edit or a complete runnable project. These are different targets. Visual similarity does not establish functional equivalence, and a playable game does not automatically demonstrate subjective quality or a general game-playing policy.
+Specify what the generated software must reproduce: a written specification, a screenshot, an interaction trace, a scoped edit or a complete runnable project. These are different targets. Visual similarity does not establish functional equivalence, and a playable game does not automatically demonstrate subjective quality or a general game-playing policy.
 
 ## Webpage reconstruction
 
-Match the inputs and tested behavior: a still image, specified state transitions, a video trajectory or dashboard exploration. Do not infer backend equivalence from a visual score.
+Match the input and tested behavior: a written specification, still image, specified state transitions, video trajectory or dashboard exploration. Do not infer backend equivalence from a visual score.
 
 | Project and evidence | Use it to study | Setup and limits |
 | --- | --- | --- |
+| [WebGen-Bench](https://aicanwhat.com/projects/webgen-bench/) · [Source](https://github.com/mnluzimu/WebGen-Bench) | Evaluate interactive websites generated from instructions using functional and appearance checks. | Functional scoring uses a WebVoyager VLM judge, so outcomes can vary with the judge and configuration. Requires a generator, browser stack and model access. Public Hub data is MIT-labeled; no project-wide license for the original code was located. Harbor changes timeouts and uses work-in-progress reference apps; report the harness and judge. |
 | [Design2Code](https://aicanwhat.com/projects/design2code/) · [Source](https://github.com/NoviScl/Design2Code) | Evaluate visual reconstruction from supplied webpage screenshots. | Evaluates visual reconstruction rather than working backend features or interactive task completion. The authors specify research-only use; Design2Code and Design2Code-Hard are distinct test sets. |
 | [Interaction2Code](https://aicanwhat.com/projects/interaction2code/) · [Source](https://github.com/WebPAI/Interaction2Code) | Evaluate specified interactions as well as visible page states. | Evaluates specified interaction transitions rather than complete site workflows or backend equivalence. Code and data are public, but no project-level code license or dataset license was found in the reviewed repository and data card. |
 | [IWR-Bench](https://aicanwhat.com/projects/iwr-bench/) · [Source](https://github.com/SIGMME/IWR-Bench) | Reconstruct visible states and interactions demonstrated in a video. | Uses predefined trajectories and model-assisted judging, not proof of complete site or backend equivalence. The public dataset is marked Apache 2.0; no project-level license was found for the benchmark code. Requires browser and model setup. |

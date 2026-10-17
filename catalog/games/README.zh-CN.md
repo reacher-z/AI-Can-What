@@ -2,7 +2,7 @@
 
 [返回目录](../../README.zh-CN.md)
 
-53 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
+56 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
 
 | 项目 | 资源类型 | 用途 | 原始来源 |
 | --- | --- | --- | --- |
@@ -38,6 +38,7 @@
 | [MiniGrid](https://aicanwhat.com/zh/projects/minigrid/) | 环境框架 | 训练, 评测 | [Source](https://minigrid.farama.org/) |
 | [MiniHack](https://aicanwhat.com/zh/projects/minihack/) | 环境框架 | 训练, 评测 | [Source](https://github.com/NetHack-LE/minihack) |
 | [MiniWorld](https://aicanwhat.com/zh/projects/miniworld/) | 环境框架 | 训练, 评测 | [Source](https://miniworld.farama.org/) |
+| [MOMAland](https://aicanwhat.com/zh/projects/momaland/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/Farama-Foundation/MOMAland) |
 | [MPE2](https://aicanwhat.com/zh/projects/mpe2/) | 环境框架 | 训练, 评测 | [Source](https://mpe2.farama.org/) |
 | [Neon Zenith](https://aicanwhat.com/zh/projects/neon-zenith/) | AI 软件作品 | 作品展示 | [Source](https://github.com/billpwchan/neon-zenith) |
 | [NetHack Learning Environment](https://aicanwhat.com/zh/projects/nethack-learning-environment/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/NetHack-LE/nle) |
@@ -51,10 +52,12 @@
 | [ScienceWorld](https://aicanwhat.com/zh/projects/scienceworld/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/allenai/ScienceWorld) |
 | [Space Defenders](https://aicanwhat.com/zh/projects/space-defenders/) | AI 软件作品 | 作品展示 | [Source](https://jasonleow.com/space-defenders/) |
 | [Stable-Retro](https://aicanwhat.com/zh/projects/stable-retro/) | 环境框架 | 训练, 评测 | [Source](https://stable-retro.farama.org/) |
+| [TextArena](https://aicanwhat.com/zh/projects/textarena/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/TextArena/TextArena) |
 | [TextWorld](https://aicanwhat.com/zh/projects/textworld/) | 环境框架 | 训练, 评测 | [Source](https://github.com/microsoft/TextWorld) |
 | [Three.js Quake](https://aicanwhat.com/zh/projects/threejs-quake/) | AI 软件作品 | 作品展示 | [Source](https://github.com/mrdoob/three-quake) |
 | [Tic Tac Toe — Imperium Edition](https://aicanwhat.com/zh/projects/gpt5-tic-tac-toe-game/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/tic-tac-toe-game) |
 | [Typing Rain](https://aicanwhat.com/zh/projects/gpt5-typing-rain/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/typing-rain) |
+| [Unity ML-Agents](https://aicanwhat.com/zh/projects/unity-ml-agents/) | 环境框架 | 训练, 评测 | [Source](https://github.com/Unity-Technologies/ml-agents) |
 | [V-GameGym (SKYLENAGE-GameCodeGym)](https://aicanwhat.com/zh/projects/v-gamegym/) | 数据集与评测 | 评测 | [Source](https://github.com/alibaba/SKYLENAGE-GameCodeGym) |
 | [VirtualHome](https://aicanwhat.com/zh/projects/virtualhome/) | 环境框架 | 训练 | [Source](https://github.com/xavierpuigf/virtualhome) |
 | [ViZDoom](https://aicanwhat.com/zh/projects/vizdoom/) | 环境与评测 | 训练, 评测 | [Source](https://vizdoom.farama.org/) |

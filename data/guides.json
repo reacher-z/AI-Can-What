@@ -28,8 +28,8 @@
         {
           "question_en": "Which examples have actual interaction notes?",
           "question_zh": "哪些案例有实际操作记录？",
-          "answer_en": "The Tic Tac Toe and Aldi Prices notes record a specific browser flow with dated steps and screenshots. They do not certify the full application, computer-opponent strategy or price-data accuracy.",
-          "answer_zh": "井字棋和 Aldi Prices 条目记录了具体浏览器流程，附日期、步骤和截图；它们不认证完整应用、电脑策略或价格数据准确性。"
+          "answer_en": "Tic Tac Toe, Aldi Prices, CSV To Charts and Markdown → Slides have dated steps and screenshots for specific browser interactions. Each record separates visible outcomes from untested features; these are not full application certifications.",
+          "answer_zh": "井字棋、Aldi Prices、CSV To Charts 和 Markdown → Slides 记录了特定浏览器交互的日期、步骤与截图。各记录区分可见结果与未测试功能，不构成完整应用认证。"
         }
       ],
       "groups": [
@@ -73,6 +73,16 @@
               "project_id": "social-media-card-cropper",
               "fit_en": "Follow an openly documented implementation history for an image-cropping browser tool.",
               "fit_zh": "追溯图片裁切工具公开记录的实现过程。"
+            },
+            {
+              "project_id": "gpt5-csv-to-charts",
+              "fit_en": "Inspect a file-to-chart demo with separately recorded sample-chart controls; imported files and PNG output remain unverified.",
+              "fit_zh": "查看文件转图表演示及独立记录的样例图表操作；文件导入与 PNG 输出仍未验证。"
+            },
+            {
+              "project_id": "gpt5-markdown-to-slides",
+              "fit_en": "Inspect a typed-Markdown preview with a recorded two-slide navigation check; it has no built-in file export.",
+              "fit_zh": "查看输入 Markdown 的预览工具及两页翻页记录；该工具没有内置文件导出。"
             }
           ]
         },
@@ -413,8 +423,8 @@
       "title_zh": "网页与游戏生成评测：外观、交互和执行",
       "description_en": "Compare webpage reconstruction and game-development benchmarks by supplied inputs, generated artifact, tested behavior and released evaluation materials.",
       "description_zh": "按输入资料、生成产物、测试行为及已发布评测材料，比较网页重建和游戏开发基准。",
-      "answer_en": "Specify what the generated software must reproduce: a screenshot, an interaction trace, a scoped edit or a complete runnable project. These are different targets. Visual similarity does not establish functional equivalence, and a playable game does not automatically demonstrate subjective quality or a general game-playing policy.",
-      "answer_zh": "先明确生成软件需要复现什么：截图、交互轨迹、局部修改，还是完整可运行项目。这些目标不同。视觉相似不代表功能等价；游戏可玩也不能自动证明主观质量或通用游戏策略。",
+      "answer_en": "Specify what the generated software must reproduce: a written specification, a screenshot, an interaction trace, a scoped edit or a complete runnable project. These are different targets. Visual similarity does not establish functional equivalence, and a playable game does not automatically demonstrate subjective quality or a general game-playing policy.",
+      "answer_zh": "先明确生成软件需要复现什么：文字规格、截图、交互轨迹、局部修改，还是完整可运行项目。这些目标不同。视觉相似不代表功能等价；游戏可玩也不能自动证明主观质量或通用游戏策略。",
       "questions": [
         {
           "question_en": "Which benchmark matches screenshot-to-code work?",
@@ -440,9 +450,14 @@
           "id": "web",
           "title_en": "Webpage reconstruction",
           "title_zh": "网页重建",
-          "intro_en": "Match the inputs and tested behavior: a still image, specified state transitions, a video trajectory or dashboard exploration. Do not infer backend equivalence from a visual score.",
-          "intro_zh": "匹配输入及测试行为：静态图像、指定状态转换、视频轨迹或仪表盘探索；不要从视觉分数推断后端等价。",
+          "intro_en": "Match the input and tested behavior: a written specification, still image, specified state transitions, video trajectory or dashboard exploration. Do not infer backend equivalence from a visual score.",
+          "intro_zh": "匹配输入及测试行为：文字规格、静态图像、指定状态转换、视频轨迹或仪表盘探索；不要从视觉分数推断后端等价。",
           "choices": [
+            {
+              "project_id": "webgen-bench",
+              "fit_en": "Evaluate interactive websites generated from instructions using functional and appearance checks.",
+              "fit_zh": "通过功能及外观检查，评估根据指令生成的交互网站。"
+            },
             {
               "project_id": "design2code",
               "fit_en": "Evaluate visual reconstruction from supplied webpage screenshots.",
@@ -505,6 +520,236 @@
           "path": "/websites/?use=evaluation",
           "label_en": "All web evaluation resources",
           "label_zh": "全部网页评测资料"
+        }
+      ]
+    },
+    {
+      "id": "coding-agent-benchmarks",
+      "reviewed_at": "2026-10-16",
+      "label_en": "Test coding agents",
+      "label_zh": "评测编程 Agent",
+      "title_en": "Coding-agent benchmarks and training environments",
+      "title_zh": "编程 Agent 的基准与训练环境",
+      "description_en": "Compare repository repair, application development, terminal tasks and generated training environments by what the agent changes and how outcomes are checked.",
+      "description_zh": "按 Agent 修改的对象及结果检查方式，比较代码库修复、应用开发、终端任务和生成式训练环境。",
+      "answer_en": "First identify the work unit: a repository patch, an application change, a proposal decision or a terminal outcome. Then choose matching tests and environment state. Training-task generation and held-out evaluation serve different purposes, even when both use containers and executable tests.",
+      "answer_zh": "先明确任务单位：代码库补丁、应用修改、方案选择，还是终端操作结果，再选择匹配的测试和环境状态。训练任务生成与保留集评测用途不同，即使它们都使用容器及可执行测试。",
+      "groups": [
+        {
+          "id": "repair",
+          "title_en": "Repository repair",
+          "title_zh": "代码库修复",
+          "intro_en": "Use a defined issue and test contract. Passing tests establishes only the behavior those tests cover, not every product requirement.",
+          "intro_zh": "采用明确的问题描述和测试要求；测试通过只能证明被覆盖的行为，不能证明所有产品要求。",
+          "choices": [
+            {
+              "project_id": "swe-bench",
+              "fit_en": "Evaluate real repository issue resolution against project tests.",
+              "fit_zh": "用项目测试评估真实代码库问题的修复。"
+            }
+          ]
+        },
+        {
+          "id": "applications",
+          "title_en": "Application development and proposal decisions",
+          "title_zh": "应用开发与方案选择",
+          "intro_en": "Keep coding and decision tracks separate. A benchmark targeting Android source code does not measure a phone agent navigating the GUI.",
+          "intro_zh": "分别报告编码与决策赛道；面向 Android 源码的基准并不测量手机 Agent 的 GUI 导航能力。",
+          "choices": [
+            {
+              "project_id": "swe-lancer",
+              "fit_en": "Compare application-code fixes and engineering-manager proposal choices as separate tracks.",
+              "fit_zh": "分别比较应用代码修复与工程管理者的方案选择。"
+            },
+            {
+              "project_id": "android-bench",
+              "fit_en": "Evaluate Kotlin/Java changes with the public Android Bench 1.0 build-and-test tasks.",
+              "fit_zh": "用公开的 Android Bench1.0 构建和测试任务评估 Kotlin／Java 修改。"
+            }
+          ]
+        },
+        {
+          "id": "terminal",
+          "title_en": "Interactive terminal work",
+          "title_zh": "交互式终端工作",
+          "intro_en": "These environments return execution feedback over multiple steps. Pin task images, available commands and the final-state verifier.",
+          "intro_zh": "这些环境在多步执行中提供反馈；需固定任务镜像、可用命令及最终状态评分器。",
+          "choices": [
+            {
+              "project_id": "terminal-bench",
+              "fit_en": "Evaluate multi-step command-line outcomes in versioned task environments.",
+              "fit_zh": "在带版本的任务环境中评估多步命令行操作结果。"
+            },
+            {
+              "project_id": "intercode",
+              "fit_en": "Study how an agent reacts to errors and execution feedback in coding tasks.",
+              "fit_zh": "研究 Agent 如何利用编码任务中的错误及执行反馈。"
+            }
+          ]
+        },
+        {
+          "id": "training",
+          "title_en": "Training environments and task synthesis",
+          "title_zh": "训练环境与任务合成",
+          "intro_en": "Use these to collect repair trajectories or construct training tasks. Their size is not a held-out performance score.",
+          "intro_zh": "用于收集修复轨迹或构建训练任务；数据规模不等于保留集上的性能成绩。",
+          "choices": [
+            {
+              "project_id": "swe-gym",
+              "fit_en": "Collect test-verified repair trajectories and train solution verifiers.",
+              "fit_zh": "收集经过测试检查的修复轨迹，并训练解法验证器。"
+            },
+            {
+              "project_id": "swe-smith",
+              "fit_en": "Synthesize repository repair tasks from test-failing changes.",
+              "fit_zh": "基于导致测试失败的修改，合成代码库修复任务。"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question_en": "Can I add combined and split package counts?",
+          "question_zh": "能否将总包与子集的任务数相加？",
+          "answer_en": "No. SWE-Lancer Diamond combines 198 coding and 265 manager tasks into 463 total tasks. Registry packages for all, IC and manager are views of one family, not three disjoint collections.",
+          "answer_zh": "不能。SWE-Lancer Diamond 的198项编码任务和265项管理任务合计463项。注册表的 all、IC 和 manager 包属于同一项目族，不是三个互不重叠的集合。"
+        },
+        {
+          "question_en": "Does the latest announcement identify the public runnable release?",
+          "question_zh": "最新公告是否就是公开可运行的版本？",
+          "answer_en": "Check the released artifact. Android Bench publicly links its 1.0 task set, while the 2.0 methodology describes a separate private task set. Keep the accessible dataset, harness and published result version aligned.",
+          "answer_zh": "需检查实际产物。Android Bench 公开链接的是1.0任务集，2.0方法说明描述另一个私有任务集。应对齐可访问的数据、框架与已发布结果的版本。"
+        },
+        {
+          "question_en": "What changes when a benchmark is adapted to Harbor?",
+          "question_zh": "基准适配到 Harbor 后可能改变什么？",
+          "answer_en": "Packaging can change prompts, visible tests, tools, timeouts and metrics. Preserve the adapter revision and its documented differences. A family association in the upstream index does not prove score equivalence.",
+          "answer_zh": "封装可能改变提示、可见测试、工具、超时及指标。应保留适配版本及其明确差异；上游索引的项目关联并不证明分数等价。"
+        }
+      ],
+      "browse": [
+        {
+          "path": "/apps/?use=evaluation",
+          "label_en": "All app evaluation resources",
+          "label_zh": "全部应用评测资料"
+        },
+        {
+          "path": "/discover/?source=harbor-hub",
+          "label_en": "Harbor package inventory",
+          "label_zh": "Harbor 包索引"
+        },
+        {
+          "path": "/guides/software-generation/",
+          "label_en": "Website and game generation",
+          "label_zh": "网页与游戏生成"
+        }
+      ]
+    },
+    {
+      "id": "data-workflow-benchmarks",
+      "reviewed_at": "2026-10-16",
+      "label_en": "Test data workflows",
+      "label_zh": "评测数据工作流",
+      "title_en": "Data-agent benchmarks: databases, notebooks and research workflows",
+      "title_zh": "数据 Agent 评测：数据库、笔记本与研究流程",
+      "description_en": "Compare data engineering, code-executing analysis and ML experiment resources while separating final-answer checks from workflow and environment validation.",
+      "description_zh": "比较数据工程、代码执行分析与机器学习实验资料，区分最终答案检查、工作流程验证和环境验证。",
+      "answer_en": "Choose what a correct result means before choosing the environment. A data-engineering task may check resulting tables, an analysis benchmark may score final answers, and a desktop workflow may inspect application state. These checks expose different failures and should not be combined into an undifferentiated score.",
+      "answer_zh": "先定义正确结果，再选择环境。数据工程任务可能检查结果表，分析基准可能只给最终答案评分，桌面流程则可能检查应用状态。这些检查暴露的错误不同，不宜混合成一个不加区分的分数。",
+      "groups": [
+        {
+          "id": "databases",
+          "title_en": "Database and transformation work",
+          "title_zh": "数据库与数据转换",
+          "intro_en": "Separate local database copies from tasks touching real cloud accounts. Match the database version, initialization and exact expected-table or query checks.",
+          "intro_zh": "区分本地数据库副本与操作真实云账号的任务；应对齐数据库版本、初始化及具体结果表或查询检查。",
+          "choices": [
+            {
+              "project_id": "ade-bench",
+              "fit_en": "Evaluate dbt/project changes through database-backed tests and expected outputs.",
+              "fit_zh": "通过数据库测试及预期结果评估 dbt／项目修改。"
+            },
+            {
+              "project_id": "bird-interact",
+              "fit_en": "Study clarification and SQL execution in an interactive database setting.",
+              "fit_zh": "在交互式数据库环境中研究需求澄清及 SQL 执行。"
+            }
+          ]
+        },
+        {
+          "id": "analysis",
+          "title_en": "Code-executing analysis",
+          "title_zh": "代码执行型分析",
+          "intro_en": "An execution environment allows a calculation to be performed; an answer scorer decides whether the reported result matches its reference. Inspect both.",
+          "intro_zh": "执行环境让计算得以完成，答案评分器判断报告结果是否匹配参考值；两者都需要检查。",
+          "choices": [
+            {
+              "project_id": "bixbench",
+              "fit_en": "Evaluate computational-biology analyses with the released notebook environment and chosen answer grader.",
+              "fit_zh": "使用公开笔记本环境及选定答案评分器评估计算生物学分析。"
+            },
+            {
+              "project_id": "dabstep",
+              "fit_en": "Study multi-file business-data reasoning with a public agent baseline and answer-scoring protocol.",
+              "fit_zh": "结合公开 Agent 基线和答案评分协议，研究多文件业务数据推理。"
+            }
+          ]
+        },
+        {
+          "id": "workflows",
+          "title_en": "Desktop workflows and ML experiments",
+          "title_zh": "桌面流程与机器学习实验",
+          "intro_en": "These resources include broader application or experiment state. Accounts, compute and task assets can be part of the environment rather than merely input files.",
+          "intro_zh": "这些资料涉及更广泛的应用或实验状态；账号、算力与任务资产可能是环境组成部分，而不只是输入文件。",
+          "choices": [
+            {
+              "project_id": "spider2-v",
+              "fit_en": "Evaluate data workflows that combine graphical tools, code and state checks.",
+              "fit_zh": "评估结合图形工具、代码和状态检查的数据流程。"
+            },
+            {
+              "project_id": "mlgym",
+              "fit_en": "Study agents that modify ML methods and run iterative experiments.",
+              "fit_zh": "研究修改机器学习方法并进行迭代实验的 Agent。"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question_en": "Does a split named train establish training permission or evaluation validity?",
+          "question_zh": "划分名为 train 是否代表可用于训练或能保证评测有效？",
+          "answer_en": "The label is not enough. BixBench’s public split is named train but carries a no-training-corpus contamination notice. Preserve author usage guidance and keep it distinct from the declared data license.",
+          "answer_zh": "名称并不足够。BixBench 的公开划分叫 train，但含有不得纳入训练语料的防污染声明。应保留作者使用说明，并与数据许可分别记录。"
+        },
+        {
+          "question_en": "Are local adapter labels always the official hidden answers?",
+          "question_zh": "本地适配器的标签总是官方隐藏答案吗？",
+          "answer_en": "No. DABstep’s default file omits answers, while six of its questions also appear in the answered dev set. The reviewed Harbor adapter reconstructs labels from scored public submissions; equivalence to official evaluation has not been established.",
+          "answer_zh": "不是。DABstep 的 default 文件不提供答案，其中六道题也出现在附答案的 dev 集中。已核查的 Harbor 适配器从已评分公开提交重建标签，尚不能认定与官方评测等价。"
+        },
+        {
+          "question_en": "How should I report dataset size?",
+          "question_zh": "应怎样报告数据规模？",
+          "answer_en": "State the unit and version: questions, unique task IDs, capsules, ready task folders or adapter-selected tasks. Development splits can overlap test IDs, and a capsule can contain several questions. Record discrepancies rather than silently summing them.",
+          "answer_zh": "注明单位与版本：问题、唯一任务 ID、胶囊、ready 任务目录或适配器选中的任务。开发划分可能与测试 ID 重叠，一个胶囊也可能包含多道问题；应保留差异，避免直接累加。"
+        }
+      ],
+      "browse": [
+        {
+          "path": "/apps/?use=evaluation",
+          "label_en": "All app evaluation resources",
+          "label_zh": "全部应用评测资料"
+        },
+        {
+          "path": "/discover/?source=harbor-hub",
+          "label_en": "Harbor package inventory",
+          "label_zh": "Harbor 包索引"
+        },
+        {
+          "path": "/guides/coding-agent-benchmarks/",
+          "label_en": "Coding-agent resources",
+          "label_zh": "编程 Agent 资料"
         }
       ]
     }

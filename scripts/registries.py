@@ -25,10 +25,20 @@ HARBOR_RELATED = {
     'terminal-bench/terminal-bench-2': 'terminal-bench',
     'terminal-bench/terminal-bench-2-1': 'terminal-bench',
     'terminal-bench/terminal-bench-cpu-only': 'terminal-bench',
+    'webgen-bench/webgen-bench': 'webgen-bench',
+    'android-bench/android-bench': 'android-bench',
+    'openai/swe-lancer-diamond-all': 'swe-lancer',
+    'openai/swe-lancer-diamond-ic': 'swe-lancer',
+    'openai/swe-lancer-diamond-manager': 'swe-lancer',
+    'swe-bench/swe-smith': 'swe-smith',
+    'dbt-labs/ade-bench': 'ade-bench',
+    'futurehouse/bixbench': 'bixbench',
+    'futurehouse/bixbench-cli': 'bixbench',
+    'adyen/dabstep': 'dabstep',
 }
 OPENENV_RELATED = {'atari_env': 'arcade-learning-environment', 'browsergym_env': 'browsergym',
                    'harbor_env': 'harbor', 'openspiel_env': 'open-spiel', 'tau2_env': 'tau-bench', 'tbench2_env': 'terminal-bench',
-                   'openapp_env': 'openapps'}
+                   'openapp_env': 'openapps', 'unity_env': 'unity-ml-agents', 'textarena_env': 'textarena'}
 
 
 def validate_url(value):
