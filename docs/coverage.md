@@ -2,6 +2,8 @@
 
 This directory covers software made with AI and resources used to train or evaluate agents across games/virtual worlds, websites, and applications. Applications includes desktop/mobile software, simulated APIs, and software-engineering tasks. It does not claim to be the largest or exhaustive collection.
 
+The generated [coverage report](../catalog/coverage/README.md) and [statistics JSON](../catalog/coverage/coverage.json) show category, platform, research and observation counts from the same inputs as the website. Platform/use tags overlap; papers, associations and upstream metadata have separate counting units. Source-file hashes identify the data used for a snapshot. Source-review dates and registry capture dates are preserved rather than replaced with a fresh build date.
+
 ## What counts as an entry
 
 A distinct authored application, environment, framework, benchmark, or dataset with a primary source and a specific use. Two named apps in one published example collection can be distinct entries; two links to the same app are merged. A separately maintained evaluator or new task release can have its own entry while sharing a project family. For example, WebArena-Verified revises WebArena's task family, and its full and Hard counts are not additive. Catalog totals count entries, not independent task universes. Papers and their associated entries are counted separately and are not additive.

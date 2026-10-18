@@ -1383,8 +1383,136 @@ tbody tr:hover {
 .paper-tools select {
   max-width:190px
 }
+.coverage-main {
+  max-width:1100px;
+  padding:52px 0 64px
+}
+.coverage-main h1 {
+  font-size:48px;
+  line-height:1.15;
+  letter-spacing:-1.5px;
+  margin:16px 0 22px
+}
+.coverage-main > p,.coverage-main section > p {
+  max-width:1000px;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.85
+}
+.coverage-main .lead {
+  font-size:19px
+}
+.coverage-main .coverage-dates {
+  font-family:var(--mono);
+  font-size:11px
+}
+.coverage-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px 24px;
+  margin:24px 0 32px;
+  font-size:13px
+}
+.coverage-actions a,.coverage-method a {
+  text-decoration:underline;
+  text-underline-offset:4px
+}
+.coverage-main section {
+  margin:42px 0
+}
+.coverage-main h2 {
+  font-size:25px;
+  letter-spacing:-.5px;
+  margin:0 0 12px
+}
+.coverage-table-wrap {
+  overflow-x:auto;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--white)
+}
+.coverage-table-wrap:focus-visible {
+  outline:3px solid #599569;
+  outline-offset:3px
+}
+.coverage-main table {
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px
+}
+.coverage-main th,.coverage-main td {
+  padding:14px 18px;
+  border-bottom:1px solid var(--line);
+  text-align:right;
+  vertical-align:top
+}
+.coverage-main th:first-child {
+  text-align:left;
+  font-weight:550
+}
+.coverage-main tbody th {
+  font-family:inherit;
+  font-size:13px;
+  letter-spacing:normal;
+  text-transform:none;
+  background:transparent;
+  color:var(--ink);
+  border-top:0
+}
+.coverage-main thead {
+  background:var(--soft);
+  color:var(--muted);
+  font-size:11px
+}
+.coverage-main tbody tr:last-child > * {
+  border-bottom:0
+}
+.coverage-main td a {
+  color:var(--green);
+  text-decoration:underline;
+  text-underline-offset:3px
+}
+.coverage-main #registries td:last-child {
+  font-family:var(--mono);
+  font-size:11px;
+  white-space:nowrap
+}
+.coverage-method {
+  padding-top:24px;
+  border-top:1px solid var(--line)
+}
 @media(max-width:700px) {
   .paper-tools select {
     max-width:none
+  }
+  .coverage-main {
+    padding-top:32px
+  }
+  .coverage-main h1 {
+    font-size:34px
+  }
+  .coverage-main table {
+    display:table
+  }
+  .coverage-main thead {
+    display:table-header-group
+  }
+  .coverage-main tbody {
+    display:table-row-group
+  }
+  .coverage-main tr {
+    display:table-row;
+    padding:0
+  }
+  .coverage-main th,.coverage-main td {
+    display:table-cell;
+    padding:13px 16px;
+    border-bottom:1px solid var(--line)
+  }
+  .coverage-main #resource-types table,.coverage-main #platforms table,.coverage-main #evidence table {
+    min-width:510px
+  }
+  .coverage-main #registries table {
+    min-width:620px
   }
 }

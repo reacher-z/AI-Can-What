@@ -14,7 +14,9 @@
 
 [研究文献](papers/README.zh-CN.md) · [网页文献筛选](https://aicanwhat.com/zh/papers/) · [完整数据](data/catalog.json) · [贡献说明](CONTRIBUTING.md)
 
-[选择指南](guides/README.zh-CN.md)按用途和证据比较 AI 软件作品、浏览器与电脑／手机任务、软件生成、编程 Agent 以及数据工作流。
+[选择指南](guides/README.zh-CN.md)按用途和证据比较 AI 软件作品、浏览器与电脑／手机任务、软件生成、编程 Agent、数据工作流与工具／API 使用。
+
+[覆盖统计与计数口径](catalog/coverage/README.zh-CN.md) · [统计 JSON](catalog/coverage/coverage.json)
 
 另有 **5 条浏览器操作记录，覆盖 5 个项目**，包含步骤、可见结果、截图及未测试范围；不代表整个应用已完成验证。[操作记录](data/observations.json) · [记录方法](docs/browser-observations.md)。
 

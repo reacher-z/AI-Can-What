@@ -19,6 +19,8 @@ A source-backed directory of AI-built software and environments, benchmarks, and
 
 [Research bibliography](papers/README.md) · [Search papers on the website](https://aicanwhat.com/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)
 
+[Coverage and counting units](catalog/coverage/README.md) · [Coverage JSON](catalog/coverage/coverage.json)
+
 [Selection guides](guides/README.md) compare AI software examples, browser and computer/mobile tasks, software generation, coding agents, data workflows and tool/API use by purpose and evidence.
 
 **5 scoped browser observations across 5 projects** record interaction steps, visible outcomes, screenshots and untested scope. These are not whole-application verification. [Observation data](data/observations.json) · [Method](docs/browser-observations.md).
