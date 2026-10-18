@@ -29,7 +29,9 @@
       if (matches) visible++;
     }
     count.textContent = zh ? `显示 ${visible} / ${rows.length} 篇文献` : `${visible} of ${rows.length} papers`;
-    empty.hidden = visible !== 0;
+    AICanWhatSearch.showEmptyState(empty, visible === 0,
+      zh ? '没有匹配的文献。' : 'No papers match yet.',
+      zh ? '换一个关键词，或重置筛选条件。' : 'Try another keyword or reset the filters.', 'h2');
     reset.hidden = !query && !source.value && !status.value && !year.value;
     const next = new URL(location.href);
     for (const [key, value] of [['q', query], ['source', source.value], ['status', status.value], ['year', year.value]]) {

@@ -2,7 +2,7 @@
 
 [Catalog](../README.md) · [Search on the website](https://aicanwhat.com/papers/) · [BibTeX](../references.bib) · [中文](README.zh-CN.md)
 
-**142 papers; 3 have no corresponding reviewed artifact entry.** Paper and catalog counts are not additive. Inclusion provides research context, not software execution or reproduced results.
+**149 papers; 3 have no corresponding reviewed artifact entry.** Paper and catalog counts are not additive. Inclusion provides research context, not software execution or reproduced results.
 
 arXiv dates are first submissions. Other sources retain their known date or year without invented months or days. Follow the linked sources for full text, authorship and artifact status.
 
@@ -220,6 +220,16 @@ Introduces a pipeline for synthesizing executable MCP tool environments backed b
 
 In the catalog: [Agent World Model](https://aicanwhat.com/projects/agent-world-model/)
 
+### [DevOps-Gym: Benchmarking AI Agents in Software DevOps Cycle](<https://arxiv.org/abs/2601.20882>)
+
+Authors: Yuheng Tang · Kaijie Zhu · Bonan Ruan · Chuqi Zhang · Michael Yang · Hongwei Li · Suyue Guo · Tianneng Shi · Zekun Li · Christopher Kruegel · Giovanni Vigna · Dawn Song · William Yang Wang · Lun Wang · Yangruibo Ding · Zhenkai Liang · Wenbo Guo
+
+First submitted: 2026-01-27
+
+Introduces software DevOps tasks spanning build/configuration, monitoring, issue resolution and test generation, with containerized execution and task-specific checks.
+
+In the catalog: [DevOps-Gym](https://aicanwhat.com/projects/devops-gym/)
+
 ### [Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces](<https://arxiv.org/abs/2601.11868>)
 
 Authors: Mike A. Merrill · Alexander G. Shaw · Nicholas Carlini · Boxuan Li · Harsh Raj · Ivan Bercovich · Lin Shi · Jeong Yeon Shin · Thomas Walshe · E. Kelly Buchanan · Junhong Shen · Guanghao Ye · Haowei Lin · Jason Poulos · Maoyu Wang · Marianna Nezhurina · Jenia Jitsev · Di Lu · Orfeas Menis Mastromichalakis · Zhiwei Xu · Zizhao Chen · Yue Liu · Robert Zhang · Leon Liangyu Chen · Anurag Kashyap · Jan-Lucas Uslu · Jeffrey Li · Jianbo Wu · Minghao Yan · Song Bian · Vedang Sharma · Ke Sun · Steven Dillmann · Akshay Anand · Andrew Lanpouthakoun · Bardia Koopah · Changran Hu · Etash Guha · Gabriel H. S. Dreiman · Jiacheng Zhu · Karl Krauth · Li Zhong · Niklas Muennighoff · Robert Amanfu · Shangyin Tan · Shreyas Pimpalgaonkar · Tushar Aggarwal · Xiangning Lin · Xin Lan · Xuandong Zhao · Yiqing Liang · Yuanli Wang · Zilong Wang · Changzhi Zhou · David Heineman · Hange Liu · Harsh Trivedi · John Yang · Junhong Lin · Manish Shetty · Michael Yang · Nabil Omi · Negin Raoof · Shanda Li · Terry Yue Zhuo · Wuwei Lin · Yiwei Dai · Yuxin Wang · Wenhao Chai · Shang Zhou · Dariush Wahdany · Ziyu She · Jiaming Hu · Zhikang Dong · Yuxuan Zhu · Sasha Cui · Ahson Saiyed · Arinbjörn Kolbeinsson · Jesse Hu · Christopher Michael Rytting · Ryan Marten · Yixin Wang · Alex Dimakis · Andy Konwinski · Ludwig Schmidt
@@ -251,6 +261,18 @@ First submitted: 2025-10-28
 Presents a mobile safety detector combining explicit state checks with contextual model judgments, alongside an Android research environment and annotated risk trajectories.
 
 In the catalog: [OS-Sentinel / MobileRisk-Live](https://aicanwhat.com/projects/os-sentinel/)
+
+### [The Berkeley Function Calling Leaderboard (BFCL): From Tool Use to Agentic Evaluation of Large Language Models](<https://proceedings.mlr.press/v267/patil25a.html>)
+
+Authors: Shishir G Patil · Huanzhi Mao · Fanjia Yan · Charlie Cheng-Jie Ji · Vishnu Suresh · Ion Stoica · Joseph E. Gonzalez
+
+Publisher metadata date: 2025-10-06 · The PMLR HTML citation\_publication\_date is 2025/10/06. Its conference citation says July 13–19, 2025. This metadata date is not the initial BFCL release date or a verified first-submission date; no arXiv identifier is asserted.
+
+Introduces BFCL's function-call benchmark design, including AST evaluation and stateful multi-step tests. The current v4 code also exposes agentic search/memory categories; category revisions and adapter coverage must be tracked separately from this paper.
+
+In the catalog: [Berkeley Function Calling Leaderboard (BFCL)](https://aicanwhat.com/projects/bfcl/)
+
+[Citation metadata source](https://proceedings.mlr.press/v267/patil25a.html)
 
 ### [BIRD-INTERACT: Re-imagining Text-to-SQL Evaluation for Large Language Models via Lens of Dynamic Interactions](<https://arxiv.org/abs/2510.05318>)
 
@@ -532,6 +554,18 @@ Studies desktop-agent robustness when a workflow starts from varied interface an
 
 In the catalog: [WorldGUI](https://aicanwhat.com/projects/worldgui/)
 
+### [ToolHop: A Query-Driven Benchmark for Evaluating Large Language Models in Multi-Hop Tool Use](<https://arxiv.org/abs/2501.02506>)
+
+Authors: Junjie Ye · Zhengyin Du · Xuesong Yao · Weijian Lin · Yufei Xu · Zehui Chen · Zaiyuan Wang · Sining Zhu · Zhiheng Xi · Siyu Yuan · Tao Gui · Qi Zhang · Xuanjing Huang · Jiecao Chen
+
+First submitted: 2025-01-05
+
+Builds a multi-hop tool-use evaluation set from questions, interdependent local tools and reference answers. Query counts, associated tool counts and the direct/mandatory/free evaluation settings describe different units and conditions.
+
+In the catalog: [ToolHop](https://aicanwhat.com/projects/toolhop/)
+
+[Citation metadata source](https://arxiv.org/abs/2501.02506)
+
 ### [WebArena Verified: Reliable Evaluation for Web Agents](<https://openreview.net/forum?id=94tlGxmqkN>)
 
 Authors: Amine El hattami · Megh Thakkar · Nicolas Chapados · Christopher Pal
@@ -666,6 +700,18 @@ Adapts desktop-agent evaluation to Windows applications and describes parallel e
 
 In the catalog: [Windows Agent Arena](https://aicanwhat.com/projects/windows-agent-arena/)
 
+### [ToolACE: Winning the Points of LLM Function Calling](<https://arxiv.org/abs/2409.00920>)
+
+Authors: Weiwen Liu · Xu Huang · Xingshan Zeng · Xinlong Hao · Shuai Yu · Dexun Li · Shuai Wang · Weinan Gan · Zhengying Liu · Yuanqing Yu · Zezhong Wang · Yuxian Wang · Wu Ning · Yutai Hou · Bin Wang · Chuhan Wu · Xinzhi Wang · Yong Liu · Yasheng Wang · Duyu Tang · Dandan Tu · Lifeng Shang · Xin Jiang · Ruiming Tang · Defu Lian · Qun Liu · Enhong Chen
+
+First submitted: 2024-09-02
+
+Describes synthetic tool-dialogue generation and verification for function-calling training. The public artifact reviewed here is the released data subset; the full synthesis pool, trained models and external evaluation benchmarks are separate resources.
+
+In the catalog: [ToolACE Data](https://aicanwhat.com/projects/toolace-data/)
+
+[Citation metadata source](https://arxiv.org/abs/2409.00920)
+
 ### [ToolSandbox: A Stateful, Conversational, Interactive Evaluation Benchmark for LLM Tool Use Capabilities](<https://arxiv.org/abs/2408.04682>)
 
 Authors: Jiarui Lu · Thomas Holleis · Yizhe Zhang · Bernhard Aumayer · Feng Nan · Felix Bai · Shuang Ma · Shen Ma · Mengyu Li · Guoli Yin · Zirui Wang · Ruoming Pang
@@ -765,6 +811,16 @@ First submitted: 2024-06-19
 Introduces extensible tool-use environments for testing prompt-injection attacks and defenses while measuring the success of legitimate user tasks.
 
 In the catalog: [AgentDojo](https://aicanwhat.com/projects/agentdojo/)
+
+### [SWT-Bench: Testing and Validating Real-World Bug-Fixes with Code Agents](<https://arxiv.org/abs/2406.12952>)
+
+Authors: Niels Mündler · Mark Niklas Müller · Jingxuan He · Martin Vechev
+
+First submitted: 2024-06-18
+
+Studies issue-reproducing test generation on real repositories, using before/after bug-fix behavior and coverage changes to assess generated tests.
+
+In the catalog: [SWT-Bench](https://aicanwhat.com/projects/swt-bench/)
 
 ### [GUICourse: From General Vision Language Models to Versatile GUI Agents](<https://arxiv.org/abs/2406.11317>)
 
@@ -1038,6 +1094,18 @@ Introduces assistant tasks that combine reasoning, multimodal inputs, browsing a
 
 In the catalog: [GAIA](https://aicanwhat.com/projects/gaia/)
 
+### [ToolTalk: Evaluating Tool-Usage in a Conversational Setting](<https://arxiv.org/abs/2311.10775>)
+
+Authors: Nicholas Farn · Richard Shin
+
+First submitted: 2023-11-15
+
+Introduces conversational tool evaluation with simulated service implementations and annotated reference calls. Evaluation measures action matching after each user turn; the released harness restores reference history between assistant turns.
+
+In the catalog: [ToolTalk](https://aicanwhat.com/projects/tooltalk/)
+
+[Citation metadata source](https://arxiv.org/abs/2311.10775)
+
 ### [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](<https://arxiv.org/abs/2310.06770>)
 
 Authors: Carlos E. Jimenez · John Yang · Alexander Wettig · Shunyu Yao · Kexin Pei · Ofir Press · Karthik Narasimhan
@@ -1047,6 +1115,18 @@ First submitted: 2023-10-10
 Introduces software-repair tasks derived from real GitHub issues, requiring models to modify existing repositories and satisfy project tests.
 
 In the catalog: [SWE-bench](https://aicanwhat.com/projects/swe-bench/)
+
+### [Identifying the Risks of LM Agents with an LM-Emulated Sandbox](<https://arxiv.org/abs/2309.15817>)
+
+Authors: Yangjun Ruan · Honghua Dong · Andrew Wang · Silviu Pitis · Yongchao Zhou · Jimmy Ba · Yann Dubois · Chris J. Maddison · Tatsunori Hashimoto
+
+First submitted: 2023-09-25
+
+Introduces ToolEmu, which generates tool effects and assesses agent trajectories with language models. Its risk and helpfulness judgments support simulated evaluation; they are distinct from execution against actual services and from independent security validation.
+
+In the catalog: [ToolEmu](https://aicanwhat.com/projects/toolemu/)
+
+[Citation metadata source](https://arxiv.org/abs/2309.15817)
 
 ### [AgentBench: Evaluating LLMs as Agents](<https://arxiv.org/abs/2308.03688>)
 

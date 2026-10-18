@@ -2,7 +2,7 @@
 
 [返回目录](../../README.zh-CN.md)
 
-111 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
+118 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
 
 按平台浏览：[Web](web/README.zh-CN.md) · [macOS](macos/README.zh-CN.md) · [Windows](windows/README.zh-CN.md) · [Linux](linux/README.zh-CN.md) · [iOS](ios/README.zh-CN.md) · [Android](android/README.zh-CN.md)
 
@@ -33,6 +33,7 @@
 | [AppWorld](https://aicanwhat.com/zh/projects/appworld/) | 环境与评测 | 训练, 评测 | [Source](https://appworld.dev/) |
 | [Audio Step Sequencer](https://aicanwhat.com/zh/projects/gpt5-audio-step-sequencer/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/audio-step-sequencer) |
 | [AutoCAD Bench](https://aicanwhat.com/zh/projects/autocad-bench/) | 环境与评测 | 评测 | [Source](https://github.com/markov-lab/autocad-bench) |
+| [Berkeley Function Calling Leaderboard (BFCL)](https://aicanwhat.com/zh/projects/bfcl/) | 评测套件 | 评测 | [Source](https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard) |
 | [Better Stickies](https://aicanwhat.com/zh/projects/better-stickies/) | AI 软件作品 | 作品展示 | [Source](https://betterstickies.com/) |
 | [BIRD-Interact](https://aicanwhat.com/zh/projects/bird-interact/) | 环境与评测 | 评测 | [Source](https://bird-interact.github.io/) |
 | [BixBench](https://aicanwhat.com/zh/projects/bixbench/) | 环境与评测 | 评测 | [Source](https://github.com/Future-House/BixBench) |
@@ -46,6 +47,7 @@
 | [DABstep](https://aicanwhat.com/zh/projects/dabstep/) | 数据集与评测 | 评测 | [Source](https://huggingface.co/datasets/adyen/DABstep) |
 | [Davit](https://aicanwhat.com/zh/projects/davit/) | AI 软件作品 | 作品展示 | [Source](https://davit.app/) |
 | [DeskCraft](https://aicanwhat.com/zh/projects/deskcraft/) | 环境与评测 | 评测 | [Source](https://github.com/mrwwk/DeskCraft) |
+| [DevOps-Gym](https://aicanwhat.com/zh/projects/devops-gym/) | 环境与评测 | 评测 | [Source](https://github.com/ucsb-mlsec/DevOps-Gym) |
 | [Dog-e-dex](https://aicanwhat.com/zh/projects/dog-e-dex/) | AI 软件作品 | 作品展示 | [Source](https://apps.apple.com/us/app/dog-e-dex/id6741032284) |
 | [DS-1000](https://aicanwhat.com/zh/projects/ds-1000/) | 评测套件 | 评测 | [Source](https://github.com/xlang-ai/DS-1000) |
 | [EffectCraft](https://aicanwhat.com/zh/projects/effectcraft/) | AI 软件作品 | 作品展示 | [Source](https://getartcraft.com/apps/effectcraft) |
@@ -105,10 +107,15 @@
 | [SWE-Gym](https://aicanwhat.com/zh/projects/swe-gym/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/SWE-Gym/SWE-Gym) |
 | [SWE-Lancer](https://aicanwhat.com/zh/projects/swe-lancer/) | 评测套件 | 评测 | [Source](https://github.com/openai/frontier-evals/blob/main/project/swelancer/README.md) |
 | [SWE-smith](https://aicanwhat.com/zh/projects/swe-smith/) | 环境框架 | 训练, 评测 | [Source](https://github.com/SWE-bench/SWE-smith) |
+| [SWT-Bench](https://aicanwhat.com/zh/projects/swt-bench/) | 评测套件 | 评测 | [Source](https://github.com/logic-star-ai/swt-bench) |
 | [Terminal-Bench](https://aicanwhat.com/zh/projects/terminal-bench/) | 环境与评测 | 评测 | [Source](https://www.tbench.ai/) |
 | [TheAgentCompany](https://aicanwhat.com/zh/projects/the-agent-company/) | 环境与评测 | 评测 | [Source](https://github.com/TheAgentCompany/TheAgentCompany) |
 | [Tiny Kanban](https://aicanwhat.com/zh/projects/gpt5-tiny-kanban/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/tiny-kanban) |
+| [ToolACE Data](https://aicanwhat.com/zh/projects/toolace-data/) | 数据集 | 训练 | [Source](https://huggingface.co/datasets/Team-ACE/ToolACE) |
+| [ToolEmu](https://aicanwhat.com/zh/projects/toolemu/) | 环境与评测 | 评测 | [Source](https://github.com/ryoungj/ToolEmu) |
+| [ToolHop](https://aicanwhat.com/zh/projects/toolhop/) | 环境与评测 | 评测 | [Source](https://huggingface.co/datasets/bytedance-research/ToolHop) |
 | [ToolSandbox](https://aicanwhat.com/zh/projects/toolsandbox/) | 环境与评测 | 评测 | [Source](https://machinelearning.apple.com/research/toolsandbox-stateful-conversational-llm-benchmark) |
+| [ToolTalk](https://aicanwhat.com/zh/projects/tooltalk/) | 环境与评测 | 评测 | [Source](https://github.com/microsoft/ToolTalk) |
 | [Travel Times Milwaukee](https://aicanwhat.com/zh/projects/travel-times-milwaukee/) | AI 软件作品 | 作品展示 | [Source](https://traveltimesapp.com/) |
 | [UI-Vision](https://aicanwhat.com/zh/projects/ui-vision/) | 数据集与评测 | 评测 | [Source](https://github.com/uivision/UI-Vision) |
 | [VectorCraft](https://aicanwhat.com/zh/projects/vectorcraft/) | AI 软件作品 | 作品展示 | [Source](https://getartcraft.com/apps/vectorcraft) |

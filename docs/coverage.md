@@ -25,7 +25,7 @@ Use the generated category and platform indexes to find gaps. Check the original
 
 The website and repository both expose platform indexes for app resources. A platform may describe a runnable application, an environment target, or screenshots in a dataset. Each index shows those resource types separately, and the website reports its software-showcase coverage explicitly.
 
-[Selection guides](../guides/README.md) connect existing projects to concrete goals: finding AI-made software, testing browser agents, testing computer/mobile use, evaluating software generation, studying coding agents and comparing data workflows. Their groupings explain distinct tasks and evidence requirements; they are not additional projects or quality rankings. Guides and project notes link in both directions, and each comparison preserves the catalog's current setup limits.
+[Selection guides](../guides/README.md) connect existing projects to concrete goals: finding AI-made software, testing browser agents, testing computer/mobile use, evaluating software generation, studying coding agents, comparing data workflows and testing tool/API use. Their groupings explain distinct tasks and evidence requirements; they are not additional projects or quality rankings. Guides and project notes link in both directions, and each comparison preserves the catalog's current setup limits.
 
 The [upstream registry index](https://aicanwhat.com/discover/) captures a broader discovery surface with source-specific boundaries. Those records are metadata only, can include versions, wrappers, test packages and off-topic datasets, and are not added to the reviewed project count. See the [registry method](registry-discovery.md) for coverage and refresh rules.
 

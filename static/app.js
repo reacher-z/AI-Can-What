@@ -30,7 +30,9 @@
       if (matches) visible++;
     }
     count.textContent = zh ? `显示 ${visible} / ${rows.length} 条记录` : `${visible} of ${rows.length} entries`;
-    empty.hidden = visible !== 0;
+    AICanWhatSearch.showEmptyState(empty, visible === 0,
+      zh ? '没有匹配的项目。' : 'No projects match yet.',
+      zh ? '换一个关键词，或重置筛选条件。' : 'Try a different search or reset the filters.');
     reset.hidden = !query && !use.value && !platform?.value && !kind?.value;
     const next = new URL(location.href);
     for (const [key, value] of [['q', search.value.trim()], ['use', use.value], ['platform', platform?.value || ''], ['kind', kind?.value || '']]) {

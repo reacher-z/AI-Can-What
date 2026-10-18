@@ -2,7 +2,7 @@
 
 [Back to the collection](../../README.md)
 
-111 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
+118 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
 
 Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows](windows/README.md) · [Linux](linux/README.md) · [iOS](ios/README.md) · [Android](android/README.md)
 
@@ -33,6 +33,7 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | [AppWorld](https://aicanwhat.com/projects/appworld/) | Environment + benchmark | Training, Evaluation | [Source](https://appworld.dev/) |
 | [Audio Step Sequencer](https://aicanwhat.com/projects/gpt5-audio-step-sequencer/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/audio-step-sequencer) |
 | [AutoCAD Bench](https://aicanwhat.com/projects/autocad-bench/) | Environment + benchmark | Evaluation | [Source](https://github.com/markov-lab/autocad-bench) |
+| [Berkeley Function Calling Leaderboard (BFCL)](https://aicanwhat.com/projects/bfcl/) | Benchmark suite | Evaluation | [Source](https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard) |
 | [Better Stickies](https://aicanwhat.com/projects/better-stickies/) | Software made with AI | Showcase | [Source](https://betterstickies.com/) |
 | [BIRD-Interact](https://aicanwhat.com/projects/bird-interact/) | Environment + benchmark | Evaluation | [Source](https://bird-interact.github.io/) |
 | [BixBench](https://aicanwhat.com/projects/bixbench/) | Environment + benchmark | Evaluation | [Source](https://github.com/Future-House/BixBench) |
@@ -46,6 +47,7 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | [DABstep](https://aicanwhat.com/projects/dabstep/) | Dataset + benchmark | Evaluation | [Source](https://huggingface.co/datasets/adyen/DABstep) |
 | [Davit](https://aicanwhat.com/projects/davit/) | Software made with AI | Showcase | [Source](https://davit.app/) |
 | [DeskCraft](https://aicanwhat.com/projects/deskcraft/) | Environment + benchmark | Evaluation | [Source](https://github.com/mrwwk/DeskCraft) |
+| [DevOps-Gym](https://aicanwhat.com/projects/devops-gym/) | Environment + benchmark | Evaluation | [Source](https://github.com/ucsb-mlsec/DevOps-Gym) |
 | [Dog-e-dex](https://aicanwhat.com/projects/dog-e-dex/) | Software made with AI | Showcase | [Source](https://apps.apple.com/us/app/dog-e-dex/id6741032284) |
 | [DS-1000](https://aicanwhat.com/projects/ds-1000/) | Benchmark suite | Evaluation | [Source](https://github.com/xlang-ai/DS-1000) |
 | [EffectCraft](https://aicanwhat.com/projects/effectcraft/) | Software made with AI | Showcase | [Source](https://getartcraft.com/apps/effectcraft) |
@@ -105,10 +107,15 @@ Browse by platform: [Web](web/README.md) · [macOS](macos/README.md) · [Windows
 | [SWE-Gym](https://aicanwhat.com/projects/swe-gym/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/SWE-Gym/SWE-Gym) |
 | [SWE-Lancer](https://aicanwhat.com/projects/swe-lancer/) | Benchmark suite | Evaluation | [Source](https://github.com/openai/frontier-evals/blob/main/project/swelancer/README.md) |
 | [SWE-smith](https://aicanwhat.com/projects/swe-smith/) | Environment framework | Training, Evaluation | [Source](https://github.com/SWE-bench/SWE-smith) |
+| [SWT-Bench](https://aicanwhat.com/projects/swt-bench/) | Benchmark suite | Evaluation | [Source](https://github.com/logic-star-ai/swt-bench) |
 | [Terminal-Bench](https://aicanwhat.com/projects/terminal-bench/) | Environment + benchmark | Evaluation | [Source](https://www.tbench.ai/) |
 | [TheAgentCompany](https://aicanwhat.com/projects/the-agent-company/) | Environment + benchmark | Evaluation | [Source](https://github.com/TheAgentCompany/TheAgentCompany) |
 | [Tiny Kanban](https://aicanwhat.com/projects/gpt5-tiny-kanban/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/tiny-kanban) |
+| [ToolACE Data](https://aicanwhat.com/projects/toolace-data/) | Dataset | Training | [Source](https://huggingface.co/datasets/Team-ACE/ToolACE) |
+| [ToolEmu](https://aicanwhat.com/projects/toolemu/) | Environment + benchmark | Evaluation | [Source](https://github.com/ryoungj/ToolEmu) |
+| [ToolHop](https://aicanwhat.com/projects/toolhop/) | Environment + benchmark | Evaluation | [Source](https://huggingface.co/datasets/bytedance-research/ToolHop) |
 | [ToolSandbox](https://aicanwhat.com/projects/toolsandbox/) | Environment + benchmark | Evaluation | [Source](https://machinelearning.apple.com/research/toolsandbox-stateful-conversational-llm-benchmark) |
+| [ToolTalk](https://aicanwhat.com/projects/tooltalk/) | Environment + benchmark | Evaluation | [Source](https://github.com/microsoft/ToolTalk) |
 | [Travel Times Milwaukee](https://aicanwhat.com/projects/travel-times-milwaukee/) | Software made with AI | Showcase | [Source](https://traveltimesapp.com/) |
 | [UI-Vision](https://aicanwhat.com/projects/ui-vision/) | Dataset + benchmark | Evaluation | [Source](https://github.com/uivision/UI-Vision) |
 | [VectorCraft](https://aicanwhat.com/projects/vectorcraft/) | Software made with AI | Showcase | [Source](https://getartcraft.com/apps/vectorcraft) |

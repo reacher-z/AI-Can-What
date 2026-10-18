@@ -14,5 +14,18 @@
     return [...new Set(result)];
   }
 
-  window.AICanWhatSearch = Object.freeze({ normalize, terms });
+  function showEmptyState(element, visible, title, message, headingTag = 'h3') {
+    if (visible && !element.firstChild) {
+      const heading = document.createElement(headingTag);
+      const paragraph = document.createElement('p');
+      heading.textContent = title;
+      paragraph.textContent = message;
+      element.append(heading, paragraph);
+    } else if (!visible) {
+      element.replaceChildren();
+    }
+    element.hidden = !visible;
+  }
+
+  window.AICanWhatSearch = Object.freeze({ normalize, terms, showEmptyState });
 })();

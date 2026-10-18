@@ -50,7 +50,7 @@ def build_catalog_docs(root, config, entries, papers, types, kinds, platforms, u
         slug = {'game': 'games', 'website': 'websites', 'app': 'apps'}[category]
         summary += f'| [{labels[0]}]({origin}/{slug}/) | {counts[category]} | [Browse](catalog/{slug}/README.md) |\n'
     summary += '\n[Research bibliography](papers/README.md) · [Search papers on the website](' + origin + '/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)\n'
-    summary += '\n[Selection guides](guides/README.md) compare AI software examples, browser and computer/mobile tasks, software generation, coding agents and data workflows by purpose and evidence.\n'
+    summary += '\n[Selection guides](guides/README.md) compare AI software examples, browser and computer/mobile tasks, software generation, coding agents, data workflows and tool/API use by purpose and evidence.\n'
     observed_ids = {record['project_id'] for record in observations}
     summary += f'\n**{len(observations)} scoped browser observations across {len(observed_ids)} projects** record interaction steps, visible outcomes, screenshots and untested scope. These are not whole-application verification. [Observation data](data/observations.json) · [Method](docs/browser-observations.md).\n'
     registry_count = len(registry_document['records'])

@@ -2,7 +2,7 @@
 
 [返回目录](../README.zh-CN.md) · [网页筛选](https://aicanwhat.com/zh/papers/) · [BibTeX](../references.bib) · [English](README.md)
 
-**142 篇文献，其中 3 篇尚无对应的已核查产物条目。** 文献与目录记录数量不能相加。收录提供研究背景，不代表已运行软件或复现实验。
+**149 篇文献，其中 3 篇尚无对应的已核查产物条目。** 文献与目录记录数量不能相加。收录提供研究背景，不代表已运行软件或复现实验。
 
 arXiv 日期为首次提交；其他来源保留已知日期或年份，不补造未知日月。全文、作者与具体发布状态以链接来源为准。
 
@@ -220,6 +220,16 @@ arXiv 日期为首次提交；其他来源保留已知日期或年份，不补�
 
 目录关联：[Agent World Model](https://aicanwhat.com/zh/projects/agent-world-model/)
 
+### [DevOps-Gym: Benchmarking AI Agents in Software DevOps Cycle](<https://arxiv.org/abs/2601.20882>)
+
+作者：Yuheng Tang · Kaijie Zhu · Bonan Ruan · Chuqi Zhang · Michael Yang · Hongwei Li · Suyue Guo · Tianneng Shi · Zekun Li · Christopher Kruegel · Giovanni Vigna · Dawn Song · William Yang Wang · Lun Wang · Yangruibo Ding · Zhenkai Liang · Wenbo Guo
+
+首次提交: 2026-01-27
+
+提出涵盖构建／配置、监控、问题修复及测试生成的软件 DevOps 任务，配合容器执行和任务专用检查。
+
+目录关联：[DevOps-Gym](https://aicanwhat.com/zh/projects/devops-gym/)
+
 ### [Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces](<https://arxiv.org/abs/2601.11868>)
 
 作者：Mike A. Merrill · Alexander G. Shaw · Nicholas Carlini · Boxuan Li · Harsh Raj · Ivan Bercovich · Lin Shi · Jeong Yeon Shin · Thomas Walshe · E. Kelly Buchanan · Junhong Shen · Guanghao Ye · Haowei Lin · Jason Poulos · Maoyu Wang · Marianna Nezhurina · Jenia Jitsev · Di Lu · Orfeas Menis Mastromichalakis · Zhiwei Xu · Zizhao Chen · Yue Liu · Robert Zhang · Leon Liangyu Chen · Anurag Kashyap · Jan-Lucas Uslu · Jeffrey Li · Jianbo Wu · Minghao Yan · Song Bian · Vedang Sharma · Ke Sun · Steven Dillmann · Akshay Anand · Andrew Lanpouthakoun · Bardia Koopah · Changran Hu · Etash Guha · Gabriel H. S. Dreiman · Jiacheng Zhu · Karl Krauth · Li Zhong · Niklas Muennighoff · Robert Amanfu · Shangyin Tan · Shreyas Pimpalgaonkar · Tushar Aggarwal · Xiangning Lin · Xin Lan · Xuandong Zhao · Yiqing Liang · Yuanli Wang · Zilong Wang · Changzhi Zhou · David Heineman · Hange Liu · Harsh Trivedi · John Yang · Junhong Lin · Manish Shetty · Michael Yang · Nabil Omi · Negin Raoof · Shanda Li · Terry Yue Zhuo · Wuwei Lin · Yiwei Dai · Yuxin Wang · Wenhao Chai · Shang Zhou · Dariush Wahdany · Ziyu She · Jiaming Hu · Zhikang Dong · Yuxuan Zhu · Sasha Cui · Ahson Saiyed · Arinbjörn Kolbeinsson · Jesse Hu · Christopher Michael Rytting · Ryan Marten · Yixin Wang · Alex Dimakis · Andy Konwinski · Ludwig Schmidt
@@ -251,6 +261,18 @@ arXiv 日期为首次提交；其他来源保留已知日期或年份，不补�
 提出结合显式状态检查与上下文模型评审的移动安全检测器，并配套 Android 研究环境及风险轨迹标注。
 
 目录关联：[OS-Sentinel / MobileRisk-Live](https://aicanwhat.com/zh/projects/os-sentinel/)
+
+### [The Berkeley Function Calling Leaderboard (BFCL): From Tool Use to Agentic Evaluation of Large Language Models](<https://proceedings.mlr.press/v267/patil25a.html>)
+
+作者：Shishir G Patil · Huanzhi Mao · Fanjia Yan · Charlie Cheng-Jie Ji · Vishnu Suresh · Ion Stoica · Joseph E. Gonzalez
+
+出版方元数据日期: 2025-10-06 · PMLR HTML 的 citation\_publication\_date 为 2025/10/06，会议引用日期为 2025 年 7 月 13–19 日。该元数据日期不是 BFCL 首发日或已核实的首次投稿日；不声明 arXiv 标识。
+
+介绍 BFCL 函数调用基准设计，包括 AST 评测及有状态多步测试。当前 v4 代码还提供 agentic 搜索／记忆类别；类别修订与适配器覆盖范围应与论文本身分开记录。
+
+目录关联：[Berkeley Function Calling Leaderboard (BFCL)](https://aicanwhat.com/zh/projects/bfcl/)
+
+[文献信息来源](https://proceedings.mlr.press/v267/patil25a.html)
 
 ### [BIRD-INTERACT: Re-imagining Text-to-SQL Evaluation for Large Language Models via Lens of Dynamic Interactions](<https://arxiv.org/abs/2510.05318>)
 
@@ -532,6 +554,18 @@ arXiv 日期为首次提交；其他来源保留已知日期或年份，不补�
 
 目录关联：[WorldGUI](https://aicanwhat.com/zh/projects/worldgui/)
 
+### [ToolHop: A Query-Driven Benchmark for Evaluating Large Language Models in Multi-Hop Tool Use](<https://arxiv.org/abs/2501.02506>)
+
+作者：Junjie Ye · Zhengyin Du · Xuesong Yao · Weijian Lin · Yufei Xu · Zehui Chen · Zaiyuan Wang · Sining Zhu · Zhiheng Xi · Siyu Yuan · Tao Gui · Qi Zhang · Xuanjing Huang · Jiecao Chen
+
+首次提交: 2025-01-05
+
+从问题、相互依赖的本地工具和参考答案构建多跳工具使用评测集。问题数量、关联工具数量，以及直接／强制／自由调用设置分别对应不同单位和条件。
+
+目录关联：[ToolHop](https://aicanwhat.com/zh/projects/toolhop/)
+
+[文献信息来源](https://arxiv.org/abs/2501.02506)
+
 ### [WebArena Verified: Reliable Evaluation for Web Agents](<https://openreview.net/forum?id=94tlGxmqkN>)
 
 作者：Amine El hattami · Megh Thakkar · Nicolas Chapados · Christopher Pal
@@ -666,6 +700,18 @@ arXiv 日期为首次提交；其他来源保留已知日期或年份，不补�
 
 目录关联：[Windows Agent Arena](https://aicanwhat.com/zh/projects/windows-agent-arena/)
 
+### [ToolACE: Winning the Points of LLM Function Calling](<https://arxiv.org/abs/2409.00920>)
+
+作者：Weiwen Liu · Xu Huang · Xingshan Zeng · Xinlong Hao · Shuai Yu · Dexun Li · Shuai Wang · Weinan Gan · Zhengying Liu · Yuanqing Yu · Zezhong Wang · Yuxian Wang · Wu Ning · Yutai Hou · Bin Wang · Chuhan Wu · Xinzhi Wang · Yong Liu · Yasheng Wang · Duyu Tang · Dandan Tu · Lifeng Shang · Xin Jiang · Ruiming Tang · Defu Lian · Qun Liu · Enhong Chen
+
+首次提交: 2024-09-02
+
+介绍面向函数调用训练的合成工具对话生成与验证。此处核查的公开产物是已发布的数据子集；完整合成池、训练模型及外部评测基准属于不同资源。
+
+目录关联：[ToolACE Data](https://aicanwhat.com/zh/projects/toolace-data/)
+
+[文献信息来源](https://arxiv.org/abs/2409.00920)
+
 ### [ToolSandbox: A Stateful, Conversational, Interactive Evaluation Benchmark for LLM Tool Use Capabilities](<https://arxiv.org/abs/2408.04682>)
 
 作者：Jiarui Lu · Thomas Holleis · Yizhe Zhang · Bernhard Aumayer · Feng Nan · Felix Bai · Shuang Ma · Shen Ma · Mengyu Li · Guoli Yin · Zirui Wang · Ruoming Pang
@@ -765,6 +811,16 @@ arXiv 日期为首次提交；其他来源保留已知日期或年份，不补�
 提出可扩展的工具使用环境，在测试提示注入攻击与防御的同时衡量正常用户任务的成功情况。
 
 目录关联：[AgentDojo](https://aicanwhat.com/zh/projects/agentdojo/)
+
+### [SWT-Bench: Testing and Validating Real-World Bug-Fixes with Code Agents](<https://arxiv.org/abs/2406.12952>)
+
+作者：Niels Mündler · Mark Niklas Müller · Jingxuan He · Martin Vechev
+
+首次提交: 2024-06-18
+
+研究真实仓库的问题复现测试生成，通过修复前后行为和覆盖率变化评估生成测试。
+
+目录关联：[SWT-Bench](https://aicanwhat.com/zh/projects/swt-bench/)
 
 ### [GUICourse: From General Vision Language Models to Versatile GUI Agents](<https://arxiv.org/abs/2406.11317>)
 
@@ -1038,6 +1094,18 @@ arXiv 日期为首次提交；其他来源保留已知日期或年份，不补�
 
 目录关联：[GAIA](https://aicanwhat.com/zh/projects/gaia/)
 
+### [ToolTalk: Evaluating Tool-Usage in a Conversational Setting](<https://arxiv.org/abs/2311.10775>)
+
+作者：Nicholas Farn · Richard Shin
+
+首次提交: 2023-11-15
+
+提出结合模拟服务实现与参考调用标注的对话式工具评测。评测衡量各用户回合后的动作匹配；公开评测器在助手回合间恢复参考历史。
+
+目录关联：[ToolTalk](https://aicanwhat.com/zh/projects/tooltalk/)
+
+[文献信息来源](https://arxiv.org/abs/2311.10775)
+
 ### [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](<https://arxiv.org/abs/2310.06770>)
 
 作者：Carlos E. Jimenez · John Yang · Alexander Wettig · Shunyu Yao · Kexin Pei · Ofir Press · Karthik Narasimhan
@@ -1047,6 +1115,18 @@ arXiv 日期为首次提交；其他来源保留已知日期或年份，不补�
 提出取自真实 GitHub 问题的软件修复任务，要求模型修改现有仓库并通过项目测试。
 
 目录关联：[SWE-bench](https://aicanwhat.com/zh/projects/swe-bench/)
+
+### [Identifying the Risks of LM Agents with an LM-Emulated Sandbox](<https://arxiv.org/abs/2309.15817>)
+
+作者：Yangjun Ruan · Honghua Dong · Andrew Wang · Silviu Pitis · Yongchao Zhou · Jimmy Ba · Yann Dubois · Chris J. Maddison · Tatsunori Hashimoto
+
+首次提交: 2023-09-25
+
+提出 ToolEmu，利用语言模型生成工具效果并评审 Agent 轨迹。风险与帮助程度判断用于模拟评测，与真实服务执行及独立安全验证不同。
+
+目录关联：[ToolEmu](https://aicanwhat.com/zh/projects/toolemu/)
+
+[文献信息来源](https://arxiv.org/abs/2309.15817)
 
 ### [AgentBench: Evaluating LLMs as Agents](<https://arxiv.org/abs/2308.03688>)
 

@@ -29,7 +29,9 @@
       if (matches) visible++;
     }
     count.textContent = zh ? `显示 ${visible} / ${rows.length} 条来源记录` : `${visible} of ${rows.length} source records`;
-    empty.hidden = visible !== 0;
+    AICanWhatSearch.showEmptyState(empty, visible === 0,
+      zh ? '没有匹配的记录。' : 'No matching records.',
+      zh ? '修改关键词或重置筛选。' : 'Change your search or reset the filters.');
     reset.hidden = !query && !source.value && !notes.value && !version.value;
     const next = new URL(location.href);
     for (const [key, value] of [['q', search.value.trim()], ['source', source.value], ['notes', notes.value], ['version', version.value]]) {

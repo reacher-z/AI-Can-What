@@ -2,12 +2,13 @@
 
 [Back to the collection](../../README.md)
 
-35 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
+39 entries. Source review is not execution verification. Resource types distinguish software, environments, benchmark suites, and datasets.
 
 | Project | Resource type | Use | Primary source |
 | --- | --- | --- | --- |
 | [Aldi Prices](https://aicanwhat.com/projects/aldi-prices/) | Software made with AI | Showcase | [Source](https://aldi-prices.lawruk.com/) |
 | [AssistantBench](https://aicanwhat.com/projects/assistantbench/) | Dataset + benchmark | Evaluation | [Source](https://assistantbench.github.io/) |
+| [Brief · Good Tools](https://aicanwhat.com/projects/good-tools-brief/) | Software made with AI | Showcase | [Source](https://toolkit.allmeans.works/brief) |
 | [BrowserART](https://aicanwhat.com/projects/browserart/) | Environment + benchmark | Evaluation | [Source](https://github.com/scaleapi/browser-art) |
 | [BrowserGym](https://aicanwhat.com/projects/browsergym/) | Environment framework | Training, Evaluation | [Source](https://github.com/ServiceNow/BrowserGym) |
 | [Brutalist Dev Platform](https://aicanwhat.com/projects/gpt5-brutalist-dev-platform/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/brutalist-dev-landing-page) |
@@ -15,8 +16,10 @@
 | [CSV To Charts](https://aicanwhat.com/projects/gpt5-csv-to-charts/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/77f6322723703941f0b884d1a1cb77c60aad5187/apps/csv-to-charts) |
 | [Dashboard2Code (DashboardMimic)](https://aicanwhat.com/projects/dashboard2code/) | Benchmark suite | Evaluation | [Source](https://github.com/nth2000/Dashboard2Code) |
 | [Design2Code](https://aicanwhat.com/projects/design2code/) | Dataset + benchmark | Evaluation | [Source](https://github.com/NoviScl/Design2Code) |
+| [editorapp](https://aicanwhat.com/projects/cihanyyt-editorapp/) | Software made with AI | Showcase | [Source](https://cihanyyt.github.io/editor/) |
 | [Interaction2Code](https://aicanwhat.com/projects/interaction2code/) | Dataset + benchmark | Evaluation | [Source](https://github.com/WebPAI/Interaction2Code) |
 | [IWR-Bench](https://aicanwhat.com/projects/iwr-bench/) | Dataset + benchmark | Evaluation | [Source](https://github.com/SIGMME/IWR-Bench) |
+| [Kaylo Claude Cost Model](https://aicanwhat.com/projects/kaylo-claude-cost-model/) | Software made with AI | Showcase | [Source](https://www.kaylo.co/library/claude-cost-model) |
 | [KNOWS](https://aicanwhat.com/projects/knows/) | Benchmark suite | Evaluation | [Source](https://github.com/alexgill321/KNOWS-benchmark) |
 | [Markdown → Slides](https://aicanwhat.com/projects/gpt5-markdown-to-slides/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/77f6322723703941f0b884d1a1cb77c60aad5187/apps/markdown-to-slides) |
 | [Mind2Web](https://aicanwhat.com/projects/mind2web/) | Dataset + benchmark | Training, Evaluation | [Source](https://osu-nlp-group.github.io/Mind2Web/) |
@@ -26,6 +29,7 @@
 | [OpenApps](https://aicanwhat.com/projects/openapps/) | Environment framework | Training, Evaluation | [Source](https://github.com/facebookresearch/OpenApps) |
 | [Smartwatch Product Page](https://aicanwhat.com/projects/gpt5-smartwatch-product-page/) | Software made with AI | Showcase | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/product-launch-page) |
 | [Social Media Card Cropper](https://aicanwhat.com/projects/social-media-card-cropper/) | Software made with AI | Showcase | [Source](https://tools.simonwillison.net/social-media-cropper) |
+| [TimeSync](https://aicanwhat.com/projects/timesync-nimisha-patil/) | Software made with AI | Showcase | [Source](https://time-sync-five.vercel.app/) |
 | [TimeWarp](https://aicanwhat.com/projects/timewarp/) | Environment + benchmark | Training, Evaluation | [Source](https://github.com/sparklabutah/timewarp) |
 | [VisualWebArena](https://aicanwhat.com/projects/visualwebarena/) | Environment + benchmark | Evaluation | [Source](https://jykoh.com/vwa) |
 | [VisualWebBench](https://aicanwhat.com/projects/visualwebbench/) | Dataset + benchmark | Evaluation | [Source](https://visualwebbench.github.io/) |

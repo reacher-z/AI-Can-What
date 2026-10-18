@@ -50,6 +50,15 @@ Use these to collect repair trajectories or construct training tasks. Their size
 | [SWE-Gym](https://aicanwhat.com/projects/swe-gym/) · [Source](https://github.com/SWE-Gym/SWE-Gym) | Collect test-verified repair trajectories and train solution verifiers. | SWE-Gym supplies training tasks and is distinct from SWE-bench evaluation sets. Reproduction instructions use a specific OpenHands fork; switching versions can change outcomes. Task containers, repository data and model compute are required. Framework code is Apache 2.0; bundled projects retain their licenses. |
 | [SWE-smith](https://aicanwhat.com/projects/swe-smith/) · [Source](https://github.com/SWE-bench/SWE-smith) | Synthesize repository repair tasks from test-failing changes. | Training-oriented tasks are not a held-out SWE-bench evaluation set. Pin the task revision and partition: published dataset sizes have changed, and Harbor's 100-task package is only a slice. Toolkit and Hub data declare MIT; source repositories retain their terms. Requires Docker on supported Ubuntu; the authors do not support Windows/macOS. Harbor's adapter reports some synthetic oracle failures. |
 
+## Test generation and DevOps stages
+
+An issue-reproducing test and a repair patch are different deliverables. In operational workflows, also separate individual stage success from a verified composed pipeline.
+
+| Project and evidence | Use it to study | Setup and limits |
+| --- | --- | --- |
+| [SWT-Bench](https://aicanwhat.com/projects/swt-bench/) · [Source](https://github.com/logic-star-ai/swt-bench) | Generate tests that distinguish an unfixed issue from its repair; preserve unit-test versus reproduction-script scoring and shared SWE-bench issue families. | The issue families derive from SWE-bench; Lite, Verified and Full are filtered variants, not independent task universes. Unit-test mode and standalone reproduction-script mode have different checks; script mode uses exit status and does not run the suite. Upstream lists 276 Lite, 433 Verified and 2,294 Full instances. Pin the dataset and filters. Harness MIT does not replace the licenses of evaluated repositories. No Docker build, generated test or coverage result was reproduced here. |
+| [DevOps-Gym](https://aicanwhat.com/projects/devops-gym/) · [Source](https://github.com/ucsb-mlsec/DevOps-Gym) | Explore build, monitoring, repair and test-generation stages while checking task-version and composed-workflow coverage explicitly. | Pin the task revision: the README reports 704 tasks, the inspected tree has 733 direct task directories, and the frozen Harbor package reports 728; these are not established equivalent runnable counts. Issue-repair and test-generation directories reuse issue IDs. An end_to_end folder name alone does not prove a four-stage pipeline: the inspected gogs cpu-usage instruction asks for monitoring. Published image references were not pulled or executed. README declares MIT, but its linked LICENSE file is absent at this revision. |
+
 ## Selection questions
 
 ### Can I add combined and split package counts?

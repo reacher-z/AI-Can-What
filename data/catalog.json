@@ -10092,6 +10092,769 @@
           "supports": "Original cross-platform collection work; reported scale is GUI elements, not tasks or episodes."
         }
       ]
+    },
+    {
+      "id": "devops-gym",
+      "name": "DevOps-Gym",
+      "description_en": "A containerized software-engineering benchmark covering build configuration, runtime monitoring, issue repair and test generation in Java and Go projects.",
+      "description_zh": "面向 Java 与 Go 项目的容器化软件工程评测，涵盖构建配置、运行监控、问题修复与测试生成。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "environment-and-benchmark",
+      "primary_url": "https://github.com/ucsb-mlsec/DevOps-Gym",
+      "repo_url": "https://github.com/ucsb-mlsec/DevOps-Gym",
+      "paper_url": "https://arxiv.org/abs/2601.20882",
+      "enables_en": "Evaluate agents on individual DevOps stages or selected composed workflows using task-specific instructions and test scripts.",
+      "enables_zh": "依据任务专用指令和测试脚本，评估 Agent 在单个 DevOps 阶段或选定组合流程中的表现。",
+      "limits_en": "Pin the task revision: the README reports 704 tasks, the inspected tree has 733 direct task directories, and the frozen Harbor package reports 728; these are not established equivalent runnable counts. Issue-repair and test-generation directories reuse issue IDs. An end_to_end folder name alone does not prove a four-stage pipeline: the inspected gogs cpu-usage instruction asks for monitoring. Published image references were not pulled or executed. README declares MIT, but its linked LICENSE file is absent at this revision.",
+      "limits_zh": "需固定任务版本：README 报告704项任务，所查树有733个直接任务目录，冻结的 Harbor 包报告728项；尚不能认定它们是等价的可运行任务数。问题修复与测试生成目录复用问题 ID。end_to_end 文件夹名称本身不证明完整四阶段流程，所查 gogs cpu-usage 指令要求的是监控。未拉取或运行发布的镜像引用，README 声明 MIT，但其链接的 LICENSE 文件在所查版本中缺失。",
+      "runtime_note_en": "Docker and the documented Terminal-Bench harness, task-specific images and dependencies, plus model access for agent runs. Composed examples use separate server and workload containers. Repository Python guidance must be reconciled with the selected harness version.",
+      "runtime_note_zh": "需要 Docker、文档所用的 Terminal-Bench 框架、任务专用镜像和依赖，以及 Agent 的模型访问。组合示例使用独立的服务器与负载容器；仓库 Python 指引需与选定框架版本核对。",
+      "license_en": "README declares MIT, but its linked root LICENSE file is absent at the inspected revision. Task repositories, bundled data/software and container images retain separate terms; the README label does not establish uniform rights over them.",
+      "license_zh": "README 声明 MIT，但其链接的根目录 LICENSE 文件在所查版本中缺失。任务仓库、捆绑数据／软件和容器镜像保留各自条款；README 标签不能确立统一的复用权利。",
+      "reviewed_at": "2026-10-17",
+      "verification": "source-reviewed",
+      "evidence": [
+        {
+          "url": "https://github.com/ucsb-mlsec/DevOps-Gym/blob/9bbe3f0de632299faa9102b282ebc9ea4a516d67/README.md",
+          "supports": "Published scope, setup and reported704 task count; no runtime claim."
+        },
+        {
+          "url": "https://github.com/ucsb-mlsec/DevOps-Gym/tree/9bbe3f0de632299faa9102b282ebc9ea4a516d67/tasks",
+          "supports": "Shallow stage inventories contain66 build,34 monitor,308 repair,308 test-generation and17 end_to_end directories; directory totals are not execution results."
+        },
+        {
+          "url": "https://github.com/ucsb-mlsec/DevOps-Gym/blob/9bbe3f0de632299faa9102b282ebc9ea4a516d67/tasks/end_to_end/gogs__cpu-usage/task.yaml",
+          "supports": "An inspected end_to_end instruction is monitoring-oriented; directory label does not establish the complete four-stage workflow."
+        },
+        {
+          "url": "https://github.com/ucsb-mlsec/DevOps-Gym/blob/9bbe3f0de632299faa9102b282ebc9ea4a516d67/tasks/end_to_end/README.md",
+          "supports": "Composed-workflow design and separate server/workload container structure."
+        },
+        {
+          "url": "https://github.com/ucsb-mlsec/DevOps-Gym/blob/9bbe3f0de632299faa9102b282ebc9ea4a516d67/tasks/build/build_bugfix__apache-jackrabbit-47753810794/Dockerfile",
+          "supports": "Task image reference; source inspected without pulling image."
+        },
+        {
+          "url": "https://hub.harborframework.com/datasets/MichaelY310/devopsgym/latest",
+          "supports": "Frozen public metadata reports728 tasks; not asserted equivalent to current upstream directories."
+        },
+        {
+          "url": "https://arxiv.org/abs/2601.20882",
+          "supports": "Original research, ordered authors and first-submission date."
+        }
+      ]
+    },
+    {
+      "id": "swt-bench",
+      "name": "SWT-Bench",
+      "description_en": "A software test-generation benchmark that asks agents to turn repository issues into tests that fail before a repair and pass afterward.",
+      "description_zh": "软件测试生成基准，要求 Agent 将仓库问题转化为修复前失败、修复后通过的测试。",
+      "content_type": "app",
+      "platforms": [],
+      "uses": [
+        "evaluation"
+      ],
+      "implementation": "unknown",
+      "resource_kind": "benchmark-suite",
+      "primary_url": "https://github.com/logic-star-ai/swt-bench",
+      "repo_url": "https://github.com/logic-star-ai/swt-bench",
+      "paper_url": "https://arxiv.org/abs/2406.12952",
+      "enables_en": "Evaluate issue-reproducing tests using Docker-backed before/after checks, applicability and coverage-change reports.",
+      "enables_zh": "通过 Docker 支持的修复前后检查、适用性及覆盖率变化报告，评估问题复现测试。",
+      "limits_en": "The issue families derive from SWE-bench; Lite, Verified and Full are filtered variants, not independent task universes. Unit-test mode and standalone reproduction-script mode have different checks; script mode uses exit status and does not run the suite. Upstream lists 276 Lite, 433 Verified and 2,294 Full instances. Pin the dataset and filters. Harness MIT does not replace the licenses of evaluated repositories. No Docker build, generated test or coverage result was reproduced here.",
+      "limits_zh": "问题族来自 SWE-bench，Lite、Verified 和 Full 是筛选后的变体，不是独立任务全集。单元测试模式与独立复现脚本模式采用不同检查，脚本模式使用退出状态而不运行测试套件。上游列出276项 Lite、433项 Verified 和2,294项 Full；需固定数据集及过滤条件。框架 MIT 不替代被评测仓库的许可。本次未构建 Docker、运行生成测试或复现覆盖率结果。",
+      "runtime_note_en": "Python 3.9+ and Docker. The published guidance recommends x86_64, at least 120 GB free storage, 16 GB RAM and 8 CPU cores for fast evaluation; arm64 support is experimental. Preserve the execution mode and available gold evaluations when reporting coverage deltas.",
+      "runtime_note_zh": "需要 Python3.9+ 和 Docker。公开指引为快速评测建议 x86_64、至少120GB空闲存储、16GB内存及8核 CPU；arm64 支持属于实验性。报告覆盖率变化时应保留执行模式及可用的标准评测结果。",
+      "license_en": "Benchmark harness code is MIT. SWE-bench-derived task content, original repositories and dependencies retain their separate terms.",
+      "license_zh": "基准框架代码采用 MIT；来自 SWE-bench 的任务内容、原始仓库和依赖保留各自条款。",
+      "license_url": "https://github.com/logic-star-ai/swt-bench/blob/330a649a764fab2fadaea632776eeae87272f74b/LICENSE",
+      "reviewed_at": "2026-10-17",
+      "verification": "source-reviewed",
+      "evidence": [
+        {
+          "url": "https://github.com/logic-star-ai/swt-bench/blob/330a649a764fab2fadaea632776eeae87272f74b/README.md",
+          "supports": "Test-generation task, dataset variants, two execution modes, resource guidance and reported instance counts."
+        },
+        {
+          "url": "https://github.com/logic-star-ai/swt-bench/blob/330a649a764fab2fadaea632776eeae87272f74b/pyproject.toml",
+          "supports": "Python requirement and package dependencies."
+        },
+        {
+          "url": "https://github.com/logic-star-ai/swt-bench/blob/330a649a764fab2fadaea632776eeae87272f74b/LICENSE",
+          "supports": "MIT license for repository software."
+        },
+        {
+          "url": "https://arxiv.org/abs/2406.12952",
+          "supports": "Original paper metadata and research scope."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "platforms": [],
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-17",
+      "verification": "source-reviewed",
+      "id": "bfcl",
+      "name": "Berkeley Function Calling Leaderboard (BFCL)",
+      "uses": [
+        "evaluation"
+      ],
+      "resource_kind": "benchmark-suite",
+      "primary_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard",
+      "repo_url": "https://github.com/ShishirPatil/gorilla",
+      "paper_url": "https://proceedings.mlr.press/v267/patil25a.html",
+      "description_en": "A function-calling evaluation suite combining static call-structure checks, executable simulated multi-turn tools, and agentic web-search and memory tasks.",
+      "description_zh": "函数调用评测套件，结合静态调用结构检查、可执行的多轮工具模拟，以及网页搜索和记忆任务。",
+      "enables_en": "Separate function selection and argument accuracy from multi-turn state handling, abstention, search and memory. Run the released generation and category-specific evaluation tools.",
+      "enables_zh": "分别检查函数选择与参数准确性、多轮状态处理、拒绝无关调用、搜索和记忆能力，并使用公开的生成及分类评测工具。",
+      "limits_en": "Pin the v4 category set: single-turn/live uses AST checks, multi-turn checks simulated state and responses, and agentic tasks match answers. 'Live' means user-contributed examples, not live API execution. Memory/search variants reuse questions. Harbor's 3,641-task adapter excludes multi-turn and agentic tests; its 123-task parity subset adds no new tasks. Web search needs SerpAPI or a replacement. Older single-turn execution/REST/SQL categories are inactive; partial runs and weighted summary scores are not interchangeable.",
+      "limits_zh": "须固定 v4 类别集合：单轮／live 使用 AST 检查，多轮核对模拟状态和返回结果，agentic 任务匹配答案。live 指用户贡献样本，并不代表真实 API 执行。记忆与搜索变体复用问题。Harbor 的 3,641 任务适配器不含多轮及 agentic 测试，其 123 任务 parity 子集不增加新任务。网页搜索需要 SerpAPI 或替代服务。旧单轮执行／REST／SQL 类别已停用；部分运行与加权汇总分数不能直接互换。",
+      "license_en": "The Gorilla repository LICENSE and bfcl_eval package declare Apache-2.0. External model/search services and dependencies retain their own terms.",
+      "license_zh": "Gorilla 仓库 LICENSE 与 bfcl_eval 包声明 Apache-2.0；外部模型／搜索服务和依赖项保留自身条款。",
+      "license_url": "https://github.com/ShishirPatil/gorilla/blob/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/LICENSE",
+      "runtime_note_en": "Python >=3.10 package bfcl-eval, with bfcl generate/evaluate commands. Provider credentials or a local model backend are needed; vLLM/sglang are optional extras. Native device platforms are not asserted.",
+      "runtime_note_zh": "Python >=3.10 的 bfcl-eval 包，提供 bfcl generate／evaluate 命令。需要模型服务凭据或本地模型后端；vLLM／sglang 为可选依赖。不据此声明原生设备平台支持。",
+      "reviewed_version": {
+        "source_commit": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+        "category_prefix": "BFCL_v4",
+        "harbor_adapter_commit": "c3cc0d2ec06970486d80a574aa80d2a71289d762"
+      },
+      "score_units": {
+        "single_turn_non_live": 1390,
+        "single_turn_live": 2251,
+        "multi_turn_conversations": 800,
+        "memory_unique_questions": 155,
+        "memory_backends": 3,
+        "memory_category_evaluations": 465,
+        "web_search_unique_queries": 100,
+        "web_search_settings": 2,
+        "web_search_category_evaluations": 200,
+        "total_category_evaluations": 5106,
+        "distinct_source_rows_before_backend_or_search_variants": 4696,
+        "format_sensitivity_selected_existing_ids": 200,
+        "note": "Counts were obtained by parsing the pinned public question JSON files as data only. Format sensitivity is an index over 200 existing IDs, not an additional question set. 5,106 counts category evaluations, not unique user queries.",
+        "overall_weights_percent": {
+          "non_live": 10,
+          "live": 10,
+          "irrelevance": 10,
+          "multi_turn": 30,
+          "agentic": 40
+        },
+        "scoring_note": "Category accuracy is pass/fail over evaluated cases. The source uses nested weighted/unweighted summaries and fixed top-level weights, so overall is not a flat micro-average of all 5,106 evaluations. Missing categories contribute zero to the overall calculation; partial-eval changes the evaluated denominator."
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/ShishirPatil/gorilla/blob/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/README.md",
+          "supports": "Public setup, bfcl-eval package distinction, SerpAPI requirement, category invocation, partial-eval and missing-category score caveats."
+        },
+        {
+          "url": "https://github.com/ShishirPatil/gorilla/blob/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/pyproject.toml",
+          "supports": "Python >=3.10, package dependencies, optional local-model backends and Apache-2.0 metadata."
+        },
+        {
+          "url": "https://github.com/ShishirPatil/gorilla/blob/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/constants/category_mapping.py",
+          "supports": "Current v4 active categories, three memory backends, two search settings, non-scoring format sensitivity, and commented-out single-turn exec/REST/SQL categories."
+        },
+        {
+          "url": "https://github.com/ShishirPatil/gorilla/blob/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/multi_turn_eval/multi_turn_checker.py",
+          "supports": "Executable multi-turn state and response checks after each turn; this differs from single-turn AST comparison."
+        },
+        {
+          "url": "https://github.com/ShishirPatil/gorilla/blob/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/agentic_eval/agentic_checker.py",
+          "supports": "Agentic answer checking normalizes text and looks for an acceptable answer, rather than grading all tool actions."
+        },
+        {
+          "url": "https://github.com/ShishirPatil/gorilla/blob/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/eval_runner_helper.py",
+          "supports": "Per-category score denominators and nested weighting; top-level 10/10/10/30/40 weights."
+        },
+        {
+          "url": "https://github.com/ShishirPatil/gorilla/tree/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/data",
+          "supports": "Pinned question files counted without execution: 3,641 single-turn/live rows, 800 multi-turn rows, 155 memory rows, 100 search rows; format sensitivity references existing IDs."
+        },
+        {
+          "url": "https://github.com/ShishirPatil/gorilla/blob/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/LICENSE",
+          "supports": "Repository Apache-2.0 license."
+        },
+        {
+          "url": "https://github.com/laude-institute/harbor/blob/c3cc0d2ec06970486d80a574aa80d2a71289d762/adapters/bfcl/README.md",
+          "supports": "Official adapter identifies 3,641 single-turn/live AST tasks and explicitly excludes multi-turn/agentic categories; 123 is a parity subset."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "platforms": [],
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-17",
+      "verification": "source-reviewed",
+      "id": "tooltalk",
+      "name": "ToolTalk",
+      "uses": [
+        "evaluation"
+      ],
+      "resource_kind": "environment-and-benchmark",
+      "primary_url": "https://github.com/microsoft/ToolTalk",
+      "repo_url": "https://github.com/microsoft/ToolTalk",
+      "paper_url": "https://arxiv.org/abs/2311.10775",
+      "description_en": "A conversational tool-use benchmark with executable simulated APIs, local database state and annotated reference calls across everyday services.",
+      "description_zh": "对话式工具使用基准，提供可执行模拟 API、本地数据库状态，以及跨日常服务的参考调用标注。",
+      "enables_en": "Evaluate tool sequences after each user turn, including calls that change simulated calendars, messages or accounts. Inspect conversation success, call precision/recall and incorrect-action rates.",
+      "enables_zh": "评估每个用户回合后的工具序列，包括改变模拟日历、消息或账户状态的调用；检查整段对话成功率、调用精确率／召回率及错误动作率。",
+      "limits_en": "The release has 28 easy and 50 hard conversations, not 78 tools; the tool inventory has 28 tools in seven plugins. Before each assistant turn the evaluator resets state and replays reference history, so model errors do not freely accumulate across the whole conversation. Success requires all reference calls and no unmatched successful state-changing calls. The predictor uses legacy OpenAI SDK interfaces with unpinned openai; compatibility and historical model availability were not tested.",
+      "limits_zh": "公开版本含 28 个简单和 50 个困难对话，并非 78 个工具；工具清单为七类插件下的 28 个工具。每个助手回合前，评测器重置状态并重放参考历史，因此模型错误不会在整段对话中自由累积。成功要求覆盖全部参考调用，且没有成功执行但不匹配参考的状态修改动作。预测器采用旧 OpenAI SDK 接口，openai 依赖未固定；本次未测试兼容性或历史模型可用性。",
+      "license_en": "The repository publishes an MIT license covering its released code and associated materials; model API access has separate terms.",
+      "license_zh": "仓库发布 MIT 许可，适用于其公开代码及相关材料；模型 API 访问另受服务条款约束。",
+      "license_url": "https://github.com/microsoft/ToolTalk/blob/e05f4ce6132c80ed33392b81535b077d56ab28fd/LICENSE",
+      "runtime_note_en": "Python source package 1.0.0 with local JSON databases, evaluator scripts and an extensible predictor interface. API calls execute simulated implementations; there is no native mobile or desktop target. Example shell scripts are under scripts/, despite shorter paths in the README.",
+      "runtime_note_zh": "Python 源码包版本 1.0.0，附本地 JSON 数据库、评测脚本及可扩展预测器接口。API 调用执行的是模拟实现，不是原生移动或桌面目标。示例 shell 脚本实际位于 scripts/，README 的命令使用了更短路径。",
+      "reviewed_version": {
+        "source_commit": "e05f4ce6132c80ed33392b81535b077d56ab28fd",
+        "package_version": "1.0.0"
+      },
+      "score_units": {
+        "easy_conversations": 28,
+        "hard_conversations": 50,
+        "total_conversations": 78,
+        "tools": 28,
+        "plugins": 7,
+        "conversation_count_method": "Counted JSON files under data/easy and data/tooltalk in the pinned tree, including six golden_conversation files within the 50 hard conversations.",
+        "success_definition": "reference-call recall == 1.0 and bad_action_rate == 0.0",
+        "state_boundary": "Predicted actions persist within the current assistant turn; each following assistant turn starts from reset databases with reference history replayed."
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/microsoft/ToolTalk/blob/e05f4ce6132c80ed33392b81535b077d56ab28fd/README.md",
+          "supports": "Defines easy/hard conversations, reference annotations, tool/plugin counts, setup and baseline model access."
+        },
+        {
+          "url": "https://github.com/microsoft/ToolTalk/blob/e05f4ce6132c80ed33392b81535b077d56ab28fd/src/tooltalk/evaluation/tool_executor.py",
+          "supports": "Executes local simulated tools; resets/replays reference state for each assistant turn; computes call matching and conversation success."
+        },
+        {
+          "url": "https://github.com/microsoft/ToolTalk/blob/e05f4ce6132c80ed33392b81535b077d56ab28fd/src/tooltalk/utils/openai_utils.py",
+          "supports": "Uses openai.ChatCompletion.create, openai.Completion.create and openai.error legacy interfaces."
+        },
+        {
+          "url": "https://github.com/microsoft/ToolTalk/blob/e05f4ce6132c80ed33392b81535b077d56ab28fd/requirements.txt",
+          "supports": "openai dependency is unpinned; no source execution or compatibility fix was performed."
+        },
+        {
+          "url": "https://github.com/microsoft/ToolTalk/blob/e05f4ce6132c80ed33392b81535b077d56ab28fd/setup.cfg",
+          "supports": "Package version 1.0.0 and source layout."
+        },
+        {
+          "url": "https://github.com/microsoft/ToolTalk/tree/e05f4ce6132c80ed33392b81535b077d56ab28fd/data",
+          "supports": "Pinned release has 28 easy and 50 hard JSON conversation files plus local database fixtures."
+        },
+        {
+          "url": "https://github.com/microsoft/ToolTalk/blob/e05f4ce6132c80ed33392b81535b077d56ab28fd/LICENSE",
+          "supports": "MIT repository license."
+        },
+        {
+          "url": "https://arxiv.org/abs/2311.10775",
+          "supports": "Original ToolTalk paper; exact title says Conversational Setting."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "platforms": [],
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-17",
+      "verification": "source-reviewed",
+      "id": "toolhop",
+      "name": "ToolHop",
+      "uses": [
+        "evaluation"
+      ],
+      "resource_kind": "environment-and-benchmark",
+      "primary_url": "https://huggingface.co/datasets/bytedance-research/ToolHop",
+      "repo_url": "https://huggingface.co/datasets/bytedance-research/ToolHop/tree/main",
+      "paper_url": "https://arxiv.org/abs/2501.02506",
+      "description_en": "A multi-hop tool-use benchmark pairing questions with interdependent local Python tools, tool documentation and reference answers.",
+      "description_zh": "多跳工具使用基准，将问题与相互依赖的本地 Python 工具、工具说明及参考答案配对。",
+      "enables_en": "Compare direct answering, mandatory tool use and free tool use on the same query set, using released local-model or API-model evaluators and execution feedback.",
+      "enables_zh": "在同一问题集合上比较直接回答、强制工具调用和自由工具调用，使用公开的本地模型或 API 模型评测器及执行反馈。",
+      "limits_en": "Authors report 995 queries and 3,912 associated tools; tools are not independent task counts or live commercial APIs. The scorer fixes its denominator at 995 and can credit an answer found in the last tool response, so partial-run output and strict final-answer accuracy differ. The supplied evaluator executes tool snippets and parses answer strings with eval in the host process; no isolation layer was established. Code is Apache-2.0 and data CC BY 4.0.",
+      "limits_zh": "作者报告 995 个问题及 3,912 个关联工具；工具数量不是独立任务数，也不是实时商业 API。评分脚本固定以 995 为分母，并可依据最后一次工具返回中的答案判对，因此部分运行结果不等同于严格最终答案准确率。所附评测器在主机进程中执行工具片段，并用 eval 解析答案字符串；未确立隔离层。代码采用 Apache-2.0，数据采用 CC BY 4.0。",
+      "license_en": "The official card separates Apache-2.0 code from CC BY 4.0 data. The root LICENSE is Apache-2.0; the dataset's CC BY declaration is in the card. ToolHop derives its questions from MorehopQA, whose provenance should remain attached.",
+      "license_zh": "官方数据卡区分 Apache-2.0 代码与 CC BY 4.0 数据。根 LICENSE 为 Apache-2.0，数据的 CC BY 声明位于数据卡。ToolHop 问题源于 MorehopQA，应保留该来源关系。",
+      "license_url": "https://huggingface.co/datasets/bytedance-research/ToolHop/blob/b439d7279af359fda46e8117ae4f0245b75f5c6b/README.md",
+      "runtime_note_en": "Public ungated Hub repository with data/ToolHop.json, evaluation_open.py/evaluation_closed.py and requirements.txt. Local inference uses Transformers; hosted inference requires model access. No large corpus file was downloaded or evaluator executed in this review.",
+      "runtime_note_zh": "公开且无访问门槛的 Hub 仓库，含 data/ToolHop.json、evaluation_open.py／evaluation_closed.py 及 requirements.txt。本地推理使用 Transformers；托管推理需模型访问。本次未下载完整大语料或执行评测器。",
+      "reviewed_version": {
+        "dataset_and_code_revision": "b439d7279af359fda46e8117ae4f0245b75f5c6b"
+      },
+      "score_units": {
+        "queries_reported": 995,
+        "associated_tools_reported": 3912,
+        "scenarios": [
+          "Direct",
+          "Mandatory",
+          "Free"
+        ],
+        "count_basis": "Author card/paper figures; existence and size of the public 19,720,396-byte data JSON were verified by Hub metadata, not a full corpus recount.",
+        "scoring_definition": "100 * sum(answer_correct) / 995; text/numeric answer checks include an override when the last tool response contains the expected answer.",
+        "split_boundary": "Released as one evaluation query collection; no separate training split established."
+      },
+      "evidence": [
+        {
+          "url": "https://huggingface.co/datasets/bytedance-research/ToolHop/blob/b439d7279af359fda46e8117ae4f0245b75f5c6b/README.md",
+          "supports": "Original query/tool counts, locally executable tools, three evaluation scenarios, code/data license split and MorehopQA lineage."
+        },
+        {
+          "url": "https://huggingface.co/datasets/bytedance-research/ToolHop/blob/b439d7279af359fda46e8117ae4f0245b75f5c6b/code/evaluation_closed.py",
+          "supports": "Tool snippets execute in the host process; answer-check rules and fixed 995 denominator; configured hosted-model invocation."
+        },
+        {
+          "url": "https://huggingface.co/datasets/bytedance-research/ToolHop/blob/b439d7279af359fda46e8117ae4f0245b75f5c6b/code/evaluation_open.py",
+          "supports": "Local Transformers inference with corresponding execution and answer-scoring logic."
+        },
+        {
+          "url": "https://huggingface.co/datasets/bytedance-research/ToolHop/blob/b439d7279af359fda46e8117ae4f0245b75f5c6b/requirements.txt",
+          "supports": "Published dependency versions; source inspected only."
+        },
+        {
+          "url": "https://huggingface.co/datasets/bytedance-research/ToolHop/blob/b439d7279af359fda46e8117ae4f0245b75f5c6b/LICENSE",
+          "supports": "Root Apache-2.0 license for code; separate data terms documented in README."
+        },
+        {
+          "url": "https://huggingface.co/api/datasets/bytedance-research/ToolHop/tree/b439d7279af359fda46e8117ae4f0245b75f5c6b?recursive=true",
+          "supports": "Public code and data file inventory without accessing the large corpus."
+        },
+        {
+          "url": "https://arxiv.org/abs/2501.02506",
+          "supports": "Original benchmark and query-driven construction; first submission and ordered authors."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "platforms": [],
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-17",
+      "verification": "source-reviewed",
+      "id": "toolemu",
+      "name": "ToolEmu",
+      "uses": [
+        "evaluation"
+      ],
+      "resource_kind": "environment-and-benchmark",
+      "primary_url": "https://github.com/ryoungj/ToolEmu",
+      "repo_url": "https://github.com/ryoungj/ToolEmu",
+      "paper_url": "https://arxiv.org/abs/2309.15817",
+      "description_en": "A language-model-based tool emulator and evaluation framework for studying risky agent behavior and task helpfulness from simulated trajectories.",
+      "description_zh": "基于语言模型的工具模拟与评测框架，通过模拟轨迹研究 Agent 的风险行为和任务帮助程度。",
+      "enables_en": "Explore underspecified tool-use scenarios with standard or adversarial emulation and compare separate model-judged safety and helpfulness scores.",
+      "enables_zh": "使用标准或对抗式模拟探索信息不充分的工具任务，并分别比较模型评审的安全性与帮助程度分数。",
+      "limits_en": "Tool effects and grades are produced by language models, not real API side effects or an independent security guarantee. The pinned assets contain 144 cases using 38 toolkits/330 tool specifications; the README's 36/311 figures describe an older inventory. Record emulator, evaluator and model settings. Setup depends on PromptCoder and older pinned libraries. Root LICENSE is Apache-2.0 but setup.py's MIT classifier conflicts; do not describe licensing as uniformly resolved.",
+      "limits_zh": "工具效果和评分由语言模型生成，并非真实 API 副作用，也不构成独立安全保证。固定版本的资产含 144 个案例，使用 38 个工具包／330 个工具规格；README 的 36／311 是较早清单。须记录模拟器、评审器及模型设置。安装依赖 PromptCoder 和较旧的固定版本库。根 LICENSE 为 Apache-2.0，但 setup.py 的 MIT 分类与之冲突，不应声称许可完全一致。",
+      "license_en": "The repository LICENSE is Apache-2.0, while setup.py identifies MIT in its package classifier. This inconsistency is preserved; dependencies such as PromptCoder and model services have separate terms.",
+      "license_zh": "仓库 LICENSE 为 Apache-2.0，但 setup.py 包分类标识 MIT。本条保留该不一致；PromptCoder 等依赖和模型服务另有条款。",
+      "license_url": "https://github.com/ryoungj/ToolEmu/blob/ac4a7ab7ed8c7985d96231e214bd6b54304b7ddb/LICENSE",
+      "runtime_note_en": "Python package 0.1.0; README requires a separate PromptCoder checkout and editable installs. requirements.txt pins langchain 0.0.277 and anthropic 0.3.6; agent/emulator/evaluator access must be configured. Public scripts and JSON specifications were inspected, not run.",
+      "runtime_note_zh": "Python 包版本 0.1.0；README 要求另行获取 PromptCoder 并以 editable 方式安装。requirements.txt 固定 langchain 0.0.277 与 anthropic 0.3.6；需配置 Agent／模拟器／评审器的模型访问。已检查公开脚本和 JSON 规格，未运行。",
+      "reviewed_version": {
+        "source_commit": "ac4a7ab7ed8c7985d96231e214bd6b54304b7ddb",
+        "package_version": "0.1.0"
+      },
+      "score_units": {
+        "cases": 144,
+        "unique_case_names": 144,
+        "toolkits_in_pinned_assets": 38,
+        "tool_specifications": 330,
+        "toolkits_referenced_by_cases": 38,
+        "historical_readme_toolkits": 36,
+        "historical_readme_tools": 311,
+        "count_method": "Parsed only assets/all_cases.json and assets/all_toolkits.json as data. All current toolkit names are referenced by the 144 cases; no emulator or tools were executed.",
+        "scores": "Separate LM-judged 0–3 safety and helpfulness grades, with summary mean/std and optional thresholded reporting. A case, toolkit, API specification and scored trajectory are different units."
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/ryoungj/ToolEmu/blob/ac4a7ab7ed8c7985d96231e214bd6b54304b7ddb/README.md",
+          "supports": "Explains model-emulated tool effects, standard/adversarial simulators, LM safety/helpfulness evaluation, setup and historical 144/36/311 figures."
+        },
+        {
+          "url": "https://github.com/ryoungj/ToolEmu/blob/ac4a7ab7ed8c7985d96231e214bd6b54304b7ddb/assets/all_cases.json",
+          "supports": "Pinned JSON contains 144 unique named cases and references all 38 current toolkits; no scenario execution."
+        },
+        {
+          "url": "https://github.com/ryoungj/ToolEmu/blob/ac4a7ab7ed8c7985d96231e214bd6b54304b7ddb/assets/all_toolkits.json",
+          "supports": "Pinned JSON contains 38 toolkit objects and 330 tool specifications, distinct from README's historical inventory."
+        },
+        {
+          "url": "https://github.com/ryoungj/ToolEmu/blob/ac4a7ab7ed8c7985d96231e214bd6b54304b7ddb/toolemu/evaluators.py",
+          "supports": "Model-based trajectory scoring implementation."
+        },
+        {
+          "url": "https://github.com/ryoungj/ToolEmu/blob/ac4a7ab7ed8c7985d96231e214bd6b54304b7ddb/toolemu/prompts/text/safety_evaluator.md",
+          "supports": "Safety grade rubric uses 0–3 scores; larger grades indicate lower risk."
+        },
+        {
+          "url": "https://github.com/ryoungj/ToolEmu/blob/ac4a7ab7ed8c7985d96231e214bd6b54304b7ddb/toolemu/prompts/text/helpfulness_evaluator.md",
+          "supports": "Separate 0–3 helpfulness rubric."
+        },
+        {
+          "url": "https://github.com/ryoungj/ToolEmu/blob/ac4a7ab7ed8c7985d96231e214bd6b54304b7ddb/requirements.txt",
+          "supports": "Published older dependency pins."
+        },
+        {
+          "url": "https://github.com/ryoungj/ToolEmu/blob/ac4a7ab7ed8c7985d96231e214bd6b54304b7ddb/LICENSE",
+          "supports": "Root Apache-2.0 license."
+        },
+        {
+          "url": "https://github.com/ryoungj/ToolEmu/blob/ac4a7ab7ed8c7985d96231e214bd6b54304b7ddb/setup.py",
+          "supports": "Version 0.1.0 and contradictory MIT package classifier."
+        },
+        {
+          "url": "https://arxiv.org/abs/2309.15817",
+          "supports": "Original emulation framework paper; results are model-assisted risk assessment, not real-world safety certification."
+        }
+      ]
+    },
+    {
+      "content_type": "app",
+      "platforms": [],
+      "implementation": "unknown",
+      "demo_url": null,
+      "reviewed_at": "2026-10-17",
+      "verification": "source-reviewed",
+      "id": "toolace-data",
+      "name": "ToolACE Data",
+      "uses": [
+        "training"
+      ],
+      "resource_kind": "dataset",
+      "primary_url": "https://huggingface.co/datasets/Team-ACE/ToolACE",
+      "repo_url": null,
+      "paper_url": "https://arxiv.org/abs/2409.00920",
+      "description_en": "The public synthetic tool-calling dialogue subset released with ToolACE, containing tool schemas, user requests, assistant calls and simulated tool responses.",
+      "description_zh": "ToolACE 公开的合成工具调用对话子集，包含工具模式、用户请求、助手调用和模拟工具返回。",
+      "enables_en": "Train or inspect function-calling dialogue models, including multiple calls, missing parameters and irrelevant-tool responses, using system/conversations records.",
+      "enables_zh": "利用 system／conversations 记录训练或检查函数调用对话模型，研究多次调用、参数缺失及工具无关时的回答。",
+      "limits_en": "This is a public 11,300-row train subset, not the full generation pipeline, a held-out benchmark or an executable API environment. The paper's 26,507-API synthesis pool is not the released dialogue count or a verified inventory of callable services. Tool responses are synthetic training content. Associated ToolACE model releases are separate artifacts; no new evaluation score is supplied by this data entry.",
+      "limits_zh": "本条是公开的 11,300 行 train 子集，不是完整生成流水线、保留测试基准或可执行 API 环境。论文的 26,507 个 API 合成池并非公开对话数量，也不是已核实可调用服务清单。工具返回是合成训练内容。关联 ToolACE 模型属于其他产物；本数据条目不提供新的评测成绩。",
+      "license_en": "The official dataset card declares Apache-2.0. The inspected repository contains README.md and data.json but no separate LICENSE file; model licenses are not inferred from the data card.",
+      "license_zh": "官方数据卡声明 Apache-2.0。所查仓库含 README.md 与 data.json，但没有独立 LICENSE 文件；不据此推断模型许可。",
+      "license_url": "https://huggingface.co/datasets/Team-ACE/ToolACE/blob/6bda777c88d21e5a204703c1ee45597a8fa4f734/README.md",
+      "runtime_note_en": "Public ungated JSON dataset; Hub metadata exposes the default/train split with 11,300 rows and system/conversations columns. No API credentials or runtime are needed to inspect the data; training infrastructure must be supplied separately. The 37 MB corpus was not downloaded.",
+      "runtime_note_zh": "公开且无访问门槛的 JSON 数据集；Hub 元数据显示 default／train 划分有 11,300 行，字段为 system／conversations。检查数据不需 API 凭据或运行环境；训练基础设施需另行提供。本次未下载约 37 MB 的完整语料。",
+      "reviewed_version": {
+        "dataset_revision": "6bda777c88d21e5a204703c1ee45597a8fa4f734"
+      },
+      "score_units": {
+        "public_train_dialogue_rows": 11300,
+        "columns": [
+          "system",
+          "conversations"
+        ],
+        "config": "default",
+        "split": "train",
+        "paper_api_pool_reported": 26507,
+        "count_basis": "Official Hugging Face size endpoint reports 11,300 rows, no pending/failed entries and partial:false. Public repository metadata is pinned; viewer-derived row count was observed at review time.",
+        "benchmark_score": null
+      },
+      "evidence": [
+        {
+          "url": "https://huggingface.co/datasets/Team-ACE/ToolACE/blob/6bda777c88d21e5a204703c1ee45597a8fa4f734/README.md",
+          "supports": "Author-maintained synthetic dialogue dataset card, Apache-2.0 metadata and distinction between data and linked model release."
+        },
+        {
+          "url": "https://huggingface.co/api/datasets/Team-ACE/ToolACE/tree/6bda777c88d21e5a204703c1ee45597a8fa4f734?recursive=true",
+          "supports": "Pinned file inventory has .gitattributes, README.md and data.json; no execution framework or separate license file established."
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/size?dataset=Team-ACE%2FToolACE",
+          "supports": "Official viewer metadata reports default/train with 11,300 rows; no evaluation split reported."
+        },
+        {
+          "url": "https://huggingface.co/datasets/Team-ACE/ToolACE",
+          "supports": "Public viewer exposes system and conversations fields, including user/assistant/tool dialogue roles."
+        },
+        {
+          "url": "https://arxiv.org/abs/2409.00920",
+          "supports": "Original paper explicitly releases a subset of synthesized data; the 26,507 API figure describes synthesis coverage."
+        }
+      ]
+    },
+    {
+      "id": "cihanyyt-editorapp",
+      "name": "editorapp",
+      "creator": "cihanyyt",
+      "description_en": "A single-file browser documentation editor with rich-text and Markdown views, document folders and tabs, and Markdown/ZIP import-export code.",
+      "description_zh": "单文件浏览器文档编辑器，提供富文本与 Markdown 视图、文档目录及标签页，以及 Markdown／ZIP 导入导出代码。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "resource_kind": "ai-generated-output",
+      "primary_url": "https://cihanyyt.github.io/editor/",
+      "repo_url": "https://github.com/cihanyyt/editor",
+      "source_file_url": "https://github.com/cihanyyt/editor/blob/dfcc10f05ea26139b709538061e3ece6ebb54324/index.html",
+      "demo_url": "https://cihanyyt.github.io/editor/",
+      "paper_url": null,
+      "provenance_source": "https://github.com/cihanyyt/editor/blob/dfcc10f05ea26139b709538061e3ece6ebb54324/README.md#generated-with-claude-code",
+      "provenance_note_en": "The maintainer explicitly attributes this editor's design and implementation to conversations with Claude Code and enumerates generated features. This is an author-reported application-code claim, not an authorship audit; Quill, Marked, Turndown, JSZip and DOMPurify are separately authored dependencies.",
+      "provenance_note_zh": "维护者明确将这个编辑器的设计与实现归因于同 Claude Code 的对话，并列举生成的功能。这属于作者对应用代码的开发声明，并非作者身份审计；Quill、Marked、Turndown、JSZip 和 DOMPurify 是另外开发的依赖。",
+      "enables_en": "Inspect a generated document-editing workflow with bidirectional rich-text/Markdown conversion, workspace organization and local-file export handlers.",
+      "enables_zh": "查看生成的文档编辑流程，包括富文本与 Markdown 双向转换、工作区整理和本地文件导出处理。",
+      "limits_en": "The application loads its editor/conversion/ZIP/sanitizer libraries from CDNs. Folder synchronization uses a browser directory-picker API and requires browser support and an explicit folder grant. Source caps imports at 10 MiB per Markdown file and 50 MiB per ZIP. Editing, round-tripping, persistence and exports were not exercised. No application reuse license was identified.",
+      "limits_zh": "应用从 CDN 加载编辑、转换、ZIP 和内容清理库。目录同步使用浏览器目录选择 API，需要浏览器支持及明确的目录授权。源码将单个 Markdown 导入限制为 10 MiB、ZIP 限制为 50 MiB。未实际测试编辑、格式往返转换、持久化或导出，未确认应用复用许可。",
+      "runtime_note_en": "The public GitHub Pages HTML returned HTTP 200 and was byte-identical to index.html at the reviewed commit. No build or installation is needed for that hosted artifact. Source review is the only verification level; no browser interactions or filesystem permissions were used.",
+      "runtime_note_zh": "公开 GitHub Pages HTML 返回 HTTP 200，内容与核查提交中的 index.html 完全一致。访问托管作品无需构建或安装。本轮仅完成源码核查，没有浏览器交互，也未授予文件系统权限。",
+      "license_en": "Application source is public, but the reviewed repository tree and README do not establish a reuse license. The listed third-party libraries retain their own licenses.",
+      "license_zh": "应用源码公开，但本轮查阅的仓库目录和 README 未确立复用许可。所列第三方库保留各自许可。",
+      "reviewed_version": {
+        "source_commit": "dfcc10f05ea26139b709538061e3ece6ebb54324",
+        "displayed_version": "editorapp V5.8",
+        "html_sha256": "ad0891feab68fc984a1bcdd3be563dd6bac3e88cb0cc66656b1c72d14fb124c6",
+        "hosted_html_matches_source": true
+      },
+      "provenance_chain": [
+        {
+          "url": "https://github.com/cihanyyt/editor/blob/dfcc10f05ea26139b709538061e3ece6ebb54324/README.md",
+          "relationship": "Maintainer's explicit artifact-specific Claude Code development statement and single-file deployment instructions."
+        },
+        {
+          "url": "https://github.com/cihanyyt/editor/blob/dfcc10f05ea26139b709538061e3ece6ebb54324/index.html",
+          "relationship": "The identified editor's complete application artifact; hosted bytes matched this file."
+        },
+        {
+          "url": "https://cihanyyt.github.io/editor/",
+          "relationship": "Same owner's live GitHub Pages artifact, confirmed by byte comparison rather than a guessed product identity."
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/cihanyyt/editor/blob/dfcc10f05ea26139b709538061e3ece6ebb54324/README.md#generated-with-claude-code",
+          "supports": "README lines 98–120 explicitly tie AI implementation to this editor, while the dependency table separately identifies existing libraries."
+        },
+        {
+          "url": "https://github.com/cihanyyt/editor/blob/dfcc10f05ea26139b709538061e3ece6ebb54324/index.html",
+          "supports": "Rich-text/Markdown controls, FileReader and ZIP handling, import-size constants, export handlers and showDirectoryPicker-based folder synchronization."
+        },
+        {
+          "url": "https://api.github.com/repos/cihanyyt/editor/git/trees/dfcc10f05ea26139b709538061e3ece6ebb54324?recursive=1",
+          "supports": "Pinned repository tree exposes application source and tests, with no license file identified."
+        },
+        {
+          "url": "https://cihanyyt.github.io/editor/",
+          "supports": "HTTP 200 and the same 124,485-byte HTML/SHA-256 as the pinned application source; no interaction test."
+        }
+      ],
+      "reviewed_at": "2026-10-17",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "good-tools-brief",
+      "name": "Brief · Good Tools",
+      "creator": "John Clark / All Means Works",
+      "description_en": "A browser tool for drafting an architectural project brief, program, ambitions and measurable design goals, with JSON import/export and an Eco-Architect handoff.",
+      "description_zh": "在浏览器中编写建筑项目简报、功能要求、设计目标及可度量指标的工具，提供 JSON 导入导出与 Eco-Architect 数据交接。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "resource_kind": "ai-generated-output",
+      "primary_url": "https://toolkit.allmeans.works/brief",
+      "repo_url": null,
+      "demo_url": "https://toolkit.allmeans.works/brief?solo=1",
+      "paper_url": null,
+      "provenance_source": "https://toolkit.allmeans.works/",
+      "provenance_note_en": "Clark's first-party overview links this exact Brief tool and says the toolkit's code was written by Claude Code under his natural-language direction and editorial judgment. The claim is maker-reported application development; it does not establish AI authorship of frameworks or scientific methods.",
+      "provenance_note_zh": "Clark 的第一方介绍页直接链接这个 Brief 工具，并说明工具集代码由 Claude Code 根据他的自然语言指导编写，由他作出编辑判断。这是作者对应用开发过程的声明，不能据此认定框架或科学方法也由 AI 创作。",
+      "enables_en": "Inspect a generated planning interface that turns prose and selected goal templates into a portable brief and structured goal rules.",
+      "enables_zh": "查看生成的规划界面，如何把文字与所选目标模板整理为可移交的简报和结构化目标规则。",
+      "limits_en": "Brief is documented as client-side and usable without an account; this does not describe every tool in the surrounding suite. It keeps one browser draft, and the direct Eco-Architect handoff uses browser storage. Goals lacking committed numeric targets are omitted from that handoff. Its design heuristics are not engineering validation; some risks are explicitly unmodeled. Import/export and handoff were not exercised.",
+      "limits_zh": "Brief 文档说明其在客户端运行且无需账号，这不代表周边工具集的全部工具。它保存一份浏览器草稿，直接交给 Eco-Architect 时使用浏览器存储；尚未确认数值目标的规则不会随交接输出。设计启发式规则并非工程验证，部分风险明确未建模。未实际测试导入、导出或交接。",
+      "runtime_note_en": "The public standalone route returned HTTP 200. Its delivered page and application bundle expose project fields, manual/template goals, JSON Blob downloads and browser-storage handoff code. The broader site has sign-in and other account-dependent tools; none were used.",
+      "runtime_note_zh": "公开独立页面返回 HTTP 200。页面及其应用脚本包含项目字段、手动／模板目标、JSON Blob 下载和浏览器存储交接代码。主站另有登录入口和依赖账号的工具，本轮均未使用。",
+      "license_en": "No public source repository or reuse license for Brief was established. The site's separately open-source Radical Accessibility Project is a different artifact and does not establish Brief's license.",
+      "license_zh": "未确认 Brief 的公开源码仓库或复用许可。网站另行开源的 Radical Accessibility Project 属于不同作品，其许可不能套用于 Brief。",
+      "reviewed_version": {
+        "html_sha256": "0c2bc4478d72fea9a7dce2796bc0592673d5f8a7232a7c48523caaa5864a155d",
+        "application_chunk": "https://toolkit.allmeans.works/_next/static/chunks/app/(app)/brief/page-7381c374e79466b5.js",
+        "application_chunk_sha256": "e065136f585a385e824088c5d853ebe7770cd4618fe2b5388873f64e32112ef7"
+      },
+      "provenance_chain": [
+        {
+          "url": "https://toolkit.allmeans.works/",
+          "relationship": "Named maker, explicit code-generation account and direct Brief listing on one first-party overview."
+        },
+        {
+          "url": "https://toolkit.allmeans.works/brief",
+          "relationship": "Exact listed application, whose own standalone link supplies the demo URL."
+        },
+        {
+          "url": "https://toolkit.allmeans.works/brief?solo=1",
+          "relationship": "Public Brief artifact, with its client-side scope and limitations stated on the page."
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://toolkit.allmeans.works/",
+          "supports": "Named author and Claude Code development account; overview lines 65–71 and 421–436 distinguish generated toolkit code from the separately open-source RAP project. Brief is explicitly listed and described on the same page."
+        },
+        {
+          "url": "https://toolkit.allmeans.works/brief?solo=1",
+          "supports": "Project/program/ambition inputs, goal templates, no-account statement, one-browser-draft scope, numerical-goal handoff caveat and explicit design/engineering limits."
+        },
+        {
+          "url": "https://toolkit.allmeans.works/_next/static/chunks/app/(app)/brief/page-7381c374e79466b5.js",
+          "supports": "Delivered application code implements JSON imports, brief and goal Blob downloads, and amw.goalsPipe.v1 browser-storage handoff with a download fallback; it was read, not executed."
+        }
+      ],
+      "reviewed_at": "2026-10-17",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "kaylo-claude-cost-model",
+      "name": "Kaylo Claude Cost Model",
+      "creator": "Kaylo Greenwell / Kaylo Consulting",
+      "description_en": "A creator-published browser calculator for exploring seat-count and billing-period assumptions, with computed totals and custom CSV/XLSX export code.",
+      "description_zh": "作者发布的浏览器计算器，用席位数量和计费周期假设生成汇总数值，并包含自编 CSV／XLSX 导出代码。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-built",
+      "resource_kind": "ai-generated-output",
+      "primary_url": "https://www.kaylo.co/library/claude-cost-model",
+      "repo_url": null,
+      "demo_url": "https://www.kaylo.co/library/claude-cost-model",
+      "paper_url": null,
+      "provenance_source": "https://www.kaylo.co/built-with-claude",
+      "provenance_note_en": "Greenwell's first-party development account specifically identifies this cost calculator and its browser spreadsheet writer, attributing the code to Claude Code while describing his own direction and review. This is a creator report, not an independent authorship or calculation audit.",
+      "provenance_note_zh": "Greenwell 的第一方开发记录具体提到这个成本计算器和浏览器电子表格写入器，将代码归因于 Claude Code，同时说明由他指导和审阅。这是作者报告，并非独立的作者身份或计算审计。",
+      "enables_en": "Inspect an AI-generated input-to-calculation-to-file workflow, including seat controls, scenario totals and a custom spreadsheet-export implementation.",
+      "enables_zh": "查看 AI 生成的输入、计算到文件输出流程，包括席位控件、情景汇总和自编电子表格导出实现。",
+      "limits_en": "Included as a software showcase, not a pricing reference or purchasing recommendation. The page embeds fixed plan rates rather than fetching live prices, and its totals reflect the creator's assumptions. Rates, billing completeness, numerical correctness and exported workbook formulas were not verified. No file was generated or downloaded during review. No application reuse license was established.",
+      "limits_zh": "本条作为软件作品展示，不作为价格参考或采购建议。页面内嵌固定套餐价格，并非获取实时价格；汇总结果依赖作者的假设。未验证费率、计费完整性、数值正确性或导出工作簿公式。本轮未生成或下载文件，也未确认应用复用许可。",
+      "runtime_note_en": "The public page returned HTTP 200. Its inline JavaScript contains input/change recalculation listeners, CSV serialization, custom XLSX construction and Blob download handlers. These are inspected code paths only; no calculation or export was run.",
+      "runtime_note_zh": "公开页面返回 HTTP 200。内嵌 JavaScript 包含输入／变更重算监听器、CSV 序列化、自编 XLSX 构建和 Blob 下载处理。这些仅经过代码查阅，没有运行计算或导出。",
+      "license_en": "The creator says the site is versioned on GitHub but does not identify a public application repository on the reviewed pages. No reuse license was found, so repo_url remains null.",
+      "license_zh": "作者表示网站在 GitHub 上进行版本管理，但本轮查阅页面没有提供可识别的公开应用仓库。未找到复用许可，因此 repo_url 留空。",
+      "reviewed_version": {
+        "html_sha256": "12306d71f985d5a7283590fcf7664caa11b9ba923388aa7a48fd37b9695ed432",
+        "html_bytes": 63140
+      },
+      "provenance_chain": [
+        {
+          "url": "https://www.kaylo.co/built-with-claude",
+          "relationship": "Named maker's explicit statement about the calculator and its generated spreadsheet writer."
+        },
+        {
+          "url": "https://www.kaylo.co/resources",
+          "relationship": "Maker's resource index links the exact cost-model application."
+        },
+        {
+          "url": "https://www.kaylo.co/library/claude-cost-model",
+          "relationship": "Live application with inspectable inline calculation and export code."
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.kaylo.co/built-with-claude",
+          "supports": "First-party account specifically names the interactive cost calculator, generated JavaScript and in-browser spreadsheet writer, with human direction and review."
+        },
+        {
+          "url": "https://www.kaylo.co/resources",
+          "supports": "Direct cost-tool link establishes which artifact the development account refers to."
+        },
+        {
+          "url": "https://www.kaylo.co/library/claude-cost-model",
+          "supports": "HTTP 200; editable seat counts and billing selection, embedded fixed rates, teamCalc, CSV serialization, KCXLSX.buildXlsx and Blob download handlers. Their presence does not verify outputs or current commercial terms."
+        }
+      ],
+      "reviewed_at": "2026-10-17",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "timesync-nimisha-patil",
+      "name": "TimeSync",
+      "creator": "Nimisha Patil",
+      "description_en": "A browser time-zone comparison tool with local-zone detection, selectable city zones and synchronized time controls.",
+      "description_zh": "浏览器时区比较工具，提供本地时区检测、城市时区选择和联动时间控件。",
+      "content_type": "website",
+      "platforms": [
+        "web"
+      ],
+      "uses": [
+        "showcase"
+      ],
+      "implementation": "ai-assisted",
+      "resource_kind": "ai-generated-output",
+      "primary_url": "https://time-sync-five.vercel.app/",
+      "repo_url": null,
+      "demo_url": "https://time-sync-five.vercel.app/",
+      "paper_url": null,
+      "provenance_source": "https://www.linkedin.com/pulse/i-built-time-zone-app-3-days-using-free-ai-tools-nimisha-patil-u8pme",
+      "provenance_note_en": "Patil describes designing a wireframe, using Claude to prepare a specification/prompt, generating and iterating the initial app in Lovable, then refining it with Cursor. Her own comment links this exact live URL. The mixed human/AI workflow supports ai-assisted, without an invented code-generation percentage.",
+      "provenance_note_zh": "Patil 描述了自己设计线框图、使用 Claude 准备需求和提示、在 Lovable 中生成并迭代初版，再用 Cursor 细化应用的过程。她本人的评论链接了这个确切的公开网址。人和 AI 混合参与的过程支持标记为 AI 辅助开发，不推定代码生成比例。",
+      "enables_en": "Inspect an independently designed AI-assisted utility for comparing selected zones and adjusting a shared time across their displays.",
+      "enables_zh": "查看独立作者设计、由 AI 辅助实现的实用工具，比较所选时区并联动调整各处显示的时间。",
+      "limits_en": "The add-zone controls stop accepting more zones once four are selected; saved or shared input is restored separately. Time-zone and daylight-saving correctness, keyboard access, persistence and link sharing were not tested. The public page and JavaScript returned successful HTTP responses over HTTPS; that does not establish interaction success. No public application source repository or reuse license was established.",
+      "limits_zh": "添加时区控件在已选四个后停止添加；已保存或分享的输入会通过另一条路径恢复。未测试时区及夏令时正确性、键盘操作、持久化或链接分享。公开页面与 JavaScript 经 HTTPS 请求成功返回，不代表交互已经验证。未确认公开应用源码仓库或复用许可。",
+      "runtime_note_en": "The creator-linked Vercel application shell returned HTTP 200 and references a delivered React/JavaScript bundle containing the time-zone controls and state logic. It also references an external script; no offline or zero-network claim is made. No browser interaction or sign-in was performed.",
+      "runtime_note_zh": "作者链接的 Vercel 应用外壳返回 HTTP 200，并引用包含时区控件和状态逻辑的 React／JavaScript 脚本包。页面还引用外部脚本，因此未声称其离线运行或不产生网络请求。本轮没有浏览器交互或登录。",
+      "license_en": "No application reuse license or public source repository was identified in the maker article or delivered application. Licenses of bundled libraries do not establish the application's own license.",
+      "license_zh": "作者文章和公开应用中均未确认应用复用许可或公开源码仓库。脚本包中各库的许可不能据此确定应用本身的许可。",
+      "reviewed_version": {
+        "html_sha256": "fdc2b59f3df4c5075d1b0d4606bd214bc6642b3ec45dc907e7de92a6b3b2c869",
+        "application_bundle": "https://time-sync-five.vercel.app/assets/index-CyH0YW5V.js",
+        "application_bundle_sha256": "4cff77be1f95b5ae5fe81c675841861897df04640f289fb393ed1c9f3ab01e68"
+      },
+      "provenance_chain": [
+        {
+          "url": "https://www.linkedin.com/pulse/i-built-time-zone-app-3-days-using-free-ai-tools-nimisha-patil-u8pme",
+          "relationship": "Maker-authored development account dated 2025-04-14; the same maker supplies the exact app URL in the article's public comments."
+        },
+        {
+          "url": "https://time-sync-five.vercel.app/",
+          "relationship": "Exact creator-linked live application, whose title is TimeSync and whose script reference identifies the delivered artifact."
+        },
+        {
+          "url": "https://time-sync-five.vercel.app/assets/index-CyH0YW5V.js",
+          "relationship": "Publicly delivered application implementation, inspected without execution."
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.linkedin.com/pulse/i-built-time-zone-app-3-days-using-free-ai-tools-nimisha-patil-u8pme",
+          "supports": "Maker's staged Claude/Lovable/Cursor development account, human design participation and exact Vercel URL in her own comment; no vendor-marketing inference."
+        },
+        {
+          "url": "https://time-sync-five.vercel.app/",
+          "supports": "HTTP 200, TimeSync title and public application bundle reference; no rendered interaction observation."
+        },
+        {
+          "url": "https://time-sync-five.vercel.app/assets/index-CyH0YW5V.js",
+          "supports": "Zone initialization, four-zone selection guard, shared time state, per-zone conversion and localStorage persistence. Reviewed code contains third-party library implementations as well as application code."
+        }
+      ],
+      "reviewed_at": "2026-10-17",
+      "verification": "source-reviewed"
     }
   ]
 }

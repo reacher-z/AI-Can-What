@@ -717,6 +717,25 @@
               "fit_zh": "基于导致测试失败的修改，合成代码库修复任务。"
             }
           ]
+        },
+        {
+          "id": "testing-devops",
+          "title_en": "Test generation and DevOps stages",
+          "title_zh": "测试生成与 DevOps 阶段",
+          "intro_en": "An issue-reproducing test and a repair patch are different deliverables. In operational workflows, also separate individual stage success from a verified composed pipeline.",
+          "intro_zh": "问题复现测试和修复补丁是不同的产物；在运维工作流中，还需区分单阶段成功与已经验证的组合流程。",
+          "choices": [
+            {
+              "project_id": "swt-bench",
+              "fit_en": "Generate tests that distinguish an unfixed issue from its repair; preserve unit-test versus reproduction-script scoring and shared SWE-bench issue families.",
+              "fit_zh": "生成能区分未修复问题与修复结果的测试；保留单元测试与复现脚本的评分差别，以及与 SWE-bench 共享的问题族。"
+            },
+            {
+              "project_id": "devops-gym",
+              "fit_en": "Explore build, monitoring, repair and test-generation stages while checking task-version and composed-workflow coverage explicitly.",
+              "fit_zh": "研究构建、监控、修复和测试生成阶段，并明确核查任务版本及组合流程的实际覆盖。"
+            }
+          ]
         }
       ],
       "questions": [
@@ -896,6 +915,143 @@
           "path": "/guides/coding-agent-benchmarks/",
           "label_en": "Coding-agent resources",
           "label_zh": "编程 Agent 资料"
+        }
+      ]
+    },
+    {
+      "id": "tool-use-benchmarks",
+      "reviewed_at": "2026-10-17",
+      "label_en": "Test tool & API use",
+      "label_zh": "评测工具与 API 使用",
+      "title_en": "Tool-use benchmarks: calls, state and simulated services",
+      "title_zh": "工具与 API 评测：从调用到完整任务",
+      "description_en": "Choose tool-use and API benchmarks by what is checked: argument construction, world-state changes, user coordination or simulated-service responses.",
+      "description_zh": "按检查对象选择工具与 API 评测：参数构造、环境状态变化、用户协作或模拟服务响应。",
+      "answer_en": "Start with the outcome you need to measure. A correctly formed call does not establish that the requested workflow completed. Stateful tasks inspect the world after actions; conversational tasks also depend on user behavior and policy. Cached or model-generated service responses add their own assumptions. Record the task split, execution setting and scoring method before comparing results.",
+      "answer_zh": "先确定需要测量的结果。调用格式正确，不代表请求的流程已经完成。有状态任务检查操作后的环境；对话任务还受用户行为与策略影响。缓存或模型生成的服务响应也有自己的假设。比较结果前，应记录任务划分、执行设置及评分方法。",
+      "groups": [
+        {
+          "id": "calls",
+          "title_en": "Tool selection and arguments",
+          "title_zh": "工具选择与参数构造",
+          "intro_en": "Use call-level evaluation to isolate tool choice, required information and arguments. Check which cases execute implementations and which compare a call representation.",
+          "intro_zh": "调用级评测适合单独检查工具选择、必要信息与参数；需确认哪些案例执行实现，哪些只比较调用表示。",
+          "choices": [
+            {
+              "project_id": "api-bank",
+              "fit_en": "Compare planning, retrieval and calls against the released runnable evaluation tools; the larger training API collection is a separate resource.",
+              "fit_zh": "通过公开可运行评测工具比较规划、检索和调用；更大的训练 API 集合属于另一项资源。"
+            },
+            {
+              "project_id": "bfcl",
+              "fit_en": "Select a versioned category: AST checks, simulated multi-turn execution and agentic answer scoring measure different outcomes; the Harbor package covers only part of the suite.",
+              "fit_zh": "选择固定版本的类别：AST 检查、模拟多轮执行及 agentic 答案评分衡量不同结果；Harbor 包仅覆盖套件的一部分。"
+            }
+          ]
+        },
+        {
+          "id": "state",
+          "title_en": "Stateful multi-tool workflows",
+          "title_zh": "有状态的多工具流程",
+          "intro_en": "Inspect intermediate or final application state, including unwanted changes. A simulated API world is different from an installed desktop or a production account.",
+          "intro_zh": "检查中间或最终应用状态，包括不期望的改动；模拟 API 世界不同于已安装桌面或生产账号。",
+          "choices": [
+            {
+              "project_id": "appworld",
+              "fit_en": "Coordinate connected simulated apps through code or APIs, with executable task checks and explicit split restrictions.",
+              "fit_zh": "通过代码或 API 协调互联的模拟应用，结合可执行任务检查及明确的数据划分限制。"
+            },
+            {
+              "project_id": "toolsandbox",
+              "fit_en": "Study tool dependencies and conversational context with world-state checks; execution is on the host, despite the project name.",
+              "fit_zh": "结合环境状态检查研究工具依赖和对话上下文；虽然名称含 Sandbox，实际执行位于宿主机。"
+            },
+            {
+              "project_id": "workbench",
+              "fit_en": "Check controlled email, scheduling and project-management state while preserving corrected task and evaluator revisions.",
+              "fit_zh": "检查可控的邮件、日程和项目管理状态，同时保留修订后的任务及评分器版本。"
+            },
+            {
+              "project_id": "tooltalk",
+              "fit_en": "Study conversational simulated tools with per-turn state resets and reference replay; model mistakes do not freely accumulate across the whole dialogue.",
+              "fit_zh": "研究每轮重置状态并回放参考历史的模拟工具对话；模型错误不会在整段对话中自由累积。"
+            }
+          ]
+        },
+        {
+          "id": "users",
+          "title_en": "User coordination and policy",
+          "title_zh": "用户协作与策略遵循",
+          "intro_en": "A user simulator and domain policies are part of the experiment. Record whether users can change state and whether the evaluated mode is text, voice or knowledge-based.",
+          "intro_zh": "用户模拟器与领域策略也是实验的一部分。应记录用户能否改变状态，以及被评测的是文本、语音还是知识模式。",
+          "choices": [
+            {
+              "project_id": "tau-bench",
+              "fit_en": "Evaluate policy-following customer-service interaction; the current τ³ repository and the τ² paper describe different release scopes.",
+              "fit_zh": "评估遵循策略的客服交互；当前 τ³ 仓库与 τ² 论文覆盖不同的发布范围。"
+            }
+          ]
+        },
+        {
+          "id": "simulation",
+          "title_en": "Cached and generated service worlds",
+          "title_zh": "缓存与生成的服务环境",
+          "intro_en": "Simulation can make tool responses more controllable. Check how responses and rewards are produced, and keep synthetic completion separate from outcomes on a real service.",
+          "intro_zh": "模拟可以让工具响应更可控。需检查响应和奖励如何生成，并将合成环境中的完成结果与真实服务结果分别报告。",
+          "choices": [
+            {
+              "project_id": "stabletoolbench",
+              "fit_en": "Study cached or model-simulated API responses with the specific server, cache and evaluator configuration.",
+              "fit_zh": "结合具体服务器、缓存和评分配置，研究缓存或模型模拟的 API 响应。"
+            },
+            {
+              "project_id": "agent-world-model",
+              "fit_en": "Train or evaluate in synthetic SQLite/MCP scenarios; identify pure-code versus model-assisted verification and the wrapper’s completion semantics.",
+              "fit_zh": "在合成 SQLite／MCP 场景中训练或评测；注明纯代码与模型辅助校验的差别，以及封装的结束语义。"
+            },
+            {
+              "project_id": "toolemu",
+              "fit_en": "Study risky scenarios through model-emulated tool effects and model-judged outcomes; keep emulation and execution evidence distinct.",
+              "fit_zh": "通过模型模拟的工具效果及模型评审研究风险场景，并将模拟与实际执行证据分别记录。"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question_en": "Does a valid function call prove a task succeeded?",
+          "question_zh": "有效的函数调用能证明任务成功吗？",
+          "answer_en": "No. A call representation may be well formed while the tool fails, uses the wrong state or changes the wrong object. Report call-level checks separately from executed workflow outcomes and required state constraints.",
+          "answer_zh": "不能。调用表示可能正确，但工具执行失败、使用了错误状态或改动了错误对象。应将调用级检查与实际流程结果及必要状态约束分别报告。"
+        },
+        {
+          "question_en": "Does an MCP interface make different environments equivalent?",
+          "question_zh": "使用 MCP 接口是否让不同环境等价？",
+          "answer_en": "No. The interface says how tools are exposed. Task state, resets, external dependencies and verification still belong to the underlying environment. Agent World Model’s OpenEnv done action, for example, does not itself run verification.",
+          "answer_zh": "不是。接口说明工具如何暴露；任务状态、重置、外部依赖和校验仍由具体环境决定。例如 Agent World Model 的 OpenEnv done 动作本身并不执行校验。"
+        },
+        {
+          "question_en": "What must I preserve to compare tool-use scores?",
+          "question_zh": "比较工具使用分数时需要保留什么条件？",
+          "answer_en": "Pin task and evaluator revisions, splits, tool schemas, initial state, model and user-simulator versions, cached responses and judge settings. State whether calls were executed, simulated or checked structurally. Compare the same success unit; do not add wrapper records or versioned subsets as new independent tasks.",
+          "answer_zh": "固定任务与评分器版本、划分、工具 schema、初始状态、模型与用户模拟器版本、缓存响应及评审设置。注明调用实际执行、被模拟还是仅做结构检查。统一成功的测量单位，不要把封装记录或版本子集当成独立新任务累加。"
+        }
+      ],
+      "browse": [
+        {
+          "path": "/apps/?use=evaluation",
+          "label_en": "App and tool evaluation resources",
+          "label_zh": "应用与工具评测资料"
+        },
+        {
+          "path": "/discover/?source=harbor-hub",
+          "label_en": "Harbor package inventory",
+          "label_zh": "Harbor 包索引"
+        },
+        {
+          "path": "/guides/browser-agent-benchmarks/",
+          "label_en": "Browser interaction benchmarks",
+          "label_zh": "浏览器交互评测"
         }
       ]
     }
