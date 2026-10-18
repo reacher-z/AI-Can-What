@@ -100,6 +100,8 @@ def bibliography(papers, entries, language, *, repository=None):
         if paper.get('published_at'):
             label = ('首次提交' if zh else 'First submitted') if paper.get('arxiv_url') else paper.get('date_label_' + language, '发表日期' if zh else 'Published')
             date_text = label + ': ' + paper['published_at']
+            if paper.get('date_note_' + language):
+                date_text += ' · ' + paper['date_note_' + language]
         else:
             date_text = ('发表年份' if zh else 'Publication year') + ': ' + str(paper['publication_year']) + ' · ' + paper['date_note_' + language]
         catalog_link = '<span>' + ('目录项目：' if zh else 'In the catalog: ') + projects + '</span>' if projects else ''
@@ -132,7 +134,7 @@ def bibliography(papers, entries, language, *, repository=None):
 <button id="paper-reset" class="reset" type="button" hidden>{('重置' if zh else 'Reset')}</button></div>
 <p id="paper-search-hint" class="search-hint">{('关键词可组合搜索；用英文引号查找完整短语。年份采用文献记录的日期口径。' if zh else 'Combine keywords or put a phrase in double quotes. Years follow each citation’s stated date basis.')}</p>
 <div class="results-line"><span id="paper-count" role="status" aria-live="polite">{len(papers)} {('篇文献' if zh else 'papers')}</span></div></div>
-<div class="empty" id="paper-empty" hidden><h2>{('没有匹配的文献。' if zh else 'No papers match yet.')}</h2><p>{('换一个关键词，或重置筛选条件。' if zh else 'Try another keyword or reset the filters.')}</p></div>
+<div class="empty" id="paper-empty" hidden></div>
 <noscript><p>{('全部文献与引用均可直接浏览；搜索和筛选需要 JavaScript。' if zh else 'Every paper and citation is available below. Search and filtering use JavaScript.')}</p></noscript>'''
     repository_link = ''
     if repository:
@@ -176,6 +178,8 @@ def build_paper_docs(root, config, papers, entries):
             if paper.get('published_at'):
                 date_label = ('首次提交' if zh else 'First submitted') if paper.get('arxiv_url') else paper.get('date_label_' + language, '发表日期' if zh else 'Published')
                 date_text = date_label + ': ' + paper['published_at']
+                if paper.get('date_note_' + language):
+                    date_text += ' · ' + paper['date_note_' + language]
             else:
                 date_text = ('发表年份' if zh else 'Publication year') + ': ' + str(year) + ' · ' + paper['date_note_' + language]
             if paper.get('journal_published_at'):

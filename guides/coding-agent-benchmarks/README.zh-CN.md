@@ -50,6 +50,15 @@
 | [SWE-Gym](https://aicanwhat.com/zh/projects/swe-gym/) · [Source](https://github.com/SWE-Gym/SWE-Gym) | 收集经过测试检查的修复轨迹，并训练解法验证器。 | SWE-Gym 提供训练任务，与 SWE-bench 评测集不同。复现说明使用特定 OpenHands 分支，切换版本会影响结果。需要任务容器、仓库数据和模型计算资源。框架代码采用 Apache 2.0，所含项目保留各自许可。 |
 | [SWE-smith](https://aicanwhat.com/zh/projects/swe-smith/) · [Source](https://github.com/SWE-bench/SWE-smith) | 基于导致测试失败的修改，合成代码库修复任务。 | 面向训练的任务不是独立保留的 SWE-bench 评测集。需固定任务版本及划分：发布数据规模已有变化，Harbor 的 100 项任务包只是子集。工具包和 Hub 数据声明 MIT，源代码库保留各自条款。需在受支持的 Ubuntu 上使用 Docker；作者不支持 Windows／macOS。Harbor 适配器提示部分合成参考补丁可能失败。 |
 
+## 测试生成与 DevOps 阶段
+
+问题复现测试和修复补丁是不同的产物；在运维工作流中，还需区分单阶段成功与已经验证的组合流程。
+
+| 项目与证据 | 适合研究的问题 | 配置与限制 |
+| --- | --- | --- |
+| [SWT-Bench](https://aicanwhat.com/zh/projects/swt-bench/) · [Source](https://github.com/logic-star-ai/swt-bench) | 生成能区分未修复问题与修复结果的测试；保留单元测试与复现脚本的评分差别，以及与 SWE-bench 共享的问题族。 | 问题族来自 SWE-bench，Lite、Verified 和 Full 是筛选后的变体，不是独立任务全集。单元测试模式与独立复现脚本模式采用不同检查，脚本模式使用退出状态而不运行测试套件。上游列出276项 Lite、433项 Verified 和2,294项 Full；需固定数据集及过滤条件。框架 MIT 不替代被评测仓库的许可。本次未构建 Docker、运行生成测试或复现覆盖率结果。 |
+| [DevOps-Gym](https://aicanwhat.com/zh/projects/devops-gym/) · [Source](https://github.com/ucsb-mlsec/DevOps-Gym) | 研究构建、监控、修复和测试生成阶段，并明确核查任务版本及组合流程的实际覆盖。 | 需固定任务版本：README 报告704项任务，所查树有733个直接任务目录，冻结的 Harbor 包报告728项；尚不能认定它们是等价的可运行任务数。问题修复与测试生成目录复用问题 ID。end_to_end 文件夹名称本身不证明完整四阶段流程，所查 gogs cpu-usage 指令要求的是监控。未拉取或运行发布的镜像引用，README 声明 MIT，但其链接的 LICENSE 文件在所查版本中缺失。 |
+
 ## 选择时的常见问题
 
 ### 能否将总包与子集的任务数相加？

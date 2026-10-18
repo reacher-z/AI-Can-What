@@ -3737,6 +3737,228 @@
       ],
       "description_en": "Describes cross-platform GUI grounding data collection and action-model training, combining newly collected interfaces with existing sources. Its public corpus supports grounding pretraining; data elements, evaluation tasks and released model variants are distinct units.",
       "description_zh": "介绍跨平台 GUI 定位数据采集及动作模型训练，将新采集界面与已有来源结合。公开语料用于定位预训练，数据元素、评测任务和已发布模型版本是不同统计单位。"
+    },
+    {
+      "id": "2601.20882",
+      "title": "DevOps-Gym: Benchmarking AI Agents in Software DevOps Cycle",
+      "authors": [
+        "Yuheng Tang",
+        "Kaijie Zhu",
+        "Bonan Ruan",
+        "Chuqi Zhang",
+        "Michael Yang",
+        "Hongwei Li",
+        "Suyue Guo",
+        "Tianneng Shi",
+        "Zekun Li",
+        "Christopher Kruegel",
+        "Giovanni Vigna",
+        "Dawn Song",
+        "William Yang Wang",
+        "Lun Wang",
+        "Yangruibo Ding",
+        "Zhenkai Liang",
+        "Wenbo Guo"
+      ],
+      "published_at": "2026-01-27",
+      "arxiv_url": "https://arxiv.org/abs/2601.20882",
+      "source_url": "https://arxiv.org/abs/2601.20882",
+      "project_ids": [
+        "devops-gym"
+      ],
+      "description_en": "Introduces software DevOps tasks spanning build/configuration, monitoring, issue resolution and test generation, with containerized execution and task-specific checks.",
+      "description_zh": "提出涵盖构建／配置、监控、问题修复及测试生成的软件 DevOps 任务，配合容器执行和任务专用检查。"
+    },
+    {
+      "id": "2406.12952",
+      "title": "SWT-Bench: Testing and Validating Real-World Bug-Fixes with Code Agents",
+      "authors": [
+        "Niels Mündler",
+        "Mark Niklas Müller",
+        "Jingxuan He",
+        "Martin Vechev"
+      ],
+      "published_at": "2024-06-18",
+      "arxiv_url": "https://arxiv.org/abs/2406.12952",
+      "source_url": "https://arxiv.org/abs/2406.12952",
+      "project_ids": [
+        "swt-bench"
+      ],
+      "description_en": "Studies issue-reproducing test generation on real repositories, using before/after bug-fix behavior and coverage changes to assess generated tests.",
+      "description_zh": "研究真实仓库的问题复现测试生成，通过修复前后行为和覆盖率变化评估生成测试。"
+    },
+    {
+      "id": "bfcl-icml-2025",
+      "source_type": "publisher",
+      "url": "https://proceedings.mlr.press/v267/patil25a.html",
+      "source_url": "https://proceedings.mlr.press/v267/patil25a.html",
+      "title": "The Berkeley Function Calling Leaderboard (BFCL): From Tool Use to Agentic Evaluation of Large Language Models",
+      "authors": [
+        "Shishir G Patil",
+        "Huanzhi Mao",
+        "Fanjia Yan",
+        "Charlie Cheng-Jie Ji",
+        "Vishnu Suresh",
+        "Ion Stoica",
+        "Joseph E. Gonzalez"
+      ],
+      "published_at": "2025-10-06",
+      "date_label_en": "Publisher metadata date",
+      "date_label_zh": "出版方元数据日期",
+      "project_ids": [
+        "bfcl"
+      ],
+      "venue": "Proceedings of the 42nd International Conference on Machine Learning, PMLR 267:48371–48392, 2025",
+      "description_en": "Introduces BFCL's function-call benchmark design, including AST evaluation and stateful multi-step tests. The current v4 code also exposes agentic search/memory categories; category revisions and adapter coverage must be tracked separately from this paper.",
+      "description_zh": "介绍 BFCL 函数调用基准设计，包括 AST 评测及有状态多步测试。当前 v4 代码还提供 agentic 搜索／记忆类别；类别修订与适配器覆盖范围应与论文本身分开记录。",
+      "date_note_en": "The PMLR HTML citation_publication_date is 2025/10/06. Its conference citation says July 13–19, 2025. This metadata date is not the initial BFCL release date or a verified first-submission date; no arXiv identifier is asserted.",
+      "date_note_zh": "PMLR HTML 的 citation_publication_date 为 2025/10/06，会议引用日期为 2025 年 7 月 13–19 日。该元数据日期不是 BFCL 首发日或已核实的首次投稿日；不声明 arXiv 标识。",
+      "metadata_evidence": [
+        {
+          "url": "https://proceedings.mlr.press/v267/patil25a.html",
+          "supports": "Official publisher page supplies ordered authors/title, ICML 2025/PMLR 267/pages, July conference range, and HTML citation_publication_date 2025/10/06."
+        }
+      ]
+    },
+    {
+      "id": "2311.10775",
+      "source_type": "arxiv",
+      "title": "ToolTalk: Evaluating Tool-Usage in a Conversational Setting",
+      "authors": [
+        "Nicholas Farn",
+        "Richard Shin"
+      ],
+      "published_at": "2023-11-15",
+      "arxiv_url": "https://arxiv.org/abs/2311.10775",
+      "source_url": "https://arxiv.org/abs/2311.10775",
+      "project_ids": [
+        "tooltalk"
+      ],
+      "description_en": "Introduces conversational tool evaluation with simulated service implementations and annotated reference calls. Evaluation measures action matching after each user turn; the released harness restores reference history between assistant turns.",
+      "description_zh": "提出结合模拟服务实现与参考调用标注的对话式工具评测。评测衡量各用户回合后的动作匹配；公开评测器在助手回合间恢复参考历史。",
+      "date_note": "published_at is the first arXiv submission date; title and ordered authors follow the current primary arXiv record. Artifact revisions and paper revisions are separate.",
+      "metadata_evidence": [
+        {
+          "url": "https://arxiv.org/abs/2311.10775",
+          "supports": "Primary citation_title/citation_author metadata and v1 submission history were read directly; current citation_online_date was not substituted for the first submission."
+        }
+      ]
+    },
+    {
+      "id": "2501.02506",
+      "source_type": "arxiv",
+      "title": "ToolHop: A Query-Driven Benchmark for Evaluating Large Language Models in Multi-Hop Tool Use",
+      "authors": [
+        "Junjie Ye",
+        "Zhengyin Du",
+        "Xuesong Yao",
+        "Weijian Lin",
+        "Yufei Xu",
+        "Zehui Chen",
+        "Zaiyuan Wang",
+        "Sining Zhu",
+        "Zhiheng Xi",
+        "Siyu Yuan",
+        "Tao Gui",
+        "Qi Zhang",
+        "Xuanjing Huang",
+        "Jiecao Chen"
+      ],
+      "published_at": "2025-01-05",
+      "arxiv_url": "https://arxiv.org/abs/2501.02506",
+      "source_url": "https://arxiv.org/abs/2501.02506",
+      "project_ids": [
+        "toolhop"
+      ],
+      "description_en": "Builds a multi-hop tool-use evaluation set from questions, interdependent local tools and reference answers. Query counts, associated tool counts and the direct/mandatory/free evaluation settings describe different units and conditions.",
+      "description_zh": "从问题、相互依赖的本地工具和参考答案构建多跳工具使用评测集。问题数量、关联工具数量，以及直接／强制／自由调用设置分别对应不同单位和条件。",
+      "date_note": "published_at is the first arXiv submission date; title and ordered authors follow the current primary arXiv record. Artifact revisions and paper revisions are separate.",
+      "metadata_evidence": [
+        {
+          "url": "https://arxiv.org/abs/2501.02506",
+          "supports": "Primary citation_title/citation_author metadata and v1 submission history were read directly; current citation_online_date was not substituted for the first submission."
+        }
+      ]
+    },
+    {
+      "id": "2309.15817",
+      "source_type": "arxiv",
+      "title": "Identifying the Risks of LM Agents with an LM-Emulated Sandbox",
+      "authors": [
+        "Yangjun Ruan",
+        "Honghua Dong",
+        "Andrew Wang",
+        "Silviu Pitis",
+        "Yongchao Zhou",
+        "Jimmy Ba",
+        "Yann Dubois",
+        "Chris J. Maddison",
+        "Tatsunori Hashimoto"
+      ],
+      "published_at": "2023-09-25",
+      "arxiv_url": "https://arxiv.org/abs/2309.15817",
+      "source_url": "https://arxiv.org/abs/2309.15817",
+      "project_ids": [
+        "toolemu"
+      ],
+      "description_en": "Introduces ToolEmu, which generates tool effects and assesses agent trajectories with language models. Its risk and helpfulness judgments support simulated evaluation; they are distinct from execution against actual services and from independent security validation.",
+      "description_zh": "提出 ToolEmu，利用语言模型生成工具效果并评审 Agent 轨迹。风险与帮助程度判断用于模拟评测，与真实服务执行及独立安全验证不同。",
+      "date_note": "published_at is the first arXiv submission date; title and ordered authors follow the current primary arXiv record. Artifact revisions and paper revisions are separate.",
+      "metadata_evidence": [
+        {
+          "url": "https://arxiv.org/abs/2309.15817",
+          "supports": "Primary citation_title/citation_author metadata and v1 submission history were read directly; current citation_online_date was not substituted for the first submission."
+        }
+      ]
+    },
+    {
+      "id": "2409.00920",
+      "source_type": "arxiv",
+      "title": "ToolACE: Winning the Points of LLM Function Calling",
+      "authors": [
+        "Weiwen Liu",
+        "Xu Huang",
+        "Xingshan Zeng",
+        "Xinlong Hao",
+        "Shuai Yu",
+        "Dexun Li",
+        "Shuai Wang",
+        "Weinan Gan",
+        "Zhengying Liu",
+        "Yuanqing Yu",
+        "Zezhong Wang",
+        "Yuxian Wang",
+        "Wu Ning",
+        "Yutai Hou",
+        "Bin Wang",
+        "Chuhan Wu",
+        "Xinzhi Wang",
+        "Yong Liu",
+        "Yasheng Wang",
+        "Duyu Tang",
+        "Dandan Tu",
+        "Lifeng Shang",
+        "Xin Jiang",
+        "Ruiming Tang",
+        "Defu Lian",
+        "Qun Liu",
+        "Enhong Chen"
+      ],
+      "published_at": "2024-09-02",
+      "arxiv_url": "https://arxiv.org/abs/2409.00920",
+      "source_url": "https://arxiv.org/abs/2409.00920",
+      "project_ids": [
+        "toolace-data"
+      ],
+      "description_en": "Describes synthetic tool-dialogue generation and verification for function-calling training. The public artifact reviewed here is the released data subset; the full synthesis pool, trained models and external evaluation benchmarks are separate resources.",
+      "description_zh": "介绍面向函数调用训练的合成工具对话生成与验证。此处核查的公开产物是已发布的数据子集；完整合成池、训练模型及外部评测基准属于不同资源。",
+      "date_note": "published_at is the first arXiv submission date; title and ordered authors follow the current primary arXiv record. Artifact revisions and paper revisions are separate.",
+      "metadata_evidence": [
+        {
+          "url": "https://arxiv.org/abs/2409.00920",
+          "supports": "Primary citation_title/citation_author metadata and v1 submission history were read directly; current citation_online_date was not substituted for the first submission."
+        }
+      ]
     }
   ]
 }

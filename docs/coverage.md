@@ -2,6 +2,8 @@
 
 This directory covers software made with AI and resources used to train or evaluate agents across games/virtual worlds, websites, and applications. Applications includes desktop/mobile software, simulated APIs, and software-engineering tasks. It does not claim to be the largest or exhaustive collection.
 
+The generated [coverage report](../catalog/coverage/README.md) and [statistics JSON](../catalog/coverage/coverage.json) show category, platform, research and observation counts from the same inputs as the website. Platform/use tags overlap; papers, associations and upstream metadata have separate counting units. Source-file hashes identify the data used for a snapshot. Source-review dates and registry capture dates are preserved rather than replaced with a fresh build date.
+
 ## What counts as an entry
 
 A distinct authored application, environment, framework, benchmark, or dataset with a primary source and a specific use. Two named apps in one published example collection can be distinct entries; two links to the same app are merged. A separately maintained evaluator or new task release can have its own entry while sharing a project family. For example, WebArena-Verified revises WebArena's task family, and its full and Hard counts are not additive. Catalog totals count entries, not independent task universes. Papers and their associated entries are counted separately and are not additive.
@@ -25,7 +27,7 @@ Use the generated category and platform indexes to find gaps. Check the original
 
 The website and repository both expose platform indexes for app resources. A platform may describe a runnable application, an environment target, or screenshots in a dataset. Each index shows those resource types separately, and the website reports its software-showcase coverage explicitly.
 
-[Selection guides](../guides/README.md) connect existing projects to concrete goals: finding AI-made software, testing browser agents, testing computer/mobile use, evaluating software generation, studying coding agents and comparing data workflows. Their groupings explain distinct tasks and evidence requirements; they are not additional projects or quality rankings. Guides and project notes link in both directions, and each comparison preserves the catalog's current setup limits.
+[Selection guides](../guides/README.md) connect existing projects to concrete goals: finding AI-made software, testing browser agents, testing computer/mobile use, evaluating software generation, studying coding agents, comparing data workflows and testing tool/API use. Their groupings explain distinct tasks and evidence requirements; they are not additional projects or quality rankings. Guides and project notes link in both directions, and each comparison preserves the catalog's current setup limits.
 
 The [upstream registry index](https://aicanwhat.com/discover/) captures a broader discovery surface with source-specific boundaries. Those records are metadata only, can include versions, wrappers, test packages and off-topic datasets, and are not added to the reviewed project count. See the [registry method](registry-discovery.md) for coverage and refresh rules.
 

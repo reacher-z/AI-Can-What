@@ -8,5 +8,6 @@
 - [评测软件生成](software-generation/README.zh-CN.md): 按输入资料、生成产物、测试行为及已发布评测材料，比较网页重建和游戏开发基准。
 - [评测编程 Agent](coding-agent-benchmarks/README.zh-CN.md): 按 Agent 修改的对象及结果检查方式，比较代码库修复、应用开发、终端任务和生成式训练环境。
 - [评测数据工作流](data-workflow-benchmarks/README.zh-CN.md): 比较数据工程、代码执行分析与机器学习实验资料，区分最终答案检查、工作流程验证和环境验证。
+- [评测工具与 API 使用](tool-use-benchmarks/README.zh-CN.md): 按检查对象选择工具与 API 评测：参数构造、环境状态变化、用户协作或模拟服务响应。
 
 [Source data](../data/guides.json) · [Full catalog](../README.zh-CN.md)

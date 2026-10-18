@@ -2,12 +2,13 @@
 
 [返回目录](../../README.zh-CN.md)
 
-35 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
+39 个条目. 来源核查不等于实际运行；资源类型区分软件、环境、评测套件和数据集。
 
 | 项目 | 资源类型 | 用途 | 原始来源 |
 | --- | --- | --- | --- |
 | [Aldi Prices](https://aicanwhat.com/zh/projects/aldi-prices/) | AI 软件作品 | 作品展示 | [Source](https://aldi-prices.lawruk.com/) |
 | [AssistantBench](https://aicanwhat.com/zh/projects/assistantbench/) | 数据集与评测 | 评测 | [Source](https://assistantbench.github.io/) |
+| [Brief · Good Tools](https://aicanwhat.com/zh/projects/good-tools-brief/) | AI 软件作品 | 作品展示 | [Source](https://toolkit.allmeans.works/brief) |
 | [BrowserART](https://aicanwhat.com/zh/projects/browserart/) | 环境与评测 | 评测 | [Source](https://github.com/scaleapi/browser-art) |
 | [BrowserGym](https://aicanwhat.com/zh/projects/browsergym/) | 环境框架 | 训练, 评测 | [Source](https://github.com/ServiceNow/BrowserGym) |
 | [Brutalist Dev Platform](https://aicanwhat.com/zh/projects/gpt5-brutalist-dev-platform/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/brutalist-dev-landing-page) |
@@ -15,8 +16,10 @@
 | [CSV To Charts](https://aicanwhat.com/zh/projects/gpt5-csv-to-charts/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/77f6322723703941f0b884d1a1cb77c60aad5187/apps/csv-to-charts) |
 | [Dashboard2Code (DashboardMimic)](https://aicanwhat.com/zh/projects/dashboard2code/) | 评测套件 | 评测 | [Source](https://github.com/nth2000/Dashboard2Code) |
 | [Design2Code](https://aicanwhat.com/zh/projects/design2code/) | 数据集与评测 | 评测 | [Source](https://github.com/NoviScl/Design2Code) |
+| [editorapp](https://aicanwhat.com/zh/projects/cihanyyt-editorapp/) | AI 软件作品 | 作品展示 | [Source](https://cihanyyt.github.io/editor/) |
 | [Interaction2Code](https://aicanwhat.com/zh/projects/interaction2code/) | 数据集与评测 | 评测 | [Source](https://github.com/WebPAI/Interaction2Code) |
 | [IWR-Bench](https://aicanwhat.com/zh/projects/iwr-bench/) | 数据集与评测 | 评测 | [Source](https://github.com/SIGMME/IWR-Bench) |
+| [Kaylo Claude Cost Model](https://aicanwhat.com/zh/projects/kaylo-claude-cost-model/) | AI 软件作品 | 作品展示 | [Source](https://www.kaylo.co/library/claude-cost-model) |
 | [KNOWS](https://aicanwhat.com/zh/projects/knows/) | 评测套件 | 评测 | [Source](https://github.com/alexgill321/KNOWS-benchmark) |
 | [Markdown → Slides](https://aicanwhat.com/zh/projects/gpt5-markdown-to-slides/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/77f6322723703941f0b884d1a1cb77c60aad5187/apps/markdown-to-slides) |
 | [Mind2Web](https://aicanwhat.com/zh/projects/mind2web/) | 数据集与评测 | 训练, 评测 | [Source](https://osu-nlp-group.github.io/Mind2Web/) |
@@ -26,6 +29,7 @@
 | [OpenApps](https://aicanwhat.com/zh/projects/openapps/) | 环境框架 | 训练, 评测 | [Source](https://github.com/facebookresearch/OpenApps) |
 | [Smartwatch Product Page](https://aicanwhat.com/zh/projects/gpt5-smartwatch-product-page/) | AI 软件作品 | 作品展示 | [Source](https://github.com/openai/gpt-5-coding-examples/tree/main/apps/product-launch-page) |
 | [Social Media Card Cropper](https://aicanwhat.com/zh/projects/social-media-card-cropper/) | AI 软件作品 | 作品展示 | [Source](https://tools.simonwillison.net/social-media-cropper) |
+| [TimeSync](https://aicanwhat.com/zh/projects/timesync-nimisha-patil/) | AI 软件作品 | 作品展示 | [Source](https://time-sync-five.vercel.app/) |
 | [TimeWarp](https://aicanwhat.com/zh/projects/timewarp/) | 环境与评测 | 训练, 评测 | [Source](https://github.com/sparklabutah/timewarp) |
 | [VisualWebArena](https://aicanwhat.com/zh/projects/visualwebarena/) | 环境与评测 | 评测 | [Source](https://jykoh.com/vwa) |
 | [VisualWebBench](https://aicanwhat.com/zh/projects/visualwebbench/) | 数据集与评测 | 评测 | [Source](https://visualwebbench.github.io/) |

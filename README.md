@@ -7,19 +7,21 @@
 A source-backed directory of AI-built software and environments, benchmarks, and datasets for training and evaluating agents, organized into **Games & virtual worlds**, **Websites**, and **Apps**. Every entry has an original source, review date, practical limits, and its own static page.
 
 <!-- BEGIN GENERATED INDEX -->
-**202 catalog entries · 142 research papers.** These counts are not additive. 3 papers have no corresponding reviewed artifact entry; their release-status notes stay in the bibliography. Every catalog entry links evidence and records known limits.
+**213 catalog entries · 149 research papers.** These counts are not additive. 3 papers have no corresponding reviewed artifact entry; their release-status notes stay in the bibliography. Every catalog entry links evidence and records known limits.
 
 ## Browse
 
 | Category | Entries | Repository index |
 | --- | --- | --- |
 | [Games & virtual worlds](https://aicanwhat.com/games/) | 56 | [Browse](catalog/games/README.md) |
-| [Websites](https://aicanwhat.com/websites/) | 35 | [Browse](catalog/websites/README.md) |
-| [Apps](https://aicanwhat.com/apps/) | 111 | [Browse](catalog/apps/README.md) |
+| [Websites](https://aicanwhat.com/websites/) | 39 | [Browse](catalog/websites/README.md) |
+| [Apps](https://aicanwhat.com/apps/) | 118 | [Browse](catalog/apps/README.md) |
 
 [Research bibliography](papers/README.md) · [Search papers on the website](https://aicanwhat.com/papers/) · [Catalog data](data/catalog.json) · [Contributing](CONTRIBUTING.md)
 
-[Selection guides](guides/README.md) compare AI software examples, browser and computer/mobile tasks, software generation, coding agents and data workflows by purpose and evidence.
+[Coverage and counting units](catalog/coverage/README.md) · [Coverage JSON](catalog/coverage/coverage.json)
+
+[Selection guides](guides/README.md) compare AI software examples, browser and computer/mobile tasks, software generation, coding agents, data workflows and tool/API use by purpose and evidence.
 
 **5 scoped browser observations across 5 projects** record interaction steps, visible outcomes, screenshots and untested scope. These are not whole-application verification. [Observation data](data/observations.json) · [Method](docs/browser-observations.md).
 

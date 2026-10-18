@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "counting_units": {
+    "catalog": "Entries, not independent project families or unique benchmark tasks.",
+    "uses": "Overlapping entry tags; counts are not additive.",
+    "platforms": "Overlapping tags on app entries, not verified installations or host compatibility.",
+    "papers": "Research records; linked papers and project entries overlap.",
+    "development_provenance": "Author-attributed development labels across all entries, not the number of software showcases.",
+    "observations": "Scoped interaction records; distinct entries are counted separately.",
+    "registries": "Frozen upstream metadata records; not individually reviewed catalog entries."
+  },
+  "review_dates": {
+    "earliest": "2026-10-16",
+    "latest": "2026-10-17"
+  },
+  "catalog": {
+    "entries": 213,
+    "by_category": {
+      "app": 118,
+      "game": 56,
+      "website": 39
+    },
+    "by_resource_kind": {
+      "ai-generated-output": 62,
+      "benchmark-suite": 23,
+      "dataset": 2,
+      "dataset-and-benchmark": 31,
+      "environment-and-benchmark": 63,
+      "environment-framework": 32
+    },
+    "resource_kind_by_category": {
+      "ai-generated-output": {
+        "app": 38,
+        "game": 14,
+        "website": 10
+      },
+      "benchmark-suite": {
+        "app": 11,
+        "game": 3,
+        "website": 9
+      },
+      "dataset": {
+        "app": 2,
+        "game": 0,
+        "website": 0
+      },
+      "dataset-and-benchmark": {
+        "app": 19,
+        "game": 2,
+        "website": 10
+      },
+      "environment-and-benchmark": {
+        "app": 40,
+        "game": 15,
+        "website": 8
+      },
+      "environment-framework": {
+        "app": 8,
+        "game": 22,
+        "website": 2
+      }
+    },
+    "by_use": {
+      "evaluation": 148,
+      "showcase": 62,
+      "training": 75
+    },
+    "by_development_provenance": {
+      "ai-assisted": 39,
+      "ai-built": 25,
+      "unknown": 149
+    }
+  },
+  "app_platforms": {
+    "app_entries": 118,
+    "with_any_platform_tag": 73,
+    "without_platform_tag": 45,
+    "by_platform": {
+      "android": {
+        "entries": 23,
+        "software_showcases": 5,
+        "other_resources": 18
+      },
+      "ios": {
+        "entries": 12,
+        "software_showcases": 9,
+        "other_resources": 3
+      },
+      "linux": {
+        "entries": 24,
+        "software_showcases": 13,
+        "other_resources": 11
+      },
+      "macos": {
+        "entries": 22,
+        "software_showcases": 15,
+        "other_resources": 7
+      },
+      "web": {
+        "entries": 20,
+        "software_showcases": 10,
+        "other_resources": 10
+      },
+      "windows": {
+        "entries": 25,
+        "software_showcases": 13,
+        "other_resources": 12
+      }
+    }
+  },
+  "research": {
+    "papers": 149,
+    "linked_papers": 146,
+    "paper_only_records": 3,
+    "catalog_associations": 147,
+    "distinct_catalog_entries_linked": 142
+  },
+  "observations": {
+    "records": 5,
+    "distinct_catalog_entries": 5,
+    "entries_without_observation_records": 208,
+    "earliest_date": "2026-10-16",
+    "latest_date": "2026-10-16"
+  },
+  "guides": {
+    "guides": 7,
+    "project_associations": 88,
+    "distinct_catalog_entries": 88
+  },
+  "upstream_registries": {
+    "records": 490,
+    "source_count": 5,
+    "records_with_related_catalog_notes": 72,
+    "sources": [
+      {
+        "id": "harbor-hub",
+        "name": "Harbor Hub",
+        "url": "https://hub.harborframework.com/datasets",
+        "records": 355,
+        "records_with_related_catalog_notes": 26,
+        "captured_at": "2026-10-16T12:10:39.035948+00:00"
+      },
+      {
+        "id": "openenv",
+        "name": "OpenEnv",
+        "url": "https://github.com/huggingface/OpenEnv/tree/55347f62e22f83a618b49ee984e2f684b69d8fbd/envs",
+        "records": 40,
+        "records_with_related_catalog_notes": 10,
+        "captured_at": "2026-10-16T12:10:29.891055+00:00"
+      },
+      {
+        "id": "browsergym",
+        "name": "BrowserGym",
+        "url": "https://github.com/ServiceNow/BrowserGym/blob/e71419aef5759a11cb7896a26c36e5f7e92d82b2/browsergym/experiments/src/browsergym/experiments/benchmark/configs.py",
+        "records": 15,
+        "records_with_related_catalog_notes": 15,
+        "captured_at": "2026-10-16T12:10:29.022024+00:00"
+      },
+      {
+        "id": "farama",
+        "name": "Farama Foundation",
+        "url": "https://farama.org/projects",
+        "records": 16,
+        "records_with_related_catalog_notes": 10,
+        "captured_at": "2026-10-16T12:10:29.731162+00:00"
+      },
+      {
+        "id": "openai-examples",
+        "name": "OpenAI coding examples",
+        "url": "https://github.com/openai/gpt-5-coding-examples/tree/77f6322723703941f0b884d1a1cb77c60aad5187/examples",
+        "records": 64,
+        "records_with_related_catalog_notes": 11,
+        "captured_at": "2026-10-16T12:10:30.460708+00:00"
+      }
+    ]
+  },
+  "source_files": [
+    "data/catalog.json",
+    "data/papers.json",
+    "data/observations.json",
+    "data/guides.json",
+    "data/registry-index.json",
+    "data/registry-sources.json"
+  ],
+  "source_sha256": {
+    "data/catalog.json": "55760adba3c225eb788899f14aaf47903c9e83da090a24b67fe30463e68d27a9",
+    "data/papers.json": "e4c258132680c5c98de1574f54d612ef2ae5bc359dfb3fc4831864766e14bae6",
+    "data/observations.json": "b13fbf74beb3a9e9711025a564145440d9efce69c597b73dfdb40b946383a1f6",
+    "data/guides.json": "281c71139391e2a230ab8d54b36e47d2f5a91987860ff1432c2b9a921417179f",
+    "data/registry-index.json": "92708ad5f883446266fbc63f145d1411e4e204ea5a2f7ce9caa7247f928c8826",
+    "data/registry-sources.json": "c14b23b8b957dcc9aff3b040f5aa6e725077664118e8499ee5febb7ef6c9de12"
+  }
+}

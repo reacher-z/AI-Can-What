@@ -2,6 +2,7 @@
 """Check source records, rendered content, internal links, languages, and metadata."""
 from html.parser import HTMLParser
 import json
+import hashlib
 from pathlib import Path
 import struct
 from urllib.parse import unquote, urlsplit
@@ -13,6 +14,7 @@ from papers import read_papers
 from registries import read_registries
 from observations import read_observations
 from guides import read_guides, guide_project_ids
+from coverage_report import coverage_data
 
 
 class Page(HTMLParser):
@@ -53,11 +55,17 @@ class Page(HTMLParser):
 def main():
     config, _, entries = read_inputs()
     _, papers = read_papers(OUT.parent, entries)
-    _, _, _, registry_records = read_registries(OUT.parent)
+    _, registry_document, registry_sources, registry_records = read_registries(OUT.parent)
     observation_document, observations = read_observations(OUT.parent, entries)
     guide_document, guides = read_guides(OUT.parent, entries)
     assert json.loads((OUT / 'guides.json').read_text()) == guide_document
     assert json.loads((OUT / 'observations.json').read_text()) == observation_document
+    coverage = coverage_data(entries, papers, observations, guides, registry_sources, registry_document)
+    coverage['source_sha256'] = {path: hashlib.sha256((OUT.parent / path).read_bytes()).hexdigest() for path in coverage['source_files']}
+    assert json.loads((OUT / 'coverage.json').read_text()) == coverage
+    assert (OUT / 'coverage.json').read_bytes() == (OUT.parent / 'catalog/coverage/coverage.json').read_bytes()
+    assert sum(coverage['catalog']['by_category'].values()) == len(entries)
+    assert sum(coverage['catalog']['by_resource_kind'].values()) == len(entries)
     origin = config['origin'].rstrip('/')
     urls = [node.text for node in ET.parse(OUT / 'sitemap.xml').findall('{*}url/{*}loc')]
     assert len(urls) == len(set(urls))
@@ -99,6 +107,7 @@ def main():
     expected = {e['id'] for e in entries}
     for language in ('en', 'zh'):
         assert set(pages[lang_path(language)].projects) == expected
+        assert '/coverage.json' in pages[lang_path(language, '/coverage/')].hrefs
         for platform in PLATFORMS:
             members = {e['id'] for e in entries if e['content_type'] == 'app' and platform in e['platforms']}
             if members:
